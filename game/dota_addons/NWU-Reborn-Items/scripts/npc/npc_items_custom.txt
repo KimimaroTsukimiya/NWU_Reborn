@@ -7183,7 +7183,7 @@
     }
   }
 
-//TODO test active purge/ test manaburn(might work on magic immune units check lua) / add remove mana!
+//TODO test active purge(remove debuff of friendly heroes and remove positive buffs of enemies)/ test manaburn(might work on magic immune units check lua) / add remove mana!
 "item_chakra_smasher"
   {
     "ID"                    "1238"
@@ -7194,6 +7194,7 @@
     "AbilityManaCost"         "%manacost"
     "AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
     "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityCooldown"         "50.0"//todo made it up
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
@@ -7328,8 +7329,8 @@
       }
       "04"
       {
-        "var_type"        "FIELD_INTEGER"
-        "mana_per_hit"      "36"
+        "var_type"        "FIELD_FLOAT"
+        "mana_per_hit"      "36.0"
       }
       "05"
       {
