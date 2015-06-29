@@ -2974,7 +2974,6 @@
     }
   }
 
-
     "item_blue_moon"
   {
     "ID"                      "1160"
@@ -3002,23 +3001,54 @@
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
+
     "Modifiers"
     {
-
-      "item_blue_moon_modifier"
+      "item_lunar_sword_modifier"
       {
          "Passive" "1"
          "IsHidden"  "1"
          "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
          "Properties"
           {
-                        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+                  "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
                         "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"  "%bonus_agi"
                         "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
           }
+
+
+      "Orb"
+        {
+          "Priority"      "DOTA_ORB_PRIORITY_ABILITY"
+          "ProjectileName"    "particles/items2_fx/skadi_projectile.vpcf"
+        }
+        "OnOrbImpact"
+        {
+          "ApplyModifier"
+          {
+            "Target"      "TARGET"
+            "ModifierName"    "lunar_sword_slow"
+            "Duration"      "%slow_duration"
+          }   
+        }
+
+      }
+
+
+      "lunar_sword_slow"
+      {
+        "IsDebuff"    "1"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"    "%movespeed_slow"
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%attackspeed_slow"
+        }
+        "EffectName"      "particles/generic_gameplay/generic_slowed_cold.vpcf"
+        "EffectAttachType"      "attach_hitloc"
       }
 
     }
+
     // Special  
     //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"
@@ -3037,6 +3067,21 @@
       {
         "var_type"              "FIELD_FLOAT"
         "bonus_str"             "15.0"
+      }
+      "04"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "movespeed_slow"                 "-10.0"//todo made it up
+      }
+      "05"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "attackspeed_slow"                 "-15.0"//todo made it up
+      }
+      "06"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "slow_duration"                 "1.5"//todo made it up
       }
     }
   }
@@ -4037,7 +4082,7 @@
     }
   }
 
-//TODO add locate event 
+//TODO add locate event / add aura 
 "item_bingo_book"
   {
     "ID"                      "1176"
@@ -4126,7 +4171,6 @@
     }
   }
 
-//works
 "item_magatama_amulet"
   {
     "ID"                      "1178"
@@ -6260,7 +6304,6 @@
     }
   }
 
-//TODO test orb
 "item_lunar_sword"
   {
     "ID"                    "1222"
