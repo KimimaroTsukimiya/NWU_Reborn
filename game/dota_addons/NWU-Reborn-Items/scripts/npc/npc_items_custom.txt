@@ -8032,16 +8032,17 @@
     }
   }
 
-//TODO add clones 
+//TODO make clones weaker!(atm 100%dmg and hp, change the lua file) 
 "item_probagation"
   {
     "ID"                    "1252"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_probagation"
+ 
 
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
+  "AbilityCooldown"         "50.0"//todo made it up
+  "AbilityManaCost"         "50"//todo made it up
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
@@ -8056,9 +8057,30 @@
     "ItemBaseLevel"           "1"
     "ItemQuality"         "epic"    
     
+    "precache"
+  {
+    "soundfile" "soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+    "particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
+    "particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+    "particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+    "particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+    "model"   "models/heroes/terrorblade/demon.vmdl"
+  }
+
+
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+
+    "OnSpellStart"
+  {
+    "ApplyModifier"
+    {
+      "ModifierName"    "illusion"
+      "Target"      "CASTER"
+    }
+  }
 
     "Modifiers"
     {
@@ -8077,6 +8099,32 @@
 
           }
       }
+
+     "illusion"
+    {
+      "Duration"  "%duration"
+
+      "OnCreated"
+      {
+        "RunScript"
+        {
+          "ScriptFile"      "items/probagation.lua"
+          "Function"        "ConjureImage"
+        }
+        "RunScript"
+        {
+          "ScriptFile"      "items/probagation.lua"
+          "Function"        "ConjureImage"
+        }
+        "RunScript"
+        {
+          "ScriptFile"      "items/probagation.lua"
+          "Function"        "ConjureImage"
+        }
+
+      }
+
+    }
     }
     // Special  
     //-------------------------------------------------------------------------------------------------------------
@@ -8106,6 +8154,21 @@
       {
         "var_type"                   "FIELD_FLOAT"
         "movementspeed_percentage"   "10.0"
+      }
+      "06"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "illusion_duration"         "40"
+      }
+      "07"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "illusion_outgoing_damage_percent"       "0"
+      }
+       "08"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "illusion_incoming_damage_percent"       "0"
       }
     }
   }
@@ -8220,7 +8283,7 @@
       "03"
       {
         "var_type"                  "FIELD_FLOAT"
-        "invis_duration"            "5.0"//TODO made it up
+        "invis_duration"            "6.0"//TODO made it up
       }
     }
   }
