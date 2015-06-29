@@ -7660,7 +7660,7 @@
     }
   }
 
-//TODO add fire effect
+//TODO add fire visuell effect
 "item_solar_blade"
   {
     "ID"                    "1246"
@@ -8189,6 +8189,17 @@
          "States"
         {
           "MODIFIER_STATE_INVISIBLE" "MODIFIER_STATE_VALUE_ENABLED"
+        }
+
+
+
+        "OnAttackStart"
+        {
+          "RemoveModifier"
+          {
+            "ModifierName"    "custom_invis"
+            "Target"      "CASTER"  
+          }
         }
       }
     }
