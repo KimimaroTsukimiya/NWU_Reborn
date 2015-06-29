@@ -8129,14 +8129,14 @@
     }
   }
 
-//TODO add invis  
+//TODO add invis visuell effect 
 "item_assassins_cloak"
   {
     "ID"                    "1254"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_assassins_cloak"
-
+    "AbilityCooldown"       "18.0"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
@@ -8157,6 +8157,16 @@
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
+    "OnSpellStart"
+        {
+            "ApplyModifier"
+            {
+                "Target"                        "CASTER"
+                "ModifierName"                  "custom_invis"
+            }
+        }
+
+
     "Modifiers"
     {
       "item_assassins_cloak_modifier"
@@ -8170,6 +8180,16 @@
               "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
           }
+      }
+
+       "custom_invis"
+      {
+        "Duration"    "%invis_duration"
+        "Target"      "CASTER"
+         "States"
+        {
+          "MODIFIER_STATE_INVISIBLE" "MODIFIER_STATE_VALUE_ENABLED"
+        }
       }
     }
     // Special  
@@ -8185,6 +8205,11 @@
       {
         "var_type"                  "FIELD_FLOAT"
         "bonus_damage"                  "38.0"
+      }
+      "03"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "invis_duration"            "5.0"//TODO made it up
       }
     }
   }
