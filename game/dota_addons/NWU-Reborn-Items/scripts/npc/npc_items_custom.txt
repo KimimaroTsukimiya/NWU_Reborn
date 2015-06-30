@@ -345,29 +345,34 @@
   }
 
 
-  //TODO give truesight
-   "item_gem_of_truesight"
-  {
-    "ID"              "1107"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_gem_of_truesight"
-    "ItemQuality"    "common"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
+//TODO test true sight
+"item_gem_of_truesight"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1107"  //Valve's version of this item uses the ID "30".
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "Model"             "models/props_gameplay/gem01.vmdl"
+  "Effect"            "particles/generic_gameplay/dropped_gem.vpcf"
+  "AbilityTextureName"      "item_gem_of_truesight"
 
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "700"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_FULLY_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
-
-    "OnOwnerDied"
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "900"
+  "ItemShopTags"          "see_invis"
+  "ItemQuality"         "component"
+  "ItemAliases"         "gem of true sight"
+  "ItemSellable"          "0"
+  "ItemShareability"        "ITEM_FULLY_SHAREABLE"
+  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+  "ItemStockMax"          "1"
+  "ItemStockTime"         "600.0"
+  "ItemSupport"         "1"
+  "ItemKillable"          "0"
+  "ItemContributesToNetWorthWhenDropped"  "0"
+  
+ "OnOwnerDied"
     {
       "RunScript"
       {
@@ -376,13 +381,72 @@
       }
     }
 
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
+  // Sound
+  //-------------------------------------------------------------------------------------------------------------     
+  "UIPickupSound"         "Item.PickUpGemShop"
+  "UIDropSound"         "Item.DropGemShop"
+  "WorldDropSound"        "Item.DropGemWorld"
+  
+  // Special  
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "radius"        "1100"
+    }
   }
+
+  "Modifiers"
+  {
+    "modifier_truesight_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+  
+      "ThinkInterval"  "0.03"
+      "OnIntervalThink"
+      {
+        "ActOnTargets"
+        {
+          "Target"
+          {
+            "Center"    "TARGET"
+            "Radius"  "%radius"
+            "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+            "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+          }
+        
+          "Action"    
+          {
+            "RemoveModifier"
+            {
+              "ModifierName"  "modifier_truesight_reveal"
+              "Target"    "TARGET"
+            }
+
+            "ApplyModifier"
+            {
+              "ModifierName"  "modifier_truesight_reveal"
+              "Target"    "TARGET"
+            }
+          }
+        }     
+      }   
+    }
+
+    "modifier_truesight_reveal"
+    {
+      "IsHidden"      "1"
+      "Duration"      "0.5" //The True Sight effect lingers for 0.5 seconds.
+      "States"
+      {
+        "MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
+      }
+    }
+  }
+}
 
 
   "item_shinobi_claws"
@@ -687,7 +751,6 @@
   }
 
 
-  //TODO test extra_dmg
   "item_javelin_datadriven"
   {
     "ID"              "1115"
@@ -1532,7 +1595,6 @@
     }
   }
 
-  //added datadriven to the name, because the name is already reserved by dota2
    "item_belt_of_strength_datadriven"
   {
     "ID"              "1131"
@@ -1901,90 +1963,122 @@
     }
   }
 
-//TODO change modifier/add blink ability
+
 "item_yondaime_sealed_kunai"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1138"  //Valve's version of this item uses the ID "1".
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+  "Model"             "models/props_gameplay/red_box.vmdl"
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_yondaime_sealed_kunai"
+  "FightRecapLevel"       "1"
+  
+  // Stats    
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastRange"        "0"
+  "AbilityCastPoint"        "0.0"
+  "AbilityCooldown"       "12.0"
+  "AbilityManaCost"       "0"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "2250"
+  "ItemShopTags"          "teleport"
+  "ItemQuality"         "component"
+  "ItemAliases"         "blink dagger"
+  "SideShop"            "1"
+  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+  // Special  
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
   {
-    "ID"              "1138"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_yondaime_sealed_kunai"
-    "ItemQuality"     "common"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "2100"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
-    
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "Modifiers"
+    "01"
     {
-      "item_yondaime_sealed_kunai_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-              "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%blink_range_clamp"
-          }
-      }
+      "var_type"            "FIELD_INTEGER"
+      "max_blink_range"       "1200"
     }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
+    "02"
     {
-      "01"
+      "var_type"            "FIELD_INTEGER"
+      "blink_range_clamp"       "960"  //When attempting to blink a distance greater than max_blink_range, the caster blinks this distance in the targeted direction.
+    }
+    "03"
+    {
+      "var_type"            "FIELD_INTEGER"
+      "blink_damage_cooldown"     "3"
+    }
+  }
+  
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "items/yondaime_sealed_kunai.lua"
+      "Function"        "item_blink_datadriven_on_spell_start"
+      "Target"        "POINT"
+      "MaxBlinkRange"     "%max_blink_range"
+      "BlinkRangeClamp"   "%blink_range_clamp"
+    }
+  }
+  
+  "Modifiers"
+  {
+    //When the unit takes damage, Blink Dagger is put on cooldown.
+    "modifier_item_blink_datadriven_damage_cooldown"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "OnTakeDamage"
       {
-        "var_type"        "FIELD_INTEGER"
-        "blink_range"     "1200"
-      }
-      "02"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "blink_damage_cooldown" "3.0"
-      }
-      "03"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "blink_range_clamp" "960"
+        "RunScript"
+        {
+          "ScriptFile"      "items/yondaime_sealed_kunai.lua"
+          "Function"        "modifier_item_blink_datadriven_damage_cooldown_on_take_damage"
+          "BlinkDamageCooldown" "%blink_damage_cooldown"
+          "Damage"        "%attack_damage"
+        }
       }
     }
   }
+}
 
-  "item_recipe_shinobi_trends_str" 
+
+"item_recipe_shinobi_trends_str"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1139"  //Valve's version of this item uses the ID "62".
+
+  "AbilityTextureName"      "item_recipe"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "0" 
+  "ItemShopTags"          ""
+  
+  // Recipe
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemRecipe"          "1"
+  "ItemResult"          "item_shinobi_trends_str"
+  "ItemRequirements"
   {
-    "ID" "1139"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "0" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_shinobi_trends_str" //the result of combining the ItemRequirements
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    "ItemRequirements"
-    {
-        "01" "item_running_shoes;item_leather_gloves;item_belt_of_strength_datadriven"
-    }
+    "01" "item_running_shoes;item_leather_gloves;item_belt_of_strength_datadriven"
+    "02"  "item_running_shoes;item_leather_gloves;item_snake_skin"
+    "03" "item_running_shoes;item_leather_gloves;item_anbu_cloak"
   }
+}
 
-//TODO add on click event/change str agi int
 "item_shinobi_trends_str"
   {
     "ID"              "1140"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     "BaseClass"           "item_datadriven"
     "AbilityTextureName"   "item_shinobi_trends"
     "ItemQuality"     "common"
@@ -2006,6 +2100,15 @@
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "OnSpellStart"  //Switch to the next version of Power Treads (Intelligence).
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "items/shinobi_trends.lua"
+      "Function"        "strength_on_spell_start"
+    }
+  }
 
     "Modifiers"
     {
@@ -2054,28 +2157,11 @@
     }
   }
 
-  "item_recipe_shinobi_trends_agi" 
-  {
-    "ID" "1141"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "0" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_shinobi_trends_agi" //the result of combining the ItemRequirements
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    "ItemRequirements"
-    {
-        "01" "item_running_shoes;item_leather_gloves;item_snake_skin"
-    }
-  }
 
-//TODO add on click event/change str agi int
 "item_shinobi_trends_agi"
   {
     "ID"              "1142"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     "BaseClass"           "item_datadriven"
     "AbilityTextureName"   "item_shinobi_trends_agi"
     "ItemQuality"     "common"
@@ -2097,6 +2183,15 @@
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+     "OnSpellStart"  //Switch to the next version of Power Treads (strength).
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "items/shinobi_trends.lua"
+      "Function"        "agi_on_spell_start"
+    }
+  }
 
     "Modifiers"
     {
@@ -2146,29 +2241,10 @@
   }
 
 
-   "item_recipe_shinobi_trends_int" 
-  {
-    "ID" "1143"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "ItemRecipe"          "1" //destroyed after combine
-    "ItemQuality"     "common"
-    "ItemCost"            "0" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_shinobi_trends_int" //the result of combining the ItemRequirements
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    "ItemRequirements"
-    {
-        "01" "item_running_shoes;item_leather_gloves;item_anbu_cloak"
-    }
-  }
-
-//TODO add on click event/change str agi int
 "item_shinobi_trends_int"
   {
     "ID"                      "1144"
-    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     "BaseClass"               "item_datadriven"
     "AbilityTextureName"      "item_shinobi_trends_int"
   "ItemQuality"     "common"
@@ -2190,6 +2266,15 @@
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+  "OnSpellStart"  //Switch to the next version of Power Treads (agi).
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "items/shinobi_trends.lua"
+      "Function"        "int_on_spell_start"
+    }
+  }
 
     "Modifiers"
     {
@@ -2258,7 +2343,6 @@
   }
 
 
-//todo add visuell effect
 "item_idates_sandals"
   {
     "ID"                      "1146"
@@ -2281,6 +2365,11 @@
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
     
+   "precache"
+    {
+      "particle" "particles/items2_fx/phase_boots.vpcf"
+    }
+
     "OnSpellStart"
         {
             "ApplyModifier"
@@ -2322,6 +2411,8 @@
 
        "custom_speedup"
       {
+        "EffectName"        "particles/items2_fx/phase_boots.vpcf"
+        "EffectAttachType"      "follow_origin"
         "Duration"                      "%movementspeed_cast_duration_seconds"
         "Target"      "CASTER"
          "Properties"
@@ -2459,18 +2550,22 @@
     }
   }
 
-
-//TODO add transmutation event
 "item_transmutation_gloves"
   {
     "ID"                      "1150"
-    "AbilityBehavior"         "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
     "BaseClass"               "item_datadriven"
     "AbilityTextureName"      "item_transmutation_gloves"
-    "AbilityCooldown"         "100.0"
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_CREEP"
+    "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
     "ItemQuality"             "rare"
+    "AbilityCastRange"        "600"
+    "AbilityCastPoint"        "0.0"
+    "AbilityCooldown"       "100.0"
+    "AbilityManaCost"       "0"
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
     "ItemCost"                  "2200"
@@ -2488,13 +2583,15 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
     "OnSpellStart"
-        {
-            "ApplyModifier"
-            {
-                "Target"                        "CASTER"
-                "ModifierName"                  "custom_speedup"
-            }
-        }
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "items/transmutation_gloves.lua"
+      "Function"        "transmutation_gloves_on_spell_start"
+      "BonusGold"       "%bonus_gold"
+      "XPMultiplier"      "%xp_multiplier"
+    }
+  }
 
     "Modifiers"
     {
@@ -2519,6 +2616,16 @@
       {
         "var_type"                          "FIELD_FLOAT"
         "attackspeed"                       "30.0"
+      }
+      "02"
+      {
+        "var_type"                          "FIELD_FLOAT"
+        "bonus_gold"                       "190.0"
+      }
+      "03"
+      {
+        "var_type"                          "FIELD_FLOAT"
+        "xp_multiplier"                       "2.5"
       }
     }
   }
@@ -3600,17 +3707,16 @@
   }
 
 
-        "item_recipe_hokages_necklace" 
+  "item_recipe_first_hokages_necklace" 
   {
     "ID" "1170"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"           "item_datadriven"
     "ItemRecipe"          "1" //destroyed after combine
     "ItemCost"            "900" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_hokages_necklace" //the result of combining the ItemRequirements
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "ItemResult"          "item_first_hokages_necklace" //the result of combining the ItemRequirements
+    "UIPickupSound"       "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound"         "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
         "01" "item_retractable_shield;item_magatama_amulet"
@@ -3618,181 +3724,156 @@
   }
 
 
-//TODO test active/aura
+
+
 "item_first_hokages_necklace"
   {
-    "ID"                      "1171"
-    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"               "item_datadriven"
-    "AbilityTextureName"      "item_first_hokages_necklace"
-
-    "AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-    "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO"
-    "AbilityUnitTargetFlags"  "DOTA_UNIT_TARGET_FLAG_NONE"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemQuality"               "rare"
-    "ItemCost"                  "0"
-    "ItemInitialCharges"        "0"
-    "ItemDroppable"             "1"
-    "ItemSellable"              "1"
-    "ItemRequiresCharges"       "0"
-    "ItemShareability"          "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"           "1"
-    "ItemBaseLevel"             "1"
-    "ItemDisassembleRule"     "DOTA_ITEM_DISASSEMBLE_ALWAYS"
-
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "OnSpellStart"
-        {
-
-          "ActOnTargets"
-          {
-            "Target"
-            {
-              "Center"  "CASTER"
-              "Radius"  "%active_radius"
-              "Teams"   "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-              "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-            }
-          
-            "Heal"
-            {
-                "HealAmount"    "%active_heal"
-            }
-
-            "ApplyModifier"
-            {      
-              "ModifierName"    "item_first_hokages_necklace_active_armor"
-              "Duration"      "%active_duation"
-            }
-
-          }
-
-          "FireSound"
-            {
-              "EffectName"  "DOTA_Item.Mekansm.Activate"
-              "Target"    "CASTER"
-            }
-
-            "FireEffect"
-            {
-              "Target"      "CASTER"
-              "EffectName"    "particles/damage_immunity.vpcf"
-              "EffectAttachType"  "follow_origin"
-            }
-        }
-
-
-    "Modifiers"
+      // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"                  "1171"  
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_mekansm"
+  "FightRecapLevel"       "2"
+  
+  // Stats    
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastPoint"        "0.0"
+  "AbilityCooldown"       "45"
+  "AbilityManaCost"       "225"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "2300"
+  "ItemShopTags"          "agi;int;str;armor;boost_health"
+  "ItemQuality"         "rare"
+  "ItemAliases"         "mechanism;mekansm"
+  "ItemAlertable"         "1"
+  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+  
+  "AbilitySpecial"
+  {
+    "01"
     {
-      "item_hokages_necklace_modifier_active_armor"
-      {
-        "IsDebuff"      "1"
-        "Properties"
-        {
-            "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%active_armor" 
-        }
-        
-      }
-
-      "item_hokages_necklace_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-             "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
-             "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
-              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"  "%bonus_agi"
-              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
-          }  
-      }
-
-      "item_hokages_necklace_aura_modifier"
-      {
-          "Passive"           "1"
-          "IsHidden"          "1"
-          "Aura"              "hokages_necklace_aura"
-          "Aura_Radius"       "%radius"
-          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-          "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-          "EffectName"        "particles/items_fx/aura_vlads.vpcf"
-          "EffectAttachType"  "follow_origin" 
-         "Aura_Radius"        "%radius"
-
-      }
-
-      "hokages_necklace_aura"
-      {
-          "IsBuff"        "1"
-          "IsPurgable"      "0"
-          "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
-          "Properties"
-          {
-            "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"  
-          }
-      }
+      "var_type"        "FIELD_INTEGER"
+      "bonus_all_stats"   "5"
     }
-   // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
+    "02"
     {
-      "01"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "bonus_hp_reg_constant"         "3.0"
-      }
-      "02"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "bonus_str"                     "5.0"
-      }
-      "03"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "bonus_agi"                    "5.0"
-      }
-       "04"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "bonus_int"                      "5.0"
-      }
-       "05"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "aura_radius"                        "600.0"
-      }
-       "06"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "active_radius"                        "600.0"
-      }
-      "07"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "active_armor"                   "2.0"
-      }
-      "08"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "active_heal"                   "250.0"
-      }
-      "09"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "active_duation"                   "5.0"//TODO made it uü check wc3
-      }
+      "var_type"        "FIELD_INTEGER"
+      "bonus_armor"     "5"
+    }
+    "03"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "aura_radius"     "750"
+    }
+    "04"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "aura_health_regen"   "4"
+    }
+    "05"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "heal_amount"     "250"
+    }
+    "06"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "heal_radius"     "750"
+    }
+    "07"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "heal_bonus_armor"    "2"
+    }
+    "08"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "heal_armor_duration" "25.0"
     }
   }
+  
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "items/first_hokages_necklace.lua"
+      "Function"        "first_hokages_necklace_on_spell_start"
+      "HealAmount"      "%heal_amount"
+      "HealRadius"      "%heal_radius"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_mekansm_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%bonus_armor"
+      }
+    }
+    "modifier_item_mekansm_datadriven_aura_emitter"
+    {
+      "Passive"       "1"
+      "IsHidden"        "1"
+      
+      "Aura"          "modifier_item_mekansm_datadriven_aura"
+      "Aura_Radius"       "%aura_radius"
+      "Aura_Teams"      "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+      "Aura_Types"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+      "Aura_Flags"      "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+      "Aura_ApplyToCaster"  "1"
+    }
+    "modifier_item_mekansm_datadriven_aura"
+    {
+      "Passive"     "0"
+      "IsHidden"      "0"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%aura_health_regen"
+      }
+    }
+    "modifier_item_mekansm_datadriven_heal_armor"
+    {
+      "Duration"      "%heal_armor_duration"
+      "Passive"     "0"
+      "IsHidden"      "0"
+      "IsBuff"      "1"
+      "IsDebuff"      "0"
+      "IsPurgable"    "1"
+      "TextureName"   "item_buckler"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE_ACTIVE"    "%heal_bonus_armor"
+      }
+    }
+    //Placed onto units when healed by Mekansm, and prevents further heals from Mekansm while it exists.
+    //A separate modifier is used because the armor buff from Restore can be dispelled, but this can't.
+    "imodifier_item_mekansm_datadriven_heal_debuff"
+    {
+      "Duration"      "heal_armor_duration"
+      "Passive"     "0"
+      "IsHidden"      "1"
+      "IsBuff"      "0"
+      "IsDebuff"      "1"
+      "IsPurgable"    "0"
+    }
+  }
+}
 
   "item_recipe_retractable_shield" 
   {
@@ -3802,7 +3883,8 @@
     "ItemRecipe"          "1" //destroyed after combine
     "ItemCost"            "200" //if its 0, it will combine without needing a recipe.
     "ItemResult"          "item_retractable_shield" //the result of combining the ItemRequirements
-    //pickup sounds
+
+
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
@@ -3811,138 +3893,108 @@
     }
   }
 
-//TODO test active
 "item_retractable_shield"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"                    "1173"  //Valve's version of this item uses the ID "86".
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_buckler"
+  
+  // Stats    
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastPoint"        "0.0"
+  "AbilityCooldown"       "25.0"
+  "AbilityManaCost"       "10"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "800"
+  "ItemShopTags"          "armor;boost_armor"
+  "ItemQuality"         "rare"
+  "ItemAliases"         "buckler"
+  
+  "AbilitySpecial"
   {
-    "ID"                      "1173"
-    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"               "item_datadriven"
-    "AbilityTextureName"      "item_retractable_shield"
-    "AbilityCooldown"         "25.0"
-    "AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-    "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO"
-    "AbilityUnitTargetFlags"  "DOTA_UNIT_TARGET_FLAG_NONE"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemQuality"               "common"
-    "ItemCost"                  "0"
-    "ItemInitialCharges"        "0"
-    "ItemDroppable"             "1"
-    "ItemSellable"              "1"
-    "ItemRequiresCharges"       "0"
-    "ItemShareability"          "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"           "1"
-    "ItemBaseLevel"             "1"
-    "ItemDisassembleRule"     "DOTA_ITEM_DISASSEMBLE_ALWAYS"
-
-    "OnSpellStart"
-        {
-
-          "ActOnTargets"
-          {
-            "Target"
-            {
-              "Center"  "CASTER"
-              "Radius"  "%active_radius"
-              "Teams"   "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-              "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-            }
-
-            "ApplyModifier"
-            {      
-              "ModifierName"    "item_retractable_shield_modifier_active_armor"
-              "Duration"      "%active_duation"
-            }
-
-          }
-
-          "FireSound"
-            {
-              "EffectName"  "DOTA_Item.Mekansm.Activate"
-              "Target"    "CASTER"
-            }
-
-            "FireEffect"
-            {
-              "Target"      "CASTER"
-              "EffectName"    "particles/damage_immunity.vpcf"
-              "EffectAttachType"  "follow_origin"
-            }
-        }
-
-    "Modifiers"
+    "01"
     {
-      "item_retractable_shield_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-             "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
-             "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
-              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"  "%bonus_agi"
-              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
-          }  
-      }
-
-
-      "item_hokages_necklace_modifier_active_armor"
-      {
-        "IsDebuff"      "1"
-        "Properties"
-        {
-            "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%active_armor" 
-        }
-        
-      }
-
+      "var_type"        "FIELD_INTEGER"
+      "bonus_armor"     "5"
     }
-   // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
+    "02"
     {
-      "01"
+      "var_type"        "FIELD_INTEGER"
+      "bonus_all_stats"   "2"
+    }
+    "03"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "active_radius"     "750"
+    }
+    "04"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "active_armor"      "2"
+    }
+    "05"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "active_duration_unit"  "30.0"
+    }
+    "06"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "active_duration_hero"  "25.0"
+    }
+  }
+  
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "items/retractable_shield.lua"
+      "Function"        "item_buckler_datadriven_on_spell_start"
+      "ActiveDurationUnit"  "%active_duration_unit"
+      "ActiveDurationHero"  "%active_duration_hero"
+      "ActiveRadius"      "%active_radius"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_buckler_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
       {
-        "var_type"                      "FIELD_FLOAT"
-        "bonus_armor"                   "3.0"
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
       }
-      "02"
+    }
+    "modifier_item_buckler_datadriven_active"
+    {
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsBuff"        "1"
+      "IsDebuff"        "0"
+      "IsPurgable"      "1"
+      "TextureName"     "item_buckler"
+      
+      "Properties"
       {
-        "var_type"                      "FIELD_FLOAT"
-        "bonus_str"                     "2.0"
-      }
-      "03"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "bonus_agi"                     "2.0"
-      }
-       "04"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "bonus_int"                     "2.0"
-      }
-       "05"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "active_radius"                  "600.0"
-      }
-       "06"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "active_armor"                   "2.0"
-      }
-      "07"
-      {
-        "var_type"                      "FIELD_FLOAT"
-        "active_duration"                   "5.0"//TODO made it up
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE_ACTIVE"    "%active_armor"
       }
     }
   }
+}
+
 
   "item_recipe_tobis_mask" 
   {
@@ -3961,126 +4013,138 @@
     }
   }
 
-//TODO lifesteal aura should only apply to melee allies // has to be done with lua : unit:IsRangedAttacker()  to check if the unit is range or melee
 "item_tobis_mask"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1175"  //Valve's version of this item uses the ID "81".
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_vladmir"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "2075"
+  "ItemShopTags"          "lifesteal;damage;armor;regen_mana"
+  "ItemQuality"         "rare"
+  "ItemAliases"         "vladmir's offering;vlads"
+  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+  
+  "AbilitySpecial"
   {
-    "ID"                      "1175"
-    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"               "item_datadriven"
-    "AbilityTextureName"      "item_tobis_mask"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemQuality"               "common"
-    "ItemCost"                  "0"
-    "ItemInitialCharges"        "0"
-    "ItemDroppable"             "1"
-    "ItemSellable"              "1"
-    "ItemRequiresCharges"       "0"
-    "ItemShareability"          "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"           "1"
-    "ItemBaseLevel"             "1"
-    "ItemDisassembleRule"     "DOTA_ITEM_DISASSEMBLE_ALWAYS"
-
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "Modifiers"
+    "01"
     {
-      "item_tobis_mask_aura_modifier"
-      {
-          "Passive"           "1"
-          "IsHidden"          "1"
-          "Aura"              "tobis_mask_aura"
-          "Aura_Radius"       "%radius"
-          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-          "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-          "EffectName"        "particles/items_fx/aura_vlads.vpcf"
-          "EffectAttachType"  "follow_origin" 
-         "Aura_Radius"        "%radius"
-
-      }
-
-      "tobis_mask_aura"
-      {
-          "IsBuff"        "1"
-          "IsPurgable"      "0"
-          "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
-          "Properties"
-          {
-            "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_reg_constant"
-            "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor"
-            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-          }
+      "var_type"          "FIELD_INTEGER"
+      "aura_radius"       "900"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "lifesteal_aura_percent"  "16"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "damage_aura_percent"   "15"
+    }
+    "04"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "armor_aura"        "5"
+    }
+    "05"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "mana_regen_aura"     "0.8"  //This variable is unused due to an obscure engine bug.
+    }
+    "06"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "hp_regen"          "2"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_vladmir_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
       
-         "Orb"
-           {
-              "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
-              "ProjectileName" "particles\items2_fx\skadi_projectile.vpcf"
-           }
-
-        "OnOrbImpact"
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%hp_regen"
+      }
+    }
+    "modifier_item_vladmir_datadriven_general_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+    {
+      "Passive"       "1"
+      "IsHidden"        "1"
+      
+      "Aura"          "modifier_item_vladmir_datadriven_general_aura"
+      "Aura_Radius"       "%aura_radius"
+      "Aura_Teams"      "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+      "Aura_Types"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+      "Aura_Flags"      "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+      "Aura_ApplyToCaster"  "1"
+    }
+    "modifier_item_vladmir_datadriven_general_aura"
+    {
+      "Passive"     "0"
+      "IsHidden"      "0"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"     "%damage_aura_percent"
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE"       "%armor_aura"
+        "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"           "0.8"  //This is hardcoded due to an obscure engine bug.
+      }
+    }
+    "modifier_item_vladmir_datadriven_lifesteal_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+    {
+      "Passive"       "1"
+      "IsHidden"        "1"
+      
+      "Aura"          "modifier_item_vladmir_datadriven_lifesteal_aura"
+      "Aura_Radius"       "%aura_radius"
+      "Aura_Teams"      "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+      "Aura_Types"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+      "Aura_Flags"      "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_MELEE_ONLY"
+      "Aura_ApplyToCaster"  "1"
+    }
+    "modifier_item_vladmir_datadriven_lifesteal_aura"
+    {
+      "Passive"     "0"
+      "IsHidden"      "1"
+      
+      "OnAttackLanded"
+      {
+        "RunScript"
         {
-           "Lifesteal"
-          {
-            "Target"    "ATTACKER"
-            "LifestealPercent" "%bonus_lifesteal"
-          }  
-       }
+          "ScriptFile"      "items/tobis_mask.lua"
+          "Function"        "modifier_item_vladmir_datadriven_lifesteal_aura_on_attack_landed"
+        }
       }
     }
-   // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
+    "modifier_item_vladmir_datadriven_lifesteal_aura_lifesteal"
     {
-      "01"
+      "Passive"     "0"
+      "IsHidden"      "1"
+      
+      "OnDealDamage"
       {
-        "var_type"            "FIELD_FLOAT"
-        "bonus_damage"        "15.0"
-      }
-      "02"
-      {
-        "var_type"            "FIELD_FLOAT"
-        "mana_reg_constant"    "0.8"
-      }
-      "03"
-      {
-        "var_type"            "FIELD_FLOAT"
-        "armor"               "5.0"
-      }
-       "04"
-      {
-        "var_type"            "FIELD_FLOAT"
-        "radius"               "600.0"
-      }
-       "05"
-      {
-        "var_type"            "FIELD_FLOAT"
-        "bonus_lifesteal"     "16.0"
+        "Lifesteal"
+        {
+          "Target"      "ATTACKER"
+          "LifestealPercent"  "%lifesteal_aura_percent"
+        }
       }
     }
   }
-
-  "item_recipe_bingo_book" 
-  {
-    "ID" "1175"
-    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-    "BaseClass"           "item_datadriven"
-    "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "275" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_bingo_book" //the result of combining the ItemRequirements
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    "ItemRequirements"
-    {
-        "01" "item_kages_relic;item_anbu_mask;"
-    }
-  }
+}
 
 //TODO add locate event / add aura 
 "item_bingo_book"
@@ -4380,7 +4444,6 @@
     }
   }
 
-//TODO test hex
 "item_sage_scroll"
   {
     "ID"                      "1182"
@@ -4575,19 +4638,20 @@
     }
   }
 
-//TODO add active
 "item_hoshikages_star"
   {
     "ID"                    "1184"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+   "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AOE"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_hoshikages_star"
-
+    "AbilityCooldown"        "35.0"
+    "AbilityManaCost"        "0"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
+    "ItemQuality"         "rare"
     "ItemCost"            "0"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
@@ -4597,15 +4661,82 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    "ItemQuality"         "epic"
-    
+    "ItemPermanent"         "1"
+
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
-    "Modifiers"
+     "precache"
+      {
+        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+        "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
+        "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+      }
+
+   "OnSpellStart"
+  {
+
+    "FireSound"
     {
-      "item_hoshikages_star_modifier"
+      "EffectName"  "Hero_Brewmaster.ThunderClap"
+      "Target"    "CASTER"
+    }
+    
+    "FireEffect"
+    {
+      "EffectName"        "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+      "EffectAttachType"  "follow_origin"
+      "EffectRadius"    "%radius"
+      "Target"            "CASTER"
+    }
+
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_thunder_clap"
+      "Target"
+      {
+        "Center"  "CASTER"
+        "Radius"  "%radius"
+        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "Types"   "DOTA_UNIT_TARGET_HERO"
+      }
+      "Duration"    "%duration"
+    }
+    
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_thunder_clap"
+      "Target"
+      {
+        "Center"  "CASTER"
+        "Radius"  "%radius"
+        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "Types"   "DOTA_UNIT_TARGET_BASIC"
+      }
+      "Duration"    "%duration_creeps"
+    }
+
+    "Damage"
+    {
+      "Target"
+      {
+        "Center"    "CASTER"
+        "Radius"  "%radius"
+        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+      }
+      "Type"      "DAMAGE_TYPE_MAGICAL"
+      "Damage"    "%damage"
+    }
+  }
+
+  "Modifiers"
+  {
+
+
+       "item_hoshikage_star_modifier"
       {
          "Passive" "1"
          "IsHidden"  "1"
@@ -4613,25 +4744,77 @@
          "Properties"
           {
               "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
-              "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
+                "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
           }
       }
-    }
 
+        "modifier_thunder_clap"
+        {
+          "Passive"     "0"
+          "IsHidden"      "0"
+          "IsDebuff"      "1"
+      
+          "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+          "EffectAttachType"  "follow_origin"
+      
+          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+          "StatusEffectPriority"  "10"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_slow"
+          }
+
+          "OnCreated"
+          {
+            "FireSound"
+            {
+              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
+              "Target"    "TARGET"
+            }     
+          }   
+        }
+  }
     // Special  
     //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"
     {
-      "01"
-      {
-        "var_type"         "FIELD_FLOAT"
-        "bonus_int"        "35.0"
-      }
-      "02"
-      {
-        "var_type"                        "FIELD_FLOAT"
-        "bonus_mana_reg_percentage"        "200.0"
-      }
+     "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "radius"          "250"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "duration"          "3.5"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "duration_creeps"     "3.5"
+    }
+    "04"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "damage"          "350"
+    }
+    "05"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "movement_slow"       "-40"
+    }
+      "06"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "bonus_int"          "35"
+    }
+     "07"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "bonus_mana_reg_percentage"          "200"
+    }
+    
     }
   }
 
@@ -4653,14 +4836,17 @@
     }
   }
 
-//TODO add active
+//TODO change "particle"  "particle_name"
 "item_the_totsuka"
   {
     "ID"                    "1186"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_the_totsuka"
-
+    "AbilityCooldown"        "25"
+    "AbilityManaCost"        "100"//todo made it up
+    "AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
@@ -4677,12 +4863,53 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
+    "precache"
+    {
+      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
+      "particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+    }
+
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
+     "OnSpellStart"
+    {
+
+      "ApplyModifier"
+      {
+        "ModifierName"  "modifier_silence"
+        "Target"    "TARGET"
+        "Duration"    "%silence_duration"
+      }
+    }
+
     "Modifiers"
     {
+
+
+      "modifier_silence"
+      {
+        "IsDebuff"  "1"
+        "Duration"  "%silence_duration"
+        
+        "OnCreated"
+        { 
+          "AttachEffect"
+          {
+            "Target"    "Target"
+            "EffectName" "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+            "EffectAttachType"  "follow_origin"
+            "EffectRadius"        "200"
+          }
+        }
+
+        "States"
+        {
+          "MODIFIER_STATE_MUTED"    "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+
       "item_the_totsuka_modifier"
       {
          "Passive" "1"
@@ -4721,94 +4948,10 @@
         "var_type"                        "FIELD_FLOAT"
         "bonus_mana_reg_percentage"        "225.0"
       }
-    }
-  }
-
-
-   "item_recipe_karites_touch" 
-  {
-    "ID" "1187"
-    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "1250" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_karites_touch" //the result of combining the ItemRequirements
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    "ItemRequirements"
-    {
-        "01" "item_staff_of_faith;item_shinobi_claws;"
-    }
-  }
-
-//TODO add active/lvlup
-"item_karites_touch"
-  {
-    "ID"                    "1188"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"             "item_datadriven"
-    "AbilityTextureName"    "item_karites_touch"
-
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "0"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
-    "ItemQuality"         "rare"
-    
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "Modifiers"
-    {
-      "item_karites_touch_modifer"
+       "05"
       {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
-            "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"  "%bonus_agi"
-            "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
-          }
-      }
-    }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"         "FIELD_FLOAT"
-        "bonus_damage"        "9.0"
-      }
-      "02"
-      {
-        "var_type"              "FIELD_FLOAT"
-        "bonus_int"             "15.0"
-      }
-       "03"
-      {
-        "var_type"                "FIELD_FLOAT"
-        "bonus_str"             "3.0"
-      }
-       "04"
-      {
-        "var_type"            "FIELD_FLOAT"
-        "bonus_agi"           "3.0"
+        "var_type"                        "FIELD_FLOAT"
+        "silence_duration"              "5.0"
       }
     }
   }
@@ -4916,14 +5059,14 @@
     }
   }
 
-//TODO add active
 "item_rengeki"
   {
     "ID"                    "1192"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AOE"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_rengeki"
-
+    "AbilityCooldown"        "10.0"
+    "AbilityManaCost"        "0"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
@@ -4939,39 +5082,161 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemPermanent"         "1"
+    "ItemInitialCharges"    "10"
+
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
-    "Modifiers"
-    {
-      "item_rengeki_modifer"
+     "precache"
       {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
-            "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_reg_constant"
-          }
+        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+        "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
+        "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
       }
+
+   "OnSpellStart"
+  {
+    "SpendCharge" {}
+
+    "FireSound"
+    {
+      "EffectName"  "Hero_Brewmaster.ThunderClap"
+      "Target"    "CASTER"
     }
+    
+    "FireEffect"
+    {
+      "EffectName"        "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+      "EffectAttachType"  "follow_origin"
+      "EffectRadius"    "%radius"
+      "Target"            "CASTER"
+    }
+
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_thunder_clap"
+      "Target"
+      {
+        "Center"  "CASTER"
+        "Radius"  "%radius"
+        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "Types"   "DOTA_UNIT_TARGET_HERO"
+      }
+      "Duration"    "%duration"
+    }
+    
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_thunder_clap"
+      "Target"
+      {
+        "Center"  "CASTER"
+        "Radius"  "%radius"
+        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "Types"   "DOTA_UNIT_TARGET_BASIC"
+      }
+      "Duration"    "%duration_creeps"
+    }
+
+    "Damage"
+    {
+      "Target"
+      {
+        "Center"    "CASTER"
+        "Radius"  "%radius"
+        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+      }
+      "Type"      "DAMAGE_TYPE_MAGICAL"
+      "Damage"    "%damage"
+    }
+  }
+
+  "Modifiers"
+  {
+
+        "item_rengeki_modifier"
+        {
+           "Passive" "1"
+           "IsHidden"  "1"
+           "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+           "Properties"
+            {
+                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+                  "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
+            }
+        }
+
+
+        "modifier_thunder_clap"
+        {
+          "Passive"     "0"
+          "IsHidden"      "0"
+          "IsDebuff"      "1"
+      
+          "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+          "EffectAttachType"  "follow_origin"
+      
+          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+          "StatusEffectPriority"  "10"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_slow"
+          }
+
+          "OnCreated"
+          {
+            "FireSound"
+            {
+              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
+              "Target"    "TARGET"
+            }     
+          }   
+        }
+  }
     // Special  
     //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"
     {
-      "01"
-      {
-        "var_type"         "FIELD_FLOAT"
-        "bonus_int"         "10.0"
-      }
-      "02"
-      {
-        "var_type"              "FIELD_FLOAT"
-        "mana_reg_constant"     "150.0"
-      }
+     "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "radius"          "250"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "duration"          "3.5"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "duration_creeps"     "3.5"
+    }
+    "04"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "damage"          "200"
+    }
+    "05"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "movement_slow"       "-30"
+    }
+      "06"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "bonus_int"          "10"
+    }
+     "07"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "bonus_mana_reg_percentage"          "150"
+    }
     }
   }
 
@@ -7451,7 +7716,7 @@
     }
   }
 
-//TODO add true strike / add bonus dmg +stop channeling
+//TODO add true strike / test bonus dmg / add stop channeling
 "item_conch_shell_mace"
   {
     "ID"                    "1242"
@@ -7577,7 +7842,7 @@
     }
   }
 
-//TODO add cleaving attack
+//TODO add cleaving attack(currently not working)
 "item_silver_hands"
   {
     "ID"                    "1244"
@@ -7619,6 +7884,15 @@
                "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
           }
       }
+
+      "OnAttackLanded"
+      {
+        "RunScript"
+        {
+          "ScriptFile"  "items/siler_hands.lua"
+          "Function"    "cleave"
+        }
+      }
     }
     // Special  
     //-------------------------------------------------------------------------------------------------------------
@@ -7638,6 +7912,21 @@
       {
         "var_type"                  "FIELD_FLOAT"
         "bonus_hp_reg_constant"     "6.0"
+      }
+      "04"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "radius"                    "250.0"
+      }
+      "05"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "damage"                    "10.0"//todo rework lua make dmg % from base dmg
+      }
+      "06"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "aoe_damage"                "100.0"//todo rework lua make dmg % from base dmg
       }
   }
 
@@ -7662,7 +7951,7 @@
     }
   }
 
-//TODO add fire visuell effect
+//TODO change particles, kinda overdone it :D
 "item_solar_blade"
   {
     "ID"                    "1246"
@@ -7692,7 +7981,8 @@
 
       "precache"
     {
-      "particle"  "particles/econ/courier/courier_golden_roshan/golden_roshan_ambient.vpcf"
+      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
+      "particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
     }
 
 
@@ -7705,8 +7995,8 @@
         { 
           "AttachEffect"
           {
-            "Target"    "TARGET"
-            "EffectName" "particles/econ/courier/courier_golden_roshan/golden_roshan_ambient.vpcf"
+            "Target"    "CASTER"
+            "EffectName" "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
             "EffectAttachType"  "follow_origin"
             "EffectRadius"        "200"
           }
@@ -7728,7 +8018,7 @@
           }
           "AttachEffect"
           {
-            "EffectName" "particles/econ/courier/courier_golden_roshan/golden_roshan_ambient.vpcf"
+            "EffectName" "particles/dire_fx/fire_barracks_glow_b.vpcf"
             "Target" //AOE
             {
               "Center" "CASTER"
@@ -7941,6 +8231,13 @@
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+
+      "precache"
+    {
+      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
+      "particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+    }
 
     "Modifiers"
     {
@@ -8511,6 +8808,622 @@
       }
     }
   }
+
+
+  //needed for lua script to change shinobi_trends on click
+  "item_dummy_datadriven"
+  {
+      // General
+      //-------------------------------------------------------------------------------------------------------------
+      "ID"                            "1259"
+  "BaseClass"                     "item_datadriven"
+  "ItemBaseLevel"                 "1"
+  }
+
+
+
+
+
+"item_karites_touch"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1260"  
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_karites_touch"
+  "FightRecapLevel"       "1"
+  
+  // Stats    
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastRange"        "600 650 700 750 800"
+  "AbilityCastPoint"        "0.0"
+  "AbilityCooldown"       "35.0 30.0 25.0 20.0 15.0"
+  "AbilityManaCost"       "180"
+  
+  "AbilitySharedCooldown"     "dagon"
+  "MaxUpgradeLevel"       "5"
+  "ItemBaseLevel"         "1"
+  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "2800"
+  "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
+  "ItemQuality"         "rare"  
+  "ItemAliases"         "dagon 1"
+  
+  "UpgradesItems"         "item_karites_touch;item_karites_touch_2;item_karites_touch_3;item_karites_touch_4"
+  "UpgradeRecipe"         "item_recipe_dagon"
+  
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_intellect"   "13 16 19 22 25"
+    }
+    "02"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_all_stats"   "3"
+    }
+    "03"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_damage"      "9"
+    }
+    "04"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "damage"        "400 500 600 700 800"
+    }
+    "05"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "range_tooltip"     "600 650 700 750 800"
+    }
+  }
+  
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"    "items/item_dagon.lua"
+      "Function"      "item_dagon_datadriven_on_spell_start"
+      "Damage"      "%damage"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_dagon_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
+        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
+      }
+    }
+  }
+}
+
+
+"item_karites_touch_2"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1261" 
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_karites_touch_2"
+  "FightRecapLevel"       "1"
+  
+  // Stats    
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastRange"        "600 650 700 750 800"
+  "AbilityCastPoint"        "0.0"
+  "AbilityCooldown"       "35.0 30.0 25.0 20.0 15.0"
+  "AbilityManaCost"       "180"
+  
+  "AbilitySharedCooldown"     "dagon"
+  "MaxUpgradeLevel"       "5"
+  "ItemBaseLevel"         "2"
+  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "2800"
+  "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
+  "ItemQuality"         "rare"  
+  "ItemAliases"         "dagon 2"
+  
+  "UpgradesItems"         "item_karites_touch_2;item_karites_touch_3;item_karites_touch_4"
+  "UpgradeRecipe"         "item_recipe_karites_touch"
+  
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_intellect"   "13 16 19 22 25"
+    }
+    "02"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_all_stats"   "3"
+    }
+    "03"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_damage"      "9"
+    }
+    "04"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "damage"        "400 500 600 700 800"
+    }
+    "05"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "range_tooltip"     "600 650 700 750 800"
+    }
+  }
+  
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"    "items/item_dagon.lua"
+      "Function"      "item_dagon_datadriven_on_spell_start"
+      "Damage"      "%damage"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_dagon_2_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
+        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
+      }
+    }
+  }
+}
+
+
+"item_karites_touch_3"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1262"  //Valve's version of this item uses the ID "202".
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_karites_touch_3"
+  "FightRecapLevel"       "1"
+  
+  // Stats    
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastRange"        "600 650 700 750 800"
+  "AbilityCastPoint"        "0.0"
+  "AbilityCooldown"       "35.0 30.0 25.0 20.0 15.0"
+  "AbilityManaCost"       "180"
+  
+  "AbilitySharedCooldown"     "dagon"
+  "MaxUpgradeLevel"       "5"
+  "ItemBaseLevel"         "3"
+  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "2800"
+  "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
+  "ItemQuality"         "rare"  
+  "ItemAliases"         "dagon 3"
+  
+  "UpgradesItems"         "item_karites_touch_3;item_karites_touch_4"
+  "UpgradeRecipe"         "item_recipe_karites_touch"
+  
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_intellect"   "13 16 19 22 25"
+    }
+    "02"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_all_stats"   "3"
+    }
+    "03"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_damage"      "9"
+    }
+    "04"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "damage"        "400 500 600 700 800"
+    }
+    "05"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "range_tooltip"     "600 650 700 750 800"
+    }
+  }
+  
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"    "items/karites_touch.lua"
+      "Function"      "item_dagon_datadriven_on_spell_start"
+      "Damage"      "%damage"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_dagon_3_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
+        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
+      }
+    }
+  }
+}
+
+
+"item_karites_touch_4"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1263"  //Valve's version of this item uses the ID "203".
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_karites_touch_4"
+  "FightRecapLevel"       "1"
+  
+  // Stats    
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastRange"        "600 650 700 750 800"
+  "AbilityCastPoint"        "0.0"
+  "AbilityCooldown"       "35.0 30.0 25.0 20.0 15.0"
+  "AbilityManaCost"       "180"
+  
+  "AbilitySharedCooldown"     "dagon"
+  "MaxUpgradeLevel"       "5"
+  "ItemBaseLevel"         "4"
+  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "2800"
+  "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
+  "ItemQuality"         "rare"  
+  "ItemAliases"         "dagon 4"
+  
+  "UpgradesItems"         "item_karites_touch_4"
+  "UpgradeRecipe"         "item_recipe_karites_touch"
+  
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_intellect"   "13 16 19 22 25"
+    }
+    "02"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_all_stats"   "3"
+    }
+    "03"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_damage"      "9"
+    }
+    "04"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "damage"        "400 500 600 700 800"
+    }
+    "05"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "range_tooltip"     "600 650 700 750 800"
+    }
+  }
+  
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"    "items/karites_touch.lua"
+      "Function"      "item_dagon_datadriven_on_spell_start"
+      "Damage"      "%damage"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_dagon_4_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
+        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
+      }
+    }
+  }
+}
+
+
+"item_karites_touch_5"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1264"  
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_karites_touch_5"
+  "FightRecapLevel"       "1"
+  
+  // Stats    
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastRange"        "600 650 700 750 800"
+  "AbilityCastPoint"        "0.0"
+  "AbilityCooldown"       "35.0 30.0 25.0 20.0 15.0"
+  "AbilityManaCost"       "180"
+  
+  "AbilitySharedCooldown"     "dagon"
+  "MaxUpgradeLevel"       "5"
+  "ItemBaseLevel"         "5"
+  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "2800"
+  "ItemShopTags"         "damage;int;str;agi;hard_to_tag"
+  "ItemQuality"         "rare"  
+  "ItemAliases"         "dagon 5"
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_intellect"   "13 16 19 22 25"
+    }
+    "02"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_all_stats"   "3"
+    }
+    "03"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_damage"      "9"
+    }
+    "04"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "damage"        "400 500 600 700 800"
+    }
+    "05"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "range_tooltip"     "600 650 700 750 800"
+    }
+  }
+  
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"    "items/karites_touch.lua"
+      "Function"      "item_dagon_datadriven_on_spell_start"
+      "Damage"      "%damage"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_dagon_5_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
+        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
+      }
+    }
+  }
+}
+
+"item_recipe_karites_touch"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1265"  //Valve's version of this item uses the ID "103".
+  "Model"             "models/props_gameplay/recipe.mdl"
+  "AbilityTextureName"      "item_karites_touch"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "1250"
+  "ItemShopTags"          ""  
+  // Recipe
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemRecipe"          "1"
+  "ItemResult"          "item_karites_touch"
+  "ItemRequirements"
+  {
+    "01"            "item_staff_of_wizardry_datadriven;item_null_talisman_datadriven"
+  }
+}
+
+"item_recipe_karites_touch_2"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1266"  //Valve's version of this item uses the ID "197".
+  "Model"             "models/props_gameplay/recipe.mdl"
+  "AbilityTextureName"      "item_recipe"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "0"
+  "ItemShopTags"          ""
+  
+  // Recipe
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemRecipe"          "1"
+  "ItemResult"          "item_karites_touch_2"
+  "ItemRequirements"
+  {
+    "01"            "item_karites_touch;item_recipe_karites_touch"
+  }
+}
+
+"item_recipe_karites_touch_3"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1267"  //Valve's version of this item uses the ID "198".
+  "Model"             "models/props_gameplay/recipe.mdl"
+  "AbilityTextureName"      "item_recipe"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "0"
+  "ItemShopTags"          ""
+  
+  // Recipe
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemRecipe"          "1"
+  "ItemResult"          "item_karites_touch_3"
+  "ItemRequirements"
+  {
+    "01"            "item_karites_touch_2;item_recipe_karites_touch"
+  }
+}
+
+"item_recipe_karites_touch_4"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1268"  //Valve's version of this item uses the ID "199".
+  "Model"             "models/props_gameplay/recipe.mdl"
+  "AbilityTextureName"      "item_recipe"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "0"
+  "ItemShopTags"          ""
+  
+  // Recipe
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemRecipe"          "1"
+  "ItemResult"          "item_karites_touch_4"
+  "ItemRequirements"
+  {
+    "01"            "item_karites_touch_3;item_recipe_karites_touch"
+  }
+}
+
+"item_recipe_karites_touch_5"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1269"  //Valve's version of this item uses the ID "200".
+  "Model"             "models/props_gameplay/recipe.mdl"
+  "AbilityTextureName"      "item_recipe"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "0"
+  "ItemShopTags"          ""
+  
+  // Recipe
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemRecipe"          "1"
+  "ItemResult"          "item_karites_touch_5"
+  "ItemRequirements"
+  {
+     "01"            "item_karites_touch_4;item_recipe_karites_touch"
+  }
+}
+
+
+
+
+
+
 
 }
 
