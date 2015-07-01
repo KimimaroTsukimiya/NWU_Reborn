@@ -9330,7 +9330,7 @@
   "BaseClass"           "item_datadriven"
   "ID"              "1266"  //Valve's version of this item uses the ID "197".
   "Model"             "models/props_gameplay/recipe.mdl"
-  "AbilityTextureName"      "item_recipe"
+  "AbilityTextureName"      "item_karites_touch"
   
   // Item Info
   //-------------------------------------------------------------------------------------------------------------
@@ -9354,7 +9354,7 @@
   "BaseClass"           "item_datadriven"
   "ID"              "1267"  //Valve's version of this item uses the ID "198".
   "Model"             "models/props_gameplay/recipe.mdl"
-  "AbilityTextureName"      "item_recipe"
+  "AbilityTextureName"      "item_karites_touch"
   
   // Item Info
   //-------------------------------------------------------------------------------------------------------------
@@ -9378,7 +9378,7 @@
   "BaseClass"           "item_datadriven"
   "ID"              "1268"  //Valve's version of this item uses the ID "199".
   "Model"             "models/props_gameplay/recipe.mdl"
-  "AbilityTextureName"      "item_recipe"
+  "AbilityTextureName"      "item_karites_touch"
   
   // Item Info
   //-------------------------------------------------------------------------------------------------------------
@@ -9402,7 +9402,7 @@
   "BaseClass"           "item_datadriven"
   "ID"              "1269"  //Valve's version of this item uses the ID "200".
   "Model"             "models/props_gameplay/recipe.mdl"
-  "AbilityTextureName"      "item_recipe"
+  "AbilityTextureName"      "item_karites_touch"
   
   // Item Info
   //-------------------------------------------------------------------------------------------------------------
