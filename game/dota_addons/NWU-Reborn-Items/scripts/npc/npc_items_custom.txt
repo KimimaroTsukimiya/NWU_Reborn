@@ -15,7 +15,7 @@
 //TODO add effects of orbs/buff etc.
 //TODO check isbuff is really set at buffs
 //TODO add aliases(modifier names, dota name of the same item)
-  
+//TODO strange bug on upgrade items, all modifiers are beeing x5 and stay once u remove the item -- known issue from dota2reborn..rather wait untill they fix or workaround(check extra modifiers and remove them)
 
 
   "item_leather_gloves"
@@ -1291,7 +1291,8 @@
   "item_recipe_sakuras_fighting_gloves" 
   {
     "ID" "1124"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    
+    "AbilityTextureName"      "item_recipe"
     "BaseClass"           "item_datadriven"
     "ItemRecipe"          "1" //destroyed after combine
     "ItemCost"            "175" //if its 0, it will combine without needing a recipe.
@@ -1324,8 +1325,6 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
     
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
@@ -1367,6 +1366,8 @@
       }
     }
   }
+
+
 
 
   "item_recipe_the_spark_of_agility" 
@@ -8821,9 +8822,6 @@
   }
 
 
-
-
-
 "item_karites_touch"
 {
   // General
@@ -8840,9 +8838,9 @@
   
   // Stats    
   //-------------------------------------------------------------------------------------------------------------
-  "AbilityCastRange"        "600 650 700 750 800"
+  "AbilityCastRange"        "600"
   "AbilityCastPoint"        "0.0"
-  "AbilityCooldown"       "35.0 30.0 25.0 20.0 15.0"
+  "AbilityCooldown"       "35.0"
   "AbilityManaCost"       "180"
   
   "AbilitySharedCooldown"     "dagon"
@@ -8860,12 +8858,21 @@
   "UpgradesItems"         "item_karites_touch;item_karites_touch_2;item_karites_touch_3;item_karites_touch_4"
   "UpgradeRecipe"         "item_recipe_dagon"
   
+
+   "precache"
+    {
+      "particle" "particles/items_fx/dagon.vpcf"
+    }
+ 
+
+
+
   "AbilitySpecial"
   {
     "01"
     {
       "var_type"        "FIELD_INTEGER"
-      "bonus_intellect"   "13 16 19 22 25"
+      "bonus_intellect"   "13"
     }
     "02"
     {
@@ -8880,12 +8887,12 @@
     "04"
     {
       "var_type"        "FIELD_INTEGER"
-      "damage"        "400 500 600 700 800"
+      "damage"        "400"
     }
     "05"
     {
       "var_type"        "FIELD_INTEGER"
-      "range_tooltip"     "600 650 700 750 800"
+      "range_tooltip"     "600"
     }
   }
   
@@ -8893,7 +8900,7 @@
   {
     "RunScript"
     {
-      "ScriptFile"    "items/item_dagon.lua"
+      "ScriptFile"    "items/karites_touch.lua"
       "Function"      "item_dagon_datadriven_on_spell_start"
       "Damage"      "%damage"
     }
@@ -8931,14 +8938,14 @@
   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
   "Model"             "models/props_gameplay/red_box.vmdl" 
   "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
-  "AbilityTextureName"      "item_karites_touch_2"
+  "AbilityTextureName"      "item_karites_touch"
   "FightRecapLevel"       "1"
   
   // Stats    
   //-------------------------------------------------------------------------------------------------------------
-  "AbilityCastRange"        "600 650 700 750 800"
+  "AbilityCastRange"        "650"
   "AbilityCastPoint"        "0.0"
-  "AbilityCooldown"       "35.0 30.0 25.0 20.0 15.0"
+  "AbilityCooldown"       "30.0"
   "AbilityManaCost"       "180"
   
   "AbilitySharedCooldown"     "dagon"
@@ -8956,12 +8963,19 @@
   "UpgradesItems"         "item_karites_touch_2;item_karites_touch_3;item_karites_touch_4"
   "UpgradeRecipe"         "item_recipe_karites_touch"
   
+
+
+   "precache"
+    {
+      "particle" "particles/items_fx/dagon.vpcf"
+    }
+
   "AbilitySpecial"
   {
     "01"
     {
       "var_type"        "FIELD_INTEGER"
-      "bonus_intellect"   "13 16 19 22 25"
+      "bonus_intellect"   "16"
     }
     "02"
     {
@@ -8976,12 +8990,12 @@
     "04"
     {
       "var_type"        "FIELD_INTEGER"
-      "damage"        "400 500 600 700 800"
+      "damage"        "500"
     }
     "05"
     {
       "var_type"        "FIELD_INTEGER"
-      "range_tooltip"     "600 650 700 750 800"
+      "range_tooltip"     "650"
     }
   }
   
@@ -8989,7 +9003,7 @@
   {
     "RunScript"
     {
-      "ScriptFile"    "items/item_dagon.lua"
+      "ScriptFile"     "items/karites_touch.lua"
       "Function"      "item_dagon_datadriven_on_spell_start"
       "Damage"      "%damage"
     }
@@ -9027,14 +9041,14 @@
   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
   "Model"             "models/props_gameplay/red_box.vmdl" 
   "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
-  "AbilityTextureName"      "item_karites_touch_3"
+  "AbilityTextureName"      "item_karites_touch"
   "FightRecapLevel"       "1"
   
   // Stats    
   //-------------------------------------------------------------------------------------------------------------
-  "AbilityCastRange"        "600 650 700 750 800"
+  "AbilityCastRange"        "700"
   "AbilityCastPoint"        "0.0"
-  "AbilityCooldown"       "35.0 30.0 25.0 20.0 15.0"
+  "AbilityCooldown"       "25.0"
   "AbilityManaCost"       "180"
   
   "AbilitySharedCooldown"     "dagon"
@@ -9052,12 +9066,19 @@
   "UpgradesItems"         "item_karites_touch_3;item_karites_touch_4"
   "UpgradeRecipe"         "item_recipe_karites_touch"
   
+
+
+   "precache"
+    {
+      "particle" "particles/items_fx/dagon.vpcf"
+    }
+
   "AbilitySpecial"
   {
     "01"
     {
       "var_type"        "FIELD_INTEGER"
-      "bonus_intellect"   "13 16 19 22 25"
+      "bonus_intellect"   "19"
     }
     "02"
     {
@@ -9072,12 +9093,12 @@
     "04"
     {
       "var_type"        "FIELD_INTEGER"
-      "damage"        "400 500 600 700 800"
+      "damage"        "600"
     }
     "05"
     {
       "var_type"        "FIELD_INTEGER"
-      "range_tooltip"     "600 650 700 750 800"
+      "range_tooltip"     "700"
     }
   }
   
@@ -9123,14 +9144,14 @@
   "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
   "Model"             "models/props_gameplay/red_box.vmdl" 
   "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
-  "AbilityTextureName"      "item_karites_touch_4"
+  "AbilityTextureName"      "item_karites_touch"
   "FightRecapLevel"       "1"
   
   // Stats    
   //-------------------------------------------------------------------------------------------------------------
-  "AbilityCastRange"        "600 650 700 750 800"
+  "AbilityCastRange"        "750"
   "AbilityCastPoint"        "0.0"
-  "AbilityCooldown"       "35.0 30.0 25.0 20.0 15.0"
+  "AbilityCooldown"       "20.0"
   "AbilityManaCost"       "180"
   
   "AbilitySharedCooldown"     "dagon"
@@ -9148,12 +9169,19 @@
   "UpgradesItems"         "item_karites_touch_4"
   "UpgradeRecipe"         "item_recipe_karites_touch"
   
+
+
+   "precache"
+    {
+      "particle" "particles/items_fx/dagon.vpcf"
+    }
+
   "AbilitySpecial"
   {
     "01"
     {
       "var_type"        "FIELD_INTEGER"
-      "bonus_intellect"   "13 16 19 22 25"
+      "bonus_intellect"   "22"
     }
     "02"
     {
@@ -9168,12 +9196,12 @@
     "04"
     {
       "var_type"        "FIELD_INTEGER"
-      "damage"        "400 500 600 700 800"
+      "damage"        "700"
     }
     "05"
     {
       "var_type"        "FIELD_INTEGER"
-      "range_tooltip"     "600 650 700 750 800"
+      "range_tooltip"     "750"
     }
   }
   
@@ -9208,97 +9236,6 @@
 }
 
 
-"item_karites_touch_5"
-{
-  // General
-  //-------------------------------------------------------------------------------------------------------------
-  "BaseClass"           "item_datadriven"
-  "ID"              "1264"  
-  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-  "Model"             "models/props_gameplay/red_box.vmdl" 
-  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
-  "AbilityTextureName"      "item_karites_touch_5"
-  "FightRecapLevel"       "1"
-  
-  // Stats    
-  //-------------------------------------------------------------------------------------------------------------
-  "AbilityCastRange"        "600 650 700 750 800"
-  "AbilityCastPoint"        "0.0"
-  "AbilityCooldown"       "35.0 30.0 25.0 20.0 15.0"
-  "AbilityManaCost"       "180"
-  
-  "AbilitySharedCooldown"     "dagon"
-  "MaxUpgradeLevel"       "5"
-  "ItemBaseLevel"         "5"
-  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-  
-  // Item Info
-  //-------------------------------------------------------------------------------------------------------------
-  "ItemCost"            "2800"
-  "ItemShopTags"         "damage;int;str;agi;hard_to_tag"
-  "ItemQuality"         "rare"  
-  "ItemAliases"         "dagon 5"
-
-  "AbilitySpecial"
-  {
-    "01"
-    {
-      "var_type"        "FIELD_INTEGER"
-      "bonus_intellect"   "13 16 19 22 25"
-    }
-    "02"
-    {
-      "var_type"        "FIELD_INTEGER"
-      "bonus_all_stats"   "3"
-    }
-    "03"
-    {
-      "var_type"        "FIELD_INTEGER"
-      "bonus_damage"      "9"
-    }
-    "04"
-    {
-      "var_type"        "FIELD_INTEGER"
-      "damage"        "400 500 600 700 800"
-    }
-    "05"
-    {
-      "var_type"        "FIELD_INTEGER"
-      "range_tooltip"     "600 650 700 750 800"
-    }
-  }
-  
-  "OnSpellStart"
-  {
-    "RunScript"
-    {
-      "ScriptFile"    "items/karites_touch.lua"
-      "Function"      "item_dagon_datadriven_on_spell_start"
-      "Damage"      "%damage"
-    }
-  }
-  
-  "Modifiers"
-  {
-    "modifier_item_dagon_5_datadriven"
-    {
-      "Passive"     "1"
-      "IsHidden"      "1"
-      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-      
-      "Properties"
-      {
-        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
-        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
-        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
-        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
-        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
-      }
-    }
-  }
-}
 
 "item_recipe_karites_touch"
 {
@@ -9307,7 +9244,7 @@
   "BaseClass"           "item_datadriven"
   "ID"              "1265"  //Valve's version of this item uses the ID "103".
   "Model"             "models/props_gameplay/recipe.mdl"
-  "AbilityTextureName"      "item_karites_touch"
+  "AbilityTextureName"      "item_recipe_karites_touch"
   
   // Item Info
   //-------------------------------------------------------------------------------------------------------------
@@ -9319,7 +9256,7 @@
   "ItemResult"          "item_karites_touch"
   "ItemRequirements"
   {
-    "01"            "item_staff_of_wizardry_datadriven;item_null_talisman_datadriven"
+    "01"            "item_staff_of_faith;item_shinobi_claws"
   }
 }
 
@@ -9330,7 +9267,7 @@
   "BaseClass"           "item_datadriven"
   "ID"              "1266"  //Valve's version of this item uses the ID "197".
   "Model"             "models/props_gameplay/recipe.mdl"
-  "AbilityTextureName"      "item_karites_touch"
+  "AbilityTextureName"      "item_recipe_karites_touch_2"
   
   // Item Info
   //-------------------------------------------------------------------------------------------------------------
@@ -9354,7 +9291,7 @@
   "BaseClass"           "item_datadriven"
   "ID"              "1267"  //Valve's version of this item uses the ID "198".
   "Model"             "models/props_gameplay/recipe.mdl"
-  "AbilityTextureName"      "item_karites_touch"
+  "AbilityTextureName"      "item_recipe_karites_touch_3"
   
   // Item Info
   //-------------------------------------------------------------------------------------------------------------
@@ -9378,7 +9315,7 @@
   "BaseClass"           "item_datadriven"
   "ID"              "1268"  //Valve's version of this item uses the ID "199".
   "Model"             "models/props_gameplay/recipe.mdl"
-  "AbilityTextureName"      "item_karites_touch"
+  "AbilityTextureName"      "item_recipe_karites_touch_4"
   
   // Item Info
   //-------------------------------------------------------------------------------------------------------------
@@ -9394,34 +9331,6 @@
     "01"            "item_karites_touch_3;item_recipe_karites_touch"
   }
 }
-
-"item_recipe_karites_touch_5"
-{
-  // General
-  //-------------------------------------------------------------------------------------------------------------
-  "BaseClass"           "item_datadriven"
-  "ID"              "1269"  //Valve's version of this item uses the ID "200".
-  "Model"             "models/props_gameplay/recipe.mdl"
-  "AbilityTextureName"      "item_karites_touch"
-  
-  // Item Info
-  //-------------------------------------------------------------------------------------------------------------
-  "ItemCost"            "0"
-  "ItemShopTags"          ""
-  
-  // Recipe
-  //-------------------------------------------------------------------------------------------------------------
-  "ItemRecipe"          "1"
-  "ItemResult"          "item_karites_touch_5"
-  "ItemRequirements"
-  {
-     "01"            "item_karites_touch_4;item_recipe_karites_touch"
-  }
-}
-
-
-
-
 
 
 
