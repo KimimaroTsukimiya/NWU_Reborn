@@ -1,0 +1,108 @@
+"item_ikazuchi"
+  {
+    "ID"                    "1220"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_ikazuchi"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"                "0"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"           "1"
+    "ItemSellable"            "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"         "1"
+    "ItemBaseLevel"           "1"
+    "ItemQuality"         "epic"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "precache"
+    {
+      "particle"  "particles/generic_gameplay/generic_stunned_old.vpcf"
+      "particle"  "particles/items_fx/chain_lightning.vpcf"
+      "particle"  "particles/units/heroes/hero_zuus/zuus_arc_lightning.vpcf"
+    }
+
+    "Modifiers"
+    {
+      "item_ikazuchi_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+              "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
+          }
+
+          "OnAttackLanded"
+        {
+          
+          "Random"
+          {
+            "Chance"    "%lightning_chance"
+            "OnSuccess"
+            {
+              "RunScript"
+              {
+                "ScriptFile"  "items/ikazuchi.lua"
+                "Function"    "ZeusLightning"
+              }
+            }
+          }
+        }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "bonus_damage"              "24.0"
+      }
+      "02"
+      {
+        "var_type"                   "FIELD_FLOAT"
+        "attackspeed"                  "70.0"
+      }
+      "03"
+      {
+        "var_type" "FIELD_INTEGER"
+        "lightning_chance" "20"
+      }
+      "04"
+      {
+        "var_type" "FIELD_INTEGER"
+        "lightning_damage" "200"
+      }
+      "05"
+      {
+        "var_type" "FIELD_INTEGER"
+        "lightning_bounces" "5"//todo made it up
+      }
+      "06"
+      {
+        "var_type" "FIELD_INTEGER"
+        "lightning_decay" "2"//todo made it up
+      }
+      "07"
+      {
+        "var_type" "FIELD_INTEGER"
+        "bounce_range" "800"//todo made it up
+      }
+
+    }
+  }
+

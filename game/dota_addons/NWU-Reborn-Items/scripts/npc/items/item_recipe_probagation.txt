@@ -1,0 +1,17 @@
+  "item_recipe_probagation" 
+  {
+    "ID" "1251"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "ItemRecipe"          "1" //destroyed after combine
+    "ItemCost"            "500" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_probagation" //the result of combining the ItemRequirements
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "ItemRequirements"
+    {
+        "01" "item_shuko;item_kages_relic"
+    }
+  }
+

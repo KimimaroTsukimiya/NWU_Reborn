@@ -1,0 +1,23 @@
+"item_recipe_karites_touch"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1265"  //Valve's version of this item uses the ID "103".
+  "Model"             "models/props_gameplay/recipe.mdl"
+  "AbilityTextureName"      "item_recipe_karites_touch"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "1250"
+  "ItemShopTags"          ""  
+  // Recipe
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemRecipe"          "1"
+  "ItemResult"          "item_karites_touch"
+  "ItemRequirements"
+  {
+    "01"            "item_staff_of_faith;item_shinobi_claws"
+  }
+}
+

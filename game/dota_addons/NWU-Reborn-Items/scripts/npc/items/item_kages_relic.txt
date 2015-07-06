@@ -1,0 +1,63 @@
+  "item_kages_relic"
+  {
+    "ID"              "1137"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"   "item_kages_relic"
+    "ItemQuality"     "component"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "2100"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+      "item_kages_relic_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"  "%bonus_agi"
+              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_int"        "10.0"
+      }
+      "02"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_agi"        "10.0"
+      }
+      "03"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_str"        "10.0"
+      }
+    }
+  }
+

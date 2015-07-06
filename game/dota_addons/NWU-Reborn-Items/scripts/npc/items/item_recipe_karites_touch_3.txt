@@ -1,0 +1,24 @@
+"item_recipe_karites_touch_3"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "1267"  //Valve's version of this item uses the ID "198".
+  "Model"             "models/props_gameplay/recipe.mdl"
+  "AbilityTextureName"      "item_recipe_karites_touch_3"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "0"
+  "ItemShopTags"          ""
+  
+  // Recipe
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemRecipe"          "1"
+  "ItemResult"          "item_karites_touch_3"
+  "ItemRequirements"
+  {
+    "01"            "item_karites_touch_2;item_recipe_karites_touch"
+  }
+}
+

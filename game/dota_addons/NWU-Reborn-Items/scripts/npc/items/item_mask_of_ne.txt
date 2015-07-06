@@ -1,0 +1,62 @@
+   "item_mask_of_ne"
+  {
+    "ID"              "1102"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"      "item_mask_of_ne"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "900"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "ItemQuality"    "component"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+        //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    
+    "Modifiers"
+    {
+      "modifier_lifesteal"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Orb"
+           {
+              "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
+              "ProjectileName" "particles\items2_fx\skadi_projectile.vpcf"
+           }
+
+        "OnOrbImpact"
+        {
+           "Lifesteal"
+          {
+            "Target"    "ATTACKER"
+            "LifestealPercent" "%bonus_lifesteal"
+          }  
+         } 
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "bonus_lifesteal"        "10.0"
+      }
+    }
+  }
+

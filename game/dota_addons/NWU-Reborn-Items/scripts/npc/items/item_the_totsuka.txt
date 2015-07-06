@@ -1,0 +1,119 @@
+"item_the_totsuka"
+  {
+    "ID"                    "1186"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_the_totsuka"
+    "AbilityCooldown"        "25"
+    "AbilityManaCost"        "100"//todo made it up
+    "AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "0"
+    "ItemQuality"         "epic"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    
+    "precache"
+    {
+      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
+      "particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+    }
+
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+     "OnSpellStart"
+    {
+
+      "ApplyModifier"
+      {
+        "ModifierName"  "modifier_silence"
+        "Target"    "TARGET"
+        "Duration"    "%silence_duration"
+      }
+    }
+
+    "Modifiers"
+    {
+
+
+      "modifier_silence"
+      {
+        "IsDebuff"  "1"
+        "Duration"  "%silence_duration"
+        
+        "OnCreated"
+        { 
+          "AttachEffect"
+          {
+            "Target"    "Target"
+            "EffectName" "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+            "EffectAttachType"  "follow_origin"
+            "EffectRadius"        "200"
+          }
+        }
+
+        "States"
+        {
+          "MODIFIER_STATE_MUTED"    "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+
+      "item_the_totsuka_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
+            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_damage"        "45.0"
+      }
+      "02"
+      {
+        "var_type"              "FIELD_FLOAT"
+        "bonus_int"             "20.0"
+      }
+       "03"
+      {
+        "var_type"                "FIELD_FLOAT"
+        "attackspeed"             "30.0"
+      }
+       "04"
+      {
+        "var_type"                        "FIELD_FLOAT"
+        "bonus_mana_reg_percentage"        "225.0"
+      }
+       "05"
+      {
+        "var_type"                        "FIELD_FLOAT"
+        "silence_duration"              "5.0"
+      }
+    }
+  }
+

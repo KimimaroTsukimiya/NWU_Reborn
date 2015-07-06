@@ -1,0 +1,93 @@
+"item_hakus_overcoat"
+  {
+    "ID"                    "1210"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_hakus_overcoat"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "0"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    "ItemQuality"           "epic"    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+      "item_hakus_overcoat_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+                     "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+                     "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+          }
+      }
+
+
+      "hakus_overcoat_aura_modifier"
+      {
+          "Passive"           "1"
+          "IsHidden"          "1"
+          "Aura"              "akatsuki_ring_aura"
+          "Aura_Radius"       "%aura_radius"
+          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+          "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+          "EffectName"        "particles/items_fx/aura_vlads.vpcf"
+          "EffectAttachType"  "follow_origin" 
+
+      }
+
+      "hakus_overcoat_aura"
+      {
+          "IsDebuff"        "1"
+          "IsPurgable"      "0"
+          "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+          "Properties"
+          {
+                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed_reduction"
+          }
+      }
+
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+       "01"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_armor"       "15.0"
+      }
+      "02"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "bonus_int"        "30.0"
+      }
+      "03"
+      {
+        "var_type"                     "FIELD_FLOAT"
+        "attackspeed_reduction"        "-25.0"
+      }
+      "04"
+      {
+        "var_type"                      "FIELD_FLOAT"
+        "aura_radius"                   "600.0"//TODO made it up check wc3
+      }
+    }
+  }
+

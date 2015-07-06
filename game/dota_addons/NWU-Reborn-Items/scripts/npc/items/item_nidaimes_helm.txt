@@ -1,0 +1,89 @@
+"item_nidaimes_helm"
+  {
+    "ID"                    "1236"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_nidaimes_helm"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"                "0"
+    "ItemQuality"         "rare"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"           "1"
+    "ItemSellable"            "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"         "1"
+    "ItemBaseLevel"           "1"
+
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "OnSpellStart"
+        {
+            "ApplyModifier"
+            {
+                "Target"                        "CASTER"
+                "ModifierName"                  "custom_frenzy"
+            }
+        }
+
+    "Modifiers"
+    {
+      "item_nidaimes_helm_modifier"
+      {
+         "IsHidden"      "1"   
+        "OnDealDamage"
+        {
+          "Lifesteal"
+          {
+            "Target"            "ATTACKER"
+            "LifestealPercent"  "%lifesteal_bonus"
+          }
+        }
+      }
+      "custom_frenzy"
+      {
+        "Duration"                      "%frenzy_duration"
+        "Target"      "CASTER"
+         "Properties"
+          {
+            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%frenzy_ms"
+            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%frenzy_as"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "lifesteal_bonus"            "17.0"
+      }
+      "02"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "frenzy_as"                 "100.0"
+      }
+      "03"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "frenzy_ms"                 "15.0"
+      }
+      "04"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "frenzy_duration"           "12.0"
+      }
+  }
+
+}
+

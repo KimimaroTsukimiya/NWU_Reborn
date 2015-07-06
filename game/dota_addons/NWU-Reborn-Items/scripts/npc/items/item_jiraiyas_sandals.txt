@@ -1,0 +1,121 @@
+"item_jiraiyas_sandals"
+  {
+    "ID"                      "1167"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AOE"
+    "BaseClass"               "item_datadriven"
+    "AbilityTextureName"      "item_jiraiyas_sandals"
+
+    "AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO"
+    "AbilityUnitTargetFlags"  "DOTA_UNIT_TARGET_FLAG_NONE"
+    "AbilityCooldown"         "45"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemQuality"               "common"
+    "ItemCost"                  "0"
+    "ItemInitialCharges"        "0"
+    "ItemDroppable"             "1"
+    "ItemSellable"              "1"
+    "ItemRequiresCharges"       "0"
+    "ItemShareability"          "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"           "1"
+    "ItemBaseLevel"             "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "OnSpellStart"
+        {
+
+          "ActOnTargets"
+          {
+            "Target"
+            {
+              "Center"  "CASTER"
+              "Radius"  "%radius"
+              "Teams"   "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+              "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+            }
+          
+            "Action"    
+            {
+               "RunScript"
+              {
+                "ScriptFile"   "items/jiraiyas_sandals.lua"
+                "Function"     "GiveMana"
+                "mana_amount"  "%restore_mana"
+               }
+            }
+          }
+
+          "FireSound"
+            {
+              "EffectName"  "DOTA_Item.Mekansm.Activate"
+              "Target"    "CASTER"
+            }
+
+            "FireEffect"
+            {
+              "Target"      "CASTER"
+              "EffectName"    "particles/damage_immunity.vpcf"
+              "EffectAttachType"  "follow_origin"
+            }
+        }
+
+    "Modifiers"
+    {
+      "item_jiraiyas_sandals_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+            "MODIFIER_PROPERTY_MANA_BONUS" "%bonus_mana"
+          }
+      }
+
+       "item_jiraiyas_sandals_ms_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+         "Properties"
+          {
+            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movementspeed"
+          }
+      }
+
+    }
+   // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "movementspeed"       "65.0"
+      }
+      "02"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "bonus_mana"          "250.0"
+      }
+      "03"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "restore_mana"        "135.0"
+      }
+      "04"
+      {
+        "var_type"             "FIELD_FLOAT"
+        "radius"                "600.0"
+      }
+    }
+  }
+

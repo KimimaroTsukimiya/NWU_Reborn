@@ -1,0 +1,80 @@
+"item_transmutation_gloves"
+  {
+    "ID"                      "1150"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+    "BaseClass"               "item_datadriven"
+    "AbilityTextureName"      "item_transmutation_gloves"
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_CREEP"
+    "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemQuality"             "rare"
+    "AbilityCastRange"        "600"
+    "AbilityCastPoint"        "0.0"
+    "AbilityCooldown"       "100.0"
+    "AbilityManaCost"       "0"
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"                  "2200"
+    "ItemInitialCharges"        "0"
+    "ItemDroppable"             "1"
+    "ItemSellable"              "1"
+    "ItemRequiresCharges"       "0"
+    "ItemShareability"          "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"           "1"
+    "ItemBaseLevel"             "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "items/transmutation_gloves.lua"
+      "Function"        "transmutation_gloves_on_spell_start"
+      "BonusGold"       "%bonus_gold"
+      "XPMultiplier"      "%xp_multiplier"
+    }
+  }
+
+    "Modifiers"
+    {
+
+      "item_transmutation_gloves_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+             "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
+          }
+      }
+
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                          "FIELD_FLOAT"
+        "attackspeed"                       "30.0"
+      }
+      "02"
+      {
+        "var_type"                          "FIELD_FLOAT"
+        "bonus_gold"                       "190.0"
+      }
+      "03"
+      {
+        "var_type"                          "FIELD_FLOAT"
+        "xp_multiplier"                       "2.5"
+      }
+    }
+  }
+

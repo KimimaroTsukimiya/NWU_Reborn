@@ -1,0 +1,95 @@
+"item_assassins_cloak"
+  {
+    "ID"                    "1254"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_assassins_cloak"
+    "AbilityCooldown"       "18.0"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemQuality"             "rare"
+    "ItemCost"                "0"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"           "1"
+    "ItemSellable"            "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"         "1"
+    "ItemBaseLevel"           "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "OnSpellStart"
+        {
+            "ApplyModifier"
+            {
+                "Target"                        "CASTER"
+                "ModifierName"                  "custom_invis"
+            }
+        }
+
+
+    "Modifiers"
+    {
+      "item_assassins_cloak_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+
+              "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
+              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+          }
+      }
+
+       "custom_invis"
+      {
+        "Duration"    "%invis_duration"
+        "Target"      "CASTER"
+         "States"
+        {
+          "MODIFIER_STATE_INVISIBLE" "MODIFIER_STATE_VALUE_ENABLED"
+        }
+
+
+
+        "OnAttackStart"
+        {
+          "RemoveModifier"
+          {
+            "ModifierName"    "custom_invis"
+            "Target"      "CASTER"  
+          }
+        }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "attackspeed"                 "10.0"
+      }
+      "02"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "bonus_damage"                  "38.0"
+      }
+      "03"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "invis_duration"            "6.0"//TODO made it up
+      }
+    }
+  }
+

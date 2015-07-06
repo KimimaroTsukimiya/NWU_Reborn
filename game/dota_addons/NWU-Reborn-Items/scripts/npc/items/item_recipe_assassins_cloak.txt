@@ -1,0 +1,17 @@
+  "item_recipe_assassins_cloak" 
+  {
+    "ID" "1253"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "ItemRecipe"          "1" //destroyed after combine
+    "ItemCost"            "1000" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_assassins_cloak" //the result of combining the ItemRequirements
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "ItemRequirements"
+    {
+        "01" "item_metal_gauntlets;item_tentens_spear"
+    }
+  }
+

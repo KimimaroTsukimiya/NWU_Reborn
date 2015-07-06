@@ -1,0 +1,99 @@
+  "item_javelin_datadriven"
+  {
+    "ID"              "1115"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"   "item_javelin_datadriven"
+    "ItemQuality"    "component"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "1500"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    
+    "Modifiers"
+    {
+      "item_javelin_datadriven_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+        "Properties"
+          {
+              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+          }
+
+          "OnAttackStart"
+        {
+          "Random"
+          {
+            "Chance" "20"
+            "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+            "OnSuccess"
+            {
+              "ApplyModifier"
+              {
+                "ModifierName" "javelin_crit"
+                "Target"     "CASTER" 
+              } 
+                
+            }
+          }
+        }
+      }
+      "javelin_crit"
+      {
+        
+        "OnAttackLanded"
+        {
+          "Damage"
+          {
+            "Target"     "TARGET"
+            "Type"       "DAMAGE_TYPE_PHYSICAL"
+            "Damage"     "%extra_dmg"
+          }
+
+          "RemoveModifier"
+          {
+            "ModifierName"    "javelin_crit"
+            "Target"      "CASTER"  
+          }
+        }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "bonus_damage"        "21.0"
+      }
+      "02"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "chance"              "20.0"
+      }
+      "03"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "extra_dmg"           "40.0"
+      }
+    }
+  }
+

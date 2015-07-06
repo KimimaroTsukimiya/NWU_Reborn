@@ -1,0 +1,83 @@
+"item_shinobi_trends_int"
+  {
+    "ID"                      "1144"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "BaseClass"               "item_datadriven"
+    "AbilityTextureName"      "item_shinobi_trends_int"
+  "ItemQuality"     "common"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"                  "0"
+    "ItemInitialCharges"        "0"
+    "ItemDroppable"             "1"
+    "ItemSellable"              "1"
+    "ItemRequiresCharges"       "0"
+    "ItemShareability"          "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"           "1"
+    "ItemBaseLevel"             "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+  "OnSpellStart"  //Switch to the next version of Power Treads (agi).
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "items/shinobi_trends.lua"
+      "Function"        "int_on_spell_start"
+    }
+  }
+
+    "Modifiers"
+    {
+       "item_shinobi_trends_int_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+               "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
+               "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+          }
+      }
+
+      "item_shinobi_trends_int_ms_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movementspeed"
+          }
+      }
+
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"            "FIELD_INTEGER"
+        "movementspeed"       "60"
+      }
+      "02"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "attackspeed"         "25.0"
+      }
+      "03"
+      {
+        "var_type"            "FIELD_INTEGER"
+        "bonus_int"           "10"
+      }
+    }
+  }
+

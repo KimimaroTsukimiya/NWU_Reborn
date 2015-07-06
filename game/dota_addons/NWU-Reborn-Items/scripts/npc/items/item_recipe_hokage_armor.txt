@@ -1,0 +1,17 @@
+   "item_recipe_hokage_armor" 
+  {
+    "ID" "1205"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "ItemRecipe"          "1" //destroyed after combine
+    "ItemCost"            "1500" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_hokage_armor" //the result of combining the ItemRequirements
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "ItemRequirements"
+    {
+        "01" "item_shinobi_uniform;item_samurai_armor;item_gais_fist_of_might"
+    }
+  }
+

@@ -1,0 +1,91 @@
+"item_jashins_amulet"
+  {
+    "ID"                    "1218"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_jashins_amulet"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "0"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    "ItemQuality"         "epic"    
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+      "item_jashins_amulet_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+              "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+          }
+      }
+      "item_jashins_amulet_lifesteal_modifier"
+      {
+      
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Orb"
+           {
+              "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
+              "ProjectileName" "particles\items2_fx\skadi_projectile.vpcf"
+           }
+
+        "OnOrbImpact"
+        {
+           "Lifesteal"
+          {
+            "Target"    "ATTACKER"
+            "LifestealPercent" "%lifesteal_bonus"
+          }  
+         } 
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "bonus_damage"              "20.0"
+      }
+      "02"
+      {
+        "var_type"                   "FIELD_FLOAT"
+        "bonus_str"                  "25.0"
+      }
+       "03"
+      {
+        "var_type"                    "FIELD_FLOAT"
+        "bonus_armor"                 "5.0"
+      }
+      "04"
+      {
+        "var_type"                    "FIELD_FLOAT"
+        "lifesteal_bonus"             "25.0"
+      }
+
+    }
+  }
+

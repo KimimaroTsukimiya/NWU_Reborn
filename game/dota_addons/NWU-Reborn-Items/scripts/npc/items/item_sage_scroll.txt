@@ -1,0 +1,177 @@
+"item_sage_scroll"
+  {
+    "ID"                      "1182"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "BaseClass"               "item_datadriven"
+    "AbilityTextureName"      "item_sage_scroll"
+    "AbilityCastRange"        "%cast_range"
+    "AbilityManaCost"         "%manacost"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemQuality"         "epic"
+    "ItemCost"            "2100"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+
+    "OnSpellStart"
+    {
+      // Replace for sheep sounds
+      "FireSound"
+      {
+        "EffectName"  "Hero_Lion.Voodoo"
+        "Target"    "TARGET"
+      }
+  
+      "FireSound"
+      {
+        "EffectName"  "Hero_Lion.Hex.Target"
+        "Target"    "TARGET"
+      }
+  
+      "FireEffect"
+      {
+        "EffectName"    "particles/units/human/heroes/hero_lion/lion_spell_voodoo.vpcf"
+        "EffectAttachType"  "follow_origin"
+        "Target"      "TARGET"
+      }
+      
+      "ApplyModifier"
+      {
+        "ModifierName"  "modifier_hex"
+        "Target"    "TARGET"
+        "Duration"    "%hex_duration"
+      }
+    } 
+
+    "Modifiers"
+    {
+
+      "modifier_hex"
+      {
+        "IsDebuff"  "1"
+        "Duration"  "%hex_duration"
+  
+        "OnCreated"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "items/sage_scroll.lua"
+            "Function"    "voodoo_start"
+            "model"     "models/props_gameplay/frog.vmdl"
+          }
+  
+          "RunScript"
+          {
+            "ScriptFile"    "items/sage_scroll.lua"
+            "Function"      "HideWearables"
+          }
+        }
+  
+        "OnDestroy"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "items/sage_scroll.lua"
+            "Function"    "voodoo_end"
+          }
+  
+          "RunScript"
+          {
+            "ScriptFile"  "items/sage_scroll.lua"
+            "Function"    "ShowWearables"
+          }
+        }
+  
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_MOVESPEED_BASE_OVERRIDE"   "%hex_ms"
+        }
+  
+        "States"
+        {
+          "MODIFIER_STATE_DISARMED" "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_MUTED"    "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_HEXED"    "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_EVADE_DISABLED" "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_BLOCK_DISABLED" "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+
+      "item_sage_scroll_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"  "%bonus_agi"
+              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+              "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_int"        "35.0"
+      }
+      "02"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_agi"        "10.0"
+      }
+      "03"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_str"        "10.0"
+      }
+      "04"
+      {
+        "var_type"                        "FIELD_FLOAT"
+        "bonus_mana_reg_percentage"        "200.0"
+      }
+      "05"
+      {
+        "var_type"                        "FIELD_FLOAT"
+        "hex_duration"                    "3.5"
+      }
+      "06"
+      {
+        "var_type"                        "FIELD_FLOAT"
+        "hex_ms"                          "100"
+      }
+      "07"
+      {
+        "var_type"                        "FIELD_FLOAT"
+        "cast_range"                      "300"
+      }
+      "08"
+      {
+        "var_type"                        "FIELD_FLOAT"
+        "cast_range"                      "0"//TODO made it up check wc3
+      }
+      
+    }
+  }
+

@@ -1,0 +1,108 @@
+"item_iron_crow"
+  {
+    "ID"                    "1250"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_iron_crow"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"                "0"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"           "1"
+    "ItemSellable"            "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"         "1"
+    "ItemBaseLevel"           "1"
+    "ItemQuality"         "rare"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+
+      "precache"
+    {
+      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
+      "particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+    }
+
+    "Modifiers"
+    {
+      "item_iron_crow_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+               "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+
+          }
+
+          "OnAttackLanded"
+        {
+          "Random"
+          {
+            "Chance"    "%bash_chance"
+            "OnSuccess"
+            {
+              //This way it wont stack stuns
+              "ApplyModifier"
+              {
+                "Target"      "TARGET"
+                "ModifierName"    "iron_crow_bash"
+              }
+            }
+          }
+        }
+
+      }
+      "iron_crow_bash"
+      {
+        "Duration"  "%bash_duration"
+        "IsDebuff"  "1"
+        "IsHidden"  "0"
+        "EffectName"  "particles/generic_gameplay/generic_stunned_old.vpcf"
+        "EffectAttachType"  "follow_overhead"
+
+        "States"
+        {
+          "MODIFIER_STATE_STUNNED"    "MODIFIER_STATE_VALUE_ENABLED"        
+        }
+        "OverrideAnimation" "ACT_DOTA_DISABLED"
+      } 
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "bonus_damage"              "30.0"
+      }
+      "02"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "bonus_str"                  "6.0"
+      }
+      "03"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "bash_duration"                  "1.0" //check wc3 duration made it up
+      }
+      "04"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "bash_chance"                  "25.0"
+      }
+    }
+  }
+

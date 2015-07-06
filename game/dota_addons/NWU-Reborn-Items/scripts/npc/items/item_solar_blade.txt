@@ -1,0 +1,113 @@
+"item_solar_blade"
+  {
+    "ID"                    "1246"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_solar_blade"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"                "0"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"           "1"
+    "ItemSellable"            "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"         "1"
+    "ItemBaseLevel"           "1"
+    "ItemQuality"         "epic"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+      "precache"
+    {
+      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
+      "particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+    }
+
+
+    "Modifiers"
+    {
+      "solar_blade_aoe_dmg"
+      {
+        "Passive"       "1"
+        "OnCreated"
+        { 
+          "AttachEffect"
+          {
+            "Target"    "CASTER"
+            "EffectName" "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+            "EffectAttachType"  "follow_origin"
+            "EffectRadius"        "200"
+          }
+        }
+        "ThinkInterval"     "1"
+        "OnIntervalThink"
+        {
+          "Damage"
+          {
+            "Target" //AOE
+            {
+              "Center" "CASTER"
+              "Radius" "%radius"
+              "Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+              "Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_OTHER"
+            }
+            "Type"    "DAMAGE_TYPE_MAGICAL"
+            "Damage"  "%aoe_damage"
+          }
+          "AttachEffect"
+          {
+            "EffectName" "particles/dire_fx/fire_barracks_glow_b.vpcf"
+            "Target" //AOE
+            {
+              "Center" "CASTER"
+              "Radius" "%radius"
+              "Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY" 
+              "Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_OTHER"
+            }
+            "EffectAttachType"  "follow_origin"
+  
+          }
+        }
+      }
+      "item_solar_blade_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "bonus_damage"              "60.0"
+      }
+      "02"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "aoe_damage"              "40.0"
+      }
+      "03"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "radius"              "500.0"
+      }
+  }
+
+}
+
