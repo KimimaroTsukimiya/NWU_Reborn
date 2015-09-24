@@ -1,0 +1,187 @@
+"item_hoshikages_star"
+  {
+    "ID"                    "1184"
+   "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AOE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_hoshikages_star"
+    "AbilityCooldown"        "35.0"
+    "AbilityManaCost"        "0"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemQuality"         "rare"
+    "ItemCost"            "0"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    "ItemPermanent"         "1"
+
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+     "precache"
+      {
+        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+        "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
+        "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+      }
+
+   "OnSpellStart"
+  {
+
+    "FireSound"
+    {
+      "EffectName"  "Hero_Brewmaster.ThunderClap"
+      "Target"    "CASTER"
+    }
+    
+    "FireEffect"
+    {
+      "EffectName"        "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+      "EffectAttachType"  "follow_origin"
+      "EffectRadius"    "%radius"
+      "Target"            "CASTER"
+    }
+
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_thunder_clap"
+      "Target"
+      {
+        "Center"  "CASTER"
+        "Radius"  "%radius"
+        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "Types"   "DOTA_UNIT_TARGET_HERO"
+      }
+      "Duration"    "%duration"
+    }
+    
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_thunder_clap"
+      "Target"
+      {
+        "Center"  "CASTER"
+        "Radius"  "%radius"
+        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "Types"   "DOTA_UNIT_TARGET_BASIC"
+      }
+      "Duration"    "%duration_creeps"
+    }
+
+    "Damage"
+    {
+      "Target"
+      {
+        "Center"    "CASTER"
+        "Radius"  "%radius"
+        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+      }
+      "Type"      "DAMAGE_TYPE_MAGICAL"
+      "Damage"    "%damage"
+    }
+  }
+
+  "Modifiers"
+  {
+
+
+       "item_hoshikage_star_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+                "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
+          }
+      }
+
+        "modifier_thunder_clap"
+        {
+          "Passive"     "0"
+          "IsHidden"      "0"
+          "IsDebuff"      "1"
+      
+          "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+          "EffectAttachType"  "follow_origin"
+      
+          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+          "StatusEffectPriority"  "10"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_slow"
+            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow"
+          }
+
+          "OnCreated"
+          {
+            "FireSound"
+            {
+              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
+              "Target"    "TARGET"
+            }     
+          }   
+        }
+  }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+     "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "radius"          "250"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "duration"          "3.5"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "duration_creeps"     "3.5"
+    }
+    "04"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "damage"          "350"
+    }
+    "05"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "movement_slow"       "-40"
+    }
+
+      "06"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "bonus_int"          "35"
+    }
+     "07"
+    {
+      "var_type"                          "FIELD_INTEGER"
+      "bonus_mana_reg_percentage"          "200"
+    }
+     "08"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack_speed_slow"       "-40"
+    }
+    
+    }
+  }
+
