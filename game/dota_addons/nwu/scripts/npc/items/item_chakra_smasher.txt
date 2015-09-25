@@ -102,7 +102,7 @@
         {
           "RunScript"
           {
-            "ScriptFile"  "items/item_chakra_smasher.lua"
+            "ScriptFile"  "items/chakra_smasher.lua"
             "Function"    "ManaBreak"
             "Target"    "TARGET"
           }
@@ -139,7 +139,7 @@
       "03"
       {
         "var_type"        "FIELD_FLOAT"
-        "damage_per_burn"   "1.0"//todo made it up
+        "damage_per_burn"   "1.0"
       }
       "04"
       {
@@ -154,17 +154,17 @@
       "07"
       {
         "var_type"        "FIELD_INTEGER"
-        "movespeed_slow"    "-50"//todo made it up
+        "movespeed_slow"    "-50"
       }
       "08"
       {
         "var_type"        "FIELD_INTEGER"
-        "purge_duration"        "3"//todo made it up
+        "purge_duration"        "4"
       }
       "09"
       {
         "var_type"        "FIELD_INTEGER"
-        "damage_to_summons"   "150"//todo made it up
+        "damage_to_summons"   "99999"
       }
   }
 }

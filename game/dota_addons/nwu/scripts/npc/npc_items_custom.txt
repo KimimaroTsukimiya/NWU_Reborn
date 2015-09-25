@@ -1490,7 +1490,7 @@
         {
           "RunScript"
           {
-            "ScriptFile"  "items/item_chakra_smasher.lua"
+            "ScriptFile"  "items/chakra_smasher.lua"
             "Function"    "ManaBreak"
             "Target"    "TARGET"
           }
