@@ -4,6 +4,7 @@
     "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     "BaseClass"               "item_datadriven"
     "AbilityTextureName"      "item_bingo_book"
+    "AbilityCooldown"         "20.0"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
@@ -78,12 +79,12 @@
       "05"
       {
         "var_type"                  "FIELD_FLOAT"
-        "aura_radius"               "3000.0"
+        "aura_radius"               "30000000.0"
       }
       "06"
       {
         "var_type"                  "FIELD_FLOAT"
-        "ping_duration"             "3.0"
+        "ping_duration"             "10.0"
       }
     }
   }

@@ -443,70 +443,288 @@
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
-    "OnSpellStart"
-        {
-            "ApplyModifier"
-            {
-                "Target"                        "CASTER"
-                "ModifierName"                  "custom_invis"
-            }
-        }
-
-
-    "Modifiers"
-    {
-      "item_assassins_cloak_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-
-              "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
-              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-          }
-      }
-
-       "custom_invis"
-      {
-        "Duration"    "%invis_duration"
-        "Target"      "CASTER"
-         "States"
-        {
-          "MODIFIER_STATE_INVISIBLE" "MODIFIER_STATE_VALUE_ENABLED"
-        }
-
-
-
-        "OnAttackStart"
-        {
-          "RemoveModifier"
-          {
-            "ModifierName"    "custom_invis"
-            "Target"      "CASTER"  
-          }
-        }
-      }
-    }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"
     {
       "01"
       {
-        "var_type"                  "FIELD_FLOAT"
-        "attackspeed"                 "10.0"
+        "var_type"          "FIELD_INTEGER"
+        "bonus_damage"        "38"
       }
       "02"
       {
-        "var_type"                  "FIELD_FLOAT"
-        "bonus_damage"                  "38.0"
+        "var_type"          "FIELD_INTEGER"
+        "bonus_attack_speed"    "10"
       }
       "03"
       {
-        "var_type"                  "FIELD_FLOAT"
-        "invis_duration"            "6.0"//TODO made it up
+        "var_type"          "FIELD_INTEGER"
+        "invis_duration"      "14"
+      }
+      "04"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "invis_ms"          "20"
+      }
+      "05"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "invis_fade_time"     "0.3"
+      }
+      "06"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "invis_damage"        "225"
+      }
+      "07"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "invis_night_vision"    "300"
+      }
+      "08"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "invis_phase_cooldown"    "2.0"
+      }
+      "09"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "tree_radius"       "225"
+      }
+    }
+
+    "OnSpellStart"
+    {
+      "RunScript"
+      {
+        "ScriptFile"        "items/assassins_cloak.lua"
+        "Function"          "ShadowBladeFade"
+
+        "modifier_fade"       "modifier_item_imba_shadow_blade_fade"
+        "sound_cast"        "DOTA_Item.InvisibilitySword.Activate"
+      }
+    }
+
+    "Modifiers"
+    {
+      "modifier_item_imba_shadow_blade"
+      {
+        "Passive"         "1"
+        "IsHidden"          "1"
+        "IsBuff"          "1"
+        "IsPurgable"        "0"
+    
+        "Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"      "%bonus_damage"
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%bonus_attack_speed" 
+        }
+      }
+
+      "modifier_item_imba_shadow_blade_fade"
+      {
+        "Passive"         "0"
+        "IsHidden"          "1"
+        "IsBuff"          "1"
+        "IsPurgable"        "0"
+
+        "Duration"          "%invis_fade_time"
+
+        "OnDestroy"
+        {
+          "RunScript"
+          {
+            "ScriptFile"    "items/assassins_cloak.lua"
+            "Function"      "ShadowBladeInvis"
+
+            "modifier_invis"  "modifier_item_imba_shadow_blade_invis"
+            "modifier_phase"  "modifier_item_imba_shadow_blade_phase"
+          }
+        }
+      }
+
+      "modifier_item_imba_shadow_blade_invis"
+      {
+        "Passive"         "0"
+        "IsHidden"          "0"
+        "IsBuff"          "1"
+        "IsPurgable"        "0"
+
+        "Duration"          "%invis_duration"
+
+        "Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+
+        "OnAbilityExecuted"
+        {
+          "RemoveModifier"
+          {
+            "ModifierName"    "modifier_item_imba_shadow_blade_invis"
+            "Target"
+            {
+              "Center"    "CASTER"
+              "Teams"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+              "Types"     "DOTA_UNIT_TARGET_HERO"
+              "Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_OUT_OF_WORLD"
+            }
+          }
+        }
+
+        "OnAttack"
+        {
+          "ApplyModifier"
+          {
+            "ModifierName"    "modifier_item_imba_shadow_blade_invis_hit"
+            "Target"
+            {
+              "Center"    "CASTER"
+              "Teams"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+              "Types"     "DOTA_UNIT_TARGET_HERO"
+              "Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_OUT_OF_WORLD"
+            }
+          }
+
+          "RemoveModifier"
+          {
+            "ModifierName"    "modifier_item_imba_shadow_blade_invis"
+            "Target"
+            {
+              "Center"    "CASTER"
+              "Teams"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+              "Types"     "DOTA_UNIT_TARGET_HERO"
+              "Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_OUT_OF_WORLD"
+            }
+          }
+        }
+
+        "OnDestroy"
+        {
+          "RemoveModifier"
+          {
+            "ModifierName"    "modifier_item_imba_shadow_blade_phase"
+            "Target"
+            {
+              "Center"    "CASTER"
+              "Teams"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+              "Types"     "DOTA_UNIT_TARGET_HERO"
+              "Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_OUT_OF_WORLD"
+            }
+          }
+
+          "RunScript"
+          {
+            "ScriptFile"    "items/assassins_cloak.lua"
+            "Function"      "ShadowBladeInvisCancel"
+          }
+        }
+
+        "OnTakeDamage"
+        {
+          "RunScript"
+          {
+            "ScriptFile"    "items/assassins_cloak.lua"
+            "Function"      "ShadowBladePhaseCooldown"
+
+            "modifier_phase"  "modifier_item_imba_shadow_blade_phase"
+            "modifier_phase_cd" "modifier_item_imba_shadow_blade_phase_cooldown"
+          }
+        }
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%invis_ms"
+          "MODIFIER_PROPERTY_BONUS_NIGHT_VISION"          "%invis_night_vision"
+        }
+
+        "States"
+        {
+          "MODIFIER_STATE_NO_UNIT_COLLISION"    "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_CANNOT_MISS"      "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+
+      "modifier_item_imba_shadow_blade_invis_hit"
+      {
+        "Passive"         "0"
+        "IsHidden"          "1"
+        "IsBuff"          "1"
+        "IsPurgable"        "0"
+
+        "OnAttackLanded"
+        {
+          "RunScript"
+          {
+            "ScriptFile"    "items/assassins_cloak.lua"
+            "Function"      "ShadowBladeHit"
+
+            "sound_hit"     "DOTA_Item.Maim"
+          }
+
+          "RemoveModifier"
+          {
+            "ModifierName"    "modifier_item_imba_shadow_blade_invis_hit"
+            "Target"
+            {
+              "Center"    "CASTER"
+              "Teams"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+              "Types"     "DOTA_UNIT_TARGET_HERO"
+              "Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_OUT_OF_WORLD"
+            }
+          }
+        }
+
+        "States"
+        {
+          "MODIFIER_STATE_CANNOT_MISS"      "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+
+      "modifier_item_imba_shadow_blade_phase"
+      {
+        "Passive"         "0"
+        "IsHidden"          "1"
+        "IsBuff"          "1"
+        "IsPurgable"        "0"
+
+        "Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+
+        "OnDestroy"
+        {
+          "DestroyTrees"
+          {
+            "Target"      "CASTER"
+            "Radius"      "%tree_radius"
+          }
+        } 
+
+        "States"
+        {
+          "MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"   "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+
+      "modifier_item_imba_shadow_blade_phase_cooldown"
+      {
+        "Passive"         "0"
+        "IsHidden"          "1"
+        "IsBuff"          "1"
+        "IsPurgable"        "0"
+
+        "Duration"          "%invis_phase_cooldown"
+
+        "Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+
+        "OnDestroy"
+        {
+          "RunScript"
+          {
+            "ScriptFile"    "items/shadow_blade.lua"
+            "Function"      "ShadowBladePhaseCooldownEnd"
+
+            "modifier_invis"  "modifier_item_imba_shadow_blade_invis"
+            "modifier_phase"  "modifier_item_imba_shadow_blade_phase"
+          }
+        }
       }
     }
   }
@@ -628,6 +846,7 @@
     "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     "BaseClass"               "item_datadriven"
     "AbilityTextureName"      "item_bingo_book"
+    "AbilityCooldown"         "20.0"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
@@ -702,12 +921,12 @@
       "05"
       {
         "var_type"                  "FIELD_FLOAT"
-        "aura_radius"               "3000.0"
+        "aura_radius"               "30000000.0"
       }
       "06"
       {
         "var_type"                  "FIELD_FLOAT"
-        "ping_duration"             "3.0"
+        "ping_duration"             "10.0"
       }
     }
   }
@@ -5713,6 +5932,26 @@
     "ItemRequirements"
     {
         "01" "item_metal_gauntlets;item_tentens_spear"
+    }
+  }
+
+
+
+
+   "item_recipe_bingo_book" 
+  {
+    "ID" "100000"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "ItemRecipe"          "1" //destroyed after combine
+    "ItemCost"            "275" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_bingo_book" //the result of combining the ItemRequirements
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "ItemRequirements"
+    {
+        "01" "item_kages_relic;item_anbu_mask"
     }
   }
 
