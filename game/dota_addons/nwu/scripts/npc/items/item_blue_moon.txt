@@ -51,7 +51,7 @@
           "ApplyModifier"
           {
             "Target"      "TARGET"
-            "ModifierName"    "lunar_sword_slow"
+            "ModifierName"    "blue_moon_slow"
             "Duration"      "%slow_duration"
           }   
         }
@@ -59,7 +59,7 @@
       }
 
 
-      "lunar_sword_slow"
+      "blue_moon_slow"
       {
         "IsDebuff"    "1"
         "Properties"
@@ -95,17 +95,17 @@
       "04"
       {
         "var_type"                  "FIELD_FLOAT"
-        "movespeed_slow"                 "-10.0"//todo made it up
+        "movespeed_slow"                 "-10.0"
       }
       "05"
       {
         "var_type"                  "FIELD_FLOAT"
-        "attackspeed_slow"                 "-15.0"//todo made it up
+        "attackspeed_slow"                 "-15.0"
       }
       "06"
       {
         "var_type"                  "FIELD_FLOAT"
-        "slow_duration"                 "1.5"//todo made it up
+        "slow_duration"                 "1.5"
       }
     }
   }

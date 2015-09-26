@@ -34,6 +34,7 @@
         "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
         "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
         "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+        "particle"  "particles/econ/items/brewmaster/brewmaster_offhand_elixir/brewmaster_thunder_clap_elixir.vpcf"
       }
 
    "OnSpellStart"
@@ -56,7 +57,7 @@
 
     "ApplyModifier"
     {
-      "ModifierName"  "modifier_thunder_clap"
+      "ModifierName"  "modifier_rengeki_slow"
       "Target"
       {
         "Center"  "CASTER"
@@ -69,7 +70,7 @@
     
     "ApplyModifier"
     {
-      "ModifierName"  "modifier_thunder_clap"
+      "ModifierName"  "modifier_rengeki_slow"
       "Target"
       {
         "Center"  "CASTER"
@@ -110,12 +111,11 @@
         }
 
 
-        "modifier_thunder_clap"
+        "modifier_rengeki_slow"
         {
           "Passive"     "0"
           "IsHidden"      "0"
           "IsDebuff"      "1"
-      
           "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
           "EffectAttachType"  "follow_origin"
       

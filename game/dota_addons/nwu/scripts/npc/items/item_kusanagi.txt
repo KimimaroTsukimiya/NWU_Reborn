@@ -47,14 +47,14 @@
         {
           "ApplyModifier"
           {
-            "ModifierName"  "modifier_orb_of_corruption_debuff"
+            "ModifierName"  "kusanagi_corruption"
             "Target"    "TARGET"
             "Duration"    "%duration"
           }
         }
       }
 
-      "modifier_orb_of_corruption_debuff"
+      "kusanagi_corruption"
       {
         "IsDebuff"    "1"
         "Properties"
@@ -80,7 +80,7 @@
       "03"
       {
         "var_type"                  "FIELD_FLOAT"
-        "armor_reduction"           "6.0"
+        "armor_reduction"           "-6.0"
       }
   }
 }

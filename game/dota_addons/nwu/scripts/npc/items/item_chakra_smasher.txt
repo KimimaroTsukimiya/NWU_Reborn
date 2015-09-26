@@ -59,7 +59,7 @@
       
     "ApplyModifier"
     {
-      "ModifierName"  "modifier_purge"
+      "ModifierName"  "chakra_smasher_purge"
       "Target"    "TARGET"
       "Duration"    "%purge_duration"
     }
@@ -79,7 +79,7 @@
           }
       }
 
-      "modifier_purge"
+      "chakra_smasher_purge"
       {
         "IsDebuff"    "1"
         "Properties"
