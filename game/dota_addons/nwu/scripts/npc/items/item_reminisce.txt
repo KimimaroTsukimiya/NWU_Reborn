@@ -54,6 +54,21 @@
         "var_type"                        "FIELD_FLOAT"
         "bonus_hp_reg_constant"             "6.0"
       }
+      "03"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "damage_block_melee"    "20"
+      }
+      "04"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "damage_block_ranged"   "12"
+      }
+      "05"
+      {
+        "var_type"              "FIELD_INTEGER"
+        "block_chance"          "70"
+      }  
     }
   }
 

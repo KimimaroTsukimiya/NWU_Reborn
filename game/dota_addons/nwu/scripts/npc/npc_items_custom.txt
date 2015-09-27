@@ -1985,6 +1985,7 @@
 	      "var_type"        "FIELD_INTEGER"
 	      "bonus_all_stats"   "5"
 	    }
+	
 	    "02"
 	    {
 	      "var_type"        "FIELD_INTEGER"
@@ -2019,6 +2020,21 @@
 	    {
 	      "var_type"        "FIELD_FLOAT"
 	      "heal_armor_duration" "25.0"
+	    }
+	    "09"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_agi"   "5"
+	    }
+	    "10"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_int"   "5"
+	    }
+	    "11"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_str"   "5"
 	    }
 	  }
 	  
@@ -2558,11 +2574,14 @@
 	"item_giant_iron_fan"
 	  {
 	    "ID"                    "1194"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	      "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_giant_iron_fan"
 	
 	    // Stats
+	    "AbilityCooldown"       "25"
 	    //-------------------------------------------------------------------------------------------------------------
 	
 	    // Item Info
@@ -2582,8 +2601,87 @@
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 	
+	    "OnSpellStart"
+	    {
+	      "FireSound"
+	      {
+	        "EffectName"  "Brewmaster_Storm.Cyclone"
+	        "Target"    "TARGET"
+	      }
+	      "ApplyModifier"
+	      {
+	        "ModifierName"  "modifier_storm_cyclone" //modifier_cyclone is built-in
+	        "Target"
+	        {
+	          "Center"  "TARGET"
+	          "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	          "Types"   "DOTA_UNIT_TARGET_HERO"
+	        }
+	        "Duration"    "%duration_hero"
+	      }
+	      
+	      "ApplyModifier"
+	      {
+	        "ModifierName"  "modifier_storm_cyclone"
+	        "Target"
+	        {
+	          "Center"  "TARGET"
+	          "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	          "Types"   "DOTA_UNIT_TARGET_BASIC"
+	        }
+	        "Duration"    "%duration_unit"
+	      }
+	    }
+	
 	    "Modifiers"
 	    {
+	
+	      "modifier_storm_cyclone"
+	      {
+	        "IsDebuff"      "1"
+	
+	        "States"
+	            {   
+	              "MODIFIER_STATE_FLYING"       "MODIFIER_STATE_VALUE_ENABLED"
+	              "MODIFIER_STATE_NO_UNIT_COLLISION"  "MODIFIER_STATE_VALUE_ENABLED"
+	          "MODIFIER_STATE_STUNNED"      "MODIFIER_STATE_VALUE_ENABLED"
+	          "MODIFIER_STATE_ROOTED"       "MODIFIER_STATE_VALUE_ENABLED"
+	          "MODIFIER_STATE_DISARMED"     "MODIFIER_STATE_VALUE_ENABLED"
+	          "MODIFIER_STATE_INVULNERABLE"   "MODIFIER_STATE_VALUE_ENABLED"
+	          "MODIFIER_STATE_NO_HEALTH_BAR"    "MODIFIER_STATE_VALUE_ENABLED"
+	            }
+	    
+	        "OnCreated"
+	        {
+	          "AttachEffect"
+	          {
+	            "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_cyclone.vpcf"
+	            "EffectAttachType"  "world_origin"
+	            "Target"            "TARGET"
+	          }
+	
+	          "RunScript"
+	              {
+	                "ScriptFile"  "items/giant_iron_fan.lua"
+	                "Function"    "TornadoHeight"
+	              }
+	        } 
+	
+	            "ThinkInterval"   "0.03"
+	        "OnIntervalThink"
+	              {
+	                  "RunScript"
+	                  {
+	                      "ScriptFile"    "items/giant_iron_fan.lua"
+	                      "Function"      "Spin"
+	                      "Angle"         "20"
+	                  }
+	        }
+	
+	        "OverrideAnimation"     "ACT_DOTA_FLAIL"
+	      }
+	
+	
 	      "item_giant_iron_fan_modifier"
 	      {
 	         "Passive" "1"
@@ -2615,6 +2713,32 @@
 	      {
 	        "var_type"                  "FIELD_FLOAT"
 	        "movementspeed_percentage"     "7.0"
+	      }
+	      "04"
+	      {
+	        "var_type"          "FIELD_FLOAT"
+	        "duration_hero"       "6.0"
+	      }
+	      "05"
+	      {
+	        "var_type"          "FIELD_FLOAT"
+	        "duration_unit"       "20.0"
+	      }
+	      // Extra
+	      "06"
+	      {
+	        "var_type"          "FIELD_INTEGER"
+	        "cyclone_height"      "550"
+	      }
+	      "07"
+	      {
+	        "var_type"          "FIELD_INTEGER"
+	        "cyclone_min_height"    "500"
+	      }
+	      "08"
+	      {
+	        "var_type"          "FIELD_INTEGER"
+	        "cyclone_max_height"    "650"
 	      }
 	    }
 	  }
@@ -2753,11 +2877,13 @@
 	"item_hakus_overcoat"
 	  {
 	    "ID"                    "1210"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AURA"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_hakus_overcoat"
 	
 	    // Stats
+	    "AbilityCooldown"       "20"
+	    "AbilityDuration"     "40"
 	    //-------------------------------------------------------------------------------------------------------------
 	
 	    // Item Info
@@ -2776,8 +2902,96 @@
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 	
+	    "precache"
+	  {
+	    "particle"  "particles/units/heroes/hero_lich/lich_frost_armor.vpcf"
+	    "particle"  "particles/status_fx/status_effect_frost_armor.vpcf"
+	    "particle"  "particles/status_fx/status_effect_frost.vpcf"
+	    "soundfile" "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+	  }
+	
+	  "OnSpellStart"
+	  {
+	    "FireSound"
+	    {
+	      "EffectName"  "Hero_Lich.FrostArmor"
+	      "Target"    "CASTER"
+	    }
+	
+	    "ApplyModifier"
+	    {
+	      "ModifierName"  "modifier_frost_armor"
+	      "Target"    "CASTER"
+	      "Duration"    "%AbilityDuration"
+	    }
+	  }
+	
+	
 	    "Modifiers"
 	    {
+	
+	
+	    "modifier_frost_armor"
+	        {
+	          "Properties"
+	          {
+	            "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"  "%armor_bonus"
+	          }
+	
+	          "OnCreated"
+	          {
+	            "RunScript"
+	            {
+	              "ScriptFile"    "items/hakus_overcoat.lua"
+	                  "Function"      "FrostArmorParticle"  
+	              }
+	          }
+	
+	          "OnDestroy"
+	          {
+	            "RunScript"
+	            {
+	              "ScriptFile"    "items/hakus_overcoat.lua"
+	                  "Function"      "EndFrostArmorParticle" 
+	              }
+	          }
+	
+	          "StatusEffectName"    "particles/status_fx/status_effect_frost_armor.vpcf"
+	          "StatusEffectPriority"  "10"
+	
+	          "OnAttacked"
+	          {
+	            "ApplyModifier"
+	            {
+	              "ModifierName"  "modifier_frost_armor_slow"
+	              "Target"    "ATTACKER"
+	              "Duration"    "%slow_duration"
+	            }
+	
+	            "FireSound"
+	            {
+	              "EffectName"  "Hero_Lich.FrostArmorDamage"
+	              "Target"    "TARGET"
+	            }
+	          }
+	        }
+	
+	        "modifier_frost_armor_slow"
+	        {
+	          "IsDebuff"  "1"
+	
+	          "StatusEffectName"    "particles/status_fx/status_effect_frost.vpcf"
+	          "StatusEffectPriority"  "10"
+	
+	          "Properties"
+	          {
+	            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%slow_attack_speed"
+	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%slow_movement_speed"
+	          }
+	        }
+	
+	
+	
 	      "item_hakus_overcoat_modifier"
 	      {
 	         "Passive" "1"
@@ -2795,9 +3009,9 @@
 	      {
 	          "Passive"           "1"
 	          "IsHidden"          "1"
-	          "Aura"              "akatsuki_ring_aura"
+	          "Aura"              "hakus_overcoat_aura"
 	          "Aura_Radius"       "%aura_radius"
-	          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_ENEMY"
 	          "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	          "EffectName"        "particles/items_fx/aura_vlads.vpcf"
 	          "EffectAttachType"  "follow_origin" 
@@ -2838,7 +3052,27 @@
 	      "04"
 	      {
 	        "var_type"                      "FIELD_FLOAT"
-	        "aura_radius"                   "600.0"//TODO made it up check wc3
+	        "aura_radius"                   "1200.0"//TODO made it up check wc3
+	      }
+	      "05"
+	      {
+	        "var_type"        "FIELD_INTEGER"
+	        "armor_bonus"     "3"
+	      }
+	      "06"
+	      {
+	        "var_type"        "FIELD_FLOAT"
+	        "slow_duration"     "2.0"
+	      }
+	      "07"
+	      {
+	        "var_type"        "FIELD_INTEGER"
+	        "slow_movement_speed" "-30"
+	      }
+	      "08"
+	      {
+	        "var_type"        "FIELD_INTEGER"
+	        "slow_attack_speed"   "-20"
 	      }
 	    }
 	  }
@@ -2846,11 +3080,13 @@
 	"item_hexagonal_crystal"
 	  {
 	    "ID"                    "1190"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_hexagonal_crystal"
 	
 	    // Stats
+	    "AbilityCooldown"       "195.0"
+	    "AbilityManaCost"       "375"
 	    //-------------------------------------------------------------------------------------------------------------
 	
 	    // Item Info
@@ -2885,6 +3121,15 @@
 	          }
 	      }
 	    }
+	
+	    "OnSpellStart"
+	  {
+	    "RunScript"
+	    {
+	      "ScriptFile"    "items/hexagonal_crystal.lua"
+	      "Function"      "item_refresher_datadriven_on_spell_start"
+	    }
+	  }
 	    // Special  
 	    //-------------------------------------------------------------------------------------------------------------
 	    "AbilitySpecial"
@@ -2910,7 +3155,7 @@
 	"item_hokage_armor"
 	  {
 	    "ID"                    "1206"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_hokage_armor"
 	
@@ -2936,6 +3181,54 @@
 	
 	    "Modifiers"
 	    {
+	
+	      "item_hokage_armor_aura_modifer"
+	      {
+	          "Passive"           "1"
+	          "IsHidden"          "1"
+	          "Aura"              "item_hokage_armor_aura"
+	          "Aura_Radius"       "%radius"
+	          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	          "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	          "EffectName"        "particles/items_fx/aura_vlads.vpcf"
+	          "EffectAttachType"  "follow_origin" 
+	      }
+	
+	      "item_hokage_armor_aura"
+	      {
+	          "IsBuff"        "1"
+	          "IsPurgable"      "0"
+	          "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+	          "Properties"
+	          {
+	             "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor_aura"
+	             "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as_aura"
+	          }
+	      }
+	
+	      "item_hokage_armor_aura_enemy_modifer"
+	      {
+	          "Passive"           "1"
+	          "IsHidden"          "1"
+	          "Aura"              "item_hokage_armor_aura_enemy"
+	          "Aura_Radius"       "%radius"
+	          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	          "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	          "EffectName"        "particles/items_fx/aura_vlads.vpcf"
+	          "EffectAttachType"  "follow_origin" 
+	      }
+	
+	      "item_hokage_armor_aura_enemy"
+	      {
+	          "IsDebuff"        "1"
+	          "IsPurgable"      "0"
+	          "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+	          "Properties"
+	          {
+	             "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%minus_armor_aura"
+	          }
+	      }
+	
 	      "item_hokage_armor_modifier"
 	      {
 	         "Passive" "1"
@@ -2961,6 +3254,31 @@
 	      {
 	        "var_type"          "FIELD_FLOAT"
 	        "attackspeed"        "40.0"
+	      }
+	      "03"
+	      {
+	        "var_type"         "FIELD_FLOAT"
+	        "as_aura"         "15.0"
+	      }
+	      "04"
+	      {
+	        "var_type"          "FIELD_FLOAT"
+	        "armor_aura"        "5.0"
+	      }
+	      "05"
+	      {
+	        "var_type"          "FIELD_FLOAT"
+	        "radius"        "1200.0"
+	      }
+	      "06"
+	      {
+	        "var_type"          "FIELD_FLOAT"
+	        "minus_armor_aura"        "-5.0"
+	      }
+	      "07"
+	      {
+	        "var_type"          "FIELD_FLOAT"
+	        "minus_radius"        "1200.0"
 	      }
 	    }
 	  }
@@ -3021,7 +3339,7 @@
 	
 	    "ApplyModifier"
 	    {
-	      "ModifierName"  "modifier_thunder_clap"
+	      "ModifierName"  "hoshi_star_slow"
 	      "Target"
 	      {
 	        "Center"  "CASTER"
@@ -3034,7 +3352,7 @@
 	    
 	    "ApplyModifier"
 	    {
-	      "ModifierName"  "modifier_thunder_clap"
+	      "ModifierName"  "hoshi_star_slow"
 	      "Target"
 	      {
 	        "Center"  "CASTER"
@@ -3075,7 +3393,7 @@
 	          }
 	      }
 	
-	        "modifier_thunder_clap"
+	        "hoshi_star_slow"
 	        {
 	          "Passive"     "0"
 	          "IsHidden"      "0"
@@ -3089,7 +3407,6 @@
 	
 	          "Properties"
 	          {
-	            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_slow"
 	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow"
 	          }
 	
@@ -3236,7 +3553,7 @@
 	            "ApplyModifier"
 	            {
 	                "Target"                        "CASTER"
-	                "ModifierName"                  "custom_speedup"
+	                "ModifierName"                  "idates_sandals_phase"
 	            }
 	        }
 	
@@ -3270,7 +3587,7 @@
 	          }
 	      }
 	
-	       "custom_speedup"
+	       "idates_sandals_phase"
 	      {
 	        "EffectName"        "particles/items2_fx/phase_boots.vpcf"
 	        "EffectAttachType"      "follow_origin"
@@ -3746,6 +4063,13 @@
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 	
+	    "precache"
+	      {
+	        "particle"  "particles/damage_immunity.vpcf"
+	        "particle"  "DOTA_Item.Mekansm.Activate"
+	      }
+	
+	
 	    "OnSpellStart"
 	        {
 	
@@ -3940,6 +4264,13 @@
 	                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
 	          }
 	      }
+	
+	      "kaguya_armor_return"
+	      {
+	         "Passive" "0"
+	         "IsHidden"  "0"
+	         
+	      }
 	    }
 	    // Special  
 	    //-------------------------------------------------------------------------------------------------------------
@@ -3959,6 +4290,11 @@
 	      {
 	        "var_type"                 "FIELD_FLOAT"
 	        "bonus_damage"             "22.0"
+	      }
+	      "04"
+	      {
+	        "var_type"                 "FIELD_FLOAT"
+	        "duration"                "4.5"  //TODO made it up check wc3 reference
 	      }
 	    }
 	  }
@@ -3992,7 +4328,7 @@
 	  // Item Info
 	  //-------------------------------------------------------------------------------------------------------------
 	  "ItemCost"            "2800"
-	  "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
+	  "ItemShopTags"         "damage;int;str;agi;hard_to_tag"
 	  "ItemQuality"         "rare"  
 	  "ItemAliases"         "dagon 1"
 	  
@@ -4004,9 +4340,6 @@
 	    {
 	      "particle" "particles/items_fx/dagon.vpcf"
 	    }
-	 
-	
-	
 	
 	  "AbilitySpecial"
 	  {
@@ -4035,6 +4368,16 @@
 	      "var_type"        "FIELD_INTEGER"
 	      "range_tooltip"     "600"
 	    }
+	    "06"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_str"   "3"
+	    }
+	    "07"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_agi"   "3"
+	    }
 	  }
 	  
 	  "OnSpellStart"
@@ -4057,9 +4400,8 @@
 	      
 	      "Properties"
 	      {
-	        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
-	        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
-	        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+	        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_str"
+	        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_agi"
 	        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
 	        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
 	      }
@@ -4137,6 +4479,16 @@
 	      "var_type"        "FIELD_INTEGER"
 	      "range_tooltip"     "650"
 	    }
+	    "06"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_str"   "3"
+	    }
+	    "07"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_agi"   "3"
+	    }
 	  }
 	  
 	  "OnSpellStart"
@@ -4159,9 +4511,8 @@
 	      
 	      "Properties"
 	      {
-	        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
-	        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
-	        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+	        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_str"
+	        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_agi"
 	        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
 	        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
 	      }
@@ -4239,6 +4590,16 @@
 	      "var_type"        "FIELD_INTEGER"
 	      "range_tooltip"     "700"
 	    }
+	    "06"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_str"   "3"
+	    }
+	    "07"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_agi"   "3"
+	    }
 	  }
 	  
 	  "OnSpellStart"
@@ -4261,9 +4622,8 @@
 	      
 	      "Properties"
 	      {
-	        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
-	        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
-	        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+	        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_str"
+	        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_agi"
 	        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
 	        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
 	      }
@@ -4341,6 +4701,16 @@
 	      "var_type"        "FIELD_INTEGER"
 	      "range_tooltip"     "750"
 	    }
+	    "06"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_str"   "3"
+	    }
+	    "07"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bonus_agi"   "3"
+	    }
 	  }
 	  
 	  "OnSpellStart"
@@ -4363,9 +4733,8 @@
 	      
 	      "Properties"
 	      {
-	        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
-	        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
-	        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+	        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_str"
+	        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_agi"
 	        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
 	        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
 	      }
@@ -4376,9 +4745,10 @@
 	"item_kongou_nyoi"
 	  {
 	    "ID"              "1180"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "BaseClass"           "item_datadriven"
 	    "AbilityTextureName"   "item_kongou_nyoi"
+	    "AbilityCooldown"        "20.0"
 	
 	    // Stats
 	    //-------------------------------------------------------------------------------------------------------------
@@ -4400,6 +4770,25 @@
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 	
+	
+	     "precache"
+	      {
+	        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+	        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+	        "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
+	        "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+	      }
+	
+	     "OnSpellStart"
+	    {
+	      "RunScript"
+	      {
+	        "ScriptFile"  "items/bingo_book.lua"
+	        "Function"    "pingEnemies"
+	      }
+	    }
+	
+	
 	    "Modifiers"
 	    {
 	      "item_kongou_nyoi_modifier"
@@ -4415,6 +4804,57 @@
 	              "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
 	              "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
 	          }
+	      }
+	
+	       "kongou_nyoi_aoe"
+	      {
+	         "Passive" "1"
+	         "IsHidden"  "1"
+	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	        "Properties"
+	          {
+	              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+	          }
+	
+	          "OnAttackLanded"
+	        {
+	          "Random"
+	          {
+	            "Chance" "30"
+	            "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+	            "OnSuccess"
+	            {
+	
+	              "FireSound"
+	              {
+	                  "EffectName"  "Hero_Brewmaster.ThunderClap"
+	                  "Target"    "CASTER"
+	              }
+	    
+	              "FireEffect"
+	              {
+	                "EffectName"        "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+	                "EffectAttachType"  "follow_origin"
+	                "EffectRadius"    "%radius"
+	                "Target"            "TARGET"
+	              }
+	
+	              "Damage"
+	              {
+	                "Target"
+	                {
+	                  "Center"    "TARGET"
+	                  "Radius"  "%radius"
+	                  "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	                  "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	                }
+	                "Type"      "DAMAGE_TYPE_MAGICAL"
+	                "Damage"    "%damage"
+	              }
+	                
+	            }
+	          }
+	        }
 	      }
 	    }
 	    // Special  
@@ -4445,6 +4885,16 @@
 	      {
 	        "var_type"         "FIELD_FLOAT"
 	        "bonus_mana_reg_percentage"        "150.0"
+	      }
+	      "06"
+	      {
+	        "var_type"         "FIELD_FLOAT"
+	        "damage"        "100.0"
+	      }
+	      "07"
+	      {
+	        "var_type"         "FIELD_FLOAT"
+	        "radius"        "300.0"
 	      }
 	    }
 	  }
@@ -5052,6 +5502,7 @@
 	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_nidaimes_helm"
+	    "AbilityCooldown"       "30"
 	
 	    // Stats
 	    //-------------------------------------------------------------------------------------------------------------
@@ -6880,6 +7331,21 @@
 	        "var_type"                        "FIELD_FLOAT"
 	        "bonus_hp_reg_constant"             "6.0"
 	      }
+	      "03"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "damage_block_melee"    "20"
+	      }
+	      "04"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "damage_block_ranged"   "12"
+	      }
+	      "05"
+	      {
+	        "var_type"              "FIELD_INTEGER"
+	        "block_chance"          "70"
+	      }  
 	    }
 	  }
 	
@@ -7009,7 +7475,6 @@
 	
 	          "Properties"
 	          {
-	            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_slow"
 	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow"
 	          }
 	
@@ -8247,6 +8712,27 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
 
+    
+
+    "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_block_melee"    "20"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_block_ranged"   "12"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "block_chance"          "70"
+            }
+        }
+
   }
 
 	"item_shuko"
@@ -8364,7 +8850,10 @@
 	          }
 	      }
 	
-	      "OnAttackLanded"
+	      
+	    }
+	
+	    "OnAttackLanded"
 	      {
 	        "RunScript"
 	        {
@@ -8372,7 +8861,6 @@
 	          "Function"    "cleave"
 	        }
 	      }
-	    }
 	    // Special  
 	    //-------------------------------------------------------------------------------------------------------------
 	    "AbilitySpecial"
@@ -8405,7 +8893,7 @@
 	      "06"
 	      {
 	        "var_type"                  "FIELD_FLOAT"
-	        "aoe_damage"                "100.0"//todo rework lua make dmg % from base dmg
+	        "aoe_damage_percent"                "25.0"//todo rework lua make dmg % from base dmg
 	      }
 	  }
 	

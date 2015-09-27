@@ -29,9 +29,9 @@ function ZeusLightning( event )
 	
 			-- unit selection and counting
 			-- dead flag is for the chain to not stop if the target is killed
-			units = FindUnitsInRadius(hero:GetTeamNumber(), target:GetOrigin(), target, bounce_range, DOTA_UNIT_TARGET_TEAM_ENEMY, 
+			units = FindUnitsInRadius(target:GetTeamNumber(), target:GetOrigin(), target, bounce_range, DOTA_UNIT_TARGET_TEAM_ENEMY + DOTA_UNIT_TARGET_TEAM_CUSTOM, 
 						DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, true)
-
+			print(units)
 			-- particle
 			targetVec = target:GetAbsOrigin()
 			targetVec.z = target:GetAbsOrigin().z + target:GetBoundingMaxs().z

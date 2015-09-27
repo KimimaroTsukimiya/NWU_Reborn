@@ -54,7 +54,7 @@
 
     "ApplyModifier"
     {
-      "ModifierName"  "modifier_thunder_clap"
+      "ModifierName"  "hoshi_star_slow"
       "Target"
       {
         "Center"  "CASTER"
@@ -67,7 +67,7 @@
     
     "ApplyModifier"
     {
-      "ModifierName"  "modifier_thunder_clap"
+      "ModifierName"  "hoshi_star_slow"
       "Target"
       {
         "Center"  "CASTER"
@@ -108,7 +108,7 @@
           }
       }
 
-        "modifier_thunder_clap"
+        "hoshi_star_slow"
         {
           "Passive"     "0"
           "IsHidden"      "0"
@@ -122,7 +122,6 @@
 
           "Properties"
           {
-            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_slow"
             "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow"
           }
 

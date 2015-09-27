@@ -1,7 +1,7 @@
 "item_hokage_armor"
   {
     "ID"                    "1206"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_hokage_armor"
 
@@ -27,6 +27,54 @@
 
     "Modifiers"
     {
+
+      "item_hokage_armor_aura_modifer"
+      {
+          "Passive"           "1"
+          "IsHidden"          "1"
+          "Aura"              "item_hokage_armor_aura"
+          "Aura_Radius"       "%radius"
+          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+          "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+          "EffectName"        "particles/items_fx/aura_vlads.vpcf"
+          "EffectAttachType"  "follow_origin" 
+      }
+
+      "item_hokage_armor_aura"
+      {
+          "IsBuff"        "1"
+          "IsPurgable"      "0"
+          "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+          "Properties"
+          {
+             "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor_aura"
+             "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as_aura"
+          }
+      }
+
+      "item_hokage_armor_aura_enemy_modifer"
+      {
+          "Passive"           "1"
+          "IsHidden"          "1"
+          "Aura"              "item_hokage_armor_aura_enemy"
+          "Aura_Radius"       "%radius"
+          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_ENEMY"
+          "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+          "EffectName"        "particles/items_fx/aura_vlads.vpcf"
+          "EffectAttachType"  "follow_origin" 
+      }
+
+      "item_hokage_armor_aura_enemy"
+      {
+          "IsDebuff"        "1"
+          "IsPurgable"      "0"
+          "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+          "Properties"
+          {
+             "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%minus_armor_aura"
+          }
+      }
+
       "item_hokage_armor_modifier"
       {
          "Passive" "1"
@@ -52,6 +100,31 @@
       {
         "var_type"          "FIELD_FLOAT"
         "attackspeed"        "40.0"
+      }
+      "03"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "as_aura"         "15.0"
+      }
+      "04"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "armor_aura"        "5.0"
+      }
+      "05"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "radius"        "1200.0"
+      }
+      "06"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "minus_armor_aura"        "-5.0"
+      }
+      "07"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "minus_radius"        "1200.0"
       }
     }
   }

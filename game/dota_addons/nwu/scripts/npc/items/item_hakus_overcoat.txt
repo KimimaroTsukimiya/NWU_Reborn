@@ -1,11 +1,13 @@
 "item_hakus_overcoat"
   {
     "ID"                    "1210"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AURA"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_hakus_overcoat"
 
     // Stats
+    "AbilityCooldown"       "20"
+    "AbilityDuration"     "40"
     //-------------------------------------------------------------------------------------------------------------
 
     // Item Info
@@ -24,8 +26,96 @@
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
+    "precache"
+  {
+    "particle"  "particles/units/heroes/hero_lich/lich_frost_armor.vpcf"
+    "particle"  "particles/status_fx/status_effect_frost_armor.vpcf"
+    "particle"  "particles/status_fx/status_effect_frost.vpcf"
+    "soundfile" "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+  }
+
+  "OnSpellStart"
+  {
+    "FireSound"
+    {
+      "EffectName"  "Hero_Lich.FrostArmor"
+      "Target"    "CASTER"
+    }
+
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_frost_armor"
+      "Target"    "CASTER"
+      "Duration"    "%AbilityDuration"
+    }
+  }
+
+
     "Modifiers"
     {
+
+
+    "modifier_frost_armor"
+        {
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"  "%armor_bonus"
+          }
+
+          "OnCreated"
+          {
+            "RunScript"
+            {
+              "ScriptFile"    "items/hakus_overcoat.lua"
+                  "Function"      "FrostArmorParticle"  
+              }
+          }
+
+          "OnDestroy"
+          {
+            "RunScript"
+            {
+              "ScriptFile"    "items/hakus_overcoat.lua"
+                  "Function"      "EndFrostArmorParticle" 
+              }
+          }
+
+          "StatusEffectName"    "particles/status_fx/status_effect_frost_armor.vpcf"
+          "StatusEffectPriority"  "10"
+
+          "OnAttacked"
+          {
+            "ApplyModifier"
+            {
+              "ModifierName"  "modifier_frost_armor_slow"
+              "Target"    "ATTACKER"
+              "Duration"    "%slow_duration"
+            }
+
+            "FireSound"
+            {
+              "EffectName"  "Hero_Lich.FrostArmorDamage"
+              "Target"    "TARGET"
+            }
+          }
+        }
+
+        "modifier_frost_armor_slow"
+        {
+          "IsDebuff"  "1"
+
+          "StatusEffectName"    "particles/status_fx/status_effect_frost.vpcf"
+          "StatusEffectPriority"  "10"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%slow_attack_speed"
+            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%slow_movement_speed"
+          }
+        }
+
+
+
       "item_hakus_overcoat_modifier"
       {
          "Passive" "1"
@@ -43,9 +133,9 @@
       {
           "Passive"           "1"
           "IsHidden"          "1"
-          "Aura"              "akatsuki_ring_aura"
+          "Aura"              "hakus_overcoat_aura"
           "Aura_Radius"       "%aura_radius"
-          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+          "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_ENEMY"
           "Aura_Types"        "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
           "EffectName"        "particles/items_fx/aura_vlads.vpcf"
           "EffectAttachType"  "follow_origin" 
@@ -86,7 +176,27 @@
       "04"
       {
         "var_type"                      "FIELD_FLOAT"
-        "aura_radius"                   "600.0"//TODO made it up check wc3
+        "aura_radius"                   "1200.0"//TODO made it up check wc3
+      }
+      "05"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "armor_bonus"     "3"
+      }
+      "06"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "slow_duration"     "2.0"
+      }
+      "07"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "slow_movement_speed" "-30"
+      }
+      "08"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "slow_attack_speed"   "-20"
       }
     }
   }

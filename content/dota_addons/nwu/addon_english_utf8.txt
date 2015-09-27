@@ -356,10 +356,13 @@
 		"DOTA_Tooltip_ability_item_blue_moon_bonus_str"								"Strength: +"
 		"DOTA_Tooltip_ability_item_blue_moon_bonus_int"								"Intelligence: +"
 		"DOTA_Tooltip_ability_item_blue_moon_bonus_agi"								"Agility: +"
+		"DOTA_Tooltip_blue_moon_slow"												"Blue Moon"
+		"DOTA_Tooltip_blue_moon_slow_description"									"-10%% Movementspeed and -15%% Attackspeed"
+		
 
 		//Point Booster
     	"DOTA_Tooltip_ability_item_point_booster_datadriven"						"Point Booster"
-		"DOTA_Tooltip_ability_item_point_booster_datadriven_Lore"			"Combined with the other 2 boosters, it can form a very powerful item."
+		"DOTA_Tooltip_ability_item_point_booster_datadriven_Lore"					"Combined with the other 2 boosters, it can form a very powerful item."
 		"DOTA_Tooltip_ability_item_point_booster_datadriven_bonus_hp"				"Hit points: +"
 		"DOTA_Tooltip_ability_item_point_booster_datadriven_bonus_mana"				"Chakra: +"
 
@@ -406,6 +409,7 @@
 
 		//Bingo Book
     	"DOTA_Tooltip_ability_item_bingo_book"										"Bingo Book"
+		"DOTA_Tooltip_ability_item_kongou_nyoi_description"							"Active: Track Enemies (ping on enemies location)"
 		"DOTA_Tooltip_ability_item_bingo_book_Lore"							"The bingo book, a list of all the infomation about the missing-nins and criminals that might pose a threat to the 5 shinobi villages. This bingo book has been updated to learn enemy location for assasination."
 		"DOTA_Tooltip_ability_item_bingo_book_bonus_str"							"Strength: +"
 		"DOTA_Tooltip_ability_item_bingo_book_bonus_agi"							"Agility: +"
@@ -419,15 +423,21 @@
 		"DOTA_Tooltip_ability_item_magatama_amulet_bonus_agi"						"Agility: +"
 		"DOTA_Tooltip_ability_item_magatama_amulet_bonus_int"						"Intelligence: +"
 		"DOTA_Tooltip_ability_item_magatama_amulet_bonus_hp_reg_constant"							"Hp Regeneration: +"
+		"DOTA_Tooltip_magatama_amulet_aura"											"Magatama Amulet"
+		"DOTA_Tooltip_magatama_amulet_aura_description"								"Aura: +2 Hp Regeneration"
+
+
 
 		//Kongou Nyoi
     	"DOTA_Tooltip_ability_item_kongou_nyoi"										"Kongou Nyoi"
-		"DOTA_Tooltip_ability_item_kongou_nyoi_Lore"							"The elder monkey transforms into a large, extendable staff that is as hard as adamantine yet as sharp as a sword."
+    	"DOTA_Tooltip_ability_item_kongou_nyoi_description"							"Passive: 30% Chance to deal 100 damage in 300 AOE\nActive: Track Enemies (ping on enemies location)"
+		"DOTA_Tooltip_ability_item_kongou_nyoi_Lore"							"The elde""r monkey transforms into a large, extendable staff that is as hard as adamantine yet as sharp as a sword."
 		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_str"							"Strength: +"
 		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_agi"							"Agility: +"
 		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_int"							"Intelligence: +"
 		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_hp_reg_constant"				"Hp Regeneration: +"
 		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_mana_reg_percentage"			"Chakra Regeneration: +"
+
 
 		//Flying Courier
     	"DOTA_Tooltip_ability_item_flying_courier"									"Kongou Nyoi"
@@ -446,10 +456,15 @@
 
 		//Hoshikage's Star
     	"DOTA_Tooltip_ability_item_hoshikages_star"									"Hoshikage's Star"
-		"DOTA_Tooltip_ability_item_hoshikages_star_Description"							"Active: Thunder Clap (350 Damage in 250 AOE, 40% ms and as slow for 3.5 seconds) - 10 Charges"
-		"DOTA_Tooltip_ability_item_hoshikages_star_Lore"						"A star has fallen into the village of the star, where they use the star's chakra to train their bodies. The star's chakra is so powerful, it can make a user 8 times stronger than before."
+		"DOTA_Tooltip_ability_item_hoshikages_star_Description"						"Active: Thunder Clap (350 Damage in 250 AOE, 40% ms and as slow for 3.5 seconds) - 10 Charges"
+		"DOTA_Tooltip_ability_item_hoshikages_star_Lore"							"A star has fallen into the village of the star, where they use the star's chakra to train their bodies. The star's chakra is so powerful, it can make a user 8 times stronger than before."
 		"DOTA_Tooltip_ability_item_hoshikages_star_bonus_int"						"Intelligence: +"
 		"DOTA_Tooltip_ability_item_hoshikages_star_bonus_mana_reg_percentage"		"Chakra Regeneration: +"
+		"DOTA_Tooltip_hoshi_star_slow"												"Hosikage's Star"
+		"DOTA_Tooltip_hoshi_star_slow_description"									"-40%% Movementspeed"
+
+
+		hoshikages_star_slow
 
 		//The Totsuka
     	"DOTA_Tooltip_ability_item_the_totsuka"										"The Totsuka"
@@ -512,6 +527,10 @@
 		"DOTA_Tooltip_ability_item_rengeki_Lore"									""
 		"DOTA_Tooltip_ability_item_rengeki_bonus_mana_reg_percentage"				"Chakra Regeneration: +"
 		"DOTA_Tooltip_ability_item_rengeki_bonus_int"								"Intelligence: +"
+		"DOTA_Tooltip_ability_item_rengeki_ms_slow"                                 "MS SLOW:"
+		"DOTA_Tooltip_ability_item_rengeki_attack_speed_slow"                       "ATTACK SPEED SLOW:"
+		"DOTA_Tooltip_modifier_rengeki_slow"										"Rengeki"
+		"DOTA_Tooltip_modifier_rengeki_slow_Description" 							"-30%% Movementspeed" 
 
 		//Giant Iron Fan
     	"DOTA_Tooltip_ability_item_giant_iron_fan"									"Giant Iron Fan"
@@ -624,6 +643,9 @@
 		"DOTA_Tooltip_ability_item_lunar_sword_bonus_agi"							"Agility: +"
 		"DOTA_Tooltip_ability_item_lunar_sword_bonus_hp"							"Hit Points: +"
 		"DOTA_Tooltip_ability_item_lunar_sword_bonus_mana"							"Chakra: +"
+		"DOTA_Tooltip_lunar_sword_slow"												"Lunar Sword"
+		"DOTA_Tooltip_lunar_sword_slow_description"									"-20%% Movementspeed and -25%% Attackspeed"
+
 
 		//Tri-Blades
     	"DOTA_Tooltip_ability_item_tri_blades"										"Tri-Blades"
@@ -646,8 +668,11 @@
 
 		//Kusanagi
     	"DOTA_Tooltip_ability_item_kusanagi"										"Kusanagi"
+		"DOTA_Tooltip_ability_item_kusanagi_Description"						"Passive: Corruption - Your attacks reduce target's armor for 15 seconds.\n\nDesolator is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers."
 		"DOTA_Tooltip_ability_item_kusanagi_Lore"							"The sword that Orochimaru wielded during his fight agaisn't the 3rd hokage. This poweful sword can slash even the toughest metal around."
 		"DOTA_Tooltip_ability_item_kusanagi_bonus_damage"							"Damage: +"
+		"DOTA_Tooltip_kusanagi_corruption"									"Kusanagi"
+		"DOTA_Tooltip_kusanagi_corruption_description"									"-6 Armor"
 
 		//Shuko
     	"DOTA_Tooltip_ability_item_shuko"											"Shuko"
@@ -674,6 +699,10 @@
 		"DOTA_Tooltip_ability_item_chakra_smasher_Lore"						"Long ago, the raikage of the cloud village once owned a powerful war hammer charged with his own chakra. His weapon was so powerful that he had to seal it deep within the mountains. Now that the hammer is found, all enemies will feel the might of the weapon of the cloud village."
 		"DOTA_Tooltip_ability_item_chakra_smasher_bonus_agi"						"Agility: +"
 		"DOTA_Tooltip_ability_item_chakra_smasher_bonus_int"						"Intelligence: +"
+		"DOTA_Tooltip_chakra_smasher_purge"											"Chakra Smasher"
+		"DOTA_Tooltip_chakra_smasher_purge_description"								"-50%% Movementspeed"
+
+		
 
 		//Amenonuhoko
     	"DOTA_Tooltip_ability_item_amenonuhoko"										"Amenonuhoko"
@@ -695,23 +724,25 @@
 		
 		//Solar Blade
     	"DOTA_Tooltip_ability_item_solar_blade"										"Solar Blade"
-		"DOTA_Tooltip_ability_item_solar_blade_Lore"							"Forged with the power of the Red Sun, this sword can burn anything to ashes."
+		"DOTA_Tooltip_ability_item_solar_blade_Lore"								"Forged with the power of the Red Sun, this sword can burn anything to ashes."
 		"DOTA_Tooltip_ability_item_solar_blade_bonus_damage"						"Damage: +"
 
 		//Gale Blade
     	"DOTA_Tooltip_ability_item_gale_blade"										"Gale Blade"
-		"DOTA_Tooltip_ability_item_gale_blade_Lore"							"A very special blade made from the leaves from konoha to the metal of the Earth village."
+		"DOTA_Tooltip_ability_item_gale_blade_Lore"									"A very special blade made from the leaves from konoha to the metal of the Earth village."
 		"DOTA_Tooltip_ability_item_gale_blade_bonus_damage"							"Damage: +"
+		"DOTA_Tooltip_ability_item_gale_blade_crit_bonus"							"%CRITICAL Damage:"
+		"DOTA_Tooltip_ability_item_gale_blade_crit_chance"							"%CRITICAL Chance:"
 
 		//Iron Crow
     	"DOTA_Tooltip_ability_item_iron_crow"										"Iron Crow"
-		"DOTA_Tooltip_ability_item_iron_crow_Lore"							"The Iron Crow was an old weapon that was used during the 2nd Shinobi wars when people needed a form of weapon that can stop enemies in a single strike. However due to it's excellent performance, it was reused in the 3rd Shinobi Wars."
+		"DOTA_Tooltip_ability_item_iron_crow_Lore"									"The Iron Crow was an old weapon that was used during the 2nd Shinobi wars when people needed a form of weapon that can stop enemies in a single strike. However due to it's excellent performance, it was reused in the 3rd Shinobi Wars."
 		"DOTA_Tooltip_ability_item_iron_crow_bonus_damage"							"Damage: +"
 		"DOTA_Tooltip_ability_item_iron_crow_bonus_str"								"Strength: +"
 
 		//Probagation
     	"DOTA_Tooltip_ability_item_probagation"										"Probagation"
-		"DOTA_Tooltip_ability_item_probagation_Lore"							"A unique weapon, this old weapon was used by the Hyuuga clan during the First Shinobi Wars. However ever since the war, it has been sealed away deep within the earth..."
+		"DOTA_Tooltip_ability_item_probagation_Lore"								"A unique weapon, this old weapon was used by the Hyuuga clan during the First Shinobi Wars. However ever since the war, it has been sealed away deep within the earth..."
 		"DOTA_Tooltip_ability_item_probagation_bonus_str"							"Strength: +"
 		"DOTA_Tooltip_ability_item_probagation_bonus_int"							"Intelligence: +"
 		"DOTA_Tooltip_ability_item_probagation_bonus_agi"							"Agility: +"
@@ -720,24 +751,26 @@
 
     	//Assassin's Cloak
     	"DOTA_Tooltip_ability_item_assassins_cloak"									"Assassin's Cloak"
-		"DOTA_Tooltip_ability_item_assassins_cloak_Lore"						"In the shinobi world, assassins would often wear a dark cloak, making them invisible to the naked eye. The user can strike in silence, delivering a heavy blow all of the sudden."
-    	"DOTA_Tooltip_ability_item_assassins_cloak_bonus_attack_speed"						"Bonus Attackspeed: +"
+		"DOTA_Tooltip_ability_item_assassins_cloak_Lore"							"In the shinobi world, assassins would often wear a dark cloak, making them invisible to the naked eye. The user can strike in silence, delivering a heavy blow all of the sudden."
+    	"DOTA_Tooltip_ability_item_assassins_cloak_bonus_attack_speed"				"Bonus Attackspeed: +"
     	"DOTA_Tooltip_ability_item_assassins_cloak_bonus_damage"					"Damage: +"
-    	"DOTA_Tooltip_ability_item_assassins_cloak_Description"					"Active: Shadow Walk - makes you invisible for %invis_duration% seconds or until you attack or cast a spell. While invisible, you move %invis_ms%%% faster, through units <font color='#FF7800'>and terrain, and have %invis_night_vision% extra night vision range.</font> If attacking to break the invisibility, you gain %invis_damage% bonus damage on that attack.\n<font color='#FF7800'>Upon taking hero-based damage, you will lose terrain-ignoring capability for 2 seconds.</font>"
+    	"DOTA_Tooltip_ability_item_assassins_cloak_Description"						"Active: Shadow Walk - makes you invisible for %invis_duration% seconds or until you attack or cast a spell. While invisible, you move %invis_ms%%% faster, through units <font color='#FF7800'>and terrain, and have %invis_night_vision% extra night vision range.</font> If attacking to break the invisibility, you gain %invis_damage% bonus damage on that attack.\n<font color='#FF7800'>Upon taking hero-based damage, you will lose terrain-ignoring capability for 2 seconds.</font>"
 		"DOTA_Tooltip_ability_item_assassins_cloak_Note0"							"Has a 0.3 second fade time."
 		"DOTA_Tooltip_ability_item_assassins_cloak_Note1"							"If the invisibility ends without attacking, the bonus damage is lost."
 		"DOTA_Tooltip_ability_item_assassins_cloak_note2"							"Backstab cannot miss."
-		"DOTA_Tooltip_modifier_item_assassins_cloak_invis"								"Shadow Walk"
-		"DOTA_Tooltip_modifier_item_assassins_cloak_invis_Description"					"Invisible, phased, gaining bonus night vision, movespeed, and backstab damage."
+		"DOTA_Tooltip_modifier_item_assassins_cloak_invis"							"Shadow Walk"
+		"DOTA_Tooltip_modifier_item_assassins_cloak_invis_Description"				"Invisible, phased, gaining bonus night vision, movespeed, and backstab damage."
 
     	//Ragnorok
     	"DOTA_Tooltip_ability_item_ragnorok"										"Ragnorok"
-		"DOTA_Tooltip_ability_item_ragnorok_Lore"							"This legendary weapon is the highest weapon class in critical attacks."
+		"DOTA_Tooltip_ability_item_ragnorok_Lore"									"This legendary weapon is the highest weapon class in critical attacks."
     	"DOTA_Tooltip_ability_item_ragnorok_bonus_damage"							"Damage: +"
-
+    	"DOTA_Tooltip_ability_item_ragnorok_crit_bonus"								"%CRITICAL Damage:"
+		"DOTA_Tooltip_ability_item_ragnorok_crit_chance"							"%CRITICAL Chance:"
+    	
     	//Good Guy's Suit
     	"DOTA_Tooltip_ability_item_good_guys_suit"									"Good Guy's Suit"
-		"DOTA_Tooltip_ability_item_good_guys_suit_Lore"						"This elastic suit worn by Gai is very flexible for training purposes. The green suit gives a breeze to the user's body and gives maximum movement to the body."
+		"DOTA_Tooltip_ability_item_good_guys_suit_Lore"								"This elastic suit worn by Gai is very flexible for training purposes. The green suit gives a breeze to the user's body and gives maximum movement to the body."
     	"DOTA_Tooltip_ability_item_good_guys_suit_bonus_damage"						"Damage: +"
     	"DOTA_Tooltip_ability_item_good_guys_suit_bonus_agi"						"Agility: +"
     	"DOTA_Tooltip_ability_item_good_guys_suit_attackspeed"						"Bonus Attackspeed: +"

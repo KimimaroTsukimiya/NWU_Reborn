@@ -4,6 +4,7 @@
     "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     "BaseClass"           "item_datadriven"
     "AbilityTextureName"   "item_kongou_nyoi"
+    "AbilityCooldown"        "20.0"
 
     // Stats
     //-------------------------------------------------------------------------------------------------------------
@@ -24,6 +25,15 @@
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+
+     "precache"
+      {
+        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+        "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
+        "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+      }
 
      "OnSpellStart"
     {
@@ -50,6 +60,57 @@
               "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
               "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
           }
+      }
+
+       "kongou_nyoi_aoe"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+        "Properties"
+          {
+              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+          }
+
+          "OnAttackLanded"
+        {
+          "Random"
+          {
+            "Chance" "30"
+            "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+            "OnSuccess"
+            {
+
+              "FireSound"
+              {
+                  "EffectName"  "Hero_Brewmaster.ThunderClap"
+                  "Target"    "CASTER"
+              }
+    
+              "FireEffect"
+              {
+                "EffectName"        "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+                "EffectAttachType"  "follow_origin"
+                "EffectRadius"    "%radius"
+                "Target"            "TARGET"
+              }
+
+              "Damage"
+              {
+                "Target"
+                {
+                  "Center"    "TARGET"
+                  "Radius"  "%radius"
+                  "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                  "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                }
+                "Type"      "DAMAGE_TYPE_MAGICAL"
+                "Damage"    "%damage"
+              }
+                
+            }
+          }
+        }
       }
     }
     // Special  
@@ -80,6 +141,16 @@
       {
         "var_type"         "FIELD_FLOAT"
         "bonus_mana_reg_percentage"        "150.0"
+      }
+      "06"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "damage"        "100.0"
+      }
+      "07"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "radius"        "300.0"
       }
     }
   }

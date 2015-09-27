@@ -32,6 +32,7 @@
       "var_type"        "FIELD_INTEGER"
       "bonus_all_stats"   "5"
     }
+
     "02"
     {
       "var_type"        "FIELD_INTEGER"
@@ -66,6 +67,21 @@
     {
       "var_type"        "FIELD_FLOAT"
       "heal_armor_duration" "25.0"
+    }
+    "09"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_agi"   "5"
+    }
+    "10"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_int"   "5"
+    }
+    "11"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_str"   "5"
     }
   }
   

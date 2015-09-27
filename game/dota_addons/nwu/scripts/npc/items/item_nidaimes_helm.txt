@@ -4,6 +4,7 @@
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_nidaimes_helm"
+    "AbilityCooldown"       "30"
 
     // Stats
     //-------------------------------------------------------------------------------------------------------------

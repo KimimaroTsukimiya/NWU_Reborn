@@ -1,11 +1,14 @@
 "item_giant_iron_fan"
   {
     "ID"                    "1194"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+      "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_giant_iron_fan"
 
     // Stats
+    "AbilityCooldown"       "25"
     //-------------------------------------------------------------------------------------------------------------
 
     // Item Info
@@ -25,8 +28,87 @@
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
+    "OnSpellStart"
+    {
+      "FireSound"
+      {
+        "EffectName"  "Brewmaster_Storm.Cyclone"
+        "Target"    "TARGET"
+      }
+      "ApplyModifier"
+      {
+        "ModifierName"  "modifier_storm_cyclone" //modifier_cyclone is built-in
+        "Target"
+        {
+          "Center"  "TARGET"
+          "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+          "Types"   "DOTA_UNIT_TARGET_HERO"
+        }
+        "Duration"    "%duration_hero"
+      }
+      
+      "ApplyModifier"
+      {
+        "ModifierName"  "modifier_storm_cyclone"
+        "Target"
+        {
+          "Center"  "TARGET"
+          "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+          "Types"   "DOTA_UNIT_TARGET_BASIC"
+        }
+        "Duration"    "%duration_unit"
+      }
+    }
+
     "Modifiers"
     {
+
+      "modifier_storm_cyclone"
+      {
+        "IsDebuff"      "1"
+
+        "States"
+            {   
+              "MODIFIER_STATE_FLYING"       "MODIFIER_STATE_VALUE_ENABLED"
+              "MODIFIER_STATE_NO_UNIT_COLLISION"  "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_STUNNED"      "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_ROOTED"       "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_DISARMED"     "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_INVULNERABLE"   "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_NO_HEALTH_BAR"    "MODIFIER_STATE_VALUE_ENABLED"
+            }
+    
+        "OnCreated"
+        {
+          "AttachEffect"
+          {
+            "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_cyclone.vpcf"
+            "EffectAttachType"  "world_origin"
+            "Target"            "TARGET"
+          }
+
+          "RunScript"
+              {
+                "ScriptFile"  "items/giant_iron_fan.lua"
+                "Function"    "TornadoHeight"
+              }
+        } 
+
+            "ThinkInterval"   "0.03"
+        "OnIntervalThink"
+              {
+                  "RunScript"
+                  {
+                      "ScriptFile"    "items/giant_iron_fan.lua"
+                      "Function"      "Spin"
+                      "Angle"         "20"
+                  }
+        }
+
+        "OverrideAnimation"     "ACT_DOTA_FLAIL"
+      }
+
+
       "item_giant_iron_fan_modifier"
       {
          "Passive" "1"
@@ -58,6 +140,32 @@
       {
         "var_type"                  "FIELD_FLOAT"
         "movementspeed_percentage"     "7.0"
+      }
+      "04"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "duration_hero"       "6.0"
+      }
+      "05"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "duration_unit"       "20.0"
+      }
+      // Extra
+      "06"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "cyclone_height"      "550"
+      }
+      "07"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "cyclone_min_height"    "500"
+      }
+      "08"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "cyclone_max_height"    "650"
       }
     }
   }

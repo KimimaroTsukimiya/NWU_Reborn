@@ -68,6 +68,16 @@
       "var_type"        "FIELD_INTEGER"
       "range_tooltip"     "750"
     }
+    "06"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_str"   "3"
+    }
+    "07"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_agi"   "3"
+    }
   }
   
   "OnSpellStart"
@@ -90,9 +100,8 @@
       
       "Properties"
       {
-        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
-        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
-        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_str"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_agi"
         "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_intellect"
         "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
       }

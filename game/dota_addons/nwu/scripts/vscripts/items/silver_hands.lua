@@ -1,7 +1,7 @@
 function cleave ( event )
 	local radius = event.ability:GetLevelSpecialValueFor("radius", (event.ability:GetLevel()-1))
 	local single_target_damage = event.ability:GetLevelSpecialValueFor("damage", (event.ability:GetLevel()-1)) + ( event.caster:GetStrength() * 4 )
-	local aoe_damage = event.ability:GetLevelSpecialValueFor("aoe_damage", (event.ability:GetLevel()-1)) + ( event.caster:GetStrength() * 3 )
+	local aoe_damage = event.ability:GetLevelSpecialValueFor("aoe_damage_percent", (event.ability:GetLevel()-1)) + ( event.caster:GetStrength() * 3 )
 	local target = event.target
 
 		print("Performing Cleave!")

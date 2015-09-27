@@ -35,12 +35,25 @@ function Precache( context )
   -- Abilities can also be precached in this way despite the name
   PrecacheItemByNameSync("example_ability", context)
   PrecacheItemByNameSync("item_example_item", context)
+  PrecacheItemByNameSync("item_dagon", context)
+  PrecacheItemByNameSync("item_energy_boots", context)
+
+  -- Stuff
+  PrecacheResource("particle_folder", "particles/hero", context)
+  PrecacheResource("particle_folder", "particles/ambient", context)
+  PrecacheResource("particle_folder", "particles/generic_gameplay", context)
+  PrecacheResource("particle_folder", "particles/status_fx/", context)
+  PrecacheResource("particle_folder", "particles/item", context)
+  PrecacheResource("particle_folder", "particles/items_fx", context)
+  PrecacheResource("particle_folder", "particles/items2_fx", context)
+  PrecacheResource("particle_folder", "particles/items3_fx", context)
 
   -- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
   -- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way
   PrecacheUnitByNameSync("npc_dota_hero_ancient_apparition", context)
   PrecacheUnitByNameSync("npc_dota_hero_enigma", context)
   PrecacheUnitByNameSync("npc_dota_hero_brewmaster", context)
+  PrecacheUnitByNameSync("npc_dota_hero_lich", context)
 end
 
 -- Create the game mode when we activate

@@ -25,5 +25,26 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
 
+    
+
+    "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_block_melee"    "20"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_block_ranged"   "12"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "block_chance"          "70"
+            }
+        }
+
   }
 

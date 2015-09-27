@@ -39,6 +39,13 @@
                 "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
           }
       }
+
+      "kaguya_armor_return"
+      {
+         "Passive" "0"
+         "IsHidden"  "0"
+         
+      }
     }
     // Special  
     //-------------------------------------------------------------------------------------------------------------
@@ -58,6 +65,11 @@
       {
         "var_type"                 "FIELD_FLOAT"
         "bonus_damage"             "22.0"
+      }
+      "04"
+      {
+        "var_type"                 "FIELD_FLOAT"
+        "duration"                "4.5"  //TODO made it up check wc3 reference
       }
     }
   }

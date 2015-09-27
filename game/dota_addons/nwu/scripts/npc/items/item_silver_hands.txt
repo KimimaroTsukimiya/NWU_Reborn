@@ -40,7 +40,10 @@
           }
       }
 
-      "OnAttackLanded"
+      
+    }
+
+    "OnAttackLanded"
       {
         "RunScript"
         {
@@ -48,7 +51,6 @@
           "Function"    "cleave"
         }
       }
-    }
     // Special  
     //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"
@@ -81,7 +83,7 @@
       "06"
       {
         "var_type"                  "FIELD_FLOAT"
-        "aoe_damage"                "100.0"//todo rework lua make dmg % from base dmg
+        "aoe_damage_percent"                "25.0"//todo rework lua make dmg % from base dmg
       }
   }
 

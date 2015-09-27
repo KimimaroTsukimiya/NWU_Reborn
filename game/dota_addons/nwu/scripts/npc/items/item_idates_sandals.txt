@@ -30,7 +30,7 @@
             "ApplyModifier"
             {
                 "Target"                        "CASTER"
-                "ModifierName"                  "custom_speedup"
+                "ModifierName"                  "idates_sandals_phase"
             }
         }
 
@@ -64,7 +64,7 @@
           }
       }
 
-       "custom_speedup"
+       "idates_sandals_phase"
       {
         "EffectName"        "particles/items2_fx/phase_boots.vpcf"
         "EffectAttachType"      "follow_origin"

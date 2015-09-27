@@ -124,7 +124,6 @@
 
           "Properties"
           {
-            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_slow"
             "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow"
           }
 
