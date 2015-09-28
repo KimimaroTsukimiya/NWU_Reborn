@@ -114,6 +114,11 @@
         "var_type"                        "FIELD_FLOAT"
         "silence_duration"              "5.0"
       }
+       "06"
+      {
+        "var_type"                        "FIELD_FLOAT"
+        "silence_damage_percent"              "5.0"
+      }
     }
   }
 
