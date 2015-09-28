@@ -81,11 +81,6 @@
           "ScriptFile"      "items/probagation.lua"
           "Function"        "ConjureImage"
         }
-        "RunScript"
-        {
-          "ScriptFile"      "items/probagation.lua"
-          "Function"        "ConjureImage"
-        }
 
       }
 
@@ -128,12 +123,12 @@
       "07"
       {
         "var_type"                               "FIELD_FLOAT"
-        "illusion_outgoing_damage_percent"       "0"
+        "illusion_outgoing_damage_percent"       "-73"
       }
        "08"
       {
         "var_type"                               "FIELD_FLOAT"
-        "illusion_incoming_damage_percent"       "0"
+        "illusion_incoming_damage_percent"       "200"
       }
     }
   }

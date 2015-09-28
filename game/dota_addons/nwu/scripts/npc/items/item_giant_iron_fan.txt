@@ -2,7 +2,7 @@
   {
     "ID"                    "1194"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-      "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH"
     "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_giant_iron_fan"
@@ -41,7 +41,7 @@
         "Target"
         {
           "Center"  "TARGET"
-          "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+          "Teams"   "DOTA_UNIT_TARGET_TEAM_BOTH"
           "Types"   "DOTA_UNIT_TARGET_HERO"
         }
         "Duration"    "%duration_hero"
@@ -53,7 +53,7 @@
         "Target"
         {
           "Center"  "TARGET"
-          "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+          "Teams"   "DOTA_UNIT_TARGET_TEAM_BOTH"
           "Types"   "DOTA_UNIT_TARGET_BASIC"
         }
         "Duration"    "%duration_unit"
@@ -71,11 +71,11 @@
             {   
               "MODIFIER_STATE_FLYING"       "MODIFIER_STATE_VALUE_ENABLED"
               "MODIFIER_STATE_NO_UNIT_COLLISION"  "MODIFIER_STATE_VALUE_ENABLED"
-          "MODIFIER_STATE_STUNNED"      "MODIFIER_STATE_VALUE_ENABLED"
-          "MODIFIER_STATE_ROOTED"       "MODIFIER_STATE_VALUE_ENABLED"
-          "MODIFIER_STATE_DISARMED"     "MODIFIER_STATE_VALUE_ENABLED"
-          "MODIFIER_STATE_INVULNERABLE"   "MODIFIER_STATE_VALUE_ENABLED"
-          "MODIFIER_STATE_NO_HEALTH_BAR"    "MODIFIER_STATE_VALUE_ENABLED"
+              "MODIFIER_STATE_STUNNED"      "MODIFIER_STATE_VALUE_ENABLED"
+              "MODIFIER_STATE_ROOTED"       "MODIFIER_STATE_VALUE_ENABLED"
+              "MODIFIER_STATE_DISARMED"     "MODIFIER_STATE_VALUE_ENABLED"
+              "MODIFIER_STATE_INVULNERABLE"   "MODIFIER_STATE_VALUE_ENABLED"
+              "MODIFIER_STATE_NO_HEALTH_BAR"    "MODIFIER_STATE_VALUE_ENABLED"
             }
     
         "OnCreated"

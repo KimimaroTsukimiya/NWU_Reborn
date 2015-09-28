@@ -30,6 +30,7 @@
     {
       "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
       "particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+      "particle"  "particles/generic_gameplay/generic_stunned.vpcf"
     }
 
     "Modifiers"
@@ -69,7 +70,7 @@
         "Duration"  "%bash_duration"
         "IsDebuff"  "1"
         "IsHidden"  "0"
-        "EffectName"  "particles/generic_gameplay/generic_stunned_old.vpcf"
+        "EffectName"  "particles/generic_gameplay/generic_stunned.vpcf"
         "EffectAttachType"  "follow_overhead"
 
         "States"

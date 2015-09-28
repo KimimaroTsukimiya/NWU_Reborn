@@ -2621,7 +2621,7 @@
 	  {
 	    "ID"                    "1194"
 	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-	      "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH"
 	    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_giant_iron_fan"
@@ -2660,7 +2660,7 @@
 	        "Target"
 	        {
 	          "Center"  "TARGET"
-	          "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	          "Teams"   "DOTA_UNIT_TARGET_TEAM_BOTH"
 	          "Types"   "DOTA_UNIT_TARGET_HERO"
 	        }
 	        "Duration"    "%duration_hero"
@@ -2672,7 +2672,7 @@
 	        "Target"
 	        {
 	          "Center"  "TARGET"
-	          "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	          "Teams"   "DOTA_UNIT_TARGET_TEAM_BOTH"
 	          "Types"   "DOTA_UNIT_TARGET_BASIC"
 	        }
 	        "Duration"    "%duration_unit"
@@ -2690,11 +2690,11 @@
 	            {   
 	              "MODIFIER_STATE_FLYING"       "MODIFIER_STATE_VALUE_ENABLED"
 	              "MODIFIER_STATE_NO_UNIT_COLLISION"  "MODIFIER_STATE_VALUE_ENABLED"
-	          "MODIFIER_STATE_STUNNED"      "MODIFIER_STATE_VALUE_ENABLED"
-	          "MODIFIER_STATE_ROOTED"       "MODIFIER_STATE_VALUE_ENABLED"
-	          "MODIFIER_STATE_DISARMED"     "MODIFIER_STATE_VALUE_ENABLED"
-	          "MODIFIER_STATE_INVULNERABLE"   "MODIFIER_STATE_VALUE_ENABLED"
-	          "MODIFIER_STATE_NO_HEALTH_BAR"    "MODIFIER_STATE_VALUE_ENABLED"
+	              "MODIFIER_STATE_STUNNED"      "MODIFIER_STATE_VALUE_ENABLED"
+	              "MODIFIER_STATE_ROOTED"       "MODIFIER_STATE_VALUE_ENABLED"
+	              "MODIFIER_STATE_DISARMED"     "MODIFIER_STATE_VALUE_ENABLED"
+	              "MODIFIER_STATE_INVULNERABLE"   "MODIFIER_STATE_VALUE_ENABLED"
+	              "MODIFIER_STATE_NO_HEALTH_BAR"    "MODIFIER_STATE_VALUE_ENABLED"
 	            }
 	    
 	        "OnCreated"
@@ -3779,7 +3779,7 @@
 	    "08"
 	      {
 	        "var_type"                  "FIELD_FLOAT"
-	        "lightning_chance"          "100.0"
+	        "lightning_chance"          "20.0"
 	      }
 	
 	    }
@@ -3817,6 +3817,7 @@
 	    {
 	      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
 	      "particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+	      "particle"  "particles/generic_gameplay/generic_stunned.vpcf"
 	    }
 	
 	    "Modifiers"
@@ -3856,7 +3857,7 @@
 	        "Duration"  "%bash_duration"
 	        "IsDebuff"  "1"
 	        "IsHidden"  "0"
-	        "EffectName"  "particles/generic_gameplay/generic_stunned_old.vpcf"
+	        "EffectName"  "particles/generic_gameplay/generic_stunned.vpcf"
 	        "EffectAttachType"  "follow_overhead"
 	
 	        "States"
@@ -5965,11 +5966,6 @@
 	          "ScriptFile"      "items/probagation.lua"
 	          "Function"        "ConjureImage"
 	        }
-	        "RunScript"
-	        {
-	          "ScriptFile"      "items/probagation.lua"
-	          "Function"        "ConjureImage"
-	        }
 	
 	      }
 	
@@ -6012,12 +6008,12 @@
 	      "07"
 	      {
 	        "var_type"                               "FIELD_FLOAT"
-	        "illusion_outgoing_damage_percent"       "0"
+	        "illusion_outgoing_damage_percent"       "-73"
 	      }
 	       "08"
 	      {
 	        "var_type"                               "FIELD_FLOAT"
-	        "illusion_incoming_damage_percent"       "0"
+	        "illusion_incoming_damage_percent"       "200"
 	      }
 	    }
 	  }
@@ -6234,7 +6230,7 @@
 	    "08"
 	      {
 	        "var_type"                  "FIELD_FLOAT"
-	        "lightning_chance"          "100.0"
+	        "lightning_chance"          "20.0"
 	      }
 	  }
 	}
@@ -8838,16 +8834,14 @@
                 "RemoveModifier"
                 {
                     "ModifierName"    "modifier_hardened_skin"
-                    "Target"      "CASTER"  
+                    "Target"        "CASTER"  
                  }
-            }   
-          
+            }        
         }
 
         "shin_guards_block"
       {
          "Passive" "1"
-
          "IsHidden"  "1"
 
         "OnTakeDamage"
@@ -8866,6 +8860,7 @@
           }
         }
       }
+
     }   
 
 

@@ -105,7 +105,7 @@
     "08"
       {
         "var_type"                  "FIELD_FLOAT"
-        "lightning_chance"          "100.0"
+        "lightning_chance"          "20.0"
       }
 
     }

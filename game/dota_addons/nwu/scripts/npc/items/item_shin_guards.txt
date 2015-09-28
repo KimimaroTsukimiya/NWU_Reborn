@@ -42,16 +42,14 @@
                 "RemoveModifier"
                 {
                     "ModifierName"    "modifier_hardened_skin"
-                    "Target"      "CASTER"  
+                    "Target"        "CASTER"  
                  }
-            }   
-          
+            }        
         }
 
         "shin_guards_block"
       {
          "Passive" "1"
-
          "IsHidden"  "1"
 
         "OnTakeDamage"
@@ -70,6 +68,7 @@
           }
         }
       }
+
     }   
 
 
