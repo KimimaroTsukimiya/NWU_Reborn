@@ -56,7 +56,7 @@
               "RunScript"
               {
                 "ScriptFile"  "items/ikazuchi.lua"
-                "Function"    "ZeusLightning"
+                "Function"    "ChainLightning"
               }
             }
           }
@@ -79,29 +79,34 @@
         "attackspeed"               "15.0"
       }
       "03"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "lightning_damage"    "100"
+    }
+    "04"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "lightning_bounces"   "4"
+    }
+    "05"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bounce_range"      "500"
+    }
+    "06"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "lightning_decay"   "20"
+    }
+    "07"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "time_between_bounces"  "0.2"
+    }
+    "08"
       {
-        "var_type" "FIELD_INTEGER"
-        "lightning_chance" "20"
-      }
-      "04"
-      {
-        "var_type" "FIELD_INTEGER"
-        "lightning_damage" "100"
-      }
-      "05"
-      {
-        "var_type" "FIELD_INTEGER"
-        "lightning_bounces" "5"//todo made it up
-      }
-      "06"
-      {
-        "var_type" "FIELD_INTEGER"
-        "lightning_decay" "20"//todo made it up
-      }
-      "07"
-      {
-        "var_type" "FIELD_INTEGER"
-        "bounce_range" "450"//todo made it up
+        "var_type"                  "FIELD_FLOAT"
+        "lightning_chance"          "100.0"
       }
   }
 }

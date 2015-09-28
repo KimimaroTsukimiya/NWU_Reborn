@@ -3730,7 +3730,7 @@
 	              "RunScript"
 	              {
 	                "ScriptFile"  "items/ikazuchi.lua"
-	                "Function"    "ZeusLightning"
+	                "Function"    "ChainLightning"
 	              }
 	            }
 	          }
@@ -3751,30 +3751,35 @@
 	        "var_type"                   "FIELD_FLOAT"
 	        "attackspeed"                  "70.0"
 	      }
-	      "03"
+	        "03"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "lightning_damage"    "100"
+	    }
+	    "04"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "lightning_bounces"   "4"
+	    }
+	    "05"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bounce_range"      "500"
+	    }
+	    "06"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "lightning_decay"   "20"
+	    }
+	    "07"
+	    {
+	      "var_type"        "FIELD_FLOAT"
+	      "time_between_bounces"  "0.2"
+	    }
+	    "08"
 	      {
-	        "var_type" "FIELD_INTEGER"
-	        "lightning_chance" "20"
-	      }
-	      "04"
-	      {
-	        "var_type" "FIELD_INTEGER"
-	        "lightning_damage" "200"
-	      }
-	      "05"
-	      {
-	        "var_type" "FIELD_INTEGER"
-	        "lightning_bounces" "5"//todo made it up
-	      }
-	      "06"
-	      {
-	        "var_type" "FIELD_INTEGER"
-	        "lightning_decay" "2"//todo made it up
-	      }
-	      "07"
-	      {
-	        "var_type" "FIELD_INTEGER"
-	        "bounce_range" "800"//todo made it up
+	        "var_type"                  "FIELD_FLOAT"
+	        "lightning_chance"          "100.0"
 	      }
 	
 	    }
@@ -5548,9 +5553,10 @@
 	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_nidaimes_helm"
-	    "AbilityCooldown"       "30"
-	
+	    "AbilityCooldown"       "25"
+	    "AbilityManaCost"        "25"
 	    // Stats
+	
 	    //-------------------------------------------------------------------------------------------------------------
 	
 	    // Item Info
@@ -5581,17 +5587,25 @@
 	
 	    "Modifiers"
 	    {
-	      "item_nidaimes_helm_modifier"
+	      "modifier_lifesteal"
 	      {
-	         "IsHidden"      "1"   
-	        "OnDealDamage"
+	         "Passive" "1"
+	         "IsHidden"  "1"
+	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	         "Orb"
+	           {
+	              "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
+	              "ProjectileName" "particles\items2_fx\skadi_projectile.vpcf"
+	           }
+	
+	        "OnOrbImpact"
 	        {
-	          "Lifesteal"
+	           "Lifesteal"
 	          {
-	            "Target"            "ATTACKER"
-	            "LifestealPercent"  "%lifesteal_bonus"
-	          }
-	        }
+	            "Target"    "ATTACKER"
+	            "LifestealPercent" "%lifesteal_bonus"
+	          }  
+	        } 
 	      }
 	      "custom_frenzy"
 	      {
@@ -5853,17 +5867,17 @@
 	      "03"
 	      {
 	        "var_type"                  "FIELD_FLOAT"
-	        "damage_per_second"          "5.0"//TODOmade it up check wc3
+	        "damage_per_second"          "15.0"
 	      }
 	      "04"
 	      {
 	        "var_type"                   "FIELD_FLOAT"
-	        "movespeed_slow"             "-30.0"//TODOmade it up check wc3
+	        "movespeed_slow"             "-30.0"
 	      }
 	      "05"
 	      {
 	        "var_type"                  "FIELD_FLOAT"
-	        "duration"                  "6.0"//TODOmade it up check wc3
+	        "duration"                  "4.0"
 	      }
 	  }
 	}
@@ -6170,7 +6184,7 @@
 	              "RunScript"
 	              {
 	                "ScriptFile"  "items/ikazuchi.lua"
-	                "Function"    "ZeusLightning"
+	                "Function"    "ChainLightning"
 	              }
 	            }
 	          }
@@ -6193,29 +6207,34 @@
 	        "attackspeed"               "15.0"
 	      }
 	      "03"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "lightning_damage"    "100"
+	    }
+	    "04"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "lightning_bounces"   "4"
+	    }
+	    "05"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "bounce_range"      "500"
+	    }
+	    "06"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "lightning_decay"   "20"
+	    }
+	    "07"
+	    {
+	      "var_type"        "FIELD_FLOAT"
+	      "time_between_bounces"  "0.2"
+	    }
+	    "08"
 	      {
-	        "var_type" "FIELD_INTEGER"
-	        "lightning_chance" "20"
-	      }
-	      "04"
-	      {
-	        "var_type" "FIELD_INTEGER"
-	        "lightning_damage" "100"
-	      }
-	      "05"
-	      {
-	        "var_type" "FIELD_INTEGER"
-	        "lightning_bounces" "5"//todo made it up
-	      }
-	      "06"
-	      {
-	        "var_type" "FIELD_INTEGER"
-	        "lightning_decay" "20"//todo made it up
-	      }
-	      "07"
-	      {
-	        "var_type" "FIELD_INTEGER"
-	        "bounce_range" "450"//todo made it up
+	        "var_type"                  "FIELD_FLOAT"
+	        "lightning_chance"          "100.0"
 	      }
 	  }
 	}
@@ -7362,6 +7381,50 @@
 	
 	          }
 	      }
+	
+	       "modifier_hardened_skin"
+	        {
+	            "Passive"           "1"
+	            "Duration"  "1"
+	            "IsHidden"          "1"
+	    
+	            "Properties"
+	            {
+	                "MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK" "%damage_block_melee"
+	            }
+	            "OnTakeDamage"
+	            {
+	                "RemoveModifier"
+	                {
+	                    "ModifierName"    "modifier_hardened_skin"
+	                    "Target"      "CASTER"  
+	                 }
+	            }   
+	          
+	        }
+	
+	        "shin_guards_block"
+	      {
+	         "Passive" "1"
+	
+	         "IsHidden"  "1"
+	
+	        "OnTakeDamage"
+	        {
+	          "Random"
+	          {
+	            "Chance" "%block_chance"
+	            "OnSuccess"  
+	            {
+	              "ApplyModifier"
+	              {
+	                "ModifierName" "modifier_hardened_skin"
+	                "Target"     "CASTER" 
+	              }     
+	            }
+	          }
+	        }
+	      }
 	    }
 	    // Special  
 	    //-------------------------------------------------------------------------------------------------------------
@@ -7380,12 +7443,12 @@
 	      "03"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "damage_block_melee"    "20"
+	        "damage_block_melee"    "40"
 	      }
 	      "04"
 	      {
 	        "var_type"              "FIELD_INTEGER"
-	        "damage_block_ranged"   "12"
+	        "damage_block_ranged"   "20"
 	      }
 	      "05"
 	      {
@@ -8008,12 +8071,12 @@
 	      "07"
 	      {
 	        "var_type"                        "FIELD_FLOAT"
-	        "cast_range"                      "300"
+	        "cast_range"                      "500"
 	      }
 	      "08"
 	      {
 	        "var_type"                        "FIELD_FLOAT"
-	        "cast_range"                      "0"//TODO made it up check wc3
+	        "mana_cost"                      "100"
 	      }
 	      
 	    }
@@ -8758,7 +8821,53 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
 
+    "Modifiers"
+    {
+        "modifier_hardened_skin"
+        {
+            "Passive"           "1"
+            "Duration"  "1"
+            "IsHidden"          "1"
     
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK" "%damage_block_melee"
+            }
+            "OnTakeDamage"
+            {
+                "RemoveModifier"
+                {
+                    "ModifierName"    "modifier_hardened_skin"
+                    "Target"      "CASTER"  
+                 }
+            }   
+          
+        }
+
+        "shin_guards_block"
+      {
+         "Passive" "1"
+
+         "IsHidden"  "1"
+
+        "OnTakeDamage"
+        {
+          "Random"
+          {
+            "Chance" "%block_chance"
+            "OnSuccess"  
+            {
+              "ApplyModifier"
+              {
+                "ModifierName" "modifier_hardened_skin"
+                "Target"     "CASTER" 
+              }     
+            }
+          }
+        }
+      }
+    }   
+
 
     "AbilitySpecial"
         {
@@ -8881,66 +8990,114 @@
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 	
-	    "Modifiers"
+	    "AbilitySpecial"
+	  {
+	    "01"
 	    {
-	      "item_silver_hands_modifier"
-	      {
-	         "Passive" "1"
-	         "IsHidden"  "1"
-	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-	         "Properties"
-	          {
-	               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-	               "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
-	               "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
-	          }
-	      }
-	
-	      
+	      "var_type"            "FIELD_INTEGER"
+	      "bonus_damage"          "60"
 	    }
-	
-	    "OnAttackLanded"
+	    "02"
+	    {
+	      "var_type"            "FIELD_INTEGER"
+	      "bonus_health_regen"      "6"
+	    }
+	    "03"
+	    {
+	      "var_type"            "FIELD_INTEGER"
+	      "bonus_mana_regen_percentage" "150"
+	    }
+	    "04"
+	    {
+	      "var_type"            "FIELD_INTEGER"
+	      "cleave_damage_percent"     "35"
+	    }
+	    "05"
+	    {
+	      "var_type"            "FIELD_INTEGER"
+	      "cleave_radius"         "250"
+	    }
+	  }
+	  
+	  "Modifiers"
+	  {
+	    "modifier_item_bfury_datadriven"
+	    {
+	      "Passive"     "1"
+	      "IsHidden"      "1"
+	      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	      
+	      "Properties"
+	      {
+	        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
+	        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%bonus_health_regen"
+	        "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"   "%bonus_mana_regen_percentage"
+	      }
+	      
+	      "OnCreated"
 	      {
 	        "RunScript"
 	        {
-	          "ScriptFile"  "items/siler_hands.lua"
-	          "Function"    "cleave"
+	          "ScriptFile"    "items/silver_hands.lua"
+	          "Function"      "modifier_item_bfury_datadriven_on_created"
 	        }
 	      }
-	    // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
+	      
+	      "OnDestroy"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"    "items/silver_hands.lua"
+	          "Function"      "modifier_item_bfury_datadriven_on_destroy"
+	        }
+	      }
+	      
+	      //Continually check to see if the hero this modifier is on has switched from ranged
+	      //to melee, in which case they should be given cleave modifier(s).
+	      "ThinkInterval" ".03"
+	      "OnIntervalThink"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"    "items/silver_hands.lua"
+	          "Function"      "modifier_item_bfury_datadriven_on_interval_think"
+	        }
+	      }
+	    }
+	    "modifier_item_bfury_datadriven_cleave"  //Only melee units can cleave, so only melee units should get this modifier.
 	    {
-	      "01"
+	      "Passive"     "0"
+	      "IsHidden"      "1"
+	      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	      
+	      "OnAttackLanded"
 	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "bonus_damage"              "60.0"
+	        "CleaveAttack"
+	        {
+	          "CleavePercent"   "%cleave_damage_percent"
+	          "CleaveRadius"    "%cleave_radius"
+	          "CleaveEffect"    "particles/items_fx/battlefury_cleave.vpcf"
+	        }
+	        
+	        "FireSound"
+	        {
+	          "EffectName"        "DOTA_Item.BattleFury"
+	          "Target"          "TARGET"
+	        }
 	      }
-	      "02"
+	      
+	      //Continually check to see if the hero this modifier is on is still melee 
+	      //(since some units, like Troll Warlord, can switch between ranged/melee forms).
+	      "ThinkInterval" ".03"
+	      "OnIntervalThink"
 	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "bonus_mana_reg_percentage" "150.0"
+	        "RunScript"
+	        {
+	          "ScriptFile"    "items/silver_hands.lua"
+	          "Function"      "modifier_item_bfury_datadriven_cleave_on_interval_think"
+	        }
 	      }
-	      "03"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "bonus_hp_reg_constant"     "6.0"
-	      }
-	      "04"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "radius"                    "250.0"
-	      }
-	      "05"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "damage"                    "10.0"//todo rework lua make dmg % from base dmg
-	      }
-	      "06"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "aoe_damage_percent"                "25.0"//todo rework lua make dmg % from base dmg
-	      }
+	    }
 	  }
 	
 	}
@@ -9393,13 +9550,14 @@
 	"item_the_totsuka"
 	  {
 	    "ID"                    "1186"
-	    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_the_totsuka"
 	    "AbilityCooldown"        "25"
-	    "AbilityManaCost"        "100"//todo made it up
+	    "AbilityManaCost"        "100"
 	    "AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
 	    "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	    "AbilityCastRange"        "500"
 	    // Stats
 	    //-------------------------------------------------------------------------------------------------------------
 	

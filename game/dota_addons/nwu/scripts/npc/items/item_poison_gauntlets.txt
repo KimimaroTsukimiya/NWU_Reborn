@@ -95,17 +95,17 @@
       "03"
       {
         "var_type"                  "FIELD_FLOAT"
-        "damage_per_second"          "5.0"//TODOmade it up check wc3
+        "damage_per_second"          "15.0"
       }
       "04"
       {
         "var_type"                   "FIELD_FLOAT"
-        "movespeed_slow"             "-30.0"//TODOmade it up check wc3
+        "movespeed_slow"             "-30.0"
       }
       "05"
       {
         "var_type"                  "FIELD_FLOAT"
-        "duration"                  "6.0"//TODOmade it up check wc3
+        "duration"                  "4.0"
       }
   }
 }

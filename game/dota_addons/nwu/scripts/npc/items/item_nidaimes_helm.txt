@@ -4,9 +4,10 @@
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_nidaimes_helm"
-    "AbilityCooldown"       "30"
-
+    "AbilityCooldown"       "25"
+    "AbilityManaCost"        "25"
     // Stats
+
     //-------------------------------------------------------------------------------------------------------------
 
     // Item Info
@@ -37,17 +38,25 @@
 
     "Modifiers"
     {
-      "item_nidaimes_helm_modifier"
+      "modifier_lifesteal"
       {
-         "IsHidden"      "1"   
-        "OnDealDamage"
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Orb"
+           {
+              "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
+              "ProjectileName" "particles\items2_fx\skadi_projectile.vpcf"
+           }
+
+        "OnOrbImpact"
         {
-          "Lifesteal"
+           "Lifesteal"
           {
-            "Target"            "ATTACKER"
-            "LifestealPercent"  "%lifesteal_bonus"
-          }
-        }
+            "Target"    "ATTACKER"
+            "LifestealPercent" "%lifesteal_bonus"
+          }  
+        } 
       }
       "custom_frenzy"
       {

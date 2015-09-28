@@ -39,6 +39,50 @@
 
           }
       }
+
+       "modifier_hardened_skin"
+        {
+            "Passive"           "1"
+            "Duration"  "1"
+            "IsHidden"          "1"
+    
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK" "%damage_block_melee"
+            }
+            "OnTakeDamage"
+            {
+                "RemoveModifier"
+                {
+                    "ModifierName"    "modifier_hardened_skin"
+                    "Target"      "CASTER"  
+                 }
+            }   
+          
+        }
+
+        "shin_guards_block"
+      {
+         "Passive" "1"
+
+         "IsHidden"  "1"
+
+        "OnTakeDamage"
+        {
+          "Random"
+          {
+            "Chance" "%block_chance"
+            "OnSuccess"  
+            {
+              "ApplyModifier"
+              {
+                "ModifierName" "modifier_hardened_skin"
+                "Target"     "CASTER" 
+              }     
+            }
+          }
+        }
+      }
     }
     // Special  
     //-------------------------------------------------------------------------------------------------------------
@@ -57,12 +101,12 @@
       "03"
       {
         "var_type"              "FIELD_INTEGER"
-        "damage_block_melee"    "20"
+        "damage_block_melee"    "40"
       }
       "04"
       {
         "var_type"              "FIELD_INTEGER"
-        "damage_block_ranged"   "12"
+        "damage_block_ranged"   "20"
       }
       "05"
       {
