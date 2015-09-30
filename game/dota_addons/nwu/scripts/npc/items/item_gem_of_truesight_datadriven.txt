@@ -3,7 +3,7 @@
   // General
   //-------------------------------------------------------------------------------------------------------------
   "BaseClass"           "item_datadriven"
-  "ID"              "9999343242"  //Valve's version of this item uses the ID "30".
+  "ID"              "1107"  //Valve's version of this item uses the ID "30".
   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
   "Model"             "models/props_gameplay/gem01.vmdl"
   "Effect"            "particles/generic_gameplay/dropped_gem.vpcf"

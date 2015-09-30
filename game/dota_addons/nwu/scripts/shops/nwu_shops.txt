@@ -78,6 +78,7 @@
                 "item"          "item_gais_fist_of_might"
                 "item"          "item_amplified_silver_watch"
                 "item"          "item_rengeki"
+                "item"          "gem_of_truesight_datadriven"    
         }
  
         // Level 2 - Blue Recipes

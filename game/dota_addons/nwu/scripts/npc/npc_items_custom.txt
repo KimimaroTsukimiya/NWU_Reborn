@@ -159,70 +159,6 @@
   }
 }
 
-	"item_amplified_silver_watch"
-	  {
-	    "ID"                      "1165"
-	    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	    "BaseClass"               "item_datadriven"
-	    "AbilityTextureName"      "item_amplified_silver_watch"
-	    "ItemQuality"             "common"
-	    // Stats
-	    //-------------------------------------------------------------------------------------------------------------
-	
-	    // Item Info
-	    //-------------------------------------------------------------------------------------------------------------
-	    "ItemCost"                  "0"
-	    "ItemInitialCharges"        "0"
-	    "ItemDroppable"             "1"
-	    "ItemSellable"              "1"
-	    "ItemRequiresCharges"       "0"
-	    "ItemShareability"          "ITEM_PARTIALLY_SHAREABLE"
-	    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	    "MaxUpgradeLevel"           "1"
-	    "ItemBaseLevel"             "1"
-	    
-	    //pickup sounds
-	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-	
-	    "Modifiers"
-	    {
-	       "item_amplified_silver_watch_modifier"
-	      {
-	         "Passive" "1"
-	         "IsHidden"  "1"
-	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-	         "Properties"
-	          {
-	            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-	            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
-	            "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
-	          }
-	      }
-	
-	    }
-	   // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
-	    {
-	      "01"
-	      {
-	        "var_type"                    "FIELD_FLOAT"
-	        "bonus_hp_reg_constant"       "10.0"
-	      }
-	      "02"
-	      {
-	        "var_type"                     "FIELD_FLOAT"
-	        "bonus_mana_reg_percentage"    "125.0"
-	      }
-	      "03"
-	      {
-	        "var_type"                      "FIELD_FLOAT"
-	        "bonus_damage"                  "10.0"
-	      }
-	    }
-	  }
-	
 	"item_amulet_of_anubis"
 	  {
 	    "ID"              "1122"
@@ -2515,7 +2451,109 @@
 	    }
 	  }
 	
-	"item_gem_of_truesight"
+	"item_gem_of_truesight_datadriven"
+	{
+	  // General
+	  //-------------------------------------------------------------------------------------------------------------
+	  "BaseClass"           "item_datadriven"
+	  "ID"              "9999343242"  //Valve's version of this item uses the ID "30".
+	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "Model"             "models/props_gameplay/gem01.vmdl"
+	  "Effect"            "particles/generic_gameplay/dropped_gem.vpcf"
+	  "AbilityTextureName"      "item_gem_of_truesight_datadriven"
+	
+	  // Item Info
+	  //-------------------------------------------------------------------------------------------------------------
+	  "ItemCost"            "900"
+	  "ItemShopTags"          "see_invis"
+	  "ItemQuality"         "component"
+	  "ItemAliases"         "gem of true sight"
+	  "ItemSellable"          "0"
+	  "ItemShareability"        "ITEM_FULLY_SHAREABLE"
+	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	  "ItemStockMax"          "1"
+	  "ItemStockTime"         "600.0"
+	  "ItemSupport"         "1"
+	  "ItemKillable"          "0"
+	  "ItemContributesToNetWorthWhenDropped"  "0"
+	  
+	 "OnOwnerDied"
+	    {
+	      "RunScript"
+	      {
+	        "ScriptFile"      "items/DropItemOnDeath.lua"
+	        "Function"      "DropItemOnDeath"
+	      }
+	    }
+	
+	  // Sound
+	  //-------------------------------------------------------------------------------------------------------------     
+	  "UIPickupSound"         "Item.PickUpGemShop"
+	  "UIDropSound"         "Item.DropGemShop"
+	  "WorldDropSound"        "Item.DropGemWorld"
+	  
+	  // Special  
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilitySpecial"
+	  {
+	    "01"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "radius"        "1100"
+	    }
+	  }
+	
+	  "Modifiers"
+	  {
+	    "modifier_truesight_datadriven"
+	    {
+	      "Passive"     "1"
+	      "IsHidden"      "1"
+	  
+	      "ThinkInterval"  "0.03"
+	      "OnIntervalThink"
+	      {
+	        "ActOnTargets"
+	        {
+	          "Target"
+	          {
+	            "Center"    "TARGET"
+	            "Radius"  "%radius"
+	            "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	            "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	          }
+	        
+	          "Action"    
+	          {
+	            "RemoveModifier"
+	            {
+	              "ModifierName"  "modifier_truesight_reveal"
+	              "Target"    "TARGET"
+	            }
+	
+	            "ApplyModifier"
+	            {
+	              "ModifierName"  "modifier_truesight_reveal"
+	              "Target"    "TARGET"
+	            }
+	          }
+	        }     
+	      }   
+	    }
+	
+	    "modifier_truesight_reveal"
+	    {
+	      "IsHidden"      "1"
+	      "Duration"      "0.5" //The True Sight effect lingers for 0.5 seconds.
+	      "States"
+	      {
+	        "MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
+	      }
+	    }
+	  }
+	}
+	
+	"item_gem_of_truesight_datadriven"
 	{
 	  // General
 	  //-------------------------------------------------------------------------------------------------------------
@@ -2524,7 +2562,7 @@
 	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	  "Model"             "models/props_gameplay/gem01.vmdl"
 	  "Effect"            "particles/generic_gameplay/dropped_gem.vpcf"
-	  "AbilityTextureName"      "item_gem_of_truesight"
+	  "AbilityTextureName"      "item_gem_of_truesight_datadriven"
 	
 	  // Item Info
 	  //-------------------------------------------------------------------------------------------------------------
@@ -3675,9 +3713,11 @@
 	"item_ikazuchi"
 	  {
 	    "ID"                    "1220"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_ikazuchi"
+	    "AbilityCooldown"       "6"
+	    "AbilityManaCost"       "50"
 	
 	    // Stats
 	    //-------------------------------------------------------------------------------------------------------------
@@ -3704,10 +3744,54 @@
 	      "particle"  "particles/generic_gameplay/generic_stunned_old.vpcf"
 	      "particle"  "particles/items_fx/chain_lightning.vpcf"
 	      "particle"  "particles/units/heroes/hero_zuus/zuus_arc_lightning.vpcf"
+	      "particle"  "particles/units/heroes/hero_razor/razor_loadout.vpcf"
+	    
 	    }
 	
+	     "OnSpellStart"
+	  {
+	
+	    "FireSound"
+	    {
+	      "EffectName"  "Hero_Brewmaster.ThunderClap"
+	      "Target"    "CASTER"
+	    }
+	
+	
+	    "ApplyModifier"
+	    {
+	      "ModifierName"  "ikazuchi_active"
+	      "Target"        "Caster"
+	      "Duration"    "%active_duration"
+	    }  
+	
+	  }
 	    "Modifiers"
 	    {
+	
+	      "ikazuchi_active"
+	      {
+	         "Passive" "1"
+	         "IsHidden"  "0"
+	         "Duration"    "%active_duration"
+	
+	          "OnTakeDamage"
+	        { 
+	          "Random"
+	          {
+	            "Chance"    "%active_chance"
+	            "OnSuccess"
+	            {
+	              "RunScript"
+	              {
+	                "ScriptFile"  "items/ikazuchi.lua"
+	                "Function"    "ChainLightningActive"
+	              }
+	            }
+	          }
+	        }
+	      }
+	
 	      "item_ikazuchi_modifier"
 	      {
 	         "Passive" "1"
@@ -3780,6 +3864,17 @@
 	      {
 	        "var_type"                  "FIELD_FLOAT"
 	        "lightning_chance"          "20.0"
+	      }
+	
+	      "09"
+	    {
+	      "var_type"        "FIELD_FLOAT"
+	      "active_chance"  "20"
+	    }
+	    "10"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "active_duration"          "6.0"
 	      }
 	
 	    }

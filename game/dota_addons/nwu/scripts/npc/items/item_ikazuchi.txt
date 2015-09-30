@@ -1,9 +1,11 @@
 "item_ikazuchi"
   {
     "ID"                    "1220"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_ikazuchi"
+    "AbilityCooldown"       "6"
+    "AbilityManaCost"       "50"
 
     // Stats
     //-------------------------------------------------------------------------------------------------------------
@@ -30,10 +32,54 @@
       "particle"  "particles/generic_gameplay/generic_stunned_old.vpcf"
       "particle"  "particles/items_fx/chain_lightning.vpcf"
       "particle"  "particles/units/heroes/hero_zuus/zuus_arc_lightning.vpcf"
+      "particle"  "particles/units/heroes/hero_razor/razor_loadout.vpcf"
+    
     }
 
+     "OnSpellStart"
+  {
+
+    "FireSound"
+    {
+      "EffectName"  "Hero_Brewmaster.ThunderClap"
+      "Target"    "CASTER"
+    }
+
+
+    "ApplyModifier"
+    {
+      "ModifierName"  "ikazuchi_active"
+      "Target"        "Caster"
+      "Duration"    "%active_duration"
+    }  
+
+  }
     "Modifiers"
     {
+
+      "ikazuchi_active"
+      {
+         "Passive" "1"
+         "IsHidden"  "0"
+         "Duration"    "%active_duration"
+
+          "OnTakeDamage"
+        { 
+          "Random"
+          {
+            "Chance"    "%active_chance"
+            "OnSuccess"
+            {
+              "RunScript"
+              {
+                "ScriptFile"  "items/ikazuchi.lua"
+                "Function"    "ChainLightningActive"
+              }
+            }
+          }
+        }
+      }
+
       "item_ikazuchi_modifier"
       {
          "Passive" "1"
@@ -106,6 +152,17 @@
       {
         "var_type"                  "FIELD_FLOAT"
         "lightning_chance"          "20.0"
+      }
+
+      "09"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "active_chance"  "20"
+    }
+    "10"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "active_duration"          "6.0"
       }
 
     }
