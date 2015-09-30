@@ -3,7 +3,7 @@
     "ID"              "1140"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_shinobi_trends"
+    "AbilityTextureName"   "item_shinobi_trends_str"
     "ItemQuality"     "common"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
@@ -51,10 +51,10 @@
       {
          "Passive" "1"
          "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+         "Attributes"    "MODIFER_PROPERTY_NONE"
          "Properties"
           {
-              "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movementspeed"
+              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
           }
       }
     }

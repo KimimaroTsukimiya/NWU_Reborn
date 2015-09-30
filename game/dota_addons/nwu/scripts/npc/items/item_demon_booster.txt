@@ -35,7 +35,7 @@
          "Properties"
           {
               "MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_hp"
-              "MODIFIER_PROPERTY_MANA_BONUS " "%bonus_mana"
+              "MODIFIER_PROPERTY_MANA_BONUS" "%bonus_mana"
               "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
               "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
           }

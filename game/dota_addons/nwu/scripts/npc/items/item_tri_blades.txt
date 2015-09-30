@@ -25,18 +25,59 @@
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
+
+    "precache"
+    {
+
+    }
+
     "Modifiers"
     {
-      "item_tri_blades_modifier"
+        "modifier_item_sange_datadriven"
       {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
+        "Passive"     "1"
+        "IsHidden"      "1"
+        "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+        
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"            "%bonus_damage"
+          "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"            "%bonus_str"
+        }
+        
+        "OnAttackLanded"
+        {
+          "Random"
           {
-              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+            "Chance"    "%maim_chance"
+            "OnSuccess"
+            {
+              "RunScript"
+              {
+                "ScriptFile"      "items/tri_blades.lua"
+                "Function"        "modifier_item_sange_datadriven_on_attack_landed_random_on_success"
+              }
+            }
           }
+        }
+      }
+      "modifier_item_sange_datadriven_lesser_maim"
+      {
+        "Duration"        "%maim_duration"
+        "Passive"       "0"
+        "IsHidden"        "0"
+        "IsBuff"        "0"
+        "IsDebuff"        "1"
+        "IsPurgable"      "1"
+        
+        "EffectName"            "particles/items2_fx/sange_maim.vpcf"
+        "EffectAttachType"      "PATTACH_ABSORIGIN"
+        
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%maim_attack_speed"
+          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"    "%maim_movement_speed"
+        }
       }
     }
     // Special  
@@ -53,6 +94,27 @@
         "var_type"                   "FIELD_FLOAT"
         "bonus_str"                  "16.0"
       }
+      "03"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "maim_chance"     "15"
+    }
+    "04"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "maim_movement_speed" "-20"
+    }
+    "05"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "maim_attack_speed"   "-20"
+    }
+    "06"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "maim_duration"     "4.0"
+    }
+
   }
 }
 

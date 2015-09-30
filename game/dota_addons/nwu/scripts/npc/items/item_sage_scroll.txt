@@ -9,6 +9,8 @@
     "AbilityCastRange"        "%cast_range"
     "AbilityManaCost"         "%manacost"
     // Stats
+    "AbilityCooldown"        "35.0"
+    "AbilityManaCost"        "100"
     //-------------------------------------------------------------------------------------------------------------
 
     // Item Info

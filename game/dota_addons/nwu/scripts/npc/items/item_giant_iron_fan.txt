@@ -30,11 +30,7 @@
 
     "OnSpellStart"
     {
-      "FireSound"
-      {
-        "EffectName"  "Brewmaster_Storm.Cyclone"
-        "Target"    "TARGET"
-      }
+
       "ApplyModifier"
       {
         "ModifierName"  "modifier_storm_cyclone" //modifier_cyclone is built-in
@@ -117,7 +113,7 @@
          "Properties"
           {
             "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
-            "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_reg_constant"
+            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_reg_constant"
             "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%movementspeed_percentage"
           }
       }

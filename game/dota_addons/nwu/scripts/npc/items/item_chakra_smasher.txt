@@ -35,6 +35,7 @@
       "soundfile" "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
       "particle"  "particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
       "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_storm_attack.vpcf"
+      "particle"  "particles/generic_gameplay/generic_purge.vpcf"
     }
 
 

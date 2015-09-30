@@ -25,6 +25,12 @@
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
+    "precache"
+    {
+      "particle"  "particles/items_fx/desolator_projectile.vpcf"
+      "soundfile" "soundevents/game_sounds_heroes/game_sounds_HERO.vsndevts"
+    }
+
     "Modifiers"
     {
       "item_kusanagi_modifier"

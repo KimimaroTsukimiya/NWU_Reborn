@@ -70,8 +70,6 @@
                 "item"          "item_the_spark_of_agility"
                 "item"          "item_celestrial_shield"
                 "item"          "item_shinobi_trends_str"
-                "item"          "item_shinobi_trends_agi"
-                "item"          "item_shinobi_trends_int"
                 "item"          "item_idates_sandals"
                 "item"          "item_the_fourths_legacy"
                 "item"          "item_transmutation_gloves"

@@ -159,6 +159,72 @@
   }
 }
 
+  "item_amplified_silver_watch"
+  {
+    "ID"                      "4047"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"               "item_datadriven"
+    "AbilityTextureName"      "item_amplified_silver_watch"
+    "SecretShop" "1"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemQuality"               "component"
+    "ItemCost"                  "0"
+    "ItemInitialCharges"        "0"
+    "ItemDroppable"             "1"
+    "ItemSellable"              "1"
+    "ItemRequiresCharges"       "0"
+    "ItemShareability"          "ITEM_PARTIALLY_SHAREABLE"
+    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"           "1"
+    "ItemBaseLevel"             "1"
+  
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+
+      "item_ring_of_health_datadriven_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"            "%bonus_damage"
+            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
+            "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
+          }
+      }
+
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                          "FIELD_FLOAT"
+        "bonus_hp_reg_constant"             "5.0"
+      }
+       "02"
+      {
+        "var_type"                          "FIELD_FLOAT"
+        "bonus_mana_reg_percentage"             "125.0"
+      }
+       "03"
+      {
+        "var_type"                          "FIELD_FLOAT"
+        "bonus_damage"             "10.0"
+      }
+    }
+  }
+
 	"item_amulet_of_anubis"
 	  {
 	    "ID"              "1122"
@@ -1295,6 +1361,7 @@
 	      "soundfile" "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
 	      "particle"  "particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
 	      "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_storm_attack.vpcf"
+	      "particle"  "particles/generic_gameplay/generic_purge.vpcf"
 	    }
 	
 	
@@ -1574,7 +1641,7 @@
 	         "Properties"
 	          {
 	              "MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_hp"
-	              "MODIFIER_PROPERTY_MANA_BONUS " "%bonus_mana"
+	              "MODIFIER_PROPERTY_MANA_BONUS" "%bonus_mana"
 	              "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
 	              "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
 	          }
@@ -1607,15 +1674,6 @@
 	    }
 	  }
 	
-  "item_dummy_datadriven"
-  {
-      // General
-      //-------------------------------------------------------------------------------------------------------------
-      "ID"                            "1259"
-  "BaseClass"                     "item_datadriven"
-  "ItemBaseLevel"                 "1"
-  }
-
    "item_energy_booster_datadriven"
   {
     "ID"                      "1163"
@@ -2255,7 +2313,7 @@
 	               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
 	          }
 	
-	        "OnAttackStart"
+	        "OnAttackLanded"
 	        {
 	          "Random"
 	          {
@@ -2553,108 +2611,6 @@
 	  }
 	}
 	
-	"item_gem_of_truesight_datadriven"
-	{
-	  // General
-	  //-------------------------------------------------------------------------------------------------------------
-	  "BaseClass"           "item_datadriven"
-	  "ID"              "1107"  //Valve's version of this item uses the ID "30".
-	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	  "Model"             "models/props_gameplay/gem01.vmdl"
-	  "Effect"            "particles/generic_gameplay/dropped_gem.vpcf"
-	  "AbilityTextureName"      "item_gem_of_truesight_datadriven"
-	
-	  // Item Info
-	  //-------------------------------------------------------------------------------------------------------------
-	  "ItemCost"            "900"
-	  "ItemShopTags"          "see_invis"
-	  "ItemQuality"         "component"
-	  "ItemAliases"         "gem of true sight"
-	  "ItemSellable"          "0"
-	  "ItemShareability"        "ITEM_FULLY_SHAREABLE"
-	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	  "ItemStockMax"          "1"
-	  "ItemStockTime"         "600.0"
-	  "ItemSupport"         "1"
-	  "ItemKillable"          "0"
-	  "ItemContributesToNetWorthWhenDropped"  "0"
-	  
-	 "OnOwnerDied"
-	    {
-	      "RunScript"
-	      {
-	        "ScriptFile"      "items/DropItemOnDeath.lua"
-	        "Function"      "DropItemOnDeath"
-	      }
-	    }
-	
-	  // Sound
-	  //-------------------------------------------------------------------------------------------------------------     
-	  "UIPickupSound"         "Item.PickUpGemShop"
-	  "UIDropSound"         "Item.DropGemShop"
-	  "WorldDropSound"        "Item.DropGemWorld"
-	  
-	  // Special  
-	  //-------------------------------------------------------------------------------------------------------------
-	  "AbilitySpecial"
-	  {
-	    "01"
-	    {
-	      "var_type"        "FIELD_INTEGER"
-	      "radius"        "1100"
-	    }
-	  }
-	
-	  "Modifiers"
-	  {
-	    "modifier_truesight_datadriven"
-	    {
-	      "Passive"     "1"
-	      "IsHidden"      "1"
-	  
-	      "ThinkInterval"  "0.03"
-	      "OnIntervalThink"
-	      {
-	        "ActOnTargets"
-	        {
-	          "Target"
-	          {
-	            "Center"    "TARGET"
-	            "Radius"  "%radius"
-	            "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
-	            "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	          }
-	        
-	          "Action"    
-	          {
-	            "RemoveModifier"
-	            {
-	              "ModifierName"  "modifier_truesight_reveal"
-	              "Target"    "TARGET"
-	            }
-	
-	            "ApplyModifier"
-	            {
-	              "ModifierName"  "modifier_truesight_reveal"
-	              "Target"    "TARGET"
-	            }
-	          }
-	        }     
-	      }   
-	    }
-	
-	    "modifier_truesight_reveal"
-	    {
-	      "IsHidden"      "1"
-	      "Duration"      "0.5" //The True Sight effect lingers for 0.5 seconds.
-	      "States"
-	      {
-	        "MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
-	      }
-	    }
-	  }
-	}
-	
 	"item_giant_iron_fan"
 	  {
 	    "ID"                    "1194"
@@ -2687,11 +2643,7 @@
 	
 	    "OnSpellStart"
 	    {
-	      "FireSound"
-	      {
-	        "EffectName"  "Brewmaster_Storm.Cyclone"
-	        "Target"    "TARGET"
-	      }
+	
 	      "ApplyModifier"
 	      {
 	        "ModifierName"  "modifier_storm_cyclone" //modifier_cyclone is built-in
@@ -2774,7 +2726,7 @@
 	         "Properties"
 	          {
 	            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
-	            "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_reg_constant"
+	            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_reg_constant"
 	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%movementspeed_percentage"
 	          }
 	      }
@@ -3667,7 +3619,7 @@
 	         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
 	         "Properties"
 	          {
-	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movementspeed"
+	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
 	          }
 	      }
 	
@@ -4275,7 +4227,7 @@
 	         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
 	         "Properties"
 	          {
-	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movementspeed"
+	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
 	          }
 	      }
 	
@@ -5072,6 +5024,12 @@
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+	
+	    "precache"
+	    {
+	      "particle"  "particles/items_fx/desolator_projectile.vpcf"
+	      "soundfile" "soundevents/game_sounds_heroes/game_sounds_HERO.vsndevts"
+	    }
 	
 	    "Modifiers"
 	    {
@@ -7162,6 +7120,58 @@
     }
   }
 
+	"item_recipe_shinobi_trends_agi"
+	{
+	  // General
+	  //-------------------------------------------------------------------------------------------------------------
+	  "BaseClass"           "item_datadriven"
+	  "ID"              "7139"  //Valve's version of this item uses the ID "62".
+	
+	  "AbilityTextureName"      "item_recipe"
+	  
+	  // Item Info
+	  //-------------------------------------------------------------------------------------------------------------
+	  "ItemCost"            "0" 
+	  "ItemShopTags"          ""
+	  
+	  // Recipe
+	  //-------------------------------------------------------------------------------------------------------------
+	  "ItemRecipe"          "1"
+	  "ItemResult"          "item_shinobi_trends_agi"
+	  "ItemRequirements"
+	  {
+	    "01" "item_running_shoes;item_leather_gloves;item_belt_of_strength_datadriven"
+	    "02"  "item_running_shoes;item_leather_gloves;item_snake_skin"
+	    "03" "item_running_shoes;item_leather_gloves;item_anbu_cloak"
+	  }
+	}
+	
+	"item_recipe_shinobi_trends_int"
+	{
+	  // General
+	  //-------------------------------------------------------------------------------------------------------------
+	  "BaseClass"           "item_datadriven"
+	  "ID"              "7139"  //Valve's version of this item uses the ID "62".
+	
+	  "AbilityTextureName"      "item_recipe"
+	  
+	  // Item Info
+	  //-------------------------------------------------------------------------------------------------------------
+	  "ItemCost"            "0" 
+	  "ItemShopTags"          ""
+	  
+	  // Recipe
+	  //-------------------------------------------------------------------------------------------------------------
+	  "ItemRecipe"          "1"
+	  "ItemResult"          "item_shinobi_trends_int"
+	  "ItemRequirements"
+	  {
+	    "01" "item_running_shoes;item_leather_gloves;item_belt_of_strength_datadriven"
+	    "02"  "item_running_shoes;item_leather_gloves;item_snake_skin"
+	    "03" "item_running_shoes;item_leather_gloves;item_anbu_cloak"
+	  }
+	}
+	
 	"item_recipe_shinobi_trends_str"
 	{
 	  // General
@@ -7980,7 +7990,7 @@
         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
         "Properties"
           {
-              "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%bonus_movement_speed_constant"
+              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%bonus_movement_speed_constant"
           }
       }
     }
@@ -8007,6 +8017,8 @@
 	    "AbilityCastRange"        "%cast_range"
 	    "AbilityManaCost"         "%manacost"
 	    // Stats
+	    "AbilityCooldown"        "35.0"
+	    "AbilityManaCost"        "100"
 	    //-------------------------------------------------------------------------------------------------------------
 	
 	    // Item Info
@@ -8579,7 +8591,7 @@
 	         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
 	         "Properties"
 	          {
-	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movementspeed"
+	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
 	          }
 	      }
 	    }
@@ -8661,7 +8673,7 @@
 	         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
 	         "Properties"
 	          {
-	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movementspeed"
+	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
 	          }
 	      }
 	
@@ -8693,7 +8705,7 @@
 	    "ID"              "1140"
 	    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	    "BaseClass"           "item_datadriven"
-	    "AbilityTextureName"   "item_shinobi_trends"
+	    "AbilityTextureName"   "item_shinobi_trends_str"
 	    "ItemQuality"     "common"
 	    // Stats
 	    //-------------------------------------------------------------------------------------------------------------
@@ -8741,10 +8753,10 @@
 	      {
 	         "Passive" "1"
 	         "IsHidden"  "1"
-	         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+	         "Attributes"    "MODIFER_PROPERTY_NONE"
 	         "Properties"
 	          {
-	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movementspeed"
+	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
 	          }
 	      }
 	    }
@@ -8992,7 +9004,7 @@
 	
 	    // Item Info
 	    //-------------------------------------------------------------------------------------------------------------
-	    "ItemQuality"         "rare"
+	    "ItemQuality"             "rare"
 	    "ItemCost"                "0"
 	    "ItemInitialCharges"      "0"
 	    "ItemDroppable"           "1"
@@ -9013,6 +9025,7 @@
 	      {
 	         "Passive" "1"
 	         "IsHidden"  "1"
+	         
 	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
 	         "Properties"
 	          {
@@ -9026,7 +9039,7 @@
 	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
 	         "Properties"
 	          {
-	             "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%movementspeed_percentage"
+	             "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE" "%movementspeed_percentage"
 	             "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
 	          }
 	      }
@@ -9557,7 +9570,7 @@
 	         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
 	         "Properties"
 	          {
-	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movementspeed"
+	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
 	          }
 	      }
 	
@@ -10013,7 +10026,7 @@
 	          {
 	              "MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_hp"
 	              "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
-	              "MODIFIER_PROPERTY_MANA_BONUS " "%bonus_mana"
+	              "MODIFIER_PROPERTY_MANA_BONUS" "%bonus_mana"
 	              "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
 	          }
 	      }
@@ -10072,18 +10085,59 @@
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 	
+	
+	    "precache"
+	    {
+	
+	    }
+	
 	    "Modifiers"
 	    {
-	      "item_tri_blades_modifier"
+	        "modifier_item_sange_datadriven"
 	      {
-	         "Passive" "1"
-	         "IsHidden"  "1"
-	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-	         "Properties"
+	        "Passive"     "1"
+	        "IsHidden"      "1"
+	        "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	        
+	        "Properties"
+	        {
+	          "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"            "%bonus_damage"
+	          "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"            "%bonus_str"
+	        }
+	        
+	        "OnAttackLanded"
+	        {
+	          "Random"
 	          {
-	              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-	              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+	            "Chance"    "%maim_chance"
+	            "OnSuccess"
+	            {
+	              "RunScript"
+	              {
+	                "ScriptFile"      "items/tri_blades.lua"
+	                "Function"        "modifier_item_sange_datadriven_on_attack_landed_random_on_success"
+	              }
+	            }
 	          }
+	        }
+	      }
+	      "modifier_item_sange_datadriven_lesser_maim"
+	      {
+	        "Duration"        "%maim_duration"
+	        "Passive"       "0"
+	        "IsHidden"        "0"
+	        "IsBuff"        "0"
+	        "IsDebuff"        "1"
+	        "IsPurgable"      "1"
+	        
+	        "EffectName"            "particles/items2_fx/sange_maim.vpcf"
+	        "EffectAttachType"      "PATTACH_ABSORIGIN"
+	        
+	        "Properties"
+	        {
+	          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%maim_attack_speed"
+	          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"    "%maim_movement_speed"
+	        }
 	      }
 	    }
 	    // Special  
@@ -10100,6 +10154,27 @@
 	        "var_type"                   "FIELD_FLOAT"
 	        "bonus_str"                  "16.0"
 	      }
+	      "03"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "maim_chance"     "15"
+	    }
+	    "04"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "maim_movement_speed" "-20"
+	    }
+	    "05"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "maim_attack_speed"   "-20"
+	    }
+	    "06"
+	    {
+	      "var_type"        "FIELD_FLOAT"
+	      "maim_duration"     "4.0"
+	    }
+	
 	  }
 	}
 	
@@ -10132,19 +10207,58 @@
 	
 	    "Modifiers"
 	    {
-	      "item_twin_fangs_of_abyss_modifier"
+	        "modifier_item_sange_and_yasha_datadriven"
 	      {
-	         "Passive" "1"
-	         "IsHidden"  "1"
-	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-	         "Properties"
+	        "Passive"     "1"
+	        "IsHidden"      "1"
+	        "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	        
+	        "Properties"
+	        {
+	          "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"            "%bonus_damage"
+	          "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"            "%bonus_str"
+	          "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"             "%bonus_agi"
+	          
+	          //Attack speed from Yasha-derived items affect your illusions.
+	          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT_SECONDARY"    "%attackspeed"
+	          
+	          //Movement speed from Yasha-derived items does not stack with itself but does stack with other percentage-based movement speed bonuses.
+	          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE"     "%movementspeed_percentage"
+	        }
+	        
+	        "OnAttackLanded"
+	        {
+	          "Random"
 	          {
-	              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-	              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
-	              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
-	              "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
-	              "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%movementspeed_percentage"
+	            "Chance"    "%maim_chance"
+	            "OnSuccess"
+	            {
+	              "RunScript"
+	              {
+	                "ScriptFile"      "items/twin_fangs.lua"
+	                "Function"        "modifier_item_sange_and_yasha_datadriven_on_attack_landed_random_on_success"
+	              }
+	            }
 	          }
+	        }
+	      }
+	      "modifier_item_sange_and_yasha_datadriven_greater_maim"
+	      {
+	        "Duration"        "%maim_duration"
+	        "Passive"       "0"
+	        "IsHidden"        "0"
+	        "IsBuff"        "0"
+	        "IsDebuff"        "1"
+	        "IsPurgable"      "1"
+	        
+	        "EffectName"            "particles/items2_fx/sange_maim.vpcf"
+	        "EffectAttachType"      "PATTACH_ABSORIGIN"
+	        
+	        "Properties"
+	        {
+	          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%maim_slow_attack"
+	          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"    "%maim_slow_movement"
+	        }
 	      }
 	    }
 	    // Special  
@@ -10175,6 +10289,27 @@
 	      {
 	        "var_type"                    "FIELD_FLOAT"
 	        "movementspeed_percentage"     "12.0"
+	      }
+	
+	      "06"
+	      {
+	        "var_type"            "FIELD_INTEGER"
+	        "maim_chance"         "16"
+	      }
+	      "07"
+	      {
+	        "var_type"            "FIELD_INTEGER"
+	        "maim_slow_movement"      "-32"
+	      }     
+	      "08"
+	      {
+	        "var_type"            "FIELD_INTEGER"
+	        "maim_slow_attack"        "-32"
+	      }
+	      "09"
+	      {
+	        "var_type"            "FIELD_FLOAT"
+	        "maim_duration"         "5.0"
 	      }
 	
 	    }

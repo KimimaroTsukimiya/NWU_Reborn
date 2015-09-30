@@ -1,9 +1,9 @@
 "AddonInfo"
 {
   "TeamCount" "10"
-  "maps"      "template_map"
+  "maps"      "nwu"
   "IsPlayable"  "1"
-  "template_map"
+  "nwu"
   {
           "MaxPlayers"                    "10"
   }

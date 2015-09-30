@@ -44,7 +44,7 @@ function ChainLightning( event )
 			if dummy ~= nil then
 				dummy:RemoveSelf()
 			end
-			dummy = CreateUnitByName("dummy_unit", targetVec, false, hero, hero, hero:GetTeam())
+			dummy = CreateUnitByName("npc_dummy_unit", targetVec, false, hero, hero, hero:GetTeam())
 			-- Track the possible targets to bounce from the units in radius
 			local possibleTargetsBounce = {}
 			for _,v in pairs(units) do

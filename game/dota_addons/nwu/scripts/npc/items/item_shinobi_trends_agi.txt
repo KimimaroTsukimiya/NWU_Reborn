@@ -54,7 +54,7 @@
          "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
          "Properties"
           {
-              "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movementspeed"
+              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
           }
       }
     }

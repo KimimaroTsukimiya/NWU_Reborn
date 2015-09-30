@@ -27,19 +27,58 @@
 
     "Modifiers"
     {
-      "item_twin_fangs_of_abyss_modifier"
+        "modifier_item_sange_and_yasha_datadriven"
       {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
+        "Passive"     "1"
+        "IsHidden"      "1"
+        "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+        
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"            "%bonus_damage"
+          "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"            "%bonus_str"
+          "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"             "%bonus_agi"
+          
+          //Attack speed from Yasha-derived items affect your illusions.
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT_SECONDARY"    "%attackspeed"
+          
+          //Movement speed from Yasha-derived items does not stack with itself but does stack with other percentage-based movement speed bonuses.
+          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE"     "%movementspeed_percentage"
+        }
+        
+        "OnAttackLanded"
+        {
+          "Random"
           {
-              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
-              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
-              "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
-              "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%movementspeed_percentage"
+            "Chance"    "%maim_chance"
+            "OnSuccess"
+            {
+              "RunScript"
+              {
+                "ScriptFile"      "items/twin_fangs.lua"
+                "Function"        "modifier_item_sange_and_yasha_datadriven_on_attack_landed_random_on_success"
+              }
+            }
           }
+        }
+      }
+      "modifier_item_sange_and_yasha_datadriven_greater_maim"
+      {
+        "Duration"        "%maim_duration"
+        "Passive"       "0"
+        "IsHidden"        "0"
+        "IsBuff"        "0"
+        "IsDebuff"        "1"
+        "IsPurgable"      "1"
+        
+        "EffectName"            "particles/items2_fx/sange_maim.vpcf"
+        "EffectAttachType"      "PATTACH_ABSORIGIN"
+        
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%maim_slow_attack"
+          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"    "%maim_slow_movement"
+        }
       }
     }
     // Special  
@@ -70,6 +109,27 @@
       {
         "var_type"                    "FIELD_FLOAT"
         "movementspeed_percentage"     "12.0"
+      }
+
+      "06"
+      {
+        "var_type"            "FIELD_INTEGER"
+        "maim_chance"         "16"
+      }
+      "07"
+      {
+        "var_type"            "FIELD_INTEGER"
+        "maim_slow_movement"      "-32"
+      }     
+      "08"
+      {
+        "var_type"            "FIELD_INTEGER"
+        "maim_slow_attack"        "-32"
+      }
+      "09"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "maim_duration"         "5.0"
       }
 
     }

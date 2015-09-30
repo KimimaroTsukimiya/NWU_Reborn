@@ -10,7 +10,7 @@
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemQuality"         "rare"
+    "ItemQuality"             "rare"
     "ItemCost"                "0"
     "ItemInitialCharges"      "0"
     "ItemDroppable"           "1"
@@ -31,6 +31,7 @@
       {
          "Passive" "1"
          "IsHidden"  "1"
+         
          "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
          "Properties"
           {
@@ -44,7 +45,7 @@
          "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
          "Properties"
           {
-             "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%movementspeed_percentage"
+             "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE" "%movementspeed_percentage"
              "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
           }
       }
