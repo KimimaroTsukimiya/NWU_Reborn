@@ -27,7 +27,113 @@
 
     "Modifiers"
     {
-        "modifier_hardened_skin"
+         "modifier_item_shin_guards_datadriven"
+        {
+          "Passive"     "1"
+          "IsHidden"      "1"
+          "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+          
+          "OnCreated"
+          {
+            "RunScript"
+            {
+              "ScriptFile"    "items/shin_guards.lua"
+              "Function"      "modifier_item_shin_guards_datadriven_on_created"
+            }
+          }
+          
+          "OnDestroy"
+          {
+            "RunScript"
+            {
+              "ScriptFile"    "items/shin_guards.lua"
+              "Function"      "modifier_item_shin_guards_datadriven_on_destroy"
+            }
+          }
+          
+          //Continually check to see if the hero this modifier is on has switched from ranged
+          //to melee, in which case they should be given cleave modifier(s).
+          "ThinkInterval" ".03"
+          "OnIntervalThink"
+          {
+            "RunScript"
+            {
+              "ScriptFile"    "items/shin_guards.lua"
+              "Function"      "modifier_item_shin_guards_datadriven_on_interval_think"
+            }
+          }
+        }
+        "modifier_item_shin_guards_block"  //Only melee units can cleave, so only melee units should get this modifier.
+        {
+          "Passive"     "0"
+          "IsHidden"      "1"
+          "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+          
+         "OnTakeDamage"
+        {
+          "Random"
+          {
+            "Chance" "%block_chance"
+            "OnSuccess"  
+            {
+              "ApplyModifier"
+              {
+                "ModifierName" "modifier_hardened_skin_melee"
+                "Target"     "CASTER" 
+              }     
+            }
+          }
+        }
+          
+          //Continually check to see if the hero this modifier is on is still melee 
+          //(since some units, like Troll Warlord, can switch between ranged/melee forms).
+          "ThinkInterval" ".03"
+          "OnIntervalThink"
+          {
+            "RunScript"
+            {
+              "ScriptFile"    "items/shin_guards.lua"
+              "Function"      "modifier_item_shin_guards_block_on_interval_think"
+            }
+          }
+        }
+
+        "modifier_item_shin_guards_block_range"  //Only melee units can cleave, so only melee units should get this modifier.
+        {
+          "Passive"     "0"
+          "IsHidden"      "1"
+          "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+          
+          "OnTakeDamage"
+        {
+          "Random"
+          {
+            "Chance" "%block_chance"
+            "OnSuccess"  
+            {
+              "ApplyModifier"
+              {
+                "ModifierName" "modifier_hardened_skin_range"
+                "Target"     "CASTER" 
+              }     
+            }
+          }
+        }
+          
+          //Continually check to see if the hero this modifier is on is still melee 
+          //(since some units, like Troll Warlord, can switch between ranged/melee forms).
+          "ThinkInterval" ".03"
+          "OnIntervalThink"
+          {
+            "RunScript"
+            {
+              "ScriptFile"    "items/shin_guards.lua"
+              "Function"      "modifier_item_shin_guards_block_on_interval_think"
+            }
+          }
+        }
+
+        "modifier_hardened_skin_melee"
         {
             "Passive"           "1"
             "Duration"  "1"
@@ -41,34 +147,33 @@
             {
                 "RemoveModifier"
                 {
-                    "ModifierName"    "modifier_hardened_skin"
-                    "Target"        "CASTER"  
+                    "ModifierName"    "modifier_hardened_skin_melee"
+                    "Target"      "CASTER"  
                  }
-            }        
+            }   
+          
         }
 
-        "shin_guards_block"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-
-        "OnTakeDamage"
+        "modifier_hardened_skin_range"
         {
-          "Random"
-          {
-            "Chance" "%block_chance"
-            "OnSuccess"  
+            "Passive"           "1"
+            "Duration"  "1"
+            "IsHidden"          "1"
+    
+            "Properties"
             {
-              "ApplyModifier"
-              {
-                "ModifierName" "modifier_hardened_skin"
-                "Target"     "CASTER" 
-              }     
+                "MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK" "%damage_block_ranged"
             }
-          }
+            "OnTakeDamage"
+            {
+                "RemoveModifier"
+                {
+                    "ModifierName"    "modifier_hardened_skin_range"
+                    "Target"      "CASTER"  
+                 }
+            }   
+          
         }
-      }
-
     }   
 
 
