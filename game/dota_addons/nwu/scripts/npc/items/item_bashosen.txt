@@ -23,7 +23,7 @@
     "ItemBaseLevel"         "1"
     "ItemPermanent"         "1"
     "ItemInitialCharges"    "10"
-
+    "ItemAliases"           "active;mana;chakra;mana reg;chakra reg;int;intelligence;nuke"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually

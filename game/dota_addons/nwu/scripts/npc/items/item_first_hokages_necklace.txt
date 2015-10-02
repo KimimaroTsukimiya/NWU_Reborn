@@ -21,10 +21,9 @@
   "ItemCost"            "2300"
   "ItemShopTags"          "agi;int;str;armor;boost_health"
   "ItemQuality"         "rare"
-  "ItemAliases"         "mechanism;mekansm"
+  "ItemAliases"         "mechanism;mekansm;active;heal;aoe heal;aura"
   "ItemAlertable"         "1"
   "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-  
   "AbilitySpecial"
   {
     "01"

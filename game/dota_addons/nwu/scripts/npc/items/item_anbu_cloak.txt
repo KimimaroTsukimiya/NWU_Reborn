@@ -19,14 +19,14 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "robe of the magi"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
     "Modifiers"
     {
-      "item_anbu_cloak_modifier"
+      "item_anbu_cloak_modifier;int;intelligence"
       {
          "Passive" "1"
          "IsHidden"  "1"

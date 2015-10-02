@@ -20,7 +20,7 @@
   "ItemCost"            "800"
   "ItemShopTags"          "armor;boost_armor"
   "ItemQuality"         "rare"
-  "ItemAliases"         "buckler"
+  "ItemAliases"         "buckler;active;armor"
   
   "AbilitySpecial"
   {

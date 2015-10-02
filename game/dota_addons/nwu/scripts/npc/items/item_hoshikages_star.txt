@@ -22,7 +22,7 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     "ItemPermanent"         "1"
-
+    "ItemAliases"           "active;clap;slow;intelligence;int;mana reg;chakra reg;"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually

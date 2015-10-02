@@ -19,8 +19,8 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-    "ItemDisassembleRule"     "DOTA_ITEM_DISASSEMBLE_ALWAYS"
-
+    "ItemDisassembleRule"       "DOTA_ITEM_DISASSEMBLE_ALWAYS"
+    "ItemAliases"               "headdress;aura;hp aura;hp reg;reg;stats"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually

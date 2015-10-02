@@ -29,7 +29,7 @@
   "ItemCost"            "2800"
   "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
   "ItemQuality"         "rare"  
-  "ItemAliases"         "dagon 3"
+  "ItemAliases"         "dagon 3;"
   
   "UpgradesItems"         "item_karites_touch_3;item_karites_touch_4"
   "UpgradeRecipe"         "item_recipe_karites_touch"

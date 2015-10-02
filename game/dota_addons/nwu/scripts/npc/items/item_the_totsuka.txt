@@ -24,7 +24,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "orchid malevolence;silence;int;intelligence;cast;dot;"
     "precache"
     {
       "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"

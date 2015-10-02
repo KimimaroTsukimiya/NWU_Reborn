@@ -21,7 +21,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-    
+    "ItemAliases"               "boots of travel;active;teleport;ms;movementspeed"
     "OnSpellStart"
         {
             "ApplyModifier"

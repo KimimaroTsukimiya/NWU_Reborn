@@ -14,7 +14,7 @@
   "ItemCost"            "2075"
   "ItemShopTags"          "lifesteal;damage;armor;regen_mana"
   "ItemQuality"         "rare"
-  "ItemAliases"         "vladmir's offering;vlads"
+  "ItemAliases"         "vladmirs offering;vlads;aura;lifesteal;ls;damage aura;"
   "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
   
   "AbilitySpecial"

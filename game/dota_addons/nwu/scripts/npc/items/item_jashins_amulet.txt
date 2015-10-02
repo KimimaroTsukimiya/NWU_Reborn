@@ -20,7 +20,7 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     "ItemQuality"         "epic"    
-    
+    "ItemAliases"         "lifesteal;ls;active;satanic"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually

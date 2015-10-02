@@ -10,17 +10,17 @@
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "0"
-    "ItemInitialCharges"      "0"
+    "ItemCost"              "0"
+    "ItemInitialCharges"    "0"
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "ItemRequiresCharges"   "0"
+    "ItemShareability"      "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"      "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    "ItemQuality"         "common"
-    
+    "ItemQuality"           "common"
+    "ItemAliases"           "hood of defiance;magic resistence;jutsu resistence;resistence;hp reg"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually

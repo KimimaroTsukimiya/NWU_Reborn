@@ -21,7 +21,8 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    "ItemQuality"           "epic"    
+    "ItemQuality"           "epic" 
+    "ItemAliases"           "shivas guard;frost armor;int;intelligence;active;armor"   
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually

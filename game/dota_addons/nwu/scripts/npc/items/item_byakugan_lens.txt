@@ -14,7 +14,7 @@
   "ItemCost"            "900"
   "ItemShopTags"          "see_invis"
   "ItemQuality"         "component"
-  "ItemAliases"         "gem of true sight"
+  "ItemAliases"         "gem of true sight;truesight;drop on death"
   "ItemSellable"          "0"
   "ItemShareability"        "ITEM_FULLY_SHAREABLE"
   "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
@@ -23,7 +23,6 @@
   "ItemSupport"         "1"
   "ItemKillable"          "0"
   "ItemContributesToNetWorthWhenDropped"  "0"
-  
  "OnOwnerDied"
     {
       "RunScript"

@@ -20,8 +20,8 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"         "1"
     "ItemBaseLevel"           "1"
-    "ItemQuality"         "epic"    
-    
+    "ItemQuality"             "epic"    
+    "ItemAliases"             "manta style;active;agi;agility;illusions;attackspeed"
     "precache"
   {
     "soundfile" "soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"

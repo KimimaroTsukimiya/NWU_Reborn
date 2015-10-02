@@ -20,6 +20,8 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     "ItemQuality"         "rare"
+    "ItemAliases"         "linkens sphere;sphere;spell block;mana reg;chakra reg"
+
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually

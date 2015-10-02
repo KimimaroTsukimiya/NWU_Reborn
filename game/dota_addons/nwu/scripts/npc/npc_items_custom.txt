@@ -26,7 +26,7 @@
 	    "MaxUpgradeLevel"           "1"
 	    "ItemBaseLevel"             "1"
 	    "ItemDisassembleRule"     "DOTA_ITEM_DISASSEMBLE_ALWAYS"
-	
+	    "ItemAliases"         "ring of basilius;"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -120,7 +120,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "perseverance"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -176,14 +176,14 @@
 	
 	    // Item Info
 	    //-------------------------------------------------------------------------------------------------------------
-	    "ItemCost"            "150"
-	    "ItemInitialCharges"      "0"
+	    "ItemCost"              "150"
+	    "ItemInitialCharges"    "0"
 	    "ItemDroppable"         "1"
 	    "ItemSellable"          "1"
-	    "ItemRequiresCharges"     "0"
-	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	    
+	    "ItemRequiresCharges"   "0"
+	    "ItemShareability"      "ITEM_NOT_SHAREABLE"
+	    "ItemDeclarations"      "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	    "ItemAliases"           "mantle of intelligence"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
 	    
@@ -237,14 +237,14 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "robe of the magi"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
     "Modifiers"
     {
-      "item_anbu_cloak_modifier"
+      "item_anbu_cloak_modifier;int;intelligence"
       {
          "Passive" "1"
          "IsHidden"  "1"
@@ -286,7 +286,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_PARTIALLY_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "sages mask;sage mask;mana reg;chakra reg"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -342,7 +342,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    
+	    "ItemAliases"             "shadow blade;invis;active;damage;as;attackspeed;"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -658,7 +658,7 @@
 	    "ItemBaseLevel"         "1"
 	    "ItemPermanent"         "1"
 	    "ItemInitialCharges"    "10"
-	
+	    "ItemAliases"           "active;mana;chakra;mana reg;chakra reg;int;intelligence;nuke"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -841,8 +841,8 @@
 	    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"           "1"
 	    "ItemBaseLevel"             "1"
-	    "ItemDisassembleRule"     "DOTA_ITEM_DISASSEMBLE_ALWAYS"
-	
+	    "ItemDisassembleRule"       "DOTA_ITEM_DISASSEMBLE_ALWAYS"
+	    "ItemAliases"               "active;track;int;str;agi;mana reg;strength;intelligence;agility"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -932,7 +932,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "frost;slow;skadi;int;str;agi;intelligence;strengt;agility"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1044,7 +1044,7 @@
     
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "zabuza;damage"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1090,7 +1090,7 @@
 	  "ItemCost"            "900"
 	  "ItemShopTags"          "see_invis"
 	  "ItemQuality"         "component"
-	  "ItemAliases"         "gem of true sight"
+	  "ItemAliases"         "gem of true sight;truesight;drop on death"
 	  "ItemSellable"          "0"
 	  "ItemShareability"        "ITEM_FULLY_SHAREABLE"
 	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
@@ -1099,7 +1099,6 @@
 	  "ItemSupport"         "1"
 	  "ItemKillable"          "0"
 	  "ItemContributesToNetWorthWhenDropped"  "0"
-	  
 	 "OnOwnerDied"
 	    {
 	      "RunScript"
@@ -1197,7 +1196,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "null talisman;int;intelligence;" 
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1261,6 +1260,8 @@
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
 	    "ItemQuality"         "rare"
+	    "ItemAliases"         "linkens sphere;sphere;spell block;mana reg;chakra reg"
+	
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1420,7 +1421,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "energy booster;mana"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1478,8 +1479,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "epic"
-	    
+	    "ItemQuality"             "epic"
+	    "ItemAliases"             "active;purge;agility;agi;diffusal blade"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1646,8 +1647,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "epic"
-	    
+	    "ItemQuality"             "epic"
+	    "ItemAliases"             "monkey king bar;pierce;crit;damage"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1755,7 +1756,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "soul booster;mana;hp;hitpoints;hp reg;mana reg"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1825,7 +1826,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "eaglesong;agility;agi;"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1879,7 +1880,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "reaver;strength;str;"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1933,7 +1934,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "mystic staff;int;intelligence"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -1987,7 +1988,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "demon edge;damage"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -2040,7 +2041,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "belt of strength;str;strength"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -2093,10 +2094,9 @@
 	  "ItemCost"            "2300"
 	  "ItemShopTags"          "agi;int;str;armor;boost_health"
 	  "ItemQuality"         "rare"
-	  "ItemAliases"         "mechanism;mekansm"
+	  "ItemAliases"         "mechanism;mekansm;active;heal;aoe heal;aura"
 	  "ItemAlertable"         "1"
 	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	  
 	  "AbilitySpecial"
 	  {
 	    "01"
@@ -2247,17 +2247,17 @@
 	
 	    // Item Info
 	    //-------------------------------------------------------------------------------------------------------------
-	    "ItemCost"            "0"
-	    "ItemInitialCharges"      "0"
+	    "ItemCost"              "0"
+	    "ItemInitialCharges"    "0"
 	    "ItemDroppable"         "1"
 	    "ItemSellable"          "1"
-	    "ItemRequiresCharges"     "0"
-	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	    "ItemRequiresCharges"   "0"
+	    "ItemShareability"      "ITEM_NOT_SHAREABLE"
+	    "ItemDeclarations"      "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    "ItemQuality"         "common"
-	    
+	    "ItemQuality"           "common"
+	    "ItemAliases"           "hood of defiance;magic resistence;jutsu resistence;resistence;hp reg"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -2313,7 +2313,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "ring of protection;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -2367,7 +2367,7 @@
 	    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"           "1"
 	    "ItemBaseLevel"             "1"
-	  
+	    "ItemAliases"               "attackspeed;hyperstone;as"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -2421,7 +2421,7 @@
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
 	    "ItemQuality"         "rare"
-	    
+	    "ItemAliases"         "crystalys;crit;damage"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -2528,7 +2528,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "black king bar;magic immunity;spell immunity;str;strength;damage"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -2659,7 +2659,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "cyclone;movementspeed;intelligence;int"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -2821,7 +2821,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "gauntlets of strength;str;strength"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -2875,8 +2875,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "epic"
-	    
+	    "ItemQuality"             "epic"
+	    "ItemAliases"             "butterfly;evasion;agi;agility"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -2956,7 +2956,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    "ItemQuality"           "epic"    
+	    "ItemQuality"           "epic" 
+	    "ItemAliases"           "shivas guard;frost armor;int;intelligence;active;armor"   
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -3158,7 +3159,7 @@
     "ItemQuality"    "component"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    "ItemAliases"     "leather gloves;attackspeed"
+    "ItemAliases"     "leather gloves;attackspeed;as"
     
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
@@ -3213,7 +3214,7 @@
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
 	    "ItemQuality"         "epic"
-	    
+	    "ItemAliases"         "refresher orb;active;remove cd;remove cooldown;damage"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -3286,7 +3287,7 @@
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
 	    "ItemQuality"         "epic"
-	    
+	    "ItemAliases"         "assault cuirass;aura;armor;attackspeed;as"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -3419,7 +3420,7 @@
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
 	    "ItemPermanent"         "1"
-	
+	    "ItemAliases"           "active;clap;slow;intelligence;int;mana reg;chakra reg;"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -3602,7 +3603,7 @@
 	    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"           "1"
 	    "ItemBaseLevel"             "1"
-	    
+	    "ItemAliases"               "phase boots;movementspeed;ms;active"
 	   "precache"
 	    {
 	      "particle" "particles/items2_fx/phase_boots.vpcf"
@@ -3709,8 +3710,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "epic"
-	    
+	    "ItemQuality"             "epic"
+	    "ItemAliases"             "mjollnir;lighting;chain lighting;active;attackspeed;as"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -3877,8 +3878,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "rare"
-	    
+	    "ItemQuality"             "rare"
+	    "ItemAliases"             "skull basher;bash;stun;damage"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -3987,7 +3988,7 @@
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
 	    "ItemQuality"         "epic"    
-	    
+	    "ItemAliases"         "lifesteal;ls;active;satanic"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -4075,7 +4076,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"             "pierce;crit;damage"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -4181,7 +4182,7 @@
 	    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"           "1"
 	    "ItemBaseLevel"             "1"
-	    
+	    "ItemAliases"               "arcane boots;ms;movementspeed;active;mana restore;restore;mana"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -4304,7 +4305,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "ultimate orb;stats"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -4368,7 +4369,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "blade mail;active;armor;return;damage return;"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -4453,7 +4454,7 @@
 	  "ItemCost"            "2800"
 	  "ItemShopTags"         "damage;int;str;agi;hard_to_tag"
 	  "ItemQuality"         "rare"  
-	  "ItemAliases"         "dagon 1"
+	  "ItemAliases"         "dagon 1;active;nuke;dagon"
 	  
 	  "UpgradesItems"         "item_karites_touch;item_karites_touch_2;item_karites_touch_3;item_karites_touch_4"
 	  "UpgradeRecipe"         "item_recipe_dagon"
@@ -4674,7 +4675,7 @@
 	  "ItemCost"            "2800"
 	  "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
 	  "ItemQuality"         "rare"  
-	  "ItemAliases"         "dagon 3"
+	  "ItemAliases"         "dagon 3;"
 	  
 	  "UpgradesItems"         "item_karites_touch_3;item_karites_touch_4"
 	  "UpgradeRecipe"         "item_recipe_karites_touch"
@@ -4888,7 +4889,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "aoe;crit;reg;damage"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -5044,7 +5045,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    
+	    "ItemAliases"             "ragnorok;crit;damage;daedalus"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -5147,8 +5148,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "rare"
-	    
+	    "ItemQuality"             "rare"
+	    "ItemAliases"             "desolator;orb;reduce armor;damage"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -5238,7 +5239,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "circlet;stats;"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -5304,8 +5305,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "epic"
-	    
+	    "ItemQuality"             "epic"
+	    "ItemAliases"             "eye of skadi;skadi;frost slow;slow;int;intelligence;stats"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -5427,8 +5428,8 @@
 	    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"           "1"
 	    "ItemBaseLevel"             "1"
-	    "ItemDisassembleRule"     "DOTA_ITEM_DISASSEMBLE_ALWAYS"
-	
+	    "ItemDisassembleRule"       "DOTA_ITEM_DISASSEMBLE_ALWAYS"
+	    "ItemAliases"               "headdress;aura;hp aura;hp reg;reg;stats"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -5516,16 +5517,17 @@
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "900"
+    "ItemCost"                "900"
     "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
+    "ItemDroppable"           "1"
+    "ItemSellable"            "1"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "ItemQuality"    "component"
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
+    "ItemQuality"             "component"
+    "MaxUpgradeLevel"         "1"
+    "ItemBaseLevel"           "1"
+    "ItemAliases"             "morbid mask;lifesteal;ls"
         //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -5584,7 +5586,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "as;attackspeed;quarterstaff"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -5643,7 +5645,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "mithrill hammer;damage"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -5700,7 +5702,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	
+	    "ItemAliases"             "mask of madness;active;frenzy;lifesteal;ls;attackspeed"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -5797,7 +5799,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "hp;hitpoints;mana;chakra"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -5857,7 +5859,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    
+	    "ItemAliases"             "orb of venom;poison;dot;slow;damage;attackspeed;as"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -5969,8 +5971,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "epic"    
-	    
+	    "ItemQuality"             "epic"    
+	    "ItemAliases"             "manta style;active;agi;agility;illusions;attackspeed"
 	    "precache"
 	  {
 	    "soundfile" "soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
@@ -6103,8 +6105,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "rare"
-	    
+	    "ItemQuality"             "rare"
+	    "ItemAliases"             "maelstorm;attackspeed;as;chain lighting;lightning;clear"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -6195,7 +6197,7 @@
 	  }
 	}
 	
-      "item_recipe_akatsuki_ring" 
+    "item_recipe_akatsuki_ring" 
   {
     "ID" "1168"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -7315,7 +7317,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "damage;sacred relic"  
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -7369,7 +7371,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "vanguards;hp;hit points;block;hp reg;regen"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -7487,7 +7489,7 @@
 	  "ItemCost"            "800"
 	  "ItemShopTags"          "armor;boost_armor"
 	  "ItemQuality"         "rare"
-	  "ItemAliases"         "buckler"
+	  "ItemAliases"         "buckler;active;armor"
 	  
 	  "AbilitySpecial"
 	  {
@@ -7590,7 +7592,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "hp reg;regen"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -7641,7 +7643,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_PARTIALLY_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "hp reg;regen;"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -7701,7 +7703,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "active;hex;vodoo;scythe of vyse;cc;int;intelligence;cast"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -7872,7 +7874,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "bracer;str;strength"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -7933,7 +7935,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "platemail;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -7985,7 +7987,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "helm of iron will;armor;hp reg;regen"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -8046,7 +8048,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    
+	    "ItemAliases"             "helm of the dominator;armor;damage;ls;lifesteal"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8118,7 +8120,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "blades of attack;damage"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -8170,7 +8172,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "magic resistance;jutsu resisteance;cloak;"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -8224,6 +8226,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
+    "ItemAliases"           "boots of speed;ms;movementspeed;running shoes"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8273,7 +8276,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "power treads;ms;as;movementspeed;attackspeed;agility;agi"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8355,7 +8358,7 @@
 	    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"           "1"
 	    "ItemBaseLevel"             "1"
-	    
+	    "ItemAliases"           "power treads;ms;as;movementspeed;attackspeed;intelligence;int"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8438,7 +8441,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "power treads;ms;as;movementspeed;attackspeed;strength;str"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8518,7 +8521,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "armor;chainmail;tank"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -8572,7 +8575,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "iron branch;stats"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8633,7 +8636,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"          "stout shield;block;tank"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8731,7 +8734,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    
+	    "ItemAliases"             "yasha;ms;as;movementspeed;attackspeed;agility;agi"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8804,8 +8807,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "epic"
-	    
+	    "ItemQuality"             "epic"
+	    "ItemAliases"             "battle fury;cleave;damage"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8944,7 +8947,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "void stone;mana reg;chakra reg;reg"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8997,7 +9000,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "band of elvenskin;agi;agility"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -9048,8 +9051,8 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "epic"
-	    
+	    "ItemQuality"             "epic"
+	    "ItemAliases"             "radiance;damage;burn damage"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -9158,7 +9161,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "staff of wizardry;int;intelligence"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -9209,7 +9212,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "blade of alacrity;agility;agi"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -9261,7 +9264,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"         "1"
     "ItemBaseLevel"           "1"
-    
+    "ItemAliases"             "radiance;amenonuhoko;damage;dropping;drops on death"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -9319,7 +9322,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "claymore;damage"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -9375,7 +9378,7 @@
 	    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"           "1"
 	    "ItemBaseLevel"             "1"
-	    
+	    "ItemAliases"               "boots of travel;active;teleport;ms;movementspeed"
 	    "OnSpellStart"
 	        {
 	            "ApplyModifier"
@@ -9437,7 +9440,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "wraith band;agility;agi"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -9505,7 +9508,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "orchid malevolence;silence;int;intelligence;cast;dot;"
 	    "precache"
 	    {
 	      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
@@ -9626,7 +9629,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "heart of tarrasque;hp;hit points;hp reg;str;strength;tank"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -9684,7 +9687,7 @@
 	  "ItemCost"            "2075"
 	  "ItemShopTags"          "lifesteal;damage;armor;regen_mana"
 	  "ItemQuality"         "rare"
-	  "ItemAliases"         "vladmir's offering;vlads"
+	  "ItemAliases"         "vladmirs offering;vlads;aura;lifesteal;ls;damage aura;"
 	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	  
 	  "AbilitySpecial"
@@ -9820,7 +9823,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemAliases"           "slippers of agility;agi;agility"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -9880,7 +9883,7 @@
 	    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"           "1"
 	    "ItemBaseLevel"             "1"
-	    
+	    "ItemAliases"               "hands of midas;as;attackspeed;transmute;active"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -9955,7 +9958,7 @@
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
 	    "ItemQuality"         "rare"   
-	    
+	    "ItemAliases"         "soul booster;mana;hp;hit point;hp reg;chakra;chakra reg;regen"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -10025,7 +10028,7 @@
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
 	    "ItemQuality"         "rare"
-	    
+	    "ItemAliases"         "sange;maim;lesser maim;str;strength"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -10145,7 +10148,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    
+	    "ItemAliases"           "maim;greater maim;sange and yasha;as;attackspeed;ms;movementspeed;agi;agility;str;strength"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -10281,7 +10284,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "ItemAliases"           "axe of strength;ogre axe;ogre club;str;strength"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -10333,7 +10336,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-  
+    "ItemAliases"               "hp;hitpoints;hit points;"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -10390,7 +10393,7 @@
 	  "ItemCost"            "2250"
 	  "ItemShopTags"          "teleport"
 	  "ItemQuality"         "component"
-	  "ItemAliases"         "blink dagger"
+	  "ItemAliases"         "blink dagger;dagger;blink;flash;active;moveability"
 	  "SideShop"            "1"
 	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 	

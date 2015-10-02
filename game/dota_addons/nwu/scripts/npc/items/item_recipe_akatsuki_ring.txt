@@ -1,4 +1,4 @@
-      "item_recipe_akatsuki_ring" 
+    "item_recipe_akatsuki_ring" 
   {
     "ID" "1168"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
