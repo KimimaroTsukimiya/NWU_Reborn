@@ -11,7 +11,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_snake_skin;item_blade_of_agility"
+        "01" "item_snake_skin;item_swift_katana"
     }
   }
 

@@ -1,40 +1,41 @@
-   "item_running_shoes"
+  "item_handguards"
   {
-    "ID"              "1105"
+    "ID"              "1101"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"           "item_datadriven"
-    "AbilityTextureName"      "item_running_shoes"
-    "ItemQuality"    "component"
+    "AbilityTextureName"      "item_handguards"
+
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "450"
+    "ItemCost"            "500"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
+    "ItemQuality"    "component"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
+    "ItemAliases"     "leather gloves;attackspeed"
     
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    
+
     "Modifiers"
     {
-      "item_running_shoes_modifier"
+      "item_handguards_modifier"
       {
-        "Passive" "1"
-        "IsHidden"  "1"
-        "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
-        "Properties"
+          "Passive" "1"  
+          "IsHidden" "1"  
+          "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+          "Properties"
           {
-              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%bonus_movement_speed_constant"
+             "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
           }
       }
     }
@@ -45,7 +46,7 @@
       "01"
       {
         "var_type"        "FIELD_FLOAT"
-        "bonus_movement_speed_constant"        "40.0"
+        "attackspeed"        "15.0"
       }
     }
   }

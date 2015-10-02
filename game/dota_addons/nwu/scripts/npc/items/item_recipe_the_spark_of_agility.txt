@@ -12,7 +12,7 @@
     
     "ItemRequirements"
     {
-        "01" "item_leaf_of_konoha;item_idates_boot"
+        "01" "item_leaf_of_konoha;item_training_weights"
     }
   }
 

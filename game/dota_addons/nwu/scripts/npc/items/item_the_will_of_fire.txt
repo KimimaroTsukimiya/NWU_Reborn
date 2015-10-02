@@ -1,23 +1,23 @@
-  "item_idates_boot"
+"item_the_will_of_fire"
   {
-    "ID"              "1121"
+    "ID"                    "1196"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_idates_boot"
-    "ItemQuality"    "component"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_the_will_of_fire"
+
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "150"
+    "ItemQuality"         "epic"
+    "ItemCost"            "0"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -27,14 +27,16 @@
 
     "Modifiers"
     {
-      "item_idates_boot_modifier"
+      "item_the_will_of_fire_modifier"
       {
          "Passive" "1"
          "IsHidden"  "1"
          "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
          "Properties"
           {
-              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
+              "MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_hp"
+              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+              "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
           }
       }
     }
@@ -44,8 +46,18 @@
     {
       "01"
       {
-        "var_type"            "FIELD_FLOAT"
-        "bonus_agi"        "3.0"
+        "var_type"         "FIELD_FLOAT"
+        "bonus_hp"         "250.0"
+      }
+      "02"
+      {
+        "var_type"              "FIELD_FLOAT"
+        "bonus_str"             "40.0"
+      }
+      "03"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "bonus_hp_reg_constant"     "8.0"
       }
     }
   }

@@ -1,17 +1,17 @@
-    "item_recipe_rengeki" 
+    "item_recipe_sword_of_nunoboko" 
   {
-    "ID" "1191"
+    "ID" "1239"
     "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"           "item_datadriven"
     "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "425" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_rengeki" //the result of combining the ItemRequirements
+    "ItemCost"            "0" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_sword_of_nunoboko" //the result of combining the ItemRequirements
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_silver_watch;item_staff_of_faith"
+        "01" "item_red_sun;item_essence_of_tranquility"
     }
   }
 

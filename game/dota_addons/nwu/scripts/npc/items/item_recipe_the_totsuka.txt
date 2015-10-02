@@ -12,7 +12,7 @@
 
     "ItemRequirements"
     {
-        "01" "item_essence_of_tranquility;item_silver_watch;item_staff_of_faith;item_leather_gloves"
+        "01" "item_essence_of_tranquility;item_silver_watch;item_staff_of_faith;item_handguards"
     }
   }
 

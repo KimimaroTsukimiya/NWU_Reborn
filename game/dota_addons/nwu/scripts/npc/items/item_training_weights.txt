@@ -1,22 +1,23 @@
-   "item_axe_of_strength"
+  "item_training_weights"
   {
-    "ID"              "1134"
+    "ID"              "1121"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_axe_of_strength"
-    "ItemQuality"     "component"
+    "AbilityTextureName"   "item_training_weights"
+    "ItemQuality"    "component"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "1000"
+    "ItemCost"            "150"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -26,14 +27,14 @@
 
     "Modifiers"
     {
-      "item_axe_of_strength_modifier"
+      "item_item_training_weights_modifier"
       {
          "Passive" "1"
          "IsHidden"  "1"
          "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
          "Properties"
           {
-              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
           }
       }
     }
@@ -43,8 +44,8 @@
     {
       "01"
       {
-        "var_type"         "FIELD_FLOAT"
-        "bonus_str"        "10.0"
+        "var_type"            "FIELD_FLOAT"
+        "bonus_agi"        "3.0"
       }
     }
   }

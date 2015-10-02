@@ -1,6 +1,6 @@
   "item_shinobi_uniform"
   {
-    "ID"              "1117"
+    "ID"              "7117"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"           "item_datadriven"
     "AbilityTextureName"   "item_shinobi_uniform"

@@ -25,11 +25,11 @@
                 "item"    "item_idates_boot"
                 "item"    "item_amulet_of_anubis"
                 "item"    "item_leaf_of_konoha"
-                "item"    "item_belt_of_strength_datadriven"   
+                "item"    "item_firm_nunchaku"   
                 "item"    "item_snake_skin"
                 "item"    "item_anbu_cloak"  
-                "item"    "item_axe_of_strength"
-                "item"    "item_blade_of_agility"
+                "item"    "item_vambraces"
+                "item"    "item_swift_katana"
                 "item"    "item_staff_of_faith"
                 "item"    "item_kages_relic"             
 
@@ -53,13 +53,13 @@
  
         "misc"
         {
-                "item"         "item_running_shoes"
-                "item"         "item_leather_gloves"
+                "item"         "item_shinobi_sandals"
+                "item"         "item_handguards"
                 "item"         "item_mask_of_ne"
                 "item"         "item_ring_of_regeneration"
                 "item"         "item_anbu_mask"
                 "item"         "item_shinobi_cloak"
-                "item"         "item_gem_of_truesight"
+                "item"         "item_byakugan_lens"
                 "item"         "item_yondaime_sealed_kunai"
         }      
  
@@ -75,7 +75,7 @@
                 "item"          "item_transmutation_gloves"
                 "item"          "item_gais_fist_of_might"
                 "item"          "item_amplified_silver_watch"
-                "item"          "item_rengeki"
+                "item"          "item_bashosen"
                 "item"          "gem_of_truesight_datadriven"    
         }
  
@@ -108,7 +108,7 @@
                 "item"          "item_flak_jacket"
                 "item"          "item_kaguya_armor"
                 "item"          "item_reminisce"
-                "item"          "item_onbus_paw"
+                "item"          "item_the_will_of_fire"
                 "item"          "item_demon_booster"
                 "item"          "item_trinity_booster"
                 "item"          "item_hokage_armor"
@@ -125,11 +125,11 @@
                "item"           "item_silver_hands"
                "item"           "item_solar_blade"
                "item"           "item_assassins_cloak"
-               "item"           "item_ragnorok"
+               "item"           "item_kurosawa"
                "item"           "item_probagation"
                "item"           "item_good_guys_suit"
                "item"           "item_conch_shell_mace"
-               "item"           "item_amenonuhoko"
+               "item"           "item_sword_of_nunoboko"
 
         }
  
@@ -155,7 +155,7 @@
                 "item"    "item_ring_of_health_datadriven"
                 "item"    "item_silver_watch"
                 "item"    "item_vitality_booster_datadriven"
-                "item"     "item_energy_booster_datadriven"
+                "item"     "item_chakra_booster"
                 "item"     "item_point_booster_datadriven"
                 "item"      "item_essence_of_agility"
                 "item"      "item_essence_of_brutality"

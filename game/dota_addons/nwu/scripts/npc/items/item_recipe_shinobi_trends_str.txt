@@ -10,7 +10,6 @@
   // Item Info
   //-------------------------------------------------------------------------------------------------------------
   "ItemCost"            "0" 
-  "ItemShopTags"          ""
   
   // Recipe
   //-------------------------------------------------------------------------------------------------------------
@@ -18,9 +17,9 @@
   "ItemResult"          "item_shinobi_trends_str"
   "ItemRequirements"
   {
-    "01" "item_running_shoes;item_leather_gloves;item_belt_of_strength_datadriven"
-    "02"  "item_running_shoes;item_leather_gloves;item_snake_skin"
-    "03" "item_running_shoes;item_leather_gloves;item_anbu_cloak"
+    "01" "item_shinobi_sandals;item_handguards;item_firm_nunchaku"
+    "02"  "item_shinobi_sandals;item_handguards;item_snake_skin"
+    "03" "item_shinobi_sandals;item_handguards;item_anbu_cloak"
   }
 }
 

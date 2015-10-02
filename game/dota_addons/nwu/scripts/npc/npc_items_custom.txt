@@ -98,67 +98,6 @@
 	    }
 	  }
 	
-  "item_amenonuhoko" 
-  {
-    "ID"                    "1240"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"             "item_datadriven"
-    "AbilityTextureName"    "item_amenonuhoko"
-
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemQuality"         "artifact"
-    "ItemCost"                "0"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"           "1"
-    "ItemSellable"            "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"         "1"
-    "ItemBaseLevel"           "1"
-    
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "OnOwnerDied"
-    {
-      "RunScript"
-      {
-        "ScriptFile"      "items/DropItemOnDeath.lua"
-        "Function"      "DropItemOnDeath"
-      }
-    }
-
-    "Modifiers"
-    {
-      "item_amenonuhoko_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-          }
-      }
-    }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"                  "FIELD_FLOAT"
-        "bonus_damage"                 "250.0"
-      }
-  }
-}
-
   "item_amplified_silver_watch"
   {
     "ID"                      "4047"
@@ -694,108 +633,192 @@
 	    }
 	  }
 	
-   "item_axe_of_strength"
-  {
-    "ID"              "1134"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_axe_of_strength"
-    "ItemQuality"     "component"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "1000"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
-    
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "Modifiers"
-    {
-      "item_axe_of_strength_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
-          }
-      }
-    }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"         "FIELD_FLOAT"
-        "bonus_str"        "10.0"
-      }
-    }
-  }
-
-   "item_belt_of_strength_datadriven"
-  {
-    "ID"              "1131"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_belt_of_strength_datadriven"
-    "ItemQuality"     "component"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "450"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
-    
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "Modifiers"
-    {
-      "item_belt_of_strength_datadriven_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
-          }
-      }
-    }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"         "FIELD_FLOAT"
-        "bonus_str"        "6.0"
-      }
-    }
-  }
-
+	"item_bashosen"
+	  {
+	    "ID"                    "1192"
+	    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AOE"
+	    "BaseClass"             "item_datadriven"
+	    "AbilityTextureName"    "item_bashosen"
+	    "AbilityCooldown"        "10.0"
+	    "AbilityManaCost"        "0"
+	    // Stats
+	    //-------------------------------------------------------------------------------------------------------------
+	
+	    // Item Info
+	    //-------------------------------------------------------------------------------------------------------------
+	    "ItemQuality"         "rare"
+	    "ItemCost"            "0"
+	    "ItemInitialCharges"      "0"
+	    "ItemDroppable"         "1"
+	    "ItemSellable"          "1"
+	    "ItemRequiresCharges"     "0"
+	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	    "MaxUpgradeLevel"       "1"
+	    "ItemBaseLevel"         "1"
+	    "ItemPermanent"         "1"
+	    "ItemInitialCharges"    "10"
+	
+	    //pickup sounds
+	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+	
+	     "precache"
+	      {
+	        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+	        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+	        "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
+	        "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+	        "particle"  "particles/econ/items/brewmaster/brewmaster_offhand_elixir/brewmaster_thunder_clap_elixir.vpcf"
+	      }
+	
+	   "OnSpellStart"
+	  {
+	    "SpendCharge" {}
+	
+	    "FireSound"
+	    {
+	      "EffectName"  "Hero_Brewmaster.ThunderClap"
+	      "Target"    "CASTER"
+	    }
+	    
+	    "FireEffect"
+	    {
+	      "EffectName"        "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+	      "EffectAttachType"  "follow_origin"
+	      "EffectRadius"    "%radius"
+	      "Target"            "CASTER"
+	    }
+	
+	    "ApplyModifier"
+	    {
+	      "ModifierName"  "modifier_bashosen_slow"
+	      "Target"
+	      {
+	        "Center"  "CASTER"
+	        "Radius"  "%radius"
+	        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	        "Types"   "DOTA_UNIT_TARGET_HERO"
+	      }
+	      "Duration"    "%duration"
+	    }
+	    
+	    "ApplyModifier"
+	    {
+	      "ModifierName"  "modifier_bashosen_slow"
+	      "Target"
+	      {
+	        "Center"  "CASTER"
+	        "Radius"  "%radius"
+	        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	        "Types"   "DOTA_UNIT_TARGET_BASIC"
+	      }
+	      "Duration"    "%duration_creeps"
+	    }
+	
+	    "Damage"
+	    {
+	      "Target"
+	      {
+	        "Center"    "CASTER"
+	        "Radius"  "%radius"
+	        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	      }
+	      "Type"      "DAMAGE_TYPE_MAGICAL"
+	      "Damage"    "%damage"
+	    }
+	  }
+	
+	  "Modifiers"
+	  {
+	
+	        "item_bashosen_modifier"
+	        {
+	           "Passive" "1"
+	           "IsHidden"  "1"
+	           "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	           "Properties"
+	            {
+	                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+	                  "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
+	            }
+	        }
+	
+	
+	        "modifier_bashosen_slow"
+	        {
+	          "Passive"     "0"
+	          "IsHidden"      "0"
+	          "IsDebuff"      "1"
+	          "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+	          "EffectAttachType"  "follow_origin"
+	      
+	          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+	          "StatusEffectPriority"  "10"
+	
+	          "Properties"
+	          {
+	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow"
+	          }
+	
+	          "OnCreated"
+	          {
+	            "FireSound"
+	            {
+	              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
+	              "Target"    "TARGET"
+	            }     
+	          }   
+	        }
+	  }
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	     "01"
+	    {
+	      "var_type"          "FIELD_INTEGER"
+	      "radius"          "250"
+	    }
+	    "02"
+	    {
+	      "var_type"          "FIELD_FLOAT"
+	      "duration"          "3.5"
+	    }
+	    "03"
+	    {
+	      "var_type"          "FIELD_FLOAT"
+	      "duration_creeps"     "3.5"
+	    }
+	    "04"
+	    {
+	      "var_type"          "FIELD_INTEGER"
+	      "damage"          "200"
+	    }
+	    "05"
+	    {
+	      "var_type"          "FIELD_INTEGER"
+	      "ms_slow"       "-30"
+	    }
+	      "06"
+	    {
+	      "var_type"          "FIELD_INTEGER"
+	      "bonus_int"          "10"
+	    }
+	     "07"
+	    {
+	      "var_type"          "FIELD_INTEGER"
+	      "bonus_mana_reg_percentage"          "150"
+	    }
+	    "08"
+	    {
+	      "var_type"          "FIELD_INTEGER"
+	      "attack_speed_slow"       "-30"
+	    }
+	    }
+	  }
+	
 	"item_bingo_book"
 	  {
 	    "ID"                      "1176"
@@ -887,57 +910,6 @@
 	    }
 	  }
 	
-  "item_blade_of_agility"
-  {
-    "ID"              "1135"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_blade_of_agility"
-    "ItemQuality"     "component"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "1000"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
-    
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "Modifiers"
-    {
-      "item_blade_of_agility_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
-          }
-      }
-    }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"         "FIELD_FLOAT"
-        "bonus_agi"        "10.0"
-      }
-    }
-  }
-
     "item_blue_moon"
   {
     "ID"                      "1160"
@@ -1102,6 +1074,108 @@
     }
   }
 
+	"item_byakugan_lens"
+	{
+	  // General
+	  //-------------------------------------------------------------------------------------------------------------
+	  "BaseClass"           "item_datadriven"
+	  "ID"              "9999343242"  //Valve's version of this item uses the ID "30".
+	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "Model"             "models/props_gameplay/gem01.vmdl"
+	  "Effect"            "particles/generic_gameplay/dropped_gem.vpcf"
+	  "AbilityTextureName"      "item_byakugan_lens"
+	
+	  // Item Info
+	  //-------------------------------------------------------------------------------------------------------------
+	  "ItemCost"            "900"
+	  "ItemShopTags"          "see_invis"
+	  "ItemQuality"         "component"
+	  "ItemAliases"         "gem of true sight"
+	  "ItemSellable"          "0"
+	  "ItemShareability"        "ITEM_FULLY_SHAREABLE"
+	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	  "ItemStockMax"          "1"
+	  "ItemStockTime"         "600.0"
+	  "ItemSupport"         "1"
+	  "ItemKillable"          "0"
+	  "ItemContributesToNetWorthWhenDropped"  "0"
+	  
+	 "OnOwnerDied"
+	    {
+	      "RunScript"
+	      {
+	        "ScriptFile"      "items/DropItemOnDeath.lua"
+	        "Function"      "DropItemOnDeath"
+	      }
+	    }
+	
+	  // Sound
+	  //-------------------------------------------------------------------------------------------------------------     
+	  "UIPickupSound"         "Item.PickUpGemShop"
+	  "UIDropSound"         "Item.DropGemShop"
+	  "WorldDropSound"        "Item.DropGemWorld"
+	  
+	  // Special  
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilitySpecial"
+	  {
+	    "01"
+	    {
+	      "var_type"        "FIELD_INTEGER"
+	      "radius"        "1100"
+	    }
+	  }
+	
+	  "Modifiers"
+	  {
+	    "modifier_truesight_datadriven"
+	    {
+	      "Passive"     "1"
+	      "IsHidden"      "1"
+	  
+	      "ThinkInterval"  "0.03"
+	      "OnIntervalThink"
+	      {
+	        "ActOnTargets"
+	        {
+	          "Target"
+	          {
+	            "Center"    "TARGET"
+	            "Radius"  "%radius"
+	            "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	            "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	          }
+	        
+	          "Action"    
+	          {
+	            "RemoveModifier"
+	            {
+	              "ModifierName"  "modifier_truesight_reveal"
+	              "Target"    "TARGET"
+	            }
+	
+	            "ApplyModifier"
+	            {
+	              "ModifierName"  "modifier_truesight_reveal"
+	              "Target"    "TARGET"
+	            }
+	          }
+	        }     
+	      }   
+	    }
+	
+	    "modifier_truesight_reveal"
+	    {
+	      "IsHidden"      "1"
+	      "Duration"      "0.5" //The True Sight effect lingers for 0.5 seconds.
+	      "States"
+	      {
+	        "MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
+	      }
+	    }
+	  }
+	}
+	
   "item_celestrial_shield"
   {
     "ID"              "1129"
@@ -1324,6 +1398,61 @@
 	  }
 	  }
 	
+   "item_chakra_booster"
+  {
+    "ID"                      "1163"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"               "item_datadriven"
+    "AbilityTextureName"      "item_chakra_booster"
+    "SecretShop" "1"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemQuality"     "component"
+    "ItemCost"                  "1000"
+    "ItemInitialCharges"        "0"
+    "ItemDroppable"             "1"
+    "ItemSellable"              "1"
+    "ItemRequiresCharges"       "0"
+    "ItemShareability"          "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"           "1"
+    "ItemBaseLevel"             "1"
+  
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+
+      "item_chakra_booster_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+                        "MODIFIER_PROPERTY_MANA_BONUS" "%bonus_mana"
+
+          }
+      }
+
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"              "FIELD_FLOAT"
+        "bonus_mana"             "250.0"
+      }
+    }
+  }
+
 	"item_chakra_smasher"
 	  {
 	    "ID"                    "1238"
@@ -1674,61 +1803,6 @@
 	    }
 	  }
 	
-   "item_energy_booster_datadriven"
-  {
-    "ID"                      "1163"
-    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"               "item_datadriven"
-    "AbilityTextureName"      "item_energy_booster_datadriven"
-    "SecretShop" "1"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemQuality"     "component"
-    "ItemCost"                  "1000"
-    "ItemInitialCharges"        "0"
-    "ItemDroppable"             "1"
-    "ItemSellable"              "1"
-    "ItemRequiresCharges"       "0"
-    "ItemShareability"          "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"           "1"
-    "ItemBaseLevel"             "1"
-  
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "Modifiers"
-    {
-
-      "item_point_booster_datadriven_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-                        "MODIFIER_PROPERTY_MANA_BONUS" "%bonus_mana"
-
-          }
-      }
-
-    }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"              "FIELD_FLOAT"
-        "bonus_mana"             "250.0"
-      }
-    }
-  }
-
    "item_essence_of_agility"
   {
     "ID"                      "1155"
@@ -1941,6 +2015,57 @@
       {
         "var_type"              "FIELD_FLOAT"
         "bonus_damage"             "46.0"
+      }
+    }
+  }
+
+   "item_firm_nunchaku"
+  {
+    "ID"              "1131"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"   "item_firm_nunchaku"
+    "ItemQuality"     "component"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "450"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+      "item_firm_nunchaku_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_str"        "6.0"
       }
     }
   }
@@ -2509,108 +2634,6 @@
 	    }
 	  }
 	
-	"item_gem_of_truesight_datadriven"
-	{
-	  // General
-	  //-------------------------------------------------------------------------------------------------------------
-	  "BaseClass"           "item_datadriven"
-	  "ID"              "9999343242"  //Valve's version of this item uses the ID "30".
-	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	  "Model"             "models/props_gameplay/gem01.vmdl"
-	  "Effect"            "particles/generic_gameplay/dropped_gem.vpcf"
-	  "AbilityTextureName"      "item_gem_of_truesight_datadriven"
-	
-	  // Item Info
-	  //-------------------------------------------------------------------------------------------------------------
-	  "ItemCost"            "900"
-	  "ItemShopTags"          "see_invis"
-	  "ItemQuality"         "component"
-	  "ItemAliases"         "gem of true sight"
-	  "ItemSellable"          "0"
-	  "ItemShareability"        "ITEM_FULLY_SHAREABLE"
-	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	  "ItemStockMax"          "1"
-	  "ItemStockTime"         "600.0"
-	  "ItemSupport"         "1"
-	  "ItemKillable"          "0"
-	  "ItemContributesToNetWorthWhenDropped"  "0"
-	  
-	 "OnOwnerDied"
-	    {
-	      "RunScript"
-	      {
-	        "ScriptFile"      "items/DropItemOnDeath.lua"
-	        "Function"      "DropItemOnDeath"
-	      }
-	    }
-	
-	  // Sound
-	  //-------------------------------------------------------------------------------------------------------------     
-	  "UIPickupSound"         "Item.PickUpGemShop"
-	  "UIDropSound"         "Item.DropGemShop"
-	  "WorldDropSound"        "Item.DropGemWorld"
-	  
-	  // Special  
-	  //-------------------------------------------------------------------------------------------------------------
-	  "AbilitySpecial"
-	  {
-	    "01"
-	    {
-	      "var_type"        "FIELD_INTEGER"
-	      "radius"        "1100"
-	    }
-	  }
-	
-	  "Modifiers"
-	  {
-	    "modifier_truesight_datadriven"
-	    {
-	      "Passive"     "1"
-	      "IsHidden"      "1"
-	  
-	      "ThinkInterval"  "0.03"
-	      "OnIntervalThink"
-	      {
-	        "ActOnTargets"
-	        {
-	          "Target"
-	          {
-	            "Center"    "TARGET"
-	            "Radius"  "%radius"
-	            "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
-	            "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	          }
-	        
-	          "Action"    
-	          {
-	            "RemoveModifier"
-	            {
-	              "ModifierName"  "modifier_truesight_reveal"
-	              "Target"    "TARGET"
-	            }
-	
-	            "ApplyModifier"
-	            {
-	              "ModifierName"  "modifier_truesight_reveal"
-	              "Target"    "TARGET"
-	            }
-	          }
-	        }     
-	      }   
-	    }
-	
-	    "modifier_truesight_reveal"
-	    {
-	      "IsHidden"      "1"
-	      "Duration"      "0.5" //The True Sight effect lingers for 0.5 seconds.
-	      "States"
-	      {
-	        "MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
-	      }
-	    }
-	  }
-	}
-	
 	"item_giant_iron_fan"
 	  {
 	    "ID"                    "1194"
@@ -3113,6 +3136,59 @@
 	    }
 	  }
 	
+  "item_handguards"
+  {
+    "ID"              "1101"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"      "item_handguards"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "500"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "ItemQuality"    "component"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    "ItemAliases"     "leather gloves;attackspeed"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+      "item_handguards_modifier"
+      {
+          "Passive" "1"  
+          "IsHidden" "1"  
+          "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+          "Properties"
+          {
+             "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "attackspeed"        "15.0"
+      }
+    }
+  }
+
 	"item_hexagonal_crystal"
 	  {
 	    "ID"                    "1190"
@@ -3505,58 +3581,6 @@
 	    }
 	  }
 	
-  "item_idates_boot"
-  {
-    "ID"              "1121"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_idates_boot"
-    "ItemQuality"    "component"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "150"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
-    
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "Modifiers"
-    {
-      "item_idates_boot_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
-          }
-      }
-    }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"            "FIELD_FLOAT"
-        "bonus_agi"        "3.0"
-      }
-    }
-  }
-
 	"item_idates_sandals"
 	  {
 	    "ID"                      "1146"
@@ -4998,6 +5022,110 @@
 	    }
 	  }
 	
+	"item_kurosawa"
+	  {
+	    "ID"                    "1256"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "item_datadriven"
+	    "AbilityTextureName"    "item_kurosawa"
+	
+	    // Stats
+	    //-------------------------------------------------------------------------------------------------------------
+	
+	    // Item Info
+	    //-------------------------------------------------------------------------------------------------------------
+	    "ItemQuality"         "epic"
+	    "ItemCost"                "0"
+	    "ItemInitialCharges"      "0"
+	    "ItemDroppable"           "1"
+	    "ItemSellable"            "1"
+	    "ItemRequiresCharges"     "0"
+	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	    "MaxUpgradeLevel"         "1"
+	    "ItemBaseLevel"           "1"
+	    
+	    //pickup sounds
+	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+	
+	    "Modifiers"
+	    {
+	      "item_ragnorok_modifier"
+	      {
+	         "Passive" "1"
+	         "IsHidden"  "1"
+	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	         "Properties"
+	          {
+	              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+	          }
+	
+	
+	          "OnAttackStart"
+	        {
+	          "Random"
+	          {
+	            "Chance" "%crit_chance"
+	            "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+	            "OnSuccess"  
+	            {
+	              "ApplyModifier"
+	              {
+	                "ModifierName" "ragnorok_crit"
+	                "Target"     "CASTER" 
+	              }     
+	            }
+	          }
+	        }
+	
+	      }
+	      "ragnorok_crit"
+	      {
+	        "IsHidden"  "1"
+	        "Duration"  "1"
+	        "Properties"
+	        {
+	          "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"   "%crit_bonus"
+	        }
+	        "OnAttackLanded"
+	        {
+	          "FireEffect"
+	          {
+	            "EffectName"     "particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+	            "EffectAttachType"   "follow_origin"
+	            "Target"       "TARGET"
+	          } 
+	          "RemoveModifier"
+	          {
+	            "ModifierName"    "ragnorok_crit"
+	            "Target"      "CASTER"  
+	          }
+	        }
+	      }
+	    }
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	      "01"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "bonus_damage"                 "70.0"
+	      }
+	      "02"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "crit_bonus"                 "240.0"
+	      }
+	      "03"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "crit_chance"                 "20.0"
+	      }
+	    }
+	  }
+	
 	"item_kusanagi"
 	  {
 	    "ID"                    "1230"
@@ -5151,59 +5279,6 @@
       {
         "var_type"            "FIELD_FLOAT"
         "bonus_str"        "3.0"
-      }
-    }
-  }
-
-  "item_leather_gloves"
-  {
-    "ID"              "1101"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "AbilityTextureName"      "item_leather_gloves"
-
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "500"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "ItemQuality"    "component"
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
-    
-    
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
-    "Modifiers"
-    {
-      "item_leather_gloves_modifier"
-      {
-          "Passive" "1"  
-          "IsHidden" "1"  
-          "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
-          "Properties"
-          {
-             "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
-          }
-      }
-    }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "attackspeed"        "15.0"
       }
     }
   }
@@ -5700,70 +5775,6 @@
 	
 	}
 	
-	"item_onbus_paw"
-	  {
-	    "ID"                    "1196"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	    "BaseClass"             "item_datadriven"
-	    "AbilityTextureName"    "item_onbus_paw"
-	
-	    // Stats
-	    //-------------------------------------------------------------------------------------------------------------
-	
-	    // Item Info
-	    //-------------------------------------------------------------------------------------------------------------
-	    "ItemQuality"         "epic"
-	    "ItemCost"            "0"
-	    "ItemInitialCharges"      "0"
-	    "ItemDroppable"         "1"
-	    "ItemSellable"          "1"
-	    "ItemRequiresCharges"     "0"
-	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	    "MaxUpgradeLevel"       "1"
-	    "ItemBaseLevel"         "1"
-	    
-	    //pickup sounds
-	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-	
-	    "Modifiers"
-	    {
-	      "item_onbus_paw_modifier"
-	      {
-	         "Passive" "1"
-	         "IsHidden"  "1"
-	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-	         "Properties"
-	          {
-	              "MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_hp"
-	              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
-	              "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
-	          }
-	      }
-	    }
-	    // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
-	    {
-	      "01"
-	      {
-	        "var_type"         "FIELD_FLOAT"
-	        "bonus_hp"         "250.0"
-	      }
-	      "02"
-	      {
-	        "var_type"              "FIELD_FLOAT"
-	        "bonus_str"             "40.0"
-	      }
-	      "03"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "bonus_hp_reg_constant"     "8.0"
-	      }
-	    }
-	  }
-	
     "item_point_booster_datadriven"
   {
     "ID"                      "1161"
@@ -6071,110 +6082,6 @@
 	    }
 	  }
 	
-	"item_ragnorok"
-	  {
-	    "ID"                    "1256"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	    "BaseClass"             "item_datadriven"
-	    "AbilityTextureName"    "item_ragnorok"
-	
-	    // Stats
-	    //-------------------------------------------------------------------------------------------------------------
-	
-	    // Item Info
-	    //-------------------------------------------------------------------------------------------------------------
-	    "ItemQuality"         "epic"
-	    "ItemCost"                "0"
-	    "ItemInitialCharges"      "0"
-	    "ItemDroppable"           "1"
-	    "ItemSellable"            "1"
-	    "ItemRequiresCharges"     "0"
-	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	    "MaxUpgradeLevel"         "1"
-	    "ItemBaseLevel"           "1"
-	    
-	    //pickup sounds
-	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-	
-	    "Modifiers"
-	    {
-	      "item_ragnorok_modifier"
-	      {
-	         "Passive" "1"
-	         "IsHidden"  "1"
-	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-	         "Properties"
-	          {
-	              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-	          }
-	
-	
-	          "OnAttackStart"
-	        {
-	          "Random"
-	          {
-	            "Chance" "%crit_chance"
-	            "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
-	            "OnSuccess"  
-	            {
-	              "ApplyModifier"
-	              {
-	                "ModifierName" "ragnorok_crit"
-	                "Target"     "CASTER" 
-	              }     
-	            }
-	          }
-	        }
-	
-	      }
-	      "ragnorok_crit"
-	      {
-	        "IsHidden"  "1"
-	        "Duration"  "1"
-	        "Properties"
-	        {
-	          "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"   "%crit_bonus"
-	        }
-	        "OnAttackLanded"
-	        {
-	          "FireEffect"
-	          {
-	            "EffectName"     "particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
-	            "EffectAttachType"   "follow_origin"
-	            "Target"       "TARGET"
-	          } 
-	          "RemoveModifier"
-	          {
-	            "ModifierName"    "ragnorok_crit"
-	            "Target"      "CASTER"  
-	          }
-	        }
-	      }
-	    }
-	    // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
-	    {
-	      "01"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "bonus_damage"                 "70.0"
-	      }
-	      "02"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "crit_bonus"                 "240.0"
-	      }
-	      "03"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "crit_chance"                 "20.0"
-	      }
-	    }
-	  }
-	
 	"item_raijin"
 	  {
 	    "ID"                    "1234"
@@ -6305,23 +6212,6 @@
     }
   }
 
-    "item_recipe_amenonuhoko" 
-  {
-    "ID" "1239"
-    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "0" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_amenonuhoko" //the result of combining the ItemRequirements
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    "ItemRequirements"
-    {
-        "01" "item_red_sun;item_essence_of_tranquility"
-    }
-  }
-
      "item_recipe_amplified_silver_watch" 
   {
     "ID" "1164"
@@ -6353,6 +6243,23 @@
     "ItemRequirements"
     {
         "01" "item_metal_gauntlets;item_tentens_spear"
+    }
+  }
+
+    "item_recipe_bashosen" 
+  {
+    "ID" "1191"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "ItemRecipe"          "1" //destroyed after combine
+    "ItemCost"            "425" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_bashosen" //the result of combining the ItemRequirements
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "ItemRequirements"
+    {
+        "01" "item_silver_watch;item_staff_of_faith"
     }
   }
 
@@ -6422,7 +6329,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_blade_of_agility;item_blade_of_agility;item_anbu_cloak"
+        "01" "item_swift_katana;item_swift_katana;item_anbu_cloak"
     }
   }
 
@@ -6506,7 +6413,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_leather_gloves"
+        "01" "item_handguards"
     }
   }
 
@@ -6540,7 +6447,7 @@
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 	    "ItemRequirements"
 	    {
-	        "01" "item_axe_of_strength;item_mithrill_hammer_datadriven"
+	        "01" "item_vambraces;item_mithrill_hammer_datadriven"
 	    }
 	  }
 	
@@ -6642,7 +6549,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_rengeki;item_essence_of_nature"
+        "01" "item_bashosen;item_essence_of_nature"
     }
   }
 
@@ -6659,7 +6566,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_running_shoes;item_shinobi_claws;item_shinobi_claws"
+        "01" "item_shinobi_sandals;item_shinobi_claws;item_shinobi_claws"
     }
   }
 
@@ -6693,7 +6600,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_javelin_datadriven;item_belt_of_strength_datadriven"
+        "01" "item_javelin_datadriven;item_firm_nunchaku"
     }
   }
 
@@ -6727,7 +6634,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_running_shoes;item_energy_booster_datadriven"
+        "01" "item_shinobi_sandals;item_chakra_booster"
     }
   }
 
@@ -6861,6 +6768,23 @@
     }
   }
 
+  "item_recipe_kurosawa" 
+  {
+    "ID" "1255"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "ItemRecipe"          "1" //destroyed after combine
+    "ItemCost"            "1200" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_kurosawa" //the result of combining the ItemRequirements
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "ItemRequirements"
+    {
+        "01" "item_gale_blade;item_essence_of_tranquility"
+    }
+  }
+
   "item_recipe_kusanagi" 
   {
     "ID" "1229"
@@ -6929,23 +6853,6 @@
     }
   }
 
-     "item_recipe_onbus_paw" 
-  {
-    "ID" "1195"
-    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "0" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_onbus_paw" //the result of combining the ItemRequirements
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    "ItemRequirements"
-    {
-        "01" "item_essence_of_brutality;item_ring_of_health_datadriven;item_vitality_booster_datadriven"
-    }
-  }
-
   "item_recipe_poison_gauntlets" 
   {
     "ID" "1227"
@@ -6980,23 +6887,6 @@
     }
   }
 
-  "item_recipe_ragnorok" 
-  {
-    "ID" "1255"
-    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "1200" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_ragnorok" //the result of combining the ItemRequirements
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    "ItemRequirements"
-    {
-        "01" "item_gale_blade;item_essence_of_tranquility"
-    }
-  }
-
    "item_recipe_raijin" 
   {
     "ID" "1233"
@@ -7011,7 +6901,7 @@
 
     "ItemRequirements"
     {
-        "01" "item_broadsword_datadriven;item_leather_gloves"
+        "01" "item_broadsword_datadriven;item_handguards"
     }
   }
 
@@ -7030,23 +6920,6 @@
     "ItemRequirements"
     {
         "01" "item_vitality_booster_datadriven;item_ring_of_health_datadriven;item_shin_guards"
-    }
-  }
-
-    "item_recipe_rengeki" 
-  {
-    "ID" "1191"
-    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "425" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_rengeki" //the result of combining the ItemRequirements
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    "ItemRequirements"
-    {
-        "01" "item_silver_watch;item_staff_of_faith"
     }
   }
 
@@ -7140,9 +7013,9 @@
 	  "ItemResult"          "item_shinobi_trends_agi"
 	  "ItemRequirements"
 	  {
-	    "01" "item_running_shoes;item_leather_gloves;item_belt_of_strength_datadriven"
-	    "02"  "item_running_shoes;item_leather_gloves;item_snake_skin"
-	    "03" "item_running_shoes;item_leather_gloves;item_anbu_cloak"
+	    "01" "item_shinobi_sandals;item_handguards;item_firm_nunchaku"
+	    "02"  "item_shinobi_sandals;item_handguards;item_snake_skin"
+	    "03" "item_shinobi_sandals;item_handguards;item_anbu_cloak"
 	  }
 	}
 	
@@ -7166,9 +7039,9 @@
 	  "ItemResult"          "item_shinobi_trends_int"
 	  "ItemRequirements"
 	  {
-	    "01" "item_running_shoes;item_leather_gloves;item_belt_of_strength_datadriven"
-	    "02"  "item_running_shoes;item_leather_gloves;item_snake_skin"
-	    "03" "item_running_shoes;item_leather_gloves;item_anbu_cloak"
+	    "01" "item_shinobi_sandals;item_handguards;item_firm_nunchaku"
+	    "02"  "item_shinobi_sandals;item_handguards;item_snake_skin"
+	    "03" "item_shinobi_sandals;item_handguards;item_anbu_cloak"
 	  }
 	}
 	
@@ -7184,7 +7057,6 @@
 	  // Item Info
 	  //-------------------------------------------------------------------------------------------------------------
 	  "ItemCost"            "0" 
-	  "ItemShopTags"          ""
 	  
 	  // Recipe
 	  //-------------------------------------------------------------------------------------------------------------
@@ -7192,9 +7064,9 @@
 	  "ItemResult"          "item_shinobi_trends_str"
 	  "ItemRequirements"
 	  {
-	    "01" "item_running_shoes;item_leather_gloves;item_belt_of_strength_datadriven"
-	    "02"  "item_running_shoes;item_leather_gloves;item_snake_skin"
-	    "03" "item_running_shoes;item_leather_gloves;item_anbu_cloak"
+	    "01" "item_shinobi_sandals;item_handguards;item_firm_nunchaku"
+	    "02"  "item_shinobi_sandals;item_handguards;item_snake_skin"
+	    "03" "item_shinobi_sandals;item_handguards;item_anbu_cloak"
 	  }
 	}
 	
@@ -7211,7 +7083,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_snake_skin;item_blade_of_agility"
+        "01" "item_snake_skin;item_swift_katana"
     }
   }
 
@@ -7249,6 +7121,23 @@
     }
   }
 
+    "item_recipe_sword_of_nunoboko" 
+  {
+    "ID" "1239"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "ItemRecipe"          "1" //destroyed after combine
+    "ItemCost"            "0" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_sword_of_nunoboko" //the result of combining the ItemRequirements
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "ItemRequirements"
+    {
+        "01" "item_red_sun;item_essence_of_tranquility"
+    }
+  }
+
   "item_recipe_the_fourths_legacy" 
   {
     "ID" "1147"
@@ -7262,7 +7151,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_running_shoes;"
+        "01" "item_shinobi_sandals;"
     }
   }
 
@@ -7280,7 +7169,7 @@
     
     "ItemRequirements"
     {
-        "01" "item_leaf_of_konoha;item_idates_boot"
+        "01" "item_leaf_of_konoha;item_training_weights"
     }
   }
 
@@ -7298,7 +7187,24 @@
 
     "ItemRequirements"
     {
-        "01" "item_essence_of_tranquility;item_silver_watch;item_staff_of_faith;item_leather_gloves"
+        "01" "item_essence_of_tranquility;item_silver_watch;item_staff_of_faith;item_handguards"
+    }
+  }
+
+     "item_recipe_the_will_of_fire" 
+  {
+    "ID" "1195"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "ItemRecipe"          "1" //destroyed after combine
+    "ItemCost"            "0" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_the_will_of_fire" //the result of combining the ItemRequirements
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "ItemRequirements"
+    {
+        "01" "item_essence_of_brutality;item_ring_of_health_datadriven;item_vitality_booster_datadriven"
     }
   }
 
@@ -7332,7 +7238,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_leather_gloves"
+        "01" "item_handguards"
     }
   }
 
@@ -7349,7 +7255,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_vitality_booster_datadriven;item_point_booster_datadriven;item_energy_booster_datadriven"
+        "01" "item_vitality_booster_datadriven;item_point_booster_datadriven;item_chakra_booster"
     }
   }
 
@@ -7366,7 +7272,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_axe_of_strength;item_belt_of_strength_datadriven"
+        "01" "item_vambraces;item_firm_nunchaku"
     }
   }
 
@@ -7556,192 +7462,6 @@
 	        "var_type"              "FIELD_INTEGER"
 	        "block_chance"          "70"
 	      }  
-	    }
-	  }
-	
-	"item_rengeki"
-	  {
-	    "ID"                    "1192"
-	    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AOE"
-	    "BaseClass"             "item_datadriven"
-	    "AbilityTextureName"    "item_rengeki"
-	    "AbilityCooldown"        "10.0"
-	    "AbilityManaCost"        "0"
-	    // Stats
-	    //-------------------------------------------------------------------------------------------------------------
-	
-	    // Item Info
-	    //-------------------------------------------------------------------------------------------------------------
-	    "ItemQuality"         "rare"
-	    "ItemCost"            "0"
-	    "ItemInitialCharges"      "0"
-	    "ItemDroppable"         "1"
-	    "ItemSellable"          "1"
-	    "ItemRequiresCharges"     "0"
-	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	    "MaxUpgradeLevel"       "1"
-	    "ItemBaseLevel"         "1"
-	    "ItemPermanent"         "1"
-	    "ItemInitialCharges"    "10"
-	
-	    //pickup sounds
-	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-	
-	     "precache"
-	      {
-	        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
-	        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
-	        "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
-	        "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
-	        "particle"  "particles/econ/items/brewmaster/brewmaster_offhand_elixir/brewmaster_thunder_clap_elixir.vpcf"
-	      }
-	
-	   "OnSpellStart"
-	  {
-	    "SpendCharge" {}
-	
-	    "FireSound"
-	    {
-	      "EffectName"  "Hero_Brewmaster.ThunderClap"
-	      "Target"    "CASTER"
-	    }
-	    
-	    "FireEffect"
-	    {
-	      "EffectName"        "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
-	      "EffectAttachType"  "follow_origin"
-	      "EffectRadius"    "%radius"
-	      "Target"            "CASTER"
-	    }
-	
-	    "ApplyModifier"
-	    {
-	      "ModifierName"  "modifier_rengeki_slow"
-	      "Target"
-	      {
-	        "Center"  "CASTER"
-	        "Radius"  "%radius"
-	        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
-	        "Types"   "DOTA_UNIT_TARGET_HERO"
-	      }
-	      "Duration"    "%duration"
-	    }
-	    
-	    "ApplyModifier"
-	    {
-	      "ModifierName"  "modifier_rengeki_slow"
-	      "Target"
-	      {
-	        "Center"  "CASTER"
-	        "Radius"  "%radius"
-	        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
-	        "Types"   "DOTA_UNIT_TARGET_BASIC"
-	      }
-	      "Duration"    "%duration_creeps"
-	    }
-	
-	    "Damage"
-	    {
-	      "Target"
-	      {
-	        "Center"    "CASTER"
-	        "Radius"  "%radius"
-	        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
-	        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	      }
-	      "Type"      "DAMAGE_TYPE_MAGICAL"
-	      "Damage"    "%damage"
-	    }
-	  }
-	
-	  "Modifiers"
-	  {
-	
-	        "item_rengeki_modifier"
-	        {
-	           "Passive" "1"
-	           "IsHidden"  "1"
-	           "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-	           "Properties"
-	            {
-	                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
-	                  "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
-	            }
-	        }
-	
-	
-	        "modifier_rengeki_slow"
-	        {
-	          "Passive"     "0"
-	          "IsHidden"      "0"
-	          "IsDebuff"      "1"
-	          "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
-	          "EffectAttachType"  "follow_origin"
-	      
-	          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
-	          "StatusEffectPriority"  "10"
-	
-	          "Properties"
-	          {
-	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow"
-	          }
-	
-	          "OnCreated"
-	          {
-	            "FireSound"
-	            {
-	              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
-	              "Target"    "TARGET"
-	            }     
-	          }   
-	        }
-	  }
-	    // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
-	    {
-	     "01"
-	    {
-	      "var_type"          "FIELD_INTEGER"
-	      "radius"          "250"
-	    }
-	    "02"
-	    {
-	      "var_type"          "FIELD_FLOAT"
-	      "duration"          "3.5"
-	    }
-	    "03"
-	    {
-	      "var_type"          "FIELD_FLOAT"
-	      "duration_creeps"     "3.5"
-	    }
-	    "04"
-	    {
-	      "var_type"          "FIELD_INTEGER"
-	      "damage"          "200"
-	    }
-	    "05"
-	    {
-	      "var_type"          "FIELD_INTEGER"
-	      "ms_slow"       "-30"
-	    }
-	      "06"
-	    {
-	      "var_type"          "FIELD_INTEGER"
-	      "bonus_int"          "10"
-	    }
-	     "07"
-	    {
-	      "var_type"          "FIELD_INTEGER"
-	      "bonus_mana_reg_percentage"          "150"
-	    }
-	    "08"
-	    {
-	      "var_type"          "FIELD_INTEGER"
-	      "attack_speed_slow"       "-30"
-	    }
 	    }
 	  }
 	
@@ -7950,58 +7670,6 @@
       {
         "var_type"        "FIELD_FLOAT"
         "bonus_hp_reg_constant"        "2.0"
-      }
-    }
-  }
-
-   "item_running_shoes"
-  {
-    "ID"              "1105"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"           "item_datadriven"
-    "AbilityTextureName"      "item_running_shoes"
-    "ItemQuality"    "component"
-    // Stats
-    //-------------------------------------------------------------------------------------------------------------
-
-    // Item Info
-    //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"            "450"
-    "ItemInitialCharges"      "0"
-    "ItemDroppable"         "1"
-    "ItemSellable"          "1"
-    "ItemRequiresCharges"     "0"
-    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    
-    "MaxUpgradeLevel"       "1"
-    "ItemBaseLevel"         "1"
-    
-    //pickup sounds
-    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-    
-    "Modifiers"
-    {
-      "item_running_shoes_modifier"
-      {
-        "Passive" "1"
-        "IsHidden"  "1"
-        "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
-        "Properties"
-          {
-              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%bonus_movement_speed_constant"
-          }
-      }
-    }
-    // Special  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "bonus_movement_speed_constant"        "40.0"
       }
     }
   }
@@ -8535,6 +8203,55 @@
     }
   }
 
+    "item_shinobi_sandals"
+  {
+    "ID"              "1105"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"      "item_shinobi_sandals"
+    "ItemQuality"    "component"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "450"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    
+    "Modifiers"
+    {
+      "shinobi_sandals_modifier"
+      {
+        "Passive" "1"
+        "IsHidden"  "1"
+        "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+        "Properties"
+          {
+              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%bonus_movement_speed_constant"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "bonus_movement_speed_constant"        "40.0"
+      }
+    }
+  }
 	"item_shinobi_trends_agi"
 	  {
 	    "ID"              "1142"
@@ -8784,7 +8501,7 @@
 	
   "item_shinobi_uniform"
   {
-    "ID"              "1117"
+    "ID"              "7117"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"           "item_datadriven"
     "AbilityTextureName"   "item_shinobi_uniform"
@@ -9471,6 +9188,118 @@
     }
   }
 
+  "item_swift_katana"
+  {
+    "ID"              "1135"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"   "item_swift_katana"
+    "ItemQuality"     "component"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "1000"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+      "item_swift_katana_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_agi"        "10.0"
+      }
+    }
+  }
+
+  "item_sword_of_nunoboko" 
+  {
+    "ID"                    "1240"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_sword_of_nunoboko"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemQuality"         "artifact"
+    "ItemCost"                "0"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"           "1"
+    "ItemSellable"            "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"         "1"
+    "ItemBaseLevel"           "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "OnOwnerDied"
+    {
+      "RunScript"
+      {
+        "ScriptFile"      "items/DropItemOnDeath.lua"
+        "Function"      "DropItemOnDeath"
+      }
+    }
+
+    "Modifiers"
+    {
+      "item_amenonuhoko_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "bonus_damage"                 "250.0"
+      }
+  }
+}
+
   "item_tentens_spear"
   {
     "ID"              "1112"
@@ -9775,6 +9604,70 @@
 	    }
 	  }
 	
+	"item_the_will_of_fire"
+	  {
+	    "ID"                    "1196"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "item_datadriven"
+	    "AbilityTextureName"    "item_the_will_of_fire"
+	
+	    // Stats
+	    //-------------------------------------------------------------------------------------------------------------
+	
+	    // Item Info
+	    //-------------------------------------------------------------------------------------------------------------
+	    "ItemQuality"         "epic"
+	    "ItemCost"            "0"
+	    "ItemInitialCharges"      "0"
+	    "ItemDroppable"         "1"
+	    "ItemSellable"          "1"
+	    "ItemRequiresCharges"     "0"
+	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	    "MaxUpgradeLevel"       "1"
+	    "ItemBaseLevel"         "1"
+	    
+	    //pickup sounds
+	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+	
+	    "Modifiers"
+	    {
+	      "item_the_will_of_fire_modifier"
+	      {
+	         "Passive" "1"
+	         "IsHidden"  "1"
+	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	         "Properties"
+	          {
+	              "MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_hp"
+	              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+	              "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
+	          }
+	      }
+	    }
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	      "01"
+	      {
+	        "var_type"         "FIELD_FLOAT"
+	        "bonus_hp"         "250.0"
+	      }
+	      "02"
+	      {
+	        "var_type"              "FIELD_FLOAT"
+	        "bonus_str"             "40.0"
+	      }
+	      "03"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "bonus_hp_reg_constant"     "8.0"
+	      }
+	    }
+	  }
+	
 	"item_tobis_mask"
 	{
 	  // General
@@ -9908,6 +9801,58 @@
 	  }
 	}
 	
+  "item_training_weights"
+  {
+    "ID"              "1121"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"   "item_training_weights"
+    "ItemQuality"    "component"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "150"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+      "item_item_training_weights_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "bonus_agi"        "3.0"
+      }
+    }
+  }
+
 	"item_transmutation_gloves"
 	  {
 	    "ID"                      "1150"
@@ -10315,6 +10260,57 @@
 	    }
 	  }
 	
+   "item_vambraces"
+  {
+    "ID"              "1134"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"   "item_vambraces"
+    "ItemQuality"     "component"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "1000"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+      "item_vambraces_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_str"        "10.0"
+      }
+    }
+  }
+
     "item_vitality_booster_datadriven"
   {
     "ID"                      "1162"
@@ -10345,7 +10341,7 @@
     "Modifiers"
     {
 
-      "item_point_booster_datadriven_modifier"
+      "item_vitality_booster_datadriven_modifier"
       {
          "Passive" "1"
          "IsHidden"  "1"

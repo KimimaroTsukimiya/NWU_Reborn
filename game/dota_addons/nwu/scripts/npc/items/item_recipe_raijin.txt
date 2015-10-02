@@ -12,7 +12,7 @@
 
     "ItemRequirements"
     {
-        "01" "item_broadsword_datadriven;item_leather_gloves"
+        "01" "item_broadsword_datadriven;item_handguards"
     }
   }
 

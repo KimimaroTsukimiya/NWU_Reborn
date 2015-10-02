@@ -11,7 +11,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_axe_of_strength;item_belt_of_strength_datadriven"
+        "01" "item_vambraces;item_firm_nunchaku"
     }
   }
 

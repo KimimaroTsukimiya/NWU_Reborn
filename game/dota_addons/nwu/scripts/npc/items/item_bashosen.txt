@@ -1,9 +1,9 @@
-"item_rengeki"
+"item_bashosen"
   {
     "ID"                    "1192"
     "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AOE"
     "BaseClass"             "item_datadriven"
-    "AbilityTextureName"    "item_rengeki"
+    "AbilityTextureName"    "item_bashosen"
     "AbilityCooldown"        "10.0"
     "AbilityManaCost"        "0"
     // Stats
@@ -57,7 +57,7 @@
 
     "ApplyModifier"
     {
-      "ModifierName"  "modifier_rengeki_slow"
+      "ModifierName"  "modifier_bashosen_slow"
       "Target"
       {
         "Center"  "CASTER"
@@ -70,7 +70,7 @@
     
     "ApplyModifier"
     {
-      "ModifierName"  "modifier_rengeki_slow"
+      "ModifierName"  "modifier_bashosen_slow"
       "Target"
       {
         "Center"  "CASTER"
@@ -98,7 +98,7 @@
   "Modifiers"
   {
 
-        "item_rengeki_modifier"
+        "item_bashosen_modifier"
         {
            "Passive" "1"
            "IsHidden"  "1"
@@ -111,7 +111,7 @@
         }
 
 
-        "modifier_rengeki_slow"
+        "modifier_bashosen_slow"
         {
           "Passive"     "0"
           "IsHidden"      "0"

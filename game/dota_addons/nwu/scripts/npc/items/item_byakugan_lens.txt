@@ -1,4 +1,4 @@
-"item_gem_of_truesight_datadriven"
+"item_byakugan_lens"
 {
   // General
   //-------------------------------------------------------------------------------------------------------------
@@ -7,7 +7,7 @@
   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
   "Model"             "models/props_gameplay/gem01.vmdl"
   "Effect"            "particles/generic_gameplay/dropped_gem.vpcf"
-  "AbilityTextureName"      "item_gem_of_truesight_datadriven"
+  "AbilityTextureName"      "item_byakugan_lens"
 
   // Item Info
   //-------------------------------------------------------------------------------------------------------------

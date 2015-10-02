@@ -28,7 +28,7 @@
     "Modifiers"
     {
 
-      "item_point_booster_datadriven_modifier"
+      "item_vitality_booster_datadriven_modifier"
       {
          "Passive" "1"
          "IsHidden"  "1"

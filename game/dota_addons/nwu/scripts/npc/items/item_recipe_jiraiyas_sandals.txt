@@ -11,7 +11,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_running_shoes;item_energy_booster_datadriven"
+        "01" "item_shinobi_sandals;item_chakra_booster"
     }
   }
 

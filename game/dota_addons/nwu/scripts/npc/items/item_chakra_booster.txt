@@ -1,9 +1,9 @@
-   "item_energy_booster_datadriven"
+   "item_chakra_booster"
   {
     "ID"                      "1163"
     "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"               "item_datadriven"
-    "AbilityTextureName"      "item_energy_booster_datadriven"
+    "AbilityTextureName"      "item_chakra_booster"
     "SecretShop" "1"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
@@ -28,7 +28,7 @@
     "Modifiers"
     {
 
-      "item_point_booster_datadriven_modifier"
+      "item_chakra_booster_modifier"
       {
          "Passive" "1"
          "IsHidden"  "1"

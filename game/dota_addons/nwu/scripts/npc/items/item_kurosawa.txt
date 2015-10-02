@@ -1,9 +1,9 @@
-"item_ragnorok"
+"item_kurosawa"
   {
     "ID"                    "1256"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"             "item_datadriven"
-    "AbilityTextureName"    "item_ragnorok"
+    "AbilityTextureName"    "item_kurosawa"
 
     // Stats
     //-------------------------------------------------------------------------------------------------------------

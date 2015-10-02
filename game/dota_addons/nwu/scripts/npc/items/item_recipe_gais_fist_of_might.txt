@@ -11,7 +11,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_leather_gloves"
+        "01" "item_handguards"
     }
   }
 

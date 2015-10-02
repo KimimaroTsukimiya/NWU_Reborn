@@ -11,7 +11,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_rengeki;item_essence_of_nature"
+        "01" "item_bashosen;item_essence_of_nature"
     }
   }
 

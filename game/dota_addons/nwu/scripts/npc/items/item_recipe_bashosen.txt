@@ -1,17 +1,17 @@
-     "item_recipe_onbus_paw" 
+    "item_recipe_bashosen" 
   {
-    "ID" "1195"
+    "ID" "1191"
     "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"           "item_datadriven"
     "ItemRecipe"          "1" //destroyed after combine
-    "ItemCost"            "0" //if its 0, it will combine without needing a recipe.
-    "ItemResult"          "item_onbus_paw" //the result of combining the ItemRequirements
+    "ItemCost"            "425" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_bashosen" //the result of combining the ItemRequirements
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_essence_of_brutality;item_ring_of_health_datadriven;item_vitality_booster_datadriven"
+        "01" "item_silver_watch;item_staff_of_faith"
     }
   }
 
