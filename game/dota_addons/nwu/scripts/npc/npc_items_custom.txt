@@ -9765,41 +9765,38 @@
 	     "OnSpellStart"
 	    {
 	
-	      "ApplyModifier"
+	        "FireSound"
 	      {
-	        "ModifierName"  "modifier_silence"
-	        "Target"    "TARGET"
-	        "Duration"    "%silence_duration"
+	        "EffectName"  "Hero_Silencer.GlobalSilence.Cast"
+	        "Target"    "CASTER"
 	      }
+	
+	      "FireEffect"
+	      {
+	        "EffectName"  "particles/units/heroes/hero_silencer/silencer_global_silence.vpcf"
+	        "EffectAttachType"  "follow_origin"
+	        "Target"    "CASTER"
+	      }
+	
+	          "ApplyModifier"
+	          {
+	            "ModifierName"  "modifier_totsuka_silence"
+	            "Target"  "TARGET"
+	          }
+	
+	          "FireSound"
+	          {
+	            "EffectName"  "Hero_Silencer.GlobalSilence.Effect"
+	            "Target"    "TARGET"
+	          } 
+	           
+	    
 	    }
 	
 	    "Modifiers"
 	    {
 	
-	
-	      "modifier_silence"
-	      {
-	        "IsDebuff"  "1"
-	        "Duration"  "%silence_duration"
-	        
-	        "OnCreated"
-	        { 
-	          "AttachEffect"
-	          {
-	            "Target"    "Target"
-	            "EffectName" "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
-	            "EffectAttachType"  "follow_origin"
-	            "EffectRadius"        "200"
-	          }
-	        }
-	
-	        "States"
-	        {
-	          "MODIFIER_STATE_MUTED"    "MODIFIER_STATE_VALUE_ENABLED"
-	        }
-	      }
-	
-	      "item_the_totsuka_modifier"
+	      "item_totsuka_modifier"
 	      {
 	         "Passive" "1"
 	         "IsHidden"  "1"
@@ -9812,6 +9809,21 @@
 	            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
 	          }
 	      }
+	
+	      "modifier_totsuka_silence"
+	      {
+	        "IsDebuff"  "1"
+	        "Duration"  "%silence_duration"
+	        "IsPurgable"  "1"
+	        "EffectName"  "particles/generic_gameplay/generic_silence.vpcf"
+	        "EffectAttachType"  "follow_overhead"     
+	
+	        "States"
+	        {
+	          "MODIFIER_STATE_SILENCED" "MODIFIER_STATE_VALUE_ENABLED"
+	        }
+	    }
+	
 	    }
 	    // Special  
 	    //-------------------------------------------------------------------------------------------------------------
