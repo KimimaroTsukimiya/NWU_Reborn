@@ -3969,9 +3969,10 @@
 	"item_jashins_amulet"
 	  {
 	    "ID"                    "1218"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_jashins_amulet"
+	    "AbilityCooldown"       "35"
 	
 	    // Stats
 	    //-------------------------------------------------------------------------------------------------------------
@@ -3993,67 +3994,113 @@
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 	
-	    "Modifiers"
+	    "OnSpellStart"
+	  {
+	    "ApplyModifier"
 	    {
-	      "item_jashins_amulet_modifier"
-	      {
-	         "Passive" "1"
-	         "IsHidden"  "1"
-	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-	         "Properties"
-	          {
-	              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-	              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
-	              "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
-	          }
-	      }
-	      "item_jashins_amulet_lifesteal_modifier"
-	      {
+	      "Target"      "CASTER"
+	      "ModifierName"    "modifier_item_jashin_unholy_rage"
+	    }
+	  }
+	  
+	  "Modifiers"
+	  {
+	    "modifier_item_jashin_datadriven"
+	    {
+	      "Passive"     "1"
+	      "IsHidden"      "1"
+	      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
 	      
-	         "Passive" "1"
-	         "IsHidden"  "1"
-	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-	         "Orb"
-	           {
-	              "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
-	              "ProjectileName" "particles\items2_fx\skadi_projectile.vpcf"
-	           }
+	      "Properties"
+	      {
+	        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
+	        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_strength"
+	        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%bonus_armor"
+	      }
+	      
+	      "Orb"
+	      {
+	        "Priority"    "DOTA_ORB_PRIORITY_ITEM"
+	      }
 	
-	        "OnOrbImpact"
+	      "OnOrbImpact"
+	      {
+	        "RunScript"
 	        {
-	           "Lifesteal"
-	          {
-	            "Target"    "ATTACKER"
-	            "LifestealPercent" "%lifesteal_bonus"
-	          }  
-	         } 
+	          "ScriptFile"      "items/jashin.lua"
+	          "Function"        "modifier_item_jashin_on_attack_landed"
+	        }
 	      }
 	    }
+	    "modifier_item_jashin_unholy_rage"
+	    {
+	      "Duration"      "%unholy_duration"
+	      "Passive"     "0"
+	      "IsHidden"      "0"
+	    }
+	    "modifier_item_jashin_lifesteal"
+	    {
+	      "Passive"     "0"
+	      "IsHidden"      "1"
+	      
+	      "OnDealDamage"
+	      {
+	        "Lifesteal"
+	        {
+	          "Target"      "ATTACKER"
+	          "LifestealPercent"  "%lifesteal_percent"
+	        }
+	      }
+	    }
+	    "modifier_item_jashin_unholy_rage_lifesteal"
+	    {
+	      "Passive"     "0"
+	      "IsHidden"      "1"
+	      
+	      "OnDealDamage"
+	      {
+	        "Lifesteal"
+	        {
+	          "Target"      "ATTACKER"
+	          "LifestealPercent"  "%unholy_lifesteal_percent"
+	        }
+	      }
+	    }
+	  }
 	    // Special  
 	    //-------------------------------------------------------------------------------------------------------------
 	    "AbilitySpecial"
 	    {
-	      "01"
+	        "01"
 	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "bonus_damage"              "20.0"
+	        "var_type"          "FIELD_INTEGER"
+	        "bonus_damage"        "20"
 	      }
 	      "02"
 	      {
-	        "var_type"                   "FIELD_FLOAT"
-	        "bonus_str"                  "25.0"
+	        "var_type"          "FIELD_INTEGER"
+	        "bonus_strength"      "25"
 	      }
-	       "03"
+	      "03"
 	      {
-	        "var_type"                    "FIELD_FLOAT"
-	        "bonus_armor"                 "5.0"
+	        "var_type"          "FIELD_INTEGER"
+	        "bonus_armor"       "5"
 	      }
 	      "04"
 	      {
-	        "var_type"                    "FIELD_FLOAT"
-	        "lifesteal_bonus"             "25.0"
+	        "var_type"          "FIELD_INTEGER"
+	        "lifesteal_percent"     "25"
 	      }
-	
+	      "05"
+	      {
+	        "var_type"          "FIELD_INTEGER"
+	        "unholy_lifesteal_percent"  "175"
+	      }
+	      "06"
+	      {
+	        "var_type"          "FIELD_FLOAT"
+	        "unholy_duration"     "3.5"
+	      }
 	    }
 	  }
 	
