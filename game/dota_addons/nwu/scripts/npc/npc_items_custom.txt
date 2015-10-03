@@ -4397,10 +4397,11 @@
 	"item_kaguya_armor"
 	  {
 	    "ID"                    "1202"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIAT"
 	    "BaseClass"             "item_datadriven"
 	    "AbilityTextureName"    "item_kaguya_armor"
-	
+	    "AbilityCooldown"       "25"
+	    "AbilityManaCost"       "25"
 	    // Stats
 	    //-------------------------------------------------------------------------------------------------------------
 	
@@ -4420,6 +4421,21 @@
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+	
+	     "OnSpellStart"
+	      {
+	          "ApplyModifier"
+	          {
+	                "Target"                        "CASTER"
+	                "ModifierName"                  "modifier_return"
+	          }
+	      }
+	
+	    "precache"
+	    {
+	      "particle" "particles/units/heroes/hero_centaur/centaur_return.vpcf"
+	
+	    }
 	
 	    "Modifiers"
 	    {
@@ -4442,6 +4458,31 @@
 	         "IsHidden"  "0"
 	         
 	      }
+	
+	
+	      "modifier_return"
+	    { 
+	      "Duration"                      "%duration"
+	      "OnAttacked"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "items/kaguya_armor.lua"
+	          "Function"    "Return"
+	        }
+	        "FireEffect"
+	        {
+	          "EffectName"    "particles/units/heroes/hero_centaur/centaur_return.vpcf"
+	          "EffectAttachType"  "attach_hitloc"
+	          "Target"      "CASTER"
+	          "ControlPointEntities"
+	          {
+	            "CASTER"    "attach_hitloc"
+	            "ATTACKER"    "attach_hitloc"
+	          }
+	        }
+	      } 
+	    }
 	    }
 	    // Special  
 	    //-------------------------------------------------------------------------------------------------------------
@@ -4465,7 +4506,7 @@
 	      "04"
 	      {
 	        "var_type"                 "FIELD_FLOAT"
-	        "duration"                "4.5"  //TODO made it up check wc3 reference
+	        "duration"                "3.5"
 	      }
 	    }
 	  }
@@ -9751,7 +9792,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    "ItemAliases"           "orchid malevolence;silence;int;intelligence;cast;dot;"
+	    "ItemAliases"           "orchid malevolence;silence;int;intelligence;cast;"
 	    "precache"
 	    {
 	      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
@@ -9854,11 +9895,7 @@
 	        "var_type"                        "FIELD_FLOAT"
 	        "silence_duration"              "5.0"
 	      }
-	       "06"
-	      {
-	        "var_type"                        "FIELD_FLOAT"
-	        "silence_damage_percent"              "5.0"
-	      }
+	
 	    }
 	  }
 	

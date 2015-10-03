@@ -3,7 +3,7 @@
     "ID"                    "1198"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"             "item_datadriven"
-    "AbilityTextureName"    "item_onbus_paw"
+    "AbilityTextureName"    "item_demon_booster"
 
     // Stats
     //-------------------------------------------------------------------------------------------------------------
