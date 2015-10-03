@@ -1,2 +1,3 @@
-# NWU-Reborn-Items
-Item Shop for the upcoming Dota2 Addon: Naruto Wars Unlimited Reborn
+# NWU Reborn Version
+
+Dota2 Reborn Naruto MOBA.
