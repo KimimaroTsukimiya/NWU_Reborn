@@ -30,3 +30,48 @@ InnerException.toString(): System.DllNotFoundException: Die DLL "git2-4d6362b": 
    bei LibGit2Sharp.Core.NativeMethods.LibraryLifetimeObject..ctor()
    bei LibGit2Sharp.Core.NativeMethods..cctor()
 
+
+
+NEW ENTRY: 03/10/2015, 22:52:55
+ex.toString(): System.TypeInitializationException: Se produjo una excepción en el inicializador de tipo de 'LibGit2Sharp.Core.NativeMethods'. ---> System.DllNotFoundException: No se puede cargar el archivo DLL 'git2-4d6362b': No se puede encontrar el módulo especificado. (Excepción de HRESULT: 0x8007007E)
+   en LibGit2Sharp.Core.NativeMethods.git_libgit2_init()
+   en LibGit2Sharp.Core.NativeMethods.LibraryLifetimeObject..ctor()
+   en LibGit2Sharp.Core.NativeMethods..cctor()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en LibGit2Sharp.Core.NativeMethods.RemoveHandle()
+   en LibGit2Sharp.Core.NativeMethods.LibraryLifetimeObject.Finalize()
+InnerException.toString(): System.DllNotFoundException: No se puede cargar el archivo DLL 'git2-4d6362b': No se puede encontrar el módulo especificado. (Excepción de HRESULT: 0x8007007E)
+   en LibGit2Sharp.Core.NativeMethods.git_libgit2_init()
+   en LibGit2Sharp.Core.NativeMethods.LibraryLifetimeObject..ctor()
+   en LibGit2Sharp.Core.NativeMethods..cctor()
+
+
+
+NEW ENTRY: 04/10/2015, 0:36:43
+ex.toString(): System.TypeInitializationException: Se produjo una excepción en el inicializador de tipo de 'LibGit2Sharp.Core.NativeMethods'. ---> System.DllNotFoundException: No se puede cargar el archivo DLL 'git2-4d6362b': No se puede encontrar el módulo especificado. (Excepción de HRESULT: 0x8007007E)
+   en LibGit2Sharp.Core.NativeMethods.git_libgit2_init()
+   en LibGit2Sharp.Core.NativeMethods.LibraryLifetimeObject..ctor()
+   en LibGit2Sharp.Core.NativeMethods..cctor()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en LibGit2Sharp.Core.NativeMethods.RemoveHandle()
+   en LibGit2Sharp.Core.NativeMethods.LibraryLifetimeObject.Finalize()
+InnerException.toString(): System.DllNotFoundException: No se puede cargar el archivo DLL 'git2-4d6362b': No se puede encontrar el módulo especificado. (Excepción de HRESULT: 0x8007007E)
+   en LibGit2Sharp.Core.NativeMethods.git_libgit2_init()
+   en LibGit2Sharp.Core.NativeMethods.LibraryLifetimeObject..ctor()
+   en LibGit2Sharp.Core.NativeMethods..cctor()
+
+
+
+NEW ENTRY: 04/10/2015, 0:37:46
+ex.toString(): System.TypeInitializationException: Se produjo una excepción en el inicializador de tipo de 'LibGit2Sharp.Core.NativeMethods'. ---> System.DllNotFoundException: No se puede cargar el archivo DLL 'git2-4d6362b': No se puede encontrar el módulo especificado. (Excepción de HRESULT: 0x8007007E)
+   en LibGit2Sharp.Core.NativeMethods.git_libgit2_init()
+   en LibGit2Sharp.Core.NativeMethods.LibraryLifetimeObject..ctor()
+   en LibGit2Sharp.Core.NativeMethods..cctor()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en LibGit2Sharp.Core.NativeMethods.RemoveHandle()
+   en LibGit2Sharp.Core.NativeMethods.LibraryLifetimeObject.Finalize()
+InnerException.toString(): System.DllNotFoundException: No se puede cargar el archivo DLL 'git2-4d6362b': No se puede encontrar el módulo especificado. (Excepción de HRESULT: 0x8007007E)
+   en LibGit2Sharp.Core.NativeMethods.git_libgit2_init()
+   en LibGit2Sharp.Core.NativeMethods.LibraryLifetimeObject..ctor()
+   en LibGit2Sharp.Core.NativeMethods..cctor()
+
