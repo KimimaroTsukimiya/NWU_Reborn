@@ -7,8 +7,8 @@ CVModel CVModel_0
 		[
 			CVmesh
 			{
-				string m_meshName = "zabuza"
-				string m_meshFile = "models/zabuza/zabuza.fbx"
+				string m_meshName = "jiroubo"
+				string m_meshFile = "models/jiroubo/jiroubo.fbx"
 				string m_materialSearchPath = ""
 				bool m_bSkinParentedObjects = true
 				bool m_bLegacySkinParentedTransforms = false
@@ -74,7 +74,7 @@ CVModel CVModel_0
 	]
 	CVNodeMaterialGroupListReference m_pMaterialGroupList = CVNodeMaterialGroupListReference
 	{
-		NodeMaterialGroupList_t* m_pObject = &NodeMaterialGroupList_t_0
+		NodeMaterialGroupList_t* m_pObject = NULL
 		string m_sFileName = ""
 	}
 	CVMeshGroupListReference m_pMeshGroupList = CVMeshGroupListReference
@@ -137,12 +137,12 @@ CVattachmentList CVattachmentList_0
 	[
 		CVattachment
 		{
-			string m_name = "attach_root"
+			string m_name = "attach_origin"
 			CVattachmentInfluence[] m_influences = 
 			[
 				CVattachmentInfluence
 				{
-					string m_influenceName = "Origin"
+					string m_influenceName = "m3bone_root"
 					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
 					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
 					float m_flWeight = 1.000000
@@ -157,7 +157,7 @@ CVattachmentList CVattachmentList_0
 			[
 				CVattachmentInfluence
 				{
-					string m_influenceName = "Chest"
+					string m_influenceName = "bone_chest"
 					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
 					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
 					float m_flWeight = 1.000000
@@ -172,7 +172,7 @@ CVattachmentList CVattachmentList_0
 			[
 				CVattachmentInfluence
 				{
-					string m_influenceName = "Sword"
+					string m_influenceName = "bone_handR"
 					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
 					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
 					float m_flWeight = 1.000000
@@ -209,10 +209,10 @@ CVanimGroup CVanimGroup_0
 	[
 		CVanim
 		{
-			string m_Animationname = "zabuza_animations"
-			string m_Filepath = "models/zabuza/zabuza_animations.FBX"
+			string m_Animationname = "jiroub_animations"
+			string m_Filepath = "models/jiroubo/jiroub_animations.FBX"
 			int m_nStartframe = 0
-			int m_nEndframe = 2874
+			int m_nEndframe = 1374
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -262,10 +262,10 @@ CVanimGroup CVanimGroup_0
 		},
 		CVanim
 		{
-			string m_Animationname = "zabuza_walk"
-			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
-			int m_nStartframe = 125
-			int m_nEndframe = 145
+			string m_Animationname = "jiroubo_run"
+			string m_Filepath = "models/jiroubo/jiroub_animations.fbx"
+			int m_nStartframe = 219
+			int m_nEndframe = 241
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -319,67 +319,10 @@ CVanimGroup CVanimGroup_0
 		},
 		CVanim
 		{
-			string m_Animationname = "zabuza_stand"
-			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
-			int m_nStartframe = 33
-			int m_nEndframe = 90
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = true
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_IDLE"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-		},
-		CVanim
-		{
-			string m_Animationname = "zabuza_attack"
-			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
-			int m_nStartframe = 250
-			int m_nEndframe = 285
+			string m_Animationname = "jiroubo_attack"
+			string m_Filepath = "models/jiroubo/jiroub_animations.fbx"
+			int m_nStartframe = 53
+			int m_nEndframe = 84
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -433,124 +376,10 @@ CVanimGroup CVanimGroup_0
 		},
 		CVanim
 		{
-			string m_Animationname = "zabuza_stand2"
-			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
-			int m_nStartframe = 157
-			int m_nEndframe = 185
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = true
-				bool m_bSmoothLoop = true
-				int m_nSmoothLoopStart = 155
-				int m_nSmoothLoopEnd = 183
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_ATTACK_EVENT"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-		},
-		CVanim
-		{
-			string m_Animationname = "zabuza_death"
-			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
-			int m_nStartframe = 215
-			int m_nEndframe = 236
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_DIE"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-		},
-		CVanim
-		{
-			string m_Animationname = "zabuza_attack2"
-			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
-			int m_nStartframe = 315
-			int m_nEndframe = 350
+			string m_Animationname = "jiroubo_attack2"
+			string m_Filepath = "models/jiroubo/jiroub_animations.fbx"
+			int m_nStartframe = 94
+			int m_nEndframe = 125
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -604,10 +433,10 @@ CVanimGroup CVanimGroup_0
 		},
 		CVanim
 		{
-			string m_Animationname = "zabuza_attack3"
-			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
-			int m_nStartframe = 375
-			int m_nEndframe = 406
+			string m_Animationname = "jiroubo_death"
+			string m_Filepath = "models/jiroubo/jiroub_animations.fbx"
+			int m_nStartframe = 254
+			int m_nEndframe = 278
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -625,7 +454,11 @@ CVanimGroup CVanimGroup_0
 			bool m_bDisable = false
 			CActivity[] m_Activities = 
 			[
-				
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_DIE"
+					int m_nWeight = 1
+				}
 			]
 			CAnimationEvent[] m_AnimationEvents = 
 			[
@@ -657,10 +490,124 @@ CVanimGroup CVanimGroup_0
 		},
 		CVanim
 		{
-			string m_Animationname = "zabuza_spell1"
-			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
-			int m_nStartframe = 410
-			int m_nEndframe = 440
+			string m_Animationname = "jiroubo_stand"
+			string m_Filepath = "models/jiroubo/jiroub_animations.fbx"
+			int m_nStartframe = 11
+			int m_nEndframe = 43
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = true
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_IDLE"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+		},
+		CVanim
+		{
+			string m_Animationname = "jiroubo_spell"
+			string m_Filepath = "models/jiroubo/jiroub_animations.fbx"
+			int m_nStartframe = 146
+			int m_nEndframe = 178
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_CAST_ABILITY_2"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+		},
+		CVanim
+		{
+			string m_Animationname = "jiroubo_spell2"
+			string m_Filepath = "models/jiroubo/jiroub_animations.fbx"
+			int m_nStartframe = 53
+			int m_nEndframe = 84
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -682,11 +629,6 @@ CVanimGroup CVanimGroup_0
 				{
 					string m_Name = "ACT_DOTA_CAST_ABILITY_1"
 					int m_nWeight = 1
-				},
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_CAST_ABILITY_4"
-					int m_nWeight = 1
 				}
 			]
 			CAnimationEvent[] m_AnimationEvents = 
@@ -719,63 +661,10 @@ CVanimGroup CVanimGroup_0
 		},
 		CVanim
 		{
-			string m_Animationname = "zabuza_spell2"
-			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
-			int m_nStartframe = 536
-			int m_nEndframe = 552
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-		},
-		CVanim
-		{
-			string m_Animationname = "zabuza_spawn"
-			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
+			string m_Animationname = "jiroubo_spawn"
+			string m_Filepath = "models/jiroubo/jiroub_animations.fbx"
 			int m_nStartframe = 0
-			int m_nEndframe = 23
+			int m_nEndframe = 20
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -826,34 +715,64 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+		},
+		CVanim
+		{
+			string m_Animationname = "jiroubo_ulti"
+			string m_Filepath = "models/jiroubo/jiroub_animations.fbx"
+			int m_nStartframe = 146
+			int m_nEndframe = 178
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
 		}
 	]
 	string[] m_sScripts = 
 	[
 		
-	]
-}
-
-NodeMaterialGroupList_t NodeMaterialGroupList_t_0
-{
-	NodeMaterialGroup_t[] m_materialGroups = 
-	[
-		NodeMaterialGroup_t
-		{
-			string m_name = "default"
-			string[] m_materialList = 
-			[
-				"model1.vmat"
-			]
-		},
-		NodeMaterialGroup_t
-		{
-			string m_name = ""
-			string[] m_materialList = 
-			[
-				
-			]
-		}
 	]
 }
 
@@ -863,8 +782,8 @@ CVMaterialRemapList CVMaterialRemapList_0
 	[
 		CVMaterialRemap
 		{
-			string m_sSearchMaterial = "model1.vmat"
-			string m_sReplaceMaterial = "materials/zabuza/zabuza.vmat"
+			string m_sSearchMaterial = "cilang1.vmat"
+			string m_sReplaceMaterial = "materials/jiroubo/jiroubo.vmat"
 		}
 	]
 }
