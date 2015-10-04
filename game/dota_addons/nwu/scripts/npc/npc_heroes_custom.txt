@@ -4,6 +4,7 @@
 		{
 		  "override_hero"   "npc_dota_hero_bloodseeker"
 		  "Ability1"        "zabuza_demonic_intent_datadriven" 
+		  "Ability2"        "windrunner_powershot_datadriven" 
 		  "Model" 			"models/zabuza/zabuza.vmdl"
 	 	  "ItemSlots"
 	  	  { }
