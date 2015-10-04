@@ -1,0 +1,33 @@
+"zabuza_demonic_intent_datadriven"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"              "ability_datadriven"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    //"AbilityTextureName"     "spellicon"
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "bonus_damage_percent" "5 10 15 20"
+        }
+    }
+
+    "Modifiers"
+    {
+        "modifier_demonic_intent_buff_datadriven"
+        {
+            "IsBuff" "1"
+            "Passive" "1"
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE" "%bonus_damage_percent"
+            }
+        }
+    }
+}

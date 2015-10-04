@@ -59,14 +59,11 @@
           }
       }
   }
-  // Rewrite of the Windrunner Powershot
-  // Author: kritth, Pizzalol
-  // Date: 01.10.2015.
-  "windrunner_powershot_datadriven"
+  "zabuza_water_dragon_datadriven"
   {
   	// General
   	//-------------------------------------------------------------------------------------------------------------
-  	"BaseClass"				"ability_datadriven"
+  	"BaseClass"						"ability_datadriven"
   	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
   	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
   	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -78,11 +75,11 @@
   	// Casting
   	//-------------------------------------------------------------------------------------------------------------
   	"AbilityCastRange"				"2600"
+  	"AbilityCastPoint"				"0.2"
   	
-  	// Time		
+  	// Time
   	//-------------------------------------------------------------------------------------------------------------
   	"AbilityCooldown"				"9.0 9.0 9.0 9.0"
-  	"AbilityChannelTime"			"1.0 1.0 1.0 1.0"
   
   	// Damage.
   	//-------------------------------------------------------------------------------------------------------------
@@ -90,7 +87,7 @@
   
   	// Cost
   	//-------------------------------------------------------------------------------------------------------------
-  	"AbilityManaCost"				"90 100 110 120"
+  	"AbilityManaCost"				"10 10 10 10"
   
   	// Special
   	//-------------------------------------------------------------------------------------------------------------
@@ -152,6 +149,31 @@
   			"var_type"				"FIELD_FLOAT"
   			"charge_time"			"1.0"
   		}
+  		"12"
+  		{
+  			"var_type" "FIELD_FLOAT"
+  			"bonus_movement_speed" "-10 -15 -20 -25"
+  		}
+  		"13"
+  		{
+  			"var_type" "FIELD_FLOAT"
+  			"half_bonus_movement_speed" "-5 -7 -10 -12"
+  		}
+  		"14"
+  		{
+  			"var_type" "FIELD_FLOAT"
+  			"dps_interval" "1.0"
+  		}
+  		"15"
+  		{
+  			"var_type" "FIELD_FLOAT"
+  			"dps_damage" "10 30 50 70"
+  		}
+  		"16"
+  		{
+  			"var_type" "FIELD_FLOAT"
+  			"dps_duration" "3"
+  		}
   	}
   	
   	// Data driven
@@ -174,30 +196,10 @@
   		"RunScript"
   		{
   			"ScriptFile"			"heroes/zabuza/zabuza_water_dragon.lua"
-  			"Function"				"powershot_initialize"
+  			"Function"				"start_traverse"
   			"Target"				"POINT"
   		}
-  		
-  		"ApplyModifier"
-  		{
-  			"Target"				"CASTER"
-  			"ModifierName"			"modifier_powershot_charge_datadriven"
-  		}		
-  	}
-  	
-  	"OnChannelFinish"
-  	{
-  		"RemoveModifier"
-  		{
-  			"Target"				"CASTER"
-  			"ModifierName"			"modifier_powershot_charge_datadriven"
-  		}
-  		
-  		"RunScript"
-  		{
-  			"ScriptFile"			"heroes/zabuza/zabuza_water_dragon.lua"
-  			"Function"				"powershot_start_traverse"
-  		}
+  			
   	}
   	
   	"OnProjectileHitUnit"
@@ -207,35 +209,62 @@
   		"RunScript"
   		{
   			"ScriptFile"			"heroes/zabuza/zabuza_water_dragon.lua"
-  			"Function"				"powershot_register_unit"
+  			"Function"				"register_unit"
   		}
   	}
   	
   	"Modifiers"
   	{
-  		"modifier_powershot_charge_datadriven"
+  		"modifier_zabuza_water_dragon_slow_debuf"
   		{
-  			"Duration"				"%charge_time"
+  			"IsDebuff"			"1"
+  			"Duration"			"%dps_duration"
   		
-  			"OnCreated"
+  			//"EffectName"		"particle_name"
+  			//"EffectAttachType"	"follow_origin"
+  		
+  			"Properties"
   			{
-  				"RunScript"
-  				{
-  					"ScriptFile"	"heroes/zabuza/zabuza_water_dragon.lua"
-  					"Function"		"powershot_charge"
-  				}
+  			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_movement_speed" 
   			}
-  		
-  			"ThinkInterval"			"%charge_interval"
+  
+  			"ThinkInterval" 	"%dps_interval"
   			"OnIntervalThink"
   			{
   				"RunScript"
   				{
-  					"ScriptFile"	"heroes/zabuza/zabuza_water_dragon.lua"
-  					"Function"		"powershot_charge"
+  					"ScriptFile"			"heroes/zabuza/zabuza_water_dragon.lua"
+  					"Function"				"zabuza_water_dragon_damage_on_interval_think"
   				}
   			}
+  
   		}
+  
+  		"modifier_zabuza_water_dragon_half_slow_debuf"
+  		{
+  			"IsDebuff"			"1"
+  			"Duration"			"3"
+  		
+  			//"EffectName"		"particle_name"
+  			//"EffectAttachType"	"follow_origin"
+  		
+  			"Properties"
+  			{
+  				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%half_bonus_movement_speed" 
+  			}
+  
+  			"ThinkInterval" 	"%dps_interval"
+  			"OnIntervalThink"
+  			{
+  				"RunScript"
+  				{
+  					"ScriptFile"			"heroes/zabuza/zabuza_water_dragon.lua"
+  					"Function"				"zabuza_water_dragon_damage_on_interval_think"
+  				}
+  			}
+  
+  		}
+  
   	}
   }
 }
