@@ -28,6 +28,7 @@
 		  "Ability1"        "raikage_raiton_no_yoroi"
 		  "Ability2"        "raikage_raigyaku_suihei" 
 		  "Ability3"        "raikage_lariat"  
+		  "Ability4"        "raikage_raiga_no_bomu"
 		  "Model" 			"models/raikage/raikage.vmdl"
 	 	  "ItemSlots"
 	  	  { }
