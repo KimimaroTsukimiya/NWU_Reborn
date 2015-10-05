@@ -1,0 +1,143 @@
+"raikage_raigyaku_suihei"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"        "sandking_epicenter" //TODO
+
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "0"
+    "AbilityDuration"               "0"
+
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "15"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "0"
+
+
+     "precache"
+    {
+      "particle"  "particles/generic_gameplay/generic_purge.vpcf"
+    }
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_FLOAT"
+            "str_ratio_damage" "0.5 0.6 0.7 0.8"
+        }
+        "02"
+        {
+            "var_type" "FIELD_FLOAT"
+            "damage_reduction" "15.0 20.0 25.0 30.0"
+        }
+        "03"
+        {
+            "var_type" "FIELD_FLOAT"
+            "aoe"       "250.0"
+        }
+        "04"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "damage_reduction_duration" "20"
+        }
+    }
+
+
+    "Modifiers"
+    {
+        "modifier_raigyaku"
+        {
+            "Passive"                   "1"
+            "IsHidden"                  "1"
+            "IsPurgable"                "0"
+            
+            "OnCreated"
+            {
+                "FireEffect"
+                {
+                    //TODO find a fitting sound
+                    //"Target"            "CASTER" 
+                    //"EffectName"        "Hero_Kunkaa.Tidebringer"
+                }
+            
+                "AttachEffect"
+                {
+                    //TODO find a fitting effect
+                    //"Target"            "CASTER" 
+                    //"EffectName"        "particles/units/heroes/hero_kunkka/kunkka_weapon_tidebringer.vpcf"
+                    //"EffectAttachType"  "start_at_customorigin"
+                    //"ControlPointEntities"
+                    //{
+                    //    "CASTER"        "attach_sword"
+                    //    "CASTER"        "attach_sword"
+                    //    "CASTER"        "attach_sword"
+                    //}
+                }
+            }
+
+            "OnAttackLanded"
+            {
+                "FireSound"
+                {
+                    // TODO find a fitting sound
+                    //"Target"            "TARGET"
+                    //"EffectName"        "Hero_Kunkka.Tidebringer.Attack"
+                }
+            
+              
+                "RunScript"
+                {
+                    "ScriptFile"    "heroes/raikage/raigyaku_suihei.lua"
+                    "Function"      "ReleaseAoeDamage"
+                }
+                        
+                "RunScript"
+                {
+                    "ScriptFile"    "heroes/raikage/raigyaku_suihei.lua"
+                    "Function"      "SuiheiResetCooldown"
+                }
+
+                
+            }
+            
+        }
+
+        //TODO seems to no work yet, modifier is applied but damage reduction has to be retested
+        "modifier_raigyaku_debuff"
+      {
+          "Duration"        "%damage_reduction_duration"     
+          "IsDebuff"        "1"
+          "IsPurgable"      "0"
+          "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+
+          "OnAttackLanded"
+          {
+            "RunScript"
+            {
+                "ScriptFile"    "heroes/raikage/raigyaku_suihei.lua"
+                "Function"        "AddSuiheiDebuff"
+            }
+          }
+
+
+      }
+
+
+    }
+
+}

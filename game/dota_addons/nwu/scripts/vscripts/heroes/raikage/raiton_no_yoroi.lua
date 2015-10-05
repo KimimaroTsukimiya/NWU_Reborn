@@ -21,7 +21,7 @@ function ShieldAbsorb( event )
 	local reducedDamage = damage / 100 * damageReductionPercent
 	local unit = event.unit
 	local ability = event.ability
-	print("Damagetype "..damage:GetAbilityDamageType())
+
 	-- Track how much damage was already absorbed by the shield
 	local shield_remaining = unit.RaitonShield
 	print("Shield Remaining: "..shield_remaining)
