@@ -14,43 +14,20 @@
         "01"
         { 
             "var_type"  "FIELD_INTEGER"
-            "bonus_damage" "6 9 12 15"
-        }
-        "02"
-        {
-            "var_type" "FIELD_FLOAT"
-            "duration" "4.0"
+            "bonus_damage_percent" "5 10 15 20"
         }
     }
 
     "Modifiers"
     {
-
-        "modifier_demonic_intent_datadriven"
-        {
-            "Passive" "1"
-            "IsHidden" "1" // TODO: check
-
-            "OnAttackLanded"
-            {
-                "RunScript"
-                {
-                    "ScriptFile" "heroes/zabuza/demonic_intent.lua"
-                    "Function" "demonic_intent_attack"
-                }
-            }
-        }
-
         "modifier_demonic_intent_buff_datadriven"
         {
             "IsBuff" "1"
-            "Duration" "%duration"
-            "IsHidden" "1"
+            "Passive" "1"
             "Properties"
             {
-                "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"  "%bonus_damage"
+                "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE" "%bonus_damage_percent"
             }
         }
     }
-
 }
