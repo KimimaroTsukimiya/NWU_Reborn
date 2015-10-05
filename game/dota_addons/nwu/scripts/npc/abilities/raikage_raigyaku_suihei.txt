@@ -53,7 +53,7 @@
         "04"
         { 
             "var_type"  "FIELD_INTEGER"
-            "damage_reduction_duration" "20"
+            "damage_reduction_duration" "20"//TODO check nwu value
         }
     }
 

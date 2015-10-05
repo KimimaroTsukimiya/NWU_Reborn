@@ -4,6 +4,7 @@ require('internal/util')
 require('gamemode')
 require('libraries/popups')
 require('libraries/utils')
+require('libraries/animations')
 
 function Precache( context )
 --[[

@@ -26,7 +26,8 @@
 		{
 		  "override_hero"   "npc_dota_hero_sand_king"
 		  "Ability1"        "raikage_raiton_no_yoroi"
-		  "Ability2"        "raikage_raigyaku_suihei"  
+		  "Ability2"        "raikage_raigyaku_suihei" 
+		  "Ability3"        "raikage_lariat"  
 		  "Model" 			"models/raikage/raikage.vmdl"
 	 	  "ItemSlots"
 	  	  { }
