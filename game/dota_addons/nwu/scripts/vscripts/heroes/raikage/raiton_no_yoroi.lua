@@ -14,12 +14,14 @@ end
 
 function ShieldAbsorb( event )
 	-- Variables
+
+	
 	local damage = event.DamageTaken --Check if it only takes physical damage as it should
 	local damageReductionPercent = event.ability:GetLevelSpecialValueFor("physical_damage_reduce_percent", event.ability:GetLevel() - 1 )
 	local reducedDamage = damage / 100 * damageReductionPercent
 	local unit = event.unit
 	local ability = event.ability
-	
+	print("Damagetype "..damage:GetAbilityDamageType())
 	-- Track how much damage was already absorbed by the shield
 	local shield_remaining = unit.RaitonShield
 	print("Shield Remaining: "..shield_remaining)
