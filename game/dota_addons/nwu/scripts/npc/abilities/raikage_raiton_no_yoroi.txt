@@ -1,0 +1,196 @@
+"raikage_raiton_no_yoroi"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"        "sandking_sand_storm" //TODO
+
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "0"
+    "AbilityDuration"               "20.0 40.0 60.0 80.0"
+
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "20"
+    "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "75 80 85 90"
+
+
+     "precache"
+    {
+      "particle"  "particles/generic_gameplay/generic_purge.vpcf"
+    }
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "physical_damage_reduce_percent" "10 15 20 25"
+        }
+        "02"
+        {
+            "var_type" "FIELD_FLOAT"
+            "duration" "10.0"
+        }
+        "03"
+        {
+            "var_type" "FIELD_FLOAT"
+            "charge_damage_amount" "350.0"
+        }
+        "04"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "release_aoe" "250"
+        }
+        "05"
+        {
+            "var_type" "FIELD_FLOAT"
+            "release_purge_duration" "0.25"
+        }
+        "06"
+        {
+            "var_type" "FIELD_FLOAT"
+            "release_damage" "50.0"
+        }
+        "07"
+        {
+            "var_type" "FIELD_FLOAT"
+            "release_ms_slow" "-50.0" 
+        }
+    }
+
+    "OnSpellStart"
+    {           
+
+        "RunScript"
+        {
+            "ScriptFile"    "heroes/raikage/raiton_no_yoroi.lua"
+            "Function"      "Shield"
+        }
+
+        "FireSound"
+        {
+            //TODO Lighting charge sound at start
+        }
+        
+        "ApplyModifier"
+        {
+            "ModifierName"          "modifier_raiton_no_yoroi_charge"
+            "Target"                "CASTER"
+        }
+        
+        "FireSound"
+        {
+            //TODO loop sound during charge?
+        }
+    }
+
+
+    "Modifiers"
+    {
+        "modifier_raiton_no_yoroi_charge"
+        {
+            "IsBuff"            "1"
+            "Duration"          "%duration"
+        
+            "ThinkInterval"     "0.03"
+
+            "OnIntervalThink"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"    "heroes/raikage/raiton_no_yoroi.lua"
+                    "Function"      "ShieldHealth"
+                }
+            }
+
+            "OnTakeDamage"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"    "heroes/raikage/raiton_no_yoroi.lua"
+                    "Function"      "ShieldAbsorb"
+                    "DamageTaken"   "%attack_damage"
+                }
+            }
+
+            "OnDestroy"
+            {
+               // "AttachEffect" TODO add particle for releasing the charge
+               // {
+               //     "EffectName"        "particles/units/heroes/hero_abaddon/abaddon_aphotic_shield_explosion.vpcf"
+               //     "EffectAttachType"  "follow_origin"
+               //     "Target"            "TARGET"
+               //     "ControlPointEntities"
+               //     {
+               //         "TARGET"    "attach_origin"
+               //         "TARGET"    "attach_origin"
+               //     }
+               // }
+
+                "RunScript"
+                {
+                    "ScriptFile"    "heroes/raikage/raiton_no_yoroi.lua"
+                    "Function"      "EndShieldParticle"
+                }
+
+                "Damage"
+                {
+                    "Target"
+                    {
+                        "Center"            "TARGET"
+                        "Radius"            "%release_aoe"
+                        "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                    }
+                    "Type"           "DAMAGE_TYPE_MAGICAL"
+                    "Damage"         "%release_damage"
+                }
+
+               "ApplyModifier"
+                {
+                  "ModifierName"        "chakra_smasher_purge"
+                  "Target"              "TARGET"
+                  "Duration"            "%release_purge_duration"
+                }
+
+                 "FireEffect"
+                {
+                    "Target"
+                    {
+                        "Center"            "TARGET"
+                        "Radius"            "%release_aoe"
+                        "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                    }
+                    "EffectName"        "particles/generic_gameplay/generic_purge.vpcf"
+                    "EffectAttachType"  "attach_hitloc"
+                }
+             }
+        }
+
+          "chakra_smasher_purge"
+              {
+                "IsDebuff"    "1"
+                "Properties"
+                {
+                  "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%release_ms_slow"
+                }
+              }
+    }
+
+}
