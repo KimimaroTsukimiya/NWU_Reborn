@@ -2,9 +2,8 @@
 *.vpcf_c
 *.vsnd_c
 *.vsndevts_c
-
 *.vanim_c
 *.vagrp_c
-
 *.bin
 *.pad
+**/npc_abilites_custom.txt
