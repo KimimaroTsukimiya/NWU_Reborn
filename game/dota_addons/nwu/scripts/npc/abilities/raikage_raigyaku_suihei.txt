@@ -30,7 +30,10 @@
 
      "precache"
     {
+      "particle"  "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
       "particle"  "particles/generic_gameplay/generic_purge.vpcf"
+      "particle"  "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
+      "particle"  "particles/units/heroes/hero_razor/razor_base_attack_impact_b.vpcf"
     }
 
     "AbilitySpecial"
@@ -53,7 +56,7 @@
         "04"
         { 
             "var_type"  "FIELD_INTEGER"
-            "damage_reduction_duration" "20"//TODO check nwu value
+            "damage_reduction_duration" "2"
         }
     }
 
@@ -66,6 +69,10 @@
             "IsHidden"                  "1"
             "IsPurgable"                "0"
             
+
+
+
+
             "OnCreated"
             {
                 "FireEffect"
@@ -77,16 +84,27 @@
             
                 "AttachEffect"
                 {
-                    //TODO find a fitting effect
-                    //"Target"            "CASTER" 
-                    //"EffectName"        "particles/units/heroes/hero_kunkka/kunkka_weapon_tidebringer.vpcf"
-                    //"EffectAttachType"  "start_at_customorigin"
-                    //"ControlPointEntities"
-                    //{
-                    //    "CASTER"        "attach_sword"
-                    //    "CASTER"        "attach_sword"
-                    //    "CASTER"        "attach_sword"
-                    //}
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_righthand"
+
+                    }
+                }
+
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_lefthand"
+                    }
                 }
             }
 
@@ -97,6 +115,20 @@
                     // TODO find a fitting sound
                     //"Target"            "TARGET"
                     //"EffectName"        "Hero_Kunkka.Tidebringer.Attack"
+                }
+            
+
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_base_attack_impact_b.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "TARGET"
+                    "ControlPointEntities"
+                   {
+                      "TARGET"    "attach_hitloc"
+
+                    }
                 }
             
               
@@ -125,6 +157,21 @@
           "IsPurgable"      "0"
           "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
 
+
+          "OnCreated"
+          {
+            "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "TARGET"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_hitloc"
+                    }
+                }
+          }
           "OnAttackLanded"
           {
             "RunScript"

@@ -31,7 +31,9 @@
 
      "precache"
     {
+      "particle"  "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
       "particle"  "particles/generic_gameplay/generic_purge.vpcf"
+      "particle"   "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
     }
 
     "AbilitySpecial"
@@ -127,6 +129,129 @@
                     "DamageTaken"   "%attack_damage"
                 }
             }
+
+             "OnCreated"
+            {
+               
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_righthand"
+
+                    }
+                }
+
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_lefthand"
+                    }
+                }
+
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_lefthand"
+                    }
+                }
+
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_lefthand"
+                    }
+                }
+
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_leftleg"
+                    }
+                }
+
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_rightleg"
+                    }
+                }
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_rightshoulder"
+                    }
+                }
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_leftshoulder"
+                    }
+                }
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_rightelbow"
+                    }
+                }
+
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_leftelbow"
+                    }
+                }
+            }
+
 
             "OnDestroy"
             {
