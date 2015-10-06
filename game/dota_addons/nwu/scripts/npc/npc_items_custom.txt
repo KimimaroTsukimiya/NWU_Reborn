@@ -3159,7 +3159,7 @@
     "ItemQuality"    "component"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    "ItemAliases"     "leather gloves;attackspeed;as"
+    "ItemAliases"     "leather gloves;attackspeed;as;gloves of haste"
     
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
@@ -4187,18 +4187,18 @@
     {
       "01"
       {
-        "var_type"            "FIELD_FLOAT"
-        "bonus_damage"        "21.0"
+        "var_type"            "FIELD_INTEGER"
+        "bonus_damage"        "21"
       }
       "02"
       {
-        "var_type"            "FIELD_FLOAT"
-        "chance"              "20.0"
+        "var_type"            "FIELD_INTEGER"
+        "chance"              "20"
       }
       "03"
       {
-        "var_type"            "FIELD_FLOAT"
-        "extra_dmg"           "40.0"
+        "var_type"            "FIELD_INTEGER"
+        "extra_dmg"           "40"
       }
     }
   }
@@ -5714,12 +5714,12 @@
     }
   }
 
-  "item_mithrill_hammer_datadriven"
+  "item_mithril_hammer_datadriven"
   {
     "ID"              "1116"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_mithrill_hammer_datadriven"
+    "AbilityTextureName"   "item_mithril_hammer_datadriven"
     "ItemQuality"    "component"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
@@ -5733,7 +5733,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "ItemAliases"           "mithrill hammer;damage"
+    "ItemAliases"           "mithril hammer;damage"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -5743,7 +5743,7 @@
 
     "Modifiers"
     {
-      "item_mithrill_hammer_datadriven_modifier"
+      "item_mithril_hammer_datadriven_modifier"
       {
          "Passive" "1"
          "IsHidden"  "1"
@@ -6537,7 +6537,7 @@
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 	    "ItemRequirements"
 	    {
-	        "01" "item_vambraces;item_mithrill_hammer_datadriven"
+	        "01" "item_vambraces;item_mithril_hammer_datadriven"
 	    }
 	  }
 	
@@ -6888,7 +6888,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_mithrill_hammer_datadriven;item_mithrill_hammer_datadriven"
+        "01" "item_mithrill_hammer_datadriven;item_mithril_hammer_datadriven"
     }
   }
 
@@ -8980,17 +8980,17 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "damage_block_melee"    "20"
+                "damage_block_melee"    "16"
             }
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "damage_block_ranged"   "12"
+                "damage_block_ranged"   "8"
             }
             "03"
             {
                 "var_type"              "FIELD_INTEGER"
-                "block_chance"          "70"
+                "block_chance"          "50"
             }
         }
 

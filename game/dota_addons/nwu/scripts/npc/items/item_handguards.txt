@@ -20,7 +20,7 @@
     "ItemQuality"    "component"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    "ItemAliases"     "leather gloves;attackspeed;as"
+    "ItemAliases"     "leather gloves;attackspeed;as;gloves of haste"
     
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item

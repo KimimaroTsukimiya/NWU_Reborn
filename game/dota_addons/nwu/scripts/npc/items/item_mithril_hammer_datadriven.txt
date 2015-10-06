@@ -1,9 +1,9 @@
-  "item_mithrill_hammer_datadriven"
+  "item_mithril_hammer_datadriven"
   {
     "ID"              "1116"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"           "item_datadriven"
-    "AbilityTextureName"   "item_mithrill_hammer_datadriven"
+    "AbilityTextureName"   "item_mithril_hammer_datadriven"
     "ItemQuality"    "component"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
@@ -17,7 +17,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "ItemAliases"           "mithrill hammer;damage"
+    "ItemAliases"           "mithril hammer;damage"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
@@ -27,7 +27,7 @@
 
     "Modifiers"
     {
-      "item_mithrill_hammer_datadriven_modifier"
+      "item_mithril_hammer_datadriven_modifier"
       {
          "Passive" "1"
          "IsHidden"  "1"

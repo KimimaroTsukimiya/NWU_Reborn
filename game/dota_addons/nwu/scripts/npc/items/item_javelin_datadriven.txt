@@ -81,18 +81,18 @@
     {
       "01"
       {
-        "var_type"            "FIELD_FLOAT"
-        "bonus_damage"        "21.0"
+        "var_type"            "FIELD_INTEGER"
+        "bonus_damage"        "21"
       }
       "02"
       {
-        "var_type"            "FIELD_FLOAT"
-        "chance"              "20.0"
+        "var_type"            "FIELD_INTEGER"
+        "chance"              "20"
       }
       "03"
       {
-        "var_type"            "FIELD_FLOAT"
-        "extra_dmg"           "40.0"
+        "var_type"            "FIELD_INTEGER"
+        "extra_dmg"           "40"
       }
     }
   }

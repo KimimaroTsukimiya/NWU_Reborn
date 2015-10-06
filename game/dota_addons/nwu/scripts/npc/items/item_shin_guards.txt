@@ -182,17 +182,17 @@
             "01"
             {
                 "var_type"              "FIELD_INTEGER"
-                "damage_block_melee"    "20"
+                "damage_block_melee"    "16"
             }
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "damage_block_ranged"   "12"
+                "damage_block_ranged"   "8"
             }
             "03"
             {
                 "var_type"              "FIELD_INTEGER"
-                "block_chance"          "70"
+                "block_chance"          "50"
             }
         }
 

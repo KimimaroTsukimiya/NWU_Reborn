@@ -58,6 +58,8 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
+
+            "soundfile"            "sounds/weapons/hero/centaur/hoof_stomp.vsnd"
 	}
 	
 	"OnSpellStart"
@@ -124,6 +126,12 @@
 				      }
 				      "Duration"    "%armor_reduction_duration"
 			    	}
+
+			   "FireSound"
+				{
+					"soundfile"	"sounds/weapons/hero/centaur/hoof_stomp.vsnd" 
+				}
+
 			}
 		}
 	}
