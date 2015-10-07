@@ -3229,7 +3229,7 @@
 	         "Properties"
 	          {
 	            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-	            "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_reg_constant"
+	            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_reg_constant"
 	            "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
 	          }
 	      }

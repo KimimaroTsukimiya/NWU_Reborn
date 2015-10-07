@@ -116,4 +116,3 @@ function StormBoltHit( keys )
 		ApplyDamage({attacker = caster, victim = enemy, ability = ability, damage = damage, damage_type = ability:GetAbilityDamageType()})
 	end
 end
-

@@ -32,7 +32,6 @@
                 "item"    "item_swift_katana"
                 "item"    "item_staff_of_faith"
                 "item"    "item_kages_relic"             
-
         }
  
         "weapons_armor"

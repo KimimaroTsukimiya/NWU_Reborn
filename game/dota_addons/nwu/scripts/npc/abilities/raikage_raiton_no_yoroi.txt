@@ -6,7 +6,7 @@
     "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
     "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
-    "AbilityTextureName"        "sandking_sand_storm" //TODO
+    "AbilityTextureName"        "raikage_raiton_no_yoroi" //TODO
 
 
     "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
@@ -288,7 +288,7 @@
 
                "ApplyModifier"
                 {
-                  "ModifierName"        "chakra_smasher_purge"
+                  "ModifierName"        "modifer_raikage_purge"
                   "Target"              "TARGET"
                   "Duration"            "%release_purge_duration"
                 }
@@ -308,7 +308,7 @@
              }
         }
 
-          "chakra_smasher_purge"
+          "modifer_raikage_purge"
               {
                 "IsDebuff"    "1"
                 "Properties"

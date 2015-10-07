@@ -4,6 +4,7 @@
 		{
 		  "override_hero"   "npc_dota_hero_bloodseeker"
 		  "Ability1"        "zabuza_demonic_intent_datadriven" 
+		  "ModelScale"		"3"
 		  "Model" 			"models/zabuza/zabuza.vmdl"
 	 	  "ItemSlots"
 	  	  { }
@@ -25,11 +26,26 @@
 	"npc_raikage"
 		{
 		  "override_hero"   "npc_dota_hero_sand_king"
+		  "Model" 			"models/raikage/raikage.vmdl"
 		  "Ability1"        "raikage_raiton_no_yoroi"
 		  "Ability2"        "raikage_raigyaku_suihei" 
-		  "Ability3"        "raikage_lariat"  
+		  "Ability3"        "raikage_lariat" 
 		  "Ability4"        "raikage_raiga_no_bomu"
-		  "Model" 			"models/raikage/raikage.vmdl"
+
+		  "MagicalResistance"            "0"
+		
+		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
+		  "AttackAnimationPoint"		"0.4"
+		 // "AttackRate"				"1.0"
+		  "AttackRange"				"100"
+		  "MovementSpeed"			"300"
+		  "AttributeBaseStrength" "21" // Base strength
+		  "AttributeStrengthGain" "2.6" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "18" // Base intelligence
+		  "AttributeIntelligenceGain" "1.85" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "16" // Base agility
+		  "AttributeAgilityGain" "1.3" // Agility bonus per level.
+		  
 	 	  "ItemSlots"
 	  	  { }
 		}

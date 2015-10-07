@@ -13,7 +13,7 @@
         "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "FightRecapLevel"               "1"
-        "AbilityTextureName"            "sven_storm_bolt"
+        "AbilityTextureName"            "raikage_lariat"
         "AOERadius"                     "%radius"
 
         // Precache
@@ -136,4 +136,3 @@
             }
         }
     }
-
