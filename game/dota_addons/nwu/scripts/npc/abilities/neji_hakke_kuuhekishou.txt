@@ -1,0 +1,121 @@
+"neji_hakke_kuuhekishou"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"neji_hakke_kuuhekishou"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"450"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0 12.0 12.0 12.0"
+	"AbilityDuration"				"0.2 0.2 0.2 0.2"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"70 140 210 280"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"90 90 90 90"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"wave_speed"		"2000.0"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"wave_width"		"450"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"mana_reg_reduction"	"-150 -300 -450 -600"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"debuff_duration"	"4 4 4 4"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"wave_range"		"450"
+		}		
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_VengefulSpirit.WaveOfTerror"
+			"Target" 		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/neji/hakke_kuuhekishou.lua"
+			"Function"		"hakke_kuuhekishou"
+			"Target"		"POINT"
+			"wave_particle"	"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"DeleteOnHit"	"0"
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_hakke_kuuhekishou_debuff"
+			"Target" 		"TARGET"
+			"Duration"		"%debuff_duration"
+		}
+
+		"Damage"
+		{
+			"Target"		"TARGET"
+			"Type"			"DAMAGE_TYPE_MAGICAL"
+			"Damage"		"%AbilityDamage"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_hakke_kuuhekishou_debuff"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+	
+			"EffectName"		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+			"EffectAttachType"	"follow_origin"
+	
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_reg_reduction"
+			}
+		}
+	}
+}

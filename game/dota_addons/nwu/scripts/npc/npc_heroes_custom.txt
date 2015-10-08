@@ -54,15 +54,15 @@
 		  "override_hero"   "npc_dota_hero_axe"
 		  //"Model" 			"models/neji/neji.vmdl"
 		  "Ability1"        "neji_kaiten"
-		  // "Ability2"        "raikage_raigyaku_suihei" 
+		  "Ability2"        "neji_hakke_kuuhekishou" 
 		  // "Ability3"        "raikage_lariat" 
 		 //  "Ability4"        "raikage_raiga_no_bomu"
 
 		  "MagicalResistance"            "0"
 		
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
-		  "AttackAnimationPoint"		"0.4"
-		  "AttackRate"				"0.7"
+		  "AttackAnimationPoint"   "0.4"
+		 // "AttackRate"				"0.7"
 		  "AttackRange"				"128"
 		  "MovementSpeed"			"300"
 		  "AttributeBaseStrength" "18" // Base strength
