@@ -1,0 +1,204 @@
+"neji_kaiten_release"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"        "neji_kaiten_release"
+
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "0"
+    "AbilityDuration"               "3"
+
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "1.0"
+    "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "0"
+
+
+     "precache"
+    {
+      "particle"  "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+      "particle"  "particles/generic_gameplay/generic_purge.vpcf"
+      "particle"   "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
+    }
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "aoe_target" "300"
+        }
+        "02"
+        {
+            "var_type" "FIELD_FLOAT"
+            "push_back_length" "200.0"
+        }
+        "03"
+        {
+            "var_type" "FIELD_FLOAT"
+            "damage" "75 150 225 300"
+        }
+    }
+
+    "OnSpellStart"
+    {
+        "FireSound"
+        {
+            //TODO
+        }
+
+       "RunScript"
+        {
+            "ScriptFile"        "heroes/neji/kaiten.lua"
+            "Function"          "kaiten_release"
+            "Target"            "Caster"
+           // "projectile_particle"   "particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_initial.vpcf"
+            "main_ability_name" "neji_kaiten_release"
+            "sub_ability_name"  "neji_kaiten"
+        }
+
+
+        "RemoveModifier"
+        {
+            "ModifierName"    "neji_kaiten_on_hit"
+            "Target"         "CASTER"
+        }
+
+
+        "Knockback"
+                {
+                     "Target"
+                     {
+                        "Center"            "CASTER"
+                        "Radius"            "%aoe_target"
+                        "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                    }
+                    "Center"            "Target"
+                    "Distance"          "%push_back_length"
+                    "Duration"          "0.5" // TODO check
+                    "Height"            "0"
+                    "IsFixedDistance"   "0"
+                    "ShouldStun"        "0" 
+                }
+
+
+        "Damage"
+        {
+            "Target"
+             {
+                "Center"            "CASTER"
+                "Radius"            "%aoe_target"
+                "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+            "Type"           "DAMAGE_TYPE_MAGICAL"
+           "Damage"         "%damage"
+        }      
+
+    }
+
+
+
+    "Modifiers"
+    {
+        "neji_kaiten_on_hit"
+        {
+            "IsBuff"    "1"
+            "Hidden"    "0"
+            "Passive"   "1"
+
+            "OnAttacked"
+            // "%attack_damage" is set to the damage value after mitigation
+            {
+
+                 "Knockback"
+                {
+                     "Target"
+                     {
+                        "Center"            "CASTER"
+                        "Radius"            "%aoe_target"
+                        "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                    }
+                    "Center"            "Target"
+                    "Distance"          "%push_back_length"
+                    "Duration"          "0.5"
+                    "Height"            "0"
+                    "IsFixedDistance"   "0"
+                    "ShouldStun"        "0" 
+                }
+
+
+                "Damage"
+                {
+                    "Target"
+                     {
+                        "Center"            "CASTER"
+                        "Radius"            "%aoe_target"
+                        "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                    }
+                    "Type"           "DAMAGE_TYPE_MAGICAL"
+                   "Damage"         "%damage"
+                }      
+
+
+                "RunScript"
+                {
+                     "ScriptFile"        "heroes/neji/kaiten.lua"
+                     "Function"          "kaiten_release"
+                     "Target"            "Caster"
+                   // "projectile_particle"   "particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_initial.vpcf"
+                    "main_ability_name" "neji_kaiten_release"
+                    "sub_ability_name"  "neji_kaiten"
+                }
+
+
+                  "RemoveModifier"
+                {
+                    "ModifierName"    "neji_kaiten_on_hit"
+                    "Target"         "CASTER"
+                }
+            }
+
+
+            "ThinkInterval"  "3"
+            "OnIntervalThink"
+            {   
+                   "RunScript"
+                    {
+                        "ScriptFile"        "heroes/neji/kaiten.lua"
+                        "Function"          "kaiten_release"
+                        "Target"            "Caster"
+                       // "projectile_particle"   "particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_initial.vpcf"
+                        "main_ability_name" "neji_kaiten_release"
+                        "sub_ability_name"  "neji_kaiten"
+                    }
+
+                 "RemoveModifier"
+                {
+                    "ModifierName"    "neji_kaiten_on_hit"
+                    "Target"         "CASTER"
+                }
+            }
+        }
+
+    }
+
+}
