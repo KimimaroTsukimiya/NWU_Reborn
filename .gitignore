@@ -6,4 +6,4 @@
 *.vagrp_c
 *.bin
 *.pad
-**/npc_abilites_custom.txt
+npc_abilities_custom.txt
