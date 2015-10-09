@@ -49,6 +49,14 @@
 	 	  "ItemSlots"
 	  	  { }
 		}
+	"npc_onoki"
+	{
+		"override_hero" "npc_dota_hero_sven"
+		"Ability1"	"onoki_jinton"
+		"AttributePrimary"	"DOTA_ATTRIBUTE_STRENGTH"
+		"ItemSlots"
+	  	  { }
+	}
 	"npc_neji"
 		{
 		  "override_hero"   "npc_dota_hero_axe"
@@ -74,5 +82,5 @@
 		  
 	 	  "ItemSlots"
 	  	  { }
-		}	
+		}		
 }
