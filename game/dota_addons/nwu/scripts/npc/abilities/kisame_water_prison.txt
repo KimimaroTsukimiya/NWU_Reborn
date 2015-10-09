@@ -1,0 +1,197 @@
+"kisame_water_prison"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"			"kisame_water_prison"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0."
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"50.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
+
+	//Stats
+	"AbilityDamage"					"40 64 88"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"40 44 48 52"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"transformation_time"	"0.35"
+		}
+
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"radius"				"450"
+		}
+
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"ms_slow_percentage"	"-20"
+		}
+
+		"05"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"mana_cost_per_second_percentage"	"3"
+		}
+
+		"06"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"tick_interval"						"1"
+		}
+
+	}
+
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+		"particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
+		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+		"model"		"models/kisame/kisame_samehada.vmdl"
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"		"Hero_Terrorblade.Metamorphosis"
+			"Target"			"CASTER"
+		}
+		"FireEffect"
+		{
+			"EffectName"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+			"EffectAttachType"	"follow_origin"
+			"Target"			"CASTER"
+		}
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifier_kisame_metamorphosis"
+			"Target"			"CASTER"
+		}
+	}
+
+	"Modifiers"
+	{
+
+		"modifer_water_prison_slow"
+		{
+
+          "Passive"     "0"
+          "IsHidden"      "0"
+          "IsDebuff"      "1"
+          "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+          "EffectAttachType"  "follow_origin"
+      
+          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+          "StatusEffectPriority"  "10"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow_percentage"
+          } 
+        
+		}
+
+		"modifier_kisame_metamorphosis"
+		{
+			
+			"EffectName" 		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
+			"EffectAttachType"  "follow_origin"
+
+			"AllowsIllusionDuplicate"	"1"
+
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"heroes/kisame/water_prison.lua"
+					"Function"				"ModelSwapStart"
+					"model"					"models/kisame/kisame_samehada.vmdl"
+					"projectile_model"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+				}
+
+				"AttachEffect"
+				{
+					"EffectName" 		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"Target"			"TARGET"
+				}
+			}
+
+
+			"ThinkInterval"	"%tick_interval"
+			"OnIntervalThink"
+			{
+
+				"RunScript"
+				{
+					"ScriptFile"			"heroes/kisame/water_prison.lua"
+					"Function"				"ManaCost"
+					"modifierRemove"		"modifier_kisame_metamorphosis"
+				}
+
+
+				"Damage"
+				{
+					  "Target"
+				      {
+				        "Center"  "CASTER"
+				        "Radius"  "%radius"
+				        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+				        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				      }
+					"Type"		"DAMAGE_TYPE_MAGICAL"
+					"Damage"	"%AbilityDamage"
+				}
+
+
+
+			 "ApplyModifier"
+				    {
+				      "ModifierName"  "modifer_water_prison_slow"
+				      "Target"
+				      {
+				        "Center"  "CASTER"
+				        "Radius"  "%radius"
+				        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+				        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				      }
+				      "Duration"    "%tick_interval"
+				    }
+
+			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/kisame/water_prison.lua"
+					"Function"		"ModelSwapEnd"
+				}
+
+			}
+		}
+	}
+}

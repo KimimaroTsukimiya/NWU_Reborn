@@ -99,20 +99,16 @@ function StormBoltHit( keys )
 	-- Start attacking the target
 	caster:SetAttacking(target)
 
-	-- Find enemies in effect area
-	local enemies = FindUnitsInRadius(caster:GetTeamNumber(), target:GetAbsOrigin(), nil, radius, ability:GetAbilityTargetTeam(), ability:GetAbilityTargetType(), 0, FIND_ANY_ORDER, false)
-	for _,enemy in pairs(enemies) do
-		
-		-- Fire impact particle
-		local enemy_loc = enemy:GetAbsOrigin()
-		local impact_pfx = ParticleManager:CreateParticle(particle_impact, PATTACH_ABSORIGIN, enemy)
-		ParticleManager:SetParticleControl(impact_pfx, 0, enemy_loc)
-		ParticleManager:SetParticleControlEnt(impact_pfx, 3, enemy, PATTACH_ABSORIGIN, "attach_origin", enemy_loc, true)
+	-- Stun
+	target:AddNewModifier(caster, ability, "modifier_stunned", {duration = duration})
 
-		-- Stun
-		enemy:AddNewModifier(caster, ability, "modifier_stunned", {duration = duration})
 
-		-- Apply damage
-		ApplyDamage({attacker = caster, victim = enemy, ability = ability, damage = damage, damage_type = ability:GetAbilityDamageType()})
-	end
+	-- Fire impact particle
+	local enemy_loc = target:GetAbsOrigin()
+	local impact_pfx = ParticleManager:CreateParticle(particle_impact, PATTACH_ABSORIGIN, enemy)
+	ParticleManager:SetParticleControl(impact_pfx, 0, enemy_loc)
+	ParticleManager:SetParticleControlEnt(impact_pfx, 3, enemy, PATTACH_ABSORIGIN, "attach_origin", enemy_loc, true)
+
+	 -- Apply damage
+	ApplyDamage({attacker = caster, victim = target, ability = ability, damage = damage, damage_type = ability:GetAbilityDamageType()})
 end

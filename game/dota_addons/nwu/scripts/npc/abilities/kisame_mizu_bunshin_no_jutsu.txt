@@ -1,0 +1,90 @@
+"kisame_mizu_bunshin_no_jutsu"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"kisame_mizu_bunshin_no_jutsu"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"450"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"27.0 24.0 21.0 18.0"
+	"AbilityDuration"				"0.2 0.2 0.2 0.2"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"135 140 145 150"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+      "01"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "illusion_duration"         "20 20 20"
+      }
+      "02"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "illusion_outgoing_damage_percent"       "-10"
+      }
+       "03"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "illusion_incoming_damage_percent"       "700 600 500 400"
+      }			
+	}
+
+	"OnSpellStart"
+  {
+    "ApplyModifier"
+    {
+      "ModifierName"    "mizu_bunshin_no_jutsu_illusion"
+      "Target"      "CASTER"
+    }
+  }
+
+    "Modifiers"
+    {
+
+     "mizu_bunshin_no_jutsu_illusion"
+    {
+      "Duration"  "%illusion_duration"
+
+      "OnCreated"
+      {
+        "RunScript"
+        {
+          "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+          "Function"        "ConjureImage"
+        }
+        "RunScript"
+        {
+          "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+          "Function"        "ConjureImage"
+        }
+
+      }
+
+    }
+	}
+	
+}
+

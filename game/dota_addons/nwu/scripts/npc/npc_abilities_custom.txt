@@ -26,6 +26,545 @@
 			}
 		}
 	}
+	"kisame_mizu_bunshin_no_jutsu"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"kisame_mizu_bunshin_no_jutsu"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+			"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+			"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
+		}
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"450"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"27.0 24.0 21.0 18.0"
+		"AbilityDuration"				"0.2 0.2 0.2 0.2"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"135 140 145 150"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+	      "01"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "illusion_duration"         "20 20 20"
+	      }
+	      "02"
+	      {
+	        "var_type"                               "FIELD_FLOAT"
+	        "illusion_outgoing_damage_percent"       "-10"
+	      }
+	       "03"
+	      {
+	        "var_type"                               "FIELD_FLOAT"
+	        "illusion_incoming_damage_percent"       "700 600 500 400"
+	      }			
+		}
+	
+		"OnSpellStart"
+	  {
+	    "ApplyModifier"
+	    {
+	      "ModifierName"    "mizu_bunshin_no_jutsu_illusion"
+	      "Target"      "CASTER"
+	    }
+	  }
+	
+	    "Modifiers"
+	    {
+	
+	     "mizu_bunshin_no_jutsu_illusion"
+	    {
+	      "Duration"  "%illusion_duration"
+	
+	      "OnCreated"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+	          "Function"        "ConjureImage"
+	        }
+	        "RunScript"
+	        {
+	          "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+	          "Function"        "ConjureImage"
+	        }
+	
+	      }
+	
+	    }
+		}
+		
+	}
+	
+	"kisame_samehada"
+	{
+	    // General  
+	    // ----------------------------------------------------------------------------------------
+	    "BaseClass"                 "ability_datadriven"
+	    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+	    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+	    "AbilityTextureName"        "kisame_samehada"
+	
+	
+	    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+	    "MaxLevel"               "4"
+	
+	
+	    // Casting
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastRange"              "0"
+	    "AbilityDuration"               "0"
+	
+	
+	    // Time     
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityCooldown"               "10 10 10 10"
+	
+	    // Cost
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilityManaCost"               "0"
+	
+	
+	     "precache"
+	    {
+	      "particle"  "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+	      "particle"  "particles/generic_gameplay/generic_purge.vpcf"
+	      "particle"  "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
+	      "particle"  "particles/units/heroes/hero_razor/razor_base_attack_impact_b.vpcf"
+	    }
+	
+	    "AbilitySpecial"
+	    {
+	        "01"
+	        { 
+	            "var_type"  "FIELD_FLOAT"
+	            "manasteal_percentage" "8.0 12.0 16.0 20.0"
+	        }
+	    }
+	
+	
+	    "Modifiers"
+	    {
+	        "modifier_samehada"
+	        {
+	            "Passive"                   "1"
+	            "IsHidden"                  "0"
+	            "IsPurgable"                "0"
+	            
+	            "OnCreated"
+	            {
+	                "FireEffect"
+	                {
+	                    //TODO find a fitting sound
+	                    //"Target"            "CASTER" 
+	                    //"EffectName"        "Hero_Kunkaa.Tidebringer"
+	                }
+	            
+	                "AttachEffect"
+	                {
+	                   //TODO
+	                }
+	
+	            }
+	
+	            "OnAttackLanded"
+	            {
+	                "FireSound"
+	                {
+	                    // TODO find a fitting sound
+	                    //"Target"            "TARGET"
+	                    //"EffectName"        "Hero_Kunkka.Tidebringer.Attack"
+	                }
+	            
+	
+	                "AttachEffect"
+	                {
+	                  //TODO
+	                }
+	            
+	              
+	                "RunScript"
+	                {
+	                    "ScriptFile"    "heroes/kisame/samehada.lua"
+	                    "Function"      "StealMana"
+	                }
+	                        
+	                "RunScript"
+	                {
+	                    "ScriptFile"    "heroes/kisame/samehada.lua"
+	                    "Function"      "SamehadaResetCooldown"
+	                }
+	            }
+	            
+	        }
+	
+	
+	    }
+	
+	}
+	"kisame_suikodan_no_jutsu"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"kisame_suikodan_no_jutsu"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+			"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+			"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
+		}
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"450"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12.0 12.0 12.0 12.0"
+		"AbilityDuration"				"0.2 0.2 0.2 0.2"
+	
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"110 150 190 230"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120 120 120 120"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"wave_speed"		"2000.0"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wave_width"		"450"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"armor_reduction"	"-1 -2 -3 -4"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"debuff_duration"	"4 4 4 4"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"wave_range"		"800"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"wave_aoe"			"150"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"ms_slow_percentage"	"-25 -25 -25 -25"
+			}
+			"08"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"slow_duration"		"4 4 4 4"
+			}			
+		}
+	
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_VengefulSpirit.WaveOfTerror"
+				"Target" 		"CASTER"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/kisame/suikodan_no_jutsu.lua"
+				"Function"		"suikodan_no_jutsu"
+				"Target"		"POINT"
+				"wave_particle"	"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"
+			}
+		}
+	
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"0"
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_suikodan_no_jutsu_debuff"
+				"Target" 		"TARGET"
+				"Duration"		"%debuff_duration"
+			}
+	
+			"Damage"
+			{
+				"Target"		"TARGET"
+				"Type"			"DAMAGE_TYPE_MAGICAL"
+				"Damage"		"%AbilityDamage"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"modifier_suikodan_no_jutsu_debuff"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"1"
+		
+				"EffectName"		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+				"EffectAttachType"	"follow_origin"
+		
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor_reduction"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow_percentage"
+				}
+			}
+	
+		}
+		
+	}
+	"kisame_water_prison"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"kisame_water_prison"
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0."
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"50.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+	
+		//Stats
+		"AbilityDamage"					"40 64 88"
+	
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"40 44 48 52"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"transformation_time"	"0.35"
+			}
+	
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"radius"				"450"
+			}
+	
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"ms_slow_percentage"	"-20"
+			}
+	
+			"05"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"mana_cost_per_second_percentage"	"3"
+			}
+	
+			"06"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"mana_cost_per_second_percentage"	"3"
+			}
+	
+			"07"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"tick_interval"						"1"
+			}
+	
+		}
+	
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+			"particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
+			"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+			"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+			"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+			"model"		"models/kisame/kisame_samehada.vmdl"
+		}
+	
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"		"Hero_Terrorblade.Metamorphosis"
+				"Target"			"CASTER"
+			}
+			"FireEffect"
+			{
+				"EffectName"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"Target"			"CASTER"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"		"modifier_kisame_metamorphosis"
+				"Target"			"CASTER"
+			}
+		}
+	
+		"Modifiers"
+		{
+	
+			"modifer_water_prison_slow"
+			{
+	
+	          "Passive"     "0"
+	          "IsHidden"      "0"
+	          "IsDebuff"      "1"
+	          "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+	          "EffectAttachType"  "follow_origin"
+	      
+	          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+	          "StatusEffectPriority"  "10"
+	
+	          "Properties"
+	          {
+	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow_percentage"
+	          } 
+	        
+			}
+	
+			"modifier_kisame_metamorphosis"
+			{
+				
+				"EffectName" 		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
+				"EffectAttachType"  "follow_origin"
+	
+				"AllowsIllusionDuplicate"	"1"
+	
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"heroes/kisame/water_prison.lua"
+						"Function"				"ModelSwapStart"
+						"model"					"models/kisame/kisame_samehada.vmdl"
+						"projectile_model"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+					}
+	
+					"AttachEffect"
+					{
+						"EffectName" 		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"Target"			"TARGET"
+					}
+				}
+	
+	
+				"ThinkInterval"	"%tick_interval"
+				"OnIntervalThink"
+				{
+	
+					"RunScript"
+					{
+						"ScriptFile"			"heroes/kisame/water_prison.lua"
+						"Function"				"ManaCost"
+						"modifierRemove"		"modifier_kisame_metamorphosis"
+					}
+	
+	
+					"Damage"
+					{
+						  "Target"
+					      {
+					        "Center"  "CASTER"
+					        "Radius"  "%radius"
+					        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+					        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					      }
+						"Type"		"DAMAGE_TYPE_MAGICAL"
+						"Damage"	"%AbilityDamage"
+					}
+	
+	
+	
+				 "ApplyModifier"
+					    {
+					      "ModifierName"  "modifer_water_prison_slow"
+					      "Target"
+					      {
+					        "Center"  "CASTER"
+					        "Radius"  "%radius"
+					        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+					        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					      }
+					      "Duration"    "%tick_interval"
+					    }
+	
+				}
+	
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/kisame/water_prison.lua"
+						"Function"		"ModelSwapEnd"
+					}
+	
+				}
+			}
+		}
+	}
 	"neji_byakugan"
 	{
 	    // General  
@@ -863,6 +1402,81 @@
 	        }
 	
 	    }
+	
+	}
+	"onoki_jinton"
+	{
+	
+		"BaseClass"			 			"ability_datadriven"
+		"AbilityTextureName"			"onoki_jinton"
+		"MaxLevel" 						"4"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	
+		"AbilityCastRange"				"500"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	
+		"AbilityCooldown"				"25 22 19 16"
+		"AbilityManaCost"				"75 100 125 150"
+		"AbilityDamage"					"120 170 220 270"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"stun_duration"			"1.75"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"stun_radius"		"200 225 250 275"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"  "modifier_jinton_stun"
+				"Target"
+				{
+					"Center"  "TARGET"
+					"Radius"  "%stun_radius"
+					"Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+					"Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				}
+				"Duration"	"%stun_duration"
+			}
+			"Damage"
+			{
+				"Target"  "TARGET"
+				"Type"    "DAMAGE_TYPE_PHYSICAL"
+				"Damage"  "%AbilityDamage"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"modifier_jinton_stun"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"			"1"
+				"Duration"			"%stun_duration"
+		
+				//"EffectName"		"particle_name"
+				//"EffectAttachType"	"follow_origin"
+		
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"        "MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 	
 	}
 	//=================================================================================================================

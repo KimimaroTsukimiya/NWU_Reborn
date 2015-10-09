@@ -1,0 +1,139 @@
+"kisame_suikodan_no_jutsu"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"kisame_suikodan_no_jutsu"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"450"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0 12.0 12.0 12.0"
+	"AbilityDuration"				"0.2 0.2 0.2 0.2"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"110 150 190 230"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"120 120 120 120"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"wave_speed"		"2000.0"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"wave_width"		"450"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"armor_reduction"	"-1 -2 -3 -4"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"debuff_duration"	"4 4 4 4"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"wave_range"		"800"
+		}
+		"06"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"wave_aoe"			"150"
+		}
+		"07"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"ms_slow_percentage"	"-25 -25 -25 -25"
+		}
+		"08"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"slow_duration"		"4 4 4 4"
+		}			
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_VengefulSpirit.WaveOfTerror"
+			"Target" 		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/kisame/suikodan_no_jutsu.lua"
+			"Function"		"suikodan_no_jutsu"
+			"Target"		"POINT"
+			"wave_particle"	"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"DeleteOnHit"	"0"
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_suikodan_no_jutsu_debuff"
+			"Target" 		"TARGET"
+			"Duration"		"%debuff_duration"
+		}
+
+		"Damage"
+		{
+			"Target"		"TARGET"
+			"Type"			"DAMAGE_TYPE_MAGICAL"
+			"Damage"		"%AbilityDamage"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_suikodan_no_jutsu_debuff"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+	
+			"EffectName"		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+			"EffectAttachType"	"follow_origin"
+	
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor_reduction"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow_percentage"
+			}
+		}
+
+	}
+	
+}
