@@ -11,7 +11,7 @@
 
     "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
     "MaxLevel"               "4"
-
+    "AbilityDamage"                 "75 150 225 300"
 
     // Casting
     //-------------------------------------------------------------------------------------------------------------
@@ -122,7 +122,7 @@
             "IsBuff"    "1"
             "Hidden"    "0"
             "Passive"   "1"
-
+            "Duration"  "%AbilityDuration"
             "OnAttacked"
             // "%attack_damage" is set to the damage value after mitigation
             {

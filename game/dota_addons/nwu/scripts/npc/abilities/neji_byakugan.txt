@@ -1,0 +1,136 @@
+"neji_byakugan"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"        "neji_byakugan"
+
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "0"
+    "AbilityDuration"               "0.2 0.2 0.2 0.2"
+
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "20"
+    "AbilityCastPoint"              "15 14 13 12"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "60 60 60 60"
+
+
+     "precache"
+    {
+      "particle"  "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+      "particle"  "particles/generic_gameplay/generic_purge.vpcf"
+      "particle"   "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
+    }
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "extra_range_attack" "400"
+        }
+        "02"
+        {
+            "var_type" "FIELD_INTEGER"
+            "slow_ms" "10 20 30 40"
+        }
+        "03"
+        {
+            "var_type" "FIELD_FLOAT"
+            "vision_aoe" "600.0 700.0 800.0 900.0"
+        }
+         "04"
+        {
+            "var_type" "FIELD_FLOAT"
+            "duration" "2.0 2.0 2.0 2.0"
+        }
+    }
+
+    "OnSpellStart"
+    {           
+
+        "RunScript"
+        {
+            "ScriptFile"    "heroes/neji/byakugan.lua"
+            "Function"      "vision"
+        }
+
+        "FireSound"
+        {
+            //TODO 
+        }
+        
+
+        "ApplyModifier"
+        {
+            "ModifierName"    "modifier_byakugan"
+            "Target"         "CASTER"
+            "Duration"        "%duration"
+        }
+            
+        
+        
+    }
+
+
+    "Modifiers"
+    {
+       "modifier_byakugan"
+        {
+            "Passive"           "0"
+            "IsHidden"          "0"
+    
+            "ThinkInterval"  "0.03"
+            "OnIntervalThink"
+            {
+                "ActOnTargets"
+                {
+                    "Target"
+                    {
+                        "Center"    "TARGET"
+                        "Radius"    "%vision_aoe"
+                        "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                    }
+                
+                    "Action"    
+                    {
+                        
+
+                        "ApplyModifier"
+                        {
+                            "ModifierName"  "modifier_truesight_reveal"
+                            "Target"        "TARGET"
+                        }
+                    }
+                }           
+            }       
+        }
+
+        "modifier_truesight_reveal"
+        {
+            "IsDebuff"          "1"
+            "IsHidden"          "1"
+            "Duration"          "0.5"   //The True Sight effect lingers for 0.5 seconds.
+            "States"
+            {
+                "MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
+            }
+        }
+    }
+
+}

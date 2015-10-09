@@ -33,6 +33,7 @@ function Precache( context )
 
   -- Sounds can precached here like anything else
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts", context)
+  PrecacheResource("soundfile", "soundevents/game_sounds_hero_pick.vsndevts", context)
 
   -- Entire items can be precached by name
   -- Abilities can also be precached in this way despite the name
@@ -51,6 +52,8 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/items2_fx", context)
   PrecacheResource("particle_folder", "particles/items3_fx", context)
 
+
+
   -- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
   -- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way
   PrecacheUnitByNameSync("npc_dota_hero_ancient_apparition", context)
@@ -67,4 +70,5 @@ end
 function Activate()
   GameRules.GameMode = GameMode()
   GameRules.GameMode:InitGameMode()
+
 end
