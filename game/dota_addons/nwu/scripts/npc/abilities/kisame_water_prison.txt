@@ -60,6 +60,12 @@
 			"tick_interval"						"1"
 		}
 
+		"07"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"tick_interval_modifier"			"0.1"
+		}
+
 	}
 
 	"precache"
@@ -165,9 +171,11 @@
 					"Type"		"DAMAGE_TYPE_MAGICAL"
 					"Damage"	"%AbilityDamage"
 				}
+			}
 
-
-
+			"ThinkInterval"	"%tick_interval_modifer"
+			"OnIntervalThink"
+			{
 			 "ApplyModifier"
 				    {
 				      "ModifierName"  "modifer_water_prison_slow"
@@ -180,9 +188,7 @@
 				      }
 				      "Duration"    "%tick_interval"
 				    }
-
 			}
-
 			"OnDestroy"
 			{
 				"RunScript"

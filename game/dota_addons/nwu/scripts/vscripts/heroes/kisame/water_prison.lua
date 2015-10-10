@@ -15,7 +15,7 @@ function ModelSwapStart( keys )
 
 	-- Sets the new model and projectile
 	caster:SetOriginalModel(model)
-
+	caster:SetModelScale(1.5)
 	-- Sets the new attack type
 	caster:SetAttackCapability(DOTA_UNIT_CAP_RANGED_ATTACK)
 end
@@ -50,6 +50,7 @@ function ManaCost( keys )
 		caster:SetMana(1)
 		caster:SetModel(caster.caster_model)
 		caster:SetOriginalModel(caster.caster_model)
+		caster:SetModelScale(1.00)
 		caster:RemoveModifierByName("modifier_kisame_metamorphosis")
 	else
 		caster:SetMana(new_mana)

@@ -26,6 +26,239 @@
 			}
 		}
 	}
+	"gaara_ryuusa_bakuryu"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"gaara_ryuusa_bakuryu"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"750"
+		"AbilityCastPoint"				"0.7 0.7 0.7 0.7"
+		"AOERadius"						"%radius"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10 10 10 10"
+	
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"100 170 240 300"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"105 120 135 150"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// applies 2 modifiers
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"300"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"1 1 1 1"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"delay"						"0.3 0.3 0.3 0.3"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"thinker_interval"				"1"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"thinker_damage"				"50 85 120 150"
+			}
+	
+		}
+	
+		// Data driven
+		//-------------------------------------------------------------------------------------------------------------	
+		"precache"
+		{
+			"soundfile"						"soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+			"particle"						"particles/units/heroes/hero_kunkka/kunkka_spell_torrent_bubbles.vpcf"
+			"particle"						"particles/units/heroes/hero_kunkka/kunkka_spell_torrent_splash.vpcf"
+		}
+		
+		"OnSpellStart"
+		{
+	
+			"DelayedAction"
+			{
+				"Delay"     "%delay"
+				"Action"    
+				{
+					"FireEffect"
+					{
+						//"EffectName"        "particles/units/heroes/hero_leshrac/leshrac_split_earth.vpcf"
+						//"EffectAttachType"  "start_at_customorigin"
+						//"TargetPoint"       "POINT"
+	
+						//"ControlPoints"
+						//{
+						//	"01"    "%radius %radius %radius"
+						//}
+					}
+	
+					"FireSound"
+					{
+						//"EffectName"	"Hero_Leshrac.Split_Earth"
+						//"Target" 		"CASTER"
+					}
+	
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"  	"POINT"
+							"Radius" 	"%radius"
+							"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+						}
+					
+						"Action"
+						{
+							"Stun"
+							{
+								"Target" 	 "TARGET"
+								"Duration"   "%stun_duration"
+							}
+								"ThinkInterval"  "%thinker_interval"
+							"OnIntervalThink"
+							{
+								"Damage"
+								{
+									"Type"			"DAMAGE_TYPE_MAGICAL"
+									"Target" 	 "TARGET"
+									"Damage"		"%thinker_damage"
+								}
+							
+							}
+						}
+					}
+				}
+	
+			}		
+				
+		}
+		
+	}
+	"gaara_sabaku_kyuu"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"gaara_sabaku_kyuu"
+	
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+					"particle"	"particles/generic_gameplay/generic_silence.vpcf"
+		}	
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.5 0.5 0.5"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"2.8 2.8 2.8"
+		"AbilityCooldown"				"20 20 20 20"
+	
+		//Damage
+		"AbilityDamage"					"100 150 200 250"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 115 130 145"		
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"tick_interval"					"0.1"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"duration"						"2.8 2.8 2.8"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"delay_to_dmg"					"1.4 1.4 1.4"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+	
+			"Knockback"
+			{
+					"Target"			"TARGET"
+					"Duration"			"%duration"
+					"Distance"			"0"
+					"Height"			"500"
+					"OverrideAnimation"			"ACT_DOTA_DISABLED"
+				
+					"EffectName"				"particles/generic_gameplay/generic_stunned.vpcf"
+					"EffectAttachType"			"follow_overhead"
+			}
+			
+			"DelayedAction"
+			{
+				"Delay"						"%delay_to_dmg"
+				"Action"
+				{
+				"Damage"
+				{
+					"Target"	"TARGET"
+					"Type"		"DAMAGE_TYPE_MAGICAL"
+					"Damage"	"%AbilityDamage"
+				}
+			}
+			}
+	
+			
+			
+			"FireSound"
+			{
+					
+			}
+			
+		}
+	}
 	"kisame_mizu_bunshin_no_jutsu"
 	{
 		// General
@@ -421,13 +654,13 @@
 			"06"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"mana_cost_per_second_percentage"	"3"
+				"tick_interval"						"1"
 			}
 	
 			"07"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"tick_interval"						"1"
+				"tick_interval_modifier"			"0.1"
 			}
 	
 		}
@@ -535,9 +768,11 @@
 						"Type"		"DAMAGE_TYPE_MAGICAL"
 						"Damage"	"%AbilityDamage"
 					}
+				}
 	
-	
-	
+				"ThinkInterval"	"%tick_interval_modifer"
+				"OnIntervalThink"
+				{
 				 "ApplyModifier"
 					    {
 					      "ModifierName"  "modifer_water_prison_slow"
@@ -550,9 +785,7 @@
 					      }
 					      "Duration"    "%tick_interval"
 					    }
-	
 				}
-	
 				"OnDestroy"
 				{
 					"RunScript"

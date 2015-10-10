@@ -52,7 +52,7 @@
   "npc_dota_hero_tidehunter" "0"
   "npc_dota_hero_tinker" "0"
   "npc_dota_hero_tiny" "0"
-  "npc_dota_hero_vengefulspirit" "0"
+  "npc_dota_hero_vengefulspirit" "1"
   "npc_dota_hero_venomancer"  "0"
   "npc_dota_hero_viper" "0"
   "npc_dota_hero_weaver" "0"
