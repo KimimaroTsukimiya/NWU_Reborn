@@ -1,0 +1,143 @@
+"DOTAHeroes"
+{
+	"npc_zabuza"
+		{
+		  "override_hero"   "npc_dota_hero_bloodseeker"
+		  "Ability1"        "zabuza_demonic_intent_datadriven" 
+		  "ModelScale"		"1.08"
+		  "Model" 			"models/zabuza/zabuza.vmdl"
+	 	  "ItemSlots"
+	  	  { }
+		}
+	"npc_jiroubo"
+		{
+		  "override_hero"   "npc_dota_hero_earthshaker"
+		  "Model" 			"models/jiroubo/jiroubo.vmdl"
+	 	  "ItemSlots"
+	  	  { }
+		}
+	"npc_kidoumaru"
+		{
+		  "override_hero"   "npc_dota_hero_windrunner"
+		  "Model" 			"models/kidoumaru/kidoumaru.vmdl"
+	 	  "ItemSlots"
+	  	  { }
+		}
+	"npc_raikage"
+		{
+		  "override_hero"   "npc_dota_hero_sand_king"
+		  "Model" 			"models/raikage/raikage.vmdl"
+		  "Ability1"        "raikage_raiton_no_yoroi"
+		  "Ability2"        "raikage_raigyaku_suihei" 
+		  "Ability3"        "raikage_lariat" 
+		  "Ability4"        "raikage_raiga_no_bomu"
+
+		  "MagicalResistance"            "0"
+		
+		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
+		  "AttackAnimationPoint"		"0.4"
+		 // "AttackRate"				"1.0"
+		  "AttackRange"				"100"
+		  "MovementSpeed"			"300"
+		  "AttributeBaseStrength" "21" // Base strength
+		  "AttributeStrengthGain" "2.6" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "18" // Base intelligence
+		  "AttributeIntelligenceGain" "1.85" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "16" // Base agility
+		  "AttributeAgilityGain" "1.3" // Agility bonus per level.
+		  
+	 	  "ItemSlots"
+	  	  { }
+		}
+	"npc_onoki"
+	{
+		"override_hero" "npc_dota_hero_sven"
+		"Ability1"	"onoki_jinton"
+		"Ability2"	"onoki_stalagmite_armor"
+		"Ability3"	"onoki_turn_to_dust"
+		"AttributePrimary"	"DOTA_ATTRIBUTE_STRENGTH"
+		"ItemSlots"
+	  	  { }
+	}
+	"npc_neji"
+		{
+		  "override_hero"   "npc_dota_hero_axe"
+		  //"Model" 			"models/neji/neji.vmdl"
+		  "Ability1"         "neji_kaiten"
+		  "Ability2"         "neji_hakke_kuuhekishou" 
+		  "Ability3"         "neji_byakugan" 
+		  "Ability4"         "neji_hyaku_nijuuhachi_shou"
+
+		  "MagicalResistance"            "0"
+		
+		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+		  "AttackAnimationPoint"   "0.4"
+		 // "AttackRate"				"0.7"
+		  "AttackRange"				"128"
+		  "MovementSpeed"			"300"
+		  "AttributeBaseStrength" "18" // Base strength
+		  "AttributeStrengthGain" "1.8" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "23" // Base intelligence
+		  "AttributeIntelligenceGain" "2.4" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "21" // Base agility
+		  "AttributeAgilityGain" "1.5" // Agility bonus per level.
+		  
+	 	  "ItemSlots"
+	  	  { }
+		}
+
+		"npc_kisame"
+		{
+		  "override_hero"   "npc_dota_hero_kunkka"
+		  "Model" 			"models/kisame/kisame.vmdl"
+		 "Ability1"         "kisame_suikodan_no_jutsu"
+		  "Ability2"         "kisame_mizu_bunshin_no_jutsu" 
+		  "Ability3"         "kisame_samehada" 
+		  "Ability4"         "kisame_water_prison"
+
+		  "MagicalResistance"            "0"
+		
+		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
+		  "AttackAnimationPoint"   "0.4"
+		 // "AttackRate"				"0.7"
+		  "AttackRange"				"128"
+		  "MovementSpeed"			"315"
+		  "AttributeBaseStrength" "22" // Base strength
+		  "AttributeStrengthGain" "2.8" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "19" // Base intelligence
+		  "AttributeIntelligenceGain" "1.9" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "16" // Base agility
+		  "AttributeAgilityGain" "1.7" // Agility bonus per level.
+		  
+	 	  "ItemSlots"
+	  	  { }
+		}		
+
+
+		"npc_gaara"
+		{
+		  "override_hero"   "npc_dota_hero_lion"
+		  "Model" 			"models/gaara/gaara.vmdl"
+		  "Ability1"         "gaara_sabaku_kyuu"
+		  "Ability2"         "gaara_ryuusa_bakuryu" 
+		  "Ability3"         "gaara_suna_no_yoroi" 
+		  "Ability4"         "gaara_sabaku_taiso"
+		  "ModelScale"		"0.5"
+		  "MagicalResistance"            "0"
+		
+		  
+		  "AttackAnimationPoint"   "0.4"
+		 // "AttackRate"				"0.7"
+		  "AttackRange"				"600"
+		  "MovementSpeed"			"290"
+		  "AttributeBaseStrength" "18" // Base strength
+		  "AttributeStrengthGain" "1.6" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "24" // Base intelligence
+		  "AttributeIntelligenceGain" "3.25" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "14" // Base agility
+		  "AttributeAgilityGain" "1" // Agility bonus per level.
+		  
+	 	  "ItemSlots"
+	  	  { }
+		}		
+}
