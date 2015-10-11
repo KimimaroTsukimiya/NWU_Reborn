@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityTextureName"			"kisame_water_prison"
-
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastPoint"				"0."
