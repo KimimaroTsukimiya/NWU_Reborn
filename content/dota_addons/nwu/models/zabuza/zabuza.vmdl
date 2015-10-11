@@ -54,7 +54,11 @@ CVModel CVModel_0
 	}
 	CVhitBoxSetListReference[] m_pHitBoxSetLists = 
 	[
-		
+		CVhitBoxSetListReference
+		{
+			CVhitBoxSetList* m_pObject = &CVhitBoxSetList_0
+			string m_sFileName = ""
+		}
 	]
 	CVattachmentListReference[] m_pAttachmentLists = 
 	[
@@ -64,14 +68,11 @@ CVModel CVModel_0
 			string m_sFileName = ""
 		}
 	]
-	CVanimGroupReference[] m_pAnimGroups = 
-	[
-		CVanimGroupReference
-		{
-			CVanimGroup* m_pObject = &CVanimGroup_0
-			string m_sFileName = ""
-		}
-	]
+	CVanimGroupReference m_pAnimGroup = CVanimGroupReference
+	{
+		CVanimGroup* m_pObject = &CVanimGroup_0
+		string m_sFileName = ""
+	}
 	CVNodeMaterialGroupListReference m_pMaterialGroupList = CVNodeMaterialGroupListReference
 	{
 		NodeMaterialGroupList_t* m_pObject = &NodeMaterialGroupList_t_0
@@ -128,6 +129,35 @@ CVModel CVModel_0
 	bool m_bMakeUniqueVMeshes = false
 	bool m_bMakeImplicitBindPoseSequence = false
 	bool m_bAdjustSkeletonFromBoneFlags = false
+	CVanimGroupReference[] m_pAnimGroups = 
+	[
+		
+	]
+}
+
+CVhitBoxSetList CVhitBoxSetList_0
+{
+	CVhitBoxSet[] m_HitBoxSets = 
+	[
+		CVhitBoxSet
+		{
+			string m_name = "default"
+			CVhitBox[] m_HitBoxes = 
+			[
+				CVhitBox
+				{
+					string m_name = "m3bone_root"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "m3bone_root"
+					float(3) m_vMinBounds = ( 44176418698952704.000000, 0.000000, 0.000000 )
+					float(3) m_vMaxBounds = ( 44176418698952704.000000, 0.000000, 0.000000 )
+					bool m_bTranslationOnly = true
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				}
+			]
+		}
+	]
 }
 
 CVattachmentList CVattachmentList_0
@@ -203,6 +233,46 @@ CVanimGroup CVanimGroup_0
 	}
 	CVanimGroupReference[] m_pAnimGroups = 
 	[
+		CVanimGroupReference
+		{
+			CVanimGroup* m_pObject = &CVanimGroup_1
+			string m_sFileName = ""
+		}
+	]
+	CVanim[] m_Vanim = 
+	[
+		
+	]
+	string[] m_sScripts = 
+	[
+		
+	]
+	string[] m_folderNames = 
+	[
+		
+	]
+}
+
+CVanimGroup CVanimGroup_1
+{
+	string m_Name = ""
+	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
+	{
+		CVReferenceSkeleton* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
+	{
+		CVBoneFlagList* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVseqGroupReference m_pSeqGroup = CVseqGroupReference
+	{
+		CVseqGroup* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVanimGroupReference[] m_pAnimGroups = 
+	[
 		
 	]
 	CVanim[] m_Vanim = 
@@ -259,6 +329,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -316,6 +387,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -373,6 +445,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -430,6 +503,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -487,6 +561,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -544,6 +619,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -601,6 +677,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -654,6 +731,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -716,6 +794,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -769,6 +848,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -826,9 +906,14 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		}
 	]
 	string[] m_sScripts = 
+	[
+		
+	]
+	string[] m_folderNames = 
 	[
 		
 	]

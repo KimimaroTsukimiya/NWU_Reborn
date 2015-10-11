@@ -19,7 +19,6 @@ function StormBoltLaunch( keys )
 	local ability_level = ability:GetLevel() - 1
 	local modifier_caster = keys.modifier_caster
 	local particle_bolt = keys.particle_bolt
-	local particle_ult = keys.particle_ult
 	local sound_cast = keys.sound_cast
 
 	-- Parameters

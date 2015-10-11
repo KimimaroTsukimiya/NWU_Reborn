@@ -80,7 +80,6 @@
 
                 "modifier_caster"       "modifier_imba_storm_bolt_caster"
                 "particle_bolt"         "particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
-                "particle_ult"          "particles/hero/sven/sven_ult_storm_bolt.vpcf"
                 "sound_cast"            "Hero_Sven.StormBolt"
 
                 "Target"
