@@ -1,0 +1,115 @@
+"onoki_kajutan_no_jutsu"
+{
+
+	"BaseClass"			 			"ability_datadriven"
+	"AbilityTextureName"			"onoki_kajutan_no_jutsu"
+	"MaxLevel" 						"3"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+
+	"AbilityCastRange"				"400"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+
+	"AbilityCooldown"				"2 80 70"
+	"AbilityManaCost"				"175 250 325"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"damage_factor"		"0.05 0.06 0.07"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"slow_bonus"		"-15 -25 -35"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"duration"			"5"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"radius"			"400"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"threshold_factor"	"0.05"
+		}
+	}
+
+	"precache"
+	{
+		"particle"	"particles/blood_impact/blood_advisor_pierce_spray.vpcf"
+		"particle"	"particles/units/heroes/hero_ursa/ursa_dust_hit_shock.vpcf"
+	}
+
+	"OnSpellStart"
+	{
+
+
+		"AttachEffect"
+		{
+			"Target"				"CASTER"
+			"EffectName"			"particles/units/heroes/hero_ursa/ursa_dust_hit_shock.vpcf"
+			"EffectAttachType" 		"attach_origin"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"  "modifier_kajutan_no_justsu_debuff"
+			"Target"
+			{
+				"Center"  "CASTER"
+				"Radius"  "%radius"
+				"Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
+			"Duration"	"%duration"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_kajutan_no_justsu_debuff"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+			"Duration"			"%duration"
+	
+			//"EffectName"		"particle_name"
+			//"EffectAttachType"	"follow_origin"
+
+			"ThinkInterval"		"1.0"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile" "heroes/onoki/onoki_kajutan_no_jutsu.lua"
+					"Function"   "do_damage"
+				}
+				"AttachEffect"
+                {
+                    "Target"					"TARGET"
+                    "EffectName"				"particles/blood_impact/blood_advisor_pierce_spray.vpcf"
+                    "EffectAttachType"			"attach_hitloc"
+                }
+			}
+	
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%slow_bonus"
+			}
+		}
+	}
+
+}
