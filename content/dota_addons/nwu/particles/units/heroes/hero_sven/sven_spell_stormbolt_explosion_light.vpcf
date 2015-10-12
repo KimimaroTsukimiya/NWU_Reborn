@@ -11,9 +11,9 @@
 			m_hTexture = resource:"materials/particle/particle_modulate_01.vtex"
 			m_ColorScale =
 [
-121,
-121,
-255,
+115,
+145,
+247,
 			]
 		},
 	]
@@ -63,16 +63,16 @@
 			_class = "C_INIT_RandomColor"
 			m_ColorMax =
 [
-121,
-121,
-255,
+115,
+145,
+247,
 				64,
 			]
 			m_ColorMin =
 [
-121,
-121,
-255,
+115,
+145,
+247,
 				64,
 			]
 		},

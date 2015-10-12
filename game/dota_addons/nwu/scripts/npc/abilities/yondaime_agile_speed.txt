@@ -1,0 +1,61 @@
+"yondaime_agile_speed"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"              "ability_datadriven"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"     "yondaime_agile_speed"
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "bonus_ms_percentage" "2 4 6 8"
+        }
+        "02"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "bonus_damage_ms_percent" "2 4 6 8"
+        }
+    }
+    "OnCreated"
+    {
+          "ApplyModifier"
+        {
+            "ModifierName"    "modifier_agile_speed"
+            "Target"         "CASTER"
+        }
+    }
+
+    "OnUpgrade"
+    {
+
+        "RemoveModifier"
+        {
+            "ModifierName"    "modifier_agile_speed"
+            "Target"         "CASTER"
+        }
+
+        "ApplyModifier"
+        {
+            "ModifierName"    "modifier_agile_speed"
+            "Target"         "CASTER"
+        }
+    }
+
+    "Modifiers"
+    {
+        "modifier_agile_speed"
+        {
+            "Passive" "1"
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_damage_ms_percent"
+            }
+        }
+    }
+}

@@ -5,9 +5,9 @@
 	m_nMaxParticles = 4
 	m_ConstantColor =
 [
-121,
-121,
-255,
+115,
+145,
+247,
 		255,
 	]
 	m_Renderers =
@@ -26,9 +26,9 @@
 			m_hTexture = resource:"materials/particle/particle_glow_05.vtex"
 			m_ColorScale =
 [
-121,
-121,
-255,
+115,
+145,
+247,
 			]
 		},
 	]
@@ -60,9 +60,9 @@
 			_class = "C_OP_ColorInterpolate"
 			m_ColorFade =
 [
-121,
-121,
-255,
+115,
+145,
+247,
 				255,
 			]
 		},

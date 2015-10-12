@@ -75,7 +75,7 @@
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
-		"model"		"models/kisame/kisame_samehada.vmdl"
+		"model"		"models/kisame_new/kisame_samehada.vmdl"
 	}
 
 	"OnSpellStart"
@@ -134,7 +134,7 @@
 				{
 					"ScriptFile"			"heroes/kisame/water_prison.lua"
 					"Function"				"ModelSwapStart"
-					"model"					"models/kisame/kisame_samehada.vmdl"
+					"model"					"models/kisame_new/kisame_samehada.vmdl"
 					"projectile_model"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 				}
 
