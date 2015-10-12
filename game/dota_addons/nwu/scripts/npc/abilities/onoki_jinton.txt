@@ -31,7 +31,35 @@
 		}
 	}
 
+	"precache"
+	{
+		"particle"	"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+		"particle"  "particles/units/heroes/hero_queenofpain/queen_shadow_strike_debuff_parent.vpcf"
+		"particle"  "soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts"
+	}
+
 	"OnSpellStart"
+	{
+
+		"TrackingProjectile"
+		{
+		    "Target"           "TARGET"
+		    "EffectName"       "particles/units/heroes/hero_queenofpain/queen_shadow_strike_debuff_parent.vpcf"
+		    "Dodgeable"        "0"
+		    "ProvidesVision"   "1"
+		    "VisionRadius"     "100"
+		    "MoveSpeed"        "1500"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_QueenOfPain.ShadowStrike"
+			"Target" 		"TARGET"
+		}
+
+	}
+
+	"OnProjectileHitUnit"
 	{
 		"ApplyModifier"
 		{
@@ -47,11 +75,17 @@
 		}
 		"Damage"
 		{
-			"Target"  "TARGET"
+			"Target"
+			{
+				"Center"  "TARGET"
+				"Radius"  "%stun_radius"
+				"Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
 			"Type"    "DAMAGE_TYPE_PHYSICAL"
 			"Damage"  "%AbilityDamage"
 		}
-	}
+    }
 
 	"Modifiers"
 	{
@@ -62,8 +96,15 @@
 			"IsDebuff"			"1"
 			"Duration"			"%stun_duration"
 	
-			//"EffectName"		"particle_name"
-			//"EffectAttachType"	"follow_origin"
+			"OnCreated"
+			{			
+				"AttachEffect"
+				{
+					"Target"			"TARGET"
+					"EffectName"		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+					"EffectAttachType"	"attach_hitloc"
+				}
+			}
 	
 			"States"
 			{
