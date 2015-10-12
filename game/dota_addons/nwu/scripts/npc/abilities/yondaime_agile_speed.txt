@@ -22,30 +22,25 @@
             "bonus_damage_ms_percent" "2 4 6 8"
         }
     }
+
     "OnCreated"
     {
-          "ApplyModifier"
+        "RunScript"
         {
-            "ModifierName"    "modifier_agile_speed"
-            "Target"         "CASTER"
+            "ScriptFile"    "heroes/yondaime/agile_speed.lua"
+            "Function"        "init_agile_speed"
         }
     }
 
     "OnUpgrade"
     {
-
-        "RemoveModifier"
+        "RunScript"
         {
-            "ModifierName"    "modifier_agile_speed"
-            "Target"         "CASTER"
-        }
-
-        "ApplyModifier"
-        {
-            "ModifierName"    "modifier_agile_speed"
-            "Target"         "CASTER"
+            "ScriptFile"    "heroes/yondaime/agile_speed.lua"
+            "Function"        "init_agile_speed"
         }
     }
+
 
     "Modifiers"
     {
@@ -56,6 +51,18 @@
             {
                 "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_damage_ms_percent"
             }
+
+                "ThinkInterval" "0.1"
+            "OnIntervalThink"
+            {
+
+                "RunScript"
+            {
+              "ScriptFile"    "heroes/yondaime/agile_speed.lua"
+              "Function"        "apply_bonus_damage"
+            }
+
+            }   
         }
     }
 }
