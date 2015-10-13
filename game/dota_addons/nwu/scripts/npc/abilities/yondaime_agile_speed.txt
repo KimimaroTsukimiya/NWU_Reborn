@@ -21,26 +21,12 @@
             "var_type"  "FIELD_INTEGER"
             "bonus_damage_ms_percent" "2 4 6 8"
         }
-    }
-
-    "OnCreated"
-    {
-        "RunScript"
+        "03"
         {
-            "ScriptFile"    "heroes/yondaime/agile_speed.lua"
-            "Function"        "init_agile_speed"
+            "var_type"  "FIELD_FLOAT"
+            "bonus_attack_damage" "1"
         }
     }
-
-    "OnUpgrade"
-    {
-        "RunScript"
-        {
-            "ScriptFile"    "heroes/yondaime/agile_speed.lua"
-            "Function"        "init_agile_speed"
-        }
-    }
-
 
     "Modifiers"
     {
@@ -49,20 +35,29 @@
             "Passive" "1"
             "Properties"
             {
-                "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_damage_ms_percent"
+                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_attack_damage"
             }
 
-                "ThinkInterval" "0.1"
+            "ThinkInterval" "0.1"
             "OnIntervalThink"
             {
-
-                "RunScript"
-            {
-              "ScriptFile"    "heroes/yondaime/agile_speed.lua"
-              "Function"        "apply_bonus_damage"
-            }
-
+                    "RunScript"
+                {
+                  "ScriptFile"    "heroes/yondaime/agile_speed.lua"
+                  "Function"        "apply_bonus_damage"
+                }
             }   
+        }
+
+        "modifier_agile_speed_ms"
+        {
+            "Passive" "1"
+
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_ms_percentage"
+        
+            }  
         }
     }
 }

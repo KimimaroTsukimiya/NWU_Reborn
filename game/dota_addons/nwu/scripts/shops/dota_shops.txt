@@ -22,7 +22,7 @@
         {
                 "item"    "item_shinobi_waist_pouch"
                 "item"    "item_gloves_of_strength"
-                "item"    "item_idates_boot"
+                "item"    "item_training_weights"
                 "item"    "item_amulet_of_anubis"
                 "item"    "item_leaf_of_konoha"
                 "item"    "item_firm_nunchaku"   
@@ -32,7 +32,6 @@
                 "item"    "item_swift_katana"
                 "item"    "item_staff_of_faith"
                 "item"    "item_kages_relic"             
-
         }
  
         "weapons_armor"
@@ -45,7 +44,7 @@
                 "item"    "item_forehead_protector"
                 "item"    "item_shin_guards"
                 "item"    "item_javelin_datadriven"
-                "item"    "item_mithrill_hammer_datadriven"
+                "item"    "item_mithril_hammer_datadriven"
                 "item"    "item_shinobi_uniform"
                 "item"    "item_samurai_helm"
                 "item"    "item_samurai_armor"

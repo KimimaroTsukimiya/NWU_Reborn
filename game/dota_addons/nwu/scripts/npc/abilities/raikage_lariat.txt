@@ -114,6 +114,13 @@
                 "sound_impact"          "Hero_Sven.StormBoltImpact"
                 "particle_impact"       "particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
             }
+
+            "ApplyModifier"
+            {
+                "ModifierName"    "modifier_jinton_stun"
+                "Target"         "TARGET"
+                "Duration"        "10"
+            }
         }
 
         "Modifiers"
@@ -133,5 +140,51 @@
                     "MODIFIER_STATE_NO_HEALTH_BAR"  "MODIFIER_STATE_VALUE_ENABLED"
                 }
             }
+
+
+
+            "modifier_jinton_stun"
+
+        {
+
+            "Passive"           "0"
+
+            "IsHidden"          "0"
+
+            "IsDebuff"          "1"
+
+            "Duration"          "%stun_duration"
+
+    
+
+            "OnCreated"
+
+            {           
+
+                "AttachEffect"
+
+                {
+
+                    "Target"            "TARGET"
+
+                    "EffectName"        "particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+
+                    "EffectAttachType"  "attach_hitloc"
+
+                }
+
+            }
+
+    
+
+            "States"
+
+            {
+
+                "MODIFIER_STATE_STUNNED"        "MODIFIER_STATE_VALUE_ENABLED"
+
+            }
+
+        }
         }
     }

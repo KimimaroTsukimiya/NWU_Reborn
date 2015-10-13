@@ -1,7 +1,4 @@
-"nwu.game_sounds_hero_pick"
-{
-    "operator_stacks"
-  "undead.Spawn"
+"game_sounds_hero_pick"
 {
     "operator_stacks"
     {
@@ -31,5 +28,4 @@
             }
         }
     }
-}
 }
