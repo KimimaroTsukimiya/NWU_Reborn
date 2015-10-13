@@ -2,7 +2,7 @@
 {
 
 	"BaseClass"			 			"ability_datadriven"
-	"AbilityTextureName"			"onoki_jinton"
+	"AbilityTextureName"			"onoki_stalagmite_armor"
 	"MaxLevel" 						"4"
 
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
