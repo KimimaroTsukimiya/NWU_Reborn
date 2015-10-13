@@ -20,7 +20,7 @@
   "ItemCost"            "800"
   "ItemShopTags"          "armor;boost_armor"
   "ItemQuality"         "rare"
-  "ItemAliases"         "buckler;active;armor"
+  "ItemAliases"         "buckler;active;armor;stats"
   
   "AbilitySpecial"
   {
@@ -53,6 +53,21 @@
     {
       "var_type"        "FIELD_FLOAT"
       "active_duration_hero"  "25.0"
+    }
+     "07"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_int"   "2"
+    }
+     "08"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_str"   "2"
+    }
+     "09"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_agi"   "2"
     }
   }
   
