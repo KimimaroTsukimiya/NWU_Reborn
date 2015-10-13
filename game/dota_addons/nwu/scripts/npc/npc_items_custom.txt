@@ -658,7 +658,7 @@
 	    "ItemBaseLevel"         "1"
 	    "ItemPermanent"         "1"
 	    "ItemInitialCharges"    "10"
-	    "ItemAliases"           "active;mana;chakra;mana reg;chakra reg;int;intelligence;nuke"
+	    "ItemAliases"           "active;mana;chakra;mana reg;chakra reg;int;intelligence;nuke;rengeki"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -8149,7 +8149,7 @@
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "ItemAliases"           "bracer;str;strength"
+    "ItemAliases"           "bracer;str;strength;stats"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -9820,7 +9820,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    "ItemAliases"           "wraith band;agility;agi"
+    "ItemAliases"           "wraith band;agility;agi;stats"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
