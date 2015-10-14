@@ -7,8 +7,8 @@ CVModel CVModel_0
 		[
 			CVmesh
 			{
-				string m_meshName = "onuki"
-				string m_meshFile = "models/onuki/onuki.fbx"
+				string m_meshName = "q_onoki"
+				string m_meshFile = "models/onuki/q_onoki.fbx"
 				string m_materialSearchPath = ""
 				bool m_bSkinParentedObjects = true
 				bool m_bLegacySkinParentedTransforms = false
@@ -147,168 +147,16 @@ CVanimGroup CVanimGroup_0
 	}
 	CVanimGroupReference[] m_pAnimGroups = 
 	[
-		CVanimGroupReference
-		{
-			CVanimGroup* m_pObject = &CVanimGroup_1
-			string m_sFileName = ""
-		}
-	]
-	CVanim[] m_Vanim = 
-	[
-		
-	]
-	string[] m_sScripts = 
-	[
-		
-	]
-	string[] m_folderNames = 
-	[
-		
-	]
-}
-
-CVanimGroup CVanimGroup_1
-{
-	string m_Name = ""
-	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
-	{
-		CVReferenceSkeleton* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
-	{
-		CVBoneFlagList* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVseqGroupReference m_pSeqGroup = CVseqGroupReference
-	{
-		CVseqGroup* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVanimGroupReference[] m_pAnimGroups = 
-	[
 		
 	]
 	CVanim[] m_Vanim = 
 	[
 		CVanim
 		{
-			string m_Animationname = "onuki_amnimations"
-			string m_Filepath = "models/onuki/onuki_amnimations.FBX"
+			string m_Animationname = "q_onoki_animations"
+			string m_Filepath = "models/onuki/q_onoki_animations.FBX"
 			int m_nStartframe = 0
-			int m_nEndframe = 937
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-		},
-		CVanim
-		{
-			string m_Animationname = "spoky_onoki_stand"
-			string m_Filepath = "models/onuki/onuki_amnimations.fbx"
-			int m_nStartframe = 5
-			int m_nEndframe = 16
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = true
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_IDLE"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-		},
-		CVanim
-		{
-			string m_Animationname = "spoky_onoki_run"
-			string m_Filepath = "models/onuki/onuki_amnimations.fbx"
-			int m_nStartframe = -1
-			int m_nEndframe = -1
+			int m_nEndframe = 624
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -374,18 +222,13 @@ CVMaterialRemapList CVMaterialRemapList_0
 	[
 		CVMaterialRemap
 		{
-			string m_sSearchMaterial = "milkshapeexported1.vmat"
-			string m_sReplaceMaterial = "materials/onuki/onuki.vmat"
+			string m_sSearchMaterial = "model1.vmat"
+			string m_sReplaceMaterial = "materials/onuki/q_onoki_1.vmat"
 		},
 		CVMaterialRemap
 		{
-			string m_sSearchMaterial = "milkshapeexported2.vmat"
-			string m_sReplaceMaterial = "materials/onuki/onuki.vmat"
-		},
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "milkshapeexported3.vmat"
-			string m_sReplaceMaterial = "materials/onuki/onuki.vmat"
+			string m_sSearchMaterial = "model2.vmat"
+			string m_sReplaceMaterial = "materials/onuki/q_onoki_2.vmat"
 		}
 	]
 }

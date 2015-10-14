@@ -60,14 +60,11 @@ CVModel CVModel_0
 	[
 		
 	]
-	CVanimGroupReference[] m_pAnimGroups = 
-	[
-		CVanimGroupReference
-		{
-			CVanimGroup* m_pObject = &CVanimGroup_0
-			string m_sFileName = ""
-		}
-	]
+	CVanimGroupReference m_pAnimGroup = CVanimGroupReference
+	{
+		CVanimGroup* m_pObject = &CVanimGroup_0
+		string m_sFileName = ""
+	}
 	CVNodeMaterialGroupListReference m_pMaterialGroupList = CVNodeMaterialGroupListReference
 	{
 		NodeMaterialGroupList_t* m_pObject = NULL
@@ -124,9 +121,53 @@ CVModel CVModel_0
 	bool m_bMakeUniqueVMeshes = false
 	bool m_bMakeImplicitBindPoseSequence = false
 	bool m_bAdjustSkeletonFromBoneFlags = false
+	CVanimGroupReference[] m_pAnimGroups = 
+	[
+		
+	]
 }
 
 CVanimGroup CVanimGroup_0
+{
+	string m_Name = ""
+	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
+	{
+		CVReferenceSkeleton* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
+	{
+		CVBoneFlagList* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVseqGroupReference m_pSeqGroup = CVseqGroupReference
+	{
+		CVseqGroup* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVanimGroupReference[] m_pAnimGroups = 
+	[
+		CVanimGroupReference
+		{
+			CVanimGroup* m_pObject = &CVanimGroup_1
+			string m_sFileName = ""
+		}
+	]
+	CVanim[] m_Vanim = 
+	[
+		
+	]
+	string[] m_sScripts = 
+	[
+		
+	]
+	string[] m_folderNames = 
+	[
+		
+	]
+}
+
+CVanimGroup CVanimGroup_1
 {
 	string m_Name = ""
 	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
@@ -202,6 +243,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -259,6 +301,7 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
@@ -316,13 +359,14 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		},
 		CVanim
 		{
 			string m_Animationname = "hidan_attack"
 			string m_Filepath = "models/hidan/hidan_animations.fbx"
-			int m_nStartframe = -1
-			int m_nEndframe = -1
+			int m_nStartframe = 750
+			int m_nEndframe = 800
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -369,9 +413,14 @@ CVanimGroup CVanimGroup_0
 				float m_flFadeInTime = 0.200000
 				float m_flFadeOutTime = 0.200000
 			}
+			string m_folderName = ""
 		}
 	]
 	string[] m_sScripts = 
+	[
+		
+	]
+	string[] m_folderNames = 
 	[
 		
 	]
