@@ -23,7 +23,7 @@
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    "ItemAliases"           "cyclone;movementspeed;intelligence;int"
+    "ItemAliases"           "cyclone;movementspeed;intelligence;int;euls;mana regen;scepter"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -113,7 +113,7 @@
          "Properties"
           {
             "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
-            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_reg_constant"
+            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
             "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%movementspeed_percentage"
           }
       }
@@ -130,7 +130,7 @@
       "02"
       {
         "var_type"              "FIELD_FLOAT"
-        "mana_reg_constant"     "125.0"
+        "bonus_mana_reg_percentage"     "125.0"
       }
       "03"
       {

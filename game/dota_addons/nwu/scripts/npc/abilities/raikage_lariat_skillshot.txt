@@ -120,7 +120,7 @@
 		}
 				"RunScript"
 				{
-					"ScriptFile"		"heroes/arrow.lua"
+					"ScriptFile"		"heroes/raikage/arrow.lua"
 					"Function"			"LaunchArrowCheck"
 					"particle_name"		"particles/units/heroes/hero_mirana/mirana_spell_arrow.vpcf"
 					"modifier_caster"	"modifier_imba_storm_bolt_caster"
@@ -148,7 +148,7 @@
 			{
 				"RunScript"
 				{
-					"ScriptFile"	"heroes/arrow.lua"
+					"ScriptFile"	"heroes/raikage/arrow.lua"
 					"Function"		"LaunchArrowCheckInit"
 					"particle_name"			"particles/units/heroes/hero_mirana/mirana_spell_arrow.vpcf"
 				}

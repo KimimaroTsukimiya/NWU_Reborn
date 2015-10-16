@@ -22,7 +22,7 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     "ItemQuality"         "epic"
-    "ItemAliases"         "refresher orb;active;remove cd;remove cooldown;damage"
+    "ItemAliases"         "refresher orb;active;remove cd;remove cooldown;damage;mana regen;hp regen"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -37,7 +37,7 @@
          "Properties"
           {
             "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_reg_constant"
+            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
             "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
           }
       }
@@ -58,12 +58,12 @@
       "01"
       {
         "var_type"         "FIELD_FLOAT"
-        "bonus_damage"        "40.0"
+        "bonus_damage"        "56.0"
       }
       "02"
       {
         "var_type"              "FIELD_FLOAT"
-        "mana_reg_constant"     "200.0"
+        "bonus_mana_reg_percentage"     "200.0"
       }
        "03"
       {

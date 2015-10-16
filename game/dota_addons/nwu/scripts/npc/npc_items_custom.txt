@@ -2755,7 +2755,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    "ItemAliases"           "cyclone;movementspeed;intelligence;int"
+	    "ItemAliases"           "cyclone;movementspeed;intelligence;int;euls;mana regen;scepter"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -2845,7 +2845,7 @@
 	         "Properties"
 	          {
 	            "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
-	            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_reg_constant"
+	            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
 	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%movementspeed_percentage"
 	          }
 	      }
@@ -2862,7 +2862,7 @@
 	      "02"
 	      {
 	        "var_type"              "FIELD_FLOAT"
-	        "mana_reg_constant"     "125.0"
+	        "bonus_mana_reg_percentage"     "125.0"
 	      }
 	      "03"
 	      {
@@ -3310,7 +3310,7 @@
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
 	    "ItemQuality"         "epic"
-	    "ItemAliases"         "refresher orb;active;remove cd;remove cooldown;damage"
+	    "ItemAliases"         "refresher orb;active;remove cd;remove cooldown;damage;mana regen;hp regen"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -3325,7 +3325,7 @@
 	         "Properties"
 	          {
 	            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-	            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%mana_reg_constant"
+	            "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
 	            "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
 	          }
 	      }
@@ -3346,12 +3346,12 @@
 	      "01"
 	      {
 	        "var_type"         "FIELD_FLOAT"
-	        "bonus_damage"        "40.0"
+	        "bonus_damage"        "56.0"
 	      }
 	      "02"
 	      {
 	        "var_type"              "FIELD_FLOAT"
-	        "mana_reg_constant"     "200.0"
+	        "bonus_mana_reg_percentage"     "200.0"
 	      }
 	       "03"
 	      {
@@ -3516,7 +3516,7 @@
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
 	    "ItemPermanent"         "1"
-	    "ItemAliases"           "active;clap;slow;intelligence;int;mana reg;chakra reg;"
+	    "ItemAliases"           "active;clap;slow;intelligence;int;mana reg;chakra reg;aoe;mana regen"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -7977,7 +7977,7 @@
 	    "AbilityCastRange"        "%cast_range"
 	    "AbilityManaCost"         "%manacost"
 	    // Stats
-	    "AbilityCooldown"        "35.0"
+	    "AbilityCooldown"        "30.0"
 	    "AbilityManaCost"        "100"
 	    //-------------------------------------------------------------------------------------------------------------
 	
@@ -9538,6 +9538,93 @@
 	
 	}
 	
+	"item_spellthiefs_edge"
+	  {
+	    "ID"                    "2953"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "item_datadriven"
+	    "AbilityTextureName"    "item_spellthiefs_edge"
+	    // Stats
+	    //-------------------------------------------------------------------------------------------------------------
+	
+	    // Item Info
+	    //-------------------------------------------------------------------------------------------------------------
+	    "ItemCost"                "0"
+	    "ItemInitialCharges"      "0"
+	    "ItemDroppable"           "1"
+	    "ItemSellable"            "1"
+	    "ItemRequiresCharges"     "0"
+	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	    "MaxUpgradeLevel"         "1"
+	    "ItemBaseLevel"           "1"
+	    "ItemQuality"         "rare"
+	    "ItemAliases"         "crystalys;crit;damage"
+	    //pickup sounds
+	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+	
+	    "Modifiers"
+	    {
+	      "item_spellthiefs_edge_modifier"
+	      {
+	         "Passive" "1"
+	         "IsHidden"  "0"
+	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	         "Properties"
+	          {
+	            //   "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+	          }
+	
+	          "OnCreated"
+	          {
+	             "RunScript"
+	            {
+	              "ScriptFile"  "items/spellthiefs_edge.lua"
+	              "Function"    "initgivegold"
+	              "modifier_name"   "item_spellthiefs_edge_modifier"
+	            }
+	          }
+	
+	        "OnAttackLanded"
+	        {
+	            "RunScript"
+	            {
+	              "ScriptFile"      "items/spellthiefs_edge.lua"
+	              "Function"        "givegold"
+	              "modifier_name"   "item_spellthiefs_edge_modifier"
+	            }
+	        }
+	      }
+	
+	    }
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	      "01"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "gold_gain_cd"              "10.0"
+	      }
+	      "02"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "gain_gold_max_stacks"              "3.0"
+	      }
+	      "03"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "current_stacks"              "1.0"
+	      }
+	      "04"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "gold_gain"                 "3.0"
+	      }
+	  }
+	}
+	
   "item_staff_of_faith"
   {
     "ID"                  "1136"
@@ -9586,6 +9673,93 @@
     }
   }
 
+	"item_spellthiefs_edge"
+	  {
+	    "ID"                    "2953"
+	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"             "item_datadriven"
+	    "AbilityTextureName"    "item_spellthiefs_edge"
+	    // Stats
+	    //-------------------------------------------------------------------------------------------------------------
+	
+	    // Item Info
+	    //-------------------------------------------------------------------------------------------------------------
+	    "ItemCost"                "0"
+	    "ItemInitialCharges"      "0"
+	    "ItemDroppable"           "1"
+	    "ItemSellable"            "1"
+	    "ItemRequiresCharges"     "0"
+	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	    "MaxUpgradeLevel"         "1"
+	    "ItemBaseLevel"           "1"
+	    "ItemQuality"         "rare"
+	    "ItemAliases"         "crystalys;crit;damage"
+	    //pickup sounds
+	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+	
+	    "Modifiers"
+	    {
+	      "item_spellthiefs_edge_modifier"
+	      {
+	         "Passive" "1"
+	         "IsHidden"  "0"
+	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	         "Properties"
+	          {
+	            //   "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+	          }
+	
+	          "OnCreated"
+	          {
+	             "RunScript"
+	            {
+	              "ScriptFile"  "items/givegold.lua"
+	              "Function"    "initgivegold"
+	              "modifier_name"   "item_spellthiefs_edge_modifier"
+	            }
+	          }
+	
+	        "OnAttackLanded"
+	        {
+	            "RunScript"
+	            {
+	              "ScriptFile"      "items/givegold.lua"
+	              "Function"        "givegold"
+	              "modifier_name"   "item_spellthiefs_edge_modifier"
+	            }
+	        }
+	      }
+	
+	    }
+	    // Special  
+	    //-------------------------------------------------------------------------------------------------------------
+	    "AbilitySpecial"
+	    {
+	      "01"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "gold_gain_cd"              "10.0"
+	      }
+	      "02"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "gain_gold_max_stacks"              "3.0"
+	      }
+	      "03"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "current_stacks"              "1.0"
+	      }
+	      "04"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "gold_gain"                 "3.0"
+	      }
+	  }
+	}
+	
   "item_swift_katana"
   {
     "ID"              "1135"
@@ -9906,8 +10080,9 @@
 	    "ItemAliases"           "orchid malevolence;silence;int;intelligence;cast;"
 	    "precache"
 	    {
-	      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
-	      "particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+	      "particle"  "Hero_Silencer.GlobalSilence.Effect"
+	      "particle"  "particles/units/heroes/hero_silencer/silencer_global_silence.vpcf"
+	      "soundfile"   "sounds/items/orchid.vsnd"
 	    }
 	
 	    //pickup sounds
@@ -9939,6 +10114,12 @@
 	          "FireSound"
 	          {
 	            "EffectName"  "Hero_Silencer.GlobalSilence.Effect"
+	            "Target"    "TARGET"
+	          } 
+	
+	          "FireSound"
+	          {
+	            "EffectName"  "sounds/items/orchid.vsnd"
 	            "Target"    "TARGET"
 	          } 
 	           

@@ -27,8 +27,9 @@
     "ItemAliases"           "orchid malevolence;silence;int;intelligence;cast;"
     "precache"
     {
-      "particle"  "particles/dire_fx/fire_barracks_glow_b.vpcf"
-      "particle"  "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+      "particle"  "Hero_Silencer.GlobalSilence.Effect"
+      "particle"  "particles/units/heroes/hero_silencer/silencer_global_silence.vpcf"
+      "soundfile"   "sounds/items/orchid.vsnd"
     }
 
     //pickup sounds
@@ -60,6 +61,12 @@
           "FireSound"
           {
             "EffectName"  "Hero_Silencer.GlobalSilence.Effect"
+            "Target"    "TARGET"
+          } 
+
+          "FireSound"
+          {
+            "EffectName"  "sounds/items/orchid.vsnd"
             "Target"    "TARGET"
           } 
            

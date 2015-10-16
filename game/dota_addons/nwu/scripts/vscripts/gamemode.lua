@@ -104,6 +104,46 @@ function GameMode:OnGameInProgress()
     end)
 end
 
+--[[-
+ LearningDave
+ October, 16th 2015
+  Whenever a Entity is killed, this function will be called, includes:
+  - Support Item Check: Checks if the Killer has a certain item and reset's its passive cooldown.
+]]
+function GameMode:OnEntityKilled(keys)
+  -- The Unit that was Killed
+  local killedUnit = EntIndexToHScript( keys.entindex_killed )
+  -- The Killing entity
+  local killerEntity = nil
+
+  if keys.entindex_attacker ~= nil then
+    killerEntity = EntIndexToHScript( keys.entindex_attacker )
+  end
+
+
+  --Support Item Check
+  if killedUnit:IsNeutralUnitType() and killerEntity:IsRealHero() and killerEntity:HasItemInInventory("item_spellthiefs_edge")  then 
+
+      local itemIndex = 0
+      local counter = 0
+      for i=0,5 do 
+        if killerEntity:GetItemInSlot(i) ~= nil then
+          if killerEntity:GetItemInSlot(i):GetName() == "item_spellthiefs_edge" then
+            itemIndex = counter
+          end 
+        end 
+        counter = counter + 1
+      end
+
+      killerEntity:GetItemInSlot(itemIndex):StartCooldown(12)
+      killerEntity:GetItemInSlot(itemIndex).longCD = true
+      Timers:CreateTimer( 12, function()
+          killerEntity:GetItemInSlot(itemIndex).longCD = false
+          return nil
+      end
+      )
+  end
+end
 
 
 -- This function initializes the game mode and is called before anyone loads into the game

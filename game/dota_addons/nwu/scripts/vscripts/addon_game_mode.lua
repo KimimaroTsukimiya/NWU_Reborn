@@ -69,6 +69,8 @@ end
 
 -- Create the game mode when we activate
 function Activate()
+  --loading custom key values for usages
+  GameRules.heroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt") 
   GameRules.GameMode = GameMode()
   GameRules.GameMode:InitGameMode()
 
