@@ -36,6 +36,9 @@
 		"particle"	"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
 		"particle"  "particles/units/heroes/hero_queenofpain/queen_shadow_strike_debuff_parent.vpcf"
 		"particle"  "soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts"
+		"particle"  "particles/units/heroes/hero_sven/sven_warcry_armor_buff_model.vpcf"
+		"particle"	"particles/econ/items/sven/sven_warcry_ti5/sven_warcry_buff_ti_5.vpcf"
+		"particle"	"particles/units/heroes/hero_sven/sven_warcry_buff_ti_5.vpcf"
 	}
 
 	"OnSpellStart"
@@ -101,8 +104,12 @@
 				"AttachEffect"
 				{
 					"Target"			"TARGET"
-					"EffectName"		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
-					"EffectAttachType"	"attach_hitloc"
+					"EffectName"		"particles/units/heroes/hero_sven/sven_warcry_buff_ti_5.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"ControlPointEntities"
+					{
+						"TARGET"	"follow_origin"
+					}
 				}
 			}
 	
