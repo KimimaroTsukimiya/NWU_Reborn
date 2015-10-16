@@ -561,7 +561,7 @@
 		//Kongou Nyoi
     	"DOTA_Tooltip_ability_item_kongou_nyoi"										"Kongou Nyoi"
     	"DOTA_Tooltip_ability_item_kongou_nyoi_description"							"Passive: 30%% Chance to deal 100 damage in 300 AOE\nActive: Track Enemies (ping on enemies location)"
-		"DOTA_Tooltip_ability_item_kongou_nyoi_Lore"								"Within this weapon lies The Elder Monkey, a being who is able to fight at the user's side, or transform into a large extendable staff. This staff is as hard as adamantine, yet as sharp as a sword."
+		"DOTA_Tooltip_ability_item_kongou_nyoi_Lore"								"Within this weapon lies The Elder Monkey, a being who is able to fight at the user's side, or transform into a large extendable staff. This staff is as hard as adamantine and can cut like a sword."
 		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_str"							"Strength: +"
 		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_agi"							"Agility: +"
 		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_int"							"Intelligence: +"
@@ -888,33 +888,33 @@
 
 		//Silver Hands
     	"DOTA_Tooltip_ability_item_silver_hands"									"Silver Hands"
-    	"DOTA_Tooltip_ability_item_silver_hands_description"						"Passive: Cleave - Deals %aoe_damage_percent% %% of attack damage in a %radius% area around the target. Ranged units cannot Cleave."
-    	"DOTA_Tooltip_ability_item_silver_hands_Lore"								"Once the Silver Watches have been smelted into a glove, a divine power will be awakened, able to crush those who fall prey to this metallic glove."
-		"DOTA_Tooltip_ability_item_silver_hands_bonus_damage"						"Damage: +"
-		"DOTA_Tooltip_ability_item_silver_hands_bonus_hp_reg_constant"				"Hp Regeneration: +"
-		"DOTA_Tooltip_ability_item_silver_hands_bonus_mana_reg_percentage"			"%Chakra Regeneration: +"
+    	"DOTA_Tooltip_ability_item_silver_hands_description"						"Passive: Cleave - Deals %aoe_damage_percent% %% of attack damage in an area around the target. Ranged units cannot Cleave."
+    	"DOTA_Tooltip_ability_item_silver_hands_Lore"								"Once the Silver Watches have been smelted into a glove, a divine power will be awakened, one which will be able to crush those who fall prey to this metallic glove."
+		"DOTA_Tooltip_ability_item_silver_hands_bonus_damage"						"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_silver_hands_bonus_hp_reg_constant"				"Hp Regeneration: + "
+		"DOTA_Tooltip_ability_item_silver_hands_bonus_mana_regen_percentage"		"%Chakra Regeneration: + "
 		
 		//Solar Blade
     	"DOTA_Tooltip_ability_item_solar_blade"										"Solar Blade"
     	"DOTA_Tooltip_ability_item_solar_blade_Description"							"Passive: Fire - Deals %aoe_damage% damage per second and blinds enemies in a %radius% radius."	
 		"DOTA_Tooltip_ability_item_solar_blade_Lore"								"Forged with the power of the Red Sun, this sword can burn anything it touches into ashes."
-		"DOTA_Tooltip_ability_item_solar_blade_bonus_damage"						"Damage: +"
+		"DOTA_Tooltip_ability_item_solar_blade_bonus_damage"						"Attack Damage: + "
 		"DOTA_Tooltip_solar_blade_aoe_dmg"											"Fire"
 		"DOTA_Tooltip_solar_blade_aoe_dmg_description"								"Enemy Units lose 40 HP per second in 500 AOE."
 
 		//Gale Blade
     	"DOTA_Tooltip_ability_item_gale_blade"										"Gale Blade"
-		"DOTA_Tooltip_ability_item_gale_blade_Lore"									"A special blade made from the leaves of Konoha and the metal of Iwagakure, the Gale Blade is a unique combination of the two nation's heritages."
-		"DOTA_Tooltip_ability_item_gale_blade_bonus_damage"							"Damage: +"
-		"DOTA_Tooltip_ability_item_gale_blade_crit_bonus"							"%CRITICAL Damage:"
-		"DOTA_Tooltip_ability_item_gale_blade_crit_chance"							"%CRITICAL Chance:"
+		"DOTA_Tooltip_ability_item_gale_blade_Lore"									"Made from the leaves of Konoha and the metal of Imagakure, the Gale Blade is a special weapon and a unique combination of the two nation's heritages."
+		"DOTA_Tooltip_ability_item_gale_blade_bonus_damage"							"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_gale_blade_crit_bonus"							"%Critical Damage: "
+		"DOTA_Tooltip_ability_item_gale_blade_crit_chance"							"%Critical Chance: "
 
 		//Iron Crow
     	"DOTA_Tooltip_ability_item_iron_crow"										"Iron Crow"
     	"DOTA_Tooltip_ability_item_iron_crow_Description"							"Passive: Bash - Gives a %bash_chance%%% chance to stun for %bash_duration% seconds."
 		"DOTA_Tooltip_ability_item_iron_crow_Lore"									"The Iron Crow was an old weapon that was first used during the Second Shinobi Wars. Its main advantage came from its ability to overcome a foe with a single blow, disabling the target completely."
-		"DOTA_Tooltip_ability_item_iron_crow_bonus_damage"							"Damage: +"
-		"DOTA_Tooltip_ability_item_iron_crow_bonus_str"								"Strength: +"
+		"DOTA_Tooltip_ability_item_iron_crow_bonus_damage"							"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_iron_crow_bonus_str"								"Strength: + "
 		"DOTA_Tooltip_iron_crow_bash"												"Iron Crow"
 		"DOTA_Tooltip_iron_crow_bash_description"									"This Unit is stunned."
 

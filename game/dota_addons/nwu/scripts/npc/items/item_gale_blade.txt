@@ -87,17 +87,17 @@
       "01"
       {
         "var_type"                  "FIELD_FLOAT"
-        "bonus_damage"              "35.0"
+        "bonus_damage"              "30.0"
       }
       "02"
       {
         "var_type"                  "FIELD_FLOAT"
-        "crit_bonus"              "150.0"
+        "crit_bonus"              "175.0"
       }
       "03"
       {
         "var_type"                  "FIELD_FLOAT"
-        "crit_chance"              "10.0"
+        "crit_chance"              "20.0"
       }
   }
 }

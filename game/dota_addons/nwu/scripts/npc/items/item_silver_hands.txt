@@ -35,7 +35,7 @@
     "02"
     {
       "var_type"            "FIELD_INTEGER"
-      "bonus_health_regen"      "6"
+      "bonus_hp_reg_constant"      "6"
     }
     "03"
     {
@@ -64,8 +64,8 @@
       
       "Properties"
       {
-        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
-        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%bonus_health_regen"
+        "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    "%bonus_damage"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%bonus_hp_reg_constant"
         "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"   "%bonus_mana_regen_percentage"
       }
       

@@ -2488,17 +2488,17 @@
 	      "01"
 	      {
 	        "var_type"                  "FIELD_FLOAT"
-	        "bonus_damage"              "35.0"
+	        "bonus_damage"              "30.0"
 	      }
 	      "02"
 	      {
 	        "var_type"                  "FIELD_FLOAT"
-	        "crit_bonus"              "150.0"
+	        "crit_bonus"              "175.0"
 	      }
 	      "03"
 	      {
 	        "var_type"                  "FIELD_FLOAT"
-	        "crit_chance"              "10.0"
+	        "crit_chance"              "20.0"
 	      }
 	  }
 	}
@@ -3975,7 +3975,7 @@
 	    "MaxUpgradeLevel"         "1"
 	    "ItemBaseLevel"           "1"
 	    "ItemQuality"             "rare"
-	    "ItemAliases"             "skull basher;bash;stun;damage"
+	    "ItemAliases"             "skull basher;bash;stun;damage;strength;str"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -5073,7 +5073,7 @@
 	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	    "MaxUpgradeLevel"       "1"
 	    "ItemBaseLevel"         "1"
-	    "ItemAliases"           "aoe;crit;reg;damage"
+	    "ItemAliases"           "aoe;crit;reg;damage;ping;mana regen;hp regen;stats;agility;intelligence;strength"
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -9218,7 +9218,7 @@
 	    "02"
 	    {
 	      "var_type"            "FIELD_INTEGER"
-	      "bonus_health_regen"      "6"
+	      "bonus_hp_reg_constant"      "6"
 	    }
 	    "03"
 	    {
@@ -9247,8 +9247,8 @@
 	      
 	      "Properties"
 	      {
-	        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
-	        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%bonus_health_regen"
+	        "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    "%bonus_damage"
+	        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%bonus_hp_reg_constant"
 	        "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"   "%bonus_mana_regen_percentage"
 	      }
 	      
