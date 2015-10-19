@@ -6,6 +6,7 @@ require('libraries/popups')
 require('libraries/utils')
 require('libraries/animations')
 
+
 function Precache( context )
 --[[
   This function is used to precache resources/units/items/abilities that will be needed
@@ -69,9 +70,8 @@ end
 
 -- Create the game mode when we activate
 function Activate()
-  --loading custom key values for usages
+  --loading custom key values
   GameRules.heroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt") 
   GameRules.GameMode = GameMode()
   GameRules.GameMode:InitGameMode()
-
 end

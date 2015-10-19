@@ -6,12 +6,12 @@ function pingEnemies(keys)
   
 	ping_duration = keys.ability:GetSpecialValueFor("ping_duration")
 
-if targetEntities then
-	for _,target in pairs(targetEntities) do
-		local origin = target:GetAbsOrigin()
-		xcoord = origin.x
-		ycoord = origin.y
-		MinimapEvent(caster:GetTeamNumber(), target, xcoord, ycoord, DOTA_MINIMAP_EVENT_HINT_LOCATION, ping_duration)
+	if targetEntities then
+		for _,target in pairs(targetEntities) do
+			local origin = target:GetAbsOrigin()
+			xcoord = origin.x
+			ycoord = origin.y
+			MinimapEvent(caster:GetTeamNumber(), target, xcoord, ycoord, DOTA_MINIMAP_EVENT_HINT_LOCATION, ping_duration)
+		end
 	end
-end
 end

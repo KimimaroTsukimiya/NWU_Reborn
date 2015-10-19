@@ -1,6 +1,5 @@
 "lang"
 {
-
 	"Language"		"English"
 	"Tokens"
 	{		
@@ -35,9 +34,9 @@
 		//--------------------
 		//Kisame
 		//--------------------
-		"npc_dota_hero_kunkka"  				"Kisame"
-		"npc_dota_hero_kunkka_lore"  			"Feared as the Monster of the Hidden Mist, Hoshigaki Kisame is a dangerous S-Rank missing nin and one of the Seven Ninja Swordsmen of the Mist. He loves to fight and is often aggressive towards anyone he meets. Despite this Kisame has shown to be very loyal to his allies unless they endanger the mission. He bears the great sword Samehada (Shark Skin) and uses it to shave his enemies and drain their chakra. Kisame has an abundance of chakra that is said to almost match a tailed beast. It is from this great source of power that he gets the title The Tailed Beast without a Tail. Regarded as one of the most powerful shinobi to ever come out of Kirigakure (Village of the Hidden Mist), he earned membership into Akatsuki through his own strength. "
-		"npc_dota_hero_kunkka_description"  	"Playing Kisame is about becoming inescapable as you slowly drown your enemies. This hero favors longer more drawn out confrontations meaning that survivability is of top priority. His abilities offer him great utility in almost any situation whether it be ganking, team fighting, or taking on an enemy one on one. Kisame is very mana dependant as his ultimate consumes mana over time. His passive somewhat remedies this problem as his attacks will drain mana from enemies while gaining the stolen mana. However, this mechanic can be deceptive to Kisame’s mana problems as a larger max mana pool requires more mana to sustain his ultimate. This means that his mana drain is more effective the smaller Kisame’s max mana pool is.  Kisame can easily dominate a team fight so long as he can stick onto various heroes. Through proper micro of his clones and intelligent maneuvering, Kisame is a walking pain train that forces the fight onto the enemy."
+		"npc_dota_hero_kunkka"  										"Kisame"
+		"npc_dota_hero_kunkka_lore"  									"Feared as the Monster of the Hidden Mist, Hoshigaki Kisame is a dangerous S-Rank missing nin and one of the Seven Ninja Swordsmen of the Mist. He loves to fight and is often aggressive towards anyone he meets. Despite this Kisame has shown to be very loyal to his allies unless they endanger the mission. He bears the great sword Samehada (Shark Skin) and uses it to shave his enemies and drain their chakra. Kisame has an abundance of chakra that is said to almost match a tailed beast. It is from this great source of power that he gets the title The Tailed Beast without a Tail. Regarded as one of the most powerful shinobi to ever come out of Kirigakure (Village of the Hidden Mist), he earned membership into Akatsuki through his own strength. "
+		"npc_dota_hero_kunkka_description"  							"Playing Kisame is about becoming inescapable as you slowly drown your enemies. This hero favors longer more drawn out confrontations meaning that survivability is of top priority. His abilities offer him great utility in almost any situation whether it be ganking, team fighting, or taking on an enemy one on one. Kisame is very mana dependant as his ultimate consumes mana over time. His passive somewhat remedies this problem as his attacks will drain mana from enemies while gaining the stolen mana. However, this mechanic can be deceptive to Kisame’s mana problems as a larger max mana pool requires more mana to sustain his ultimate. This means that his mana drain is more effective the smaller Kisame’s max mana pool is.  Kisame can easily dominate a team fight so long as he can stick onto various heroes. Through proper micro of his clones and intelligent maneuvering, Kisame is a walking pain train that forces the fight onto the enemy."
 		//Water Release: Water Shark Bullet Technique (Suiton: Suikodan no Jutsu)
 		"DOTA_Tooltip_ability_kisame_suikodan_no_jutsu"					"Water Release: Water Shark Bullet Technique (Suiton: Suikodan no Jutsu)"
 		"DOTA_Tooltip_ability_kisame_suikodan_no_jutsu_description"		"Active: Through shaping water into the form of a large shark, Kisame sends a wave to a target location. The shark bullet deals magical damage, reduces armor, and slows enemies it contacts."
@@ -770,7 +769,7 @@
 
 		//Twin-Fangs Of Abyss
     	"DOTA_Tooltip_ability_item_twin_fangs_of_abyss"								"Twin-Fangs Of Abyss"
-    	"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_Description"				"Passive: Greater Maim - %maim_chance%%% chance to slow %maim_slow_movement%%% Movementspeed and %maim_slow_attack% Attackspeed for %maim_duration% seconds."
+    	"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_Description"					"Passive: Greater Maim - %maim_chance%%% chance to slow %maim_slow_movement%%% Movementspeed and %maim_slow_attack% Attackspeed for %maim_duration% seconds."
 		"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_Lore"						"A weapon of mystery... created through combining two of the three bladed weapons into a single two bladed weapon. The powers the remaining blades have been combined into the vicious resulting weapon."
 		"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_bonus_damage"				"Damage: +"
 		"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_bonus_str"					"Strength: +"

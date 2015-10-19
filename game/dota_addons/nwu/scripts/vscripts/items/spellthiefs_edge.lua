@@ -1,3 +1,6 @@
+require('utilities')
+
+
 --[[ ============================================================================================================
 	Author: Dave
 	Date: October 15, 2015
@@ -105,4 +108,62 @@ function resetCDSecond(keys, modifier_name)
 				end
 			)
 	end
+end
+--[[Author: LearningDave
+  Date: october, 19th 2015.
+  Resets the Cooldown of 'Spell thiefs edge' if the Caster kills a enemy creep.
+  ]]
+function spellThiefsEdgeSetCD(killedUnit, killerEntity)
+  --Support Item Check
+  if killedUnit:IsNeutralUnitType() and killerEntity:IsRealHero() and killerEntity:HasItemInInventory("item_spellthiefs_edge") and killedUnit:GetTeamNumber() ~= killerEntity:GetTeamNumber() then 
+      local itemIndex = GameMode:GetItemIndex("item_spellthiefs_edge", killerEntity)
+      killerEntity:GetItemInSlot(itemIndex):StartCooldown(12)
+      killerEntity:GetItemInSlot(itemIndex).longCD = true
+      Timers:CreateTimer( 12, function()
+          killerEntity:GetItemInSlot(itemIndex).longCD = false
+          return nil
+      end
+      )
+  end
+end
+--[[Author: LearningDave
+  Date: october, 19th 2015.
+  Gives the Caster of 'spell thiefs edge' bonus gold if he denies a creep.
+  ]]
+function spellThiefsEdgeDeny(killedUnit, killerEntity)
+  --Support Item Check
+  if killedUnit:IsNeutralUnitType() and killerEntity:IsRealHero() and killerEntity:HasItemInInventory("item_spellthiefs_edge") and killedUnit:GetTeamNumber() == killerEntity:GetTeamNumber() then 
+      --TODO add dynamic value goldgain isntead of + 5
+        -- add gold to killerEntity(hero who denied the creep)
+      killerEntity:ModifyGold(5, false, 0)
+      -- make player see his bonus gold
+      PopupGoldGain(caster, 5)
+  end
+end
+--[[Author: LearningDave
+  Date: october, 19th 2015.
+  Gives the Caster of 'spell thiefs edge' bonus gold if he denies a creep.
+  ]]
+function spellThiefsEdgeCarryLastHit(killedUnit, killerEntity)
+  --Support Item Check
+  if killedUnit:IsNeutralUnitType() and killerEntity:IsRealHero() and killedUnit:GetTeamNumber() ~= killerEntity:GetTeamNumber() then 
+  --TODO dynamic aoe for ally heroes
+  local targetEntities = FindUnitsInRadius(killerEntity:GetTeamNumber(), killerEntity:GetAbsOrigin(), nil, 1000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+
+  --TODO add dynamic value goldgain instead of + 5
+  if targetEntities then
+    for _,target in pairs(targetEntities) do
+      if target:HasItemInInventory("item_spellthiefs_edge") then
+        local itemIndex = GameMode:GetItemIndex("item_spellthiefs_edge", target)
+          if not target:GetItemInSlot(itemIndex).longCD then
+           -- add gold to killerEntity ally hero
+           target:ModifyGold(5, false, 0)
+           -- make player see his bonus gold
+           PopupGoldGain(target, 5)
+          
+          end 
+        end
+      end
+    end
+  end
 end

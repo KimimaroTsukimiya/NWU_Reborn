@@ -25,6 +25,8 @@ require('internal/events')
 require('settings')
 -- events.lua is where you can specify the actions to be taken when any event occurs and is one of the core barebones files.
 require('events')
+-- item relevant functions which are fired on events
+require('items')
 
 --[[
   This function should be used to set up Async precache calls at the beginning of the gameplay.
@@ -120,29 +122,8 @@ function GameMode:OnEntityKilled(keys)
     killerEntity = EntIndexToHScript( keys.entindex_attacker )
   end
 
-
-  --Support Item Check
-  if killedUnit:IsNeutralUnitType() and killerEntity:IsRealHero() and killerEntity:HasItemInInventory("item_spellthiefs_edge")  then 
-
-      local itemIndex = 0
-      local counter = 0
-      for i=0,5 do 
-        if killerEntity:GetItemInSlot(i) ~= nil then
-          if killerEntity:GetItemInSlot(i):GetName() == "item_spellthiefs_edge" then
-            itemIndex = counter
-          end 
-        end 
-        counter = counter + 1
-      end
-
-      killerEntity:GetItemInSlot(itemIndex):StartCooldown(12)
-      killerEntity:GetItemInSlot(itemIndex).longCD = true
-      Timers:CreateTimer( 12, function()
-          killerEntity:GetItemInSlot(itemIndex).longCD = false
-          return nil
-      end
-      )
-  end
+  --Items
+  GameMode:SpellThiefsEdgeOnEntityKilled(killedUnit, killerEntity)
 end
 
 
