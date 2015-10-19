@@ -6,6 +6,6 @@ require('items/spellthiefs_edge')
 ]]
 function   GameMode:SpellThiefsEdgeOnEntityKilled(killedUnit, killerEntity)
   spellThiefsEdgeSetCD(killedUnit, killerEntity)
-  spellThiefsEdgeDeny(killedUnit, killerEntity)
-  spellThiefsEdgeCarryLastHit(killedUnit, killerEntity)
+ -- spellThiefsEdgeDeny(killedUnit, killerEntity)
+ -- spellThiefsEdgeCarryLastHit(killedUnit, killerEntity)
 end

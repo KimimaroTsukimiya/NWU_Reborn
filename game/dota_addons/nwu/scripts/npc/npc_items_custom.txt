@@ -9551,7 +9551,7 @@
 	    //-------------------------------------------------------------------------------------------------------------
 	    "ItemCost"                "0"
 	    "ItemInitialCharges"      "0"
-	    "ItemDroppable"           "1"
+	    "ItemDroppable"           "0"
 	    "ItemSellable"            "1"
 	    "ItemRequiresCharges"     "0"
 	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
@@ -9583,17 +9583,49 @@
 	              "ScriptFile"  "items/spellthiefs_edge.lua"
 	              "Function"    "initgivegold"
 	              "modifier_name"   "item_spellthiefs_edge_modifier"
+	              "modifier_name_extra"   "item_spellthiefs_edge_extragold_modifier"
 	            }
 	          }
 	
 	        "OnAttackLanded"
 	        {
+	           // "RunScript"
+	           // {
+	           //   "ScriptFile"      "items/spellthiefs_edge.lua"
+	           //   "Function"        "givegold"
+	           //   "modifier_name"   "item_spellthiefs_edge_modifier"
+	           // }
 	            "RunScript"
 	            {
 	              "ScriptFile"      "items/spellthiefs_edge.lua"
-	              "Function"        "givegold"
+	              "Function"        "shareLasthit"
 	              "modifier_name"   "item_spellthiefs_edge_modifier"
 	            }
+	        }
+	
+	
+	      }
+	
+	      "item_spellthiefs_edge_extragold_modifier"
+	      {
+	
+	         "Passive" "1"
+	         "IsHidden"  "0"
+	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	         "Properties"
+	          {
+	            //   "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+	          }
+	
+	          "ThinkInterval"  "%extra_gold_interval"
+	        "OnIntervalThink"
+	        {
+	         "RunScript"
+	            {
+	              "ScriptFile"      "items/spellthiefs_edge.lua"
+	              "Function"        "extraGold"
+	              "modifier_name"   "item_spellthiefs_edge_extragold_modifier"
+	            }   
 	        }
 	      }
 	
@@ -9621,6 +9653,31 @@
 	      {
 	        "var_type"                  "FIELD_FLOAT"
 	        "gold_gain"                 "3.0"
+	      }
+	      "05"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "gold_gain_aoe"             "1000"
+	      }
+	      "06"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "kill_at_hp_percent"        "80"
+	      }
+	      "07"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "extra_gold_per_seconds"    "1.0"
+	      }
+	      "08"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "extra_gold_interval"       "5.0"
+	      }
+	      "09"
+	      {
+	        "var_type"                  "FIELD_FLOAT"
+	        "extra_gold_total"          "0.1"
 	      }
 	  }
 	}

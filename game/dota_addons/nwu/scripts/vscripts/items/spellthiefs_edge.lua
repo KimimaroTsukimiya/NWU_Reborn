@@ -1,6 +1,4 @@
 require('utilities')
-
-
 --[[ ============================================================================================================
 	Author: Dave
 	Date: October 15, 2015
@@ -58,7 +56,9 @@ function initgivegold( keys )
 	keys.ability.current_stacks = 3
 	keys.ability.shortCD = false
 	keys.ability.longCD = false
+	keys.ability.extra_gold_total = 0
 	keys.caster:SetModifierStackCount( keys.modifier_name, keys.ability, 3)
+	keys.caster:SetModifierStackCount( keys.modifier_name_extra, keys.ability, 0)
 end
 --[[ ============================================================================================================
 	Author: Dave
@@ -166,4 +166,61 @@ function spellThiefsEdgeCarryLastHit(killedUnit, killerEntity)
       end
     end
   end
+end
+--[[Author: LearningDave
+  Date: october, 19th 2015.
+  Does give an ally hero of the caster the gold of a minion last hit and the casteer itself aswell
+  Kills the enemy basic units if it hits a certain percentage of its max % hp
+]]
+function shareLasthit(keys)
+  local main_target = keys.target
+  local caster = keys.caster
+  local ability = keys.ability
+  local max_stacks = ability:GetLevelSpecialValueFor("gain_gold_max_stacks", (ability:GetLevel() - 1))
+  local gold_gain_cd = ability:GetLevelSpecialValueFor("gold_gain_cd", (ability:GetLevel() - 1))
+  local gold_gain = ability:GetLevelSpecialValueFor("gold_gain", (ability:GetLevel() - 1))
+  local gold_gain_aoe = ability:GetLevelSpecialValueFor("gold_gain_aoe", (ability:GetLevel() - 1))
+  local kill_at_hp_percent = ability:GetLevelSpecialValueFor("kill_at_hp_percent", (ability:GetLevel() - 1))
+  local gold_shared = false
+  local modifier_name = "item_spellthiefs_edge_modifier"
+  if main_target:IsNeutralUnitType() and caster:IsRealHero() and main_target:GetTeamNumber() ~= caster:GetTeamNumber() and keys.ability.current_stacks > 0  and not keys.ability.longCD then 
+	  --TODO dynamic aoe for ally heroes
+	  local target_hp_percent = main_target:GetHealth() / (main_target:GetMaxHealth() / 100)
+	  if target_hp_percent <= kill_at_hp_percent then
+	  	  GameMode:KillUnit(main_target)
+		  local targetEntities = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, gold_gain_aoe, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+		  if targetEntities then
+		    for _,target in pairs(targetEntities) do
+		      if not gold_shared then
+		      		--TODO find out how to access random gold amount of creep
+		           -- add gold to killerEntity ally hero
+		           target:ModifyGold(45, false, 0)
+		           -- make player see his bonus gold
+		           PopupGoldGain(target, 45)
+		           caster:ModifyGold(45, false, 0)
+		           -- make player see his bonus gold
+		           PopupGoldGain(caster, 45)
+		          keys.ability.current_stacks = keys.ability.current_stacks - 1
+		          caster:SetModifierStackCount( modifier_name, ability, keys.ability.current_stacks)
+		          gold_shared = true
+		         	GameMode:StackItem(gold_gain_cd, max_stacks, modifier_name, keys.ability, keys.caster)
+		         
+		        end
+		      end
+		    end
+	  	end
+	end
+end
+--[[Author: LearningDave
+  Date: october, 19th 2015.
+  Give the caster extra gold without popping it up.
+]]
+function extraGold( keys)
+	local caster = keys.caster
+	local ability = keys.ability
+	local extra_gold_per_seconds = ability:GetLevelSpecialValueFor("extra_gold_per_seconds", (ability:GetLevel() - 1))
+	local extra_gold_total = ability:GetLevelSpecialValueFor("extra_gold_total", (ability:GetLevel() - 1))
+	caster:ModifyGold(extra_gold_per_seconds, false, 0)
+	keys.ability.extra_gold_total = keys.ability.extra_gold_total + extra_gold_per_seconds
+	keys.caster:SetModifierStackCount( keys.modifier_name, keys.ability, keys.ability.extra_gold_total)
 end
