@@ -54,7 +54,11 @@ CVModel CVModel_0
 	}
 	CVhitBoxSetListReference[] m_pHitBoxSetLists = 
 	[
-		
+		CVhitBoxSetListReference
+		{
+			CVhitBoxSetList* m_pObject = &CVhitBoxSetList_0
+			string m_sFileName = ""
+		}
 	]
 	CVattachmentListReference[] m_pAttachmentLists = 
 	[
@@ -125,6 +129,142 @@ CVModel CVModel_0
 	[
 		
 	]
+}
+
+CVhitBoxSetList CVhitBoxSetList_0
+{
+	CVhitBoxSet[] m_HitBoxSets = 
+	[
+		CVhitBoxSet
+		{
+			string m_name = "default"
+			CVhitBox[] m_HitBoxes = 
+			[
+				CVhitBox
+				{
+					string m_name = "bone_waist"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone_waist"
+					float(3) m_vMinBounds = ( -23.798988, -26.007425, -19.328964 )
+					float(3) m_vMaxBounds = ( 20.201004, 7.555071, 12.171036 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone_chest"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone_chest"
+					float(3) m_vMinBounds = ( -27.092045, -22.489380, -5.122025 )
+					float(3) m_vMaxBounds = ( 20.532948, 8.198114, 46.877983 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone04"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone04"
+					float(3) m_vMinBounds = ( -19.866005, -24.116196, -31.394382 )
+					float(3) m_vMaxBounds = ( 6.665241, 12.883798, 1.605621 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone08"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone08"
+					float(3) m_vMinBounds = ( -22.839581, -13.258858, -32.467476 )
+					float(3) m_vMaxBounds = ( -2.464584, 5.897390, 8.532532 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone13"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone13"
+					float(3) m_vMinBounds = ( -1.321928, -13.258855, -32.467476 )
+					float(3) m_vMaxBounds = ( 19.053068, 5.897393, 8.532532 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone05"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone05"
+					float(3) m_vMinBounds = ( -12.860541, -24.991196, -29.019871 )
+					float(3) m_vMaxBounds = ( 13.491017, 14.258798, 3.980133 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone_footR"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone_footR"
+					float(3) m_vMinBounds = ( -20.927446, -33.324673, -46.722775 )
+					float(3) m_vMaxBounds = ( 9.853800, 20.800327, 9.652229 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone_handR"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone_handR"
+					float(3) m_vMinBounds = ( -23.959589, -16.418209, -33.022606 )
+					float(3) m_vMaxBounds = ( 5.415407, 11.769287, 4.977394 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone_head"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone_head"
+					float(3) m_vMinBounds = ( -14.238706, -18.357483, 0.499847 )
+					float(3) m_vMaxBounds = ( 8.698791, 14.017513, 34.499847 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone_handL"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone_handL"
+					float(3) m_vMinBounds = ( -8.329794, -17.289698, -32.899170 )
+					float(3) m_vMaxBounds = ( 21.045202, 10.897799, 5.100830 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone_footL"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone_footL"
+					float(3) m_vMinBounds = ( -11.590542, -27.936804, -47.469845 )
+					float(3) m_vMaxBounds = ( 18.401642, 26.188192, 8.905159 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				}
+			]
+		}
+	]
+	string m_AutoCreateSetName = ""
 }
 
 CVanimGroup CVanimGroup_0
@@ -271,6 +411,122 @@ CVanimGroup CVanimGroup_1
 				CActivity
 				{
 					string m_Name = "ACT_DOTA_RUN"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "itachi_idle"
+			string m_Filepath = "models/itachi/itachi_animations.fbx"
+			int m_nStartframe = 54
+			int m_nEndframe = 83
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = true
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_IDLE"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "itachi_die"
+			string m_Filepath = "models/itachi/itachi_animations.fbx"
+			int m_nStartframe = 252
+			int m_nEndframe = 281
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_DIE"
 					int m_nWeight = 1
 				}
 			]

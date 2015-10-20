@@ -154,10 +154,176 @@ CVhitBoxSetList CVhitBoxSetList_0
 					float(3) m_vMaxBounds = ( 2.000000, 2.000000, 2.000000 )
 					bool m_bTranslationOnly = true
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "m3bone_root"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "m3bone_root"
+					float(3) m_vMinBounds = ( -2.000000, -2.000000, -2.000000 )
+					float(3) m_vMaxBounds = ( 2.000000, 2.000000, 2.000000 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box02"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box02"
+					float(3) m_vMinBounds = ( -51.127884, -34.076283, -156.740677 )
+					float(3) m_vMaxBounds = ( 64.233788, 100.199966, 62.728577 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box14"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box14"
+					float(3) m_vMinBounds = ( -15.586615, -8.499428, -20.740784 )
+					float(3) m_vMaxBounds = ( 3.805822, 20.905775, 4.170898 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box19"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box19"
+					float(3) m_vMinBounds = ( -2.960081, -8.499426, -20.740906 )
+					float(3) m_vMaxBounds = ( 16.432400, 18.998806, 4.170776 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box11"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box11"
+					float(3) m_vMinBounds = ( -16.905327, -22.587761, -18.226517 )
+					float(3) m_vMaxBounds = ( 17.407593, 21.818123, 0.334229 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box08"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box08"
+					float(3) m_vMinBounds = ( -17.449394, -22.587761, -18.193039 )
+					float(3) m_vMaxBounds = ( 17.554394, 21.818123, 0.367706 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box01"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box01"
+					float(3) m_vMinBounds = ( -24.070301, -21.385876, -1.914032 )
+					float(3) m_vMaxBounds = ( 19.698734, 28.115566, 62.132202 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box15"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box15"
+					float(3) m_vMinBounds = ( -81.697517, -5.001448, -10.504456 )
+					float(3) m_vMaxBounds = ( -44.881828, 17.637983, 10.196289 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box06"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box06"
+					float(3) m_vMinBounds = ( -2.800652, 8.912823, -8.302917 )
+					float(3) m_vMaxBounds = ( 4.583427, 30.405075, 11.208038 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box17"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box17"
+					float(3) m_vMinBounds = ( 45.957153, -5.001442, -10.385681 )
+					float(3) m_vMaxBounds = ( 82.772598, 17.637989, 10.315063 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box21"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box21"
+					float(3) m_vMinBounds = ( -0.722092, 8.912835, -11.273621 )
+					float(3) m_vMaxBounds = ( 6.662033, 30.405090, 8.237335 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box12"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box12"
+					float(3) m_vMinBounds = ( -19.291538, -35.429543, -110.384094 )
+					float(3) m_vMaxBounds = ( 19.934742, 21.818237, 0.263809 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box05"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box05"
+					float(3) m_vMinBounds = ( -13.407528, -50.533081, -3.362793 )
+					float(3) m_vMaxBounds = ( 22.411411, -6.127178, 2.396851 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box09"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box09"
+					float(3) m_vMinBounds = ( -16.418217, -35.429535, -110.375397 )
+					float(3) m_vMaxBounds = ( 22.808090, 21.818249, 0.272507 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Box20"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Box20"
+					float(3) m_vMinBounds = ( -23.228287, -50.533081, -4.503967 )
+					float(3) m_vMaxBounds = ( 12.590660, -6.127178, 1.255676 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				}
 			]
 		}
 	]
+	string m_AutoCreateSetName = ""
 }
 
 CVattachmentList CVattachmentList_0
