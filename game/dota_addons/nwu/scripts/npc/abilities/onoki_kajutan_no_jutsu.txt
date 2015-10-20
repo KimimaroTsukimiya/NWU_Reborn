@@ -48,19 +48,31 @@
 
 	"precache"
 	{
-		"particle"	"particles/blood_impact/blood_advisor_pierce_spray.vpcf"
 		"particle"	"particles/units/heroes/hero_ursa/ursa_dust_hit_shock.vpcf"
+		"soundfile" "sounds/ambient/newyear/rocket_explode01.vsnd"
+		"particle" "particles/units/heroes/hero_sven/onoki_ultimate_sfx.vpcf"
+		"soundfile"				"soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
 	}
 
 	"OnSpellStart"
 	{
 
 
-		"AttachEffect"
+		"FireEffect"
 		{
-			"Target"				"CASTER"
-			"EffectName"			"particles/units/heroes/hero_ursa/ursa_dust_hit_shock.vpcf"
-			"EffectAttachType" 		"attach_origin"
+			"EffectName"				"particles/units/heroes/hero_sandking/sandking_burrowstrike.vpcf"
+			"EffectAttachType"			"start_at_customorigin"
+			"Target"					"CASTER"
+			"ControlPoints"
+			{
+				"01"					"POINT"
+			}
+		}
+		
+		"FireSound"
+		{
+			"EffectName"				"Ability.SandKing_BurrowStrike"
+			"Target"					"CASTER"
 		}
 
 		"ApplyModifier"
@@ -85,9 +97,6 @@
 			"IsHidden"			"0"
 			"IsDebuff"			"1"
 			"Duration"			"%duration"
-	
-			//"EffectName"		"particle_name"
-			//"EffectAttachType"	"follow_origin"
 
 			"ThinkInterval"		"1.0"
 			"OnIntervalThink"
@@ -100,8 +109,17 @@
 				"AttachEffect"
                 {
                     "Target"					"TARGET"
-                    "EffectName"				"particles/blood_impact/blood_advisor_pierce_spray.vpcf"
+                    "EffectName"				"particles/units/heroes/hero_ursa/ursa_dust_hit_shock.vpcf"
                     "EffectAttachType"			"attach_hitloc"
+    				"ControlPointEntities"
+					{
+						"TARGET"	"attach_hitloc"
+					}
+                }
+                "FireSound"
+                {
+                	"EffectName"	"ParticleDriven.Rocket.Explode"
+                	"Target" 		"TARGET"
                 }
 			}
 	

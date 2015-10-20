@@ -39,6 +39,7 @@
 		"particle"  "particles/units/heroes/hero_sven/sven_warcry_armor_buff_model.vpcf"
 		"particle"	"particles/econ/items/sven/sven_warcry_ti5/sven_warcry_buff_ti_5.vpcf"
 		"particle"	"particles/units/heroes/hero_sven/sven_warcry_buff_ti_5.vpcf"
+		"particle"  "particles/onoki_cube1.vpcf"
 	}
 
 	"OnSpellStart"
@@ -104,7 +105,7 @@
 				"AttachEffect"
 				{
 					"Target"			"TARGET"
-					"EffectName"		"particles/units/heroes/hero_sven/sven_warcry_buff_ti_5.vpcf"
+					"EffectName"		"particles/onoki_cube1.vpcf"
 					"EffectAttachType"	"follow_origin"
 					"ControlPointEntities"
 					{
