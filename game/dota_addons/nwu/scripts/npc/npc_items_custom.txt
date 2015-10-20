@@ -2606,6 +2606,58 @@
     }
   }
 
+  "item_forehead_protector_otogakure"
+  {
+    "ID"              "4079"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"   "item_forehead_protector_otogakure"
+    "ItemQuality"    "component"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "175"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "ItemAliases"           "ring of protection;armor"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+      "item_forehead_protector_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+        "Properties"
+          {
+              "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "bonus_armor"        "2.0"
+      }
+    }
+  }
+
   "item_forehead_protector_sunagakure"
   {
     "ID"              "4075"
@@ -7348,7 +7400,7 @@
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
     "ItemRequirements"
     {
-        "01" "item_mithrill_hammer_datadriven;item_mithril_hammer_datadriven"
+        "01" "item_mithril_hammer_datadriven;item_mithril_hammer_datadriven"
     }
   }
 
@@ -10094,93 +10146,6 @@
     }
   }
 
-	"item_spellthiefs_edge"
-	  {
-	    "ID"                    "2953"
-	    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	    "BaseClass"             "item_datadriven"
-	    "AbilityTextureName"    "item_spellthiefs_edge"
-	    // Stats
-	    //-------------------------------------------------------------------------------------------------------------
-	
-	    // Item Info
-	    //-------------------------------------------------------------------------------------------------------------
-	    "ItemCost"                "0"
-	    "ItemInitialCharges"      "0"
-	    "ItemDroppable"           "1"
-	    "ItemSellable"            "1"
-	    "ItemRequiresCharges"     "0"
-	    "ItemShareability"        "ITEM_NOT_SHAREABLE"
-	    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	    "MaxUpgradeLevel"         "1"
-	    "ItemBaseLevel"           "1"
-	    "ItemQuality"         "rare"
-	    "ItemAliases"         "crystalys;crit;damage"
-	    //pickup sounds
-	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
-	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-	
-	    "Modifiers"
-	    {
-	      "item_spellthiefs_edge_modifier"
-	      {
-	         "Passive" "1"
-	         "IsHidden"  "0"
-	         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-	         "Properties"
-	          {
-	            //   "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-	          }
-	
-	          "OnCreated"
-	          {
-	             "RunScript"
-	            {
-	              "ScriptFile"  "items/givegold.lua"
-	              "Function"    "initgivegold"
-	              "modifier_name"   "item_spellthiefs_edge_modifier"
-	            }
-	          }
-	
-	        "OnAttackLanded"
-	        {
-	            "RunScript"
-	            {
-	              "ScriptFile"      "items/givegold.lua"
-	              "Function"        "givegold"
-	              "modifier_name"   "item_spellthiefs_edge_modifier"
-	            }
-	        }
-	      }
-	
-	    }
-	    // Special  
-	    //-------------------------------------------------------------------------------------------------------------
-	    "AbilitySpecial"
-	    {
-	      "01"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "gold_gain_cd"              "10.0"
-	      }
-	      "02"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "gain_gold_max_stacks"              "3.0"
-	      }
-	      "03"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "current_stacks"              "1.0"
-	      }
-	      "04"
-	      {
-	        "var_type"                  "FIELD_FLOAT"
-	        "gold_gain"                 "3.0"
-	      }
-	  }
-	}
-	
   "item_swift_katana"
   {
     "ID"              "1135"
@@ -10253,7 +10218,7 @@
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"         "1"
-    "ItemBaseLevel"           "1""Divine" "Rapier" "Divine Rapier"
+    "ItemBaseLevel"           "1"
     "ItemAliases"             "radiance;amenonuhoko;damage;dropping;drops on death;divine;rapier;divine rapier;"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
@@ -11270,7 +11235,7 @@
 	
    "item_vambraces"
   {
-    "ID"              "1134"
+    "ID"              "4537"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"           "item_datadriven"
     "AbilityTextureName"   "item_vambraces"

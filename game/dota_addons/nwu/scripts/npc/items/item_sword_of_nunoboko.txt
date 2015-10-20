@@ -19,7 +19,7 @@
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"         "1"
-    "ItemBaseLevel"           "1""Divine" "Rapier" "Divine Rapier"
+    "ItemBaseLevel"           "1"
     "ItemAliases"             "radiance;amenonuhoko;damage;dropping;drops on death;divine;rapier;divine rapier;"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
