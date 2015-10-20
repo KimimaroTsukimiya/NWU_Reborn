@@ -1,49 +1,40 @@
-  "item_sword_of_nunoboko" 
+  "item_forehead_protector_sunagakure"
   {
-    "ID"                    "1240"
+    "ID"              "4075"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "BaseClass"             "item_datadriven"
-    "AbilityTextureName"    "item_sword_of_nunoboko"
-
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"   "item_forehead_protector_sunagakure"
+    "ItemQuality"    "component"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemQuality"         "artifact"
-    "ItemCost"                "0"
+    "ItemCost"            "175"
     "ItemInitialCharges"      "0"
-    "ItemDroppable"           "1"
-    "ItemSellable"            "1"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-    "MaxUpgradeLevel"         "1"
-    "ItemBaseLevel"           "1""Divine" "Rapier" "Divine Rapier"
-    "ItemAliases"             "radiance;amenonuhoko;damage;dropping;drops on death;divine;rapier;divine rapier;"
+    "ItemAliases"           "ring of protection;armor"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
-    "OnOwnerDied"
-    {
-      "RunScript"
-      {
-        "ScriptFile"      "items/DropItemOnDeath.lua"
-        "Function"      "DropItemOnDeath"
-      }
-    }
-
     "Modifiers"
     {
-      "item_amenonuhoko_modifier"
+      "item_forehead_protector_modifier"
       {
          "Passive" "1"
          "IsHidden"  "1"
          "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
+        "Properties"
           {
-               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+              "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
           }
       }
     }
@@ -53,9 +44,9 @@
     {
       "01"
       {
-        "var_type"                  "FIELD_FLOAT"
-        "bonus_damage"                 "250.0"
+        "var_type"            "FIELD_FLOAT"
+        "bonus_armor"        "2.0"
       }
+    }
   }
-}
 
