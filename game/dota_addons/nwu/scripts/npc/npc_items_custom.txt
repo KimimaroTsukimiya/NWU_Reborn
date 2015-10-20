@@ -9650,7 +9650,7 @@
 	            "RunScript"
 	            {
 	              "ScriptFile"      "items/spellthiefs_edge.lua"
-	              "Function"        "shareLasthit"
+	              "Function"        "givegold"
 	              "modifier_name"   "item_spellthiefs_edge_modifier"
 	            }
 	        }
