@@ -25,8 +25,7 @@ require('internal/events')
 require('settings')
 -- events.lua is where you can specify the actions to be taken when any event occurs and is one of the core barebones files.
 require('events')
--- item relevant functions which are fired on events
-require('items')
+
 
 --[[
   This function should be used to set up Async precache calls at the beginning of the gameplay.
@@ -105,27 +104,6 @@ function GameMode:OnGameInProgress()
       return 30.0 -- Rerun this timer every 30 game-time seconds 
     end)
 end
-
---[[-
- LearningDave
- October, 16th 2015
-  Whenever a Entity is killed, this function will be called, includes:
-  - Support Item Check: Checks if the Killer has a certain item and reset's its passive cooldown.
-]]
-function GameMode:OnEntityKilled(keys)
-  -- The Unit that was Killed
-  local killedUnit = EntIndexToHScript( keys.entindex_killed )
-  -- The Killing entity
-  local killerEntity = nil
-
-  if keys.entindex_attacker ~= nil then
-    killerEntity = EntIndexToHScript( keys.entindex_attacker )
-  end
-
-  --Items
-  GameMode:SpellThiefsEdgeOnEntityKilled(killedUnit, killerEntity)
-end
-
 
 -- This function initializes the game mode and is called before anyone loads into the game
 -- It can be used to pre-initialize any values/tables that will be needed later

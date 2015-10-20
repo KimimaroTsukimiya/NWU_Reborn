@@ -1,6 +1,10 @@
 -- This file contains all barebones-registered events and has already set up the passed-in parameters for your use.
 -- Do not remove the GameMode:_Function calls in these events as it will mess with the internal barebones systems.
 
+-- item relevant functions which are fired on events
+require('items')
+
+
 -- Cleanup a player when they leave
 function GameMode:OnDisconnect(keys)
   DebugPrint('[BAREBONES] Player Disconnected ' .. tostring(keys.userid))
@@ -27,21 +31,6 @@ end
 function GameMode:OnNPCSpawned(keys)
     local npc = EntIndexToHScript(keys.entindex)
 
-    if npc:IsRealHero() and npc.bFirstSpawned == nil then
-        npc.bFirstSpawned = true
-        GameMode:OnHeroInGame(npc)
-    elseif npc:GetUnitName() == "npc_dota_neutral_kobold" then
-        Timers:CreateTimer(0.03, function() 
-            local units = FindUnitsInRadius( npc:GetTeamNumber(), npc:GetAbsOrigin(), nil, 500, 
-                        DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, 
-                    DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
-
-        for key,value in pairs(units) do
-            print(key,value)
-            value:ForceKill(true)
-            end
-        end)
-    end
 end
 
 -- An entity somewhere has been hurt.  This event fires very often with many units so don't do too many expensive
@@ -59,11 +48,12 @@ end
 function GameMode:OnItemPickedUp(keys)
   DebugPrint( '[BAREBONES] OnItemPickedUp' )
   DebugPrintTable(keys)
-
   local heroEntity = EntIndexToHScript(keys.HeroEntityIndex)
   local itemEntity = EntIndexToHScript(keys.ItemEntityIndex)
   local player = PlayerResource:GetPlayer(keys.PlayerID)
   local itemname = keys.itemname
+
+
 end
 
 -- A player has reconnected to the game.  This function can be used to repaint Player-based particles or change
@@ -88,6 +78,13 @@ function GameMode:OnItemPurchased( keys )
   -- The cost of the item purchased
   local itemcost = keys.itemcost
   
+  local player = PlayerResource:GetPlayer(keys.PlayerID)
+  PrintTable(keys)
+  if itemName == "item_forehead_protector" then
+    GameMode:ForeheadProtectorOnItemPickedUp(player, itemName)
+  end 
+
+
 end
 
 -- An ability was used by a player
@@ -235,8 +232,9 @@ function GameMode:OnEntityKilled( keys )
   end
 
   local damagebits = keys.damagebits -- This might always be 0 and therefore useless
+  --Items
+  GameMode:SpellThiefsEdgeOnEntityKilled(killedUnit, killerEntity)
 
-  -- Put code here to handle when an entity gets killed
 end
 
 

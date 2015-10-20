@@ -30,7 +30,7 @@
       {
          "Passive" "1"
          "IsHidden"  "0"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
          "Properties"
           {
             //   "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
@@ -71,7 +71,7 @@
 
          "Passive" "1"
          "IsHidden"  "0"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
          "Properties"
           {
             //   "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
