@@ -188,5 +188,33 @@
 		  
 	 	  "ItemSlots"
 	  	  { }
-		}				
+		}
+
+		"npc_dota_hero_beastmaster" //kakashi
+		{
+		  "override_hero"   "npc_dota_hero_beastmaster"
+		  "Model" 			"models/kakashi/kakashi.vmdl"
+		  "Ability1"        "kakashi_doton"
+		  "Ability2"        "kakashi_sharingan" 
+		  "Ability3"        "kakashi_bunshin" 
+		 // "Ability4"         "kisame_water_prison"
+
+		  "MagicalResistance"            "0"
+		
+		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
+		  "AttackAnimationPoint"   "0.4"
+		 // "AttackRate"				"0.7"
+		  "AttackRange"				"100"
+		  "MovementSpeed"			"305"
+		  "AttributeBaseStrength" "22" // Base strength
+		  "AttributeStrengthGain" "2.9" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "17" // Base intelligence
+		  "AttributeIntelligenceGain" "1.8" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "18" // Base agility
+		  "AttributeAgilityGain" "2.0" // Agility bonus per level.
+		  
+	 	  "ItemSlots"
+	  	  { }
+	  	  "Village"			"konoha"
+		}					
 }

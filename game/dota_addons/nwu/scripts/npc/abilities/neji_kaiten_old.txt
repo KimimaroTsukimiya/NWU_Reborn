@@ -1,12 +1,12 @@
-"neji_kaiten"
+"neji_kaiten_old"
 {
     // General  
     // ----------------------------------------------------------------------------------------
     "BaseClass"                 "ability_datadriven"
-    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
     "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
-    "AbilityTextureName"        "neji_kaiten"
+    "AbilityTextureName"        "neji_kaiten_old"
 
 
     "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
@@ -46,14 +46,13 @@
         "02"
         {
             "var_type" "FIELD_FLOAT"
-            "push_back_length" "400.0"
+            "push_back_length" "200.0"
         }
         "03"
         {
             "var_type" "FIELD_FLOAT"
             "damage" "75 150 225 300"
         }
-
     }
 
     "OnSpellStart"
@@ -63,45 +62,33 @@
             //TODO
         }
 
-
-        "Knockback"
-                {
-                    "Target"
-                     {
-                        "Center"            "CASTER"
-                        "Radius"            "%aoe_target"
-                        "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
-                        "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                    }
-                    "Center"            "Target"
-                    "Distance"          "%push_back_length"
-                    "Duration"          "1.0" // TODO check
-                    "Height"            "0"
-                    "IsFixedDistance"   "0"
-                    "ShouldStun"        "0" 
-                }
-
-
-        "Damage"
+        "RunScript"
         {
-            "Target"
-             {
-                "Center"            "CASTER"
-                "Radius"            "%aoe_target"
-                "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
-                "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-            }
-            "Type"           "DAMAGE_TYPE_MAGICAL"
-           "Damage"         "%damage"
-        }      
+            "ScriptFile"        "heroes/neji/kaiten.lua"
+            "Function"          "kaiten_launch"
+            "Target"            "Caster"
+           // "projectile_particle"   "particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_initial.vpcf"
+            "main_ability_name" "neji_kaiten"
+            "sub_ability_name"  "neji_kaiten_release"
+        }
+
+   
+    
 
     }
 
+    "OnUpgrade"
+    {
+        "LevelUpAbility"
+        {
+            "Target"        "CASTER"
+            "AbilityName"   "neji_kaiten_release"
+        }
+    }
 
 
     "Modifiers"
     {
-        
         
     }
 

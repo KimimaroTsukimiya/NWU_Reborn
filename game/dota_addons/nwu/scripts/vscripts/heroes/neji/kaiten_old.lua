@@ -37,3 +37,16 @@ function kaiten_release( keys )
 	Ability:SetLevel(ability_level)
 
 end
+
+
+--[[
+	Author: LearningDave
+	Date: october, 8th 2015.
+	Knocks back enemy target in a given aoe
+]]
+function SwitchAbilities( caster, main_ability_name, sub_ability_name )
+	-- Swap sub_ability
+	caster:SwapAbilities(main_ability_name, sub_ability_name, false, true)
+	print("Swapped "..main_ability_name.." with " ..sub_ability_name)
+end
+

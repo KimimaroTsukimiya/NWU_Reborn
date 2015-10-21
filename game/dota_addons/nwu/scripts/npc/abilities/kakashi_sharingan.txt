@@ -1,0 +1,81 @@
+"kakashi_sharingan"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"kakashi_sharingan"
+	"CastFilterRejectCaster"    	"1" 
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+		"particle"			"particles/units/heroes/hero_vengeful/vengeful_magic_missle.vpcf"		
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"500"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"25 50 75 100"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"110 120 130 140"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"magic_missile_speed"	"700"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"magic_missile_stun"	"1.5 2 2.5 3"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"copy_timer"			"120"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/kakashi/sharingan.lua"
+			"Function"		"sharingan"
+		}		
+	}
+
+	"Modifiers"
+	{
+		"kakashi_sharingan_modifier"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsBuff"			"1"
+	
+			"Duration"			"%copy_timer"
+		}
+	}
+	
+}

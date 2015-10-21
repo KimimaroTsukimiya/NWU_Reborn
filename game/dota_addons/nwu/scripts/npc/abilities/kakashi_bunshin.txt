@@ -1,0 +1,210 @@
+"kakashi_bunshin"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"AbilityTextureName"			"kakashi_bunshin"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	 {
+	  "soundfile"   "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+	  "particle"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_windwalk.vpcf"
+	  "particle"	"particles/generic_hero_status/status_invisibility_start.vpcf"
+	 
+	 }
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"30"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 120 90 60"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"3 4 5 6"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"fade_time"					"0.25"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_damage"				"0"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"illusion_duration"			"30"
+		}
+		"05"
+       {
+        "var_type"                               "FIELD_FLOAT"
+        "illusion_outgoing_damage_percent"       "-100"
+       }
+       "06"
+       {
+        "var_type"                               "FIELD_FLOAT"
+        "illusion_incoming_damage_percent"       "100"
+       }	
+		
+	}
+	
+
+	"OnSpellStart"
+	{
+		"FireEffect"
+		{
+			//"EffectName"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_windwalk.vpcf"
+			//"Target"	"CASTER"
+			//"EffectAttachType"	"attach_origin"
+		}
+		"FireSound"
+		{
+			//"Target"	"CASTER"
+			//"EffectName"	"Hero_BountyHunter.WindWalk"
+		}
+
+		"ApplyModifier"
+	    {
+	      "ModifierName"    "kakashi_bunshin_illusion"
+	      "Target"      "CASTER"
+	    }
+		"ApplyModifier"
+		{
+			"Target"	"CASTER"
+			"ModifierName"	"modifier_wind_walk_fade_datadriven"
+		}
+
+		"DelayedAction"
+		{
+			"Delay"	"%fade_time"
+
+			"Action" 
+			{
+				"ApplyModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_wind_walk_datadriven"
+				}
+				"ApplyModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_invisible"
+				}
+			}  
+		}
+	}
+
+	"Modifiers"
+	{
+		"kakashi_bunshin_illusion"
+		    {
+		      "Duration"  "%illusion_duration"
+
+		      "OnCreated"
+		      {
+		        "RunScript"
+		        {
+		          "ScriptFile"      "heroes/kakashi/bunshin.lua"
+		          "Function"        "ConjureImage"
+		        }
+		      }
+
+		    }
+
+		"modifier_wind_walk_fade_datadriven"
+		{
+			"Duration"	"%fade_time"
+			"isBuff"	"1"
+			"EffectName"	"particles/generic_hero_status/status_invisibility_start.vpcf"
+			"EffectAttachType"	"follow_origin"
+
+			"OnAttackLanded"
+			{
+				
+				"Damage"
+				{
+					"Target"	"TARGET"
+					"Type"	"DAMAGE_TYPE_PHYSICAL"
+					"Damage"	"%bonus_damage"
+				}
+
+			}
+		}
+		"modifier_wind_walk_datadriven"
+		{
+			"Duration"	"%duration"
+			"isBuff"	"1"
+
+			"OnAttackLanded"
+			{
+				"Damage"
+				{
+					"Target"	"TARGET"
+					"Type"	"DAMAGE_TYPE_PHYSICAL"
+					"Damage"	"%bonus_damage"
+				}
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_wind_walk_datadriven"
+				}
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_invisible"
+				}
+			}
+
+			"OnAbilityExecuted"
+			{
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_wind_walk_datadriven"
+				}
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_invisible"
+				}
+			}
+
+
+			"States"
+			{
+				"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_ENABLED" 
+			}
+
+			"OnDestroy"
+			{
+				"RemoveModifier"
+				{
+					"Target"
+					{
+						"Center"	"CASTER"
+						"Flags"	"DOTA_UNIT_TARGET_FLAG_DEAD"
+					}
+					"ModifierName"	"modifier_invisible"
+				}
+			}
+
+		}
+
+
+	}
+}
