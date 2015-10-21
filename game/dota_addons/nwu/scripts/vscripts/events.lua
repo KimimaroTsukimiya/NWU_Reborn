@@ -79,7 +79,7 @@ function GameMode:OnItemPurchased( keys )
   local itemcost = keys.itemcost
   
   local player = PlayerResource:GetPlayer(keys.PlayerID)
-  PrintTable(keys)
+
   if itemName == "item_forehead_protector" then
     GameMode:ForeheadProtectorOnItemPickedUp(player, itemName)
   end 
