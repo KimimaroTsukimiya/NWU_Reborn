@@ -6399,7 +6399,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-    "ItemAliases"               "hp;hitpoints;mana;chakra"
+    "ItemAliases"               "hp;hitpoints;mana;chakra;Health;health"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -6414,8 +6414,8 @@
          "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
          "Properties"
           {
-                        "MODIFIER_PROPERTY_HEALTH_BONUS " "%bonus_hp"
-                        "MODIFIER_PROPERTY_MANA_BONUS "  "%bonus_mana"
+                        "MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_hp"
+                        "MODIFIER_PROPERTY_MANA_BONUS"  "%bonus_mana"
           }
       }
 
@@ -9758,7 +9758,7 @@
     "ItemDeclarations"          "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
-    "ItemAliases"               "void stone;mana reg;chakra reg;reg"
+    "ItemAliases"               "void stone;mana reg;chakra reg;reg;mana regen"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
