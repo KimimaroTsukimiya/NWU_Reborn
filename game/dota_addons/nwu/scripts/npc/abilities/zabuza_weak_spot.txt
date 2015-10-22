@@ -1,0 +1,76 @@
+"zabuza_weak_spot"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	"zabuza_weak_spot"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	 {
+	  "soundfile"   "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+	  "particle"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_jinda_slow.vpcf"
+	  "particle"	"particles/units/heroes/hero_bounty_hunter/status_effect_bounty_hunter_jinda_slow.vpcf"
+	 
+	 }
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"8"
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"crit_multiplier"		"130 150 170 200"
+		}
+	}
+
+	"Modifiers"
+	{
+
+		"modifier_weak_spot"
+		{
+			"Passive"	"1"
+			"IsHidden"	"0"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_multiplier"
+			}
+
+			"OnAttackLanded"
+			{
+
+				"FireEffect"
+				{
+					"EffectName"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_jinda_slow.vpcf"
+					"EffectAttachType"	"attach_hitloc"
+					"Target"		"TARGET"
+				}
+
+				"FireSound"
+				{
+					"EffectName"	"Hero_BountyHunter.Jinada"
+					"Target"		"TARGET"
+				}
+
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/zabuza/weak_spot.lua"	
+					"Function"		"weak_spot"
+				}
+
+
+			}
+
+		}
+
+	}
+
+}

@@ -592,8 +592,8 @@ CVanimGroup CVanimGroup_1
 		{
 			string m_Animationname = "zabuza_stand"
 			string m_Filepath = "models/zabuza/zabuza_animations.fbx"
-			int m_nStartframe = 33
-			int m_nEndframe = 90
+			int m_nStartframe = 159
+			int m_nEndframe = 187
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -958,11 +958,6 @@ CVanimGroup CVanimGroup_1
 				CActivity
 				{
 					string m_Name = "ACT_DOTA_CAST_ABILITY_1"
-					int m_nWeight = 1
-				},
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_CAST_ABILITY_4"
 					int m_nWeight = 1
 				}
 			]

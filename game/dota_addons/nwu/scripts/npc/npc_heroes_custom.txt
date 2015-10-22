@@ -4,9 +4,9 @@
 		{
 		  "override_hero"   "npc_dota_hero_bloodseeker"
 		  "Ability1"        "zabuza_stealth"
-		  //"Ability2"        "zabuza_stealth"
-		  //"Ability3"        "zabuza_stealth"
-		  //"Ability4"        "zabuza_stealth" 
+		  "Ability2"        "zabuza_kirigakure_no_jutsu"
+		  "Ability3"        "zabuza_weak_spot"
+		  "Ability4"        "zabuza_track" 
 		  "ModelScale"		"1.08"
 		  "Model" 			"models/zabuza/zabuza.vmdl"
 	 	  "ItemSlots"

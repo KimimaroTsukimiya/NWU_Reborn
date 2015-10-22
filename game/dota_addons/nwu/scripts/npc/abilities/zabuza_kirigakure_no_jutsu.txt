@@ -1,0 +1,152 @@
+"zabuza_kirigakure_no_jutsu"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+	//"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"FightRecapLevel"				"2"
+	"AbilityTextureName"			"zabuza_kirigakure_no_jutsu"
+	"AOERadius"						"%radius"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		//"soundfile"			"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+		"particle"			"particles/units/heroes/hero_riki/riki_smokebomb.vpcf"
+		"particle"			"particles/generic_gameplay/generic_silence.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"450"
+	"AbilityCastPoint"				"0.35 0.35 0.35"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"25"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 175 200"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityModifierSupportBonus"		"50"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"250 275 300 325"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"7"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"miss_percentage"		"40 50 60 70"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"		"Hero_FacelessVoid.Chronosphere"
+			"Target"			"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"		"heroes/zabuza/kirigakure_no_jutsu.lua"
+			"Function"			"Chronosphere"
+			"Target"			"POINT"
+			"dummy_aura"		"modifier_chronosphere_aura_datadriven"
+		}
+	}
+
+	"Modifiers"
+	{
+		// Cosmetic
+		"modifier_chronosphere_tooltip_datadriven"
+		{
+			"IsDebuff"		"1"
+			"IsPurgable"	"0"
+		}
+
+		"modifier_chronosphere_aura_datadriven"
+		{
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"	"particles/units/heroes/hero_riki/riki_smokebomb.vpcf"
+					"EffectAttachType"	"attach_origin"
+					"Target"		"TARGET"
+
+					"ControlPoints"
+					{
+						"01"	"%radius %radius 0"
+					}
+				}
+			}
+			
+			"ThinkInterval"		"0.1"
+
+			"OnIntervalThink"
+			{
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center"	"TARGET"
+						"Types"		"DOTA_UNIT_TARGET_ALL"
+						"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Radius"	"%radius"
+					}
+
+					"Action"
+					{
+						"ApplyModifier"
+						{
+							"ModifierName"	"modifier_zabuza_kirigakure_no_jutsu_silence"
+							"Target" 		"TARGET"
+							"Duration"		"1"
+						}
+					}
+				}
+			}
+
+			"States"
+			{
+				"MODIFIER_STATE_INVULNERABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR" 	"MODIFIER_STATE_VALUE_ENABLED"				
+				"MODIFIER_STATE_NOT_ON_MINIMAP" "MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_UNSELECTABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+
+		"modifier_zabuza_kirigakure_no_jutsu_silence"
+		{
+			"IsDebuff"	"1"
+			"Duration"	"0.1"
+			"IsPurgable"	"1"
+			"EffectName"	"particles/generic_gameplay/generic_silence.vpcf"
+			"EffectAttachType"	"follow_overhead"	
+			"States"
+			{
+				"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_PROPERTY_MISS_PERCENTAGE"	"%miss_percentage"
+			}
+		}
+	}
+}
