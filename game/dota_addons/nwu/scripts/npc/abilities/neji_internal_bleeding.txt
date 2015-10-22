@@ -1,0 +1,88 @@
+"neji_internal_bleeding"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"neji_internal_bleeding"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+				"particle"	"particles/generic_gameplay/generic_silence.vpcf"
+	}	
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"125"
+	"AbilityCastPoint"				"0.5 0.5 0.5"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20 20 20 20"
+
+	//Damage
+	"AbilityDamage"					"100 150 200 250"
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"60 75 90 105"		
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"tick_interval"					"0.5"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"duration"						"11"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage_per_tick"				"4 6 8 10"
+		}
+	}
+
+	"OnSpellStart"
+	{
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_neji_internal_bleeding_dot"
+			"Target" 		"TARGET"
+			"Duration"		"%duration"
+		}
+		
+	}
+
+	"Modifiers"
+	{
+		"modifier_neji_internal_bleeding_dot"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+			"ThinkInterval"  "%tick_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/neji/internal_bleeding.lua"
+						"Function"		"internal_bleeding"
+					}
+				}
+		}
+	}
+}

@@ -91,7 +91,7 @@
 		  "override_hero"   "npc_dota_hero_axe"
 		  "Model" 			"models/neji/neji.vmdl"
 		  "Ability1"         "neji_kaiten"
-		  "Ability2"         "neji_hakke_kuuhekishou" 
+		  "Ability2"         "neji_internal_bleeding" 
 		  "Ability3"         "neji_byakugan" 
 		  "Ability4"         "neji_hyaku_nijuuhachi_shou"
 
