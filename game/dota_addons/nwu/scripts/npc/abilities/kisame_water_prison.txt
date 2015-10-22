@@ -75,6 +75,7 @@
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+		"particle"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
 		"model"		"models/kisame_new/kisame_samehada.vmdl"
 	}
 
@@ -97,6 +98,32 @@
 			"Target"			"CASTER"
 		}
 	}
+
+
+	"OnToggleOn"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifier_kisame_metamorphosis"
+			"Target"			"CASTER"
+		}
+	}
+
+	"OnToggleOff"
+	{
+		"RunScript"
+				{
+					"ScriptFile"	"heroes/kisame/water_prison.lua"
+					"Function"		"ModelSwapEnd"
+				}
+
+		"RemoveModifier"
+				{
+					"ModifierName"	"modifier_kisame_metamorphosis"
+					"Target" 		"CASTER"
+				}
+	}
+
 
 	"Modifiers"
 	{
@@ -123,8 +150,9 @@
 		"modifier_kisame_metamorphosis"
 		{
 			
-			"EffectName" 		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
+			"EffectName" 		"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
 			"EffectAttachType"  "follow_origin"
+
 
 			"AllowsIllusionDuplicate"	"1"
 
@@ -140,9 +168,9 @@
 
 				"AttachEffect"
 				{
-					"EffectName" 		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
-					"EffectAttachType"	"follow_origin"
-					"Target"			"TARGET"
+					//"EffectName" 		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+					//"EffectAttachType"	"follow_origin"
+					//"Target"			"TARGET"
 				}
 			}
 
@@ -173,7 +201,7 @@
 				}
 			}
 
-			"ThinkInterval"	"%tick_interval_modifer"
+			"ThinkInterval"	"%tick_interval"
 			"OnIntervalThink"
 			{
 			 "ApplyModifier"
@@ -186,7 +214,7 @@
 				        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
 				        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 				      }
-				      "Duration"    "%tick_interval"
+				      "Duration"    "0.5"
 				    }
 			}
 			"OnDestroy"
