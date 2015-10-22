@@ -25,15 +25,6 @@
 				247,
 			]
 		},
-		{
-			_class = "C_OP_RenderModels"
-			m_ModelList =
-			[
-				{
-					m_model = resource:"models/kakashi/kakashi.vmdl"
-				},
-			]
-		},
 	]
 	m_Operators =
 	[
@@ -113,6 +104,9 @@
 		{
 			m_ChildRef = resource:"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_trail_c.vpcf"
 			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/kakashi_chidori.vpcf"
 		},
 	]
 }
