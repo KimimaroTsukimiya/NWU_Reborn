@@ -58,6 +58,12 @@
             "var_type" "FIELD_FLOAT"
             "duration" "2.0 2.0 2.0 2.0"
         }
+
+         "05"
+        {
+            "var_type" "FIELD_FLOAT"
+            "bonus_damage" "7.0"
+        }
     }
 
     "OnSpellStart"
@@ -131,6 +137,19 @@
                 "MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
             }
         }
+
+
+        "modifier_neji_byakugan_bonus_damage"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+        "Properties"
+          {
+              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+          }
+      }
+
     }
 
 }

@@ -8,7 +8,6 @@
     "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
     "AbilityTextureName"        "neji_kaiten"
 
-
     "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
     "MaxLevel"               "4"
     "AbilityDamage"                 "75 150 225 300"
@@ -53,6 +52,11 @@
             "var_type" "FIELD_FLOAT"
             "damage" "75 150 225 300"
         }
+        "04"
+        {
+            "var_type" "FIELD_FLOAT"
+            "bonus_damage" "7 14 21 28"
+        }
 
     }
 
@@ -63,6 +67,12 @@
             //TODO
         }
 
+        "RunScript"
+        {
+
+            "ScriptFile"    "heroes/neji/kaiten.lua"
+            "Function"        "apply_stun"
+        }
 
         "Knockback"
                 {
@@ -97,11 +107,8 @@
 
     }
 
-
-
     "Modifiers"
     {
-        
         
     }
 

@@ -1,39 +1,26 @@
+LinkLuaModifier( "modifier_neji_kaiten_stun" , "heroes/neji/modifiers/modifier_neji_kaiten_stun.lua" , LUA_MODIFIER_MOTION_NONE )
 --[[Author: LearningDave
-	Date: october, 8th 2015.
-	Adds a modifier to neji and switches nejis ability to neji_kaiten_release
-	)]]
-function kaiten_launch( keys )
-	local caster = keys.caster	
-	local ability = keys.ability
-	local ability_level = ability:GetLevel()
-
-	local main_ability_name = keys.main_ability_name
-	local sub_ability_name = keys.sub_ability_name
-	print(main_ability_name)
-	print(sub_ability_name)
-	-- Ability swap
-	caster:RemoveAbility(main_ability_name)
-		
-	Ability = caster:AddAbility(sub_ability_name)
-	Ability:SetAbilityIndex(1)
-	Ability:SetLevel(ability_level)
-
-end
-
---[[
-	Author: LearningDave
-	Date: october, 8th 2015.
-	Swaps given abilites
-]]
-function kaiten_release( keys )
-	local caster = keys.caster
-	local ability_level = keys.ability:GetLevel()
-	local main_ability_name = keys.main_ability_name
-	local sub_ability_name = keys.sub_ability_name
-
-	caster:RemoveAbility(main_ability_name)
-	Ability = caster:AddAbility(sub_ability_name)
-	Ability:SetAbilityIndex(1)
-	Ability:SetLevel(ability_level)
-
+	Date: october, 24th 2015.
+	Applies a modifer (stun) on the target, depening on the level of 'neji_byakugan'
+)]]
+function apply_stun( keys )
+	local duration = 0
+	local aoe_target = keys.ability:GetLevelSpecialValueFor("aoe_target", (keys.ability:GetLevel() - 1))
+	local ability_index = keys.caster:FindAbilityByName("neji_byakugan"):GetAbilityIndex()
+    local ability = keys.caster:GetAbilityByIndex(ability_index)
+    local ability_level = ability:GetLevel()
+    local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), keys.caster:GetAbsOrigin(), nil, aoe_target, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+    duration = 0.75 * ability_level
+	if duration > 0 then
+		Timers:CreateTimer( 1, function()
+			if targetEntities then
+				for _,target in pairs(targetEntities) do
+					target:AddNewModifier(keys.caster, target, "modifier_neji_kaiten_stun", {Duration = duration})
+					
+				end
+			end
+		return nil
+		end
+		)
+	end
 end

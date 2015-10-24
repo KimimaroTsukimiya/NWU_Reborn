@@ -107,19 +107,5 @@
 					}
 				}
 		}
-
-		"modifier_neji_internal_bleeding_ms_slow"
-		{
-			"Duration"			"%duration"
-			"Passive"			"0"
-			"IsHidden"			"0"
-			"IsDebuff"			"1"
-
-		"Properties"
-          {
-            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow_given"
-          }
-
-		}
 	}
 }
