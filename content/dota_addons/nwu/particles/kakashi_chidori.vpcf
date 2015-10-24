@@ -69,6 +69,7 @@
 	[
 		{
 			m_ChildRef = resource:"particles/onoki_cube1.vpcf"
+			m_bDisableChild = true
 		},
 	]
 }
