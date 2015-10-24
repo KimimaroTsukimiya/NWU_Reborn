@@ -46,12 +46,27 @@
 		"02"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"duration"						"11"
+			"duration"						"4 6 8 10"
 		}
 		"03"
 		{
 			"var_type"						"FIELD_FLOAT"
 			"damage_per_tick"				"4 6 8 10"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"byagukan"						"0"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"byagukan_slow"						"0"
+		}
+		"06"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"ms_slow"						"-15"
 		}
 	}
 
@@ -64,6 +79,13 @@
 			"Target" 		"TARGET"
 			"Duration"		"%duration"
 		}
+
+		"RunScript"
+		{
+			"ModifierName"	"modifier_neji_internal_bleeding_ms_slow"
+			"ScriptFile"	"heroes/neji/internal_bleeding.lua"
+			"Function"		"apply_ms_slow"
+		}
 		
 	}
 
@@ -72,7 +94,7 @@
 		"modifier_neji_internal_bleeding_dot"
 		{
 			"Passive"			"0"
-			"IsHidden"			"0"
+			"IsHidden"			"1"
 			"IsDebuff"			"1"
 			"ThinkInterval"  "%tick_interval"
 				"OnIntervalThink"
@@ -81,8 +103,23 @@
 					{
 						"ScriptFile"	"heroes/neji/internal_bleeding.lua"
 						"Function"		"internal_bleeding"
+						"ms_slow"		"%ms_slow"
 					}
 				}
+		}
+
+		"modifier_neji_internal_bleeding_ms_slow"
+		{
+			"Duration"			"%duration"
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+
+		"Properties"
+          {
+            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow_given"
+          }
+
 		}
 	}
 }
