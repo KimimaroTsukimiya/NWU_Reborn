@@ -38,6 +38,6 @@ end
 	 -- modifier_neji_internal_bleeding_ms_slow.lua is required
 ================================================================================================================= ]]
 function apply_ms_slow( keys )
-	local duration = keys.ability:GetLevelSpecialValueFor("duration", (keys.ability:GetLevel() - 1))
+	local duration = keys.ability:GetLevelSpecialValueFor("ms_slow_duration", (keys.ability:GetLevel() - 1))
 	keys.target:AddNewModifier(keys.caster, keys.target, "modifier_neji_internal_bleeding_ms_slow", {Duration = duration})
 end

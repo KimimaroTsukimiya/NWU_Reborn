@@ -103,13 +103,27 @@
             }
             "Type"           "DAMAGE_TYPE_MAGICAL"
            "Damage"         "%damage"
-        }      
+        }
+
+        "ApplyModifier"
+        {
+            "ModifierName"    "modifier_neji_kaiten_untouchable"
+            "Target"         "CASTER"
+            "Duration"        "1"
+        }     
 
     }
 
     "Modifiers"
     {
-        
+        "modifier_neji_kaiten_untouchable"
+        {
+            "Duration"  "1"
+            "States"
+            {
+                "MODIFIER_STATE_INVULNERABLE"        "MODIFIER_STATE_VALUE_ENABLED"
+            }
+        }
     }
 
 }

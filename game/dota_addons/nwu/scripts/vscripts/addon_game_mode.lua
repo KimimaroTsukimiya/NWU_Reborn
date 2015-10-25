@@ -54,7 +54,7 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/items3_fx", context)
 
 
-
+PrecacheModel("models/items/tiny_01/tiny_haunted_tree.vmdl", context)
   -- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
   -- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way
   PrecacheUnitByNameSync("npc_dota_hero_ancient_apparition", context)

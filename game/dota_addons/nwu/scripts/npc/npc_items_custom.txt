@@ -9953,7 +9953,6 @@
 	  }
 	
 	}
-	
 	"item_spellthiefs_edge"
 	  {
 	    "ID"                    "2953"

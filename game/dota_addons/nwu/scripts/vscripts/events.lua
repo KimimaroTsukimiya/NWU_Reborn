@@ -40,7 +40,9 @@ function GameMode:OnEntityHurt(keys)
   --DebugPrintTable(keys)
 
   local damagebits = keys.damagebits -- This might always be 0 and therefore useless
-  local entCause = EntIndexToHScript(keys.entindex_attacker)
+  if keys.entindex_attacker ~= nil then
+    local entCause = EntIndexToHScript(keys.entindex_attacker)
+  end
   local entVictim = EntIndexToHScript(keys.entindex_killed)
 end
 
@@ -233,7 +235,9 @@ function GameMode:OnEntityKilled( keys )
 
   local damagebits = keys.damagebits -- This might always be 0 and therefore useless
   --Items
-  GameMode:SpellThiefsEdgeOnEntityKilled(killedUnit, killerEntity)
+  if killerEntity ~= nil then
+    GameMode:SpellThiefsEdgeOnEntityKilled(killedUnit, killerEntity)
+  end
 
 end
 
