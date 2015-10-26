@@ -1,0 +1,160 @@
+"madara_meteor"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"madara_meteor"
+	"AOERadius"						"%radius"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+				"particle"	"particles/generic_gameplay/generic_silence.vpcf"
+				"particle"	"particles/units/heroes/hero_invoker/invoker_chaos_meteor_fly.vpcf"
+				"particle"	"particles/units/heroes/madara/shadow_2.vpcf"
+				"particle"	"particles/units/heroes/madara/burning_tree.vpcf"
+	}	
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"650"
+	"AbilityCastPoint"				"0.5 0.5 0.5"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityChannelTime"			"2.5 2.5 2.5"
+	"AbilityCooldown"				"1 160"
+
+	//Damage
+	"AbilityDamage"					"400 525 650"
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"200 250 300"		
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"radius"						"600"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"stun_duration"					"2.0 2.25 2.5"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"delay_to_dmg"					"1.3"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"land_time"					"1.8"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"travel_speed"					"250"
+		}
+		"06"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"vision_distance"					"500"
+		}
+		"07"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"end_vision_duration"					"3.0"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/madara/meteor.lua"
+			"Function"		"spawnShadow"
+			"Target"		"POINT"
+			"LandTime"									"%land_time"
+			"TravelSpeed"								"%travel_speed"
+			"VisionDistance"							"%vision_distance"
+			"EndVisionDuration"							"%end_vision_duration"
+		}
+	}
+
+	"OnChannelSucceeded"
+	{
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/madara/meteor.lua"
+			"Function"		"LaunchMeteor"
+			"Target"		"POINT"
+			"LandTime"									"%land_time"
+			"TravelSpeed"								"%travel_speed"
+			"VisionDistance"							"%vision_distance"
+			"EndVisionDuration"							"%end_vision_duration"
+		}
+
+		"DelayedAction"
+		{
+			"Delay"     "%delay_to_dmg"
+			"Action"    
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/madara/meteor.lua"
+					"Function"		"meteorExplode"
+					"Target"		"POINT"
+					"aoe"			"%radius"	
+					"damage" 		"%AbilityDamage"
+				}
+
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center"  	"POINT"
+						"Radius" 	"%radius"
+						"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					}
+				
+					"Action"    
+					{
+						"Stun"
+						{
+							"Duration"   "%stun_duration"
+							"Target" 	 "TARGET"
+						}
+					}
+				}
+				
+			}
+		}
+
+		
+	}
+
+	"OnSpellStart"
+	{	
+
+		
+		"FireSound"
+		{
+				
+		}
+		
+	}
+}

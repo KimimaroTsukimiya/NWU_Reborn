@@ -1,0 +1,180 @@
+"madara_susano_active"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"        "madara_susano_active"
+
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+    "AbilityDamage"                 "75 150 225 300"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "0"
+    "AbilityDuration"               "3"
+
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "1.0"
+    "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "0"
+
+
+     "precache"
+    {
+      "particle"  "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+      "particle"  "particles/generic_gameplay/generic_purge.vpcf"
+      "particle"   "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
+    }
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "burn_radius"           "175"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "burn_damage"           "35 50 65 80"
+        }
+
+        "03"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "magic_resistance_percent"  "10 15 20 25"
+        }
+
+        "04"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "mana_cost_per_second"  "8"
+        }
+
+        "05"
+        {
+            "var_type"                          "FIELD_FLOAT"
+            "mana_cost_per_second_percentage"   "3"
+        }
+    }
+
+    "OnSpellStart"
+    {
+        "FireSound"
+        {
+            //TODO
+        }
+
+       "RunScript"
+        {
+            "ScriptFile"        "heroes/madara/susano.lua"
+            "Function"          "SwapAbility"
+            "Target"            "Caster"
+           // "projectile_particle"   "particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_initial.vpcf"
+            "main_ability_name" "madara_susano_active"
+            "sub_ability_name"  "madara_susano"
+        }
+
+
+        "RemoveModifier"
+        {
+            "ModifierName"    "modifier_madara_susano"
+            "Target"         "CASTER"
+        }     
+         "RemoveModifier"
+        {
+            "ModifierName"    "modifier_madara_susano_burn_trees"
+            "Target"         "CASTER"
+        }
+    }
+
+
+
+
+    "Modifiers"
+    {
+            "modifier_madara_susano"
+            {
+            "Passive"     "1"
+            "IsHidden"      "0"
+            "IsBuff"      "1"
+            "EffectName"        "particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+            "EffectAttachType"  "follow_origin"
+
+            "AllowsIllusionDuplicate"   "1"
+
+             "Properties"
+              {
+                "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "%magic_resistance_percent"
+              } 
+
+            "OnCreated"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"            "heroes/madara/susano.lua"
+                    "Function"              "SusanoStart"
+                    //"particle_name"           "models/kisame_new/kisame_samehada.vmdl"
+                    "projectile_model"      "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+                }
+
+                
+
+                "AttachEffect"
+                {
+                    //"EffectName"      "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+                    //"EffectAttachType"    "follow_origin"
+                    //"Target"          "TARGET"
+                }
+            }
+
+            
+            "ThinkInterval" "1"
+            "OnIntervalThink"
+            {
+
+                "RunScript"
+                {
+                    "ScriptFile"            "heroes/madara/susano.lua"
+                    "Function"              "ManaCost"
+                }
+                
+               "RunScript"
+                {
+                    "ScriptFile"    "heroes/madara/susano.lua"
+                   "Function"      "BurnEnemies"
+               }
+            }
+
+          
+
+        }
+
+        "modifier_madara_susano_burn_trees"
+        {
+             "Passive"     "1"
+            "IsHidden"      "1"
+               "ThinkInterval" "0.3"
+            "OnIntervalThink"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"            "heroes/madara/susano.lua"
+                    "Function"              "BurnTrees"
+                }
+
+            }
+        }
+    }
+
+}

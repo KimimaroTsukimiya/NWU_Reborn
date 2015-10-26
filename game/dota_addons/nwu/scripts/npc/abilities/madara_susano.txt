@@ -1,0 +1,107 @@
+"madara_susano"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"			"madara_susano"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0."
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"2.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
+
+	//Stats
+	"AbilityDamage"					"35 50 65 80"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"burn_radius"			"175"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"burn_damage"			"35 50 65 80"
+		}
+
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"magic_resistance_percent"	"10 15 20 25"
+		}
+
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"mana_cost_per_second"	"8"
+		}
+
+		"05"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"mana_cost_per_second_percentage"	"3"
+		}
+
+	}
+
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+		"particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
+		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+		"particle"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+		"particle"	"particles/dire_fx/fire_barracks_glow_b.vpcf"
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"		"Hero_Terrorblade.Metamorphosis"
+			"Target"			"CASTER"
+		}
+		"FireEffect"
+		{
+			"EffectName"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+			"EffectAttachType"	"follow_origin"
+			"Target"			"CASTER"
+		}
+
+	        "FireSound"
+	        {
+	            //TODO
+	        }
+
+	        "RunScript"
+	        {
+	            "ScriptFile"        "heroes/madara/susano.lua"
+	            "Function"          "SwapAbility"
+	            "Target"            "CASTER"
+	           // "projectile_particle"   "particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_initial.vpcf"
+	            "main_ability_name" "madara_susano"
+	            "sub_ability_name"  "madara_susano_active"
+	        }
+	}
+
+
+
+	"Modifiers"
+	{
+
+
+	
+	}
+}

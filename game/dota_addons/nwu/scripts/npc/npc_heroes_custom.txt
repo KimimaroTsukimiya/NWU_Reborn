@@ -238,8 +238,8 @@
 		  "Model" 			"models/madara/madara.vmdl"
 		  "Ability1"        "madara_fire_release"
 		  "Ability2"        "madara_wood_release" 
-		  //"Ability3"        "kakashi_bunshin" 
-		  //"Ability4"        "kakashi_chidori"
+		  "Ability3"        "madara_susano" 
+		  "Ability4"        "madara_meteor"
 
 		  "MagicalResistance"            "0"
 		

@@ -44,6 +44,7 @@ function ReleaseFire( keys )
 	local ability = keys.ability
 	local point_difference_normalized = (target_point - caster_location):Normalized()
 	local velocity = point_difference_normalized * wave_speed
+	local stopCheck = true
 	local info = 
 	{
 			Ability = keys.ability,
@@ -74,20 +75,49 @@ function ReleaseFire( keys )
 				ability.traveled = ability.traveled + ability.max_movespeed * 1/30
 				-- Check for nearby trees, destroy them if they exist
 				if GridNav:IsNearbyTree( ability.currentPos, ability.radius, true ) then
-				--	GridNav:DestroyTreesAroundPoint(ability.currentPos, ability.tree_width, false)
+
 				local trees = GridNav:GetAllTreesAroundPoint(ability.currentPos, ability.tree_width, false) 
 				if trees then
 					for _,tree in pairs(trees) do
 						local origin = tree:GetAbsOrigin()
 						xcoord = origin.x
 						ycoord = origin.y
-						local dummy = CreateUnitByName( "npc_burning_tree", Vector(xcoord, ycoord, 0.0), false, keys.caster, nil, keys.caster:GetTeamNumber() )
-						dummy:GetAbilityByIndex(0):SetLevel(wood_ability_level)
-						local particle = ParticleManager:CreateParticle("particles/dire_fx/fire_barracks_glow_b.vpcf", PATTACH_ABSORIGIN_FOLLOW, nil) 
-          				ParticleManager:SetParticleControl(particle , 0, dummy:GetAbsOrigin())
+						--local dummy = CreateUnitByName( "npc_burning_tree", Vector(xcoord, ycoord, 0.0), false, keys.caster, nil, keys.caster:GetTeamNumber() )
+						--dummy:GetAbilityByIndex(0):SetLevel(wood_ability_level)
+						GridNav:DestroyTreesAroundPoint(origin, 40, true)
+						local treesSecond = GridNav:GetAllTreesAroundPoint(origin, 50, false) 
+						
+						local particle = ParticleManager:CreateParticle("particles/units/heroes/madara/burning_tree.vpcf", PATTACH_CUSTOMORIGIN, nil) 
+          				ParticleManager:SetParticleControl(particle , 0, origin)
+ 						
+
+          				Timers:CreateTimer( function()
+          						
+
+          						local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), origin, nil, ability.tree_width, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+							    if targetEntities then
+							      for _,oneTarget in pairs(targetEntities) do
+							        local modfifier = oneTarget:FindModifierByName("burning_tree_dot")
+							        if modifier == nil then
+							          wood_ability:ApplyDataDrivenModifier(keys.caster, oneTarget, "burning_tree_dot", {Duration = tree_burn_duration})
+							          local particle = ParticleManager:CreateParticle("particles/dire_fx/fire_barracks_glow_b.vpcf", PATTACH_ABSORIGIN_FOLLOW, nil) 
+							          ParticleManager:SetParticleControl(particle , 0, oneTarget:GetAbsOrigin())
+							        end
+							      end
+							    end
+
+          						if stopCheck then
+          							return 0.3
+          						else
+          							return nil
+          						end
+							  
+						end
+					  	)
 
           				Timers:CreateTimer( tree_burn_duration, function()
-						   	dummy:RemoveSelf()
+          						stopCheck = false
+						   		ParticleManager:DestroyParticle(particle, true)
 							  return nil
 						end
 					  	)
@@ -144,10 +174,8 @@ end
 function fireExplosion(keys)
 	local target_point = keys.target_points[1]
 	print(target_point)
-	local particle = ParticleManager:CreateParticle("particles/econ/courier/courier_cluckles/courier_cluckles_ambient_rocket_explosion.vpcf", PATTACH_CUSTOMORIGIN, nil) 
-	ParticleManager:SetParticleControl(particle , 3, target_point)
+	local particle = ParticleManager:CreateParticle("particles/addons_gameplay/pit_lava_blast.vpcf", PATTACH_CUSTOMORIGIN, nil) 
+	ParticleManager:SetParticleControl(particle , 0, target_point)
 
-	local particle2 = ParticleManager:CreateParticle("particles/units/heroes/hero_warlock/warlock_rain_of_chaos_explosion.vpcf", PATTACH_CUSTOMORIGIN, nil) 
-	ParticleManager:SetParticleControl(particle2 , 0, target_point)
 	
 end

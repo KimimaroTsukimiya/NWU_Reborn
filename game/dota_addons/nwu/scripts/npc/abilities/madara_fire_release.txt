@@ -16,6 +16,7 @@
 	{
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
 		"particle"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+		"particle"			"particles/addons_gameplay/pit_lava_blast.vpcf"
 	}
 	
 	// Casting
@@ -80,6 +81,26 @@
 			"var_type"						"FIELD_INTEGER"
 			"wave_damage"				"60 85 110 135"
 		}
+		"09"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "radius" "400"
+        }
+        "10"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "aoe_damage" "20 25 30 35"
+        }
+        "11"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "duration" "2 3 4 5"
+        }
+        "12"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "bonus_damage_percent" "5 10 15 20"
+        }
 		
 	}
 

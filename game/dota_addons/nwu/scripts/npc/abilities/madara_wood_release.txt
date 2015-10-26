@@ -92,5 +92,31 @@
 		}
 			
 	}
+
+	"Modifiers"
+	{
+		"burning_tree_dot"
+      {
+        "IsDebuff"  "1"
+        "Hidden"    "0"
+        "Duration"  "%burn_buff_duration"
+        "ThinkInterval"     "1"
+        "OnIntervalThink"
+        {
+           "Damage"
+          {
+            "Target"  "TARGET"
+            "Type"    "DAMAGE_TYPE_MAGICAL"
+            "Damage"  "%burn_damage"
+          }
+        }
+
+        "Properties"
+          {
+            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%burn_ms_slow_percentage"
+          }
+         
+      }
+	}
 	
 }

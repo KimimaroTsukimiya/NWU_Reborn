@@ -8,13 +8,14 @@ function wood_release( keys )
 	local tree_duration = keys.ability:GetLevelSpecialValueFor("tree_duration", keys.ability:GetLevel() - 1)
 	local tree_vision = keys.ability:GetLevelSpecialValueFor("tree_vision", keys.ability:GetLevel() - 1)
 	local target_point = keys.target_points[1]
+	local tree_count = 10
 	local scope = math.pi * radius
 	local posX = 0
 	local posY = 0
 	local r = radius / 2
-	for i = 1,10 do
-			posX = target_point.x + r * math.cos((math.pi*2/10) * i)
-			posY = target_point.y + r * math.sin((math.pi*2/10) * i)
+	for i = 1,tree_count do
+			posX = target_point.x + r * math.cos((math.pi*2/tree_count) * i)
+			posY = target_point.y + r * math.sin((math.pi*2/tree_count) * i)
 			CreateTempTree( Vector( posX, posY, 0.0 ), tree_duration )
 			--local dummy = CreateUnitByName( "npc_tree", Vector(posX, posY, 0.0), false, keys.caster, nil, keys.caster:GetTeamNumber() )
 	end
