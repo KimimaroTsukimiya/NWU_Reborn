@@ -54,11 +54,19 @@ CVModel CVModel_0
 	}
 	CVhitBoxSetListReference[] m_pHitBoxSetLists = 
 	[
-		
+		CVhitBoxSetListReference
+		{
+			CVhitBoxSetList* m_pObject = &CVhitBoxSetList_0
+			string m_sFileName = ""
+		}
 	]
 	CVattachmentListReference[] m_pAttachmentLists = 
 	[
-		
+		CVattachmentListReference
+		{
+			CVattachmentList* m_pObject = &CVattachmentList_0
+			string m_sFileName = ""
+		}
 	]
 	CVanimGroupReference m_pAnimGroup = CVanimGroupReference
 	{
@@ -124,6 +132,393 @@ CVModel CVModel_0
 	CVanimGroupReference[] m_pAnimGroups = 
 	[
 		
+	]
+}
+
+CVhitBoxSetList CVhitBoxSetList_0
+{
+	CVhitBoxSet[] m_HitBoxSets = 
+	[
+		CVhitBoxSet
+		{
+			string m_name = "default"
+			CVhitBox[] m_HitBoxes = 
+			[
+				CVhitBox
+				{
+					string m_name = "Object18"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object18"
+					float(3) m_vMinBounds = ( -26.117895, -23.403931, -31.677338 )
+					float(3) m_vMaxBounds = ( -15.742899, -14.607056, -13.177330 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object06"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object06"
+					float(3) m_vMinBounds = ( 15.882099, -23.403933, -32.177338 )
+					float(3) m_vMaxBounds = ( 26.132099, -14.607058, -13.177330 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object02"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object02"
+					float(3) m_vMinBounds = ( -1.274168, -0.264143, -9.356117 )
+					float(3) m_vMaxBounds = ( 2.137941, 4.923356, -0.356117 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object03"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object03"
+					float(3) m_vMinBounds = ( -1.953716, -0.691597, -9.279045 )
+					float(3) m_vMaxBounds = ( 1.462300, 4.495903, -0.279045 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "mantle_mid_1"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "mantle_mid_1"
+					float(3) m_vMinBounds = ( -14.881182, -0.933358, -28.638321 )
+					float(3) m_vMaxBounds = ( 14.056314, 5.075227, -7.222519 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "mantle_left_1"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "mantle_left_1"
+					float(3) m_vMinBounds = ( -7.403308, -19.897858, -28.352459 )
+					float(3) m_vMaxBounds = ( -0.407643, 2.548222, -6.852455 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "mantle_right_1"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "mantle_right_1"
+					float(3) m_vMinBounds = ( 0.681685, -19.765564, -28.229229 )
+					float(3) m_vMaxBounds = ( 7.849767, 2.680515, -6.729225 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "mantle_right_front_1"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "mantle_right_front_1"
+					float(3) m_vMinBounds = ( -1.830119, -8.396182, -28.303631 )
+					float(3) m_vMaxBounds = ( 6.400462, -0.083685, -6.803627 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "mantle_left_front_1"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "mantle_left_front_1"
+					float(3) m_vMinBounds = ( -6.934357, -8.423392, -28.337505 )
+					float(3) m_vMaxBounds = ( 1.186308, -0.110895, -6.837502 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object17"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object17"
+					float(3) m_vMinBounds = ( -12.555392, -29.144505, -32.177338 )
+					float(3) m_vMaxBounds = ( 12.569604, -12.294559, -9.677330 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object12"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object12"
+					float(3) m_vMinBounds = ( -15.795507, -28.388306, -55.427315 )
+					float(3) m_vMaxBounds = ( 0.005154, -12.294557, -24.677313 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object14"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object14"
+					float(3) m_vMinBounds = ( -14.367893, -25.513306, -85.302322 )
+					float(3) m_vMaxBounds = ( -2.141333, -14.544556, -54.177322 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object20"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object20"
+					float(3) m_vMinBounds = ( -4.875037, -15.291805, -9.378658 )
+					float(3) m_vMaxBounds = ( 3.906212, 6.551943, 0.215093 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object11"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object11"
+					float(3) m_vMinBounds = ( -0.000708, -28.388306, -55.427315 )
+					float(3) m_vMaxBounds = ( 14.257103, -12.294557, -24.677313 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object13"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object13"
+					float(3) m_vMinBounds = ( 2.147732, -25.513306, -85.302322 )
+					float(3) m_vMaxBounds = ( 14.382105, -14.544557, -54.177322 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object16"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object16"
+					float(3) m_vMinBounds = ( -4.092925, -15.191216, -9.257229 )
+					float(3) m_vMaxBounds = ( 4.688324, 6.652533, 0.336522 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object07"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object07"
+					float(3) m_vMinBounds = ( -35.158806, -33.117012, -30.877182 )
+					float(3) m_vMaxBounds = ( 34.863686, 4.009533, 14.444809 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object10"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object10"
+					float(3) m_vMinBounds = ( -23.992893, -26.638306, -15.677315 )
+					float(3) m_vMaxBounds = ( -12.180394, -12.763306, 8.822685 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object15"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object15"
+					float(3) m_vMinBounds = ( -2.955126, -4.379646, -8.118999 )
+					float(3) m_vMaxBounds = ( 3.044874, 3.010978, 0.381004 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object09"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object09"
+					float(3) m_vMinBounds = ( 10.763583, -27.000031, -15.677330 )
+					float(3) m_vMaxBounds = ( 24.382099, -12.763307, 10.188393 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object21"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object21"
+					float(3) m_vMinBounds = ( -4.633102, -4.526708, -8.573101 )
+					float(3) m_vMaxBounds = ( 1.366898, 2.863917, -0.323097 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object01"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object01"
+					float(3) m_vMinBounds = ( -8.617892, -32.482056, 10.322670 )
+					float(3) m_vMaxBounds = ( 8.819604, -12.544559, 35.322678 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object04"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object04"
+					float(3) m_vMinBounds = ( -1.480108, -0.594463, -11.044456 )
+					float(3) m_vMaxBounds = ( 2.215203, 2.530538, -0.044456 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Object05"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Object05"
+					float(3) m_vMinBounds = ( -2.556336, -0.480034, -11.352959 )
+					float(3) m_vMaxBounds = ( 1.150694, 2.644967, -0.352959 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "mantle_mid_2"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "mantle_mid_2"
+					float(3) m_vMinBounds = ( -16.877079, -4.445721, -22.367990 )
+					float(3) m_vMaxBounds = ( 18.411579, 3.478308, 0.280464 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "mantle_left_2"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "mantle_left_2"
+					float(3) m_vMinBounds = ( -11.519683, -23.058765, -22.810722 )
+					float(3) m_vMaxBounds = ( -0.138266, 2.986149, -0.012379 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "mantle_right_2"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "mantle_right_2"
+					float(3) m_vMinBounds = ( 0.014066, -23.017979, -22.459654 )
+					float(3) m_vMaxBounds = ( 12.070065, 3.026936, 0.107338 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "mantle_right_front_2"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "mantle_right_front_2"
+					float(3) m_vMinBounds = ( -3.258680, -11.518398, -22.902582 )
+					float(3) m_vMaxBounds = ( 7.422319, -0.096496, -0.100296 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "mantle_left_front_2"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "mantle_left_front_2"
+					float(3) m_vMinBounds = ( -5.839638, -11.622946, -23.082806 )
+					float(3) m_vMaxBounds = ( 3.416779, -0.160258, -0.049171 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				}
+			]
+		}
+	]
+	string m_AutoCreateSetName = ""
+}
+
+CVattachmentList CVattachmentList_0
+{
+	string m_name = ""
+	CVattachment[] m_attachments = 
+	[
+		CVattachment
+		{
+			string m_name = "attach_origin"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "m3bone_root"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_hitloc"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "Bone_waist"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_rasengan"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "Bone_Rhand2"
+					float(3) m_vTranslationOffset = ( -9.228947, 0.000000, -40.695358 )
+					float(3) m_vRotationOffset = ( -0.000000, 0.000000, -0.000001 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		}
 	]
 }
 
@@ -249,8 +644,8 @@ CVanimGroup CVanimGroup_1
 		{
 			string m_Animationname = "naruto_run"
 			string m_Filepath = "models/naruto/naruto_animations.fbx"
-			int m_nStartframe = 20
-			int m_nEndframe = 29
+			int m_nStartframe = 19
+			int m_nEndframe = 30
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -271,6 +666,354 @@ CVanimGroup CVanimGroup_1
 				CActivity
 				{
 					string m_Name = "ACT_DOTA_RUN"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "naruto_stand"
+			string m_Filepath = "models/naruto/naruto_animations.fbx"
+			int m_nStartframe = 138
+			int m_nEndframe = 166
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = true
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_IDLE"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "naruto_die"
+			string m_Filepath = "models/naruto/naruto_animations.fbx"
+			int m_nStartframe = 300
+			int m_nEndframe = 333
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_DIE"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "naruto_attack_1"
+			string m_Filepath = "models/naruto/naruto_animations.fbx"
+			int m_nStartframe = 177
+			int m_nEndframe = 209
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_ATTACK"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "naruto_attack_2"
+			string m_Filepath = "models/naruto/naruto_animations.fbx"
+			int m_nStartframe = 220
+			int m_nEndframe = 250
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_ATTACK2"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "naruto_spell_1"
+			string m_Filepath = "models/naruto/naruto_animations.fbx"
+			int m_nStartframe = 96
+			int m_nEndframe = 118
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_CAST_ABILITY_1"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "naruto_cast_ulti"
+			string m_Filepath = "models/naruto/naruto_animations.fbx"
+			int m_nStartframe = 438
+			int m_nEndframe = 457
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_CAST_ABILITY_4"
 					int m_nWeight = 1
 				}
 			]
