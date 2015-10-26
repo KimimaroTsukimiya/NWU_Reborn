@@ -38,7 +38,8 @@ function ManaCost( keys )
 	if (current_mana - manacost_per_second) <= 0 then
 		caster:SetMana(1)
 		caster:RemoveAbility("madara_susano_active")
-		
+		caster:RemoveModifierByName("modifier_madara_susano")
+		caster:RemoveModifierByName("modifier_madara_susano_burn_trees")
 		Ability = caster:AddAbility("madara_susano")
 		Ability:SetAbilityIndex(1)
 		Ability:SetLevel(ability_level)

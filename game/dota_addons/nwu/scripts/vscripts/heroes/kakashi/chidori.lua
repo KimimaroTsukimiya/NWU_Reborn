@@ -10,6 +10,15 @@ function raikage_teleport( keys )
 	PrintTable(point)
 	FindClearSpaceForUnit( caster, point, false )
 end
+function ChannelChidori( keys )
+		local particle = ParticleManager:CreateParticle(keys.particle_name, PATTACH_ABSORIGIN, keys.caster) 
+		ParticleManager:SetParticleControlEnt(particle, 0, keys.caster, PATTACH_ABSORIGIN, "attach_chidori", keys.caster:GetAbsOrigin(), true)
+		keys.ability.chidori_cast_particle = particle
+end
+
+function RemoveChannelChidori(keys)
+	ParticleManager:DestroyParticle(keys.ability.chidori_cast_particle, true)
+end
 
 
 function StormBoltLaunch( keys )
@@ -34,8 +43,8 @@ function StormBoltLaunch( keys )
 	end
 
 	-- Return caster to the world
-	caster:RemoveModifierByName(modifier_caster)
-	caster:RemoveNoDraw()
+	ability:ApplyDataDrivenModifier(caster, caster,modifier_caster, {})
+	caster:AddNoDraw()
 	
 	-- Create tracking projectile
 	local bolt_projectile = {

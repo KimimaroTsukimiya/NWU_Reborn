@@ -305,6 +305,21 @@ CVattachmentList CVattachmentList_0
 					bool m_bRoot = false
 				}
 			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_chidori"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "bone_handR"
+					float(3) m_vTranslationOffset = ( 30.088810, 8.172312, -6.816841 )
+					float(3) m_vRotationOffset = ( 0.000003, -0.000005, 0.000007 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
 		}
 	]
 }
@@ -868,7 +883,7 @@ CVanimGroup CVanimGroup_1
 			[
 				CActivity
 				{
-					string m_Name = "ACT_DOTA_CAST_ABILITY_4"
+					string m_Name = "ACT_DOTA_CHANNEL_ABILITY_4"
 					int m_nWeight = 1
 				}
 			]
