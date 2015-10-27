@@ -1,0 +1,88 @@
+"sakura_inner_sakura"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	//"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"sakura_inner_sakura"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"particle"			"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
+		"particle"			"particles/status_fx/status_effect_gods_strength.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"80.0 80.0 80.0"
+	"AbilityDuration"				"20.0 20.0 20.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 150 200"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"gods_strength_damage"		"100 125 150"		
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"bonus_armor"		"6 9 12"		
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Sven.GodsStrength"
+			"Target"		"CASTER"
+		}
+
+		"FireEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
+			"EffectAttachType"	"follow_origin"
+			"Target"		"CASTER"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_sakura_inner_sakura"
+			"Target"		"CASTER"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_sakura_inner_sakura"
+		{
+			"IsBuff"		"1"
+			"IsPurgable"	"0"
+			"Duration"		"%AbilityDuration"
+
+			"StatusEffectName"	"particles/status_fx/status_effect_gods_strength.vpcf"
+			"StatusEffectPriority"	"10"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"	"%gods_strength_damage"
+			}
+		}
+	}
+}

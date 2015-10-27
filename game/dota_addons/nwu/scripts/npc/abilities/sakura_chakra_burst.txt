@@ -29,6 +29,11 @@
 			"var_type"				"FIELD_FLOAT"
 			"duration"			"3 4 5 6"
 		}
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"ms_bonus"			"500"
+		}
 
 	}
 
@@ -45,13 +50,27 @@
 	            "Function"          "gainMaxMoveSpeed"
 	            "Target"            "CASTER"
 	        }
+	        "ApplyModifier"
+	        {
+	        	"ModifierName"	"modifier_sakura_chakra_burst"
+	        	"Target" 		"CASTER"
+	        	"Duration"		"%duration"
+	        }
 	}
 
 
 	"Modifiers"
 	{
-		
+		"modifier_sakura_chakra_burst"
+		{
+			"IsBuff"	"1"
+			"Duration"	"%duration"
 
-	
+			"Properties"
+			{
+			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_bonus" 
+			}
+		}
+
 	}
 }
