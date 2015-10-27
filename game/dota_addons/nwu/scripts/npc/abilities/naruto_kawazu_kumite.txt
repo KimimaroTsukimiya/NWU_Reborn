@@ -1,0 +1,95 @@
+"naruto_kawazu_kumite"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"naruto_kawazu_kumite"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
+		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10"
+	"AbilityDuration"				"0.2 0.2 0.2 0.2"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+      "01"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "illusion_duration"         "20"
+      }
+      "02"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "illusion_outgoing_damage_percent"       "-75 -70 -60 -55"
+      }
+       "03"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "illusion_incoming_damage_percent"       "600 550 500 450 400"
+      }	
+       "04"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "strength_agility_bonus"                "10 20 30 40"
+      } 	
+      "05"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "duration"                            "5"
+      }   	
+	}
+
+	"OnSpellStart"
+  {
+    "ApplyModifier"
+    {
+      "ModifierName"  "modfiier_naruto_kawazu_kumite"
+      "Target"      "CASTER"
+    }
+    "RunScript"
+    {
+     "ScriptFile"      "heroes/naruto/kawazu_kumite.lua"
+      "Function"        "ConjureImage"
+    }
+  }
+
+    "Modifiers"
+    {
+     "modfiier_naruto_kawazu_kumite"
+    {
+      "IsBuff"    "1"
+      "Passive"    "0"
+
+      "Duration"  "%duration"
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%strength_agility_bonus"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%strength_agility_bonus" 
+      }
+    }
+	}
+	
+}
+
