@@ -1,0 +1,84 @@
+"itachi_tsukiyomi"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"					"ability_datadriven"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityTextureName"		"antimage_spell_shield"
+
+
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityDamage"					"120 190 260 330"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"slow_percent"				"10 18 26 34"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"slow_duration"				"1.5 2.0 2.5 3.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"1.0"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_itachi_tsukiyomi_stun"
+			"Target" 		"TARGET"
+			"Duration"		"%duration"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_itachi_tsukiyomi_stun"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+			"Duration"			"%stun_duration"
+
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED"        "MODIFIER_STATE_VALUE_ENABLED"
+			}
+
+			"OnDestroy"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_itachi_tsukiyomi_slow"
+					"Target" 		"TARGET"
+				}
+			}
+
+		}
+		"modifier_itachi_tsukiyomi_slow"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"0"
+			"Duration"			"%slow_duration"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%slow_percent"
+			}
+		
+		}
+	}
+}

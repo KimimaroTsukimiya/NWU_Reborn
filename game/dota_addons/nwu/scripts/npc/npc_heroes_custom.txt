@@ -290,7 +290,9 @@
 		{
 		  "override_hero"   "npc_dota_hero_antimage"
 		  "Model" 			"models/itachi/itachi.vmdl"
-		 // "Ability1"        "madara_fire_release"
+		  "Ability1"        "itachi_dust_crow_genjustsu"
+		  "Ability2"        "itachi_tsukiyomi"
+		  "Ability3"        "itachi_sharingan"
 		 // "Ability2"        "madara_wood_release" 
 		 // "Ability3"        "madara_susano" 
 		 // "Ability4"        "madara_meteor"
