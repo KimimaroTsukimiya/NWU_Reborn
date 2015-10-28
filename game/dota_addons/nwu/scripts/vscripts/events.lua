@@ -3,6 +3,8 @@
 
 -- item relevant functions which are fired on events
 require('items')
+-- music.lua, relevant functions to control the music each will player will listen to/not listen to
+require('music')
 
 
 -- Cleanup a player when they leave
@@ -20,11 +22,12 @@ end
 function GameMode:OnGameRulesStateChange(keys)
   DebugPrint("[BAREBONES] GameRules State Changed")
   DebugPrintTable(keys)
-
+  
   -- This internal handling is used to set up main barebones functions
   GameMode:_OnGameRulesStateChange(keys)
-
   local newState = GameRules:State_Get()
+  --This function controls the music on each gamestate
+  GameMode:PlayGameMusic(newState)
 end
 
 -- An NPC has spawned somewhere in game.  This includes heroes

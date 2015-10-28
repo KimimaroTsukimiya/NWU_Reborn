@@ -1,4 +1,4 @@
-"loading_screen"
+"for_nico"
 {
     "operator_stacks"
     {
@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/loading_screen.vsnd"
+                              "value0"        "sounds/for_nico.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }

@@ -1,4 +1,4 @@
-"game_sounds_hero_pick"
+"loading_screen"
 {
     "operator_stacks"
     {
@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/game_sounds_hero_pick.vsnd"
+                              "value0"        "sounds/loading_screen.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
