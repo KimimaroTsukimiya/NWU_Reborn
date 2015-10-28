@@ -1,0 +1,82 @@
+"guy_gouken_mastery"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"        "guy_gouken_mastery"
+
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "0"
+    "AbilityDuration"               "0"
+
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "0"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "0"
+
+
+     "precache"
+    {
+      "particle"  "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+      "particle"  "particles/generic_gameplay/generic_purge.vpcf"
+      "particle"  "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
+      "particle"  "particles/units/heroes/hero_razor/razor_base_attack_impact_b.vpcf"
+    }
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_FLOAT"
+            "bonus_damage_percentage" "100"
+        }
+        "02"
+        {
+            "var_type" "FIELD_FLOAT"
+            "chance"       "10 16 22 28"
+        }
+    }
+
+
+    "Modifiers"
+    {
+        "modifier_guy_gouken_mastery"
+        {
+            "Passive"                   "1"
+            "IsHidden"                  "1"
+            "IsPurgable"                "0"
+            
+           "OnAttackLanded"
+           {
+          "Random"
+          {
+            "Chance" "%chance"
+            "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+            "OnSuccess"
+            {
+              "RunScript"
+              {
+                "ScriptFile"  "heroes/guy/gouken_mastery.lua"
+                "Function"    "ApplyDoubleDamage"
+              }
+            }
+          }
+        }
+            
+        }
+    }
+
+}
