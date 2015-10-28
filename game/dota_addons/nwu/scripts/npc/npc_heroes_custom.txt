@@ -374,10 +374,10 @@
 		{
 		  "override_hero"   "npc_dota_hero_centaur"
 		  "Model" 			"models/gai/gai.vmdl"
-		  //"Ability1"        "sakura_earth_slam"
+		  "Ability1"        "guy_dynamic_entry"
 		  "Ability2"        "guy_power_of_youth" 
 		  "Ability3"        "guy_gouken_mastery" 
-		  //"Ability4"        "sakura_inner_sakura"
+		  "Ability4"        "guy_open_gates"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 		 "MagicalResistance"            "0"
 		"ModelScale"		"1.0"

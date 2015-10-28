@@ -50,7 +50,6 @@
         }
     }
 
-
     "Modifiers"
     {
         "modifier_guy_gouken_mastery"
@@ -58,7 +57,7 @@
             "Passive"                   "1"
             "IsHidden"                  "1"
             "IsPurgable"                "0"
-            
+        
            "OnAttackLanded"
            {
           "Random"

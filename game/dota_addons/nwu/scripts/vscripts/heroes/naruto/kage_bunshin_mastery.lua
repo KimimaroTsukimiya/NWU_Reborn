@@ -19,7 +19,11 @@ function naruto_kage_bunshin_mastery:OnSpellStart( event )
 end
 
 --------------------------------------------------------------------------------
- 
+ --[[
+	Author: LearningDave
+	Date: October, 27th 2015
+	Makes sure the target is an illusion of naruto's team //TODO MAKE SURE ILLUSION BELONGS TO NARUTO
+]]
 function naruto_kage_bunshin_mastery:CastFilterResultTarget( target )
 	local ability = self
 	local caster = ability:GetCaster()

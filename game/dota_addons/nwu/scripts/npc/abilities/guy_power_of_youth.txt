@@ -30,10 +30,7 @@
 
      "precache"
     {
-      "particle"  "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
-      "particle"  "particles/generic_gameplay/generic_purge.vpcf"
-      "particle"  "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
-      "particle"  "particles/units/heroes/hero_razor/razor_base_attack_impact_b.vpcf"
+
     }
 
     "AbilitySpecial"
@@ -53,10 +50,39 @@
             "var_type" "FIELD_FLOAT"
             "duration" "5"
         }
+        "04"
+        {
+            "var_type" "FIELD_FLOAT"
+            "bonus_attack_speed_start" "1"
+        }
+    }
+
+    "OnUpgrade"
+    {
+     "RemoveModifier"
+      {
+        "ModifierName"  "modifier_guy_power_of_youth_as_bonus"
+        "Target"     "CASTER"
+      }
+      "ApplyModifier"
+      {
+        "ModifierName"  "modifier_guy_power_of_youth_as_bonus"
+        "Target"     "CASTER"
+      }
     }
 
     "OnCreated"
     {
+      "RemoveModifier"
+      {
+        "ModifierName"  "modifier_guy_power_of_youth_as_bonus"
+        "Target"     "CASTER"
+      }
+      "ApplyModifier"
+      {
+        "ModifierName"  "modifier_guy_power_of_youth_as_bonus"
+        "Target"     "CASTER"
+      }
       "RunScript"
       {
         "ScriptFile"  "heroes/guy/power_of_youth.lua"
@@ -64,14 +90,12 @@
       }
     }
 
-
-
     "Modifiers"
     {
       "modifier_guy_power_of_youth"
       {
         "Passive" "1"
-        "Hidden"  "0"
+        "Hidden"  "1"
 
             "OnAttackLanded"
           {
@@ -80,6 +104,18 @@
               "ScriptFile"  "heroes/guy/power_of_youth.lua"
               "Function"    "power_of_youth"
             }
+          }
+      }
+
+      "modifier_guy_power_of_youth_as_bonus"
+      {
+        "Passive" "1"
+        "Hidden"  "0"
+        "IsBuff"  "1"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed_start"
           }
       }
     }

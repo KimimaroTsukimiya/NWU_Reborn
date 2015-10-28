@@ -1,4 +1,8 @@
--- Creates an Illusion, making use of the built in modifier_illusion
+--[[
+  Author: LearningDave
+  Date: October, 27th 2015
+  -- Creates an Illusion, making use of the built in modifier_illusion
+]]
 function ConjureImage( event )
  local target = event.target
  local caster = event.caster

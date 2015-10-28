@@ -1,0 +1,103 @@
+"guy_dynamic_entry"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"guy_dynamic_entry"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+				"particle"	"particles/generic_gameplay/generic_silence.vpcf"
+	}	
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"375"
+	"AbilityCastPoint"				"0.5 0.5 0.5"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityChannelTime"			"2.8 2.8 2.8"
+	"AbilityCooldown"				"30 24 18 12"
+
+	//Damage
+	"AbilityDamage"					"60 80 100 120"
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"70"		
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"miss_chance"					"20 28 36 44"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"duration"						"10"
+		}
+
+	}
+
+	"OnSpellStart"
+	{
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/guy/dynamic_entry.lua"
+			"Function"		"dynamic_entry"
+		}
+
+		"FireSound"
+		{
+				
+		}
+		
+		"DelayedAction"
+		{
+			"Delay"     "0.2"
+			"Action"    
+			{
+				"Damage"
+				{
+					"Target"		"TARGET"
+					"Type"			"DAMAGE_TYPE_PHYSICAL"
+					"Damage"		"%AbilityDamage"
+				}
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_guy_dynamic_entry_miss"
+					"Target" 		"TARGET"
+					"Duration"		"%duration"
+				}
+			}
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_guy_dynamic_entry_miss"
+		{
+			"IsDebuff"	"1"
+			"Duration"	"%duration"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MISS_PERCENTAGE" "%miss_chance"
+			}
+		}
+	}
+}

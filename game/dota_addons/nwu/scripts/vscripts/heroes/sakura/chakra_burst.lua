@@ -1,3 +1,8 @@
+--[[
+	Author: LearningDave
+	Date: October, 27th 2015
+	Does apply the max ms to the caster for a given duration
+]]
 function gainMaxMoveSpeed( keys )
 	local caster = keys.caster
 	local ability = keys.ability

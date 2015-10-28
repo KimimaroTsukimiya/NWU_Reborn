@@ -1,0 +1,89 @@
+"guy_open_gates"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	//"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"guy_open_gates"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"particle"			"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
+		"particle"			"particles/status_fx/status_effect_gods_strength.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"90"
+	"AbilityDuration"				"30" //TODO
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125 90 175"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"bonus_agility"		"20 35 50"		
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"bonus_ms"			"10 15 20"		
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Sven.GodsStrength"
+			"Target"		"CASTER"
+		}
+
+		"FireEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
+			"EffectAttachType"	"follow_origin"
+			"Target"		"CASTER"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_guy_open_gates"
+			"Target"		"CASTER"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_guy_open_gates"
+		{
+			"IsBuff"		"1"
+			"IsPurgable"	"0"
+			"Duration"		"%AbilityDuration"
+
+			"StatusEffectName"	"particles/status_fx/status_effect_gods_strength.vpcf"
+			"StatusEffectPriority"	"10"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%bonus_agility"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%bonus_ms"
+			}
+		}
+	}
+}
