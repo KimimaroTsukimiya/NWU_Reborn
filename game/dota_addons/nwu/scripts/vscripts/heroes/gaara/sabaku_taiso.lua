@@ -23,7 +23,6 @@ function launch_earthquake( event )
 		bHasFrontalCone		= true,
 		bReplaceExisting	= false,
 		iUnitTargetTeam		= DOTA_UNIT_TARGET_TEAM_ENEMY,
-		iUnitTargetFlags	= DOTA_UNIT_TARGET_FLAG_NONE,
 		iUnitTargetType		= DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_CREEP + DOTA_UNIT_TARGET_MECHANICAL,
 	--	fExpireTime			= ,
 		bDeleteOnHit		= false,

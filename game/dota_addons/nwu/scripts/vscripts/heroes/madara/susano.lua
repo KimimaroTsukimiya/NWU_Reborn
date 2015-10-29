@@ -58,7 +58,7 @@ function BurnEnemies( keys )
 	local ability = keys.ability
 	local burn_radius = keys.ability:GetLevelSpecialValueFor("burn_radius", keys.ability:GetLevel() - 1 )
 	local burn_damage = keys.ability:GetLevelSpecialValueFor("burn_damage", keys.ability:GetLevel() - 1 )
-	local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, burn_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+	local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, burn_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, FIND_ANY_ORDER, false)
 		if targetEntities then
 			for _,oneTarget in pairs(targetEntities) do
 				local damage_table = {}
@@ -104,7 +104,7 @@ function BurnTrees( keys )
  						
           				Timers:CreateTimer( function()
          
-          						local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), origin, nil, tree_vision, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+          						local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), origin, nil, tree_vision, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, FIND_ANY_ORDER, false)
 							    if targetEntities then
 							      for _,oneTarget in pairs(targetEntities) do
 							        local modfifier = oneTarget:FindModifierByName("burning_tree_dot")

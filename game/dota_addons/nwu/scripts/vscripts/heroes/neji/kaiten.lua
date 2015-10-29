@@ -9,7 +9,7 @@ function apply_stun( keys )
 	local ability_index = keys.caster:FindAbilityByName("neji_byakugan"):GetAbilityIndex()
     local ability = keys.caster:GetAbilityByIndex(ability_index)
     local ability_level = ability:GetLevel()
-    local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), keys.caster:GetAbsOrigin(), nil, aoe_target, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+    local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), keys.caster:GetAbsOrigin(), nil, aoe_target, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, FIND_ANY_ORDER, false)
     duration = 0.75 * ability_level
 	if duration > 0 then
 		Timers:CreateTimer( 1, function()

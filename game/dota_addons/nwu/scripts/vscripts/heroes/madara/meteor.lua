@@ -40,7 +40,7 @@ function meteorExplode(keys)
     local tree_vision = wood_ability:GetLevelSpecialValueFor("tree_vision", wood_ability_level)
     local tree_burn_duration = wood_ability:GetLevelSpecialValueFor("tree_burn_duration", wood_ability_level)
 	local nearby_enemy_units = FindUnitsInRadius(keys.caster:GetTeam(), target_point, nil, aoe, DOTA_UNIT_TARGET_TEAM_ENEMY,
-		DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+		DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, FIND_ANY_ORDER, false)
 
 	for i, individual_unit in ipairs(nearby_enemy_units) do
 			
@@ -67,7 +67,7 @@ function meteorExplode(keys)
 
           				Timers:CreateTimer( function()
          
-          						local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), origin, nil, tree_vision, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+          						local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), origin, nil, tree_vision, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, FIND_ANY_ORDER, false)
 							    if targetEntities then
 							      for _,oneTarget in pairs(targetEntities) do
 							        local modfifier = oneTarget:FindModifierByName("burning_tree_dot")

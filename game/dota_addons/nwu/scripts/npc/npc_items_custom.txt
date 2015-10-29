@@ -2361,6 +2361,7 @@
     "ItemCost"            "175"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
+    "ItemPurchasable" "0"
     "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
@@ -2368,7 +2369,6 @@
     "ItemAliases"           "ring of protection;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
     "SideShop" "0"  
     "SecretShop" "0"
     "HomeShop"  "0"
@@ -2417,6 +2417,7 @@
     "ItemCost"            "175"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
+    "ItemPurchasable" "0"
     "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
@@ -2424,7 +2425,6 @@
     "ItemAliases"           "ring of protection;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
     "SideShop" "0"  
     "SecretShop" "0"
     "HomeShop"  "0"
@@ -2472,18 +2472,15 @@
     //-------------------------------------------------------------------------------------------------------------
     "ItemCost"            "175"
     "ItemInitialCharges"      "0"
+    "ItemPurchasable" "0"
     "ItemDroppable"         "1"
-    "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "ItemAliases"           "ring of protection;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
-    "SideShop" "0"  
-    "SecretShop" "0"
-    "HomeShop"  "0"
+     "ItemSellable"          "1"
     
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
@@ -2529,18 +2526,14 @@
     "ItemCost"            "175"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
-    "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
+    "ItemPurchasable" "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "ItemAliases"           "ring of protection;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-      
-      "SideShop" "0"  
-    "SecretShop" "0"
-    "HomeShop"  "0"
-
+     "ItemSellable"          "1"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
@@ -2585,17 +2578,14 @@
     "ItemCost"            "175"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
-    "ItemSellable"          "1"
+    "ItemPurchasable" "0"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "ItemAliases"           "ring of protection;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
-    "SideShop" "0"  
-    "SecretShop" "0"
-    "HomeShop"  "0"
+    "ItemSellable"          "1"
     
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
@@ -2641,6 +2631,7 @@
     "ItemCost"            "175"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
+    "ItemPurchasable" "0"
     "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
@@ -2648,7 +2639,6 @@
     "ItemAliases"           "ring of protection;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
     "SideShop" "0"  
     "SecretShop" "0"
     "HomeShop"  "0"
@@ -2697,8 +2687,9 @@
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
+    "ItemPurchasable" "0"
     "ItemRequiresCharges"     "0"
-
+    "ItemSellable"          "1"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "ItemAliases"           "ring of protection;armor"
@@ -2753,12 +2744,12 @@
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
+    "ItemPurchasable" "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "ItemAliases"           "ring of protection;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
     "SideShop" "0"  
     "SecretShop" "0"
     "HomeShop"  "0"
@@ -5195,7 +5186,7 @@
 	  "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
 	  "ItemQuality"         "rare"  
 	  "ItemAliases"         "dagon 2"
-	  
+	  "ItemPurchasable" "0"
 	  "UpgradesItems"         "item_karites_touch_2;item_karites_touch_3;item_karites_touch_4"
 	  "UpgradeRecipe"         "item_recipe_karites_touch"
 	  
@@ -5306,7 +5297,7 @@
 	  "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
 	  "ItemQuality"         "rare"  
 	  "ItemAliases"         "dagon 3;"
-	  
+	  "ItemPurchasable" "0"
 	  "UpgradesItems"         "item_karites_touch_3;item_karites_touch_4"
 	  "UpgradeRecipe"         "item_recipe_karites_touch"
 	  
@@ -5417,7 +5408,7 @@
 	  "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
 	  "ItemQuality"         "rare"  
 	  "ItemAliases"         "dagon 4"
-	  
+	  "ItemPurchasable" "0"
 	  "UpgradesItems"         "item_karites_touch_4"
 	  "UpgradeRecipe"         "item_recipe_karites_touch"
 	  
@@ -9997,6 +9988,7 @@
 	    "ItemCost"                "0"
 	    "ItemInitialCharges"      "0"
 	    "ItemDroppable"           "0"
+	    "ItemPurchasable"         "0"
 	    "ItemSellable"            "1"
 	    "ItemRequiresCharges"     "0"
 	    "ItemShareability"        "ITEM_NOT_SHAREABLE"

@@ -30,7 +30,7 @@
   "ItemShopTags"          "damage;int;str;agi;hard_to_tag"
   "ItemQuality"         "rare"  
   "ItemAliases"         "dagon 2"
-  
+  "ItemPurchasable" "0"
   "UpgradesItems"         "item_karites_touch_2;item_karites_touch_3;item_karites_touch_4"
   "UpgradeRecipe"         "item_recipe_karites_touch"
   

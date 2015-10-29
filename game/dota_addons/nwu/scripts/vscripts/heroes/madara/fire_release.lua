@@ -94,7 +94,7 @@ function ReleaseFire( keys )
           				Timers:CreateTimer( function()
           						
 
-          						local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), origin, nil, ability.tree_width, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+          						local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), origin, nil, ability.tree_width, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, FIND_ANY_ORDER, false)
 							    if targetEntities then
 							      for _,oneTarget in pairs(targetEntities) do
 							        local modfifier = oneTarget:FindModifierByName("burning_tree_dot")

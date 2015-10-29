@@ -13,8 +13,9 @@
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
+    "ItemPurchasable" "0"
     "ItemRequiresCharges"     "0"
-
+    "ItemSellable"          "1"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "ItemAliases"           "ring of protection;armor"

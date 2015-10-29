@@ -35,8 +35,7 @@ function Precache( context )
   -- Abilities can also be precached in this way despite the name
 
   --PrecacheItemByNameSync("item_example_item", context)
-  PrecacheItemByNameSync("item_dagon", context)
-  PrecacheItemByNameSync("item_energy_boots", context)
+
 
   -- Stuff
   PrecacheResource("particle_folder", "particles/hero", context)

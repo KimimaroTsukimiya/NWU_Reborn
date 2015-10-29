@@ -13,6 +13,7 @@
     "ItemCost"            "175"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
+    "ItemPurchasable" "0"
     "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
@@ -20,7 +21,6 @@
     "ItemAliases"           "ring of protection;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
     "SideShop" "0"  
     "SecretShop" "0"
     "HomeShop"  "0"

@@ -267,17 +267,7 @@
   "item_recipe_glimmer_cape"      "REMOVE"  
   "item_glimmer_cape"     "REMOVE"  
 
-"item_forehead_protector_sunagakure"  "REMOVE"
-"item_forehead_protector_konoha"  "REMOVE"
-"item_forehead_protector_kumogakure"  "REMOVE"
-"item_forehead_protector_otogakure"  "REMOVE"
-"item_forehead_protector_yugakure_scarred"  "REMOVE"
-"item_forehead_protector_iwagakure"  "REMOVE"
-"item_forehead_protector_kirigakure_scarred"  "REMOVE"
-"item_forehead_protector_konoha_scarred"  "REMOVE"
-"item_karites_touch_2"      "REMOVE"
-"item_karites_touch_3"      "REMOVE"
-"item_karites_touch_4"      "REMOVE"
+
 
 "item_spellthiefs_edge"      "REMOVE"
 

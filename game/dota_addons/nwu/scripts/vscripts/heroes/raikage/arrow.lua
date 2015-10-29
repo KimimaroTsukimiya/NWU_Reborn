@@ -29,7 +29,6 @@ function LaunchArrow( keys )
         bHasFrontalCone = false,
         bReplaceExisting = false,
         iUnitTargetTeam = DOTA_UNIT_TARGET_TEAM_ENEMY,
-        iUnitTargetFlags = DOTA_UNIT_TARGET_FLAG_NONE,
         iUnitTargetType = DOTA_UNIT_TARGET_HERO,
         fExpireTime = GameRules:GetGameTime() + 10.0,
 		bDeleteOnHit = true,
