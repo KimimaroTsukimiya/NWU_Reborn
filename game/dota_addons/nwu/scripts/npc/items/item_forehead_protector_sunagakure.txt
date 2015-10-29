@@ -7,7 +7,6 @@
     "ItemQuality"    "component"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
-
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
     "ItemCost"            "175"
@@ -15,12 +14,15 @@
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
+
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "ItemAliases"           "ring of protection;armor"
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
-    
+    "SideShop" "0"  
+    "SecretShop" "0"
+    "HomeShop"  "0"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually

@@ -26,22 +26,14 @@ function Precache( context )
   --PrecacheResource("particle", "particles/econ/generic/generic_aoe_explosion_sphere_1/generic_aoe_explosion_sphere_1.vpcf", context)
   --PrecacheResource("particle_folder", "particles/test_particle", context)
 
-  -- Models can also be precached by folder or individually
-  -- PrecacheModel should generally used over PrecacheResource for individual models
-  PrecacheResource("model_folder", "particles/heroes/antimage", context)
-  PrecacheResource("model", "particles/heroes/viper/viper.vmdl", context)
-  PrecacheModel("models/heroes/viper/viper.vmdl", context)
-
   -- Sounds can precached here like anything else
-  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts", context)
-  PrecacheResource("soundfile", "soundevents/game_sounds_hero_pick.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/hero_pick.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/loading_screen.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/for_nico.vsndevts", context)
 
   -- Entire items can be precached by name
   -- Abilities can also be precached in this way despite the name
-  PrecacheItemByNameSync("example_ability", context)
+
   --PrecacheItemByNameSync("item_example_item", context)
   PrecacheItemByNameSync("item_dagon", context)
   PrecacheItemByNameSync("item_energy_boots", context)

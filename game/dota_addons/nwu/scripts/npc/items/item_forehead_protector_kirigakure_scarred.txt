@@ -21,6 +21,10 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     
+    "SideShop" "0"  
+    "SecretShop" "0"
+    "HomeShop"  "0"
+    
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually

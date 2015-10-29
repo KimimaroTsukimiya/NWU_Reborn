@@ -22,7 +22,6 @@ end
 function GameMode:OnGameRulesStateChange(keys)
   DebugPrint("[BAREBONES] GameRules State Changed")
   DebugPrintTable(keys)
-  
   -- This internal handling is used to set up main barebones functions
   GameMode:_OnGameRulesStateChange(keys)
   local newState = GameRules:State_Get()
