@@ -3,7 +3,9 @@
 
 -- Set this to true if you want to see a complete debug output of all events/processes done by barebones
 -- You can also change the cvar 'barebones_spew' at any time to 1 or 0 for output/no output
-BAREBONES_DEBUG_SPEW = true 
+BAREBONES_DEBUG_SPEW = false
+--Set this to false to deactive cheat inputs(cheats.lua) and true to activate cheat inputs 
+CHEATS_ACTIVATED = true 
 
 if GameMode == nil then
     DebugPrint( '[BAREBONES] creating barebones game mode' )
@@ -118,7 +120,7 @@ function GameMode:InitGameMode()
 
   -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
   Convars:RegisterCommand( "command_example", Dynamic_Wrap(GameMode, 'ExampleConsoleCommand'), "A console command example", FCVAR_CHEAT )
-
+  ListenToGameEvent('player_chat', Dynamic_Wrap(GameMode, 'OnPlayerChat'), self)
 
 
   DebugPrint('[BAREBONES] Done loading Barebones gamemode!\n\n')

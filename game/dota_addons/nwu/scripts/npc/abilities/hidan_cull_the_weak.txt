@@ -1,0 +1,130 @@
+"hidan_cull_the_weak"
+
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"hidan_cull_the_weak"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
+		"particle"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+		"particle"			"particles/addons_gameplay/pit_lava_blast.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"275 300 325 350"
+	"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"19 16 13 10"
+	"AbilityDuration"				"4"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"70 100 130 160"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			 "FIELD_FLOAT"
+			"pull_radius_start" "110.0"
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"pull_radius_end"		"110"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"creep_damage"		"140 200 260 320"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"hp_percentage_cost"		"15"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"ms_slow_percentage"		"15 20 25 30"
+		}
+		"06"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"pull_speed"		"1000"
+		}
+		
+	}
+
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
+		"particle"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+		"particle"			"particles/addons_gameplay/pit_lava_blast.vpcf"
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"			"Hero_Mirana.ArrowCast"
+			"Target"				"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"			"heroes/hidan/cull_the_weak.lua"
+			"Function"				"initiateValues"
+			"Target"				"POINT"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"			"heroes/hidan/cull_the_weak.lua"
+			"Function"				"release_pull"
+			"pullRange"				"%AbilityCastRange"
+			"fire_particle"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+			"Target"				"POINT"
+		}
+		
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/hidan/cull_the_weak.lua"
+			"Function"		"gatherTargets"
+			"Target"		"TARGET"
+		}
+	}
+
+	"OnProjectileFinish"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/hidan/cull_the_weak.lua"
+			"Function"		"cull_the_weak"
+			"Target"		"POINT"
+		}
+
+	}
+}

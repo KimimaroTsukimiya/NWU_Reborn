@@ -56,7 +56,7 @@ function GameMode:PlayGameMusicForState7(PlayerCount)
 		if PlayerResource:IsValidPlayer(i) then
 			local player = PlayerResource:GetPlayer(i)
 			player:StopSound("hero_pick")
-			EmitSoundOnClient("for_nico", player)
+
 		end
 	end
 end

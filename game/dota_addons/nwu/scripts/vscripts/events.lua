@@ -5,8 +5,11 @@
 require('items')
 -- music.lua, relevant functions to control the music each will player will listen to/not listen to
 require('music')
-
-
+require('utilities')
+--cheats.lua, includes functions which listen to chat inputs of the players
+if CHEATS_ACTIVATED then
+  require('cheats')
+end
 -- Cleanup a player when they leave
 function GameMode:OnDisconnect(keys)
   DebugPrint('[BAREBONES] Player Disconnected ' .. tostring(keys.userid))
@@ -99,6 +102,8 @@ function GameMode:OnAbilityUsed(keys)
   local player = EntIndexToHScript(keys.PlayerID)
   local abilityname = keys.abilityname
 end
+
+
 
 -- A non-player entity (necro-book, chen creep, etc) used an ability
 function GameMode:OnNonPlayerUsedAbility(keys)

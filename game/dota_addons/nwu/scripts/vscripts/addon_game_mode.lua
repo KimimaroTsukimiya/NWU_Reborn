@@ -7,6 +7,7 @@ require('libraries/utils')
 require('libraries/animations')
 
 
+
 function Precache( context )
 --[[
   This function is used to precache resources/units/items/abilities that will be needed
@@ -29,7 +30,6 @@ function Precache( context )
   -- Sounds can precached here like anything else
   PrecacheResource("soundfile", "soundevents/hero_pick.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/loading_screen.vsndevts", context)
-  PrecacheResource("soundfile", "soundevents/for_nico.vsndevts", context)
 
   -- Entire items can be precached by name
   -- Abilities can also be precached in this way despite the name
@@ -68,4 +68,5 @@ function Activate()
   GameRules.heroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt") 
   GameRules.GameMode = GameMode()
   GameRules.GameMode:InitGameMode()
+
 end
