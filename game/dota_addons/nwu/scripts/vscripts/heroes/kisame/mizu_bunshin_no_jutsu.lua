@@ -12,6 +12,7 @@ function ConjureImage( event )
 
  -- handle_UnitOwner needs to be nil, else it will crash the game.
  local illusion = CreateUnitByName(unit_name, origin, true, caster, nil, caster:GetTeamNumber())
+ PrintTable(illusion)
  illusion:SetPlayerID(caster:GetPlayerID())
  illusion:SetControllableByPlayer(player, true)
 

@@ -5049,7 +5049,7 @@
 	  // General
 	  //-------------------------------------------------------------------------------------------------------------
 	  "BaseClass"           "item_datadriven"
-	  "ID"              "1260"  
+	  "ID"              "9384"  
 	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 	  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -5643,6 +5643,87 @@
 	      }
 	    }
 	  }
+	
+	"item_kunai"
+	{
+	  // General
+	  //-------------------------------------------------------------------------------------------------------------
+	  "BaseClass"           "item_datadriven"
+	  "ID"              "9838"  
+	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_TREE"
+	  "Model"             "models/props_gameplay/red_box.vmdl" 
+	  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+	  "AbilityTextureName"      "item_kunai"
+	  "FightRecapLevel"       "1"
+	  
+	  // Stats    
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilityCastRange"        "100"
+	  "AbilityCastPoint"        "0.0"
+	  "AbilityCooldown"       "5.0"
+	  "AbilityManaCost"       "180"
+	  
+	  "ItemBaseLevel"         "1"
+	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	  
+	  // Item Info
+	  //-------------------------------------------------------------------------------------------------------------
+	  "ItemCost"            "225"
+	  "ItemShopTags"         ""
+	  "ItemQuality"         "component"  
+	  "ItemAliases"         "quelling blade;"
+	
+	  
+	
+	   "precache"
+	    {
+	
+	    }
+	
+	  "AbilitySpecial"
+	  {
+	     "01"
+	      {
+	        "var_type"            "FIELD_FLOAT"
+	        "bonus_damage_melee"        "32.0"
+	      }
+	       "02"
+	      {
+	        "var_type"            "FIELD_FLOAT"
+	        "bonus_damage_range"        "12.0"
+	      }
+	  }
+	  
+	  "OnSpellStart"
+	  {
+	    "RunScript"
+	    {
+	      "ScriptFile"    "items/kunai.lua"
+	      "Function"      "cutTree"
+	    }
+	  }
+	  
+	  "Modifiers"
+	  {
+	    "modifier_item_dagon_datadriven"
+	    {
+	      "Passive"     "1"
+	      "IsHidden"      "1"
+	      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+	      
+	      "OnAttackLanded"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "items/kunai.lua"
+	          "Function"    "kunaiBuff"
+	          "Target"      "TARGET"
+	        }
+	      }
+	    }
+	  }
+	}
 	
 	"item_kurosawa"
 	  {

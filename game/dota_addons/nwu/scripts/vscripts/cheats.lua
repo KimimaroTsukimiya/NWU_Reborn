@@ -22,10 +22,6 @@ function GameMode:OnPlayerChat(keys)
 	local command = input[1]
 	if CHEAT_CODES[command] then
 		CHEAT_CODES[command](input[2])
-	elseif DEBUG_CODES[command] then
-        DEBUG_CODES[command]()
-    elseif TEST_CODES[command] then
-        TEST_CODES[command](input[2], input[3], input[4], playerID)
     end        
 end
 --[[Author: LearningDave
@@ -73,7 +69,6 @@ function GameMode:Wtf()
         Timers:CreateTimer( function()
             for i=0, hero:GetAbilityCount()-1 do 
                 if  hero:GetAbilityByIndex(i) ~= nil then
-                    print(i)
                     hero:GetAbilityByIndex(i):EndCooldown()
                 end
             end

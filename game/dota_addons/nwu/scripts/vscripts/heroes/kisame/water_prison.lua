@@ -16,8 +16,7 @@ function ModelSwapStart( keys )
 	-- Sets the new model and projectile
 	caster:SetOriginalModel(model)
 
-	-- Sets the new attack type
-	caster:SetAttackCapability(DOTA_UNIT_CAP_RANGED_ATTACK)
+
 end
 --[[Author LearningDave
 	Date october, 9th 2015
