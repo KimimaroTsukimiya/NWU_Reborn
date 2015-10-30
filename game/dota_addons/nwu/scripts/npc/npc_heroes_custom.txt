@@ -236,8 +236,7 @@
 		{
 		  "override_hero"   "npc_dota_hero_ogre_magi"
 		  "Model" 			"models/madara/madara.vmdl"
-		  //"Ability1"        "madara_fire_release"
-		  "Ability1"        "hidan_cull_the_weak"
+		  "Ability1"        "madara_fire_release"
 		  "Ability2"        "madara_wood_release" 
 		  "Ability3"        "madara_susano" 
 		  "Ability4"        "madara_meteor"

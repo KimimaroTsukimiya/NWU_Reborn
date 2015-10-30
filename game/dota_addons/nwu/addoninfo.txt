@@ -1,18 +1,15 @@
 "AddonInfo"
 {
-  "TeamCount" "10"
-  "maps"      "nwu"
+"TeamCount" "10"
+  "maps"      "nwu dota"
   "IsPlayable"  "1"
   "nwu"
   {
           "MaxPlayers"                    "10"
   }
-//  "desert_duo"
-//  {
-//          "MaxPlayers"                    "10"
-//  }
-//  "forest_solo"
-//  {
-//          "MaxPlayers"                    "10"
-//  }
+  "dota"
+  {
+          "MaxPlayers"                    "8"
+  }
 }
+
