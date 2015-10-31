@@ -84,7 +84,7 @@
 				"ApplyModifier"
 				{
 					"Target" 		"TARGET"
-					"ModifierName"	"modifier_hoof_stomp"
+					"ModifierName"	"modifier_sakura_earth_slam"
 				}
 			}
 		}		
@@ -92,7 +92,7 @@
 
 	"Modifiers"
 	{
-		"modifier_hoof_stomp"
+		"modifier_sakura_earth_slam"
 		{
 			"IsDebuff"	"1"
 			"Duration"	"%stun_duration"

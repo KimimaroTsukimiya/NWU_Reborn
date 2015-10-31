@@ -124,7 +124,6 @@
                 {
                     "ScriptFile"            "heroes/madara/susano.lua"
                     "Function"              "SusanoStart"
-                    //"particle_name"           "models/kisame_new/kisame_samehada.vmdl"
                     "projectile_model"      "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
                 }
 
