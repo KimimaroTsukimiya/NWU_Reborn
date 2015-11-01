@@ -293,6 +293,7 @@
 		  "Ability1"        "itachi_dust_crow_genjustsu"
 		  "Ability2"        "itachi_tsukiyomi"
 		  "Ability3"        "itachi_sharingan"
+		  "Ability4"        "itachi_amateratsu"
 		 // "Ability2"        "madara_wood_release" 
 		 // "Ability3"        "madara_susano" 
 		 // "Ability4"        "madara_meteor"

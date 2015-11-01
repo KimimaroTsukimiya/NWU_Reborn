@@ -1,0 +1,79 @@
+"itachi_amateratsu"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"					"ability_datadriven"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	//"AbilityTextureName"		"antimage_spell_shield"
+
+
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_factor"				"0.06 0.08 0.1"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage"					"20 25 30"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"10"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_itachi_amateratsu"
+			"Target" 		"TARGET"
+			"Duration"		"%duration"
+		}
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/itachi/amateratsu.lua"
+			"Function"		"initialize"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_itachi_amateratsu"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+
+			"OnTakeDamage"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/itachi/amateratsu.lua"
+					"Function"		"save_damage"
+				}
+			}
+
+			"ThinkInterval"  "1.0"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/itachi/amateratsu.lua"
+					"Function"		"deal_dps_damage"
+				}
+			}
+
+		}
+	}
+}
