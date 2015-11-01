@@ -320,7 +320,8 @@
 		{
 		  "override_hero"   "npc_dota_hero_dragon_knight"
 		  "Model" 			"models/naruto/naruto.vmdl"
-		  "Ability1"        "naruto_kage_bunshin_rasengan"
+		  //"Ability1"        "naruto_kage_bunshin_rasengan"
+		  "Ability1"        "hidan_cull_the_weak"
 		  "Ability2"        "naruto_kawazu_kumite" 
 		  "Ability3"        "naruto_kage_bunshin_mastery" 
 		  "Ability4"        "naruto_rasenshuriken"

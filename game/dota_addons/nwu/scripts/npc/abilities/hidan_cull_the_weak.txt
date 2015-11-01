@@ -44,7 +44,7 @@
 		"01"
 		{
 			"var_type"			 "FIELD_FLOAT"
-			"pull_radius_start" "110.0"
+			"pull_radius_start" "20.0"
 		}
 		"02"
 		{
@@ -64,12 +64,22 @@
 		"05"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"ms_slow_percentage"		"15 20 25 30"
+			"ms_slow_percentage"		"-15 -20 -25 -30"
 		}
 		"06"
 		{
 			"var_type"			"FIELD_INTEGER"
 			"pull_speed"		"1000"
+		}
+		"07"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"hero_damage"		"70 100 130 160"
+		}
+		"07"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"range"				"275 300 325 350"
 		}
 		
 	}
@@ -83,11 +93,6 @@
 
 	"OnSpellStart"
 	{
-		"FireSound"
-		{
-			"EffectName"			"Hero_Mirana.ArrowCast"
-			"Target"				"CASTER"
-		}
 
 		"RunScript"
 		{
@@ -100,15 +105,21 @@
 		{
 			"ScriptFile"			"heroes/hidan/cull_the_weak.lua"
 			"Function"				"release_pull"
-			"pullRange"				"%AbilityCastRange"
-			"fire_particle"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+			"pullRange"				"AbilityCastRange"
 			"Target"				"POINT"
 		}
-		
+
+		"RunScript"
+		{
+			"ScriptFile"			"heroes/hidan/cull_the_weak.lua"
+			"Function"				"health_cost"
+		}
+
 	}
 
 	"OnProjectileHitUnit"
 	{
+		"DeleteOnHit"		"0"
 		"RunScript"
 		{
 			"ScriptFile"	"heroes/hidan/cull_the_weak.lua"
@@ -117,14 +128,35 @@
 		}
 	}
 
+
 	"OnProjectileFinish"
 	{
 		"RunScript"
 		{
-			"ScriptFile"	"heroes/hidan/cull_the_weak.lua"
-			"Function"		"cull_the_weak"
-			"Target"		"POINT"
+			"ScriptFile"			"heroes/hidan/cull_the_weak.lua"
+			"Function"				"cull_the_weak"
+			"Target"				"POINT"
+			"move_slow_modifier"	"modifier_hidan_cull_the_weak_ms_slow"	
 		}
 
+	}
+
+
+	"Modifiers"
+	{
+		"modifier_hidan_cull_the_weak_ms_slow"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+	
+			//"EffectName"		"particle_name"
+			//"EffectAttachType"	"follow_origin"
+	
+			"Properties"
+			{
+			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow_percentage" 
+			}
+		}
 	}
 }
