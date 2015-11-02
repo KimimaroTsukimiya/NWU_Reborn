@@ -85,6 +85,8 @@ function GameMode:Wtf()
     else
         GameRules:SendCustomMessage("Cheat disabled!", 0, 0)
     end
+    hero:SetBaseManaRegen(1000)
+
 end
 --[[Author: LearningDave
   Date: october, 30th 2015.
