@@ -95,3 +95,19 @@ function apply_circle_modifier( keys )
 		keys.ability:ApplyDataDrivenModifier(keys.caster, keys.caster, "modifier_hidan_in_circle", {Duration = 1})
 	end
 end
+--[[Author LearningDave
+	Date november, 2th 2015
+	Adds Self Pain to Hidan'S abilities
+]]
+function addSelfPainAbility( keys )
+	keys.caster:AddAbility("hidan_self_pain")
+	local ability_index = keys.caster:FindAbilityByName("hidan_self_pain"):GetAbilityIndex()
+    keys.caster:GetAbilityByIndex(ability_index):SetLevel(keys.ability:GetLevel())
+end
+--[[Author LearningDave
+	Date november, 2th 2015
+	Removes Self Pain from Hidan'S abilities
+]]
+function removeSelfPain( keys )
+	keys.caster:RemoveAbility("hidan_self_pain")
+end

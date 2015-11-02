@@ -412,10 +412,9 @@
 	  	  "Ability1"        "hidan_cull_the_weak"
 		  "Ability2"        "hidan_taunt" 
 		  "Ability3"        "hidan_jashins_blessing" 
-		  "Ability4"        "hidan_self_pain"
-		  "Ability5"        "hidan_death_possession_blood"
+		  "Ability4"        "hidan_death_possession_blood"
+		  "Ability5"        ""
 		  "Ability6"        ""
-
 		    "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		 "MagicalResistance"            "0"
 		 "ModelScale"		"1.0"

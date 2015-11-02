@@ -105,6 +105,12 @@
 			"dummy_aura"		"modifier_hidan_circle"
 		}
 
+		"RunScript"
+		{
+			"ScriptFile"		"heroes/hidan/death_possession_blood.lua"
+			"Function"			"addSelfPainAbility"
+		}
+
 	}
 
 	"Modifiers"
@@ -154,6 +160,11 @@
 				{
 					"ScriptFile"	"heroes/hidan/death_possession_blood.lua"
 					"Function"		"ModelSwapEnd"
+				}
+				"RunScript"
+				{
+					"ScriptFile"		"heroes/hidan/death_possession_blood.lua"
+					"Function"			"removeSelfPain"
 				}
 			}
 		}
