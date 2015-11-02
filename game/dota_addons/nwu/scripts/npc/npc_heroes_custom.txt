@@ -212,6 +212,7 @@
 		  "Ability2"        "kakashi_sharingan" 
 		  "Ability3"        "kakashi_bunshin" 
 		  "Ability4"        "kakashi_chidori"
+		  "Ability5"        ""
 
 		  "MagicalResistance"            "0"
 		
@@ -240,6 +241,7 @@
 		  "Ability2"        "madara_wood_release" 
 		  "Ability3"        "madara_susano" 
 		  "Ability4"        "madara_meteor"
+		  "Ability5"        ""
 
 		  "MagicalResistance"            "0"
 		
@@ -412,6 +414,7 @@
 		  "Ability3"        "hidan_jashins_blessing" 
 		  "Ability4"        "hidan_self_pain"
 		  "Ability5"        "hidan_death_possession_blood"
+		  "Ability6"        ""
 
 		    "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		 "MagicalResistance"            "0"
