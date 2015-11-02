@@ -320,7 +320,7 @@
 		{
 		  "override_hero"   "npc_dota_hero_dragon_knight"
 		  "Model" 			"models/naruto/naruto.vmdl"
-		  "Ability1"        "naruto_kage_bunshin_rasengan"
+		 "Ability1"        "naruto_kage_bunshin_rasengan"
 		  "Ability2"        "naruto_kawazu_kumite" 
 		  "Ability3"        "naruto_kage_bunshin_mastery" 
 		  "Ability4"        "naruto_rasenshuriken"
@@ -399,6 +399,20 @@
 	  	  "Village"			"konoha"
 		}
 
+		"npc_dota_hero_doom_bringer" //hidan
+		{
+		  "override_hero"   "npc_dota_hero_doom_bringer"
+	 	  "ItemSlots"
+	  	  { }
+
+	  	  "Village"			"yugakure_scarred"
+
+	  	  "Ability1"        "hidan_cull_the_weak"
+		  "Ability2"        "hidan_taunt" 
+		  "Ability3"        "hidan_jashins_blessing" 
+		  "Ability4"        "hidan_self_pain"
+		  "Ability5"        "hidan_death_possession_blood"
+		}
 
 
 }

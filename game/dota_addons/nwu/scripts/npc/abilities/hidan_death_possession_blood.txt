@@ -1,0 +1,251 @@
+"hidan_death_possession_blood"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"			"hidan_death_possession_blood"
+	"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+	//"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.5"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"110.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
+
+	//Stats
+	"AbilityDamage"					"40 64 88"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"10 14 18"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"transformation_time"	"0.35"
+		}
+
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"radius"				"350"
+		}
+
+		"04"
+		{
+			"var_type"								"FIELD_FLOAT"
+			"returned_damage_outside_percentage"	"35 50 65"
+		}
+
+		"05"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"tick_interval"						"1"
+		}
+
+		"06"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"tick_interval_modifier"			"0.1"
+		}
+
+	}
+
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+		"particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
+		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+		"particle"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+		"model"		"models/kisame_new/kisame_samehada.vmdl"
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"		"Hero_Terrorblade.Metamorphosis"
+			"Target"			"CASTER"
+		}
+		"FireEffect"
+		{
+			"EffectName"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+			"EffectAttachType"	"follow_origin"
+			"Target"			"CASTER"
+		}
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifier_hidan_metamorphosis"
+			"Target"			"CASTER"
+		}
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifier_hidan_target_change"
+			"Target"			"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"		"heroes/hidan/death_possession_blood.lua"
+			"Function"			"createJashinCirlce"
+			"dummy_aura"		"modifier_hidan_circle"
+		}
+
+	}
+
+	"Modifiers"
+	{
+
+		"modifier_hidan_metamorphosis"
+		{
+			
+			"EffectName" 		"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+			"EffectAttachType"  "follow_origin"
+			"duration"			"%duration"
+
+			"AllowsIllusionDuplicate"	"1"
+
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"heroes/hidan/death_possession_blood.lua"
+					"Function"				"ModelSwapStart"
+					"model"					"models/kisame_new/kisame_samehada.vmdl"
+					"projectile_model"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+				}
+
+				"AttachEffect"
+				{
+					//"EffectName" 		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
+					//"EffectAttachType"	"follow_origin"
+					//"Target"			"TARGET"
+				}
+			}
+
+
+			"ThinkInterval"	"%tick_interval"
+			"OnIntervalThink"
+			{
+			}
+
+			"ThinkInterval"	"%tick_interval"
+			"OnIntervalThink"
+			{
+			 
+			}
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hidan/death_possession_blood.lua"
+					"Function"		"ModelSwapEnd"
+				}
+			}
+		}
+
+		"modifier_hidan_circle"
+		{
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"	"particles/units/heroes/hero_riki/riki_smokebomb.vpcf"
+					"EffectAttachType"	"attach_origin"
+					"Target"		"TARGET"
+
+					"ControlPoints"
+					{
+						"01"	"%radius %radius 0"
+					}
+				}
+			}
+			
+			"ThinkInterval"		"0.1"
+
+			"OnIntervalThink"
+			{
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center"	"TARGET"
+						"Types"		"DOTA_UNIT_TARGET_HERO"
+						"Teams"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+						"Radius"	"%radius"
+					}
+
+					"Action"
+					{
+						"RunScript"
+						{
+							"ScriptFile"	"heroes/hidan/death_possession_blood.lua"
+							"Function"		"apply_circle_modifier"
+						}
+					}
+				}
+			}
+
+			"States"
+			{
+				"MODIFIER_STATE_INVULNERABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR" 	"MODIFIER_STATE_VALUE_ENABLED"				
+				"MODIFIER_STATE_NOT_ON_MINIMAP" "MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_UNSELECTABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+
+
+	"modifier_hidan_target_change"
+		{
+			
+			"Passive"			"0"
+			"IsHidden"			"1"
+			"IsDebuff"			"0"
+			"Duration"			"%duration"
+
+			"OnAttackLanded"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hidan/death_possession_blood.lua"
+					"Function"		"setTarget"
+				}
+			}
+
+			"OnTakeDamage"
+			// "%attack_damage" is set to the damage value after mitigation
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hidan/death_possession_blood.lua"
+					"Function"		"apply_damage"
+					"Damage"		"%attack_damage"
+				}
+			}
+		}
+
+		"modifier_hidan_in_circle"
+		{
+			"Passive"			"0"
+			"IsHidden"			"1"
+			"IsDebuff"			"0"
+		}
+
+	}
+
+}

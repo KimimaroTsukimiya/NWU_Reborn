@@ -5,6 +5,7 @@
 	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityTextureName"			"hidan_self_pain"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastPoint"				"0.5"
