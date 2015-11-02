@@ -1,11 +1,21 @@
+--[[Author: LearningDave
+	Date: November, 2th 2015.
+	Initiates the values needed for this ability.
+]]
 function initiateValues( keys )
 	keys.ability.hitTargets = {}
 end
-
+--[[Author: LearningDave
+	Date: November, 2th 2015.
+	Saves each target hit by the ability
+]]
 function gatherTargets( keys )
 	table.insert(keys.ability.hitTargets, keys.target)
 end
-
+--[[Author: LearningDave
+	Date: November, 2th 2015.
+	Reduces Hidan's health on spell cast
+]]
 function health_cost( keys )
 	local caster = keys.caster
 	local ability = keys.ability
@@ -15,9 +25,10 @@ function health_cost( keys )
 	caster:SetHealth(new_health)
 	PopupDamage(caster, reduce_hp)
 end
-
-
-
+--[[Author: LearningDave
+	Date: November, 2th 2015.
+	Pulls the targets to the caster and applies damage.
+]]
 function cull_the_weak( keys )
 	local duration = keys.ability:GetDuration()
 	local caster = keys.caster
@@ -63,15 +74,17 @@ function cull_the_weak( keys )
 	end
 
 end
-
-
+--[[Author: LearningDave
+	Date: November, 2th 2015.
+	Shoots the projectile of the ability.
+]]
 function release_pull( keys )
 	local target_point = keys.target_points[1]
 	local caster_location = keys.caster:GetAbsOrigin()
 	local range = keys.ability:GetLevelSpecialValueFor( "range", keys.ability:GetLevel() - 1)
 	local pull_radius_start = keys.ability:GetLevelSpecialValueFor( "pull_radius_start", keys.ability:GetLevel() - 1)
 	local pull_radius_end = keys.ability:GetLevelSpecialValueFor( "pull_radius_end", keys.ability:GetLevel() - 1)
-	local pull_speed = 4000
+	local pull_speed = keys.ability:GetLevelSpecialValueFor( "pull_speed", keys.ability:GetLevel() - 1)
 	local ability = keys.ability
 	local point_difference_normalized = (target_point - caster_location):Normalized()
 	local velocity = point_difference_normalized * pull_speed

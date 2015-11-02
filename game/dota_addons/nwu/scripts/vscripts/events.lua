@@ -5,7 +5,7 @@
 require('items')
 -- music.lua, relevant functions to control the music each will player will listen to/not listen to
 require('music')
-require('utilities')
+
 --cheats.lua, includes functions which listen to chat inputs of the players
 if CHEATS_ACTIVATED then
   require('cheats')

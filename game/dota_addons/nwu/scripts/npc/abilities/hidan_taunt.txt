@@ -1,0 +1,201 @@
+"hidan_taunt"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"hidan_taunt"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
+		"particle"			"particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
+		"particle"			"particles/status_fx/status_effect_beserkers_call.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"21 18 15 12"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"0 0 0 0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"90 95 100 105"	
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"350"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"1.75 2.25 2.75 3.25"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"str_gain_hero"			"3"
+		}	
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"str_gain_not_hero"		"2"
+		}	
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"str_duration"			"12"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_str"				"1"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Axe.Berserkers_Call"
+			"Target" 		"CASTER"
+		}
+
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_berserkers_call_caster_datadriven"
+			"Target" 		"CASTER"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_hidan_taunt_on_take_damage"
+			"Target" 		"CASTER"
+			"Duration"		"%duration"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/hidan/taunt.lua"
+			"Function"		"initiateTaunt"
+		}
+
+		"ActOnTargets"
+		{
+			"Target"
+			{
+				"Center"  	"CASTER"
+				"Radius" 	"%radius"
+				"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+			}
+		
+			"Action"    
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_beserkers_call_enemy_datadriven"
+					"Target" 		"TARGET"
+					"Duration"		"%duration"
+				}
+			}
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_hidan_taunt_on_take_damage"
+		{
+			"IsPurgable"		"0"
+			"IsBuff"			"1"
+			"IsHidden"			"1"
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"Target"			"CASTER"
+					"EffectName"        "particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
+					"EffectAttachType" 	"follow_origin"
+					"ControlPoints"
+					{
+						"02"		"%radius 1 1"	//Required for Rampant Outrage (axe immortal)
+					}
+					"ControlPointEntities"
+					{
+						"CASTER"	"follow_origin"
+						"CASTER"	"follow_origin"
+						"CASTER"	"follow_origin"
+					}
+				}
+			}
+
+			"OnTakeDamage"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hidan/taunt.lua"
+					"Function"		"growStrength"
+					"modifier_name"	"modifier_hidan_taunt_bonus_str"
+				}
+			}
+			
+		}
+
+		"modifier_hidan_taunt_bonus_str"
+		{
+			"IsBuff"			"1"
+			"Passive"			"0"
+			"IsHidden"			"0"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%bonus_str"
+			}
+		}
+
+		"modifier_beserkers_call_enemy_datadriven"
+		{
+			"IsPurgable"		"0"
+			"IsDebuff"			"1"
+
+			"StatusEffectName" 		"particles/status_fx/status_effect_beserkers_call.vpcf" 	   
+			"StatusEffectPriority"  "10"
+
+			"ThinkInterval"  "0.1"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hidan/taunt.lua"
+					"Function"		"taunt"
+				}
+			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hidan/taunt.lua"
+					"Function"		"tauntEnd"
+				}
+			}
+		}
+	}
+}

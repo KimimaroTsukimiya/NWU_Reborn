@@ -207,3 +207,19 @@ function tobool(s)
         return false
     end
 end
+--[[Author: Noya
+  Date: 09.08.2015.
+  Hides all dem hats
+]]
+function GameMode:HideWearables( hero )
+
+  hero.hiddenWearables = {} -- Keep every wearable handle in a table to show them later
+    local model = hero:FirstMoveChild()
+    while model ~= nil do
+        if model:GetClassname() == "dota_item_wearable" then
+            model:AddEffects(EF_NODRAW) -- Set model hidden
+            table.insert(hero.hiddenWearables, model)
+        end
+        model = model:NextMovePeer()
+    end
+end
