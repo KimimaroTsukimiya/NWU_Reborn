@@ -82,6 +82,11 @@
         }
       }
 
+    "Properties"
+    {
+      "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+    }
+
     }
   
   }
@@ -94,22 +99,26 @@
         "var_type"          "FIELD_FLOAT"
         "duration"          "360"
       }
-        "02"
+      "02"
       {
         "var_type"          "FIELD_FLOAT"
         "max_charges"          "4"
       }
-        "03"
+      "03"
       {
         "var_type"          "FIELD_FLOAT"
         "distance_to_shop_for_recharge"          "800"
       }
-         "04"
+      "04"
       {
         "var_type"          "FIELD_FLOAT"
         "max_wards_placed"          "3"
       }
-      
+      "05"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "bonus_str"          "6"
+      }
 
     }
   }

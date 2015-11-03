@@ -7912,6 +7912,23 @@
     }
   }
 
+    "item_recipe_third_eye" 
+  {
+    "ID" "9252"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "ItemRecipe"          "1" //destroyed after combine
+    "ItemCost"            "350" //if its 0, it will combine without needing a recipe.
+    "ItemResult"          "item_third_eye" //the result of combining the ItemRequirements
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "ItemRequirements"
+    {
+        "01" "item_firm_nunchaku"
+    }
+  }
+
   "item_recipe_tobis_mask" 
   {
     "ID" "1174"
@@ -10827,6 +10844,11 @@
 	        }
 	      }
 	
+	    "Properties"
+	    {
+	      "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+	    }
+	
 	    }
 	  
 	  }
@@ -10839,22 +10861,26 @@
 	        "var_type"          "FIELD_FLOAT"
 	        "duration"          "360"
 	      }
-	        "02"
+	      "02"
 	      {
 	        "var_type"          "FIELD_FLOAT"
 	        "max_charges"          "4"
 	      }
-	        "03"
+	      "03"
 	      {
 	        "var_type"          "FIELD_FLOAT"
 	        "distance_to_shop_for_recharge"          "800"
 	      }
-	         "04"
+	      "04"
 	      {
 	        "var_type"          "FIELD_FLOAT"
 	        "max_wards_placed"          "3"
 	      }
-	      
+	      "05"
+	      {
+	        "var_type"          "FIELD_FLOAT"
+	        "bonus_str"          "6"
+	      }
 	
 	    }
 	  }
