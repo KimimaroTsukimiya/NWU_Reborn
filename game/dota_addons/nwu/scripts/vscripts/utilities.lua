@@ -223,3 +223,12 @@ function GameMode:HideWearables( hero )
         model = model:NextMovePeer()
     end
 end
+--[[Author: LearningDave
+  Date: october, 19th 2015.
+  Returns the table length of a given table
+]]
+function GameMode:tablelength(T)
+  local count = 0
+  for _ in pairs(T) do count = count + 1 end
+  return count
+end

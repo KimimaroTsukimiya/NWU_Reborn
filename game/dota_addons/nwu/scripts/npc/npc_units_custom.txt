@@ -170,4 +170,73 @@
 	    "AbilityLayout"             "4"
 	    "Ability1"                  "dummy_passive"
 	  } 
+  "npc_third_eye"
+  {
+    // General
+    //----------------------------------------------------------------
+    "Model"           "models/props_gameplay/default_ward.vmdl"
+    "BaseClass"         "npc_dota_creep_neutral"
+    "SoundSet"          "Pugna_NetherWard"
+    "Level"           "1"
+    "ModelScale"        "1"
+
+    // Abilities
+    //----------------------------------------------------------------
+    "Ability1"          ""
+    "Ability2"          ""
+    "Ability3"          ""
+    "Ability4"          ""
+
+    // Armor
+    //----------------------------------------------------------------
+    "ArmorPhysical"       "0"
+
+    // Attack
+    //----------------------------------------------------------------
+    "AttackCapabilities"    "DOTA_UNIT_CAP_NO_ATTACK"
+    "AttackDamageMin"     "0"
+    "AttackDamageMax"     "0"
+    "AttackRate"        "1.0"
+    "AttackAnimationPoint"    "0.0"
+    "AttackAcquisitionRange"  "0"
+    "AttackRange"       "0"
+    "ProjectileModel"     ""
+    "ProjectileSpeed"     "0"
+
+    // Bounds
+    //----------------------------------------------------------------
+    "HealthBarOffset"     "145"
+    "BoundsHullName"      "DOTA_HULL_SIZE_SMALL"
+
+    // Bounty
+    //----------------------------------------------------------------
+    "BountyXP"          "25"
+    "BountyGoldMin"       "25"
+    "BountyGoldMax"       "25"
+
+    // Movement
+    //----------------------------------------------------------------
+    "MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"       "0"
+    "MovementTurnRate"      "1.0"
+
+    // Status
+    //----------------------------------------------------------------
+    "StatusHealth"        "16"
+    "StatusHealthRegen"     "0.0"
+    "StatusMana"        "0"
+    "StatusManaRegen"     "0"
+    
+    // Vision
+    //----------------------------------------------------------------
+    "VisionDaytimeRange"    "1600"
+    "VisionNighttimeRange"    "1600"
+
+    // Team
+    //----------------------------------------------------------------
+    "TeamName"          "DOTA_TEAM_NEUTRALS"
+    "CombatClassAttack"     "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    "CombatClassDefend"     "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    "UnitRelationshipClass"   "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+  }
 }

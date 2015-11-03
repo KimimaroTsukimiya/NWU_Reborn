@@ -96,7 +96,7 @@
 		  "Ability4"         "neji_hyaku_nijuuhachi_shou"
 
 		  "MagicalResistance"            "0"
-		
+		"ModelScale"		"0.8"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -125,7 +125,7 @@
 		  "Ability4"         "kisame_water_prison"
 
 		  "MagicalResistance"            "0"
-		
+			"ModelScale"		"0.9"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -154,7 +154,7 @@
 		  "Ability2"         "gaara_ryuusa_bakuryu" 
 		  "Ability3"         "gaara_suna_no_yoroi" 
 		  "Ability4"         "gaara_sabaku_taiso"
-		  "ModelScale"		"0.5"
+		  "ModelScale"		"0.4"
 		  "MagicalResistance"            "0"
 		
 		  
@@ -271,7 +271,7 @@
 		 // "Ability4"        "madara_meteor"
 
 		  "MagicalResistance"            "0"
-		
+			
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
@@ -282,7 +282,7 @@
 		  "AttributeIntelligenceGain" "2.9" // Intelligence bonus per level.
 		  "AttributeBaseAgility" "16" // Base agility
 		  "AttributeAgilityGain" "2.1" // Agility bonus per level.
-		  "ModelScale"		"0.85"
+		  "ModelScale"		"0.7"
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha_scarred"

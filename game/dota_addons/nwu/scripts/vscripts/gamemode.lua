@@ -11,6 +11,12 @@ if GameMode == nil then
     DebugPrint( '[BAREBONES] creating barebones game mode' )
     _G.GameMode = class({})
 end
+--TODO find a way to get position of the shops by name/entityname
+--base shop position team 1 
+SHOP_TEAM_1 = Vector(-832, 768, 128) 
+--base shop position team 2
+SHOP_TEAM_2 = Vector(-832, 768, 128)
+
 
 -- This library allow for easily delayed/timed actions
 require('libraries/timers')

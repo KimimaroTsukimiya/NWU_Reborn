@@ -1,0 +1,116 @@
+"item_third_eye"
+  {
+    "ID"                    "5672"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_third_eye"
+    "AbilityCooldown"        "10.0"
+    "AbilityManaCost"        "0"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemQuality"         "rare"
+    "ItemCost"            "0"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    "ItemPermanent"         "1"
+    "ItemInitialCharges"    "4"
+    "ItemAliases"           "sightstone;vision;wards"
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+     "precache"
+      {
+        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+        "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
+        "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+        "particle"  "particles/econ/items/brewmaster/brewmaster_offhand_elixir/brewmaster_thunder_clap_elixir.vpcf"
+      }
+
+   "OnSpellStart"
+  {
+    "SpendCharge" {}
+
+    "RunScript"
+    {
+      "ScriptFile"  "items/third_eye.lua"
+      "Function"    "placeWard"
+      "Target"      "POINT"
+      "third_eye_vision"   "modifier_third_eye_ward"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_third_eye_ward"
+    {
+      "OnCreated"
+      {
+
+      }
+
+      "States"
+      {
+        "MODIFIER_STATE_INVISIBLE"   "MODIFIER_STATE_VALUE_ENABLED"    
+        "MODIFIER_STATE_NOT_ON_MINIMAP" "MODIFIER_STATE_VALUE_ENABLED"
+      }
+    }
+
+    "modifier_recharge"
+    {
+
+      "Passive"     "1"
+      "IsHidden"      "1"
+
+      "ThinkInterval"   "0.1"
+      "OnIntervalThink"
+      {
+        "RunScript"
+        {
+          "ScriptFile"  "items/third_eye.lua"
+          "Function"    "rechargeThirdEye"
+        }
+      }
+
+    }
+  
+  }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "duration"          "360"
+      }
+        "02"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "max_charges"          "4"
+      }
+        "03"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "distance_to_shop_for_recharge"          "800"
+      }
+         "04"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "max_wards_placed"          "3"
+      }
+      
+
+    }
+  }
+
