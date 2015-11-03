@@ -6,7 +6,6 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"AbilityTextureName"			"zabuza_track"
 
 	// Precache

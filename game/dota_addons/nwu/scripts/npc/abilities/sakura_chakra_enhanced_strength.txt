@@ -4,8 +4,8 @@
     // ----------------------------------------------------------------------------------------
     "BaseClass"                 "ability_datadriven"
     "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
-    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_PHYSICAL" 
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_YES"
     "AbilityTextureName"        "sakura_chakra_enhanced_strength"
 
 
