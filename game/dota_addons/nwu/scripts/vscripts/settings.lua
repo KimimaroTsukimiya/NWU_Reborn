@@ -10,7 +10,7 @@ PRE_GAME_TIME = 1.0                    -- How long after people select their her
 POST_GAME_TIME = 60.0                   -- How long should we let people look at the scoreboard before closing the server automatically?
 TREE_REGROW_TIME = 60.0                 -- How long should it take individual trees to respawn after being cut down/destroyed?
 
-GOLD_PER_TICK = 9999                     -- How much gold should players get per tick?
+GOLD_PER_TICK = 1                     -- How much gold should players get per tick?
 GOLD_TICK_TIME = 0.6                     -- How long should we wait in seconds between gold ticks?
 
 RECOMMENDED_BUILDS_DISABLED = false     -- Should we disable the recommened builds for heroes
@@ -42,15 +42,15 @@ DISABLE_GOLD_SOUNDS = false             -- Should we disable the gold sound when
 END_GAME_ON_KILLS = false                -- Should the game end after a certain number of kills?
 --KILLS_TO_END_GAME_FOR_TEAM = 50         -- How many kills for a team should signify an end of game?
 
-USE_CUSTOM_HERO_LEVELS = true           -- Should we allow heroes to have custom levels?
+USE_CUSTOM_HERO_LEVELS = false           -- Should we allow heroes to have custom levels?
 MAX_LEVEL = 25                          -- What level should we let heroes get to?
 USE_CUSTOM_XP_VALUES = false            -- Should we use custom XP values to level up heroes, or the default Dota numbers?
 
 -- Fill this table up with the required XP per level if you want to change it
-XP_PER_LEVEL_TABLE = {}
-for i=1,MAX_LEVEL do
-  XP_PER_LEVEL_TABLE[i] = (i-1) * 100
-end
+--XP_PER_LEVEL_TABLE = {}
+--for i=1,MAX_LEVEL do
+--  XP_PER_LEVEL_TABLE[i] = (i-1) * 100
+--end
 
 ENABLE_FIRST_BLOOD = true               -- Should we enable first blood for the first kill in this game?
 HIDE_KILL_BANNERS = false               -- Should we hide the kill banners that show when a player is killed?
@@ -86,8 +86,8 @@ TEAM_COLORS = {}                        -- If USE_CUSTOM_TEAM_COLORS is set, use
 TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 101, 212, 19 }  --    Teal
 TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 243, 201, 9 }   --    Yellow
 
-USE_AUTOMATIC_PLAYERS_PER_TEAM = true   -- Should we set the number of players to 10 / MAX_NUMBER_OF_TEAMS?
+USE_AUTOMATIC_PLAYERS_PER_TEAM = false  -- Should we set the number of players to 10 / MAX_NUMBER_OF_TEAMS?
 
 CUSTOM_TEAM_PLAYER_COUNT = {}           -- If we're not automatically setting the number of players per team, use this table
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_GOODGUYS] = 5
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_BADGUYS]  = 5
+CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_GOODGUYS] = 4
+CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_BADGUYS]  = 4

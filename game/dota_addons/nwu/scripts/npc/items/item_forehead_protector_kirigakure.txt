@@ -1,0 +1,56 @@
+  "item_forehead_protector_kirigakure"
+  {
+    "ID"              "7126"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "item_datadriven"
+    "AbilityTextureName"   "item_forehead_protector_kirigakure"
+    "ItemQuality"    "component"
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "175"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemPurchasable" "0"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "ItemAliases"           "ring of protection;armor"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    "SideShop" "0"  
+    "SecretShop" "0"
+    "HomeShop"  "0"
+    
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+    "Modifiers"
+    {
+      "item_forehead_protector_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+        "Properties"
+          {
+              "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"            "FIELD_FLOAT"
+        "bonus_armor"        "2.0"
+      }
+    }
+  }
+
