@@ -15,7 +15,12 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-				"particle"	"particles/generic_gameplay/generic_silence.vpcf"
+				"particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+		        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+		        "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
+		        "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+		        "particle"  "particles/econ/items/brewmaster/brewmaster_offhand_elixir/brewmaster_thunder_clap_elixir.vpcf"
+		        
 	}	
 
 	// Casting
@@ -83,6 +88,26 @@
 					"Target" 		"TARGET"
 					"Duration"		"%duration"
 				}
+
+				 "FireSound"
+			    {
+			      "EffectName"  "Hero_Brewmaster.ThunderClap"
+			      "Target"    "CASTER"
+			    }
+			     "FireSound"
+	            {
+	              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
+	              "Target"    "TARGET"
+	            }
+
+			        "FireEffect"
+				    {
+				      "EffectName"        "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+				      "EffectAttachType"  "follow_origin"
+				      "EffectRadius"    "200"
+				      "Target"            "TARGET"
+				    }
+				     
 			}
 		}
 	}
@@ -93,6 +118,11 @@
 		{
 			"IsDebuff"	"1"
 			"Duration"	"%duration"
+			  "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+          "EffectAttachType"  "follow_origin"
+      
+          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+          "StatusEffectPriority"  "10"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_MISS_PERCENTAGE" "%miss_chance"

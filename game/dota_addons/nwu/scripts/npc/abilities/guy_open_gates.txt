@@ -4,7 +4,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-	//"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"guy_open_gates"
 
@@ -15,6 +15,7 @@
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
 		"particle"			"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
 		"particle"			"particles/status_fx/status_effect_gods_strength.vpcf"
+		 "particle"	"particles/addons_gameplay/lamp_flame_tintable.vpcf"
 	}
 	
 	// Casting
@@ -78,6 +79,36 @@
 
 			"StatusEffectName"	"particles/status_fx/status_effect_gods_strength.vpcf"
 			"StatusEffectPriority"	"10"
+
+
+
+             
+			"OnCreated"
+			{
+				   "AttachEffect"
+                {
+                    "EffectName" "particles/addons_gameplay/lamp_flame_tintable.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_left_hand"
+                    }
+                }
+						   "AttachEffect"
+                {
+                    "EffectName" "particles/addons_gameplay/lamp_flame_tintable.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_right_hand"
+                    }
+                }
+			}
+			
 
 			"Properties"
 			{

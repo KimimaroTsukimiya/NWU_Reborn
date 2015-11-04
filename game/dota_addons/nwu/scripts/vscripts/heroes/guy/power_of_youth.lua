@@ -27,7 +27,12 @@ function power_of_youth( keys )
 		keys.ability.stacks = keys.ability.stacks + 1
 	else
 		if keys.ability.stacks ~= 0 then
-			keys.ability.stacks = keys.ability.stacks / 2
+			if (keys.ability.stacks * attack_speed_bonus_percentage) >= 100 then
+				keys.ability.stacks = tonumber(string.format("%." ..  0 .. "f", (100 / attack_speed_bonus_percentage  / 2)))
+			else
+				keys.ability.stacks = keys.ability.stacks / 2
+			end
+			
 		else
 			keys.ability.stacks = 1
 		end

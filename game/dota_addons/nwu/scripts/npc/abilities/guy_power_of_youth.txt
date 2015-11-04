@@ -73,16 +73,6 @@
 
     "OnCreated"
     {
-      "RemoveModifier"
-      {
-        "ModifierName"  "modifier_guy_power_of_youth_as_bonus"
-        "Target"     "CASTER"
-      }
-      "ApplyModifier"
-      {
-        "ModifierName"  "modifier_guy_power_of_youth_as_bonus"
-        "Target"     "CASTER"
-      }
       "RunScript"
       {
         "ScriptFile"  "heroes/guy/power_of_youth.lua"
@@ -95,7 +85,7 @@
       "modifier_guy_power_of_youth"
       {
         "Passive" "1"
-        "Hidden"  "1"
+        "IsHidden"  "1"
 
             "OnAttackLanded"
           {
@@ -110,7 +100,7 @@
       "modifier_guy_power_of_youth_as_bonus"
       {
         "Passive" "1"
-        "Hidden"  "0"
+        "IsHidden"  "0"
         "IsBuff"  "1"
 
           "Properties"
