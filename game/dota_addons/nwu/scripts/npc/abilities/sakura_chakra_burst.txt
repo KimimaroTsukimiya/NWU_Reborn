@@ -7,7 +7,7 @@
 	"AbilityTextureName"			"sakura_chakra_burst"
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0."
+	"AbilityCastPoint"				"0.0"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
@@ -39,7 +39,7 @@
 
 	"precache"
 	{
-
+		"particle"	"particles/units/heroes/hero_winter_wyvern/wyvern_winters_curse_buff.vpcf"
 	}
 
 	"OnSpellStart"
@@ -70,6 +70,32 @@
 			{
 			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_bonus" 
 			}
+
+			"OnCreated"
+			{
+				"AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/sakura/wyvern_winters_curse_buff.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_left_foot"
+                    }
+                }
+						   "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/sakura/wyvern_winters_curse_buff.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_right_foot"
+                    }
+                }
+			}		
 		}
 
 	}

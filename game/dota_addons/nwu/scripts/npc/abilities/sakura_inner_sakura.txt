@@ -4,7 +4,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-	//"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"sakura_inner_sakura"
 
@@ -15,6 +15,8 @@
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
 		"particle"			"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
 		"particle"			"particles/status_fx/status_effect_gods_strength.vpcf"
+		"particle"			"particles/units/heroes/sakura/lamp_flame_tintable.vpcf"
+		"particle"			"particles/units/heroes/sakura/wyvern_winters_curse_buff.vpcf"
 	}
 	
 	// Casting
@@ -83,6 +85,58 @@
 			{
 				"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"	"%gods_strength_damage"
 			}
+
+
+			"OnCreated"
+			{
+				   "AttachEffect"
+                	{
+                    	"EffectName" "particles/units/heroes/sakura/lamp_flame_tintable.vpcf"
+                    	"EffectAttachType" "follow_origin"
+                    	"Target" "CASTER"
+                    	"ControlPointEntities"
+                   		{
+                     		"CASTER"    "attach_left_hand"
+                    	}
+                	}
+
+					"AttachEffect"
+                	{
+                    	"EffectName" "particles/units/heroes/sakura/lamp_flame_tintable.vpcf"
+                    	"EffectAttachType" "follow_origin"
+                    	"Target" "CASTER"
+                    	"ControlPointEntities"
+                   		{
+                      		"CASTER"    "attach_right_hand"
+                    	}
+                	}
+
+	                "AttachEffect"
+	                {
+                    	"EffectName" "particles/units/heroes/sakura/wyvern_winters_curse_buff.vpcf"
+                    	"EffectAttachType" "follow_origin"
+                    	"Target" "CASTER"
+                    	"ControlPointEntities"
+                   		{
+                      		"CASTER"    "attach_left_foot"
+                    	}
+                	}
+
+					"AttachEffect"
+                	{
+                    	"EffectName" "particles/units/heroes/sakura/wyvern_winters_curse_buff.vpcf"
+                    	"EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_right_foot"
+                    }
+                }
+			}
 		}
+
+
+			
 	}
 }
