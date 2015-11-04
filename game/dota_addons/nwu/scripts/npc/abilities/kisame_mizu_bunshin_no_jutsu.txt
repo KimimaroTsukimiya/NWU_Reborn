@@ -57,34 +57,34 @@
     "ApplyModifier"
     {
       "ModifierName"    "mizu_bunshin_no_jutsu_illusion"
-      "Target"      "CASTER"
+      "Target"          "CASTER"
     }
   }
 
     "Modifiers"
     {
 
-     "mizu_bunshin_no_jutsu_illusion"
-    {
-      "Duration"  "%illusion_duration"
-
-      "OnCreated"
+       "mizu_bunshin_no_jutsu_illusion"
       {
-        "RunScript"
+        "Duration"  "1"
+        "IsHidden"  "1"
+        "OnCreated"
         {
-          "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
-          "Function"        "ConjureImage"
-        }
-        "RunScript"
-        {
-          "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
-          "Function"        "ConjureImage"
-        }
+          "RunScript"
+          {
+            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+            "Function"        "ConjureImage"
+          }
+          "RunScript"
+          {
+            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+            "Function"        "ConjureImage"
+          }
 
+
+        }
       }
-
-    }
-	}
+	 }
 	
 }
 

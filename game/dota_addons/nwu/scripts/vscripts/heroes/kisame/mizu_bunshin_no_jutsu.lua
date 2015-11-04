@@ -1,6 +1,6 @@
 -- Creates an Illusion, making use of the built in modifier_illusion
 function ConjureImage( event )
- print("Conjure Image")
+
  local caster = event.caster
  local player = caster:GetPlayerID()
  local ability = event.ability
@@ -15,6 +15,11 @@ function ConjureImage( event )
  PrintTable(illusion)
  illusion:SetPlayerID(caster:GetPlayerID())
  illusion:SetControllableByPlayer(player, true)
+ 
+ --if kisame has his ulti activated, his bunshin should turn into the shark model and have the water prison modifier
+ if caster:HasModifier("modifier_kisame_metamorphosis") then 
+    illusion:SetOriginalModel("models/kisame_new/kisame_samehada.vmdl")
+ end
 
  -- Level Up the unit to the casters level
  local casterLevel = caster:GetLevel()
@@ -54,4 +59,12 @@ function ConjureImage( event )
  -- Without MakeIllusion the unit counts as a hero, e.g. if it dies to neutrals it says killed by neutrals, it respawns, etc.
  illusion:MakeIllusion()
 
+end
+function NoDraw( keys )
+  keys.caster:AddNoDraw()
+
+end
+function draw( keys )
+  print("asb")
+  keys.caster:RemoveNoDraw()
 end

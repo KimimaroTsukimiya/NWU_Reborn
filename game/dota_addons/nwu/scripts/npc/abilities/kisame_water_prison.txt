@@ -3,12 +3,12 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE| DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE "
 	"AbilityTextureName"			"kisame_water_prison"
 	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0."
+	"AbilityCastPoint"				"1"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
@@ -57,13 +57,18 @@
 		"06"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"tick_interval"						"1"
+			"tick_interval"						"0.1"
 		}
 
 		"07"
 		{
 			"var_type"							"FIELD_FLOAT"
 			"tick_interval_modifier"			"0.1"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_per_millisecond"				"4.0 6.4 8.8"
 		}
 
 	}
@@ -81,6 +86,7 @@
 
 	"OnSpellStart"
 	{
+		
 		"FireSound"
 		{
 			"EffectName"		"Hero_Terrorblade.Metamorphosis"
@@ -97,6 +103,7 @@
 			"ModifierName"		"modifier_kisame_metamorphosis"
 			"Target"			"CASTER"
 		}
+		
 	}
 
 
@@ -107,21 +114,26 @@
 			"ModifierName"		"modifier_kisame_metamorphosis"
 			"Target"			"CASTER"
 		}
+		"RunScript"
+		{
+			"ScriptFile"		"heroes/kisame/water_prison.lua"
+			"Function"			"createWaterPrisonDome"
+			"dummy_aura"		"modifier_kisame_water_prison_dome"
+		}
 	}
 
 	"OnToggleOff"
 	{
 		"RunScript"
-				{
-					"ScriptFile"	"heroes/kisame/water_prison.lua"
-					"Function"		"ModelSwapEnd"
-				}
-
+		{
+			"ScriptFile"	"heroes/kisame/water_prison.lua"
+			"Function"		"ModelSwapEnd"
+		}
 		"RemoveModifier"
-				{
-					"ModifierName"	"modifier_kisame_metamorphosis"
-					"Target" 		"CASTER"
-				}
+		{
+			"ModifierName"	"modifier_kisame_metamorphosis"
+			"Target" 		"CASTER"
+		}
 	}
 
 
@@ -134,7 +146,7 @@
           "Passive"     "0"
           "IsHidden"      "0"
           "IsDebuff"      "1"
-          "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+          "EffectName"    "particles/units/heroes/kisame/brewmaster_thunder_clap_debuff.vpcf"
           "EffectAttachType"  "follow_origin"
       
           "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
@@ -150,10 +162,6 @@
 		"modifier_kisame_metamorphosis"
 		{
 			
-			"EffectName" 		"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
-			"EffectAttachType"  "follow_origin"
-
-
 			"AllowsIllusionDuplicate"	"1"
 
 			"OnCreated"
@@ -186,7 +194,6 @@
 					"modifierRemove"		"modifier_kisame_metamorphosis"
 				}
 
-
 				"Damage"
 				{
 					  "Target"
@@ -197,14 +204,10 @@
 				        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 				      }
 					"Type"		"DAMAGE_TYPE_MAGICAL"
-					"Damage"	"%AbilityDamage"
+					"Damage"	"%damage_per_millisecond"
 				}
-			}
 
-			"ThinkInterval"	"%tick_interval"
-			"OnIntervalThink"
-			{
-			 "ApplyModifier"
+				 "ApplyModifier"
 				    {
 				      "ModifierName"  "modifer_water_prison_slow"
 				      "Target"
@@ -214,9 +217,11 @@
 				        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
 				        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 				      }
-				      "Duration"    "0.5"
+				      "Duration"    "0.2"
 				    }
 			}
+
+
 			"OnDestroy"
 			{
 				"RunScript"
@@ -225,6 +230,44 @@
 					"Function"		"ModelSwapEnd"
 				}
 
+			}
+		}
+		"modifier_kisame_water_prison_dome"
+		{
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+					"EffectAttachType"	"attach_origin"
+					"Target"		"TARGET"
+
+					"ControlPoints"
+					{
+						"00"	"%radius %radius -200"
+						"01"	"%radius %radius -200"
+						"06"	"%radius %radius -200"
+						"10"	"%radius %radius -200"
+					}
+				}
+			}
+
+			"ThinkInterval"	"0.1"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/kisame/water_prison.lua"
+					"Function"		"domeFollowHero"
+				}
+			}
+	
+			"States"
+			{
+				"MODIFIER_STATE_INVULNERABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR" 	"MODIFIER_STATE_VALUE_ENABLED"				
+				"MODIFIER_STATE_NOT_ON_MINIMAP" "MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_UNSELECTABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
 			}
 		}
 	}

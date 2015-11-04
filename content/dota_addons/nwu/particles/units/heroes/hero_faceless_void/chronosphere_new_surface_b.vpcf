@@ -6,10 +6,10 @@
 	m_flConstantRadius = 128.000000
 	m_flConstantLifespan = 2.000000
 	m_ConstantColor =
-[
-91,
-202,
-255,
+	[
+		91,
+		202,
+		255,
 		255,
 	]
 	m_Renderers =
@@ -66,10 +66,10 @@
 		{
 			_class = "C_OP_ColorInterpolate"
 			m_ColorFade =
-[
-91,
-202,
-255,
+			[
+				91,
+				202,
+				255,
 				255,
 			]
 			m_flFadeStartTime = 0.125000
