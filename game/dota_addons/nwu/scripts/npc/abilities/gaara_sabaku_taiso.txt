@@ -14,10 +14,10 @@
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"900"
-	"AbilityCastPoint"				"0.65 0.65 0.65 0.65"
+	"AbilityCastPoint"				"1.0 1.0 1.0 1.0"
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"1 100 70"
+	"AbilityCooldown"				"130 100 70"
 	"AbilityDuration"				"5.0"
 
 	
@@ -71,16 +71,14 @@
 		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_jakiro.vsndevts"
 		"particle"					"particles/units/heroes/hero_jakiro/jakiro_dual_breath_ice.vpcf"
 		"particle"					"particles/units/heroes/hero_jakiro/jakiro_dual_breath_fire.vpcf"
+		"particle"					"particles/units/heroes/hero_sandking/sandking_epicenter.vpcf"
+		"particle"					"particles/items_fx/cyclone.vpcf"
 	}
 	
 	"OnSpellStart"
 	{
-		"FireSound"
-		{
-			"EffectName"		"Hero_Jakiro.DualBreath"
-			"Target"			"CASTER"
-		}
 		
+
 		"RunScript"
 		{
 			"Target"			"POINT"
@@ -111,6 +109,12 @@
 			"ShouldStun"        "1"	
 		}
 
+		 "FireSound"
+	    {
+	      "EffectName"  "Hero_Brewmaster.ThunderClap"
+	      "Target"    "CASTER"
+	    }
+
 		"Damage"
 		{
 			"Target"		"TARGET"
@@ -123,11 +127,57 @@
 			"Duration"   "%stun_duration"
 			"Target" 	 "TARGET"
 		}
+
+		"RunScript"
+		{
+					"ScriptFile"		"heroes/gaara/sabaku_taiso.lua"
+					"Function"			"launchCyclone"
+					"Target"			"TARGET"
+					"dummy_aura"		"modifier_gaara_cyclone"
+		}	
 	}
 	
 	"Modifiers"
 	{
-		
+		"modifier_gaara_cyclone"
+			{
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"	"particles/items_fx/cyclone.vpcf"
+						"EffectAttachType"	"attach_origin"
+						"Target"		"TARGET"
+
+						"ControlPoints"
+						{
+							"01"	"50 50 0"
+						}
+					}
+
+					"AttachEffect"
+					{
+						"EffectName"	"particles/units/heroes/hero_sandking/sandking_epicenter.vpcf"
+						"EffectAttachType"	"attach_origin"
+						"Target"		"TARGET"
+
+						"ControlPoints"
+						{
+							"01"	"50 50 0"
+						}
+					}
+
+					
+
+				}
+				"States"
+				{
+					"MODIFIER_STATE_INVULNERABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR" 	"MODIFIER_STATE_VALUE_ENABLED"				
+					"MODIFIER_STATE_NOT_ON_MINIMAP" "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 
 	}
 }

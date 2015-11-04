@@ -7,10 +7,8 @@ function sandstorm( keys )
 	local caster = keys.caster
 	local ability = keys.ability
 	local target_point = keys.target_points[1]
-
 	-- Special Variables
-	local duration = ability:GetLevelSpecialValueFor("stun_duration", (ability:GetLevel() - 1))
-
+	local duration = ability:GetLevelSpecialValueFor("duration", (ability:GetLevel() - 1))
 	-- Dummy
 	local dummy_modifier = keys.dummy_aura
 	local dummy = CreateUnitByName("npc_dummy_unit", target_point, false, caster, caster, caster:GetTeam())

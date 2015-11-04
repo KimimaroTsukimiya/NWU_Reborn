@@ -43,3 +43,23 @@ function launch_earthquake( event )
 		ParticleManager:DestroyParticle( pfx, false )
 	end, event.distance / event.speed )
 end
+function launchCyclone( keys )
+		-- Variables
+	if keys.target:IsAlive() then
+
+		local caster = keys.caster
+		local ability = keys.ability
+		local target_point = keys.target:GetAbsOrigin()
+		-- Special Variables
+		local duration = 1
+		-- Dummy
+		local dummy_modifier = keys.dummy_aura
+		local dummy = CreateUnitByName("npc_dummy_unit", target_point, false, caster, caster, caster:GetTeam())
+		dummy:AddNewModifier(caster, nil, "modifier_phased", {})
+		ability:ApplyDataDrivenModifier(caster, dummy, dummy_modifier, {duration = duration})
+
+
+		-- Timer to remove the dummy
+		Timers:CreateTimer(duration, function() dummy:RemoveSelf() end)
+	end
+end

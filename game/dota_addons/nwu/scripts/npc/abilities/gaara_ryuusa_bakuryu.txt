@@ -2,8 +2,8 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"gaara_ryuusa_bakuryu"
@@ -11,7 +11,7 @@
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"750"
-	"AbilityCastPoint"				"0.7 0.7 0.7 0.7"
+	"AbilityCastPoint"				"0.2 0.2 0.2 0.2"
 	"AOERadius"						"%radius"
 
 	// Time		
@@ -57,7 +57,12 @@
 		"05"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"thinker_damage"				"50 85 120 150"
+			"thinker_damage"				"25 42.5 60 75"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"				"2 2 2 2"
 		}
 
 	}
@@ -83,6 +88,11 @@
 					"Target"			"POINT"
 					"dummy_aura"		"modifier_gaara_sandstorm"
 				}	
+				"FireSound"
+				{
+					"EffectName"			"Ability.SandKing_SandStorm.loop"
+					"Target"				"CASTER"
+				}
 			}
 		}
 	}
@@ -95,9 +105,9 @@
 				{
 					"AttachEffect"
 					{
-						"EffectName"	"particles/units/heroes/hero_riki/riki_smokebomb.vpcf"
+						"EffectName"	"particles/units/heroes/gaara/sandsturm.vpcf"
 						"EffectAttachType"	"attach_origin"
-						"Target"		"POINT"
+						"Target"		"TARGET"
 
 						"ControlPoints"
 						{
@@ -105,23 +115,26 @@
 						}
 					}
 
-
 					"ActOnTargets"
 					{
 						"Target"
 						{
-							"Center"	"POINT"
+							"Center"	"TARGET"
 							"Types"		"DOTA_UNIT_TARGET_ALL"
 							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 							"Radius"	"%radius"
 						}
 
-						"Stun"
+						"Action"
 						{
-							"Duration"   "%stun_duration"
-							"Target" 	 "TARGET"
+							"Stun"
+							{
+								"Duration"   "%stun_duration"
+								"Target" 	 "TARGET"
+							}
 						}
 					}
+
 				}
 
 				"ThinkInterval"		"0.5"
