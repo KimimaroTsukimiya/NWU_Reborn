@@ -1,16 +1,16 @@
 // Anko's Giant Snake Ability copied from Pudge
 // Author: Zenicus
 // Date: 11/05/2015.
-"anko_giant_snake_lua"
+"anko_giant_snake"
 {
 	// General
-	"BaseClass"						"ability_lua"
+	"BaseClass"						"ability_datadriven"
 	"AbilityTextureName"			"pudge_meat_hook"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"FightRecapLevel"				"1"
-	"ScriptFile"					"anko_giant_snake_lua.lua"	
+	"ScriptFile"					"anko_giant_snake.lua"	
 
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------

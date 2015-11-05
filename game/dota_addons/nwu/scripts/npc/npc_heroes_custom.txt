@@ -438,7 +438,7 @@
 
 	  	  "Village"			"yugakure_scarred"
 
-	  	  "Ability1"        "giant_snake"
+	  	  "Ability1"        "anko_giant_snake"
 		  "Ability2"        "" 
 		  "Ability3"        "" 
 		  "Ability4"        ""

@@ -1,26 +1,26 @@
-anko_giant_snake_lua = class({})
+anko_giant_snake = class({})
 LinkLuaModifier( "modifier_meat_hook_followthrough_lua", "modifiers/modifier_meat_hook_followthrough_lua.lua" ,LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_meat_hook_lua", "modifiers/modifier_meat_hook_lua.lua" ,LUA_MODIFIER_MOTION_HORIZONTAL )
 
 
---[[Author: Valve
-	Date: 26.09.2015.]]
+--[[Author: Zenicus
+	Date: 11.05.2015.]]
 --------------------------------------------------------------------------------
 
-function pudge_meat_hook_lua:OnAbilityPhaseStart()
+function anko_giant_snake:OnAbilityPhaseStart()
 	self:GetCaster():StartGesture( ACT_DOTA_OVERRIDE_ABILITY_1 )
 	return true
 end
 
 --------------------------------------------------------------------------------
 
-function pudge_meat_hook_lua:OnAbilityPhaseInterrupted()
+function anko_giant_snake:OnAbilityPhaseInterrupted()
 	self:GetCaster():RemoveGesture( ACT_DOTA_OVERRIDE_ABILITY_1 )
 end
 
 --------------------------------------------------------------------------------
 
-function pudge_meat_hook_lua:OnSpellStart()
+function anko_giant_snake:OnSpellStart()
 	self.bChainAttached = false
 	if self.hVictim ~= nil then
 		self.hVictim:InterruptMotionControllers( true )
@@ -92,7 +92,7 @@ end
 
 --------------------------------------------------------------------------------
 
-function pudge_meat_hook_lua:OnProjectileHit( hTarget, vLocation )
+function anko_giant_snake:OnProjectileHit( hTarget, vLocation )
 	if hTarget == self:GetCaster() then
 		return false
 	end
