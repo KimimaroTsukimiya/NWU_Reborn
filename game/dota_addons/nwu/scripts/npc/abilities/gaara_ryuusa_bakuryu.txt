@@ -120,7 +120,7 @@
 						"Target"
 						{
 							"Center"	"TARGET"
-							"Types"		"DOTA_UNIT_TARGET_ALL"
+							"Types"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 							"Radius"	"%radius"
 						}
