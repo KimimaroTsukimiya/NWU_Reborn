@@ -8,6 +8,7 @@ LinkLuaModifier( "modifier_meat_hook_lua", "modifiers/modifier_meat_hook_lua.lua
 --------------------------------------------------------------------------------
 
 function anko_giant_snake:OnAbilityPhaseStart()
+	print ("Why does it have to be snakes!")
 	self:GetCaster():StartGesture( ACT_DOTA_OVERRIDE_ABILITY_1 )
 	return true
 end
@@ -21,6 +22,7 @@ end
 --------------------------------------------------------------------------------
 
 function anko_giant_snake:OnSpellStart()
+	print ("Why does it have to be snakes!")
 	self.bChainAttached = false
 	if self.hVictim ~= nil then
 		self.hVictim:InterruptMotionControllers( true )
@@ -211,13 +213,13 @@ end
 
 --------------------------------------------------------------------------------
 
-function pudge_meat_hook_lua:OnProjectileThink( vLocation )
+function anko_giant_snake:OnProjectileThink( vLocation )
 	self.vProjectileLocation = vLocation
 end
 
 --------------------------------------------------------------------------------
 
-function pudge_meat_hook_lua:OnOwnerDied()
+function anko_giant_snake:OnOwnerDied()
 	self:GetCaster():RemoveGesture( ACT_DOTA_OVERRIDE_ABILITY_1 );
 	self:GetCaster():RemoveGesture( ACT_DOTA_CHANNEL_ABILITY_1 );
 end
