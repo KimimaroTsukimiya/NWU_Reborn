@@ -18,7 +18,7 @@
   "AbilityCastPoint"        "0.0"
   "AbilityCooldown"       "25.0"
   "AbilityManaCost"       "180"
-  
+  "ItemShareability"      "ITEM_NOT_SHAREABLE"
   "AbilitySharedCooldown"     "dagon"
   "MaxUpgradeLevel"       "5"
   "ItemBaseLevel"         "3"

@@ -21,7 +21,7 @@
   "ItemShopTags"          "armor;boost_armor"
   "ItemQuality"         "rare"
   "ItemAliases"         "buckler;active;armor;stats"
-  
+  "ItemShareability"      "ITEM_NOT_SHAREABLE"
   "AbilitySpecial"
   {
     "01"

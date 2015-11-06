@@ -16,7 +16,7 @@
   "ItemQuality"         "rare"
   "ItemAliases"         "vladmirs offering;vlads;aura;lifesteal;ls;damage aura;"
   "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-  
+  "ItemShareability"      "ITEM_NOT_SHAREABLE"
   "AbilitySpecial"
   {
     "01"

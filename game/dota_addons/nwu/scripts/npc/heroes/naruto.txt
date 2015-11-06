@@ -1,0 +1,26 @@
+		"npc_dota_hero_dragon_knight" //naruto
+		{
+		  "override_hero"   "npc_dota_hero_dragon_knight"
+		  "Model" 			"models/naruto/naruto.vmdl"
+		 "Ability1"        "naruto_kage_bunshin_rasengan"
+		  "Ability2"        "naruto_kawazu_kumite" 
+		  "Ability3"        "naruto_kage_bunshin_mastery" 
+		  "Ability4"        "naruto_rasenshuriken"
+
+		 "MagicalResistance"            "0"
+		"ModelScale"		"1.08"
+		  "AttackAnimationPoint"   "0.4"
+		 // "AttackRate"				"0.7"
+		  "AttackRange"				"100"
+
+		  "MovementSpeed"			"305"
+		  "AttributeBaseStrength" "21" // Base strength
+		  "AttributeStrengthGain" "2.7" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "15" // Base intelligence
+		  "AttributeIntelligenceGain" "1.3" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "17" // Base agility
+		  "AttributeAgilityGain" "2.4" // Agility bonus per level.
+	 	  "ItemSlots"
+	  	  { }
+	  	  "Village"			"konoha"
+		}

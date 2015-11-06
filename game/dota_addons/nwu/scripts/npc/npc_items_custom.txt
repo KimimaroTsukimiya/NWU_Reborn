@@ -2097,6 +2097,7 @@
 	  "ItemAliases"         "mechanism;mekansm;active;heal;aoe heal;aura"
 	  "ItemAlertable"         "1"
 	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	  "ItemShareability"      "ITEM_NOT_SHAREABLE"
 	  "AbilitySpecial"
 	  {
 	    "01"
@@ -5120,7 +5121,7 @@
 	  "AbilityCastPoint"        "0.0"
 	  "AbilityCooldown"       "35.0"
 	  "AbilityManaCost"       "180"
-	  
+	  "ItemShareability"      "ITEM_NOT_SHAREABLE"
 	  "AbilitySharedCooldown"     "dagon"
 	  "MaxUpgradeLevel"       "5"
 	  "ItemBaseLevel"         "1"
@@ -5230,7 +5231,7 @@
 	  "AbilityCastPoint"        "0.0"
 	  "AbilityCooldown"       "30.0"
 	  "AbilityManaCost"       "180"
-	  
+	  "ItemShareability"      "ITEM_NOT_SHAREABLE"
 	  "AbilitySharedCooldown"     "dagon"
 	  "MaxUpgradeLevel"       "5"
 	  "ItemBaseLevel"         "2"
@@ -5341,7 +5342,7 @@
 	  "AbilityCastPoint"        "0.0"
 	  "AbilityCooldown"       "25.0"
 	  "AbilityManaCost"       "180"
-	  
+	  "ItemShareability"      "ITEM_NOT_SHAREABLE"
 	  "AbilitySharedCooldown"     "dagon"
 	  "MaxUpgradeLevel"       "5"
 	  "ItemBaseLevel"         "3"
@@ -5452,7 +5453,7 @@
 	  "AbilityCastPoint"        "0.0"
 	  "AbilityCooldown"       "20.0"
 	  "AbilityManaCost"       "180"
-	  
+	  "ItemShareability"      "ITEM_NOT_SHAREABLE"
 	  "AbilitySharedCooldown"     "dagon"
 	  "MaxUpgradeLevel"       "5"
 	  "ItemBaseLevel"         "4"
@@ -5570,7 +5571,7 @@
 	    //pickup sounds
 	    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
 	    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-	
+	    
 	
 	     "precache"
 	      {
@@ -5719,7 +5720,7 @@
 	  "AbilityCastPoint"        "0.0"
 	  "AbilityCooldown"       "5.0"
 	  "AbilityManaCost"       "180"
-	  
+	  "ItemShareability"      "ITEM_NOT_SHAREABLE"
 	  "ItemBaseLevel"         "1"
 	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 	  
@@ -8356,7 +8357,7 @@
 	  "ItemShopTags"          "armor;boost_armor"
 	  "ItemQuality"         "rare"
 	  "ItemAliases"         "buckler;active;armor;stats"
-	  
+	  "ItemShareability"      "ITEM_NOT_SHAREABLE"
 	  "AbilitySpecial"
 	  {
 	    "01"
@@ -10959,7 +10960,7 @@
 	  "ItemQuality"         "rare"
 	  "ItemAliases"         "vladmirs offering;vlads;aura;lifesteal;ls;damage aura;"
 	  "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	  
+	  "ItemShareability"      "ITEM_NOT_SHAREABLE"
 	  "AbilitySpecial"
 	  {
 	    "01"
@@ -11657,7 +11658,7 @@
 	  "AbilityCastPoint"        "0.0"
 	  "AbilityCooldown"       "12.0"
 	  "AbilityManaCost"       "0"
-	  
+	  "ItemShareability"      "ITEM_NOT_SHAREABLE"
 	  // Item Info
 	  //-------------------------------------------------------------------------------------------------------------
 	  "ItemCost"            "2250"

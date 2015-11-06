@@ -43,6 +43,11 @@ function launch_earthquake( event )
 		ParticleManager:DestroyParticle( pfx, false )
 	end, event.distance / event.speed )
 end
+--[[
+	Author: LearningDave
+	Date: November, 4th 2015.
+	Launches a cyclone on the position of the enemy who got hit by sabaku taiso.
+]]
 function launchCyclone( keys )
 		-- Variables
 	if keys.target:IsAlive() then

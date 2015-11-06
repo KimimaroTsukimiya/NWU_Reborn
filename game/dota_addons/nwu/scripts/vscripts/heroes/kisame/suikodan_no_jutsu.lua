@@ -1,6 +1,6 @@
 --[[Author: LearningDave
 	Date: october, 9th 2015.
-	Shoots a wave of terror
+	Shoots a wave
 ]]
 function suikodan_no_jutsu( keys )
 	local caster = keys.caster

@@ -1,8 +1,0 @@
-"npc_unit_zabuza"
-	{
-	  "override_hero"   "npc_dota_hero_bloodseeker"
-	  "Ability1"        "zabuza_demonic_intent_datadriven" 
-	  "Model" "models/development/invisiblebox.vmdl"
- 	  "ItemSlots"
-  	  { }
-	}

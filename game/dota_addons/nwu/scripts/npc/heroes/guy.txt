@@ -1,0 +1,27 @@
+		"npc_dota_hero_centaur" //guy
+		{
+		  "override_hero"   "npc_dota_hero_centaur"
+		  "Model" 			"models/gai/gai.vmdl"
+		  "Ability1"        "guy_dynamic_entry"
+
+		  "Ability2"        "guy_power_of_youth" 
+		  "Ability3"        "guy_gouken_mastery" 
+		  "Ability4"        "guy_open_gates"
+		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+		 "MagicalResistance"            "0"
+		"ModelScale"		"0.8"
+		  "AttackAnimationPoint"   "0.4"
+		 // "AttackRate"				"0.7"
+		  "AttackRange"				"100"
+
+		  "MovementSpeed"			"300"
+		  "AttributeBaseStrength" "19" // Base strength
+		  "AttributeStrengthGain" "2.2" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "13" // Base intelligence
+		  "AttributeIntelligenceGain" "1.15" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "21" // Base agility
+		  "AttributeAgilityGain" "2.9" // Agility bonus per level.
+	 	  "ItemSlots"
+	  	  { }
+	  	  "Village"			"konoha"
+		}

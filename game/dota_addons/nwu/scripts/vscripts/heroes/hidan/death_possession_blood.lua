@@ -29,7 +29,7 @@ function ModelSwapEnd( keys )
 end
 --[[Author: LearningDave
 	Date: 22.10.2015
-	Creates a dummy at the target location that acts as the Fog
+	Creates a dummy at the target location that acts as the Jashin Circle
 	]]
 function createJashinCirlce( keys )
 	-- Variables

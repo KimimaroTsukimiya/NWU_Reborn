@@ -1,0 +1,28 @@
+"npc_dota_hero_axe" //neji
+		{
+		  "override_hero"   "npc_dota_hero_axe"
+		  "Model" 			"models/neji/neji.vmdl"
+		  "Ability1"         "neji_kaiten"
+		  "Ability2"         "neji_internal_bleeding" 
+		  "Ability3"         "neji_byakugan" 
+		  "Ability4"         "neji_hyaku_nijuuhachi_shou"
+
+		  "MagicalResistance"            "0"
+		"ModelScale"		"0.8"
+		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+		  "AttackAnimationPoint"   "0.4"
+		 // "AttackRate"				"0.7"
+		  "AttackRange"				"128"
+		  "MovementSpeed"			"300"
+		  "AttributeBaseStrength" "18" // Base strength
+		  "AttributeStrengthGain" "1.8" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "23" // Base intelligence
+		  "AttributeIntelligenceGain" "2.4" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "21" // Base agility
+		  "AttributeAgilityGain" "1.5" // Agility bonus per level.
+		  
+	 	  "ItemSlots"
+	  	  { }
+
+	  	  "Village"			"konoha"
+		}

@@ -2,6 +2,7 @@
   Author: LearningDave
   Date: November, 2nd 2015
   Applies True damage to the caster. Cant kil the caster(1hp will be set)
+  Checks if hidan is in his Jashin Cirle(by modifier), if so the marked target gets 100% damage, else lessS
 ]]
 function self_pain( keys )
 	local caster = keys.caster

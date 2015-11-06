@@ -1,7 +1,7 @@
 --[[
 	Author: LearningDave
 	Date: november, 2th 2015.
-	Reset Hidan's hp if he would die by the received damage
+	Resets Hidan's hp if he would die by the received damage
 ]]
 function ResetHp( keys )
 	-- Variables

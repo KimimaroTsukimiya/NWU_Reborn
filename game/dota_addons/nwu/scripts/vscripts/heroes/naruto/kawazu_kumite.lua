@@ -2,6 +2,7 @@
   Author: LearningDave
   Date: October, 27th 2015
   -- Creates an Illusion, making use of the built in modifier_illusion
+  outgoing and ingoing damage values are depending on 'naruto_kage_bunshin_mastery' ability lvl
 ]]
 function ConjureImage( event )
  local target = event.target

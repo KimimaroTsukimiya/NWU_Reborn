@@ -1,7 +1,7 @@
 --[[
 	Author: LearningDave
 	Date: october, 5th 2015.
-	Teleport raikage
+	Teleports Kakashi
 ]]
 function raikage_teleport( keys )
 	local point = keys.target_points[1]

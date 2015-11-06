@@ -9,6 +9,7 @@ function gainMaxMoveSpeed( keys )
 	local duration =  ability:GetLevelSpecialValueFor("duration", ability:GetLevel() - 1)
 
 	local speed = caster:GetIdealSpeed()
+	--TODO get max ms value dynamicly
 	caster:SetBaseMoveSpeed(1000)
 
 	Timers:CreateTimer( duration, function()
