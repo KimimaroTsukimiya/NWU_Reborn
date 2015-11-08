@@ -18,6 +18,7 @@
 	"precache"
 	{
 				"particle"	"particles/generic_gameplay/generic_silence.vpcf"
+				"particle"	"particles/units/heroes/neji/baguam.vpcf"
 	}	
 
 	// Casting
@@ -194,8 +195,7 @@
 		{
 			"IsDebuff"	"1"
 			
-			"EffectName"	"particles/units/heroes/hero_bane/bane_fiends_grip.vpcf"
-			"EffectAttachType"	"attach_origin"
+			
 
 			"OverrideAnimation" "ACT_DOTA_FLAIL"
 
@@ -250,6 +250,9 @@
 		"modifier_hyaku_nijuuhachi_shou_caster"
 		{
 			"IsHidden"	"1"
+
+			"EffectName"	"particles/units/heroes/neji/baguam.vpcf"
+			"EffectAttachType"	"attach_origin"
 
 			"States"
 			{
