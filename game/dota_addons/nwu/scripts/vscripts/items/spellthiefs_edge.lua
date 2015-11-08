@@ -12,6 +12,7 @@ function givegold(keys)
 	local max_stacks = ability:GetLevelSpecialValueFor("gain_gold_max_stacks", (ability:GetLevel() - 1))
 	local gold_gain_cd = ability:GetLevelSpecialValueFor("gold_gain_cd", (ability:GetLevel() - 1))
 	local gold_gain = ability:GetLevelSpecialValueFor("gold_gain", (ability:GetLevel() - 1))
+	local gold_gain = ability:GetLevelSpecialValueFor("extra_damage", (ability:GetLevel() - 1))
 	local current_stacks = keys.ability.current_stacks
 	local modifier_name = "item_spellthiefs_edge_modifier"
 		if target:IsHero() and (target:GetTeamNumber() ~= caster:GetTeamNumber()) and keys.ability.current_stacks > 0  and not keys.ability.longCD then 
@@ -21,6 +22,15 @@ function givegold(keys)
 			PopupGoldGain(caster, gold_gain)
 			--reduce stack count
 			keys.ability.current_stacks = keys.ability.current_stacks - 1
+
+			local damageTable = {
+			victim = target,
+			attacker = caster,
+			damage = damage,
+			damage_type = 'DAMAGE_TYPE_MAGICAL'
+			}
+			ApplyDamage( damageTable )
+
 			--show the new stack to the player
 			caster:SetModifierStackCount( modifier_name, ability, keys.ability.current_stacks)
 			--call stackItem-> starts timers to restack the item
