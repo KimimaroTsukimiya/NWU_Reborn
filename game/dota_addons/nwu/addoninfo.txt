@@ -5,7 +5,7 @@
   "IsPlayable"  "1"
   "nwu"
   {
-          "MaxPlayers"                    "10"
+          "MaxPlayers"                    "8"
   }
   "dota"
   {
