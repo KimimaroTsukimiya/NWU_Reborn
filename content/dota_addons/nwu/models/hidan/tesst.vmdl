@@ -1105,7 +1105,7 @@ CVanimGroup CVanimGroup_0
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
-				bool m_bLoop = false
+				bool m_bLoop = true
 				bool m_bSmoothLoop = false
 				int m_nSmoothLoopStart = 0
 				int m_nSmoothLoopEnd = 0
@@ -1119,7 +1119,11 @@ CVanimGroup CVanimGroup_0
 			bool m_bDisable = false
 			CActivity[] m_Activities = 
 			[
-				
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_RUN"
+					int m_nWeight = 1
+				}
 			]
 			CAnimationEvent[] m_AnimationEvents = 
 			[
