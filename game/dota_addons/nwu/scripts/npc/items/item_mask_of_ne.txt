@@ -36,7 +36,6 @@
          "Orb"
            {
               "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
-              "ProjectileName" "particles\items2_fx\skadi_projectile.vpcf"
            }
 
         "OnOrbImpact"

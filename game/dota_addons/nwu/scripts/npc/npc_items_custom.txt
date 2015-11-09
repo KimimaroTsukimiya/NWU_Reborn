@@ -6301,7 +6301,6 @@
          "Orb"
            {
               "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
-              "ProjectileName" "particles\items2_fx\skadi_projectile.vpcf"
            }
 
         "OnOrbImpact"
@@ -6500,16 +6499,16 @@
 	         "Orb"
 	           {
 	              "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
-	              "ProjectileName" "particles\items2_fx\skadi_projectile.vpcf"
 	           }
 	
 	        "OnOrbImpact"
 	        {
-	           "Lifesteal"
+	           "RunScript"
 	          {
-	            "Target"    "ATTACKER"
-	            "LifestealPercent" "%lifesteal_bonus"
-	          }  
+	            "ScriptFile"      "items/mask_of_ne.lua"
+	            "Function"        "modifier_item_lifesteal_datadriven_on_orb_impact"
+	            "modifier_name"   "modifier_item_lifesteal_datadriven_lifesteal"
+	          } 
 	        } 
 	      }
 	      "custom_frenzy"
@@ -6522,6 +6521,20 @@
 	            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%frenzy_as"
 	          }
 	      }
+	            "modifier_item_lifesteal_datadriven_lifesteal"
+	    {
+	      "Passive"     "0"
+	      "IsHidden"      "1"
+	      
+	      "OnDealDamage"
+	      {
+	        "Lifesteal"
+	        {
+	          "Target"      "ATTACKER"
+	          "LifestealPercent"  "%lifesteal_bonus"
+	        }
+	      }
+	    }
 	    }
 	    // Special  
 	    //-------------------------------------------------------------------------------------------------------------
@@ -9105,16 +9118,35 @@
 	              "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
 	              "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
 	          }
-	
-	          "OnDealDamage"
-	        {
-	          "Lifesteal"
+	          "Orb"
+	           {
+	              "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
+	           }
+	         "OnOrbImpact"
 	          {
-	            "Target"            "ATTACKER"
-	            "LifestealPercent"  "%lifesteal_bonus"
-	          }
+	           "RunScript"
+	          {
+	            "ScriptFile"      "items/mask_of_ne.lua"
+	            "Function"        "modifier_item_lifesteal_datadriven_on_orb_impact"
+	            "modifier_name"   "modifier_item_lifesteal_datadriven_lifesteal"
+	          } 
+	        } 
+	      }
+	      "modifier_item_lifesteal_datadriven_lifesteal"
+	    {
+	      "Passive"     "0"
+	      "IsHidden"      "1"
+	      
+	      "OnDealDamage"
+	      {
+	        "Lifesteal"
+	        {
+	          "Target"      "ATTACKER"
+	          "LifestealPercent"  "%lifesteal_bonus"
 	        }
 	      }
+	    }
+	      
 	
 	
 	    }
