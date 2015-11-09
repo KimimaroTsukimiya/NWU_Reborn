@@ -53,8 +53,8 @@ end
 function GameMode:LightsOut()
     GameRules:SetTimeOfDay( 0.8 )
 end
---[[Author: https://github.com/MNoya/DotaCraft/blob/01a29892b124f695cadd0a134afb8d056c83015a/game/dota_addons/dotacraft/scripts/vscripts/developer.lua
-    Night is arriving!->Nighttime
+--[[Author: LearningDave
+    All players get 1000 manareg and have no cds
 ]]
 function GameMode:Wtf()
     if WTF_MODE then
@@ -63,17 +63,24 @@ function GameMode:Wtf()
         WTF_MODE = true
     end
     local cmdPlayer = Convars:GetCommandClient()
-    local pID = cmdPlayer:GetPlayerID()
-    local hero = PlayerResource:GetPlayer(pID):GetAssignedHero()
+    local PlayerCount = PlayerResource:GetPlayerCount() - 1
     if  WTF_MODE then
         Timers:CreateTimer( function()
-            for i=0, hero:GetAbilityCount()-1 do 
-                if  hero:GetAbilityByIndex(i) ~= nil then
-                    hero:GetAbilityByIndex(i):EndCooldown()
+            for i=0, PlayerCount do
+                if PlayerResource:IsValidPlayer(i) then
+                    local player = PlayerResource:GetPlayer(i)
+                    
+                    local hero = player:GetAssignedHero()
+                    hero:SetBaseManaRegen(1000)
+                    for i=0, hero:GetAbilityCount()-1 do 
+                        if  hero:GetAbilityByIndex(i) ~= nil then
+                            hero:GetAbilityByIndex(i):EndCooldown()
+                        end
+                    end
                 end
             end
             if WTF_MODE then
-                return 0.3
+                return 0.003
             else
                 return nil
             end        
@@ -85,8 +92,6 @@ function GameMode:Wtf()
     else
         GameRules:SendCustomMessage("Cheat disabled!", 0, 0)
     end
-    hero:SetBaseManaRegen(1000)
-
 end
 --[[Author: LearningDave
   Date: october, 30th 2015.
