@@ -1,9 +1,10 @@
 WTF_MODE = false
 
 CHEAT_CODES = {
-    ["wtf"] = function() GameMode:Wtf() end,              -- "Set time of day to dusk"    
-    ["gold"] = function(arg) GameMode:Gold(arg) end,              -- "Set time of day to dusk"    
-    ["lvlup"] = function(arg) GameMode:LvlUp(arg) end,                -- "Levels up your hero level x times"        
+    ["wtf"] = function() GameMode:Wtf() end,              -- "Toggles Wtf-mode: Gives all playes no cd on their abilities and 1k manareg"    
+    ["gold"] = function(arg) GameMode:Gold(arg) end,              -- "Gives the player x gold"    
+    ["repick"] = function(arg) GameMode:Repick(arg) end,              -- "Changes the Hero of the player"    
+    ["lvlup"] = function(arg) GameMode:LvlUp(arg) end,                -- "The player lvlups x levels"        
     ["riseandshine"] = function() GameMode:RiseAndShine() end,        -- "Set time of day to dawn" 
     ["lightsout"] = function() GameMode:LightsOut() end,              -- "Set time of day to dusk"          
 }
@@ -12,7 +13,7 @@ function GameMode:OnPlayerChat(keys)
 	local text = keys.text
 	local playerID = keys.userid-1
 	local bTeamOnly = keys.teamonly
-
+    GameMode:Setup_Hero_Tables()
     -- Handle '-command'
     if StringStartsWith(text, "-") then
         text = string.sub(text, 2, string.len(text))
@@ -105,3 +106,65 @@ function GameMode:Gold(value)
 
     GameRules:SendCustomMessage("Cheat enabled!", 0, 0)
 end
+--[[Author: LearningDave
+  Date: november, 9th 2015.
+  Gives the player a new hero
+]]
+function GameMode:Repick(value)
+    local cmdPlayer = Convars:GetCommandClient()
+    local pID = cmdPlayer:GetPlayerID()
+    if  value then   
+        if tableContains(GameRules.nwrHeroTable, value) then
+            local hero_index = getIndex(GameRules.nwrHeroTable, value)
+            newHeroName = GameRules.heroTable[hero_index]
+            PlayerResource:ReplaceHeroWith(pID, newHeroName, 0, 0)
+        end
+    end
+   
+end
+--[[Author: LearningDave
+  Date: november, 9th 2015.
+  If not done yet, sets up hero tables to match naruto name to dota hero name
+]]
+function GameMode:Setup_Hero_Tables()
+    -- setup race reference table
+    if GameRules.heroTable == nil then
+        GameRules.heroTable = {}
+        GameRules.heroTable[1] = "npc_dota_hero_lion"
+        GameRules.heroTable[2] = "npc_dota_hero_centaur"
+        GameRules.heroTable[3] = "npc_dota_hero_doom_bringer"
+        GameRules.heroTable[4] = "npc_dota_hero_antimage"
+        GameRules.heroTable[5] = "npc_dota_hero_earthshaker"
+        GameRules.heroTable[6] = "npc_dota_hero_windrunner"
+        GameRules.heroTable[7] = "npc_dota_hero_kunkka"
+        GameRules.heroTable[8] = "npc_dota_hero_ogre_magi"
+        GameRules.heroTable[9] = "npc_dota_hero_dragon_knight"
+        GameRules.heroTable[10] = "npc_dota_hero_sven"
+        GameRules.heroTable[11] = "npc_dota_hero_sand_king"
+        GameRules.heroTable[12] = "npc_dota_hero_phantom_assassin"
+        GameRules.heroTable[13] = "npc_dota_hero_storm_spirit"
+        GameRules.heroTable[14] = "npc_dota_hero_juggernaut"
+        GameRules.heroTable[15] = "npc_dota_hero_bloodseeker"
+        GameRules.heroTable[16] = "npc_dota_hero_axe"
+    end
+    if GameRules.nwrHeroTable == nil then
+        GameRules.nwrHeroTable = {}
+        GameRules.nwrHeroTable[1] = "gaara"
+        GameRules.nwrHeroTable[2] = "guy"
+        GameRules.nwrHeroTable[3] = "hidan"
+        GameRules.nwrHeroTable[4] = "itachi"
+        GameRules.nwrHeroTable[5] = "kakashi"
+        GameRules.nwrHeroTable[6] = "kidoumaru"
+        GameRules.nwrHeroTable[7] = "kisame"
+        GameRules.nwrHeroTable[8] = "madara"
+        GameRules.nwrHeroTable[9] = "naruto"
+        GameRules.nwrHeroTable[10] = "onoki"
+        GameRules.nwrHeroTable[11] = "raikage"
+        GameRules.nwrHeroTable[12] = "sakura"
+        GameRules.nwrHeroTable[13] = "sasuke"
+        GameRules.nwrHeroTable[14] = "yondaime"
+        GameRules.nwrHeroTable[15] = "zabuza"
+        GameRules.nwrHeroTable[16] = "neji"
+    end
+end
+
