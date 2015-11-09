@@ -7,3 +7,6 @@
 *.bin
 *.pad
 npc_abilities_custom.txt
+npc_heroes_custom
+npc_items_custom
+npc_units_custom
