@@ -80,3 +80,17 @@ function extraGold( keys)
 	keys.ability.extra_gold_total = keys.ability.extra_gold_total + extra_gold_per_seconds
 	keys.caster:SetModifierStackCount( keys.modifier_name, keys.ability, keys.ability.extra_gold_total)
 end
+--[[Author: LearningDave
+  Date: october, 19th 2015.
+  Gives the Caster of 'spell thiefs edge' bonus gold if he denies a creep.
+  ]]
+function ninjaInfoCardsDeny(killedUnit, killerEntity)
+  --Support Item Check
+  if killedUnit:IsNeutralUnitType() and killerEntity:IsRealHero() and killerEntity:HasItemInInventory("item_ninja_info_cards") and killedUnit:GetTeamNumber() == killerEntity:GetTeamNumber() then 
+      --TODO add dynamic value goldgain isntead of + 5
+        -- add gold to killerEntity(hero who denied the creep)
+      killerEntity:ModifyGold(5, false, 0)
+      -- make player see his bonus gold
+      PopupGoldGain(killerEntity, 5)
+  end
+end
