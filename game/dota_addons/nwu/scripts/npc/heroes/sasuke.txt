@@ -20,6 +20,7 @@
 		  "AttributeBaseAgility" "16" // Base agility
 		  "AttributeAgilityGain" "2.1" // Agility bonus per level.
 		  "ModelScale"		"0.7"
+		 "LoadoutScale"		"0.7" 
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha_scarred"

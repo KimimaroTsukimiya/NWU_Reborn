@@ -8,7 +8,7 @@
 		  "Ability4"         "gaara_sabaku_taiso"
 		  "ModelScale"		"0.4"
 		  "MagicalResistance"            "0"
-		
+			"LoadoutScale"		"0.4" 
 		  
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"

@@ -9,6 +9,7 @@
 
 		  "MagicalResistance"            "0"
 			"ModelScale"		"0.9"
+			"LoadoutScale"		"0.9" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"

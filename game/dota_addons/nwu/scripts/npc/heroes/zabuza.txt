@@ -6,6 +6,7 @@
 		  "Ability3"        "zabuza_weak_spot"
 		  "Ability4"        "zabuza_track" 
 		  "ModelScale"		"1.08"
+		  "LoadoutScale"		"1.08" 
 		  "Model" 			"models/zabuza/zabuza.vmdl"
 	 	  "ItemSlots"
 	  	  { }

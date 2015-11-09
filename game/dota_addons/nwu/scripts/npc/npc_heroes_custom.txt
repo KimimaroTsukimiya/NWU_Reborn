@@ -10,7 +10,7 @@
 		  "Ability4"         "gaara_sabaku_taiso"
 		  "ModelScale"		"0.4"
 		  "MagicalResistance"            "0"
-		
+			"LoadoutScale"		"0.4" 
 		  
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -170,6 +170,7 @@
 
 		  "MagicalResistance"            "0"
 			"ModelScale"		"0.9"
+			"LoadoutScale"		"0.9" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -226,6 +227,7 @@
 
 		 "MagicalResistance"            "0"
 		"ModelScale"		"1.08"
+		"LoadoutScale"		"1.08" 
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
@@ -252,6 +254,7 @@
 	
 			  "MagicalResistance"            "0"
 			"ModelScale"		"0.8"
+			"LoadoutScale"		"0.8" 
 			  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 			  "AttackAnimationPoint"   "0.4"
 			 // "AttackRate"				"0.7"
@@ -360,6 +363,7 @@
 		  "AttributeBaseAgility" "16" // Base agility
 		  "AttributeAgilityGain" "2.1" // Agility bonus per level.
 		  "ModelScale"		"0.7"
+		 "LoadoutScale"		"0.7" 
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha_scarred"
@@ -400,6 +404,7 @@
 			  "Ability3"        "zabuza_weak_spot"
 			  "Ability4"        "zabuza_track" 
 			  "ModelScale"		"1.08"
+			  "LoadoutScale"		"1.08" 
 			  "Model" 			"models/zabuza/zabuza.vmdl"
 		 	  "ItemSlots"
 		  	  { }
