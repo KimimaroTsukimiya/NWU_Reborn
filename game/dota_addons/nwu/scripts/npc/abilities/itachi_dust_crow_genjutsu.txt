@@ -13,6 +13,7 @@
 		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
 		"particle"		"particles/units/heroes/hero_antimage/antimage_blink_end.vpcf"
 		"particle"		"particles/units/heroes/hero_antimage/antimage_blink_start.vpcf"
+		"particle"		"particles/world_creature_fx/crows.vpcf"
 	}
 
 	// Time		
@@ -63,9 +64,9 @@
 
 		"AttachEffect"
 		{
-			"EffectName"	"particles/units/heroes/hero_antimage/antimage_blink_end.vpcf"
-			"Target"		"CASTER"
-			"EffectAttachType"	"follow_origin"
+			"EffectName"		"particles/world_creature_fx/crows.vpcf"
+			"Target"			"CASTER"
+			"EffectAttachType"	"attach_origin"
 		}
 	}
 }

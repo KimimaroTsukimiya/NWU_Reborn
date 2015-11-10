@@ -11,6 +11,12 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityDamage"					"120 190 260 330"
+
+	"precache"
+	{
+		"particle"		"particles/units/heroes/hero_mirana/mirana_moonlight_recipient.vpcf"
+		"soundfile"  	"soundevents/game_sounds_heroes/game_sounds_luna.vsndevts"
+	}
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -35,11 +41,22 @@
 
 	"OnSpellStart"
 	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Luna.Eclipse.Cast"
+			"Target" 		"CASTER"
+		}
 		"ApplyModifier"
 		{
 			"ModifierName"	"modifier_itachi_tsukiyomi_stun"
 			"Target" 		"TARGET"
 			"Duration"		"%duration"
+		}
+		"Damage"
+		{
+			"Target"	"TARGET"
+			"Type"		"DAMAGE_TYPE_MAGICAL"
+			"Damage"	"%AbilityDamage"
 		}
 	}
 
@@ -55,6 +72,20 @@
 			"States"
 			{
 				"MODIFIER_STATE_STUNNED"        "MODIFIER_STATE_VALUE_ENABLED"
+			}
+
+			"OnCreated"
+			{			
+				"AttachEffect"
+				{
+					"Target"			"TARGET"
+					"EffectName"		"particles/units/heroes/hero_mirana/mirana_moonlight_recipient.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"ControlPointEntities"
+					{
+						"TARGET"	"follow_origin"
+					}
+				}
 			}
 
 			"OnDestroy"
