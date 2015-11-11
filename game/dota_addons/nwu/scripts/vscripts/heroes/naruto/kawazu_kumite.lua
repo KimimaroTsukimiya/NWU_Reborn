@@ -13,10 +13,15 @@ function ConjureImage( event )
  local origin = caster:GetAbsOrigin() + RandomVector(100)
  local duration = ability:GetLevelSpecialValueFor( "illusion_duration", ability:GetLevel() - 1 )
  
- local ability_index = event.caster:FindAbilityByName("naruto_kage_bunshin_mastery"):GetAbilityIndex()
- local kage_bunshin_mastery_ability = event.caster:GetAbilityByIndex(ability_index)
- local outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage_percent", kage_bunshin_mastery_ability:GetLevel())
- local incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage_percent", kage_bunshin_mastery_ability:GetLevel())
+ if event.caster:HasAbility("naruto_kage_bunshin_mastery") then
+   local ability_index = event.caster:FindAbilityByName("naruto_kage_bunshin_mastery"):GetAbilityIndex()
+   local kage_bunshin_mastery_ability = event.caster:GetAbilityByIndex(ability_index)
+   local outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage_percent", kage_bunshin_mastery_ability:GetLevel())
+   local incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage_percent", kage_bunshin_mastery_ability:GetLevel())
+ else
+   local outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage_percent", 0)
+   local incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage_percent", 0)
+ end
 
  -- handle_UnitOwner needs to be nil, else it will crash the game.
  local illusion = CreateUnitByName(unit_name, origin, true, caster, nil, caster:GetTeamNumber())
