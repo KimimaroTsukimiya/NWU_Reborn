@@ -35,7 +35,6 @@ function FinishTeleport(keys)
 	local target = keys.target
 	local player = caster:GetPlayerOwner()
 	FindClearSpaceForUnit(caster, target:GetAbsOrigin(), true)
-	caster:Stop()
 	caster:StopSound("Hero_KeeperOfTheLight.Recall.Cast")
 	ParticleManager:DestroyParticle(keys.ability.particle_caster, false)
 	ParticleManager:DestroyParticle(keys.ability.particle_target, false)

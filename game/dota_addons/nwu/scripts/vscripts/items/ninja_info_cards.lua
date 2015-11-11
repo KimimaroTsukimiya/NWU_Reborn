@@ -56,8 +56,8 @@ end
   ]]
 function ninjaInfoCardsSetCD(killedUnit, killerEntity)
   --Support Item Check
-  if killedUnit:IsNeutralUnitType() and killerEntity:IsRealHero() and killerEntity:HasItemInInventory("item_ninja_info_cards") and killedUnit:GetTeamNumber() ~= killerEntity:GetTeamNumber() then 
-      local itemIndex = GameMode:GetItemIndex("item_item_ninja_info_cards", killerEntity)
+  if killedUnit:IsCreep() and killerEntity:IsRealHero() and killerEntity:HasItemInInventory("item_ninja_info_cards") and killedUnit:GetTeamNumber() ~= killerEntity:GetTeamNumber() then 
+      local itemIndex = GameMode:GetItemIndex("item_ninja_info_cards", killerEntity)
       killerEntity:GetItemInSlot(itemIndex):StartCooldown(12)
       killerEntity:GetItemInSlot(itemIndex).longCD = true
       Timers:CreateTimer( 12, function()
