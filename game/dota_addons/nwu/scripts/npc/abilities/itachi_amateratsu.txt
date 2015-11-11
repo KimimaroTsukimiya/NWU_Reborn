@@ -5,7 +5,7 @@
 	"BaseClass"					"ability_datadriven"
 	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	//"AbilityTextureName"		"antimage_spell_shield"
-
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"

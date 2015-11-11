@@ -3,6 +3,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"ability_datadriven"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -30,7 +31,7 @@
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityChannelTime"			"2.5 2.5 2.5"
-	"AbilityCooldown"				"1 160"
+	"AbilityCooldown"				"160"
 
 	//Damage
 	"AbilityDamage"					"400 525 650"
