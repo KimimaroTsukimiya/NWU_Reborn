@@ -34,7 +34,7 @@ end
 --[[
 	Author LearningDave
 	Date october, 9th 2015.
-	Reduces the mana of the caster and removes swap the model if zero mana is reached
+	Reduces the mana of the caster and swap the model if zero mana is reached
 ]]
 function ManaCost( keys )
 	-- Variables

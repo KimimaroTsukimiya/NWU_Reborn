@@ -156,12 +156,7 @@
 
 	"OnProjectileFinish"
 	{
-		"RunScript"
-		{
-			"ScriptFile"	"heroes/madara/fire_release.lua"
-			"Function"		"fireExplosion"
-			"Target"		"POINT"
-		}
+
 
 		"FireSound"
 		{

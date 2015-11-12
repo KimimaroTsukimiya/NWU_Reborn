@@ -6,4 +6,7 @@
 *.vagrp_c
 *.bin
 *.pad
-npc_abilities_custom.txt
+game/dota_addons/nwu/scripts/npc/npc_abilities_custom.txt
+game/dota_addons/nwu/scripts/npc/npc_heroes_custom.txt
+game/dota_addons/nwu/scripts/npc/npc_items_custom.txt
+game/dota_addons/nwu/scripts/npc/npc_units_custom.txt

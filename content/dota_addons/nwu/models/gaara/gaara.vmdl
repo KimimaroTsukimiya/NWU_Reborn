@@ -540,6 +540,11 @@ CVanimGroup CVanimGroup_1
 				{
 					string m_Name = "ACT_DOTA_IDLE"
 					int m_nWeight = 1
+				},
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_CAPTURE"
+					int m_nWeight = 1
 				}
 			]
 			CAnimationEvent[] m_AnimationEvents = 

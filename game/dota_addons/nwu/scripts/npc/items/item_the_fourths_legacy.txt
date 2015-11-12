@@ -1,12 +1,20 @@
 "item_the_fourths_legacy"
   {
     "ID"                      "1148"
-    "AbilityBehavior"         "DOTA_UNIT_TARGET_BUILDING"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_BUILDING | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
     "BaseClass"               "item_datadriven"
     "AbilityTextureName"      "item_the_fourths_legacy"
     "AbilityCooldown"         "50.0"
     "AbilityCastAnimation"    "ACT_DOTA_DISABLED"
     "ItemQuality"             "rare"
+
+      // Time   
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityChannelTime"      "3.0 3.0 3.0"
+
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
@@ -24,16 +32,49 @@
     "ItemAliases"               "boots of travel;active;teleport;ms;movementspeed"
     "OnSpellStart"
         {
-            "ApplyModifier"
+            "RunScript"
             {
-                "Target"                        "CASTER"
-                "ModifierName"                  "custom_speedup"
+              "ScriptFile"  "items/the_fourths_legacy.lua"
+              "Function"    "Teleport"
             }
         }
 
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+
+  "OnSpellStart"
+    {
+    "RunScript"
+    {
+      "ScriptFile"  "items/the_fourths_legacy.lua"
+      "Function"    "ChannelTeleport"
+    }
+  }
+
+  "OnChannelFinish"
+  {
+    "RunScript"
+    {
+      "ScriptFile"  "items/the_fourths_legacy.lua"
+      "Function"    "FinishTeleport"
+    }
+
+    "RemoveModifier"
+    {
+      "ModifierName"  "modifier_stunned"
+      "Target"     "TARGET"
+    }
+  }
+
+  "OnChannelInterrupted"
+  {
+    "RemoveModifier"
+    {
+      "ModifierName"  "modifier_stunned"
+      "Target"     "TARGET"
+    }
+  }
 
     "Modifiers"
     {
@@ -48,7 +89,6 @@
               "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
           }
       }
-
     }
     // Special  
     //-------------------------------------------------------------------------------------------------------------

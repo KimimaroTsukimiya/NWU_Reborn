@@ -243,7 +243,7 @@ function GameMode:OnEntityKilled( keys )
   local damagebits = keys.damagebits -- This might always be 0 and therefore useless
   --Items
   if killerEntity ~= nil then
-    GameMode:SpellThiefsEdgeOnEntityKilled(killedUnit, killerEntity)
+    GameMode:SupportItemCooldownReset(killedUnit, killerEntity)
   end
 
 end

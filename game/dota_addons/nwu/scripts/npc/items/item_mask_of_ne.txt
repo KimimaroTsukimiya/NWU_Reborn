@@ -28,7 +28,7 @@
     
     "Modifiers"
     {
-      "modifier_lifesteal"
+      "modifier_mask_of_ne"
       {
          "Passive" "1"
          "IsHidden"  "1"
@@ -36,18 +36,32 @@
          "Orb"
            {
               "Priority"  "DOTA_ORB_PRIORITY_ABILITY"
-              "ProjectileName" "particles\items2_fx\skadi_projectile.vpcf"
            }
 
         "OnOrbImpact"
         {
-           "Lifesteal"
+           "RunScript"
           {
-            "Target"    "ATTACKER"
-            "LifestealPercent" "%bonus_lifesteal"
-          }  
+            "ScriptFile"      "items/mask_of_ne.lua"
+            "Function"        "modifier_item_lifesteal_datadriven_on_orb_impact"
+            "modifier_name"   "modifier_item_lifesteal_datadriven_lifesteal"
+          }
          } 
       }
+      "modifier_item_lifesteal_datadriven_lifesteal"
+    {
+      "Passive"     "0"
+      "IsHidden"      "1"
+      
+      "OnDealDamage"
+      {
+        "Lifesteal"
+        {
+          "Target"      "ATTACKER"
+          "LifestealPercent"  "%bonus_lifesteal"
+        }
+      }
+    }
     }
     // Special  
     //-------------------------------------------------------------------------------------------------------------

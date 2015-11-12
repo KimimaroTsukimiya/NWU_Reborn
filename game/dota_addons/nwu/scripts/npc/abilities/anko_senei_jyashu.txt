@@ -1,0 +1,58 @@
+// Anko's Senei Jyashu Ability Modified from Bristleback Ability
+// Author: Zenicus
+// Date: 11.11.2015.
+// Game version: 6.84
+"anko_senei_jyashu"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityTextureName"			"bristleback_bristleback"
+	
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"300"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"aura_radius"		"300"		// If you change this, also change the AbilityCastRange above
+		}
+		"02"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"snake_damage"		"70 90 110 130" 
+		}
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"snake_damage_interval"		"0.2" 
+		}
+		"04"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"senei_jyashu_resistance"		"0.04, 0.08, 0.12, 0.16"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_senei_jyashu_datadriven"
+		{
+			"Passive"		"1"
+			"IsHidden"		"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%senei_jyashu_resistance"
+			}
+		}
+
+	}
+}
+

@@ -17,6 +17,12 @@ function wood_release( keys )
 			posX = target_point.x + r * math.cos((math.pi*2/tree_count) * i)
 			posY = target_point.y + r * math.sin((math.pi*2/tree_count) * i)
 			CreateTempTree( Vector( posX, posY, 0.0 ), tree_duration )
+			local nearbyUnits = FindUnitsInRadius(keys.caster:GetTeamNumber(), Vector( posX, posY, 0.0 ), nil, 50, DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, FIND_ANY_ORDER, false)
+			if nearbyUnits then
+				for _,unit in pairs(nearbyUnits) do
+					FindClearSpaceForUnit(unit, target_point, true)
+				end
+			end
 			--local dummy = CreateUnitByName( "npc_tree", Vector(posX, posY, 0.0), false, keys.caster, nil, keys.caster:GetTeamNumber() )
 	end
 	AddFOWViewer( keys.caster:GetTeamNumber(), target_point, tree_vision, tree_duration, false )

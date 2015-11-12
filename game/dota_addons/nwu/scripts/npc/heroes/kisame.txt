@@ -1,0 +1,30 @@
+		"npc_dota_hero_kunkka" //kisame
+		{
+		  "override_hero"   "npc_dota_hero_kunkka"
+		  "Model" 			"models/kisame/kisame.vmdl"
+		 "Ability1"         "kisame_suikodan_no_jutsu"
+		  "Ability2"         "kisame_mizu_bunshin_no_jutsu" 
+		  "Ability3"         "kisame_samehada" 
+		  "Ability4"         "kisame_water_prison"
+
+		  "MagicalResistance"            "0"
+			"ModelScale"		"0.9"
+			"LoadoutScale"		"0.9" 
+		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
+		  "AttackAnimationPoint"   "0.4"
+		 // "AttackRate"				"0.7"
+		  "AttackRange"				"128"
+		  "MovementSpeed"			"315"
+		  "AttributeBaseStrength" "22" // Base strength
+		  "AttributeStrengthGain" "2.8" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "19" // Base intelligence
+		  "AttributeIntelligenceGain" "1.9" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "16" // Base agility
+		  "AttributeAgilityGain" "1.7" // Agility bonus per level.
+		  
+	 	  "ItemSlots"
+	  	  { }
+
+
+	  	  "Village"			"kirigakure_scarred"
+		}

@@ -1,7 +1,7 @@
 --[[
 	Author: LearningDave
 	Date: october, 9th 2015.
-	Steals mana from target
+	Steals mana from target and gives it to the caster
 ]]
 function StealMana( event )
 	-- Variables
@@ -18,11 +18,10 @@ function StealMana( event )
 	local new_caster_mana = caster:GetMana() + reduce_mana_amount;
 	caster:SetMana(new_caster_mana)
 end
-
 --[[
 	Author: LearningDave
 	Date: october, 9th 2015.
-	Reset Cooldown after attack islanded
+	Resets Cooldown after attack is landed
 ]]
 function SamehadaResetCooldown( keys )
 	-- Variables

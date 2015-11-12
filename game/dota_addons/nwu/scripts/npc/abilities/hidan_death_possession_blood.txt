@@ -6,7 +6,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityTextureName"			"hidan_death_possession_blood"
 	"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
-	//"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastPoint"				"0.5"
@@ -71,7 +71,7 @@
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
 		"particle"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
-		"model"		"models/kisame_new/kisame_samehada.vmdl"
+		"model"		"models/hidan/hidan.vmdl"
 	}
 
 	"OnSpellStart"
@@ -131,7 +131,7 @@
 				{
 					"ScriptFile"			"heroes/hidan/death_possession_blood.lua"
 					"Function"				"ModelSwapStart"
-					"model"					"models/kisame_new/kisame_samehada.vmdl"
+					"model"					"models/hidan/hidan.vmdl"
 					"projectile_model"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 				}
 

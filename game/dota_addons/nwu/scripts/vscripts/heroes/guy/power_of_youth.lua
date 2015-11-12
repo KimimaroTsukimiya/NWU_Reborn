@@ -1,7 +1,7 @@
 --[[
   Author: LearningDave
   Date: October, 28th 2015
-  Initiates the valies which are needed for 'power_of_youth'
+  Initiates the variables which are needed for 'power_of_youth'
 ]]
 function power_of_youth_initiate( keys )
 	keys.ability.stacks = 0

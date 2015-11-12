@@ -16,7 +16,7 @@
   "AbilityCastPoint"        "0.0"
   "AbilityCooldown"       "12.0"
   "AbilityManaCost"       "0"
-  
+  "ItemShareability"      "ITEM_NOT_SHAREABLE"
   // Item Info
   //-------------------------------------------------------------------------------------------------------------
   "ItemCost"            "2250"

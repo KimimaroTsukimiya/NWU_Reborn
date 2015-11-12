@@ -25,7 +25,7 @@
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
+    
 
      "precache"
       {
@@ -66,7 +66,6 @@
       {
          "Passive" "1"
          "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
         "Properties"
           {
               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"

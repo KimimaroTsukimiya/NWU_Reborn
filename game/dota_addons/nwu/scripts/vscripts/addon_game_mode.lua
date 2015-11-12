@@ -37,6 +37,29 @@ function Precache( context )
   --PrecacheItemByNameSync("item_example_item", context)
 
 
+  -- Models
+  --PrecacheModel("models/asuma/asuma.vmdl", context)
+  PrecacheModel("models/gaara/gaara.vmdl", context)
+  PrecacheModel("models/gai/gai.vmdl", context)
+  PrecacheModel("models/hidan/tesst.vmdl", context)
+  PrecacheModel("models/itachi/itachi.vmdl", context)
+  --PrecacheModel("models/jiroubo/jiroubo.vmdl", context)
+  PrecacheModel("models/kakashi/kakashi.vmdl", context)
+  --PrecacheModel("models/kidoumaru/kidoumaru.vmdl", context)
+ -- PrecacheModel("models/kimi/kimi.vmdl", context)
+  PrecacheModel("models/kisame/kisame.vmdl", context)
+  --PrecacheModel("models/kisame_new/kisame_samehada.vmdl", context)
+  PrecacheModel("models/madara/madara.vmdl", context)
+  PrecacheModel("models/naruto/naruto.vmdl", context)
+  PrecacheModel("models/neji/neji.vmdl", context)
+  --PrecacheModel("models/onuki/onuki.vmdl", context)
+  PrecacheModel("models/raikage/raikage.vmdl", context)
+  PrecacheModel("models/sakura/sakura.vmdl", context)
+  PrecacheModel("models/sasuke/sasuke.vmdl", context)
+ -- PrecacheModel("models/yondaime/yondaime.vmdl", context)
+  PrecacheModel("models/zabuza/zabuza.vmdl", context)
+  PrecacheModel("models/items/tiny_01/tiny_haunted_tree.vmdl", context)
+
   -- Stuff
   PrecacheResource("particle_folder", "particles/hero", context)
   PrecacheResource("particle_folder", "particles/ambient", context)
@@ -48,7 +71,7 @@ function Precache( context )
   PrecacheResource("particle_folder", "particles/items3_fx", context)
 
 
-PrecacheModel("models/items/tiny_01/tiny_haunted_tree.vmdl", context)
+
   -- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
   -- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way
   PrecacheUnitByNameSync("npc_dota_hero_ancient_apparition", context)

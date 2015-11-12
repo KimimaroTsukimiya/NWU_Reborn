@@ -1,3 +1,8 @@
+--[[
+	Author: LearningDave
+	Date: october, 5th 2015.
+	Gives the caster the 2nd Ability of the target.
+]]
 function sharingan( keys )
 	local caster = keys.caster
 	local target = keys.target

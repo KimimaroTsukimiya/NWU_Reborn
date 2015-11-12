@@ -1,0 +1,13 @@
+"npc_dota_hero_sven" //onoki
+	{
+		"override_hero" "npc_dota_hero_sven"
+		"Ability1"	"onoki_jinton"
+		"Ability2"	"onoki_stalagmite_armor"
+		"Ability3"	"onoki_turn_to_dust"
+		"Ability4"	"onoki_kajutan_no_jutsu"
+		"AttributePrimary"	"DOTA_ATTRIBUTE_STRENGTH"
+		"ItemSlots"
+	  	  { }
+
+	  	 "Village"			"iwagakure"
+	}
