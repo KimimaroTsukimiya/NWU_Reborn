@@ -1,4 +1,4 @@
-// Anko's Giant Snake Ability copied from Pudge
+// Anko's Giant Snake Ability copied from Pudge's Meat Hook
 // Author: Zenicus
 // Date: 11/05/2015.
 "anko_giant_snake"

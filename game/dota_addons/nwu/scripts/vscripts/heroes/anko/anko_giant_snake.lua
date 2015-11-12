@@ -4,11 +4,11 @@ LinkLuaModifier( "modifier_meat_hook_lua", "modifiers/modifier_meat_hook_lua.lua
 
 
 --[[Author: Zenicus
+	Modified from Pudge's Hook Shot
 	Date: 11.05.2015.]]
 --------------------------------------------------------------------------------
 
 function anko_giant_snake:OnAbilityPhaseStart()
-	print ("Why does it have to be snakes!")
 	self:GetCaster():StartGesture( ACT_DOTA_OVERRIDE_ABILITY_1 )
 	return true
 end
@@ -22,7 +22,6 @@ end
 --------------------------------------------------------------------------------
 
 function anko_giant_snake:OnSpellStart()
-	print ("Why does it have to be snakes!")
 	self.bChainAttached = false
 	if self.hVictim ~= nil then
 		self.hVictim:InterruptMotionControllers( true )
