@@ -105,6 +105,11 @@
 					"Target"	"CASTER"
 					"ModifierName"	"modifier_invisible"
 				}
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/kakashi/bunshin.lua"
+					"Function"		"drawKakashi"
+				}
 			}  
 		}
 	}

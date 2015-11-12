@@ -134,7 +134,7 @@ function GameMode:Setup_Hero_Tables()
         GameRules.heroTable[2] = "npc_dota_hero_centaur"
         GameRules.heroTable[3] = "npc_dota_hero_doom_bringer"
         GameRules.heroTable[4] = "npc_dota_hero_antimage"
-        GameRules.heroTable[5] = "npc_dota_hero_earthshaker"
+        GameRules.heroTable[5] = "npc_dota_hero_beastmaster"
         GameRules.heroTable[6] = "npc_dota_hero_windrunner"
         GameRules.heroTable[7] = "npc_dota_hero_kunkka"
         GameRules.heroTable[8] = "npc_dota_hero_ogre_magi"

@@ -11,7 +11,7 @@
     //-------------------------------------------------------------------------------------------------------------
     "ItemCost"                "400"
     "ItemInitialCharges"      "0"
-    "ItemDroppable"           "0"
+    "ItemDroppable"           "1"
     "ItemPurchasable"         "1"
     "ItemSellable"            "1"
     "ItemRequiresCharges"     "0"
