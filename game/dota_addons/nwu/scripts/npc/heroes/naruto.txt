@@ -7,8 +7,8 @@
 		  "Ability3"        "naruto_kage_bunshin_mastery" 
 		  "Ability4"        "naruto_rasenshuriken"
 
-		"ModelScale"		"1.08"
-		"LoadoutScale"		"1.08" 
+		"ModelScale"		"1.00"
+		"LoadoutScale"		"1.00" 
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
