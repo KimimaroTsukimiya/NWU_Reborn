@@ -6,8 +6,6 @@
 		 // "Ability2"        "madara_wood_release" 
 		 // "Ability3"        "madara_susano" 
 		 // "Ability4"        "madara_meteor"
-
-		  "MagicalResistance"            "0"
 			
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"

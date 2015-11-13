@@ -7,7 +7,6 @@
 		  "Ability3"        "sakura_chakra_enhanced_strength" 
 		  "Ability4"        "sakura_inner_sakura"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
-		 "MagicalResistance"            "0"
 		"ModelScale"		"0.9"
 		"LoadoutScale"		"0.9" 
 		  "AttackAnimationPoint"   "0.4"

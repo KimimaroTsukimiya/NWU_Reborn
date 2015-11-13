@@ -86,7 +86,6 @@ function StormBoltHit( keys )
 
 	-- Parameters
 	local damage = ability:GetLevelSpecialValueFor("damage", ability_level)
-	local radius = ability:GetLevelSpecialValueFor("radius", ability_level)
 	local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
 
 	-- Play sound
