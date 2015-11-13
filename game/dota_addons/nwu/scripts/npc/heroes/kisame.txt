@@ -7,8 +7,8 @@
 		  "Ability3"         "kisame_samehada" 
 		  "Ability4"         "kisame_water_prison"
 
-			"ModelScale"		"0.9"
-			"LoadoutScale"		"0.9" 
+			"ModelScale"		"0.65"
+			"LoadoutScale"		"0.65" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"

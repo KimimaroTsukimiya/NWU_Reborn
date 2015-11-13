@@ -96,8 +96,8 @@
 			 // "Ability2"        "madara_wood_release" 
 			 // "Ability3"        "madara_susano" 
 			 // "Ability4"        "madara_meteor"
-			"ModelScale"		"0.7"
-			"LoadoutScale"		"0.7" 
+			"ModelScale"		"0.75"
+			"LoadoutScale"		"0.75" 
 	
 			  "AttackAnimationPoint"   "0.4"
 			 // "AttackRate"				"0.7"
@@ -166,8 +166,8 @@
 		  "Ability3"         "kisame_samehada" 
 		  "Ability4"         "kisame_water_prison"
 
-			"ModelScale"		"0.9"
-			"LoadoutScale"		"0.9" 
+			"ModelScale"		"0.7"
+			"LoadoutScale"		"0.7" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
