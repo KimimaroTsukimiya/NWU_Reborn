@@ -58,6 +58,7 @@ function Precache( context )
   PrecacheModel("models/sasuke/sasuke.vmdl", context)
  -- PrecacheModel("models/yondaime/yondaime.vmdl", context)
   PrecacheModel("models/zabuza/zabuza.vmdl", context)
+  PrecacheModel("models/props_gameplay/donkey.vmdl", context)
   PrecacheModel("models/items/tiny_01/tiny_haunted_tree.vmdl", context)
 
   -- Stuff
