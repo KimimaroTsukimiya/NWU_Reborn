@@ -405,8 +405,8 @@
 			  "Ability2"        "zabuza_kirigakure_no_jutsu"
 			  "Ability3"        "zabuza_weak_spot"
 			  "Ability4"        "zabuza_track" 
-			  "ModelScale"		"1.08"
-			  "LoadoutScale"		"1.08" 
+			  "ModelScale"		"0.90"
+			  "LoadoutScale"		"0.90" 
 			  "Model" 			"models/zabuza/zabuza.vmdl"
 		 	  "ItemSlots"
 		  	  { }
