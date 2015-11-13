@@ -10,7 +10,9 @@
 		 // "Ability2"        "madara_wood_release" 
 		 // "Ability3"        "madara_susano" 
 		 // "Ability4"        "madara_meteor"
-		
+		"ModelScale"		"0.75"
+		"LoadoutScale"		"0.75" 
+
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
