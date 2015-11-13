@@ -20,6 +20,7 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     "ItemAliases"           "robe of the magi"
+    "SideShop"            "1"
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually

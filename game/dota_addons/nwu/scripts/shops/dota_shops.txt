@@ -163,4 +163,35 @@
                 "item"      "item_red_sun"
                 "item"      "item_blue_moon"
         }
+
+        "sideshop1"
+        {
+            "item"    "item_teleport_scroll"
+            "item"    "item_firm_nunchaku"
+            "item"    "item_shinobi_claws"
+            "item"    "item_yondaime_sealed_kunai"
+            "item"    "item_kages_relic"
+            "item"    "item_anbu_mask"
+            "item"    "item_ring_of_regeneration"
+            "item"    "item_ring_of_health_datadriven"
+            "item"    "item_metal_gauntlets"
+            "item"    "item_mask_of_ne"
+            "item"    "item_samurai_helm"
+
+
+        }
+
+        "sideshop2"
+        {
+            "item"   "item_chakra_booster"
+            "item"   "item_shinobi_cloak"
+            "item"   "item_shinobi_uniform"
+            "item"   "item_broadsword_datadriven"
+            "item"   "item_training_weights"
+            "item"   "item_shinobi_sandals"
+            "item"   "item_shinobi_claws"
+            "item"   "item_snake_skin"
+            "item"   "item_anbu_cloak"
+            "item"   "item_handguards"
+        }
 }
