@@ -21,3 +21,7 @@ function   GameMode:ForeheadProtectorOnItemPickedUp(player, itemName)
 
 end
 
+
+function GameMode:ShinobiTrendsAgiOnItemPurchased( player, itemName )
+	
+end

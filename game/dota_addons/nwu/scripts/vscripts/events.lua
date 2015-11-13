@@ -91,6 +91,11 @@ function GameMode:OnItemPurchased( keys )
     GameMode:ForeheadProtectorOnItemPickedUp(player, itemName)
   end 
 
+  if  itemName == "item_firm_nunchaku" or itemName == "item_handguards" or 
+      itemName == "item_shinobi_sandals" or itemName == "item_anbu_cloak" or
+      itemName == "item_snake_skin" then
+    GameMode:ShinobiTrendsAgiOnItemPurchased(player, itemName)
+  end 
 
 end
 
@@ -295,6 +300,9 @@ function GameMode:OnItemCombined(keys)
   
   -- The cost of the item purchased
   local itemcost = keys.itemcost
+
+
+
 end
 
 -- This function is called whenever an ability begins its PhaseStart phase (but before it is actually cast)
