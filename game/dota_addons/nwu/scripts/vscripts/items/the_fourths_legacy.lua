@@ -1,6 +1,21 @@
 function ChannelTeleport( event )
 	local caster = event.caster
-	local target = event.target
+	local target_point = event.target_points[1]
+	local targetEntities = FindUnitsInRadius(caster:GetTeamNumber(), target_point, nil, 1000000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_BUILDING, 0, FIND_ANY_ORDER, false)
+  	local target = nil
+  	local distance = 10000
+	if targetEntities then
+		for _,foundTarget in pairs(targetEntities) do
+			local newDistance = (target_point - foundTarget:GetAbsOrigin()):Length2D()
+			if newDistance < distance then
+				distance = newDistance
+				target = foundTarget
+			end
+				
+		end
+	end
+  	event.ability.tptarget = target
+
 
 		-- Start teleport
 	local ability = event.ability
@@ -32,10 +47,14 @@ end
 
 function FinishTeleport(keys)
 	local caster = keys.caster
-	local target = keys.target
+	local target = keys.ability.tptarget
 	local player = caster:GetPlayerOwner()
 	FindClearSpaceForUnit(caster, target:GetAbsOrigin(), true)
 	caster:StopSound("Hero_KeeperOfTheLight.Recall.Cast")
 	ParticleManager:DestroyParticle(keys.ability.particle_caster, false)
 	ParticleManager:DestroyParticle(keys.ability.particle_target, false)
+end
+
+function removeModifierOnTarget( keys )
+	keys.ability.tptarget:RemoveModifierByName(keys.modifier_name)
 end

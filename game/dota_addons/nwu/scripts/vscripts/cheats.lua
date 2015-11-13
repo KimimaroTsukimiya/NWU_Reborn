@@ -78,6 +78,11 @@ function GameMode:Wtf()
                             hero:GetAbilityByIndex(i):EndCooldown()
                         end
                     end
+                    for i=0, 6 do 
+                        if  hero:GetItemSlot(i) ~= nil then
+                            hero:GetItemSlot(i):EndCooldown()
+                        end
+                    end
                 end
             end
             if WTF_MODE then
