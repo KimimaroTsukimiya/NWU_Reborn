@@ -8,9 +8,14 @@
 		  "Ability2"         "gaara_ryuusa_bakuryu" 
 		  "Ability3"         "gaara_suna_no_yoroi" 
 		  "Ability4"         "gaara_sabaku_taiso"
+<<<<<<< HEAD
 		  "ModelScale"		"0.35"
 		  "MagicalResistance"            "0"
 			"LoadoutScale"		"0.35" 
+=======
+		  "ModelScale"		"0.4"
+			"LoadoutScale"		"0.4" 
+>>>>>>> 465836788f50f8339fe79015732d53ffeab0d4ba
 		  
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -38,9 +43,13 @@
 		  "Ability3"        "guy_gouken_mastery" 
 		  "Ability4"        "guy_open_gates"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+<<<<<<< HEAD
 		 "MagicalResistance"            "0"
 		"ModelScale"		"0.65"
 		"LoadoutScale"		"0.65" 
+=======
+		"ModelScale"		"0.8"
+>>>>>>> 465836788f50f8339fe79015732d53ffeab0d4ba
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
@@ -71,9 +80,13 @@
 		  "Ability5"        ""
 		  "Ability6"        ""
 		    "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
+<<<<<<< HEAD
 		 "MagicalResistance"            "0"
 		 "ModelScale"		"0.8"
 		 "LoadoutScale"		"0.8" 
+=======
+		 "ModelScale"		"1.0"
+>>>>>>> 465836788f50f8339fe79015732d53ffeab0d4ba
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"275"
@@ -98,8 +111,6 @@
 			 // "Ability2"        "madara_wood_release" 
 			 // "Ability3"        "madara_susano" 
 			 // "Ability4"        "madara_meteor"
-	
-			  "MagicalResistance"            "0"
 			
 			  "AttackAnimationPoint"   "0.4"
 			 // "AttackRate"				"0.7"
@@ -133,8 +144,6 @@
 		  "Ability3"        "kakashi_bunshin" 
 		  "Ability4"        "kakashi_chidori"
 		  "Ability5"        ""
-
-		  "MagicalResistance"            "0"
 		
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
@@ -170,7 +179,6 @@
 		  "Ability3"         "kisame_samehada" 
 		  "Ability4"         "kisame_water_prison"
 
-		  "MagicalResistance"            "0"
 			"ModelScale"		"0.9"
 			"LoadoutScale"		"0.9" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
@@ -200,8 +208,6 @@
 		  "Ability3"        "madara_susano" 
 		  "Ability4"        "madara_meteor"
 		  "Ability5"        ""
-
-		  "MagicalResistance"            "0"
 		
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -227,7 +233,6 @@
 		  "Ability3"        "naruto_kage_bunshin_mastery" 
 		  "Ability4"        "naruto_rasenshuriken"
 
-		 "MagicalResistance"            "0"
 		"ModelScale"		"1.08"
 		"LoadoutScale"		"1.08" 
 		  "AttackAnimationPoint"   "0.4"
@@ -254,7 +259,6 @@
 			  "Ability3"         "neji_byakugan" 
 			  "Ability4"         "neji_hyaku_nijuuhachi_shou"
 	
-			  "MagicalResistance"            "0"
 			"ModelScale"		"0.8"
 			"LoadoutScale"		"0.8" 
 			  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
@@ -298,8 +302,6 @@
 		  "Ability4"        "raikage_raiga_no_bomu"
 
 		  "Village"			"kumogakure"
-
-		  "MagicalResistance"            "0"
 		
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"		"0.4"
@@ -326,9 +328,14 @@
 		  "Ability3"        "sakura_chakra_enhanced_strength" 
 		  "Ability4"        "sakura_inner_sakura"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
+<<<<<<< HEAD
 		 "MagicalResistance"            "0"
 		"ModelScale"		"0.73"
 		"LoadoutScale"		"0.73" 
+=======
+		"ModelScale"		"0.9"
+		"LoadoutScale"		"0.9" 
+>>>>>>> 465836788f50f8339fe79015732d53ffeab0d4ba
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
@@ -352,8 +359,6 @@
 		 // "Ability2"        "madara_wood_release" 
 		 // "Ability3"        "madara_susano" 
 		 // "Ability4"        "madara_meteor"
-
-		  "MagicalResistance"            "0"
 			
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -380,7 +385,6 @@
 		  "Ability3"         "yondaime_agile_speed" 
 		 // "Ability4"         "gaara_sabaku_taiso"
 		  //"ModelScale"		"0.5"
-		  "MagicalResistance"            "0"
 		
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 		  "AttackAnimationPoint"   "0.4"

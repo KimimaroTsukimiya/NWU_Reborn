@@ -7,7 +7,6 @@
 		  "Ability3"         "kisame_samehada" 
 		  "Ability4"         "kisame_water_prison"
 
-		  "MagicalResistance"            "0"
 			"ModelScale"		"0.9"
 			"LoadoutScale"		"0.9" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"

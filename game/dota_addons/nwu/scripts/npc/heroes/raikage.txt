@@ -9,8 +9,6 @@
 		  "Ability4"        "raikage_raiga_no_bomu"
 
 		  "Village"			"kumogakure"
-
-		  "MagicalResistance"            "0"
 		
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"		"0.4"

@@ -7,7 +7,6 @@
 		  "Ability3"         "yondaime_agile_speed" 
 		 // "Ability4"         "gaara_sabaku_taiso"
 		  //"ModelScale"		"0.5"
-		  "MagicalResistance"            "0"
 		
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 		  "AttackAnimationPoint"   "0.4"
