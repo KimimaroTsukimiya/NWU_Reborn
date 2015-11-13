@@ -9,7 +9,8 @@
 		  "Ability4"        "raikage_raiga_no_bomu"
 
 		  "Village"			"kumogakure"
-		
+			"ModelScale"		"0.75"
+		"LoadoutScale"		"0.75" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"		"0.4"
 		 // "AttackRate"				"1.0"
