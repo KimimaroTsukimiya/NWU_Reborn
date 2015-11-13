@@ -4,7 +4,7 @@
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_iron_crow"
-
+    "AbilityCooldown"        "2.0"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
@@ -54,11 +54,11 @@
             "Chance"    "%bash_chance"
             "OnSuccess"
             {
-              //This way it wont stack stuns
-              "ApplyModifier"
+              "RunScript"
               {
-                "Target"      "TARGET"
-                "ModifierName"    "iron_crow_bash"
+                "ScriptFile"  "items/iron_crow.lua"
+                "Function"    "iron_crow"
+                "modifier_name" "iron_crow_bash"
               }
             }
           }
@@ -97,7 +97,7 @@
       "03"
       {
         "var_type"                  "FIELD_FLOAT"
-        "bash_duration"                  "1.0" //check wc3 duration made it up
+        "bash_duration"                  "1.4"
       }
       "04"
       {
