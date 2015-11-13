@@ -11,6 +11,8 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityDamage"					"120 190 260 330"
+	"AbilityCooldown"				"15"
+	"AbilityManaCost"				"140 150 160 170"
 
 	"precache"
 	{
