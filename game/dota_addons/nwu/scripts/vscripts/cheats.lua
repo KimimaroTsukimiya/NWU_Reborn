@@ -79,8 +79,9 @@ function GameMode:Wtf()
                         end
                     end
                     for i=0, 6 do 
-                        if  hero:GetItemSlot(i) ~= nil then
-                            hero:GetItemSlot(i):EndCooldown()
+                        if  hero:GetItemInSlot(i) ~= nil then
+                            hero:GetItemInSlot(i):EndCooldown()
+                            print("sds")
                         end
                     end
                 end

@@ -1,7 +1,7 @@
 function ChannelTeleport( event )
 	local caster = event.caster
 	local target_point = event.target_points[1]
-	local targetEntities = FindUnitsInRadius(caster:GetTeamNumber(), target_point, nil, 1000000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_BUILDING, 0, FIND_ANY_ORDER, false)
+	local targetEntities = FindUnitsInRadius(caster:GetTeamNumber(), target_point, nil, 10000000000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_BUILDING, 0, FIND_ANY_ORDER, false)
   	local target = nil
   	local distance = 10000
 	if targetEntities then
