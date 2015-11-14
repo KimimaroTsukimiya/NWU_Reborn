@@ -10,6 +10,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
+		"soundfile"		"soundevents/itachi_crows.vsndevts"
 		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
 		"particle"		"particles/units/heroes/hero_antimage/antimage_blink_end.vpcf"
 		"particle"		"particles/units/heroes/hero_antimage/antimage_blink_start.vpcf"
@@ -31,7 +32,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"blink_range"			"925 1000 1075 1150"
+			"blink_range"			"700 800 900 1000"
 		}
 		
 		"02"
@@ -52,13 +53,7 @@
 
 		"FireSound"
 		{
-			"EffectName"	"Hero_Antimage.Blink_out"
-			"Target"		"CASTER"
-		}
-
-		"FireSound"
-		{
-			"EffectName"	"Hero_Antimage.Blink_in"
+			"EffectName"	"nwu.itachi_crows"
 			"Target"		"CASTER"
 		}
 
