@@ -106,21 +106,21 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin =
+			m_ColorMax =
 			[
-				29,
-				1,
+				0,
+				0,
 				0,
 				255,
 			]
-			m_ColorMax =
+			m_nTintBlendMode = "2"
+			m_TintMax =
 			[
-				207,
-				174,
-				21,
+				0,
+				0,
+				0,
 				255,
 			]
-			m_nTintBlendMode = "2"
 		},
 		{
 			_class = "C_INIT_InitialVelocityNoise"
