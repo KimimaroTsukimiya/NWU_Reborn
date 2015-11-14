@@ -2,10 +2,10 @@
 {
 	_class = "CParticleSystemDefinition"
 	m_ConstantColor =
-[
-0,
-0,
-0,
+	[
+		0,
+		0,
+		0,
 		80,
 	]
 	m_flConstantRadius = 15.000000
@@ -61,10 +61,10 @@
 		{
 			_class = "C_OP_ColorInterpolate"
 			m_ColorFade =
-[
-0,
-0,
-0,
+			[
+				0,
+				0,
+				0,
 				255,
 			]
 		},
@@ -93,17 +93,17 @@
 		{
 			_class = "C_INIT_RandomColor"
 			m_ColorMin =
-[
-0,
-0,
-0,
+			[
+				0,
+				0,
+				0,
 				255,
 			]
 			m_ColorMax =
-[
-0,
-0,
-0,
+			[
+				0,
+				0,
+				0,
 				255,
 			]
 			m_nTintBlendMode = "2"

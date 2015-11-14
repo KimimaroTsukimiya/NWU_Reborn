@@ -1,29 +1,33 @@
+"npc_dota_hero_antimage" //itachi
+{
+	"override_hero"			"npc_dota_hero_antimage"
+	"Model"					"models/itachi/itachi.vmdl"
+	"Ability1"				"itachi_tsukiyomi"
+	"Ability2"				"itachi_dust_crow_genjustsu"
+	"Ability3"				"itachi_sharingan"
+	"Ability4"				"itachi_amateratsu"
 
-		"npc_dota_hero_antimage" //itachi
-		{
-		  "override_hero"   "npc_dota_hero_antimage"
-		  "Model" 			"models/itachi/itachi.vmdl"
-			"Ability1"        "itachi_tsukiyomi"
-		  "Ability2"        "itachi_dust_crow_genjustsu"
-		  "Ability3"        "itachi_sharingan"
-		  "Ability4"        "itachi_amateratsu"
-		 // "Ability2"        "madara_wood_release" 
-		 // "Ability3"        "madara_susano" 
-		 // "Ability4"        "madara_meteor"
-		"ModelScale"		"0.75"
-		"LoadoutScale"		"0.75" 
+	"ModelScale"		"0.75"
+	"LoadoutScale"		"0.75" 
 
-		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
-		  "AttackRange"				"100"
-		  "MovementSpeed"			"300"
-		  "AttributeBaseStrength" "20" // Base strength
-		  "AttributeStrengthGain" "1.35" // Strength bonus per level.
-		  "AttributeBaseIntelligence" "16" // Base intelligence
-		  "AttributeIntelligenceGain" "1.6" // Intelligence bonus per level.
-		  "AttributeBaseAgility" "22" // Base agility
-		  "AttributeAgilityGain" "2.75" // Agility bonus per level.
-	 	  "ItemSlots"
-	  	  { }
-	  	  "Village"			"konoha_scarred"
-		}
+	// Unit attribute
+	"AttackRange"					"100"
+	"AttackAnimationPoint"			"0.4"
+	
+    // Movement
+    //----------------------------------------------------------------
+	"MovementSpeed"					"300"
+
+    // Attibutes
+    //----------------------------------------------------------------
+	"AttributePrimary"				"DOTA_ATTRIBUTE_AGILITY"
+	"AttributeBaseStrength"			"20"
+	"AttributeStrengthGain"			"1.35"
+	"AttributeBaseIntelligence"		"16"
+	"AttributeIntelligenceGain"		"1.6"
+	"AttributeBaseAgility"			"22"
+	"AttributeAgilityGain"			"2.75"
+
+	"ItemSlots"	{ }
+	"Village"			"konoha_scarred"
+}

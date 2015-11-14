@@ -13,6 +13,9 @@
 	"AbilityDamage"					"120 190 260 330"
 	"AbilityCooldown"				"15"
 	"AbilityManaCost"				"140 150 160 170"
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
 
 	"precache"
 	{
@@ -52,7 +55,6 @@
 		{
 			"ModifierName"	"modifier_itachi_tsukiyomi_stun"
 			"Target" 		"TARGET"
-			"Duration"		"%duration"
 		}
 		"Damage"
 		{
