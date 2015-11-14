@@ -46,11 +46,12 @@
             "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
             "OnSuccess"  
             {
-              "ApplyModifier"
+              "RunScript"
               {
-                "ModifierName" "ragnorok_crit"
-                "Target"     "CASTER" 
-              }     
+                "ScriptFile"  "items/gale_blade.lua"
+                "Function"    "gale_blade"
+                "modifier_name" "ragnorok_crit"
+              }
             }
           }
         }
