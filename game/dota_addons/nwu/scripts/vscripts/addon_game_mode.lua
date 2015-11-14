@@ -60,7 +60,8 @@ function Precache( context )
   PrecacheModel("models/zabuza/zabuza.vmdl", context)
   PrecacheModel("models/props_gameplay/donkey.vmdl", context)
   PrecacheModel("models/items/tiny_01/tiny_haunted_tree.vmdl", context)
-
+  PrecacheModel("models/props_gameplay/frog.vmdl", context)
+  
   -- Stuff
   PrecacheResource("particle_folder", "particles/hero", context)
   PrecacheResource("particle_folder", "particles/ambient", context)
