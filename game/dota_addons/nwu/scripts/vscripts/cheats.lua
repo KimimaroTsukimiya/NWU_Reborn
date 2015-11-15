@@ -151,6 +151,7 @@ function GameMode:Setup_Hero_Tables()
         GameRules.heroTable[14] = "npc_dota_hero_juggernaut"
         GameRules.heroTable[15] = "npc_dota_hero_bloodseeker"
         GameRules.heroTable[16] = "npc_dota_hero_axe"
+		GameRules.heroTable[17] = "npc_dota_hero_shadow_shaman"
     end
     if GameRules.nwrHeroTable == nil then
         GameRules.nwrHeroTable = {}
@@ -170,6 +171,7 @@ function GameMode:Setup_Hero_Tables()
         GameRules.nwrHeroTable[14] = "yondaime"
         GameRules.nwrHeroTable[15] = "zabuza"
         GameRules.nwrHeroTable[16] = "neji"
+		GameRules.nwrHeroTable[17] = "shikamaru"
     end
 end
 
