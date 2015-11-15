@@ -212,9 +212,19 @@ function GameMode:OnPlayerPickHero(keys)
   DebugPrint('[BAREBONES] OnPlayerPickHero')
   DebugPrintTable(keys)
 
+  local player = EntIndexToHScript(keys.player)
+  local hero = player:GetAssignedHero()
+  hero.hiddenWearables = {} -- Keep every wearable handle in a table to show them later
+  local model = hero:FirstMoveChild()
+  while model ~= nil do
+    if model:GetClassname() == "dota_item_wearable" then
+      model:AddEffects(EF_NODRAW) -- Set model hidden
+      table.insert(hero.hiddenWearables, model)
+    end
+    model = model:NextMovePeer()
+  end
   local heroClass = keys.hero
   local heroEntity = EntIndexToHScript(keys.heroindex)
-  local player = EntIndexToHScript(keys.player)
 end
 
 -- A player killed another player in a multi-team context
