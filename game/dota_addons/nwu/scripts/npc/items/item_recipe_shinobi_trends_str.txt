@@ -18,8 +18,6 @@
   "ItemRequirements"
   {
     "01" "item_shinobi_sandals;item_handguards;item_firm_nunchaku"
-    "02"  "item_shinobi_sandals;item_handguards;item_snake_skin"
-    "03" "item_shinobi_sandals;item_handguards;item_anbu_cloak"
   }
 }
 
