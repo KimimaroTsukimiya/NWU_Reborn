@@ -279,10 +279,7 @@
           }
         } 
 
-        "States"
-        {
-          "MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"   "MODIFIER_STATE_VALUE_ENABLED"
-        }
+       
       }
 
       "modifier_item_imba_shadow_blade_phase_cooldown"
