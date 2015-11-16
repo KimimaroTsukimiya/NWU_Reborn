@@ -1,7 +1,7 @@
 "item_the_fourths_legacy"
   {
     "ID"                      "1148"
-    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
     "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_BUILDING | DOTA_UNIT_TARGET_BASIC"
     "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
@@ -49,6 +49,7 @@
     {
       "ScriptFile"  "items/the_fourths_legacy.lua"
       "Function"    "ChannelTeleport"
+      "Target"      "POINT"
     }
   }
 
@@ -58,21 +59,26 @@
     {
       "ScriptFile"  "items/the_fourths_legacy.lua"
       "Function"    "FinishTeleport"
+      "Target"      "POINT"
     }
 
-    "RemoveModifier"
+    "RunScript"
     {
-      "ModifierName"  "modifier_stunned"
-      "Target"     "TARGET"
+      "ScriptFile"  "items/the_fourths_legacy.lua"
+      "Function"    "removeModifierOnTarget"
+      "modifier_name" "modifier_stunned"
+      "Target"      "POINT"
     }
   }
 
   "OnChannelInterrupted"
   {
-    "RemoveModifier"
+    "RunScript"
     {
-      "ModifierName"  "modifier_stunned"
-      "Target"     "TARGET"
+      "ScriptFile"  "items/the_fourths_legacy.lua"
+      "Function"    "removeModifierOnTarget"
+      "modifier_name" "modifier_stunned"
+      "Target"      "POINT"
     }
   }
 

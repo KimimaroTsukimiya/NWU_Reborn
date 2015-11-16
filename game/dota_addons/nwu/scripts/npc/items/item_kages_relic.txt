@@ -23,7 +23,7 @@
     //pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
-
+    "SideShop"            "1"
     "Modifiers"
     {
       "item_kages_relic_modifier"

@@ -1,0 +1,683 @@
+<!-- schema text {7e125a45-3d83-4043-b292-9e24f8ef27b4} generic {198980d8-3a93-4919-b4c6-dd1fb07a3a4b} -->
+CVModel CVModel_0
+{
+	CVmeshList m_meshList = CVmeshList
+	{
+		CVmesh[] m_meshList = 
+		[
+			CVmesh
+			{
+				string m_meshName = "pakkun"
+				string m_meshFile = "models/pakkun/pakkun.fbx"
+				string m_materialSearchPath = ""
+				bool m_bSkinParentedObjects = true
+				bool m_bLegacySkinParentedTransforms = false
+				bool m_bExpensiveTangents = false
+				bool m_bExpensiveVertices = false
+				bool m_bIgnoreCloth = false
+				bool m_bGetSkinningFromLod0 = false
+				CVmorphInfo* m_pMorphInfo = NULL
+			}
+		]
+	}
+	CVClothProxyMeshList m_clothProxyMeshList = CVClothProxyMeshList
+	{
+		CVClothProxyMesh[] m_clothProxyMeshList = 
+		[
+			
+		]
+		float m_flClothEnableThreshold = 0.050000
+		bool m_bCreateStaticBone = false
+		int m_nMaxBonesPerVertex = 4
+		bool m_bRemoveUnusedBonesEnabled = false
+		bool m_bDriveMeshesWithBacksolvedJointsOnly = true
+		float m_flMatchProxiesToMeshes = 1.000000
+		float m_flReservedFloat = 0.000000
+		int m_nReservedInt = 0
+		bool m_bReservedBool1 = false
+		bool m_bReservedBool2 = false
+		bool m_bReservedBool3 = false
+		bool m_bReservedBool4 = false
+	}
+	CVphysicsMeshList m_physicsMeshList = CVphysicsMeshList
+	{
+		CVphysicsMesh[] m_meshList = 
+		[
+			
+		]
+	}
+	CVmodelInfo* m_pModelInfo = NULL
+	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
+	{
+		CVBoneFlagList* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVhitBoxSetListReference[] m_pHitBoxSetLists = 
+	[
+		CVhitBoxSetListReference
+		{
+			CVhitBoxSetList* m_pObject = &CVhitBoxSetList_0
+			string m_sFileName = ""
+		}
+	]
+	CVattachmentListReference[] m_pAttachmentLists = 
+	[
+		CVattachmentListReference
+		{
+			CVattachmentList* m_pObject = &CVattachmentList_0
+			string m_sFileName = ""
+		}
+	]
+	CVanimGroupReference m_pAnimGroup = CVanimGroupReference
+	{
+		CVanimGroup* m_pObject = &CVanimGroup_0
+		string m_sFileName = ""
+	}
+	CVNodeMaterialGroupListReference m_pMaterialGroupList = CVNodeMaterialGroupListReference
+	{
+		NodeMaterialGroupList_t* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVMeshGroupListReference m_pMeshGroupList = CVMeshGroupListReference
+	{
+		MeshGroupList_t* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVLODGroupListReference m_pLodGroupList = CVLODGroupListReference
+	{
+		LODGroupList_t* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVpropBreakableListReference m_pPropBreakableList = CVpropBreakableListReference
+	{
+		CVpropBreakableList* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVpropDataListReference m_pPropDataList = CVpropDataListReference
+	{
+		CVpropDataList* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVConstraintListReference[] m_pConstraintLists = 
+	[
+		
+	]
+	string m_collision = ""
+	string m_softbody = ""
+	string m_sMDLFilename = ""
+	string[] m_sOffsetHitboxSets = 
+	[
+		
+	]
+	float(3) m_vHitboxSetOffset = ( 0.000000, 0.000000, 0.000000 )
+	string[] m_scriptFiles = 
+	[
+		
+	]
+	CVMaterialRemapList* m_pMaterialRemapList = &CVMaterialRemapList_0
+	float m_flFbxScale = 1.000000
+	float m_flQCScale = 1.000000
+	float(3) m_vOrigin = ( 0.000000, 0.000000, 0.000000 )
+	CVPsfList* m_pPsfList = NULL
+	string m_keyValueText = ""
+	bool m_bStaticProp = false
+	bool m_bEnableClothProcessing = true
+	float m_flClothEnableThreshold = 0.050000
+	int m_nMaxClothVertsPerMesh = 2048
+	bool m_bBuildClothBoneHierarchy = false
+	symbol m_nNavType = AUTH_NAV_MESH
+	bool m_bMakeUniqueVMeshes = false
+	bool m_bMakeImplicitBindPoseSequence = false
+	bool m_bAdjustSkeletonFromBoneFlags = false
+	CVanimGroupReference[] m_pAnimGroups = 
+	[
+		
+	]
+}
+
+CVhitBoxSetList CVhitBoxSetList_0
+{
+	CVhitBoxSet[] m_HitBoxSets = 
+	[
+		CVhitBoxSet
+		{
+			string m_name = "default"
+			CVhitBox[] m_HitBoxes = 
+			[
+				CVhitBox
+				{
+					string m_name = "Bone Center"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone Center"
+					float(3) m_vMinBounds = ( -26.224031, -45.922966, -45.718891 )
+					float(3) m_vMaxBounds = ( 26.150961, 36.827019, 8.531113 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone Front L Leg"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone Front L Leg"
+					float(3) m_vMinBounds = ( -16.089838, -14.678578, -28.874325 )
+					float(3) m_vMaxBounds = ( 12.420900, 22.188602, 8.250675 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone Front R Leg"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone Front R Leg"
+					float(3) m_vMinBounds = ( -11.624901, -14.240361, -29.226284 )
+					float(3) m_vMaxBounds = ( 16.864353, 22.626820, 7.898716 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone Tail 1"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone Tail 1"
+					float(3) m_vMinBounds = ( -3.805159, 11.763855, -4.148849 )
+					float(3) m_vMaxBounds = ( 4.585464, 12.513855, 2.851151 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone Back R Shin"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone Back R Shin"
+					float(3) m_vMinBounds = ( -9.970598, -15.836334, -21.497684 )
+					float(3) m_vMaxBounds = ( 1.654400, 7.038662, 13.002315 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone Back L Shin"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone Back L Shin"
+					float(3) m_vMinBounds = ( -0.835999, -16.362686, -21.497684 )
+					float(3) m_vMaxBounds = ( 10.663999, 6.512310, 13.002315 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone Front L Shin"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone Front L Shin"
+					float(3) m_vMinBounds = ( 1.576700, -5.297106, -20.127752 )
+					float(3) m_vMaxBounds = ( 12.076700, 2.202896, -1.721500 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone_Mesh49"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone_Mesh49"
+					float(3) m_vMinBounds = ( -11.280800, -5.285807, -20.245527 )
+					float(3) m_vMaxBounds = ( -0.780800, 2.214195, -1.839275 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone Tail 2"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone Tail 2"
+					float(3) m_vMinBounds = ( -3.805154, -22.331657, -2.400269 )
+					float(3) m_vMaxBounds = ( 4.585470, 4.418335, 11.599731 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone Back R Toe"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone Back R Toe"
+					float(3) m_vMinBounds = ( -5.986197, -8.726995, -1.990160 )
+					float(3) m_vMaxBounds = ( 3.451302, 5.398003, 1.033278 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone Object67"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone Object67"
+					float(3) m_vMinBounds = ( -3.274399, -8.797361, -2.506892 )
+					float(3) m_vMaxBounds = ( 6.163099, 5.327637, 0.516546 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone_Head"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone_Head"
+					float(3) m_vMinBounds = ( -32.352036, -23.329910, -35.924950 )
+					float(3) m_vMaxBounds = ( 33.147949, 34.920082, 32.075050 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone FrontL Toe"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone FrontL Toe"
+					float(3) m_vMinBounds = ( 1.056499, -9.680180, -2.136352 )
+					float(3) m_vMaxBounds = ( 13.431499, 5.569817, 1.246462 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "Bone_Mesh48"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "Bone_Mesh48"
+					float(3) m_vMinBounds = ( -6.316700, -9.680182, -1.667422 )
+					float(3) m_vMaxBounds = ( 5.995798, 5.569815, 1.715391 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				},
+				CVhitBox
+				{
+					string m_name = "bone_null"
+					string m_sSurfaceProperty = ""
+					int m_nGroupId = 0
+					string m_sBoneName = "bone_null"
+					float(3) m_vMinBounds = ( -22.749996, -41.999992, 47.999996 )
+					float(3) m_vMaxBounds = ( 23.249996, 46.499992, 92.500000 )
+					bool m_bTranslationOnly = false
+					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
+				}
+			]
+		}
+	]
+	string m_AutoCreateSetName = ""
+}
+
+CVattachmentList CVattachmentList_0
+{
+	string m_name = ""
+	CVattachment[] m_attachments = 
+	[
+		CVattachment
+		{
+			string m_name = "attach_origin"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "m3bone_root"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_hitloc"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "Bone Center"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		}
+	]
+}
+
+CVanimGroup CVanimGroup_0
+{
+	string m_Name = ""
+	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
+	{
+		CVReferenceSkeleton* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
+	{
+		CVBoneFlagList* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVseqGroupReference m_pSeqGroup = CVseqGroupReference
+	{
+		CVseqGroup* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVanimGroupReference[] m_pAnimGroups = 
+	[
+		CVanimGroupReference
+		{
+			CVanimGroup* m_pObject = &CVanimGroup_1
+			string m_sFileName = ""
+		}
+	]
+	CVanim[] m_Vanim = 
+	[
+		
+	]
+	string[] m_sScripts = 
+	[
+		
+	]
+	string[] m_folderNames = 
+	[
+		
+	]
+}
+
+CVanimGroup CVanimGroup_1
+{
+	string m_Name = ""
+	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
+	{
+		CVReferenceSkeleton* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
+	{
+		CVBoneFlagList* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVseqGroupReference m_pSeqGroup = CVseqGroupReference
+	{
+		CVseqGroup* m_pObject = NULL
+		string m_sFileName = ""
+	}
+	CVanimGroupReference[] m_pAnimGroups = 
+	[
+		
+	]
+	CVanim[] m_Vanim = 
+	[
+		CVanim
+		{
+			string m_Animationname = "pakkun_animations"
+			string m_Filepath = "models/pakkun/pakkun_animations.FBX"
+			int m_nStartframe = 0
+			int m_nEndframe = 9084
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "pakkun_run"
+			string m_Filepath = "models/pakkun/pakkun_animations.fbx"
+			int m_nStartframe = 234
+			int m_nEndframe = 262
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = true
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_RUN"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "pakkun_idle"
+			string m_Filepath = "models/pakkun/pakkun_animations.fbx"
+			int m_nStartframe = 12
+			int m_nEndframe = 50
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = true
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_IDLE"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
+		},
+		CVanim
+		{
+			string m_Animationname = "pakkun_die"
+			string m_Filepath = "models/pakkun/pakkun_animations.fbx"
+			int m_nStartframe = 2188
+			int m_nEndframe = 2268
+			float m_flFps = 30.000000
+			CAnimationLoop m_Loop = CAnimationLoop
+			{
+				bool m_bLoop = false
+				bool m_bSmoothLoop = false
+				int m_nSmoothLoopStart = 0
+				int m_nSmoothLoopEnd = 0
+				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				{
+					bool m_bEnabled = false
+					int m_nLoopRestart = 0
+				}
+			}
+			bool m_bHidden = false
+			bool m_bDisable = false
+			CActivity[] m_Activities = 
+			[
+				CActivity
+				{
+					string m_Name = "ACT_DOTA_DIE"
+					int m_nWeight = 1
+				}
+			]
+			CAnimationEvent[] m_AnimationEvents = 
+			[
+				
+			]
+			CMotionFrame[] m_MotionFrames = 
+			[
+				
+			]
+			CIKrule*[] m_pIkRules = 
+			[
+				
+			]
+			CAlignAnimation* m_pAlignAnimation = NULL
+			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
+			{
+				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
+				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
+			}
+			string[] m_Keywords = 
+			[
+				
+			]
+			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
+			{
+				float m_flFadeInTime = 0.200000
+				float m_flFadeOutTime = 0.200000
+			}
+			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
+		}
+	]
+	string[] m_sScripts = 
+	[
+		
+	]
+	string[] m_folderNames = 
+	[
+		
+	]
+}
+
+CVMaterialRemapList CVMaterialRemapList_0
+{
+	CVMaterialRemap[] m_vMaterialRemapList = 
+	[
+		CVMaterialRemap
+		{
+			string m_sSearchMaterial = "direwolf1.vmat"
+			string m_sReplaceMaterial = "materials/pakkun/pakkun.vmat"
+		},
+		CVMaterialRemap
+		{
+			string m_sSearchMaterial = "direwolf2.vmat"
+			string m_sReplaceMaterial = "materials/pakkun/pakkun.vmat"
+		},
+		CVMaterialRemap
+		{
+			string m_sSearchMaterial = "direwolf3.vmat"
+			string m_sReplaceMaterial = "materials/pakkun/pakkun.vmat"
+		}
+	]
+}

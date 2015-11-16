@@ -10,6 +10,10 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	
+	"AbilityCooldown"				"100 80 60"
+	"AbilityManaCost"				"120"
+	"AbilityCastRange"				"500"
 
 	"precache"
 	{

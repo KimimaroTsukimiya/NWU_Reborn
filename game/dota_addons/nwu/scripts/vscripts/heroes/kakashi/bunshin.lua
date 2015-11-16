@@ -60,3 +60,7 @@ Timers:CreateTimer(0.05, function()
  end)
 
 end
+
+function drawKakashi( keys )
+  keys.caster:SetOriginalModel("models/kakashi/kakashi.vmdl")
+end

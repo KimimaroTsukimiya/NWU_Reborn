@@ -15,7 +15,9 @@ function sandstorm( keys )
 	dummy:AddNewModifier(caster, nil, "modifier_phased", {})
 	ability:ApplyDataDrivenModifier(caster, dummy, dummy_modifier, {duration = duration})
 
-
 	-- Timer to remove the dummy
-	Timers:CreateTimer(duration, function() dummy:RemoveSelf() end)
+	Timers:CreateTimer(duration, function() 
+		caster:StopSound("Ability.SandKing_SandStorm.loop")
+		dummy:RemoveSelf() 
+	end)
 end

@@ -150,8 +150,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "bone_waist"
-					float(3) m_vMinBounds = ( -24.173988, -28.132427, -18.862984 )
-					float(3) m_vMaxBounds = ( 23.951004, 8.992569, 26.137024 )
+					float(3) m_vMinBounds = ( -70.174004, -70.132401, -141.420197 )
+					float(3) m_vMaxBounds = ( 70.950996, 70.992569, 57.392822 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -227,8 +227,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "bone_footR"
-					float(3) m_vMinBounds = ( -24.423393, -30.476704, -70.348366 )
-					float(3) m_vMaxBounds = ( 10.482849, 30.898293, 2.057892 )
+					float(3) m_vMinBounds = ( -42.248390, -30.476704, -70.348366 )
+					float(3) m_vMaxBounds = ( 18.133577, 30.898293, 2.057892 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -238,8 +238,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "bone_footL"
-					float(3) m_vMinBounds = ( -13.302048, -31.340937, -72.666466 )
-					float(3) m_vMaxBounds = ( 20.791695, 30.034060, -0.260208 )
+					float(3) m_vMinBounds = ( -23.177658, -31.340937, -72.666466 )
+					float(3) m_vMaxBounds = ( 36.227715, 30.034060, -0.260208 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -437,6 +437,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -495,6 +496,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -553,6 +555,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -611,6 +614,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -669,6 +673,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -727,6 +732,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -785,6 +791,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -843,6 +850,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		}
 	]
 	string[] m_sScripts = 

@@ -157,8 +157,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "Bone_Chest"
-					float(3) m_vMinBounds = ( -18.643429, -18.648598, -17.641998 )
-					float(3) m_vMaxBounds = ( 18.643566, 14.476296, 5.356003 )
+					float(3) m_vMinBounds = ( -70.643402, -70.648598, -100.641998 )
+					float(3) m_vMaxBounds = ( 70.643600, 70.476303, 40.355999 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},

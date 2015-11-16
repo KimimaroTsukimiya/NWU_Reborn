@@ -326,8 +326,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "Object07"
-					float(3) m_vMinBounds = ( -35.158806, -33.117012, -30.877182 )
-					float(3) m_vMaxBounds = ( 34.863686, 4.009533, 14.444809 )
+					float(3) m_vMinBounds = ( -50.158798, -75.116997, -100.876999 )
+					float(3) m_vMaxBounds = ( 50.863701, 30.009501, 30.444799 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -639,13 +639,14 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
 			string m_Animationname = "naruto_run"
 			string m_Filepath = "models/naruto/naruto_animations.fbx"
 			int m_nStartframe = 19
-			int m_nEndframe = 30
+			int m_nEndframe = 31
 			float m_flFps = 30.000000
 			CAnimationLoop m_Loop = CAnimationLoop
 			{
@@ -697,6 +698,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -755,6 +757,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -813,6 +816,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -871,6 +875,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -929,6 +934,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -987,6 +993,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -1045,6 +1052,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		}
 	]
 	string[] m_sScripts = 

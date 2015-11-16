@@ -91,6 +91,11 @@ function GameMode:OnItemPurchased( keys )
     GameMode:ForeheadProtectorOnItemPickedUp(player, itemName)
   end 
 
+  if  itemName == "item_firm_nunchaku" or itemName == "item_handguards" or 
+      itemName == "item_shinobi_sandals" or itemName == "item_anbu_cloak" or
+      itemName == "item_snake_skin" then
+    GameMode:ShinobiTrendsAgiOnItemPurchased(player, itemName)
+  end 
 
 end
 
@@ -207,9 +212,19 @@ function GameMode:OnPlayerPickHero(keys)
   DebugPrint('[BAREBONES] OnPlayerPickHero')
   DebugPrintTable(keys)
 
+  local player = EntIndexToHScript(keys.player)
+  local hero = player:GetAssignedHero()
+  hero.hiddenWearables = {} -- Keep every wearable handle in a table to show them later
+  local model = hero:FirstMoveChild()
+  while model ~= nil do
+    if model:GetClassname() == "dota_item_wearable" then
+      model:AddEffects(EF_NODRAW) -- Set model hidden
+      table.insert(hero.hiddenWearables, model)
+    end
+    model = model:NextMovePeer()
+  end
   local heroClass = keys.hero
   local heroEntity = EntIndexToHScript(keys.heroindex)
-  local player = EntIndexToHScript(keys.player)
 end
 
 -- A player killed another player in a multi-team context
@@ -295,6 +310,9 @@ function GameMode:OnItemCombined(keys)
   
   -- The cost of the item purchased
   local itemcost = keys.itemcost
+
+
+
 end
 
 -- This function is called whenever an ability begins its PhaseStart phase (but before it is actually cast)

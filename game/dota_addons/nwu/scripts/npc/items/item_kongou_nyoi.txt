@@ -5,7 +5,7 @@
     "BaseClass"           "item_datadriven"
     "AbilityTextureName"   "item_kongou_nyoi"
     "AbilityCooldown"        "20.0"
-
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
     // Stats
     //-------------------------------------------------------------------------------------------------------------
 
@@ -64,6 +64,7 @@
 
        "kongou_nyoi_aoe"
       {
+
          "Passive" "1"
          "IsHidden"  "1"
         "Properties"
@@ -79,32 +80,12 @@
             "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
             "OnSuccess"
             {
-
-              "FireSound"
+              "RunScript"
               {
-                  "EffectName"  "Hero_Brewmaster.ThunderClap"
-                  "Target"    "CASTER"
-              }
-    
-              "FireEffect"
-              {
-                "EffectName"        "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
-                "EffectAttachType"  "follow_origin"
-                "EffectRadius"    "%radius"
-                "Target"            "TARGET"
-              }
-
-              "Damage"
-              {
-                "Target"
-                {
-                  "Center"    "TARGET"
-                  "Radius"  "%radius"
-                  "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
-                  "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                }
-                "Type"      "DAMAGE_TYPE_MAGICAL"
-                "Damage"    "%damage"
+                "ScriptFile"  "items/kongou_nyoi.lua"
+                "Function"    "passiveAOE"
+                "radius"      "%radius"
+                "damage"      "%damage"
               }
                 
             }

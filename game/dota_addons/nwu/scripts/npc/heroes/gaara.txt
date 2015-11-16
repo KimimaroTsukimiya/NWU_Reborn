@@ -6,9 +6,9 @@
 		  "Ability2"         "gaara_ryuusa_bakuryu" 
 		  "Ability3"         "gaara_suna_no_yoroi" 
 		  "Ability4"         "gaara_sabaku_taiso"
-		  "ModelScale"		"0.4"
-		  "MagicalResistance"            "0"
-			"LoadoutScale"		"0.4" 
+		  "ModelScale"		"0.35"
+			"LoadoutScale"		"0.35" 
+
 		  
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"

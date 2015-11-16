@@ -172,8 +172,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "Box02"
-					float(3) m_vMinBounds = ( -51.127884, -34.076283, -156.740677 )
-					float(3) m_vMaxBounds = ( 64.233788, 100.199966, 62.728577 )
+					float(3) m_vMinBounds = ( -100.000000, -100.990997, -439.007996 )
+					float(3) m_vMaxBounds = ( 100.000000, 100.364998, 175.692993 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -183,8 +183,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "Box14"
-					float(3) m_vMinBounds = ( -15.586615, -8.499428, -20.740784 )
-					float(3) m_vMaxBounds = ( 3.805822, 20.905775, 4.170898 )
+					float(3) m_vMinBounds = ( -75.206161, -32.905804, -56.686455 )
+					float(3) m_vMaxBounds = ( 18.363274, 80.937363, 11.399446 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -238,8 +238,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "Box15"
-					float(3) m_vMinBounds = ( -81.697517, -5.001448, -10.504456 )
-					float(3) m_vMaxBounds = ( -44.881828, 17.637983, 10.196289 )
+					float(3) m_vMinBounds = ( -106.400223, -5.001448, -20.588371 )
+					float(3) m_vMaxBounds = ( -58.452652, 17.637983, 19.984375 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -260,8 +260,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "Box17"
-					float(3) m_vMinBounds = ( 45.957153, -5.001442, -10.385681 )
-					float(3) m_vMaxBounds = ( 82.772598, 17.637989, 10.315063 )
+					float(3) m_vMinBounds = ( 47.681198, -5.001442, -49.972511 )
+					float(3) m_vMaxBounds = ( 85.877747, 17.637989, 49.632721 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -282,8 +282,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "Box12"
-					float(3) m_vMinBounds = ( -19.291538, -35.429543, -110.384094 )
-					float(3) m_vMaxBounds = ( 19.934742, 21.818237, 0.263809 )
+					float(3) m_vMinBounds = ( -28.071842, -63.611210, -60.617134 )
+					float(3) m_vMaxBounds = ( 29.007793, 39.173084, 0.144870 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -304,8 +304,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "Box09"
-					float(3) m_vMinBounds = ( -16.418217, -35.429535, -110.375397 )
-					float(3) m_vMaxBounds = ( 22.808090, 21.818249, 0.272507 )
+					float(3) m_vMinBounds = ( -54.455475, -35.429535, -110.375397 )
+					float(3) m_vMaxBounds = ( 75.649223, 21.818249, 0.272507 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -539,11 +539,6 @@ CVanimGroup CVanimGroup_1
 				CActivity
 				{
 					string m_Name = "ACT_DOTA_IDLE"
-					int m_nWeight = 1
-				},
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_CAPTURE"
 					int m_nWeight = 1
 				}
 			]

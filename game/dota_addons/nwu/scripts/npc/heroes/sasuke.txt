@@ -6,8 +6,6 @@
 		 // "Ability2"        "madara_wood_release" 
 		 // "Ability3"        "madara_susano" 
 		 // "Ability4"        "madara_meteor"
-
-		  "MagicalResistance"            "0"
 			
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -19,8 +17,8 @@
 		  "AttributeIntelligenceGain" "2.9" // Intelligence bonus per level.
 		  "AttributeBaseAgility" "16" // Base agility
 		  "AttributeAgilityGain" "2.1" // Agility bonus per level.
-		  "ModelScale"		"0.7"
-		 "LoadoutScale"		"0.7" 
+		  "ModelScale"		"0.57"
+		 "LoadoutScale"		"0.57" 
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha_scarred"

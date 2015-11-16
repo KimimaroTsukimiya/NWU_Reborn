@@ -161,8 +161,8 @@ CVhitBoxSetList CVhitBoxSetList_0
 					string m_sSurfaceProperty = ""
 					int m_nGroupId = 0
 					string m_sBoneName = "bone_root"
-					float(3) m_vMinBounds = ( -20.122192, -12.491986, -26.102989 )
-					float(3) m_vMaxBounds = ( 18.502800, 22.633015, 15.397018 )
+					float(3) m_vMinBounds = ( -65.122200, -65.491997, -100.102997 )
+					float(3) m_vMaxBounds = ( 65.502800, 65.633003, 50.396999 )
 					bool m_bTranslationOnly = false
 					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
 				},
@@ -514,6 +514,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -572,6 +573,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -630,6 +632,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -688,6 +691,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -746,6 +750,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -804,6 +809,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -862,6 +868,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -920,6 +927,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		},
 		CVanim
 		{
@@ -978,6 +986,7 @@ CVanimGroup CVanimGroup_1
 				float m_flFadeOutTime = 0.200000
 			}
 			string m_folderName = ""
+			string m_MotionFramesRootBone = ""
 		}
 	]
 	string[] m_sScripts = 
