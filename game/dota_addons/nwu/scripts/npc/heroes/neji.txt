@@ -25,4 +25,5 @@
 	  	  { }
 
 	  	  "Village"			"konoha"
+	  	  "Gender"			"male"
 		}

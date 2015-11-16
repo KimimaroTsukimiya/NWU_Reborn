@@ -21,6 +21,7 @@
 		  "AttributeAgilityGain" "2.5" // Agility bonus per level.
 
 		  "Village"			"konoha"
+		  "Gender"			"male"
 		  
 	 	  "ItemSlots"
 	  	  { }

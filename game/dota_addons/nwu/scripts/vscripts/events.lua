@@ -35,6 +35,19 @@ end
 -- An NPC has spawned somewhere in game.  This includes heroes
 function GameMode:OnNPCSpawned(keys)
     local npc = EntIndexToHScript(keys.entindex)
+    if npc:IsRealHero() then
+      local hero = npc
+      print(hero:GetName())
+      hero.hiddenWearables = {} -- Keep every wearable handle in a table to show them later
+      local model = hero:FirstMoveChild()
+      while model ~= nil do
+        if model:GetClassname() == "dota_item_wearable" then
+          model:AddEffects(EF_NODRAW) -- Set model hidden
+          table.insert(hero.hiddenWearables, model)
+        end
+      model = model:NextMovePeer()
+      end
+    end
 
 end
 

@@ -25,5 +25,7 @@
 		  
 	 	  "ItemSlots"
 	  	  { }
+
+	  	  "Gender"			"male"
 		}
 	

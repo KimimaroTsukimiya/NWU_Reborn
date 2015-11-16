@@ -26,4 +26,5 @@
 
 
 	  	  "Village"			"kirigakure_scarred"
+	  	  "Gender"			"male"
 		}

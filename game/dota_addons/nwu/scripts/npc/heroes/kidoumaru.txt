@@ -6,4 +6,5 @@
 	  	  { }
 
 	  	  "Village"			"otogakure"
+	  	  "Gender"			"male"
 		}

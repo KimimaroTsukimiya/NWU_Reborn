@@ -5,7 +5,7 @@
 	  	  { }
 		"Model" 			"models/hidan/tesst.vmdl"
 	  	  "Village"			"yugakure_scarred"
-
+	  	  "Gender"			"male"
 	  	  "Ability1"        "hidan_cull_the_weak"
 		  "Ability2"        "hidan_taunt" 
 		  "Ability3"        "hidan_jashins_blessing" 

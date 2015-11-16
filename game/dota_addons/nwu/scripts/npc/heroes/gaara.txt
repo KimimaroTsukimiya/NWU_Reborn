@@ -23,6 +23,6 @@
 		  
 	 	  "ItemSlots"
 	  	  { }
-
+	  	  "Gender"			"male"
 	  	  "Village"			"sunagakure"
 		}

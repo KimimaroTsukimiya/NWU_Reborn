@@ -22,4 +22,5 @@
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha_scarred"
+	  	  "Gender"			"male"
 		}
