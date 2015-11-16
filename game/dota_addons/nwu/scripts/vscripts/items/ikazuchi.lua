@@ -66,6 +66,7 @@ function ChainLightning( event )
 					    v.struckByChain = false
 					    v = nil
 					end
+					dummy:RemoveSelf()
 				    print("End Chain, no more targets")
 					return	
 				end
@@ -73,7 +74,7 @@ function ChainLightning( event )
 
 				local lightningChain = ParticleManager:CreateParticle("particles/items_fx/chain_lightning.vpcf", PATTACH_WORLDORIGIN, dummy)
 				ParticleManager:SetParticleControl(lightningChain,0,Vector(dummy:GetAbsOrigin().x,dummy:GetAbsOrigin().y,dummy:GetAbsOrigin().z + dummy:GetBoundingMaxs().z ))	
-				
+				dummy:RemoveSelf()
 				-- damage and decay
 				damage = damage - (damage*decay)
 				ApplyDamage({ victim = target, attacker = hero, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL })
@@ -91,13 +92,15 @@ function ChainLightning( event )
 				
 				-- fire the timer again if spell bounces remain
 				if bounces > 0 then
+					dummy:RemoveSelf()
 					return time_between_bounces
+
 				else
 					for _,v in pairs(targetsStruck) do
 					   	v.struckByChain = false
 					   	v = nil
 					end
-					
+					dummy:RemoveSelf()
 					print("End Chain, no more bounces")
 				end
 			end
