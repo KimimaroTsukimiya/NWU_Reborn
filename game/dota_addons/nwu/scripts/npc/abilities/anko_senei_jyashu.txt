@@ -8,7 +8,6 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityTextureName"			"bristleback_bristleback"
 	
 	
@@ -21,7 +20,7 @@
 		"01"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"aura_radius"		"300"		// If you change this, also change the AbilityCastRange above
+			"seek_radius"		"300"		// If you change this, also change the AbilityCastRange above
 		}
 		"02"
 		{
@@ -31,27 +30,40 @@
 		"03"
 		{
 			"var_type"			"FIELD_FLOAT"
-			"snake_damage_interval"		"0.2" 
+			"snake_damage_interval"		"2" 
 		}
 		"04"
 		{
-			"var_type"			"FIELD_FLOAT"
-			"senei_jyashu_resistance"		"0.04, 0.08, 0.12, 0.16"
+			"var_type"			"FIELD_INTEGER"
+			"senei_jyashu_magic_resist"		"4 8 12 16"
 		}
 	}
 
 	"Modifiers"
 	{
-		"modifier_senei_jyashu_datadriven"
+		"modifier_senei_jyashu"
 		{
 			"Passive"		"1"
 			"IsHidden"		"1"
 			
+			"ThinkInterval" "2"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/anko/anko_senei_jyashu.lua"
+					"Function"		"anko_senei_jyashu"
+					"sound_enemy"		"Hero_Medusa.MysticSnake.Target"
+					"mystic_snake_projectile"	"particles/units/heroes/hero_medusa/medusa_mystic_snake_projectile.vpcf"
+					"particle_impact_enemy"		"particles/units/heroes/hero_medusa/medusa_mystic_snake_impact.vpcf"
+				}
+			}
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%senei_jyashu_resistance"
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%senei_jyashu_magic_resist"
 			}
 		}
+		
 
 	}
 }

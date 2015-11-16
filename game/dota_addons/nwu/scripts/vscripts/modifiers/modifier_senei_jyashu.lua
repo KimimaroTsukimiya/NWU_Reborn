@@ -9,10 +9,11 @@ function modifier_senei_jyashu:DeclareFunctions()
 end
 
 function modifier_senei_jyashu:OnCreated( kv )
-	self.magic_resist = self:GetAbility():GetSpecialValueFor( "magic_resist" )
+	print ("Anko Senei Ability created.", self:GetAbility():GetLevelSpecialValueFor("senei_jyashu_magic_resist", ability:GetLevel()-1))
+	self.magic_resist = self:GetAbility():GetLevelSpecialValueFor("senei_jyashu_magic_resist", ability:GetLevel()-1) 
 end
 
 function modifier_senei_jyashu:GetModifierMagicalResistanceBonus()
-	print ("Applied Magic Resist")
-	return self:GetSpecialValueFor( "magic_resist" ) 
+	print ("Applied Magic Resist=",self.magic_resist)
+	return self.magic_resist
 end
