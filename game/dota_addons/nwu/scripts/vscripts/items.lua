@@ -1,5 +1,6 @@
 require('items/spellthiefs_edge')
 require('items/ninja_info_cards')
+require('items/chakra_armor')
 require('items/forehead_protector')
 
 --[[Author: LearningDave
@@ -22,6 +23,6 @@ function   GameMode:ForeheadProtectorOnItemPickedUp(player, itemName)
 end
 
 
-function GameMode:ShinobiTrendsAgiOnItemPurchased( player, itemName )
-	
+function GameMode:ChakraArmorOnItemPickedUp( player, itemName )
+	chakraArmorChangeIcon(player, itemName)
 end

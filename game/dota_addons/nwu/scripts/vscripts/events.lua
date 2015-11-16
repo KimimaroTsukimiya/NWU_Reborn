@@ -12,8 +12,6 @@ if CHEATS_ACTIVATED then
 end
 -- Cleanup a player when they leave
 function GameMode:OnDisconnect(keys)
-  DebugPrint('[BAREBONES] Player Disconnected ' .. tostring(keys.userid))
-  DebugPrintTable(keys)
 
   local name = keys.name
   local networkid = keys.networkid
@@ -103,13 +101,7 @@ function GameMode:OnItemPurchased( keys )
   if itemName == "item_forehead_protector" then
     GameMode:ForeheadProtectorOnItemPickedUp(player, itemName)
   end 
-
-  if  itemName == "item_firm_nunchaku" or itemName == "item_handguards" or 
-      itemName == "item_shinobi_sandals" or itemName == "item_anbu_cloak" or
-      itemName == "item_snake_skin" then
-    GameMode:ShinobiTrendsAgiOnItemPurchased(player, itemName)
-  end 
-
+ 
 end
 
 -- An ability was used by a player
@@ -324,7 +316,9 @@ function GameMode:OnItemCombined(keys)
   -- The cost of the item purchased
   local itemcost = keys.itemcost
 
-
+  if itemName == "item_chakra_armor" then
+    GameMode:ChakraArmorOnItemPickedUp(player, itemName)
+  end
 
 end
 
