@@ -12,8 +12,6 @@ if CHEATS_ACTIVATED then
 end
 -- Cleanup a player when they leave
 function GameMode:OnDisconnect(keys)
-  DebugPrint('[BAREBONES] Player Disconnected ' .. tostring(keys.userid))
-  DebugPrintTable(keys)
 
   local name = keys.name
   local networkid = keys.networkid
@@ -35,6 +33,19 @@ end
 -- An NPC has spawned somewhere in game.  This includes heroes
 function GameMode:OnNPCSpawned(keys)
     local npc = EntIndexToHScript(keys.entindex)
+    if npc:IsRealHero() then
+      local hero = npc
+      print(hero:GetName())
+      hero.hiddenWearables = {} -- Keep every wearable handle in a table to show them later
+      local model = hero:FirstMoveChild()
+      while model ~= nil do
+        if model:GetClassname() == "dota_item_wearable" then
+          model:AddEffects(EF_NODRAW) -- Set model hidden
+          table.insert(hero.hiddenWearables, model)
+        end
+      model = model:NextMovePeer()
+      end
+    end
 
 end
 
@@ -90,13 +101,7 @@ function GameMode:OnItemPurchased( keys )
   if itemName == "item_forehead_protector" then
     GameMode:ForeheadProtectorOnItemPickedUp(player, itemName)
   end 
-
-  if  itemName == "item_firm_nunchaku" or itemName == "item_handguards" or 
-      itemName == "item_shinobi_sandals" or itemName == "item_anbu_cloak" or
-      itemName == "item_snake_skin" then
-    GameMode:ShinobiTrendsAgiOnItemPurchased(player, itemName)
-  end 
-
+ 
 end
 
 -- An ability was used by a player
@@ -311,7 +316,9 @@ function GameMode:OnItemCombined(keys)
   -- The cost of the item purchased
   local itemcost = keys.itemcost
 
-
+  if itemName == "item_chakra_armor" then
+    GameMode:ChakraArmorOnItemPickedUp(player, itemName)
+  end
 
 end
 

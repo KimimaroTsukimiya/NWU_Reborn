@@ -1,3 +1,6 @@
+require('utilities')
+
+
 --[[ ============================================================================================================
 	Author: Rook
 	Date: January 30, 2015
@@ -154,4 +157,18 @@ function modifier_item_sphere_datadriven_icon_on_interval_think(keys)
 	if not keys.target:HasModifier("modifier_item_sphere_target") then
 		keys.target:RemoveModifierByName("modifier_item_sphere_datadriven_icon")
 	end
+end
+
+
+--[[Author: LearningDave
+  Date: november, 16th 2015.
+  Changes the displayed icon of a item depending on the hero's gender
+]]
+function chakraArmorChangeIcon(player, itemName)
+	local hero = player:GetAssignedHero()
+    local gender = GameRules.heroKV[hero:GetName()]["Gender"] 
+    local itemIndex = GameMode:GetItemIndex(itemName, hero)
+	local newItemName = "item_chakra_armor_" .. gender
+	hero:RemoveItem(hero:GetItemInSlot(itemIndex))
+    hero:AddItem(CreateItem(newItemName, hero, hero))
 end

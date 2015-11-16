@@ -1,0 +1,162 @@
+"item_chakra_armor_female"
+  {
+    "ID"                    "9828"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"             "item_datadriven"
+    "AbilityTextureName"    "item_chakra_armor_female"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "0"
+    "ItemInitialCharges"      "0"
+    "ItemDroppable"         "1"
+    "ItemPurchasable" "0"
+    "ItemSellable"          "1"
+    "ItemRequiresCharges"     "0"
+    "ItemShareability"        "ITEM_NOT_SHAREABLE"
+    "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+    "ItemQuality"         "rare"
+    "ItemAliases"         "linkens sphere;sphere;spell block;mana reg;chakra reg"
+
+    //pickup sounds
+    "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
+    "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
+    "Modifiers"
+    {
+      "item_chakra_armor_modifier"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+         "Properties"
+          {
+              "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+              "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"  "%bonus_agi"
+              "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_str"
+              "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_hp_reg_constant"
+              "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE" "%bonus_mana_reg_percentage"
+          }
+      }
+    }
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_int"       "15.0"
+      }
+      "02"
+      {
+        "var_type"          "FIELD_FLOAT"
+        "bonus_agi"        "15.0"
+      }
+      "03"
+      {
+        "var_type"         "FIELD_FLOAT"
+        "bonus_str"       "15.0"
+      }
+      "04"
+      {
+        "var_type"                    "FIELD_FLOAT"
+        "bonus_hp_reg_constant"        "6.0"
+      }
+      "05"
+      {
+        "var_type"                        "FIELD_FLOAT"
+        "bonus_mana_reg_percentage"        "150.0"
+      }
+       "06"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "block_cooldown"      "17.0"
+    }
+    }
+
+  
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"    "items/chakra_armor.lua"
+      "Function"      "item_sphere_datadriven_on_spell_start"
+      "Duration"      "%block_cooldown"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_sphere_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%bonus_health_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"   "%bonus_mana_regen_percentage"
+        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"    "%bonus_damage"
+      }
+      
+      "OnCreated"
+      {     
+        "RunScript"
+        {
+          "ScriptFile"    "items/chakra_armor.lua"
+          "Function"      "modifier_item_sphere_datadriven_on_created"
+        }
+      }
+      
+      "OnDestroy"
+      {
+        "RunScript"
+        {
+          "ScriptFile"    "items/chakra_armor.lua"
+          "Function"      "modifier_item_sphere_datadriven_on_destroy"
+        }
+      }
+      
+      "ThinkInterval"     ".03"
+      "OnIntervalThink"
+      {
+        //Check if the caster has the correct number of Linken's modifiers on them.  If they have less than they are
+        //supposed to, we can assume that a sphere was popped due to an enemy's targeted spell, and put the player's 
+        //Linken's Spheres on cooldown.
+        "RunScript"
+        {
+          "ScriptFile"      "items/chakra_armor.lua"
+          "Function"        "modifier_item_sphere_datadriven_on_interval_think"
+        }
+      }
+    }
+    //A modifier that is applied to a unit when they receive the modifier_item_sphere_target modifier.
+    //So long as they still have that modifier, this one will remain and provide a public face on the modifier icon bar.
+    //This modifier deletes itself when modifier_item_sphere_target no longer exists on the unit.
+    "modifier_item_sphere_datadriven_icon"
+    {
+      "Passive"     "0"
+      "IsHidden"      "0"
+      
+      "ThinkInterval"     ".03"
+      "OnIntervalThink"
+      {
+        "RunScript"
+        {
+          "ScriptFile"      "items/chakra_armor.lua"
+          "Function"        "modifier_item_sphere_datadriven_icon_on_interval_think"
+        }
+      }
+    }
+  }
+  }
+

@@ -24,4 +24,5 @@
 		  "AttributeAgilityGain" "3.1" // Agility bonus per level.
 
 	  	  "Village"			"kirigakure"
+	  	  "Gender"			"male"
 		}

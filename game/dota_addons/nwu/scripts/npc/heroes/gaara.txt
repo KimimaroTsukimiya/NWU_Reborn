@@ -23,6 +23,16 @@
 		  
 	 	  "ItemSlots"
 	  	  { }
-
+	  	  "Gender"			"male"
 	  	  "Village"			"sunagakure"
+
+	  	  "Bot"
+		{
+			"Loadout"
+			{
+				"item_sakuras_fighting_gloves"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+			}
+           }
+
+
 		}

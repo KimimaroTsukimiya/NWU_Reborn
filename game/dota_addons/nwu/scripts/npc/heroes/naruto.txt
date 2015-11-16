@@ -23,4 +23,5 @@
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha"
+	  	  "Gender"			"male"
 		}
