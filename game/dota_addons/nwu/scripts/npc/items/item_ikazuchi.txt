@@ -41,8 +41,7 @@
 
     "FireSound"
     {
-      "EffectName"  "Hero_Brewmaster.ThunderClap"
-      "Target"    "CASTER"
+      
     }
 
 
@@ -56,12 +55,29 @@
   }
     "Modifiers"
     {
-
+           
       "ikazuchi_active"
       {
-         "Passive" "1"
+         "Passive" "0"
+         "IsBuff"   "1"
          "IsHidden"  "0"
          "Duration"    "%active_duration"
+
+
+           "OnCreated"
+          {
+           "AttachEffect"
+              {
+                "EffectName" "particles/items2_fx/mjollnir_shield.vpcf"
+                "EffectAttachType" "follow_origin"
+
+                 "Target" "CASTER"
+                  "ControlPointEntities"
+                  {
+                      "CASTER"    "attach_hitloc"
+                  }
+              }
+          }
 
           "OnTakeDamage"
         { 
