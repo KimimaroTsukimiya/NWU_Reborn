@@ -35,9 +35,9 @@
   		  "Ability2"         "gaara_ryuusa_bakuryu" 
   		  "Ability3"         "gaara_suna_no_yoroi" 
   		  "Ability4"         "gaara_sabaku_taiso"
-  		  "ModelScale"		"0.4"
-  		  "MagicalResistance"            "0"
-  			"LoadoutScale"		"0.4" 
+  		  "ModelScale"		"0.35"
+  			"LoadoutScale"		"0.35" 
+  
   		  
   		  "AttackAnimationPoint"   "0.4"
   		 // "AttackRate"				"0.7"
@@ -52,8 +52,18 @@
   		  
   	 	  "ItemSlots"
   	  	  { }
-  
+  	  	  "Gender"			"male"
   	  	  "Village"			"sunagakure"
+  
+  	  	  "Bot"
+  		{
+  			"Loadout"
+  			{
+  				"item_sakuras_fighting_gloves"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+  			}
+             }
+  
+  
   		}
   		"npc_dota_hero_centaur" //guy
   		{
@@ -65,8 +75,8 @@
   		  "Ability3"        "guy_gouken_mastery" 
   		  "Ability4"        "guy_open_gates"
   		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
-  		 "MagicalResistance"            "0"
-  		"ModelScale"		"0.8"
+  			"ModelScale"		"0.68"
+  		"LoadoutScale"		"0.68" 
   		  "AttackAnimationPoint"   "0.4"
   		 // "AttackRate"				"0.7"
   		  "AttackRange"				"100"
@@ -81,6 +91,7 @@
   	 	  "ItemSlots"
   	  	  { }
   	  	  "Village"			"konoha"
+  	  	  "Gender"			"male"
   		}
 
   		"npc_dota_hero_doom_bringer" //hidan
@@ -90,7 +101,7 @@
   	  	  { }
   		"Model" 			"models/hidan/tesst.vmdl"
   	  	  "Village"			"yugakure_scarred"
-  
+  	  	  "Gender"			"male"
   	  	  "Ability1"        "hidan_cull_the_weak"
   		  "Ability2"        "hidan_taunt" 
   		  "Ability3"        "hidan_jashins_blessing" 
@@ -98,10 +109,10 @@
   		  "Ability5"        ""
   		  "Ability6"        ""
   		    "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
-  		 "MagicalResistance"            "0"
-  		 "ModelScale"		"1.0"
+  		 "ModelScale"		"0.8"
+  		 "LoadoutScale"		"0.8" 
+  
   		  "AttackAnimationPoint"   "0.4"
-  		 // "AttackRate"				"0.7"
   		  "AttackRange"				"275"
   
   		  "MovementSpeed"			"290"
@@ -113,35 +124,40 @@
   		  "AttributeAgilityGain" "1.1" // Agility bonus per level.
   		}
 
+  "npc_dota_hero_antimage" //itachi
+  {
+  	"override_hero"			"npc_dota_hero_antimage"
+  	"Model"					"models/itachi/itachi.vmdl"
+  	"Ability1"				"itachi_tsukiyomi"
+  	"Ability2"				"itachi_dust_crow_genjustsu"
+  	"Ability3"				"itachi_sharingan"
+  	"Ability4"				"itachi_amateratsu"
   
-  		"npc_dota_hero_antimage" //itachi
-  		{
-  		  "override_hero"   "npc_dota_hero_antimage"
-  		  "Model" 			"models/itachi/itachi.vmdl"
-  		  "Ability1"        "itachi_dust_crow_genjustsu"
-  		  "Ability2"        "itachi_tsukiyomi"
-  		  "Ability3"        "itachi_sharingan"
-  		  "Ability4"        "itachi_amateratsu"
-  		 // "Ability2"        "madara_wood_release" 
-  		 // "Ability3"        "madara_susano" 
-  		 // "Ability4"        "madara_meteor"
+  	"ModelScale"		"0.75"
+  	"LoadoutScale"		"0.75" 
   
-  		  "MagicalResistance"            "0"
-  		
-  		  "AttackAnimationPoint"   "0.4"
-  		 // "AttackRate"				"0.7"
-  		  "AttackRange"				"100"
-  		  "MovementSpeed"			"300"
-  		  "AttributeBaseStrength" "20" // Base strength
-  		  "AttributeStrengthGain" "1.35" // Strength bonus per level.
-  		  "AttributeBaseIntelligence" "16" // Base intelligence
-  		  "AttributeIntelligenceGain" "1.6" // Intelligence bonus per level.
-  		  "AttributeBaseAgility" "22" // Base agility
-  		  "AttributeAgilityGain" "2.75" // Agility bonus per level.
-  	 	  "ItemSlots"
-  	  	  { }
-  	  	  "Village"			"konoha_scarred"
-  		}
+  	// Unit attribute
+  	"AttackRange"					"100"
+  	"AttackAnimationPoint"			"0.4"
+  	
+      // Movement
+      //----------------------------------------------------------------
+  	"MovementSpeed"					"300"
+  
+      // Attibutes
+      //----------------------------------------------------------------
+  	"AttributePrimary"				"DOTA_ATTRIBUTE_AGILITY"
+  	"AttributeBaseStrength"			"20"
+  	"AttributeStrengthGain"			"1.35"
+  	"AttributeBaseIntelligence"		"16"
+  	"AttributeIntelligenceGain"		"1.6"
+  	"AttributeBaseAgility"			"22"
+  	"AttributeAgilityGain"			"2.75"
+  
+  	"ItemSlots"	{ }
+  	"Village"			"konoha_scarred"
+  	"Gender"			"male"
+  }
   "npc_dota_hero_earthshaker" //jiroubo
   		{
   		  "override_hero"   "npc_dota_hero_earthshaker"
@@ -150,6 +166,7 @@
   	  	  { }
   
   	  	  "Village"			"otogakure"
+  	  	  "Gender"			"male"
   		}
   		"npc_dota_hero_beastmaster" //kakashi
   		{
@@ -160,8 +177,6 @@
   		  "Ability3"        "kakashi_bunshin" 
   		  "Ability4"        "kakashi_chidori"
   		  "Ability5"        ""
-  
-  		  "MagicalResistance"            "0"
   		
   		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
   		  "AttackAnimationPoint"   "0.4"
@@ -178,6 +193,7 @@
   	 	  "ItemSlots"
   	  	  { }
   	  	  "Village"			"konoha"
+  	  	  "Gender"			"male"
   		}
   "npc_dota_hero_windrunner" //kidoumaru
   		{
@@ -187,6 +203,7 @@
   	  	  { }
   
   	  	  "Village"			"otogakure"
+  	  	  "Gender"			"male"
   		}
   		"npc_dota_hero_kunkka" //kisame
   		{
@@ -197,9 +214,8 @@
   		  "Ability3"         "kisame_samehada" 
   		  "Ability4"         "kisame_water_prison"
   
-  		  "MagicalResistance"            "0"
-  			"ModelScale"		"0.9"
-  			"LoadoutScale"		"0.9" 
+  			"ModelScale"		"0.65"
+  			"LoadoutScale"		"0.65" 
   		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
   		  "AttackAnimationPoint"   "0.4"
   		 // "AttackRate"				"0.7"
@@ -217,6 +233,7 @@
   
   
   	  	  "Village"			"kirigakure_scarred"
+  	  	  "Gender"			"male"
   		}
   		"npc_dota_hero_ogre_magi" //madara
   		{
@@ -227,8 +244,6 @@
   		  "Ability3"        "madara_susano" 
   		  "Ability4"        "madara_meteor"
   		  "Ability5"        ""
-  
-  		  "MagicalResistance"            "0"
   		
   		  "AttackAnimationPoint"   "0.4"
   		 // "AttackRate"				"0.7"
@@ -244,6 +259,7 @@
   	 	  "ItemSlots"
   	  	  { }
   	  	  "Village"			"konoha"
+  	  	  "Gender"			"male"
   		}
   		"npc_dota_hero_dragon_knight" //naruto
   		{
@@ -254,9 +270,8 @@
   		  "Ability3"        "naruto_kage_bunshin_mastery" 
   		  "Ability4"        "naruto_rasenshuriken"
   
-  		 "MagicalResistance"            "0"
-  		"ModelScale"		"1.08"
-  		"LoadoutScale"		"1.08" 
+  		"ModelScale"		"1.00"
+  		"LoadoutScale"		"1.00" 
   		  "AttackAnimationPoint"   "0.4"
   		 // "AttackRate"				"0.7"
   		  "AttackRange"				"100"
@@ -271,6 +286,7 @@
   	 	  "ItemSlots"
   	  	  { }
   	  	  "Village"			"konoha"
+  	  	  "Gender"			"male"
   		}
   "npc_dota_hero_axe" //neji
   		{
@@ -281,9 +297,8 @@
   		  "Ability3"         "neji_byakugan" 
   		  "Ability4"         "neji_hyaku_nijuuhachi_shou"
   
-  		  "MagicalResistance"            "0"
-  		"ModelScale"		"0.8"
-  		"LoadoutScale"		"0.8" 
+  		"ModelScale"		"0.75"
+  		"LoadoutScale"		"0.75" 
   		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
   		  "AttackAnimationPoint"   "0.4"
   		 // "AttackRate"				"0.7"
@@ -300,6 +315,7 @@
   	  	  { }
   
   	  	  "Village"			"konoha"
+  	  	  "Gender"			"male"
   		}
   "npc_dota_hero_sven" //onoki
   	{
@@ -313,6 +329,7 @@
   	  	  { }
   
   	  	 "Village"			"iwagakure"
+  	  	 "Gender"			"male"
   	}
   	
   	"npc_dota_hero_sand_king" //raikage
@@ -325,9 +342,8 @@
   		  "Ability4"        "raikage_raiga_no_bomu"
   
   		  "Village"			"kumogakure"
-  
-  		  "MagicalResistance"            "0"
-  		
+  			"ModelScale"		"0.75"
+  		"LoadoutScale"		"0.75" 
   		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
   		  "AttackAnimationPoint"		"0.4"
   		 // "AttackRate"				"1.0"
@@ -342,6 +358,8 @@
   		  
   	 	  "ItemSlots"
   	  	  { }
+  
+  	  	  "Gender"			"male"
   		}
   	
   		"npc_dota_hero_phantom_assassin" //sakura
@@ -353,9 +371,10 @@
   		  "Ability3"        "sakura_chakra_enhanced_strength" 
   		  "Ability4"        "sakura_inner_sakura"
   		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
-  		 "MagicalResistance"            "0"
-  		"ModelScale"		"0.9"
-  		"LoadoutScale"		"0.9" 
+  
+  		"ModelScale"		"0.73"
+  		"LoadoutScale"		"0.73" 
+  
   		  "AttackAnimationPoint"   "0.4"
   		 // "AttackRate"				"0.7"
   		  "AttackRange"				"100"
@@ -370,6 +389,8 @@
   	 	  "ItemSlots"
   	  	  { }
   	  	  "Village"			"konoha"
+  
+  	  	  "Gender"			"female"
   		}
   		"npc_dota_hero_storm_spirit" //sasuke
   		{
@@ -379,8 +400,6 @@
   		 // "Ability2"        "madara_wood_release" 
   		 // "Ability3"        "madara_susano" 
   		 // "Ability4"        "madara_meteor"
-  
-  		  "MagicalResistance"            "0"
   			
   		  "AttackAnimationPoint"   "0.4"
   		 // "AttackRate"				"0.7"
@@ -392,11 +411,12 @@
   		  "AttributeIntelligenceGain" "2.9" // Intelligence bonus per level.
   		  "AttributeBaseAgility" "16" // Base agility
   		  "AttributeAgilityGain" "2.1" // Agility bonus per level.
-  		  "ModelScale"		"0.7"
-  		 "LoadoutScale"		"0.7" 
+  		  "ModelScale"		"0.57"
+  		 "LoadoutScale"		"0.57" 
   	 	  "ItemSlots"
   	  	  { }
   	  	  "Village"			"konoha_scarred"
+  	  	  "Gender"			"male"
   		}
   		"npc_dota_hero_juggernaut" //yondaime
   		{
@@ -407,7 +427,6 @@
   		  "Ability3"         "yondaime_agile_speed" 
   		 // "Ability4"         "gaara_sabaku_taiso"
   		  //"ModelScale"		"0.5"
-  		  "MagicalResistance"            "0"
   		
   		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
   		  "AttackAnimationPoint"   "0.4"
@@ -422,6 +441,7 @@
   		  "AttributeAgilityGain" "2.5" // Agility bonus per level.
   
   		  "Village"			"konoha"
+  		  "Gender"			"male"
   		  
   	 	  "ItemSlots"
   	  	  { }
@@ -433,8 +453,8 @@
   		  "Ability2"        "zabuza_kirigakure_no_jutsu"
   		  "Ability3"        "zabuza_weak_spot"
   		  "Ability4"        "zabuza_track" 
-  		  "ModelScale"		"1.08"
-  		  "LoadoutScale"		"1.08" 
+  		  "ModelScale"		"0.90"
+  		  "LoadoutScale"		"0.90" 
   		  "Model" 			"models/zabuza/zabuza.vmdl"
   	 	  "ItemSlots"
   	  	  { }
@@ -452,5 +472,6 @@
   		  "AttributeAgilityGain" "3.1" // Agility bonus per level.
   
   	  	  "Village"			"kirigakure"
+  	  	  "Gender"			"male"
   		}
 }

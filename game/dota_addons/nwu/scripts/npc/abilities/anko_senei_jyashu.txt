@@ -10,6 +10,15 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"bristleback_bristleback"
 	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_cast.vpcf"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_projectile.vpcf"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_impact.vpcf"
+	}
 	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -36,6 +45,11 @@
 		{
 			"var_type"			"FIELD_INTEGER"
 			"senei_jyashu_magic_resist"		"4 8 12 16"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"projectile_speed"		"1250"
 		}
 	}
 

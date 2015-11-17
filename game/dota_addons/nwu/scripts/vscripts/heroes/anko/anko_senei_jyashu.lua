@@ -1,5 +1,4 @@
 anko_senei_jyashu = class({})
---LinkLuaModifier( "modifier_senei_jyashu", "modifiers/modifier_senei_jyashu.lua",LUA_MODIFIER_MOTION_NONE )
 
 --[[Author: Zenicus
 	Modified from Bristleback's bristleback ability
@@ -15,6 +14,8 @@ function anko_senei_jyashu(params)
 	local caster = params.caster
 
 	local team = caster:GetTeamNumber()
+	local caster_location = caster:GetAbsOrigin()
+	local target_location = parent:GetAbsOrigin()
 	local origin = caster:GetAbsOrigin()
 	local iTeam = DOTA_UNIT_TARGET_TEAM_ENEMY
 	local iType = DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_HERO
@@ -23,12 +24,10 @@ function anko_senei_jyashu(params)
 
 	--Sounds
 	local sound_enemy = params.sound_enemy
-	--Animations
-	local mystic_snake_projectile = params.mystic_snake_projectile
-	local particle_impact_enemy = params.particle_impact_enemy
-	
 
-	print ("Seeking Opponent")
+	--Animations
+	local projectile_speed = ability:GetSpecialValueFor( "projectile_speed" )
+	local mystic_snake_projectile = params.mystic_snake_projectile
 
 	-- Search for Targets based on range
 	local full_enemies = FindUnitsInRadius(team, origin, nil, radius, iTeam, iType, iFlag, iOrder, false)
@@ -39,37 +38,51 @@ function anko_senei_jyashu(params)
 	local rnd = 0
 
 	if (#full_enemies > 0) then
-		print ("Found One", target_enemy)
+		
 		rnd = RandomInt(0, #full_enemies)
-
 		print ("Rnd = ", rnd)
-
 		local target_enemy = full_enemies[rnd]
+		print ("Found One", target_enemy)
 
-		-- Apply Damage
-		print ("Applying Dmg", final_damage, target_enemy)
-		-- The table containing the information needed for ApplyDamage.
-		local damage_table = {}
+		-- (animation) Shoot Out Snakes
 
-		damage_table.attacker = caster
-		damage_table.damage_type = DAMAGE_TYPE_PHYSICAL
-		damage_table.ability = ability
-		damage_table.victim = target_enemy
+		if target_enemy then
 
-		damage_table.damage = final_damage
+			-- Create the projectile
+			local projectile_info = 
+			{
+				EffectName = mystic_snake_projectile,
+				Ability = ability,
+				vSpawnOrigin = target_location,
+				Target = target_enemy,
+				Source = parent,
+				bHasFrontalCone = false,
+				iMoveSpeed = projectile_speed,
+				bReplaceExisting = true,
+				bProvidesVision = true,
+				iVisionTeamNumber = caster:GetTeamNumber()
+			}
 
-		ApplyDamage(damage_table)
+			ProjectileManager:CreateTrackingProjectile( projectile_info )
+
+			-- Play the sound and particle of the spell
+			EmitSoundOn(sound_enemy, target_enemy)
+
+			-- Apply Damage
+			print ("Applying Dmg", final_damage, target_enemy)
+			-- The table containing the information needed for ApplyDamage.
+			local damage_table = {}
+
+			damage_table.attacker = caster
+			damage_table.damage_type = DAMAGE_TYPE_PHYSICAL
+			damage_table.ability = ability
+			damage_table.victim = target_enemy
+
+			damage_table.damage = final_damage
+
+			ApplyDamage(damage_table)
+		end
 
 	end
-
-	
-
-
-	-- (animation) Shoot Out Snakes
-
-
-
-
-
 
 end
