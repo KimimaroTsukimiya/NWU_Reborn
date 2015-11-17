@@ -1,0 +1,138 @@
+// Anko's Senei Ta Jashu copied from Phantom Assassin Stifling Dagger ability
+// Author: Zenicus
+// Date: 16.11.2015.
+
+"anko_senei_ta_jashu_datadriven"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"phantom_assassin_stifling_dagger"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_cast.vpcf"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_projectile.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"200"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15"
+	"AbilityDuration"				"3.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75 85 95 105"
+	
+	//Damage
+	"AbilityDamage"					"25 40 55 70"
+		
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"move_slow"				"-20 -30 -40 -50"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"dagger_speed"			"1200"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"3"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"TrackingProjectile"
+		{
+			"Target"           "TARGET"
+		    "EffectName"       "particles/units/heroes/hero_medusa/medusa_mystic_snake_cast.vpcf"
+		    "Dodgeable"        "1"
+		    "ProvidesVision"   "1"
+		    "VisionRadius"     "300"
+		    "MoveSpeed"        "%dagger_speed"
+		    "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+		}
+
+		"FireSound"
+		{
+			"EffectName"		"Hero_PhantomAssassin.Dagger.Cast"
+			"Target"			"CASTER"
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"Damage"
+		{
+			"Target"
+			{
+				"Center"	"TARGET"
+				"Types"		"DOTA_UNIT_TARGET_HERO"
+			}
+			"Type"			"DAMAGE_TYPE_PURE"
+			"Damage"		"%AbilityDamage"
+		}
+
+		"Damage"
+		{
+			"Target"
+			{
+				"Center"	"TARGET"
+				"Types"		"DOTA_UNIT_TARGET_BASIC"
+			}
+			"Type"			"DAMAGE_TYPE_PURE"
+			"Damage"		"%AbilityDamage"
+		}
+
+		"FireSound"
+		{
+			"EffectName"		"Hero_PhantomAssassin.Dagger.Target"
+			"Target"			"TARGET"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifier_senei_ta_jashu_slow_datadriven"
+			"Target"			"TARGET"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_senei_ta_jashu_slow_datadriven"
+		{
+			"IsDebuff"	"1"
+			"Duration"	"%duration"
+
+			"EffectName"	"particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger_debuff.vpcf"
+			"EffectAttachType"	"follow_origin"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%move_slow"
+			}
+		}
+	}
+}
+

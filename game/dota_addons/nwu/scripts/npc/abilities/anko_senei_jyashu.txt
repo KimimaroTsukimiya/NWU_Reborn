@@ -17,7 +17,6 @@
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
 		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_cast.vpcf"
 		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_projectile.vpcf"
-		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_impact.vpcf"
 	}
 	
 	// Casting
@@ -69,7 +68,6 @@
 					"Function"		"anko_senei_jyashu"
 					"sound_enemy"		"Hero_Medusa.MysticSnake.Target"
 					"mystic_snake_projectile"	"particles/units/heroes/hero_medusa/medusa_mystic_snake_projectile.vpcf"
-					"particle_impact_enemy"		"particles/units/heroes/hero_medusa/medusa_mystic_snake_impact.vpcf"
 				}
 			}
 			"Properties"
