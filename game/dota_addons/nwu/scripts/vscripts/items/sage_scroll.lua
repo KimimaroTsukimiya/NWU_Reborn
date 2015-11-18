@@ -3,17 +3,20 @@
 	Checks if the target is an illusion, if true then it kills it
 	otherwise the target model gets swapped into a frog]]
 function voodoo_start( keys )
+	print("1")
 	local target = keys.target
 	local model = keys.model
 
 	if target:IsIllusion() then
 		target:ForceKill(true)
 	else
+		print("2")
 		if target.target_model == nil then
 			target.target_model = target:GetModelName()
 		end
-
+		print("3")
 		target:SetOriginalModel(model)
+		print("4")
 	end
 end
 
@@ -36,7 +39,7 @@ end
 ]]
 function HideWearables( event )
 	local hero = event.target
-
+	print("5")
 	local ability = event.ability
 	local duration = ability:GetLevelSpecialValueFor( "duration", ability:GetLevel() - 1 )
 	print("Hiding Wearables")
@@ -51,7 +54,7 @@ function HideWearables( event )
 		DeepPrintTable(hero:GetChildren())
 		return
 	end
-
+	print("6")
     local model = hero:FirstMoveChild()
     while model ~= nil do
         if model:GetClassname() ~= "" and model:GetClassname() == "dota_item_wearable" then
@@ -70,6 +73,7 @@ function HideWearables( event )
         if model ~= nil then
         	print("Next Peer:" .. model:GetModelName())
         end
+        print("7")
     end
 end
 

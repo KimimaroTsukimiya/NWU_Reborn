@@ -81,7 +81,6 @@ function GameMode:Wtf()
                     for i=0, 6 do 
                         if  hero:GetItemInSlot(i) ~= nil then
                             hero:GetItemInSlot(i):EndCooldown()
-                            print("sds")
                         end
                     end
                 end
