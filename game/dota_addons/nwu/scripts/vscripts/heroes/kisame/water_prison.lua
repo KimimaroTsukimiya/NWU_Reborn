@@ -24,12 +24,6 @@ function ModelSwapEnd( keys )
 	local caster = keys.caster
 	caster:SetModel(caster.caster_model)
 	caster:SetOriginalModel(caster.caster_model)
-	if keys.ability.domeDummy ~= nil then
-		if not keys.ability.domeDummy:IsNull() then
-			keys.ability.domeDummy:RemoveSelf()
-			keys.ability.domeDummy = nil
-		end
-	end
 end
 --[[
 	Author LearningDave
@@ -51,9 +45,6 @@ function ManaCost( keys )
 		caster:SetModel(caster.caster_model)
 		caster:SetOriginalModel(caster.caster_model)
 		caster:RemoveModifierByName("modifier_kisame_metamorphosis")
-		if not keys.ability.domeDummy:IsNull() then
-			keys.ability.domeDummy:RemoveSelf()
-		end
 		ability:ToggleAbility()
 		ability:StartCooldown(ability:GetCooldown(ability:GetLevel()))
 	else

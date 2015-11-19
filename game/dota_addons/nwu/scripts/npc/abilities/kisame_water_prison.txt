@@ -114,12 +114,7 @@
 			"ModifierName"		"modifier_kisame_metamorphosis"
 			"Target"			"CASTER"
 		}
-		"RunScript"
-		{
-			"ScriptFile"		"heroes/kisame/water_prison.lua"
-			"Function"			"createWaterPrisonDome"
-			"dummy_aura"		"modifier_kisame_water_prison_dome"
-		}
+
 	}
 
 	"OnToggleOff"
@@ -232,43 +227,6 @@
 
 			}
 		}
-		"modifier_kisame_water_prison_dome"
-		{
-			"OnCreated"
-			{
-				"AttachEffect"
-				{
-					"EffectName"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
-					"EffectAttachType"	"attach_origin"
-					"Target"		"TARGET"
 
-					"ControlPoints"
-					{
-						"00"	"%radius %radius -200"
-						"01"	"%radius %radius -200"
-						"06"	"%radius %radius -200"
-						"10"	"%radius %radius -200"
-					}
-				}
-			}
-
-			"ThinkInterval"	"0.1"
-			"OnIntervalThink"
-			{
-				"RunScript"
-				{
-					"ScriptFile"	"heroes/kisame/water_prison.lua"
-					"Function"		"domeFollowHero"
-				}
-			}
-	
-			"States"
-			{
-				"MODIFIER_STATE_INVULNERABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
-				"MODIFIER_STATE_NO_HEALTH_BAR" 	"MODIFIER_STATE_VALUE_ENABLED"				
-				"MODIFIER_STATE_NOT_ON_MINIMAP" "MODIFIER_STATE_VALUE_ENABLED"
-				"MODIFIER_STATE_UNSELECTABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
-			}
-		}
 	}
 }
