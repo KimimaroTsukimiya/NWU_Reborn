@@ -43,7 +43,7 @@
       "02"
       {
         "var_type"                               "FIELD_FLOAT"
-        "illusion_outgoing_damage_percent"       "-10"
+        "illusion_outgoing_damage_percent"       "-90"
       }
        "03"
       {
