@@ -8,8 +8,6 @@ function Return( event )
 	local caster = event.caster
 	local attacker = event.attacker
 	local damage = event.Damage
-	local abilityDamageType = event.ability:GetAbilityDamageType()
-	print(abilityDamageType)
 	
 	if attacker:IsBuilding() or Kaguya_Skip then
 		return
@@ -25,7 +23,6 @@ function Return( event )
 		damage_type = DAMAGE_TYPE_PURE,
 		damage_flags = DOTA_DAMAGE_FLAG_REFLECTION
 	})
-
 	
 	Kaguya_Skip = false
 end
