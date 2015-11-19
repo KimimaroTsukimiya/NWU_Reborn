@@ -1,7 +1,7 @@
 WTF_MODE = false
 
 CHEAT_CODES = {
-    ["wtf"] = function() GameMode:Wtf() end,              -- "Toggles Wtf-mode: Gives all playes no cd on their abilities and 1k manareg"    
+    ["wtfmode"] = function() GameMode:Wtf() end,              -- "Toggles Wtf-mode: Gives all playes no cd on their abilities and 1k manareg"    
     ["gold"] = function(arg) GameMode:Gold(arg) end,              -- "Gives the player x gold"    
     ["repick"] = function(arg) GameMode:Repick(arg) end,              -- "Changes the Hero of the player"    
     ["lvlup"] = function(arg) GameMode:LvlUp(arg) end,                -- "The player lvlups x levels"        
