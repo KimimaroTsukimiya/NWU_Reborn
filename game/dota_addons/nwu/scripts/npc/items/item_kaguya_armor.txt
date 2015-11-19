@@ -4,6 +4,7 @@
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIAT"
     "BaseClass"             "item_datadriven"
     "AbilityTextureName"    "item_kaguya_armor"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_PHYSICAL" 
     "AbilityCooldown"       "25"
     "AbilityManaCost"       "25"
     // Stats
@@ -38,6 +39,7 @@
     "precache"
     {
       "particle" "particles/units/heroes/hero_centaur/centaur_return.vpcf"
+      "particle"  "particles/items_fx/blademail.vpcf"
 
     }
 
@@ -67,14 +69,35 @@
       "modifier_return"
     { 
       "Duration"                      "%duration"
+      "Passive" "0"
+      "IsHidden"  "0"
+
+        "OnCreated"
+          {
+           "AttachEffect"
+              {
+                "EffectName" "particles/items_fx/blademail.vpcf"
+                "EffectAttachType" "follow_origin"
+
+                 "Target" "CASTER"
+                  "ControlPointEntities"
+                  {
+                      "CASTER"    "attach_hitloc"
+                  }
+              }
+          }
+
+
       "OnAttacked"
       {
         "RunScript"
         {
           "ScriptFile"  "items/kaguya_armor.lua"
           "Function"    "Return"
+          "Damage"    "%attack_damage"
         }
-        "FireEffect"
+       
+         "FireEffect"
         {
           "EffectName"    "particles/units/heroes/hero_centaur/centaur_return.vpcf"
           "EffectAttachType"  "attach_hitloc"
@@ -84,8 +107,8 @@
             "CASTER"    "attach_hitloc"
             "ATTACKER"    "attach_hitloc"
           }
-        }
-      } 
+        }   
+      }
     }
     }
     // Special  

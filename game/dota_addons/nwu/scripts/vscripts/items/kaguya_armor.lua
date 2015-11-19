@@ -5,15 +5,24 @@
 function Return( event )
 	-- Variables
 
-	local caster = event.caster GetLevelSp
+	local caster = event.caster
 	local attacker = event.attacker
-	local damage = ability:GetLevelSpecialValueFor( "attack_damage", ( ability:GetLevel() - 1 ) )
+	print(attacker:GetName())
+	local damage = event.Damage
+	local abilityDamageType = event.ability:GetAbilityDamageType()
 	local ability = event.ability
-	local damageType = ability:GetAbilityDamageType()
-	local return_damage = damage
-	print(damageType)
+	print(damage)
+	print(abilityDamageType)
+	print(caster)
+	print(event.attacker)
 	-- Damage
-	ApplyDamage({ victim = attacker, attacker = caster, damage = return_damage, damage_type = damageType })
+	local damageTable = {
+				victim = attacker,
+				attacker = caster,
+				damage = damage,
+				damage_type = abilityDamageType
+			}
+	ApplyDamage( damageTable )
 
-	print("done "..return_damage)
+
 end

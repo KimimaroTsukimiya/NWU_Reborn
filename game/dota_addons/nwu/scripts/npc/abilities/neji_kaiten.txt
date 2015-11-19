@@ -85,7 +85,7 @@
                     }
                     "Center"            "Target"
                     "Distance"          "%push_back_length"
-                    "Duration"          "1.0" // TODO check
+                    "Duration"          "1.0"
                     "Height"            "0"
                     "IsFixedDistance"   "0"
                     "ShouldStun"        "0" 
