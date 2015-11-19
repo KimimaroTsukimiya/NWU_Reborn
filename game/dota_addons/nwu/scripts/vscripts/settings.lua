@@ -35,7 +35,7 @@ USE_CUSTOM_TOP_BAR_VALUES = true        -- Should we do customized top bar value
 TOP_BAR_VISIBLE = true                  -- Should we display the top bar score/count at all?
 SHOW_KILLS_ON_TOPBAR = true             -- Should we display kills only on the top bar? (No denies, suicides, kills by neutrals)  Requires USE_CUSTOM_TOP_BAR_VALUES
 
-ENABLE_TOWER_BACKDOOR_PROTECTION = false-- Should we enable backdoor protection for our towers?
+ENABLE_TOWER_BACKDOOR_PROTECTION = true-- Should we enable backdoor protection for our towers?
 REMOVE_ILLUSIONS_ON_DEATH = false       -- Should we remove all illusions if the main hero dies?
 DISABLE_GOLD_SOUNDS = false             -- Should we disable the gold sound when players get gold?
 
@@ -79,8 +79,8 @@ ENABLED_RUNES[DOTA_RUNE_BOUNTY] = true
 
 
 MAX_NUMBER_OF_TEAMS = 2              -- How many potential teams can be in this game mode?
-USE_CUSTOM_TEAM_COLORS = true          -- Should we use custom team colors?
-USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = true          -- Should we use custom team colors to color the players/minimap?
+USE_CUSTOM_TEAM_COLORS = false          -- Should we use custom team colors?
+USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = false          -- Should we use custom team colors to color the players/minimap?
 
 TEAM_COLORS = {}                        -- If USE_CUSTOM_TEAM_COLORS is set, use these colors.
 TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 101, 212, 19 }  --    Teal
