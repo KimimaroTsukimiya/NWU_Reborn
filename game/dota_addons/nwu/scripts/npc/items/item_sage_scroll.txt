@@ -75,11 +75,6 @@
             "model"     "models/props_gameplay/frog.vmdl"
           }
   
-          "RunScript"
-          {
-            "ScriptFile"    "items/sage_scroll.lua"
-            "Function"      "HideWearables"
-          }
         }
   
         "OnDestroy"
@@ -88,12 +83,6 @@
           {
             "ScriptFile"  "items/sage_scroll.lua"
             "Function"    "voodoo_end"
-          }
-  
-          "RunScript"
-          {
-            "ScriptFile"  "items/sage_scroll.lua"
-            "Function"    "ShowWearables"
           }
         }
   
