@@ -11,16 +11,14 @@ function sharingan( keys )
 	local copy_timer =  old_ability:GetLevelSpecialValueFor("copy_timer", (old_ability:GetLevel() - 1))
 	local duration = keys.ability:GetDuration()
 	if target ~= caster then
-		print(target:GetAbilityByIndex(1):GetName())
-		caster:RemoveAbility(caster:GetAbilityByIndex(1):GetName())
+		if caster:GetAbilityByIndex(4):GetName()  ~= nil then
+			caster:RemoveAbility(caster:GetAbilityByIndex(4):GetName())
+		end
 		Ability = caster:AddAbility(target:GetAbilityByIndex(1):GetName())
-		Ability:SetAbilityIndex(1)
+		Ability:SetAbilityIndex(4)
 		Ability:SetLevel(ability_level)
 		Timers:CreateTimer( copy_timer, function()
-			caster:RemoveAbility(target:GetAbilityByIndex(1):GetName())
-			Ability = caster:AddAbility("kakashi_sharingan")
-			Ability:SetAbilityIndex(1)
-			Ability:SetLevel(ability_level)
+			caster:RemoveAbility(target:GetAbilityByIndex(4):GetName())
 		return nil
 		end
 		)
