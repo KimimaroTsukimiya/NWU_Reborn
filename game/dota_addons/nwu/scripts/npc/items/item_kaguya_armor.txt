@@ -85,14 +85,23 @@
                       "CASTER"    "attach_hitloc"
                   }
               }
-          }
+          
 
 
-      "OnAttacked"
+	  
+		"RunScript"
+        {
+          "ScriptFile"  "items/kaguya_armor.lua"
+          "Function"    "Init"
+        }
+	  }
+	  
+      "OnTakeDamage"
       {
         "RunScript"
         {
           "ScriptFile"  "items/kaguya_armor.lua"
+		  "Damage"		"%attack_damage"
           "Function"    "Return"
           "Damage"    "%attack_damage"
         }
