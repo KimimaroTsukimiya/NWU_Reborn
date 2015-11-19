@@ -32,7 +32,7 @@ function anko_senei_jyashu(params)
 	-- Search for Targets based on range
 	local full_enemies = FindUnitsInRadius(team, origin, nil, radius, iTeam, iType, iFlag, iOrder, false)
 	-- Randomly Pick one from all targets
-	print ("Found Enemies", full_enemies, #full_enemies)
+	--print ("Found Enemies", full_enemies, #full_enemies)
 
 	--local target_enemy = 0
 	local rnd = 0
@@ -40,9 +40,9 @@ function anko_senei_jyashu(params)
 	if (#full_enemies > 0) then
 		
 		rnd = RandomInt(0, #full_enemies)
-		print ("Rnd = ", rnd)
+		--print ("Rnd = ", rnd)
 		local target_enemy = full_enemies[rnd]
-		print ("Found One", target_enemy)
+		--print ("Found One", target_enemy)
 
 		-- (animation) Shoot Out Snakes
 
@@ -69,7 +69,7 @@ function anko_senei_jyashu(params)
 			EmitSoundOn(sound_enemy, target_enemy)
 
 			-- Apply Damage
-			print ("Applying Dmg", final_damage, target_enemy)
+			--print ("Applying Dmg", final_damage, target_enemy)
 			-- The table containing the information needed for ApplyDamage.
 			local damage_table = {}
 

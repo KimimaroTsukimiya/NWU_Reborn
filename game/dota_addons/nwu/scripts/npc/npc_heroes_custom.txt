@@ -1,32 +1,32 @@
 "DOTAHeroes"
 {
   "npc_dota_hero_medusa" //anko
-    		{
-    		  "override_hero"   "npc_dota_hero_medusa"
-    		  "Ability1"        "anko_giant_snake"
-    		  "Ability2"        "anko_senei_jyashu"
-    		  "Ability3"        "anko_senei_ta_jashu"
-    		  "Ability4"        
-    		  "ModelScale"		"1.08"
-    		  "LoadoutScale"		"1.08" 
-    		  //"Model" 			"models/zabuza/zabuza.vmdl"
-    	 	  "ItemSlots"
-    	  	  { }
-    
-    	  	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
-    		  "AttackAnimationPoint"		"0.4"
-    		 // "AttackRate"				"1.0"
-    		  "AttackRange"				"100"
-    		  "MovementSpeed"			"300"
-    		  "AttributeBaseStrength" "17" // Base strength
-    		  "AttributeStrengthGain" "2" // Strength bonus per level.
-    		  "AttributeBaseIntelligence" "15" // Base intelligence
-    		  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
-    		  "AttributeBaseAgility" "23" // Base agility
-    		  "AttributeAgilityGain" "3.1" // Agility bonus per level.
-    
-    	  	  "Village"			"kirigakure"
-    		}	
+  {
+    "override_hero"   "npc_dota_hero_medusa"
+    "Ability1"        "anko_giant_snake"
+    "Ability2"        "anko_senei_jyashu"
+    "Ability3"        "anko_senei_ta_jashu"
+    "Ability4"        "anko_sojasosai_no_jutsu"      
+    "ModelScale"		"1.08"
+    "LoadoutScale"	"1.08" 
+    //"Model" 		"models/zabuza/zabuza.vmdl"
+    "ItemSlots"
+    { }
+  
+    "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+    "AttackAnimationPoint"		"0.4"
+   // "AttackRate"				"1.0"
+    "AttackRange"				"100"
+    "MovementSpeed"			"300"
+    "AttributeBaseStrength" "17" // Base strength
+    "AttributeStrengthGain" "2" // Strength bonus per level.
+    "AttributeBaseIntelligence" "15" // Base intelligence
+    "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
+    "AttributeBaseAgility" "23" // Base agility
+    "AttributeAgilityGain" "3.1" // Agility bonus per level.
+  
+    "Village"			"kirigakure"
+  }	
   		"npc_dota_hero_lion" //gaara
   		{
   		  "override_hero"   "npc_dota_hero_lion"

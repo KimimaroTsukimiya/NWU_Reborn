@@ -1,6 +1,6 @@
 anko_giant_snake = class({})
-LinkLuaModifier( "modifier_meat_hook_followthrough_lua", "modifiers/modifier_meat_hook_followthrough_lua.lua" ,LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier( "modifier_meat_hook_lua", "modifiers/modifier_meat_hook_lua.lua" ,LUA_MODIFIER_MOTION_HORIZONTAL )
+LinkLuaModifier( "modifier_meat_hook_followthrough_lua", "heroes/anko/modifiers/modifier_meat_hook_followthrough_lua.lua" ,LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_meat_hook_lua", "heroes/anko/modifiers/modifier_meat_hook_lua.lua" ,LUA_MODIFIER_MOTION_HORIZONTAL )
 
 
 --[[Author: Zenicus

@@ -2,7 +2,7 @@
 // Author: Zenicus
 // Date: 16.11.2015.
 
-"anko_senei_ta_jashu_datadriven"
+"anko_senei_ta_jashu"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
@@ -10,10 +10,11 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"phantom_assassin_stifling_dagger"
-
+	
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -22,7 +23,7 @@
 		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_cast.vpcf"
 		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_projectile.vpcf"
 	}
-
+	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"200"
@@ -36,9 +37,6 @@
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityManaCost"				"75 85 95 105"
-	
-	//Damage
-	"AbilityDamage"					"25 40 55 70"
 		
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
@@ -47,7 +45,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"move_slow"				"-20 -30 -40 -50"
+			"ms_slow"				"-20 -30 -40 -50"
 		}
 		"02"
 		{
@@ -59,80 +57,86 @@
 			"var_type"				"FIELD_INTEGER"
 			"duration"				"3"
 		}
+		"04"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"damage_per_tick"				"25 40 55 70"
+		}
 	}
-
 	"OnSpellStart"
 	{
-		"TrackingProjectile"
-		{
-			"Target"           "TARGET"
-		    "EffectName"       "particles/units/heroes/hero_medusa/medusa_mystic_snake_cast.vpcf"
-		    "Dodgeable"        "1"
-		    "ProvidesVision"   "1"
-		    "VisionRadius"     "300"
-		    "MoveSpeed"        "%dagger_speed"
-		    "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
-		}
-
-		"FireSound"
-		{
-			"EffectName"		"Hero_PhantomAssassin.Dagger.Cast"
-			"Target"			"CASTER"
-		}
-	}
-
-	"OnProjectileHitUnit"
-	{
-		"Damage"
-		{
-			"Target"
-			{
-				"Center"	"TARGET"
-				"Types"		"DOTA_UNIT_TARGET_HERO"
-			}
-			"Type"			"DAMAGE_TYPE_PURE"
-			"Damage"		"%AbilityDamage"
-		}
-
-		"Damage"
-		{
-			"Target"
-			{
-				"Center"	"TARGET"
-				"Types"		"DOTA_UNIT_TARGET_BASIC"
-			}
-			"Type"			"DAMAGE_TYPE_PURE"
-			"Damage"		"%AbilityDamage"
-		}
-
-		"FireSound"
-		{
-			"EffectName"		"Hero_PhantomAssassin.Dagger.Target"
-			"Target"			"TARGET"
-		}
-
 		"ApplyModifier"
 		{
-			"ModifierName"		"modifier_senei_ta_jashu_slow_datadriven"
-			"Target"			"TARGET"
+			"ModifierName"	"modifier_anko_senei_ta_jashu_slow"
+			"Target" 		"TARGET"
+			"Duration"		"%duration"
 		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/anko/anko_senei_ta_jashu.lua"
+			"Function"		"anko_senei_ta_jashu"
+		}
+		
 	}
 
 	"Modifiers"
 	{
-		"modifier_senei_ta_jashu_slow_datadriven"
+        "modifier_anko_senei_ta_jashu_slow"
+        {
+          "Passive"     "0"
+          "IsHidden"      "0"
+          "IsDebuff"      "1"
+          "EffectName"    		"particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+          "EffectAttachType"  	"follow_origin"
+      
+          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+          "StatusEffectPriority"  "10"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow"
+          }
+
+          "OnCreated"
+          {
+            "FireSound"
+            {
+              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
+              "Target"    "TARGET"
+            }     
+          }   
+        }
+		//A visible modifier.  Deals damage over time to the target, but only if the target does not also have a 
+		//Poison Sting debuff originating from Venomancer.
+		"modifier_anko_senei_ta_jashu_poison_sting_debuff"
 		{
-			"IsDebuff"	"1"
-			"Duration"	"%duration"
+			"Passive"		"0"
+			"IsHidden"		"0"
+			"IsBuff"		"0"
+			"IsDebuff"		"1"
+			"IsPurgable"	"1"
 
-			"EffectName"	"particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger_debuff.vpcf"
-			"EffectAttachType"	"follow_origin"
-
-			"Properties"
+			"ThinkInterval"	"1.0"
+			"OnIntervalThink"
 			{
-				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%move_slow"
+				"RunScript"
+				{
+					"ScriptFile"		"heroes/anko/anko_senei_ta_jashu.lua"
+					"Function"			"anko_senei_ta_jashu"
+				}
+			}
+
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"heroes/anko/anko_senei_ta_jashu.lua"
+					"Function"			"anko_senei_ta_jashu"
+				}
 			}
 		}
+		
 	}
 }
 
