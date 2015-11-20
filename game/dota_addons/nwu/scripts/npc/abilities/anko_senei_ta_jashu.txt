@@ -13,7 +13,7 @@
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"FightRecapLevel"				"1"
-	"AbilityTextureName"			"phantom_assassin_stifling_dagger"
+	"AbilityTextureName"			""
 	
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
@@ -71,6 +71,13 @@
 			"Target" 		"TARGET"
 			"Duration"		"%duration"
 		}
+		
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_anko_senei_ta_jashu_dot"
+			"Target" 		"TARGET"
+			"Duration"		"%duration"
+		}
 
 		"RunScript"
 		{
@@ -82,41 +89,11 @@
 
 	"Modifiers"
 	{
-        "modifier_anko_senei_ta_jashu_slow"
+        "modifier_anko_senei_ta_jashu_dot"
         {
           "Passive"     "0"
           "IsHidden"      "0"
           "IsDebuff"      "1"
-          "EffectName"    		"particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
-          "EffectAttachType"  	"follow_origin"
-      
-          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
-          "StatusEffectPriority"  "10"
-
-          "Properties"
-          {
-            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow"
-          }
-
-          "OnCreated"
-          {
-            "FireSound"
-            {
-              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
-              "Target"    "TARGET"
-            }     
-          }   
-        }
-		//A visible modifier.  Deals damage over time to the target, but only if the target does not also have a 
-		//Poison Sting debuff originating from Venomancer.
-		"modifier_anko_senei_ta_jashu_poison_sting_debuff"
-		{
-			"Passive"		"0"
-			"IsHidden"		"0"
-			"IsBuff"		"0"
-			"IsDebuff"		"1"
-			"IsPurgable"	"1"
-
 			"ThinkInterval"	"1.0"
 			"OnIntervalThink"
 			{
@@ -125,17 +102,40 @@
 					"ScriptFile"		"heroes/anko/anko_senei_ta_jashu.lua"
 					"Function"			"anko_senei_ta_jashu"
 				}
+			}   
+        }
+		
+		"modifier_anko_senei_ta_jashu_slow"
+		{
+			"Passive"		"0"
+			"IsHidden"		"0"
+			"IsBuff"		"0"
+			"IsDebuff"		"1"
+			"IsPurgable"	"1"
+			
+			"EffectName"    		"particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+			"EffectAttachType"  	"follow_origin"
+		  
+			"StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+			"StatusEffectPriority"  "10"
+		  
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow"
 			}
-
+			
 			"OnCreated"
 			{
-				"RunScript"
+				"FireSound"
 				{
-					"ScriptFile"		"heroes/anko/anko_senei_ta_jashu.lua"
-					"Function"			"anko_senei_ta_jashu"
-				}
+				  "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
+				  "Target"    "TARGET"
+				}     
+
 			}
 		}
+		
+		
 		
 	}
 }

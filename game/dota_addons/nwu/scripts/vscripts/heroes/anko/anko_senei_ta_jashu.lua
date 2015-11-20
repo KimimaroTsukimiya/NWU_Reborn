@@ -12,6 +12,8 @@ function anko_senei_ta_jashu( keys )
 	local target = keys.target
 	local ability = keys.ability
 	local poison_damage = ability:GetLevelSpecialValueFor("damage_per_tick", (ability:GetLevel() - 1))
+	local ms_slow = ability:GetLevelSpecialValueFor("ms_slow",(ability:GetLevel() - 1))
+
 	local damageType = ability:GetAbilityDamageType()
 	local damageTable = {
 						victim = target,
@@ -21,5 +23,7 @@ function anko_senei_ta_jashu( keys )
 					}
 	ApplyDamage( damageTable )
 	PopupDamage(target, poison_damage)
+
+	keys.ability:ApplyDataDrivenModifier(caster, keys.target, "modifier_anko_senei_ta_jashu_slow", {})
 end
 

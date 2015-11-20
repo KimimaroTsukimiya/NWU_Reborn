@@ -1,8 +1,8 @@
-// Anko's Senei Ta Jashu copied from Phantom Assassin Stifling Dagger ability
+// Anko's Sojasosai No Jutsu
 // Author: Zenicus
-// Date: 16.11.2015.
+// Date: 19.11.2015.
 
-"anko_senei_ta_jashu"
+"anko_sojasosai_no_jutsu"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
@@ -10,26 +10,31 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"AbilityTextureName"			"phantom_assassin_stifling_dagger"
-
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			""
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+		"particle"  "particles/units/heroes/hero_terrorblade/terrorblade_sunder.vpcf"
+	}
+	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"200"
+	"AbilityCastRange"				"100"
 	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 	
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"15"
-	"AbilityDuration"				"3.0"
+	"AbilityCooldown"				"100 90 80"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"75 85 95 105"
-	
-	//Damage
-	"AbilityDamage"					"25 40 55 70"
+	"AbilityManaCost"				"150 200 250"
 		
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
@@ -37,18 +42,26 @@
 	{
 		"01"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"move_slow"				"-20 -30 -40 -50"
+			"var_type"						"FIELD_FLOAT"
+			"damage_percent"				"50 60 70"
 		}
-		"02"
+	}
+	"OnSpellStart"
+	{
+		"RunScript"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"dagger_speed"			"1200"
+			"ScriptFile"	"heroes/anko/anko_sojasosai_no_jutsu.lua"
+			"Function"		"anko_sojasosai_no_jutsu"
 		}
-		"03"
+		"FireSound"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"duration"				"3"
+			"EffectName" 	"Hero_Terrorblade.Sunder.Cast"
+			"Target"	 	"CASTER"
+		}
+		"FireSound"
+		{
+			"EffectName" 	"Hero_Terrorblade.Sunder.Target"
+			"Target"	 	"TARGET"
 		}
 	}
 }
