@@ -10,10 +10,8 @@ require('music')
 if CHEATS_ACTIVATED then
   require('cheats')
 end
--- Cleanup a player when they leave
-function GameMode:OnDisconnect(keys)
 
-end
+
 -- The overall game state has changed
 function GameMode:OnGameRulesStateChange(keys)
   DebugPrint("[BAREBONES] GameRules State Changed")

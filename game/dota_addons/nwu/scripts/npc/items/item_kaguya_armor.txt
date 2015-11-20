@@ -93,7 +93,6 @@
           "ScriptFile"  "items/kaguya_armor.lua"
 		  "Damage"		"%attack_damage"
           "Function"    "Return"
-          "Damage"    "%attack_damage"
         }
        
          "FireEffect"

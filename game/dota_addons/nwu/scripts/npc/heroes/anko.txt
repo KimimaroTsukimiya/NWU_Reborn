@@ -1,12 +1,13 @@
 "npc_dota_hero_medusa" //anko
 {
   "override_hero"   "npc_dota_hero_medusa"
+  "Model"           "models/anko/anko.vmdl"
   "Ability1"        "anko_giant_snake"
   "Ability2"        "anko_senei_jyashu"
   "Ability3"        "anko_senei_ta_jashu"
   "Ability4"        "anko_sojasosai_no_jutsu"      
-  "ModelScale"		"1.08"
-  "LoadoutScale"	"1.08" 
+  "ModelScale"		"1.00"
+  "LoadoutScale"	"1.00" 
   //"Model" 		"models/zabuza/zabuza.vmdl"
   "ItemSlots"
   { }
