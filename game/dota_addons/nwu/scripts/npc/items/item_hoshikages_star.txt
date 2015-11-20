@@ -122,7 +122,7 @@
 
           "Properties"
           {
-            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_slow"
+            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movement_slow"
           }
 
           "OnCreated"

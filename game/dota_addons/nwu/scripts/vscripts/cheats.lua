@@ -1,7 +1,7 @@
 WTF_MODE = false
 
 CHEAT_CODES = {
-    ["wtf"] = function() GameMode:Wtf() end,              -- "Toggles Wtf-mode: Gives all playes no cd on their abilities and 1k manareg"    
+    ["wtfmode"] = function() GameMode:Wtf() end,              -- "Toggles Wtf-mode: Gives all playes no cd on their abilities and 1k manareg"    
     ["gold"] = function(arg) GameMode:Gold(arg) end,              -- "Gives the player x gold"    
     ["repick"] = function(arg) GameMode:Repick(arg) end,              -- "Changes the Hero of the player"    
     ["lvlup"] = function(arg) GameMode:LvlUp(arg) end,                -- "The player lvlups x levels"        
@@ -151,6 +151,7 @@ function GameMode:Setup_Hero_Tables()
         GameRules.heroTable[14] = "npc_dota_hero_juggernaut"
         GameRules.heroTable[15] = "npc_dota_hero_bloodseeker"
         GameRules.heroTable[16] = "npc_dota_hero_axe"
+		GameRules.heroTable[17] = "npc_dota_hero_shadow_shaman"
     end
     if GameRules.nwrHeroTable == nil then
         GameRules.nwrHeroTable = {}
@@ -170,6 +171,7 @@ function GameMode:Setup_Hero_Tables()
         GameRules.nwrHeroTable[14] = "yondaime"
         GameRules.nwrHeroTable[15] = "zabuza"
         GameRules.nwrHeroTable[16] = "neji"
+		GameRules.nwrHeroTable[17] = "shikamaru"
     end
 end
 

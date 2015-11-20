@@ -11,7 +11,7 @@
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
         "FightRecapLevel"               "1"
         "AbilityTextureName"            "kakashi_chidori"
-        "AbilityChannelTime"		"2.0 2.0 2.0"
+        //"AbilityChannelTime"		"2.0 2.0 2.0"
         // Precache
         //-------------------------------------------------------------------------------------------------------------
         "precache"
@@ -27,7 +27,7 @@
         // Casting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "1800"
-        "AbilityCastPoint"              "0.25"
+        "AbilityCastPoint"              "2.00"
 
         // Time     
         //-------------------------------------------------------------------------------------------------------------

@@ -38,17 +38,10 @@
 
      "OnSpellStart"
   {
-
-    "FireSound"
-    {
-      
-    }
-
-
     "ApplyModifier"
     {
       "ModifierName"  "ikazuchi_active"
-      "Target"        "Caster"
+      "Target"        "CASTER"
       "Duration"    "%active_duration"
     }  
 
@@ -59,7 +52,6 @@
       "ikazuchi_active"
       {
          "Passive" "0"
-         "IsBuff"   "1"
          "IsHidden"  "0"
          "Duration"    "%active_duration"
 
@@ -169,7 +161,6 @@
         "var_type"                  "FIELD_FLOAT"
         "lightning_chance"          "20.0"
       }
-
       "09"
     {
       "var_type"        "FIELD_FLOAT"

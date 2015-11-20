@@ -5,15 +5,30 @@
 function Return( event )
 	-- Variables
 
-	local caster = event.caster GetLevelSp
+	local caster = event.caster
 	local attacker = event.attacker
-	local damage = ability:GetLevelSpecialValueFor( "attack_damage", ( ability:GetLevel() - 1 ) )
-	local ability = event.ability
-	local damageType = ability:GetAbilityDamageType()
-	local return_damage = damage
-	print(damageType)
+	local damage = event.Damage
+	
+	if attacker:IsBuilding() or Kaguya_Skip then
+		return
+	end
+	
+	Kaguya_Skip = true
+	
 	-- Damage
-	ApplyDamage({ victim = attacker, attacker = caster, damage = return_damage, damage_type = damageType })
+	ApplyDamage({
+		victim = attacker,
+		attacker = caster,
+		damage = damage,
+		damage_type = DAMAGE_TYPE_PURE,
+		damage_flags = DOTA_DAMAGE_FLAG_REFLECTION
+	})
+	
+	Kaguya_Skip = false
+end
 
-	print("done "..return_damage)
+function Init(keys)
+	if Kaguya_Skip == nil then
+		Kaguya_Skip = false
+	end
 end

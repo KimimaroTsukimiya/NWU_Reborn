@@ -13,11 +13,6 @@ end
 -- Cleanup a player when they leave
 function GameMode:OnDisconnect(keys)
 
-  local name = keys.name
-  local networkid = keys.networkid
-  local reason = keys.reason
-  local userid = keys.userid
-
 end
 -- The overall game state has changed
 function GameMode:OnGameRulesStateChange(keys)

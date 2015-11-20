@@ -137,7 +137,7 @@
   "item_heart"      "REMOVE"
   "item_recipe_black_king_bar"      "REMOVE"
   "item_black_king_bar"     "REMOVE"
-  "item_aegis"      "REMOVE"
+  //"item_aegis"      "REMOVE"
   "item_recipe_shivas_guard"      "REMOVE"
   "item_shivas_guard"     "REMOVE"
   "item_recipe_bloodstone"      "REMOVE"

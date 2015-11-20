@@ -12,6 +12,16 @@
     "ItemRequirements"
     {
         "01" "item_anbu_mask;item_forehead_protector"
+        "02" "item_anbu_mask;item_forehead_protector_yugakure_scarred"
+        "03" "item_anbu_mask;item_forehead_protector_sunagakure"
+        "04" "item_anbu_mask;item_forehead_protector_konoha"
+        "05" "item_anbu_mask;item_forehead_protector_konoha_scarred"
+        "06" "item_anbu_mask;item_forehead_protector_kumogakure"
+        "07" "item_anbu_mask;item_forehead_protector_otogakure"
+        "08" "item_anbu_mask;item_forehead_protector_iwagakure"
+        "09" "item_anbu_mask;item_forehead_protector_kirigakure"
+        "10" "item_anbu_mask;item_forehead_protector_kirigakure_scarred"
+        
     }
   }
 

@@ -63,7 +63,14 @@
 		{
 			"ScriptFile"	"heroes/kakashi/sharingan.lua"
 			"Function"		"sharingan"
-		}		
+		}	
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"kakashi_sharingan_modifier"
+			"Target" 		"CASTER"
+			"Duration"		"%copy_timer"
+		}
 	}
 
 	"Modifiers"
