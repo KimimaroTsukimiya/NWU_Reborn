@@ -18,7 +18,6 @@ function applyDamage( keys )
 			ApplyDamage( damageTable )
 
 
-			-- Fire impact particle
 			local particle_impact = keys.particle_impact
 			local enemy_loc = keys.target:GetAbsOrigin()
 			local enemy = keys.target
