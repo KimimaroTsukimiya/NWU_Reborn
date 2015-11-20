@@ -6,6 +6,7 @@ anko_senei_ta_jashu = class({})
 	Author: Zenicus
 	Date: November 17, 2015
 	 -- Applies a DOT(damage over time) to the target and popups the damage amount
+	 -- Applies Silence as well.
 ================================================================================================================= ]]
 function anko_senei_ta_jashu( keys )
 	local caster = keys.caster
@@ -24,6 +25,5 @@ function anko_senei_ta_jashu( keys )
 	ApplyDamage( damageTable )
 	PopupDamage(target, poison_damage)
 
-	keys.ability:ApplyDataDrivenModifier(caster, keys.target, "modifier_anko_senei_ta_jashu_slow", {})
 end
 

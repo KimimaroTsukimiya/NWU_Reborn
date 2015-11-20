@@ -78,6 +78,13 @@
 			"Target" 		"TARGET"
 			"Duration"		"%duration"
 		}
+		
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_anko_senei_ta_jashu_silence"
+			"Target" 		"TARGET"
+			"Duration"		"%duration"
+		}
 
 		"RunScript"
 		{
@@ -104,6 +111,19 @@
 				}
 			}   
         }
+		
+		"modifier_anko_senei_ta_jashu_silence"
+		{
+			"IsDebuff"	"1"
+			"Duration"	"%duration"
+			"IsPurgable"	"1"
+			"EffectName"	"particles/generic_gameplay/generic_silence.vpcf"
+			"EffectAttachType"	"follow_overhead"	
+			"States"
+			{
+				"MODIFIER_STATE_SILENCED"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
 		
 		"modifier_anko_senei_ta_jashu_slow"
 		{

@@ -1,0 +1,27 @@
+"npc_dota_hero_enchantress" //Temari
+{
+  "override_hero"   "npc_dota_hero_enchantress"
+  "Ability1"        "temari_fusajin_no_jutsu"
+  //"Ability2"        
+  //"Ability3"        
+  //"Ability4"             
+  "ModelScale"		"1.08"
+  "LoadoutScale"	"1.08" 
+  //"Model" 		"models/zabuza/zabuza.vmdl"
+  "ItemSlots"
+  { }
+
+  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+  "AttackAnimationPoint"		"0.4"
+ // "AttackRate"				"1.0"
+  "AttackRange"				"100"
+  "MovementSpeed"			"300"
+  "AttributeBaseStrength" "17" // Base strength
+  "AttributeStrengthGain" "2" // Strength bonus per level.
+  "AttributeBaseIntelligence" "15" // Base intelligence
+  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
+  "AttributeBaseAgility" "23" // Base agility
+  "AttributeAgilityGain" "3.1" // Agility bonus per level.
+
+  "Village"			"kirigakure"
+}	
