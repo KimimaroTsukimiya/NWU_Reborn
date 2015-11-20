@@ -4,7 +4,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	//"AbilityTextureName"			"antimage_spell_shield"
+	"AbilityTextureName"			"itachi_sharingan"
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
