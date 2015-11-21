@@ -1,0 +1,103 @@
+"sasuke_chidori_nagashi"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"              "ability_datadriven"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityTextureName"     "chidori_nagashi"
+
+    "precache"
+    {
+        "soundfile" "sounds/weapons/hero/storm_spirit/ball_orchid_01.vsnd"
+        "particle"  "particles/units/heroes/sasuke/chidori_nagashi.vpcf"
+    }
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+    "AbilityCastPoint"              "0.1 0.1 0.1 0.1"
+    "AbilityCooldown"               "10.0 8.0 6.0 4.0"
+    "AbilityManaCost"               "70 85 100 115"
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "radius" "350"
+        }
+        "02"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "aoe_damage" "75 125 175 225"
+        }
+    }
+
+    "OnSpellStart"
+    {    
+        //"FireEffect"
+        //{
+        //    "EffectName"        "particles/units/heroes/sasuke/chidori_nagashi.vpcf"
+        //    "EffectAttachType"  "follow_origin"
+        //    "EffectRadius"      "%radius"
+        //    "Target"            "CASTER"
+        //    "ControlPoints"
+        //    {
+        //        "01"    "%radius 0 %radius"
+        //    }
+        //}
+
+        "ApplyModifier"
+        {
+            "Target"    "CASTER"
+            "ModifierName"  "modifier_chidori_nagashi_effect"
+            "Duration"  "1"
+        }
+        
+        "FireSound"
+        {
+            "EffectName"            "Hero_StormSpirit.Orchid_BallLightning"
+            "Target"                "CASTER"
+        }
+
+        "ActOnTargets"
+        {
+            "Target"
+            {
+                "Center"                "CASTER"
+                "Radius"                "%radius"
+                "Teams"                 "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Types"                 "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+
+            "Action"
+            {
+                "Damage"
+                {
+                    "Target"    "TARGET"
+                    "Type"      "DAMAGE_TYPE_MAGICAL"
+                    "Damage"    "%aoe_damage"
+                }
+            }
+        }
+    }
+
+    "modifier_chidori_nagashi_effect"
+    {
+        "Duration" "1"
+        "States"
+        {
+            "MODIFIER_STATE_NO_HEALTH_BAR" "MODIFIER_STATE_VALUE_ENABLED"
+        }
+        "OnCreated" 
+        {
+            "AttachEffect"
+            {
+                "Target" "CASTER"
+                "EffectName" "particles/units/heroes/sasuke/chidori_nagashi.vpcf"
+               "EffectAttachType" "follow_origin"
+               "EffectRadius"   "%radius"
+            }
+
+        }      
+    }
+}

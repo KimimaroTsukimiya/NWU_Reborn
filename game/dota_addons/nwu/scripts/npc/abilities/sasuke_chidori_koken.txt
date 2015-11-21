@@ -1,0 +1,104 @@
+"sasuke_chidori_koken"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"chidori_koken"
+	
+	"AbilityDuration"				"0.6 0.6 0.6 0.6"
+	
+	// Damage
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"30 45 60 75"
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityModifierSupportBonus"	"40"
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"							"soundevents/game_sounds_heroes/game_sounds_stormspirit.vsndevts"
+		"particle"							"particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
+	}
+	
+	"Modifiers"
+	{
+		"modifier_overload_passive_datadriven"
+		{
+			"Passive"						"1"
+			"IsPurgable"					"0"
+			"IsHidden"						"0"
+			"IsBuff"						"1"
+			
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"heroes/sasuke/chidori_koken.lua"
+					"Function"				"chidori_koken_check"
+				}
+			}
+		}
+		
+		"modifier_overload_damage_datadriven"
+		{
+			"IsPurgable"					"0"
+			"IsHidden"						"1"
+			
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"Target"				"CASTER"
+					"EffectName"			"particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
+					"EffectAttachType"		"start_at_customorigin"
+					"ControlPointEntities"
+					{
+						"CASTER"			"attach_attack1"
+					}
+				}
+			}
+			
+			"OnAttackLanded"
+			{
+				"FireSound"
+				{
+					"Target"				"TARGET"
+					"EffectName"			"Hero_StormSpirit.Overload"
+				}
+			
+				"FireEffect"
+				{
+					"Target"				"TARGET"
+					"EffectName"			"particles/units/heroes/hero_stormspirit/stormspirit_overload_discharge.vpcf"
+					"EffectAttachType"		"start_at_origin"
+				}
+			
+				"ActOnTargets"
+				{
+					
+					"Action"
+					{
+						"Damage"
+						{
+							"Target"		"TARGET"
+							"Damage"		"%AbilityDamage"
+							"Type"			"DAMAGE_TYPE_MAGICAL"
+						}
+					}
+				}
+			
+				"RemoveModifier"
+				{
+					"Target"				"CASTER"
+					"ModifierName"			"modifier_overload_damage_datadriven"
+				}
+			}
+		}
+	}
+}
