@@ -61,7 +61,7 @@ function modifier_item_sphere_datadriven_on_destroy(keys)
 	for i=0, 5, 1 do --Search for off-cooldown Linken's Spheres in the player's inventory.
 		local current_item = keys.caster:GetItemInSlot(i)
 		if current_item ~= nil then
-			if current_item:GetName() == "item_sphere_datadriven" and current_item:IsCooldownReady() then
+			if current_item:GetName() == "item_chakra_armor_male" or current_item:GetName() == "item_chakra_armor_female" and current_item:IsCooldownReady() then
 				num_off_cooldown_linkens_spheres_in_inventory = num_off_cooldown_linkens_spheres_in_inventory + 1
 			end
 		end
