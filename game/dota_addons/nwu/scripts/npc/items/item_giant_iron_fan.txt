@@ -140,12 +140,12 @@
       "04"
       {
         "var_type"          "FIELD_FLOAT"
-        "duration_hero"       "6.0"
+        "duration_hero"       "2.5"
       }
       "05"
       {
         "var_type"          "FIELD_FLOAT"
-        "duration_unit"       "20.0"
+        "duration_unit"       "2.5"
       }
       // Extra
       "06"
