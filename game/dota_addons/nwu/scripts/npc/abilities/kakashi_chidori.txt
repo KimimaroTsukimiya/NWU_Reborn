@@ -80,8 +80,54 @@
             }
             
         }
+		
+		"OnAbilityPhaseInterrupted"
+		{
+			"RemoveModifier"
+			{
+				"ModifierName"		"modifier_epicenter_precast_datadriven"
+				"Target"			"CASTER"
+			}
+            "RunScript"
+            {
+                "ScriptFile"    "heroes/kakashi/chidori.lua"
+                "Function"        "RemoveChannelChidori"
+            }
+		}
 
-        "OnProjectileFinish"
+		"OnSpellStart"
+		{
+			"RemoveModifier"
+			{
+				"ModifierName"		"modifier_epicenter_precast_datadriven"
+				"Target"			"CASTER"
+			}
+			
+            "RunScript"
+            {
+                "ScriptFile"    "heroes/kakashi/chidori.lua"
+                "Function"        "RemoveChannelChidori"
+            }
+		
+			"RunScript"
+            {
+                "ScriptFile"            "heroes/kakashi/chidori.lua"
+                "Function"              "StormBoltLaunch"
+
+                "modifier_caster"       "modifier_imba_storm_bolt_caster"
+                "particle_bolt"         "particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
+                "sound_cast"            "Hero_Sven.StormBolt"
+
+                "Target"
+                {
+                    "Center"            "TARGET"
+                    "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                    "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                    "Flags"             "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+                }
+            }
+		}
+		"OnProjectileFinish"
         {
             "RunScript"
             {
@@ -104,41 +150,6 @@
                 "particle_impact"       "particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
             }
         }
-
-        "OnSpellStart"
-		{
-			"RemoveModifier"
-			{
-				"ModifierName"		"modifier_epicenter_precast_datadriven"
-				"Target"			"CASTER"
-			}
-            "RunScript"
-            {
-                "ScriptFile"    "heroes/kakashi/chidori.lua"
-                "Function"        "RemoveChannelChidori"
-            }
-		}
-			
-		"OnChannelSucceeded"
-		{
-			"RunScript"
-            {
-                "ScriptFile"            "heroes/kakashi/chidori.lua"
-                "Function"              "StormBoltLaunch"
-
-                "modifier_caster"       "modifier_imba_storm_bolt_caster"
-                "particle_bolt"         "particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
-                "sound_cast"            "Hero_Sven.StormBolt"
-
-                "Target"
-                {
-                    "Center"            "TARGET"
-                    "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
-                    "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                    "Flags"             "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-                }
-            }
-		}
 
         "Modifiers"
         {
