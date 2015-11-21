@@ -3,21 +3,13 @@
 	"npc_dota_hero_medusa" //anko
 	{
 	  "override_hero"   "npc_dota_hero_medusa"
-<<<<<<< HEAD
-=======
 	  "Model"           "models/anko/anko.vmdl"
->>>>>>> 77e656563ab7691f2800e3e1e45bcdcee6d415e0
 	  "Ability1"        "anko_giant_snake"
 	  "Ability2"        "anko_senei_jyashu"
 	  "Ability3"        "anko_senei_ta_jashu"
 	  "Ability4"        "anko_sojasosai_no_jutsu"      
-<<<<<<< HEAD
-	  "ModelScale"		"1.08"
-	  "LoadoutScale"	"1.08" 
-=======
 	  "ModelScale"		"1.00"
 	  "LoadoutScale"	"1.00" 
->>>>>>> 77e656563ab7691f2800e3e1e45bcdcee6d415e0
 	  //"Model" 		"models/zabuza/zabuza.vmdl"
 	  "ItemSlots"
 	  { }
@@ -428,22 +420,13 @@
 		"npc_dota_hero_shadow_shaman"  //Shikamaru
 		{
 		  "override_hero"   "npc_dota_hero_shadow_shaman" 
-<<<<<<< HEAD
-		  "Model" 		"models/gaara/gaara.vmdl"
-=======
 		  "Model" 		"models/shikamaru/shikamaru.vmdl"
->>>>>>> 77e656563ab7691f2800e3e1e45bcdcee6d415e0
 		  "Ability1"         "shikamaru_kage_kubishibari"
 		  "Ability2"         "shikamaru_explosive_kunai" 
-		  "Ability3"         "gaara_suna_no_yoroi" 
+		  "Ability3"         "shikamaru_meditation" 
 		  "Ability4"         "gaara_sabaku_taiso"
-<<<<<<< HEAD
-		  "ModelScale"		"0.35"
-		"LoadoutScale"		"0.35" 
-=======
 		  "ModelScale"		"1.05"
 		"LoadoutScale"		"1.05" 
->>>>>>> 77e656563ab7691f2800e3e1e45bcdcee6d415e0
 
 		  
 		  "AttackAnimationPoint"   "0.4"
@@ -465,7 +448,6 @@
 
 	  	  "Village"			"konoha"
 		}
-<<<<<<< HEAD
 	"npc_dota_hero_enchantress" //Temari
 	{
 	  "override_hero"   "npc_dota_hero_enchantress"
@@ -493,8 +475,6 @@
 	
 	  "Village"			"kirigakure"
 	}	
-=======
->>>>>>> 77e656563ab7691f2800e3e1e45bcdcee6d415e0
 		"npc_dota_hero_juggernaut" //yondaime
 		{
 		  "override_hero"   "npc_dota_hero_juggernaut"

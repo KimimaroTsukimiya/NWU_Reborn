@@ -4,7 +4,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"					"ability_datadriven"
 	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-	//"AbilityTextureName"		"antimage_blink"
+	"AbilityTextureName"		"itachi_dust_crow_genjustsu"
 
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
