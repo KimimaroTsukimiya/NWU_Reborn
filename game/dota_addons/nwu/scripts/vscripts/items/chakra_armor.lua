@@ -4,23 +4,6 @@ require('utilities')
 --[[ ============================================================================================================
 	Author: Rook
 	Date: January 30, 2015
-	This function should be called from targeted datadriven abilities that can be blocked by Linken's Sphere.  
-	Checks to see if the inputted unit has modifier_item_sphere_target on them.  If they do, the sphere is popped,
-	the animation and sound plays, and true is returned.  If they do not, false is returned.
-================================================================================================================= ]]
-function is_spell_blocked_by_linkens_sphere(target)
-	if target:HasModifier("modifier_item_sphere_target") then
-		target:RemoveModifierByName("modifier_item_sphere_target")  --The particle effect is played automatically when this modifier is removed (but the sound isn't).
-		target:EmitSound("DOTA_Item.LinkensSphere.Activate")
-		return true
-	end
-	return false
-end
-
-
---[[ ============================================================================================================
-	Author: Rook
-	Date: January 30, 2015
 	Called when Linken's Sphere is cast.  Places a modifier_item_sphere_target on the targeted unit.
 	Additional parameters: Keys.Duration
 ================================================================================================================= ]]
@@ -104,7 +87,7 @@ function modifier_item_sphere_datadriven_on_interval_think(keys)
 	for i=0, 5, 1 do --Search for off-cooldown Linken's Spheres in the player's inventory.
 		local current_item = keys.caster:GetItemInSlot(i)
 		if current_item ~= nil then
-			if current_item:GetName() == "item_sphere_datadriven" and current_item:IsCooldownReady() then
+			if (current_item:GetName() == "item_chakra_armor_male" or current_item:GetName() == "item_chakra_armor_female" or current_item:GetName() == "item_chakra_armor") and current_item:IsCooldownReady() then
 				num_off_cooldown_linkens_spheres_in_inventory = num_off_cooldown_linkens_spheres_in_inventory + 1
 			end
 		end
@@ -121,7 +104,7 @@ function modifier_item_sphere_datadriven_on_interval_think(keys)
 			for i=0, 5, 1 do --Put all Linken's Spheres in the player's inventory on cooldown.
 				local current_item = keys.caster:GetItemInSlot(i)
 				if current_item ~= nil then
-					if current_item:GetName() == "item_sphere_datadriven" then
+					if current_item:GetName() == "item_chakra_armor_male" or current_item:GetName() == "item_chakra_armor_female" or current_item:GetName() == "item_chakra_armor" then
 						current_item:StartCooldown(current_item:GetCooldown(current_item:GetLevel()))
 					end
 				end

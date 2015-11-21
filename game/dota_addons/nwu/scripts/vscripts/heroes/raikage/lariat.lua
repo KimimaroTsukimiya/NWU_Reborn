@@ -1,3 +1,5 @@
+require('items')
+
 --[[
 	Author: LearningDave
 	Date: october, 5th 2015.
@@ -99,15 +101,16 @@ function StormBoltHit( keys )
 	caster:SetAttacking(target)
 
 	-- Stun
-	target:AddNewModifier(caster, ability, "modifier_stunned", {duration = duration})
+	--checks if enemy has chakra armor
+	if not GameMode:is_spell_blocked_by_linkens_sphere(target) then
+		target:AddNewModifier(caster, ability, "modifier_stunned", {duration = duration})
+		-- Fire impact particle
+		local enemy_loc = target:GetAbsOrigin()
+		local impact_pfx = ParticleManager:CreateParticle(particle_impact, PATTACH_ABSORIGIN, enemy)
+		ParticleManager:SetParticleControl(impact_pfx, 0, enemy_loc)
+		ParticleManager:SetParticleControlEnt(impact_pfx, 3, enemy, PATTACH_ABSORIGIN, "attach_origin", enemy_loc, true)
 
-
-	-- Fire impact particle
-	local enemy_loc = target:GetAbsOrigin()
-	local impact_pfx = ParticleManager:CreateParticle(particle_impact, PATTACH_ABSORIGIN, enemy)
-	ParticleManager:SetParticleControl(impact_pfx, 0, enemy_loc)
-	ParticleManager:SetParticleControlEnt(impact_pfx, 3, enemy, PATTACH_ABSORIGIN, "attach_origin", enemy_loc, true)
-
-	 -- Apply damage
-	ApplyDamage({attacker = caster, victim = target, ability = ability, damage = damage, damage_type = ability:GetAbilityDamageType()})
+		 -- Apply damage
+		ApplyDamage({attacker = caster, victim = target, ability = ability, damage = damage, damage_type = ability:GetAbilityDamageType()})
+	end
 end

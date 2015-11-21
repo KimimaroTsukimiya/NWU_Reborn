@@ -26,3 +26,20 @@ end
 function GameMode:ChakraArmorOnItemPickedUp( player, itemName )
 	chakraArmorChangeIcon(player, itemName)
 end
+
+
+--[[ ============================================================================================================
+	Author: Rook
+	Date: January 30, 2015
+	This function should be called from targeted datadriven abilities that can be blocked by Linken's Sphere.  
+	Checks to see if the inputted unit has modifier_item_sphere_target on them.  If they do, the sphere is popped,
+	the animation and sound plays, and true is returned.  If they do not, false is returned.
+================================================================================================================= ]]
+function GameMode:is_spell_blocked_by_linkens_sphere(target)
+	if target:HasModifier("modifier_item_sphere_target") then
+		target:RemoveModifierByName("modifier_item_sphere_target")  --The particle effect is played automatically when this modifier is removed (but the sound isn't).
+		target:EmitSound("DOTA_Item.LinkensSphere.Activate")
+		return true
+	end
+	return false
+end
