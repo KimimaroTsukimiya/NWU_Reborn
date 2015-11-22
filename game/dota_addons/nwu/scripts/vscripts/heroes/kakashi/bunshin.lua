@@ -11,6 +11,8 @@ function ConjureImage( event )
  local outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage_percent", ability:GetLevel()-1)
  local incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage_percent", ability:GetLevel()-1)
 
+ print(outgoingDamage)
+ print(incomingDamage)
  -- handle_UnitOwner needs to be nil, else it will crash the game.
  local illusion = CreateUnitByName(unit_name, origin, true, caster, nil, caster:GetTeamNumber())
  illusion:SetPlayerID(caster:GetPlayerID())
@@ -46,6 +48,7 @@ function ConjureImage( event )
   end
  end
 
+ illusion:SetHealth(caster:GetHealth())
  -- Set the unit as an illusion
  -- modifier_illusion controls many illusion properties like +Green damage not adding to the unit damage, not being able to cast spells and the team-only blue particle 
  illusion:AddNewModifier(caster, ability, "modifier_illusion", { duration = duration, outgoing_damage = outgoingDamage, incoming_damage = incomingDamage })
