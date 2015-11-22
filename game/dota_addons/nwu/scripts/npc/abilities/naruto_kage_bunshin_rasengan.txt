@@ -63,12 +63,12 @@
 		"05"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"illusion_outgoing_damage_percent"			"-75 -70 -60 -55"
+			"illusion_outgoing_damage_percent"			"-100 -70 -65 -60 -55"
 		}
 		"06"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"illusion_incoming_damage_percent"			"600 500 450 400"
+			"illusion_incoming_damage_percent"			"700 600 500 450 400"
 		}
 	}
 

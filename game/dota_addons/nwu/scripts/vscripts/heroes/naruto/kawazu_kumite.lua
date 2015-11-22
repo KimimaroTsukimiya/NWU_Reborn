@@ -12,18 +12,21 @@ function ConjureImage( event )
  local unit_name = caster:GetUnitName()
  local origin = caster:GetAbsOrigin() + RandomVector(100)
  local duration = ability:GetLevelSpecialValueFor( "illusion_duration", ability:GetLevel() - 1 )
+ local outgoingDamage = 0
+ local incomingDamage = 0
  
  if event.caster:HasAbility("naruto_kage_bunshin_mastery") then
-   local ability_index = event.caster:FindAbilityByName("naruto_kage_bunshin_mastery"):GetAbilityIndex()
-   local kage_bunshin_mastery_ability = event.caster:GetAbilityByIndex(ability_index)
-   local outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage_percent", kage_bunshin_mastery_ability:GetLevel())
-   local incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage_percent", kage_bunshin_mastery_ability:GetLevel())
- else
-   local outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage_percent", 0)
-   local incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage_percent", 0)
+    local ability_index = event.caster:FindAbilityByName("naruto_kage_bunshin_mastery"):GetAbilityIndex()
+    local kage_bunshin_mastery_ability = event.caster:GetAbilityByIndex(ability_index)
+    if kage_bunshin_mastery_ability:GetLevel() > 0 then 
+       outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage_percent", kage_bunshin_mastery_ability:GetLevel())
+       incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage_percent", kage_bunshin_mastery_ability:GetLevel())
+    else
+       outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage_percent", 0)
+       incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage_percent", 0)
+    end 
  end
- print(outgoingDamage)
- print(incomingDamage)
+
 
 
  -- handle_UnitOwner needs to be nil, else it will crash the game.
