@@ -47,15 +47,11 @@
         
         "OnOrbImpact"
         {
-          "ApplyModifier"
+          "RunScript"
           {
-            "ModifierName"  "modifier_orb_of_venom_wc3_debuff"
-            "Target"
-                {
-                  "Target"  "TARGET"
-                  "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-               }
-            "Duration"    "%duration"
+            "ScriptFile"  "items/poison_gauntlets.lua"
+            "Function"    "applyPoisonModifier"
+            "modifier_name" "modifier_orb_of_venom_wc3_debuff"
           }
         }
       }
