@@ -9,6 +9,7 @@
 		  "Ability5"        ""
 		
 		  "AttackAnimationPoint"   "0.4"
+		  "ModelScale"		"0.930000"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
 		  "MovementSpeed"			"310"

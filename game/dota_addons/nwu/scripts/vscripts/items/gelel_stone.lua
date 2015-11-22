@@ -7,7 +7,9 @@
 function item_black_king_bar_datadriven_on_spell_start(keys)
 	keys.ability:ApplyDataDrivenModifier(keys.caster, keys.caster, "modifier_item_black_king_bar_datadriven_active", nil)
 	keys.caster:EmitSound("DOTA_Item.BlackKingBar.Activate")
-	
+	local model_scaling = GameRules.heroKV[keys.caster:GetName()]["ModelScale"] 
+	local duration  = keys.ability:GetLevelSpecialValueFor("duration", keys.ability:GetLevel() - 1)
+
 	--Level up BKB so future casts will use an updated cooldown and duration.
 	local current_level = keys.ability:GetLevel()
 	if current_level + 1 <= keys.MaxLevel then
@@ -35,13 +37,12 @@ function item_black_king_bar_datadriven_on_spell_start(keys)
 		end)
 	end
 
-	--Scale the model back down around the time the duration ends.
-	for i=1,100 do
-		Timers:CreateTimer(keys.Duration - 1 + (i/50),
-		function()
-			keys.caster:SetModelScale(final_model_scale - i/model_scale_increase_per_interval)
-		end)
+	Timers:CreateTimer( duration , function()
+    	keys.caster:SetModelScale(model_scaling)
+	return nil
 	end
+	)
+	
 end
 
 

@@ -2,6 +2,7 @@
 		{
 		  "override_hero"   "npc_dota_hero_beastmaster"
 		  "Model" 			"models/kakashi/kakashi.vmdl"
+		  "ModelScale"		"0.770000"
 		  "Ability1"        "kakashi_doton"
 		  "Ability2"        "kakashi_sharingan" 
 		  "Ability3"        "kakashi_bunshin" 
