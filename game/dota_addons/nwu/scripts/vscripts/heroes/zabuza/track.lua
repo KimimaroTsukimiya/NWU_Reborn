@@ -11,7 +11,7 @@ function Track( keys )
 	local bonus_gold_radius = ability:GetLevelSpecialValueFor("bonus_gold_radius", (ability:GetLevel() - 1))
 
 	-- Checks if the target is alive when the modifier is destroyed
-	if not target:IsAlive() then
+	if not target:IsAlive() and target:IsRealHero() then
 
 		-- Gives gold to the caster
 		caster:ModifyGold(bonus_gold_self, true, 0)
