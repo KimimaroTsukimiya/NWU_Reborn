@@ -41,5 +41,33 @@ function GameMode:is_spell_blocked_by_linkens_sphere(target)
 		target:EmitSound("DOTA_Item.LinkensSphere.Activate")
 		return true
 	end
+	if target:HasModifier("modifier_roshan_spell_block") then
+--		target:RemoveModifierByName("modifier_roshan_spell_block")  --The particle effect is played automatically when this modifier is removed (but the sound isn't).
+		print("TODO: fix rosh spellblock cd")
+		target:EmitSound("DOTA_Item.LinkensSphere.Activate")
+		return true
+	end
 	return false
+end
+
+--[[
+	Author: Mognakor
+	Test function for simple Linkens
+]]--
+function CheckForSpellBlock(event)
+	local filePath = event.filePath
+	local functionName = event.functionName
+	
+	if( GameMode:is_spell_blocked_by_linkens_sphere(event.target) )then
+		print("spellblocked")
+		return
+	end
+	
+	print("path "..filePath)
+	print("function "..functionName)
+	require(filePath)
+	
+	_G[functionName](event);
+
+	print("success")
 end
