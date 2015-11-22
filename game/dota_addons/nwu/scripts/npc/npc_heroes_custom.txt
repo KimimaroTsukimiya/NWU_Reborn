@@ -303,12 +303,12 @@
 			 // "AttackRate"				"0.7"
 			  "AttackRange"				"128"
 			  "MovementSpeed"			"300"
-			  "AttributeBaseStrength" "18" // Base strength
-			  "AttributeStrengthGain" "1.8" // Strength bonus per level.
-			  "AttributeBaseIntelligence" "23" // Base intelligence
-			  "AttributeIntelligenceGain" "2.4" // Intelligence bonus per level.
-			  "AttributeBaseAgility" "21" // Base agility
-			  "AttributeAgilityGain" "1.5" // Agility bonus per level.
+			  "AttributeBaseStrength" "19" // Base strength
+			  "AttributeStrengthGain" "2.0" // Strength bonus per level.
+			  "AttributeBaseIntelligence" "14" // Base intelligence
+			  "AttributeIntelligenceGain" "1.85" // Intelligence bonus per level.
+			  "AttributeBaseAgility" "22" // Base agility
+			  "AttributeAgilityGain" "2.5" // Agility bonus per level.
 			  
 		 	  "ItemSlots"
 		  	  { }

@@ -37,6 +37,7 @@
         "weapons_armor"
         {
               
+                "item"    "item_kunai"
                 "item"    "item_shinobi_claws"
                 "item"    "item_broadsword_datadriven"
                 "item"    "item_metal_gauntlets"

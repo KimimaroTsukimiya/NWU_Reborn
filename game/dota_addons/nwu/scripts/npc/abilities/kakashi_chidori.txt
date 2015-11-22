@@ -12,6 +12,7 @@
         "FightRecapLevel"               "1"
         "AbilityTextureName"            "kakashi_chidori"
         //"AbilityChannelTime"		"2.0 2.0 2.0"
+        "AbilityCastAnimation"          "ACT_DOTA_CHANNEL_ABILITY_4"
         // Precache
         //-------------------------------------------------------------------------------------------------------------
         "precache"
