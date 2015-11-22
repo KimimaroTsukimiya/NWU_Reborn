@@ -50,7 +50,11 @@
           "ApplyModifier"
           {
             "ModifierName"  "modifier_orb_of_venom_wc3_debuff"
-            "Target"    "TARGET"
+            "Target"
+                {
+                  "Target"  "TARGET"
+                  "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+               }
             "Duration"    "%duration"
           }
         }
