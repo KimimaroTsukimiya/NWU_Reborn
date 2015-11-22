@@ -25,12 +25,11 @@ function kunaiBuff( keys )
 		end
 
 		local extra_damage = keys.caster:GetAverageTrueAttackDamage() / 100 * bonus_percentage
-		PopupDamage(target, extra_damage)
 		local damageTable = {
 				victim = target,
 				attacker = caster,
-				damage = damage,
-				damage_type = abilityDamageType
+				damage = extra_damage,
+				damage_type = keys.ability:GetAbilityDamageType()
 			}
 		ApplyDamage( damageTable )
 	end
