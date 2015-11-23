@@ -59,7 +59,7 @@
 		"04"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"hp_percentage_cost"		"15"
+			"hp_percentage_cost"		"10"
 		}
 		"05"
 		{
