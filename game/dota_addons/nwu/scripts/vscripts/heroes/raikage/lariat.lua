@@ -68,17 +68,9 @@ end
 function StormBoltHit( keys )
 	local caster = keys.caster
 	local target = keys.target
-	local ability = keys.ability
-	local ability_level = ability:GetLevel() - 1
 	local modifier_caster = keys.modifier_caster
 	local sound_impact = keys.sound_impact
-	local particle_impact = keys.particle_impact
-
-	-- Parameters
-	local damage = ability:GetLevelSpecialValueFor("damage", ability_level)
-	local radius = ability:GetLevelSpecialValueFor("radius", ability_level)
-	local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
-
+	
 	-- Play sound
 	target:EmitSound(sound_impact)
 
@@ -99,18 +91,27 @@ function StormBoltHit( keys )
 
 	-- Start attacking the target
 	caster:SetAttacking(target)
+end
 
-	-- Stun
-	--checks if enemy has chakra armor
-	if not GameMode:is_spell_blocked_by_linkens_sphere(target) then
-		target:AddNewModifier(caster, ability, "modifier_stunned", {duration = duration})
-		-- Fire impact particle
-		local enemy_loc = target:GetAbsOrigin()
-		local impact_pfx = ParticleManager:CreateParticle(particle_impact, PATTACH_ABSORIGIN, enemy)
-		ParticleManager:SetParticleControl(impact_pfx, 0, enemy_loc)
-		ParticleManager:SetParticleControlEnt(impact_pfx, 3, enemy, PATTACH_ABSORIGIN, "attach_origin", enemy_loc, true)
+function LariatHitSuccess(keys)
+	local caster = keys.caster
+	local target = keys.target
+	local ability = keys.ability
+	local ability_level = ability:GetLevel() - 1
+	local particle_impact = keys.particle_impact
+	
+	-- Parameters
+	local damage = ability:GetLevelSpecialValueFor("damage", ability_level)
+	local radius = ability:GetLevelSpecialValueFor("radius", ability_level)
+	local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
+	
+	target:AddNewModifier(caster, ability, "modifier_stunned", {duration = duration})
+	-- Fire impact particle
+	local enemy_loc = target:GetAbsOrigin()
+	local impact_pfx = ParticleManager:CreateParticle(particle_impact, PATTACH_ABSORIGIN, enemy)
+	ParticleManager:SetParticleControl(impact_pfx, 0, enemy_loc)
+	ParticleManager:SetParticleControlEnt(impact_pfx, 3, enemy, PATTACH_ABSORIGIN, "attach_origin", enemy_loc, true)
 
-		 -- Apply damage
-		ApplyDamage({attacker = caster, victim = target, ability = ability, damage = damage, damage_type = ability:GetAbilityDamageType()})
-	end
+	 -- Apply damage
+	ApplyDamage({attacker = caster, victim = target, ability = ability, damage = damage, damage_type = ability:GetAbilityDamageType()})
 end

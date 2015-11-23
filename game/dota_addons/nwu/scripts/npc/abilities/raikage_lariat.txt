@@ -111,8 +111,17 @@
 
                 "modifier_caster"       "modifier_imba_storm_bolt_caster"
                 "sound_impact"          "Hero_Sven.StormBoltImpact"
-                "particle_impact"       "particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
             }
+			
+			"RunScript"
+			{
+				"ScriptFile"    "items.lua"
+				"Function"      "CheckForSpellBlock"
+				"filePath"		"heroes/raikage/lariat"
+				"functionName"	"LariatHitSuccess"
+				
+				"particle_impact"       "particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
+			}
         }
 
         "Modifiers"
