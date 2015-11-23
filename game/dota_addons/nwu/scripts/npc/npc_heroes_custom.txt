@@ -470,8 +470,8 @@
 	{
 	  "override_hero"   "npc_dota_hero_enchantress"
 	  "Ability1"        "temari_fusajin_no_jutsu"
-	  //"Ability2"        
-	  //"Ability3"        
+	  "Ability2"        "temari_kamaitachi_no_jutsu"
+	  "Ability3"        "temari_sheer_wind" 
 	  //"Ability4"             
 	  "ModelScale"		"1.08"
 	  "LoadoutScale"	"1.08" 

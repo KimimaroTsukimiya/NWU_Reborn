@@ -12,6 +12,7 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_TORNADO"
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			""
 	
@@ -19,8 +20,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"particle"			"particles/units/heroes/hero_invoker/invoker_tornado.vpcf"
-		"particle"			"particles/units/heroes/hero_invoker/invoker_tornado_child.vpcf"
+		"particle"			"particles/neutral_fx/tornado_ambient.vpcf"
 	}
 	
 	// Casting
@@ -58,7 +58,7 @@
 		"TrackingProjectile"
 		{
 			"Target"           	"TARGET"
-			"EffectName"		"particles/units/heroes/hero_invoker/invoker_tornado.vpcf"
+			"EffectName"		"particles/neutral_fx/tornado_ambient.vpcf"
 			"Dodgeable"			"0"
 			"ProvidesVision"	"0"
 			"MoveSpeed"        	"%magic_missile_speed"
