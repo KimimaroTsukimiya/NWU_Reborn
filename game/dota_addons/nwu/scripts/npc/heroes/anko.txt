@@ -6,8 +6,8 @@
   "Ability2"        "anko_senei_jyashu"
   "Ability3"        "anko_senei_ta_jashu"
   "Ability4"        "anko_sojasosai_no_jutsu"      
-  "ModelScale"		"1.00"
-  "LoadoutScale"	"1.00" 
+  "ModelScale"		"0.80"
+  "LoadoutScale"	"0.80" 
   //"Model" 		"models/zabuza/zabuza.vmdl"
   "ItemSlots"
   { }
