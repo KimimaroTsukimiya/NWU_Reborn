@@ -319,19 +319,35 @@
 		  	  "Gender"			"male"
 			}
 	"npc_dota_hero_sven" //onoki
-		{
-			"override_hero" "npc_dota_hero_sven"
-			"Ability1"	"onoki_jinton"
-			"Ability2"	"onoki_stalagmite_armor"
-			"Ability3"	"onoki_turn_to_dust"
-			"Ability4"	"onoki_kajutan_no_jutsu"
-			"AttributePrimary"	"DOTA_ATTRIBUTE_STRENGTH"
-			"ItemSlots"
-		  	  { }
+	{
+		"override_hero"		"npc_dota_hero_sven"
 	
-		  	 "Village"			"iwagakure"
-		  	 "Gender"			"male"
-		}
+		"Ability1"			"onoki_jinton"
+		"Ability2"			"onoki_stalagmite_armor"
+		"Ability3"			"onoki_turn_to_dust"
+		"Ability4"			"onoki_kajutan_no_jutsu"
+	
+		// Unit attribute
+		"AttackRange"					"100"
+		
+	    // Movement
+	    //----------------------------------------------------------------
+		"MovementSpeed"					"295"
+	
+	    // Attibutes
+	    //----------------------------------------------------------------
+		"AttributePrimary"				"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"			"20"
+		"AttributeStrengthGain"			"2.6"
+		"AttributeBaseIntelligence"		"18"
+		"AttributeIntelligenceGain"		"1.95"
+		"AttributeBaseAgility"			"15"
+		"AttributeAgilityGain"			"1"
+	
+		"ItemSlots"	{ }
+		"Village"			"iwagakure"
+		"Gender"			"male"
+	}
 	
 	"npc_dota_hero_sand_king" //raikage
 		{
