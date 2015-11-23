@@ -26,7 +26,7 @@
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"19 16 13 10"
+	"AbilityCooldown"				"10"
 	"AbilityDuration"				"4"
 
 	// Damage.
@@ -54,7 +54,7 @@
 		"03"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"creep_damage"		"140 200 260 320"
+			"creep_damage"		"200 260 320 380"
 		}
 		"04"
 		{
@@ -74,7 +74,7 @@
 		"07"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"hero_damage"		"70 100 130 160"
+			"hero_damage"		"100 130 160 190"
 		}
 		"07"
 		{
