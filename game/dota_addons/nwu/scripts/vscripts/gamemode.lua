@@ -84,7 +84,7 @@ function GameMode:OnHeroInGame(hero)
   DebugPrint("[BAREBONES] Hero spawned in game for first time -- " .. hero:GetUnitName())
 
 
-   RemoveWearables( hero )
+   GameMode:RemoveWearables( hero )
 
   --[[ --These lines if uncommented will replace the W ability of any hero that loads into the game
     --with the "example_ability" ability
@@ -146,7 +146,7 @@ function GameMode:ExampleConsoleCommand()
 end
 
 
-function RemoveWearables( hero )
+function GameMode:RemoveWearables( hero )
     local wearables = {}
     local model = hero:FirstMoveChild()
     while model ~= nil do
