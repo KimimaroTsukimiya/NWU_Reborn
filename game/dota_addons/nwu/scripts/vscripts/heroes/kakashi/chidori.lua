@@ -84,10 +84,6 @@ function StormBoltHit( keys )
 	local sound_impact = keys.sound_impact
 	local particle_impact = keys.particle_impact
 
-	-- Parameters
-	local damage = ability:GetLevelSpecialValueFor("damage", ability_level)
-	local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
-
 	-- Play sound
 	target:EmitSound(sound_impact)
 
@@ -114,6 +110,20 @@ function StormBoltHit( keys )
 	local impact_pfx = ParticleManager:CreateParticle(particle_impact, PATTACH_ABSORIGIN, enemy)
 	ParticleManager:SetParticleControl(impact_pfx, 0, enemy_loc)
 	ParticleManager:SetParticleControlEnt(impact_pfx, 3, enemy, PATTACH_ABSORIGIN, "attach_origin", enemy_loc, true)
+
+end
+
+
+function ChidoriHitSuccess( keys )
+	local caster = keys.caster
+	local target = keys.target
+	local ability = keys.ability
+	local ability_level = ability:GetLevel() - 1
+
+	-- Parameters
+	local damage = ability:GetLevelSpecialValueFor("damage", ability_level)
+	local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
+
 
 	 -- Apply damage
 	ApplyDamage({attacker = caster, victim = target, ability = ability, damage = damage, damage_type = ability:GetAbilityDamageType()})

@@ -10,7 +10,7 @@
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
     "ItemCost"            "0"
-    "ItemPurchasable" "0"
+    "ItemPurchasable" "1"
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
@@ -20,7 +20,7 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     "ItemQuality"         "rare"
-    "ItemAliases"         "linkens sphere;sphere;spell block;mana reg;chakra reg"
+    "ItemAliases"         "linkens sphere;sphere;spell block;mana reg;chakra reg;chakra armor"
 
     "AbilityCooldown"     "17"
 
