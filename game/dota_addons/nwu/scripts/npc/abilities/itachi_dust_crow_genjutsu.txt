@@ -61,6 +61,12 @@
 			"ScriptFile"	"scripts/vscripts/heroes/itachi/dust_crow_genjutsu.lua"
 			"Function"		"createBunshin"
 		}
+
+		"FireSound"
+		{
+			"EffectName"	"itachi_crows"
+			"Target" 		"TARGET"
+		}
 	}
 
 	"Modifiers"

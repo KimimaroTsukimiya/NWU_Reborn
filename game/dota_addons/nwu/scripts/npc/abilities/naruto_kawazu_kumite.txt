@@ -61,6 +61,16 @@
       }   	
 	}
 
+
+  "OnCreated"
+  {
+    "RunScript"
+    {
+      "ScriptFile"  "heroes/naruto/kawazu_kumite.lua"
+      "Function"    "initiateBunshinCount"
+    }
+  }
+
 	"OnSpellStart"
   {
     "ApplyModifier"
@@ -87,6 +97,22 @@
       {
         "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%strength_agility_bonus"
         "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%strength_agility_bonus" 
+      }
+    }
+
+    "modfiier_naruto_bunshin_reduce_count"
+    {
+      "IsBuff"    "0"
+      "Passive"    "0"
+      "IsHidden"    "1"
+
+      "OnDestroy"
+      {
+        "RunScript"
+        {
+          "ScriptFile"  "heroes/naruto/kawazu_kumite.lua"
+          "Function"    "reduceBunshinCount"
+        }
       }
     }
 	}
