@@ -71,11 +71,7 @@
 
             "OnAttackLanded"
             {
-               "FireSound"
-                {
-                    "EffectName"    "Hero_Antimage.ManaBreak"
-                    "Target"        "TARGET"
-                }
+               
 
                 "AttachEffect"
                 {
