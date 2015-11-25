@@ -49,17 +49,13 @@
 
 	"OnSpellStart"
 	{
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_itachi_amateratsu"
-			"Target" 		"TARGET"
-			"Duration"		"%duration"
-		}
 		"RunScript"
-		{
-			"ScriptFile"	"heroes/itachi/amateratsu.lua"
-			"Function"		"initialize"
-		}
+        {
+        	"ScriptFile"    "items.lua"
+            "Function"      "CheckForSpellBlock"
+            "filePath"      "heroes/itachi/amateratsu"
+            "functionName"  "initialize"
+        }
 	}
 
 	"Modifiers"

@@ -51,17 +51,14 @@
 			"EffectName"	"Hero_Luna.Eclipse.Cast"
 			"Target" 		"CASTER"
 		}
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_itachi_tsukiyomi_stun"
-			"Target" 		"TARGET"
-		}
-		"Damage"
-		{
-			"Target"	"TARGET"
-			"Type"		"DAMAGE_TYPE_MAGICAL"
-			"Damage"	"%AbilityDamage"
-		}
+
+	"RunScript"
+        {
+        	"ScriptFile"    "items.lua"
+            "Function"      "CheckForSpellBlock"
+            "filePath"      "heroes/itachi/tsukiyomi"
+            "functionName"  "tsukiyomi"
+        }
 	}
 
 	"Modifiers"

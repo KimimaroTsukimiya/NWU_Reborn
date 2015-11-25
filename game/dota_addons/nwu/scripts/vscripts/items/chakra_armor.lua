@@ -16,7 +16,7 @@ function removeBlock( keys )
 end
 
 function checkBlock( keys )
-	if not keys.caster:HasModifier("modifier_chakra_armor") and keys.ability:IsCooldownReady() and not keys.caster:HasModifier("modifier_item_sphere_target") then
+	if not keys.caster:HasModifier("modifier_chakra_armor") and keys.ability:IsCooldownReady() and not keys.caster:HasModifier("modifier_item_sphere_target") and keys.ability:IsCooldownReady() then
 		keys.ability:ApplyDataDrivenModifier(keys.caster, keys.caster, "modifier_chakra_armor", nil)
 		keys.target:AddNewModifier(keys.caster, keys.ability, "modifier_item_sphere_target", nil)
 	end

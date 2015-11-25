@@ -63,6 +63,11 @@
         "var_type"          "FIELD_FLOAT"
         "block_cooldown"      "17.0"
       }
+       "07"
+    {
+        "var_type"          "FIELD_FLOAT"
+        "bonus_damage"      "10.0"
+      }
     }
 
   
@@ -77,21 +82,28 @@
   
   "Modifiers"
   {
-    "modifier_item_sphere_datadriven"
+
+  "modifer_chakra_armor_stats"
     {
-      "Passive"     "1"
-      "IsHidden"      "1"
+
+      "Passive" "1"
+      "IsHidden"  "1"
       "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-      
-      "Properties"
+
+        "Properties"
       {
-        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_all_stats"
-        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_all_stats"
-        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_all_stats"
+        "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"    "%bonus_str"
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"     "%bonus_agi"
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_int"
         "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%bonus_health_regen"
         "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"   "%bonus_mana_regen_percentage"
         "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"   "%bonus_damage"
       }
+    }
+    "modifier_item_sphere_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
       
       "OnCreated"
       {     

@@ -4,7 +4,9 @@
 
 --- Initialize ability variables
 function initialize(event)
+	local duration = event.ability:GetLevelSpecialValueFor("duration", event.ability:GetLevel() - 1)
 	event.ability.saved_damage = 0
+	event.ability:ApplyDataDrivenModifier(event.caster, event.target, "modifier_itachi_amateratsu", {duration = duration})
 end
 
 --- Save damage taken by target
