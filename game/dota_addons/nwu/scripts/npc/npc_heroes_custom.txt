@@ -175,8 +175,8 @@
 		  "Ability1"        "kakashi_doton"
 		  "Ability2"        "kakashi_sharingan" 
 		  "Ability3"        "kakashi_bunshin" 
-		  "Ability4"        "kakashi_chidori"
-		  "Ability5"        ""
+		  "Ability4"        "kakashi_empty"
+		  "Ability5"        "kakashi_chidori"
 		
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
