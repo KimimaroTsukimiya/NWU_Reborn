@@ -97,7 +97,7 @@
         "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"   "%bonus_int"
         "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%bonus_health_regen"
         "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE"   "%bonus_mana_regen_percentage"
-        "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"   "%bonus_damage"
+        "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"   "%bonus_damage"
       }
     }
 
