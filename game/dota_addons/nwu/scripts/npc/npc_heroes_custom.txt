@@ -472,7 +472,7 @@
 	  "Ability1"        "temari_fusajin_no_jutsu"
 	  "Ability2"        "temari_kamaitachi_no_jutsu"
 	  "Ability3"        "temari_sheer_wind" 
-	  //"Ability4"             
+	  "Ability4"        "temari_kuchiyose_kirikiri_mai"
 	  "ModelScale"		"1.08"
 	  "LoadoutScale"	"1.08" 
 	  //"Model" 		"models/zabuza/zabuza.vmdl"

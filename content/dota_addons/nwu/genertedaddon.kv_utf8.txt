@@ -1,0 +1,447 @@
+﻿		// DOTA 2 MODKIT GENERATED TOOLTIPS FOR: nwu
+		// Keys already defined in addon_english.txt are not listed, nor are Modifiers with the property "IsHidden" "1".
+
+		// ******************** HEROES ********************
+		"npc_dota_hero_ancient_apparition"                                                "Npc Dota Hero Ancient Apparition Barebones"
+
+		// ******************** UNITS ********************
+		"npc_dummy_unit"                                                                  "Dummy Unit"
+		"npc_dota_hero_ancient_apparition_barebones"                                      "Dota Hero Ancient Apparition Barebones"
+
+		// ******************** ABILITY MODIFIERS ********************
+
+		// ******************** ITEM MODIFIERS ********************
+		"DOTA_Tooltip_akatsuki_ring_aura"                                                 "Akatsuki Ring Aura"
+		"DOTA_Tooltip_akatsuki_ring_aura_Description"                                     ""
+
+		"DOTA_Tooltip_modifier_item_imba_shadow_blade_invis"                              "Item Imba Shadow Blade Invis"
+		"DOTA_Tooltip_modifier_item_imba_shadow_blade_invis_Description"                  ""
+
+		"DOTA_Tooltip_lunar_sword_slow"                                                   "Lunar Sword Slow"
+		"DOTA_Tooltip_lunar_sword_slow_Description"                                       ""
+
+		"DOTA_Tooltip_modifier_item_sphere_datadriven_icon"                               "Item Sphere Datadriven Icon"
+		"DOTA_Tooltip_modifier_item_sphere_datadriven_icon_Description"                   ""
+
+		"DOTA_Tooltip_modifier_purge"                                                     "Purge"
+		"DOTA_Tooltip_modifier_purge_Description"                                         ""
+
+		"DOTA_Tooltip_conch_crit"                                                         "Conch Crit"
+		"DOTA_Tooltip_conch_crit_Description"                                             ""
+
+		"DOTA_Tooltip_modifier_item_mekansm_datadriven_aura"                              "Item Mekansm Datadriven Aura"
+		"DOTA_Tooltip_modifier_item_mekansm_datadriven_aura_Description"                  ""
+
+		"DOTA_Tooltip_modifier_item_mekansm_datadriven_heal_armor"                        "Item Mekansm Datadriven Heal Armor"
+		"DOTA_Tooltip_modifier_item_mekansm_datadriven_heal_armor_Description"            ""
+
+		"DOTA_Tooltip_custom_gelel"                                                       "Custom Gelel"
+		"DOTA_Tooltip_custom_gelel_Description"                                           ""
+
+		"DOTA_Tooltip_hakus_overcoat_aura"                                                "Hakus Overcoat Aura"
+		"DOTA_Tooltip_hakus_overcoat_aura_Description"                                    ""
+
+		"DOTA_Tooltip_modifier_thunder_clap"                                              "Thunder Clap"
+		"DOTA_Tooltip_modifier_thunder_clap_Description"                                  ""
+
+		"DOTA_Tooltip_custom_speedup"                                                     "Custom Speedup"
+		"DOTA_Tooltip_custom_speedup_Description"                                         ""
+
+		"DOTA_Tooltip_iron_crow_bash"                                                     "Iron Crow Bash"
+		"DOTA_Tooltip_iron_crow_bash_Description"                                         ""
+
+		"DOTA_Tooltip_javelin_crit"                                                       "Javelin Crit"
+		"DOTA_Tooltip_javelin_crit_Description"                                           ""
+
+		"DOTA_Tooltip_modifier_orb_of_corruption_debuff"                                  "Orb Of Corruption Debuff"
+		"DOTA_Tooltip_modifier_orb_of_corruption_debuff_Description"                      ""
+
+		"DOTA_Tooltip_magatama_amulet_aura"                                               "Magatama Amulet Aura"
+		"DOTA_Tooltip_magatama_amulet_aura_Description"                                   ""
+
+		"DOTA_Tooltip_custom_frenzy"                                                      "Custom Frenzy"
+		"DOTA_Tooltip_custom_frenzy_Description"                                          ""
+
+		"DOTA_Tooltip_modifier_orb_of_venom_wc3_debuff"                                   "Orb Of Venom Wc3 Debuff"
+		"DOTA_Tooltip_modifier_orb_of_venom_wc3_debuff_Description"                       ""
+
+		"DOTA_Tooltip_illusion"                                                           "Illusion"
+		"DOTA_Tooltip_illusion_Description"                                               ""
+
+		"DOTA_Tooltip_modifier_item_buckler_datadriven_active"                            "Item Buckler Datadriven Active"
+		"DOTA_Tooltip_modifier_item_buckler_datadriven_active_Description"                ""
+
+		"DOTA_Tooltip_modifier_hex"                                                       "Hex"
+		"DOTA_Tooltip_modifier_hex_Description"                                           ""
+
+		"DOTA_Tooltip_item_shuko_ms_modifier"                                             "Item Shuko Ms Modifier"
+		"DOTA_Tooltip_item_shuko_ms_modifier_Description"                                 ""
+
+		"DOTA_Tooltip_OnAttackLanded"                                                     "OnAttackLanded"
+		"DOTA_Tooltip_OnAttackLanded_Description"                                         ""
+
+		"DOTA_Tooltip_solar_blade_aoe_dmg"                                                "Solar Blade Aoe Dmg"
+		"DOTA_Tooltip_solar_blade_aoe_dmg_Description"                                    ""
+
+		"DOTA_Tooltip_modifier_silence"                                                   "Silence"
+		"DOTA_Tooltip_modifier_silence_Description"                                       ""
+
+		"DOTA_Tooltip_modifier_item_vladmir_datadriven_general_aura"                      "Item Vladmir Datadriven General Aura"
+		"DOTA_Tooltip_modifier_item_vladmir_datadriven_general_aura_Description"          ""
+
+
+		// ******************** ABILITIES ********************
+
+		// ******************** ITEMS ********************
+		"DOTA_Tooltip_ability_item_akatsuki_ring_mana_reg_constant"                       "MANA REG CONSTANT:"
+		"DOTA_Tooltip_ability_item_akatsuki_ring_armor"                                   "ARMOR:"
+		"DOTA_Tooltip_ability_item_akatsuki_ring_radius"                                  "RADIUS:"
+
+		"DOTA_Tooltip_ability_item_assassins_cloak_invis_duration"                        "INVIS DURATION:"
+		"DOTA_Tooltip_ability_item_assassins_cloak_invis_ms"                              "INVIS MS:"
+		"DOTA_Tooltip_ability_item_assassins_cloak_invis_fade_time"                       "INVIS FADE TIME:"
+		"DOTA_Tooltip_ability_item_assassins_cloak_invis_damage"                          "INVIS DAMAGE:"
+		"DOTA_Tooltip_ability_item_assassins_cloak_invis_night_vision"                    "INVIS NIGHT VISION:"
+		"DOTA_Tooltip_ability_item_assassins_cloak_invis_phase_cooldown"                  "INVIS PHASE COOLDOWN:"
+		"DOTA_Tooltip_ability_item_assassins_cloak_tree_radius"                           "TREE RADIUS:"
+
+		"DOTA_Tooltip_ability_item_bingo_book_aura_radius"                                "AURA RADIUS:"
+		"DOTA_Tooltip_ability_item_bingo_book_ping_duration"                              "PING DURATION:"
+
+		"DOTA_Tooltip_ability_item_blue_moon_movespeed_slow"                              "MOVESPEED SLOW:"
+		"DOTA_Tooltip_ability_item_blue_moon_attackspeed_slow"                            "ATTACKSPEED SLOW:"
+		"DOTA_Tooltip_ability_item_blue_moon_slow_duration"                               "SLOW DURATION:"
+
+		"DOTA_Tooltip_ability_item_chakra_armor_block_cooldown"                           "BLOCK COOLDOWN:"
+
+		"DOTA_Tooltip_ability_item_chakra_smasher_damage_per_burn"                        "DAMAGE PER BURN:"
+		"DOTA_Tooltip_ability_item_chakra_smasher_mana_per_hit"                           "MANA PER HIT:"
+		"DOTA_Tooltip_ability_item_chakra_smasher_mana_per_hit_heroes"                    "MANA PER HIT HEROES:"
+		"DOTA_Tooltip_ability_item_chakra_smasher_movespeed_slow"                         "MOVESPEED SLOW:"
+		"DOTA_Tooltip_ability_item_chakra_smasher_purge_duration"                         "PURGE DURATION:"
+		"DOTA_Tooltip_ability_item_chakra_smasher_damage_to_summons"                      "DAMAGE TO SUMMONS:"
+
+		"DOTA_Tooltip_ability_item_conch_shell_mace_extra_dmg"                            "EXTRA DMG:"
+		"DOTA_Tooltip_ability_item_conch_shell_mace_extra_dmg_chance"                     "EXTRA DMG CHANCE:"
+
+		"DOTA_Tooltip_ability_item_dummy_datadriven"                                      "Dummy Datadriven"
+		"DOTA_Tooltip_ability_item_dummy_datadriven_Description"                          ""
+
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_bonus_all_stats"                "BONUS ALL STATS:"
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_aura_radius"                    "AURA RADIUS:"
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_aura_health_regen"              "AURA HEALTH REGEN:"
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_heal_amount"                    "HEAL AMOUNT:"
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_heal_radius"                    "HEAL RADIUS:"
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_heal_bonus_armor"               "HEAL BONUS ARMOR:"
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_heal_armor_duration"            "HEAL ARMOR DURATION:"
+
+		"DOTA_Tooltip_ability_item_flak_jacket_magic_resis"                               "MAGIC RESIS:"
+
+		"DOTA_Tooltip_ability_item_gale_blade_crit_bonus"                                 "CRIT BONUS:"
+		"DOTA_Tooltip_ability_item_gale_blade_crit_chance"                                "CRIT CHANCE:"
+
+		"DOTA_Tooltip_ability_item_gelel_stone_active_duration"                           "ACTIVE DURATION:"
+
+		"DOTA_Tooltip_ability_item_gem_of_truesight_radius"                               "RADIUS:"
+
+		"DOTA_Tooltip_ability_item_giant_iron_fan_mana_reg_constant"                      "MANA REG CONSTANT:"
+
+		"DOTA_Tooltip_ability_item_good_guys_suit_evasion_chance"                         "EVASION CHANCE:"
+
+		"DOTA_Tooltip_ability_item_hakus_overcoat_attackspeed_reduction"                  "ATTACKSPEED REDUCTION:"
+		"DOTA_Tooltip_ability_item_hakus_overcoat_aura_radius"                            "AURA RADIUS:"
+
+		"DOTA_Tooltip_ability_item_hexagonal_crystal_mana_reg_constant"                   "MANA REG CONSTANT:"
+
+		"DOTA_Tooltip_ability_item_hoshikages_star_radius"                                "RADIUS:"
+		"DOTA_Tooltip_ability_item_hoshikages_star_duration"                              "DURATION:"
+		"DOTA_Tooltip_ability_item_hoshikages_star_duration_creeps"                       "DURATION CREEPS:"
+		"DOTA_Tooltip_ability_item_hoshikages_star_damage"                                "DAMAGE:"
+		"DOTA_Tooltip_ability_item_hoshikages_star_movement_slow"                         "MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_item_hoshikages_star_attack_speed_slow"                     "ATTACK SPEED SLOW:"
+
+		"DOTA_Tooltip_ability_item_idates_sandals_movementspeed_cast_percent"             "MOVEMENTSPEED CAST PERCENT:"
+		"DOTA_Tooltip_ability_item_idates_sandals_movementspeed_cast_duration_seconds"    "MOVEMENTSPEED CAST DURATION SECONDS:"
+
+		"DOTA_Tooltip_ability_item_ikazuchi_lightning_chance"                             "LIGHTNING CHANCE:"
+		"DOTA_Tooltip_ability_item_ikazuchi_lightning_damage"                             "LIGHTNING DAMAGE:"
+		"DOTA_Tooltip_ability_item_ikazuchi_lightning_bounces"                            "LIGHTNING BOUNCES:"
+		"DOTA_Tooltip_ability_item_ikazuchi_lightning_decay"                              "LIGHTNING DECAY:"
+		"DOTA_Tooltip_ability_item_ikazuchi_bounce_range"                                 "BOUNCE RANGE:"
+
+		"DOTA_Tooltip_ability_item_iron_crow_bash_duration"                               "BASH DURATION:"
+		"DOTA_Tooltip_ability_item_iron_crow_bash_chance"                                 "BASH CHANCE:"
+
+		"DOTA_Tooltip_ability_item_jashins_amulet_lifesteal_bonus"                        "LIFESTEAL BONUS:"
+
+		"DOTA_Tooltip_ability_item_javelin_datadriven_chance"                             "CHANCE:"
+		"DOTA_Tooltip_ability_item_javelin_datadriven_extra_dmg"                          "EXTRA DMG:"
+
+		"DOTA_Tooltip_ability_item_jiraiyas_sandals_restore_mana"                         "RESTORE MANA:"
+		"DOTA_Tooltip_ability_item_jiraiyas_sandals_radius"                               "RADIUS:"
+
+		"DOTA_Tooltip_ability_item_karites_touch_bonus_intellect"                         "BONUS INTELLECT:"
+		"DOTA_Tooltip_ability_item_karites_touch_bonus_all_stats"                         "BONUS ALL STATS:"
+		"DOTA_Tooltip_ability_item_karites_touch_damage"                                  "DAMAGE:"
+		"DOTA_Tooltip_ability_item_karites_touch_range_tooltip"                           "RANGE TOOLTIP:"
+
+		"DOTA_Tooltip_ability_item_karites_touch_2_bonus_intellect"                       "BONUS INTELLECT:"
+		"DOTA_Tooltip_ability_item_karites_touch_2_bonus_all_stats"                       "BONUS ALL STATS:"
+		"DOTA_Tooltip_ability_item_karites_touch_2_damage"                                "DAMAGE:"
+		"DOTA_Tooltip_ability_item_karites_touch_2_range_tooltip"                         "RANGE TOOLTIP:"
+
+		"DOTA_Tooltip_ability_item_karites_touch_3_bonus_intellect"                       "BONUS INTELLECT:"
+		"DOTA_Tooltip_ability_item_karites_touch_3_bonus_all_stats"                       "BONUS ALL STATS:"
+		"DOTA_Tooltip_ability_item_karites_touch_3_damage"                                "DAMAGE:"
+		"DOTA_Tooltip_ability_item_karites_touch_3_range_tooltip"                         "RANGE TOOLTIP:"
+
+		"DOTA_Tooltip_ability_item_karites_touch_4_bonus_intellect"                       "BONUS INTELLECT:"
+		"DOTA_Tooltip_ability_item_karites_touch_4_bonus_all_stats"                       "BONUS ALL STATS:"
+		"DOTA_Tooltip_ability_item_karites_touch_4_damage"                                "DAMAGE:"
+		"DOTA_Tooltip_ability_item_karites_touch_4_range_tooltip"                         "RANGE TOOLTIP:"
+
+		"DOTA_Tooltip_ability_item_kusanagi_duration"                                     "DURATION:"
+		"DOTA_Tooltip_ability_item_kusanagi_armor_reduction"                              "ARMOR REDUCTION:"
+
+		"DOTA_Tooltip_ability_item_lunar_sword_movespeed_slow"                            "MOVESPEED SLOW:"
+		"DOTA_Tooltip_ability_item_lunar_sword_attackspeed_slow"                          "ATTACKSPEED SLOW:"
+		"DOTA_Tooltip_ability_item_lunar_sword_slow_duration"                             "SLOW DURATION:"
+
+		"DOTA_Tooltip_ability_item_magatama_amulet_radius"                                "RADIUS:"
+
+		"DOTA_Tooltip_ability_item_nidaimes_helm_lifesteal_bonus"                         "LIFESTEAL BONUS:"
+		"DOTA_Tooltip_ability_item_nidaimes_helm_frenzy_as"                               "FRENZY AS:"
+		"DOTA_Tooltip_ability_item_nidaimes_helm_frenzy_ms"                               "FRENZY MS:"
+		"DOTA_Tooltip_ability_item_nidaimes_helm_frenzy_duration"                         "FRENZY DURATION:"
+
+		"DOTA_Tooltip_ability_item_poison_gauntlets_damage_per_second"                    "DAMAGE PER SECOND:"
+		"DOTA_Tooltip_ability_item_poison_gauntlets_movespeed_slow"                       "MOVESPEED SLOW:"
+		"DOTA_Tooltip_ability_item_poison_gauntlets_duration"                             "DURATION:"
+
+		"DOTA_Tooltip_ability_item_probagation_illusion_duration"                         "ILLUSION DURATION:"
+		"DOTA_Tooltip_ability_item_probagation_illusion_outgoing_damage_percent"          "ILLUSION OUTGOING DAMAGE PERCENT:"
+		"DOTA_Tooltip_ability_item_probagation_illusion_incoming_damage_percent"          "ILLUSION INCOMING DAMAGE PERCENT:"
+
+		"DOTA_Tooltip_ability_item_ragnorok_crit_bonus"                                   "CRIT BONUS:"
+		"DOTA_Tooltip_ability_item_ragnorok_crit_chance"                                  "CRIT CHANCE:"
+
+		"DOTA_Tooltip_ability_item_raijin_lightning_chance"                               "LIGHTNING CHANCE:"
+		"DOTA_Tooltip_ability_item_raijin_lightning_damage"                               "LIGHTNING DAMAGE:"
+		"DOTA_Tooltip_ability_item_raijin_lightning_bounces"                              "LIGHTNING BOUNCES:"
+		"DOTA_Tooltip_ability_item_raijin_lightning_decay"                                "LIGHTNING DECAY:"
+		"DOTA_Tooltip_ability_item_raijin_bounce_range"                                   "BOUNCE RANGE:"
+
+		"DOTA_Tooltip_ability_item_recipe_akatsuki_ring"                                  "Recipe Akatsuki Ring"
+		"DOTA_Tooltip_ability_item_recipe_akatsuki_ring_Description"                      ""
+
+		"DOTA_Tooltip_ability_item_recipe_amenonuhoko"                                    "Recipe Amenonuhoko"
+		"DOTA_Tooltip_ability_item_recipe_amenonuhoko_Description"                        ""
+
+		"DOTA_Tooltip_ability_item_recipe_amplified_silver_watch"                         "Recipe Amplified Silver Watch"
+		"DOTA_Tooltip_ability_item_recipe_amplified_silver_watch_Description"             ""
+
+		"DOTA_Tooltip_ability_item_recipe_assassins_cloak"                                "Recipe Assassins Cloak"
+		"DOTA_Tooltip_ability_item_recipe_assassins_cloak_Description"                    ""
+
+		"DOTA_Tooltip_ability_item_recipe_bingo_book"                                     "Recipe Bingo Book"
+		"DOTA_Tooltip_ability_item_recipe_bingo_book_Description"                         ""
+
+		"DOTA_Tooltip_ability_item_recipe_chakra_armor"                                   "Recipe Chakra Armor"
+		"DOTA_Tooltip_ability_item_recipe_chakra_armor_Description"                       ""
+
+		"DOTA_Tooltip_ability_item_recipe_chakra_smasher"                                 "Recipe Chakra Smasher"
+		"DOTA_Tooltip_ability_item_recipe_chakra_smasher_Description"                     ""
+
+		"DOTA_Tooltip_ability_item_recipe_conch_shell_mace"                               "Recipe Conch Shell Mace"
+		"DOTA_Tooltip_ability_item_recipe_conch_shell_mace_Description"                   ""
+
+		"DOTA_Tooltip_ability_item_recipe_demon_booster"                                  "Recipe Demon Booster"
+		"DOTA_Tooltip_ability_item_recipe_demon_booster_Description"                      ""
+
+		"DOTA_Tooltip_ability_item_recipe_first_hokages_necklace"                         "Recipe First Hokages Necklace"
+		"DOTA_Tooltip_ability_item_recipe_first_hokages_necklace_Description"             ""
+
+		"DOTA_Tooltip_ability_item_recipe_flak_jacket"                                    "Recipe Flak Jacket"
+		"DOTA_Tooltip_ability_item_recipe_flak_jacket_Description"                        ""
+
+		"DOTA_Tooltip_ability_item_recipe_gais_fist_of_might"                             "Recipe Gais Fist Of Might"
+		"DOTA_Tooltip_ability_item_recipe_gais_fist_of_might_Description"                 ""
+
+		"DOTA_Tooltip_ability_item_recipe_gale_blade"                                     "Recipe Gale Blade"
+		"DOTA_Tooltip_ability_item_recipe_gale_blade_Description"                         ""
+
+		"DOTA_Tooltip_ability_item_recipe_gelel_stone"                                    "Recipe Gelel Stone"
+		"DOTA_Tooltip_ability_item_recipe_gelel_stone_Description"                        ""
+
+		"DOTA_Tooltip_ability_item_recipe_giant_iron_fan"                                 "Recipe Giant Iron Fan"
+		"DOTA_Tooltip_ability_item_recipe_giant_iron_fan_Description"                     ""
+
+		"DOTA_Tooltip_ability_item_recipe_good_guys_suit"                                 "Recipe Good Guys Suit"
+		"DOTA_Tooltip_ability_item_recipe_good_guys_suit_Description"                     ""
+
+		"DOTA_Tooltip_ability_item_recipe_hakus_overcoat"                                 "Recipe Hakus Overcoat"
+		"DOTA_Tooltip_ability_item_recipe_hakus_overcoat_Description"                     ""
+
+		"DOTA_Tooltip_ability_item_recipe_hexagonal_crystal"                              "Recipe Hexagonal Crystal"
+		"DOTA_Tooltip_ability_item_recipe_hexagonal_crystal_Description"                  ""
+
+		"DOTA_Tooltip_ability_item_recipe_hokage_armor"                                   "Recipe Hokage Armor"
+		"DOTA_Tooltip_ability_item_recipe_hokage_armor_Description"                       ""
+
+		"DOTA_Tooltip_ability_item_recipe_hoshikages_star"                                "Recipe Hoshikages Star"
+		"DOTA_Tooltip_ability_item_recipe_hoshikages_star_Description"                    ""
+
+		"DOTA_Tooltip_ability_item_recipe_idates_sandals"                                 "Recipe Idates Sandals"
+		"DOTA_Tooltip_ability_item_recipe_idates_sandals_Description"                     ""
+
+		"DOTA_Tooltip_ability_item_recipe_ikazuchi"                                       "Recipe Ikazuchi"
+		"DOTA_Tooltip_ability_item_recipe_ikazuchi_Description"                           ""
+
+		"DOTA_Tooltip_ability_item_recipe_iron_crow"                                      "Recipe Iron Crow"
+		"DOTA_Tooltip_ability_item_recipe_iron_crow_Description"                          ""
+
+		"DOTA_Tooltip_ability_item_recipe_jashins_amulet"                                 "Recipe Jashins Amulet"
+		"DOTA_Tooltip_ability_item_recipe_jashins_amulet_Description"                     ""
+
+		"DOTA_Tooltip_ability_item_recipe_jiraiyas_sandals"                               "Recipe Jiraiyas Sandals"
+		"DOTA_Tooltip_ability_item_recipe_jiraiyas_sandals_Description"                   ""
+
+		"DOTA_Tooltip_ability_item_recipe_kaguya_armor"                                   "Recipe Kaguya Armor"
+		"DOTA_Tooltip_ability_item_recipe_kaguya_armor_Description"                       ""
+
+		"DOTA_Tooltip_ability_item_recipe_karites_touch"                                  "Recipe Karites Touch"
+		"DOTA_Tooltip_ability_item_recipe_karites_touch_Description"                      ""
+
+		"DOTA_Tooltip_ability_item_recipe_karites_touch_2"                                "Recipe Karites Touch 2"
+		"DOTA_Tooltip_ability_item_recipe_karites_touch_2_Description"                    ""
+
+		"DOTA_Tooltip_ability_item_recipe_karites_touch_3"                                "Recipe Karites Touch 3"
+		"DOTA_Tooltip_ability_item_recipe_karites_touch_3_Description"                    ""
+
+		"DOTA_Tooltip_ability_item_recipe_karites_touch_4"                                "Recipe Karites Touch 4"
+		"DOTA_Tooltip_ability_item_recipe_karites_touch_4_Description"                    ""
+
+		"DOTA_Tooltip_ability_item_recipe_kongou_nyoi"                                    "Recipe Kongou Nyoi"
+		"DOTA_Tooltip_ability_item_recipe_kongou_nyoi_Description"                        ""
+
+		"DOTA_Tooltip_ability_item_recipe_kusanagi"                                       "Recipe Kusanagi"
+		"DOTA_Tooltip_ability_item_recipe_kusanagi_Description"                           ""
+
+		"DOTA_Tooltip_ability_item_recipe_lunar_sword"                                    "Recipe Lunar Sword"
+		"DOTA_Tooltip_ability_item_recipe_lunar_sword_Description"                        ""
+
+		"DOTA_Tooltip_ability_item_recipe_magatama_amulet"                                "Recipe Magatama Amulet"
+		"DOTA_Tooltip_ability_item_recipe_magatama_amulet_Description"                    ""
+
+		"DOTA_Tooltip_ability_item_recipe_nidaimes_helm"                                  "Recipe Nidaimes Helm"
+		"DOTA_Tooltip_ability_item_recipe_nidaimes_helm_Description"                      ""
+
+		"DOTA_Tooltip_ability_item_recipe_onbus_paw"                                      "Recipe Onbus Paw"
+		"DOTA_Tooltip_ability_item_recipe_onbus_paw_Description"                          ""
+
+		"DOTA_Tooltip_ability_item_recipe_poison_gauntlets"                               "Recipe Poison Gauntlets"
+		"DOTA_Tooltip_ability_item_recipe_poison_gauntlets_Description"                   ""
+
+		"DOTA_Tooltip_ability_item_recipe_probagation"                                    "Recipe Probagation"
+		"DOTA_Tooltip_ability_item_recipe_probagation_Description"                        ""
+
+		"DOTA_Tooltip_ability_item_recipe_ragnorok"                                       "Recipe Ragnorok"
+		"DOTA_Tooltip_ability_item_recipe_ragnorok_Description"                           ""
+
+		"DOTA_Tooltip_ability_item_recipe_raijin"                                         "Recipe Raijin"
+		"DOTA_Tooltip_ability_item_recipe_raijin_Description"                             ""
+
+		"DOTA_Tooltip_ability_item_recipe_reminisce"                                      "Recipe Reminisce"
+		"DOTA_Tooltip_ability_item_recipe_reminisce_Description"                          ""
+
+		"DOTA_Tooltip_ability_item_recipe_rengeki"                                        "Recipe Rengeki"
+		"DOTA_Tooltip_ability_item_recipe_rengeki_Description"                            ""
+
+		"DOTA_Tooltip_ability_item_recipe_retractable_shield"                             "Recipe Retractable Shield"
+		"DOTA_Tooltip_ability_item_recipe_retractable_shield_Description"                 ""
+
+		"DOTA_Tooltip_ability_item_recipe_sage_scroll"                                    "Recipe Sage Scroll"
+		"DOTA_Tooltip_ability_item_recipe_sage_scroll_Description"                        ""
+
+		"DOTA_Tooltip_ability_item_recipe_sarutobis_helm"                                 "Recipe Sarutobis Helm"
+		"DOTA_Tooltip_ability_item_recipe_sarutobis_helm_Description"                     ""
+
+		"DOTA_Tooltip_ability_item_recipe_shinobi_trends_str"                             "Recipe Shinobi Trends Str"
+		"DOTA_Tooltip_ability_item_recipe_shinobi_trends_str_Description"                 ""
+
+		"DOTA_Tooltip_ability_item_recipe_shuko"                                          "Recipe Shuko"
+		"DOTA_Tooltip_ability_item_recipe_shuko_Description"                              ""
+
+		"DOTA_Tooltip_ability_item_recipe_silver_hands"                                   "Recipe Silver Hands"
+		"DOTA_Tooltip_ability_item_recipe_silver_hands_Description"                       ""
+
+		"DOTA_Tooltip_ability_item_recipe_solar_blade"                                    "Recipe Solar Blade"
+		"DOTA_Tooltip_ability_item_recipe_solar_blade_Description"                        ""
+
+		"DOTA_Tooltip_ability_item_recipe_the_fourths_legacy"                             "Recipe The Fourths Legacy"
+		"DOTA_Tooltip_ability_item_recipe_the_fourths_legacy_Description"                 ""
+
+		"DOTA_Tooltip_ability_item_recipe_the_totsuka"                                    "Recipe The Totsuka"
+		"DOTA_Tooltip_ability_item_recipe_the_totsuka_Description"                        ""
+
+		"DOTA_Tooltip_ability_item_recipe_tobis_mask"                                     "Recipe Tobis Mask"
+		"DOTA_Tooltip_ability_item_recipe_tobis_mask_Description"                         ""
+
+		"DOTA_Tooltip_ability_item_recipe_transmutation_gloves"                           "Recipe Transmutation Gloves"
+		"DOTA_Tooltip_ability_item_recipe_transmutation_gloves_Description"               ""
+
+		"DOTA_Tooltip_ability_item_recipe_trinity_booster"                                "Recipe Trinity Booster"
+		"DOTA_Tooltip_ability_item_recipe_trinity_booster_Description"                    ""
+
+		"DOTA_Tooltip_ability_item_recipe_tri_blades"                                     "Recipe Tri Blades"
+		"DOTA_Tooltip_ability_item_recipe_tri_blades_Description"                         ""
+
+		"DOTA_Tooltip_ability_item_recipe_twin_fangs_of_abyss"                            "Recipe Twin Fangs Of Abyss"
+		"DOTA_Tooltip_ability_item_recipe_twin_fangs_of_abyss_Description"                ""
+
+		"DOTA_Tooltip_ability_item_rengeki_radius"                                        "RADIUS:"
+		"DOTA_Tooltip_ability_item_rengeki_duration"                                      "DURATION:"
+		"DOTA_Tooltip_ability_item_rengeki_duration_creeps"                               "DURATION CREEPS:"
+		"DOTA_Tooltip_ability_item_rengeki_damage"                                        "DAMAGE:"
+		"DOTA_Tooltip_ability_item_rengeki_ms_slow"                                       "MS SLOW:"
+		"DOTA_Tooltip_ability_item_rengeki_attack_speed_slow"                             "ATTACK SPEED SLOW:"
+
+		"DOTA_Tooltip_ability_item_retractable_shield_bonus_all_stats"                    "BONUS ALL STATS:"
+		"DOTA_Tooltip_ability_item_retractable_shield_active_radius"                      "ACTIVE RADIUS:"
+		"DOTA_Tooltip_ability_item_retractable_shield_active_armor"                       "ACTIVE ARMOR:"
+		"DOTA_Tooltip_ability_item_retractable_shield_active_duration_unit"               "ACTIVE DURATION UNIT:"
+		"DOTA_Tooltip_ability_item_retractable_shield_active_duration_hero"               "ACTIVE DURATION HERO:"
+
+		"DOTA_Tooltip_ability_item_sage_scroll_hex_duration"                              "HEX DURATION:"
+		"DOTA_Tooltip_ability_item_sage_scroll_hex_ms"                                    "HEX MS:"
+		"DOTA_Tooltip_ability_item_sage_scroll_cast_range"                                "CAST RANGE:"
+		"DOTA_Tooltip_ability_item_sage_scroll_cast_range"                                "CAST RANGE:"
+
+		"DOTA_Tooltip_ability_item_shinobi_trends_agi_bonus_agi"                          "BONUS AGI:"
+
+		"DOTA_Tooltip_ability_item_silver_hands_radius"                                   "RADIUS:"
+		"DOTA_Tooltip_ability_item_silver_hands_damage"                                   "DAMAGE:"
+		"DOTA_Tooltip_ability_item_silver_hands_aoe_damage"                               "AOE DAMAGE:"
+
+		"DOTA_Tooltip_ability_item_solar_blade_aoe_damage"                                "AOE DAMAGE:"
+		"DOTA_Tooltip_ability_item_solar_blade_radius"                                    "RADIUS:"
+
+		"DOTA_Tooltip_ability_item_the_totsuka_bonus_damage"                              "BONUS DAMAGE:"
+		"DOTA_Tooltip_ability_item_the_totsuka_silence_duration"                          "SILENCE DURATION:"
+
+		"DOTA_Tooltip_ability_item_tobis_mask_aura_radius"                                "AURA RADIUS:"
+		"DOTA_Tooltip_ability_item_tobis_mask_lifesteal_aura_percent"                     "LIFESTEAL AURA PERCENT:"
+		"DOTA_Tooltip_ability_item_tobis_mask_damage_aura_percent"                        "DAMAGE AURA PERCENT:"
+		"DOTA_Tooltip_ability_item_tobis_mask_armor_aura"                                 "ARMOR AURA:"
+		"DOTA_Tooltip_ability_item_tobis_mask_mana_regen_aura"                            "MANA REGEN AURA:"
+		"DOTA_Tooltip_ability_item_tobis_mask_hp_regen"                                   "HP REGEN:"
+
+		"DOTA_Tooltip_ability_item_transmutation_gloves_bonus_gold"                       "BONUS GOLD:"
+		"DOTA_Tooltip_ability_item_transmutation_gloves_xp_multiplier"                    "XP MULTIPLIER:"
+
+		"DOTA_Tooltip_ability_item_trinity_booster_bonus_hp_reg_constant"                 "BONUS HP REG CONSTANT:"
+
+		"DOTA_Tooltip_ability_item_yondaime_sealed_kunai_max_blink_range"                 "MAX BLINK RANGE:"
+		"DOTA_Tooltip_ability_item_yondaime_sealed_kunai_blink_range_clamp"               "BLINK RANGE CLAMP:"
+		"DOTA_Tooltip_ability_item_yondaime_sealed_kunai_blink_damage_cooldown"           "BLINK DAMAGE COOLDOWN:"
+
