@@ -50,11 +50,7 @@ function FinishTeleport(keys)
 	ParticleManager:DestroyParticle(keys.ability.particle_caster, false)
 	ParticleManager:DestroyParticle(keys.ability.particle_target, false)
 	
-	if target:isAlive() then	
+	if target:IsAlive() or target:IsBuilding() then	
 		FindClearSpaceForUnit(caster, target:GetAbsOrigin(), true)
 	end
-end
-
-function removeModifierOnTarget( keys )
-	keys.ability.tptarget:RemoveModifierByName(keys.modifier_name)
 end
