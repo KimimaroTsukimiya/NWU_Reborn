@@ -30,14 +30,18 @@ function SamehadaResetCooldown( keys )
 	local cooldown = ability:GetCooldown( ability:GetLevel() )
 	local modifierName = "modifier_samehada"
 	
-	-- Remove cooldown
-	caster:RemoveModifierByName( modifierName )
-	ability:StartCooldown( cooldown )
-	Timers:CreateTimer( cooldown, function()
-			ability:ApplyDataDrivenModifier( caster, caster, modifierName, {} )
-			return nil
-		end
-	)
+	if keys.target:GetMaxMana() > 0 then
+        EmitSoundOn("Hero_Antimage.ManaBreak", keys.target)
+		-- Remove cooldown
+		caster:RemoveModifierByName( modifierName )
+		ability:StartCooldown( cooldown )
+		Timers:CreateTimer( cooldown, function()
+				ability:ApplyDataDrivenModifier( caster, caster, modifierName, {} )
+				return nil
+			end
+		)
+	end
+	
 end
 
 

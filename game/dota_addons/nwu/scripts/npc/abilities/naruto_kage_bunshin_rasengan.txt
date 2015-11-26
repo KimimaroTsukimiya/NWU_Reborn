@@ -72,6 +72,15 @@
 		}
 	}
 
+	 "OnCreated"
+	  {
+	    "RunScript"
+	    {
+	      "ScriptFile"  "heroes/naruto/kage_bunshin_rasengan.lua"
+	      "Function"    "initiateBunshinCount"
+	    }
+	  }
+
 	"OnSpellStart"
 	{
 		"FireSound"
@@ -137,5 +146,21 @@
 			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%slow_movement_percentage" 
 			}
 		}
+
+		"modfiier_naruto_bunshin_reduce_count"
+	    {
+	      "IsBuff"    "0"
+	      "Passive"    "0"
+	      "IsHidden"    "1"
+
+	      "OnDestroy"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "heroes/naruto/kawazu_kumite.lua"
+	          "Function"    "reduceBunshinCount"
+	        }
+	      }
+	    }
 	}
 }

@@ -48,7 +48,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"magic_missile_stun"	"1.5 2 2.5 3"
+			"stun_duration"	"1.5 2 2.5 3"
 		}
 	}
 
@@ -73,24 +73,23 @@
 
 	"OnProjectileHitUnit"
 	{
+
 		"DeleteOnHit"	"1"
+
+		"RunScript"
+			{
+				"ScriptFile"    "items.lua"
+				"Function"      "CheckForSpellBlock"
+				"filePath"		"heroes/kakashi/doton"
+				"functionName"	"Doton"
+			}
+
 		"FireSound"
 		{
 			"EffectName"	"Hero_VengefulSpirit.MagicMissileImpact"
 			"Target" 		"TARGET"
 		}
 		
-		"Stun"
-		{
-			"Duration"   "%magic_missile_stun"
-			"Target" 	 "TARGET"
-		}
-
-		"Damage"
-		{
-			"Target"		"TARGET"
-			"Type"			"DAMAGE_TYPE_MAGICAL"
-			"Damage"		"%AbilityDamage"
-		}						
+						
 	}	
 }

@@ -84,10 +84,6 @@ function StormBoltHit( keys )
 	local sound_impact = keys.sound_impact
 	local particle_impact = keys.particle_impact
 
-	-- Parameters
-	local damage = ability:GetLevelSpecialValueFor("damage", ability_level)
-	local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
-
 	-- Play sound
 	target:EmitSound(sound_impact)
 
@@ -115,6 +111,4 @@ function StormBoltHit( keys )
 	ParticleManager:SetParticleControl(impact_pfx, 0, enemy_loc)
 	ParticleManager:SetParticleControlEnt(impact_pfx, 3, enemy, PATTACH_ABSORIGIN, "attach_origin", enemy_loc, true)
 
-	 -- Apply damage
-	ApplyDamage({attacker = caster, victim = target, ability = ability, damage = damage, damage_type = ability:GetAbilityDamageType()})
 end

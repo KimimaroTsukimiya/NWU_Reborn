@@ -8,8 +8,8 @@
 	  "Ability2"        "anko_senei_jyashu"
 	  "Ability3"        "anko_senei_ta_jashu"
 	  "Ability4"        "anko_sojasosai_no_jutsu"      
-	  "ModelScale"		"1.00"
-	  "LoadoutScale"	"1.00" 
+	  "ModelScale"		"0.80"
+	  "LoadoutScale"	"0.80" 
 	  //"Model" 		"models/zabuza/zabuza.vmdl"
 	  "ItemSlots"
 	  { }
@@ -175,8 +175,8 @@
 		  "Ability1"        "kakashi_doton"
 		  "Ability2"        "kakashi_sharingan" 
 		  "Ability3"        "kakashi_bunshin" 
-		  "Ability4"        "kakashi_chidori"
-		  "Ability5"        ""
+		  "Ability4"        "kakashi_empty"
+		  "Ability5"        "kakashi_chidori"
 		
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"

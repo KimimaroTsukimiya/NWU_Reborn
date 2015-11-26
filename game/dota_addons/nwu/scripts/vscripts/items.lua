@@ -29,25 +29,61 @@ end
 
 
 --[[ ============================================================================================================
-	Author: Rook
-	Date: January 30, 2015
-	This function should be called from targeted datadriven abilities that can be blocked by Linken's Sphere.  
-	Checks to see if the inputted unit has modifier_item_sphere_target on them.  If they do, the sphere is popped,
-	the animation and sound plays, and true is returned.  If they do not, false is returned.
+	Author: LearningDave
+	Date: November, 25th 2015
 ================================================================================================================= ]]
-function GameMode:is_spell_blocked_by_linkens_sphere(target)
-	if target:HasModifier("modifier_item_sphere_target") then
-		target:RemoveModifierByName("modifier_item_sphere_target")  --The particle effect is played automatically when this modifier is removed (but the sound isn't).
-		target:EmitSound("DOTA_Item.LinkensSphere.Activate")
-		return true
-	end
-	if target:HasModifier("modifier_roshan_spell_block") then
---		target:RemoveModifierByName("modifier_roshan_spell_block")  --The particle effect is played automatically when this modifier is removed (but the sound isn't).
-		print("TODO: fix rosh spellblock cd")
+function GameMode:is_spell_blocked_by_chakra_armor(target)
+	if  target:HasModifier("modifier_chakra_armor") then
+		target:RemoveModifierByName("modifier_chakra_armor")
+		target:RemoveModifierByName("modifier_item_sphere_target")
+		local ca = nil
+		for i=0, 5, 1 do  --Remove all dummy items from the player's inventory.
+				local current_item = target:GetItemInSlot(i)
+				if current_item ~= nil then
+					if current_item:GetName() == "item_chakra_armor_male" or current_item:GetName() == "item_chakra_armor_female" then
+						ca = current_item
+					end
+			end
+		end
+		ca:StartCooldown(ca:GetCooldown(1))
 		target:EmitSound("DOTA_Item.LinkensSphere.Activate")
 		return true
 	end
 	return false
+end
+
+function GenericSpellFunction(event)
+	local modifier = event.Modifier
+	local doDamage = event.doDamage
+	local caster = event.caster
+	local target = event.target
+	local ability = event.ability
+	local ability_level = ability:GetLevel() - 1
+	
+	if modifier then
+		local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
+	
+		ability:ApplyDataDrivenModifier(
+			caster,
+			target,
+			modifier,
+			{
+				duration = duration
+			}
+		)
+	end
+	
+	if doDamage then
+		local damage = ability:GetLevelSpecialValueFor("damage", ability_level)
+		ApplyDamage({
+			attacker = caster,
+			victim = target,
+			ability = ability,
+			damage = damage,
+			damage_type = ability:GetAbilityDamageType(),
+			ability=ability
+		})
+	end
 end
 
 --[[
@@ -58,16 +94,21 @@ function CheckForSpellBlock(event)
 	local filePath = event.filePath
 	local functionName = event.functionName
 	
-	if( GameMode:is_spell_blocked_by_linkens_sphere(event.target) )then
-		print("spellblocked")
+	if( not(event.target:IsMagicImmune()) or event.PierceMagicImmune)then		
+		if( GameMode:is_spell_blocked_by_chakra_armor(event.target) )then
+			return
+		end
+	else
 		return
 	end
 	
-	print("path "..filePath)
-	print("function "..functionName)
-	require(filePath)
+	if event.GenericFunction ~= nil then
+		_G[event.GenericFunction](event);
+		return;
+	end
 	
-	_G[functionName](event);
-
-	print("success")
+	if filePath and functionName then
+		require(filePath)
+		_G[functionName](event);
+	end
 end

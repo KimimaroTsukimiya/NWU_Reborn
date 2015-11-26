@@ -83,6 +83,9 @@ end
 function GameMode:OnHeroInGame(hero)
   DebugPrint("[BAREBONES] Hero spawned in game for first time -- " .. hero:GetUnitName())
 
+
+   GameMode:RemoveWearables( hero )
+
   --[[ --These lines if uncommented will replace the W ability of any hero that loads into the game
     --with the "example_ability" ability
 
@@ -108,11 +111,13 @@ end
 function GameMode:InitGameMode()
   GameMode = self
   DebugPrint('[BAREBONES] Starting to load Barebones gamemode...')
-
+  SendToServerConsole("dota_combine_models 0")
   -- Call the internal function to set up the rules/behaviors specified in constants.lua
   -- This also sets up event hooks for all event handlers in events.lua
   -- Check out internals/gamemode to see/modify the exact code
   GameMode:_InitGameMode()
+
+
 
   -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
   Convars:RegisterCommand( "command_example", Dynamic_Wrap(GameMode, 'ExampleConsoleCommand'), "A console command example", FCVAR_CHEAT )
@@ -138,4 +143,22 @@ function GameMode:ExampleConsoleCommand()
   end
 
   print( '*********************************************' )
+end
+
+
+function GameMode:RemoveWearables( hero )
+    local wearables = {}
+    local model = hero:FirstMoveChild()
+    while model ~= nil do
+        if model ~= nil and model:GetClassname() ~= "" and model:GetClassname() == "dota_item_wearable" then
+            --print(model:GetModelName())
+            table.insert(wearables, model)
+        end
+        model = model:NextMovePeer()
+    end
+
+    for i = 1, #wearables do
+        --print("removed 1 wearable")
+        wearables[i]:RemoveSelf()
+    end
 end
