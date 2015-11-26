@@ -52,10 +52,10 @@ function ConjureImage( event )
 	-- Set the unit as an illusion
 	-- modifier_illusion controls many illusion properties like +Green damage not adding to the unit damage, not being able to cast spells and the team-only blue particle 
 	illusion:AddNewModifier(caster, ability, "modifier_illusion", { duration = duration, outgoing_damage = outgoingDamage, incoming_damage = incomingDamage })
-
+	ability:ApplyDataDrivenModifier(caster, illusion, "modifier_kakashi_bunshin_charge", {duration = duration})   
 	-- Without MakeIllusion the unit counts as a hero, e.g. if it dies to neutrals it says killed by neutrals, it respawns, etc.
 	illusion:MakeIllusion()
-
+	event.caster.bunshin = illusion
 	-- Move to the same direction as the caster
 	Timers:CreateTimer(0.05,
 		function() 
@@ -66,6 +66,20 @@ function ConjureImage( event )
 
 end
 
-function drawKakashi( keys )
-	keys.caster:SetOriginalModel("models/kakashi/kakashi.vmdl")
+
+function lighting_charge( keys )
+	local duration = keys.ability:GetLevelSpecialValueFor( "lighting_charge_duration", keys.ability:GetLevel() - 1 )
+	if keys.attacker:IsRealHero() then
+		
+		keys.ability:ApplyDataDrivenModifier(keys.caster, keys.attacker, "modifier_kakashi_lighting_charge", {duration = duration})
+
+		local dummy = CreateUnitByName("npc_dummy_unit", keys.caster.bunshin:GetAbsOrigin(), false, keys.caster, keys.caster, keys.caster:GetTeam())
+		local lightningChain = ParticleManager:CreateParticle("particles/items_fx/chain_lightning.vpcf", PATTACH_WORLDORIGIN, dummy)
+		ParticleManager:SetParticleControl(lightningChain,0,Vector(dummy:GetAbsOrigin().x,dummy:GetAbsOrigin().y,dummy:GetAbsOrigin().z + dummy:GetBoundingMaxs().z ))	
+		EmitSoundOn("Hero_Zuus.ArcLightning.Target",target)
+		ParticleManager:SetParticleControl(lightningChain,1,Vector(keys.attacker:GetAbsOrigin().x,keys.attacker:GetAbsOrigin().y,keys.attacker:GetAbsOrigin().z + keys.attacker:GetBoundingMaxs().z ))
+		dummy:RemoveSelf()
+		keys.caster.bunshin:Destroy()
+
+	end
 end

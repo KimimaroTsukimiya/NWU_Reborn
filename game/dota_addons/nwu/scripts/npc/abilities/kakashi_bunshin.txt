@@ -14,7 +14,8 @@
 	  "soundfile"   "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
 	  "particle"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_windwalk.vpcf"
 	  "particle"	"particles/generic_hero_status/status_invisibility_start.vpcf"
-	 
+	  "particle"	"particles/items_fx/chain_lightning.vpcf"
+	  "particle"	"particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
 	 }
 
 	// Time		
@@ -50,6 +51,16 @@
         "var_type"                               "FIELD_FLOAT"
         "illusion_incoming_damage_percent"       "400"
        }	
+       "07"
+       {
+        "var_type"                               "FIELD_FLOAT"
+        "lighting_charge_duration"       		"2"
+       }
+       "08"
+       {
+        "var_type"                               "FIELD_FLOAT"
+        "ms_debuff"       						"-20 -25 -30 -40"
+       }
 		
 	}
 	
@@ -70,11 +81,6 @@
 		{
 			"ScriptFile"      "heroes/kakashi/bunshin.lua"
 			"Function"        "ConjureImage"
-		}
-		"RunScript"
-		{
-			"ScriptFile"	"heroes/kakashi/bunshin.lua"
-			"Function"		"drawKakashi"
 		}
 	}
 
@@ -131,6 +137,52 @@
 				}
 			}
 
+		}
+
+		"modifier_kakashi_bunshin_charge"
+		{
+			"Passive"			"0"
+			"IsHidden"			"1"
+			"IsDebuff"			"0"
+
+			"OnTakeDamage"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/kakashi/bunshin.lua"
+					"Function"		"lighting_charge"
+				}
+			}
+
+		}
+
+		"modifier_kakashi_lighting_charge"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+
+			"Properties"
+			{
+			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_debuff" 
+			}
+
+
+			"OnCreated"
+			{
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "TARGET"
+                    "ControlPointEntities"
+                   {
+                      "TARGET"    "attach_hitloc"
+                    }
+                }
+            
+			}
 		}
 
 	}
