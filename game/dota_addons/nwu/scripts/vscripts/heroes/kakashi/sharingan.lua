@@ -18,7 +18,7 @@ function sharingan( keys )
 		Ability:SetAbilityIndex(3)
 		Ability:SetLevel(ability_level)
 		Timers:CreateTimer( copy_timer, function()
-			caster:RemoveAbility(target:GetAbilityByIndex(3):GetName())
+			caster:RemoveAbility(target:GetAbilityByIndex(1):GetName())
 			Ability = caster:AddAbility("kakashi_empty")
 			Ability:SetAbilityIndex(3)
 		return nil
