@@ -53,22 +53,36 @@ function GameMode:is_spell_blocked_by_chakra_armor(target)
 end
 
 function GenericSpellFunction(event)
-	local modifier = event.Modifier
+	local modifier1 = event.Modifier1
+	local modifier2 = event.Modifier2
 	local doDamage = event.doDamage
 	local caster = event.caster
 	local target = event.target
 	local ability = event.ability
 	local ability_level = ability:GetLevel() - 1
 	
-	if modifier then
-		local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
+	if modifier1 then
+		local duration1 = event.Duration1
 	
 		ability:ApplyDataDrivenModifier(
 			caster,
 			target,
-			modifier,
+			modifier1,
 			{
-				duration = duration
+				duration = duration1
+			}
+		)
+	end
+	
+	if modifier2 then
+		local duration2 = event.Duration2
+	
+		ability:ApplyDataDrivenModifier(
+			caster,
+			target,
+			modifier2,
+			{
+				duration = duration2
 			}
 		)
 	end

@@ -45,10 +45,14 @@ function FinishTeleport(keys)
 	local caster = keys.caster
 	local target = keys.ability.tptarget
 	local player = caster:GetPlayerOwner()
-	FindClearSpaceForUnit(caster, target:GetAbsOrigin(), true)
+	
 	caster:StopSound("Hero_KeeperOfTheLight.Recall.Cast")
 	ParticleManager:DestroyParticle(keys.ability.particle_caster, false)
 	ParticleManager:DestroyParticle(keys.ability.particle_target, false)
+	
+	if target:isAlive() then	
+		FindClearSpaceForUnit(caster, target:GetAbsOrigin(), true)
+	end
 end
 
 function removeModifierOnTarget( keys )
