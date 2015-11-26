@@ -21,7 +21,7 @@
 
     // Time     
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"               "15"
+    "AbilityCooldown"               "15 12 9 6"
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@
         "02"
         {
             "var_type" "FIELD_FLOAT"
-            "damage_reduction" "15.0 20.0 25.0 30.0"
+            "damage_reduction" "-15.0 -20.0 -25.0 -30.0"
         }
         "03"
         {
@@ -60,22 +60,17 @@
         }
     }
 
-
-    "Modifiers"
+	"Modifiers"
     {
-        "modifier_raigyaku"
+		"modifier_raigyaku"
         {
-            "Passive"                   "1"
+			"Passive"                   "1"
             "IsHidden"                  "0"
             "IsPurgable"                "0"
             
-
-
-
-
             "OnCreated"
             {
-                "FireEffect"
+				"FireEffect"
                 {
                     //TODO find a fitting sound
                     //"Target"            "CASTER" 
@@ -130,7 +125,6 @@
 
                     }
                 }
-            
               
                 "RunScript"
                 {
@@ -143,48 +137,38 @@
                     "ScriptFile"    "heroes/raikage/raigyaku_suihei.lua"
                     "Function"      "SuiheiResetCooldown"
                 }
-
-                
             }
             
         }
 
-        //TODO seems to no work yet, modifier is applied but damage reduction has to be retested
-        "modifier_raigyaku_debuff"
-      {
-          "Duration"        "%damage_reduction_duration"     
-          "IsDebuff"        "1"
-          "IsPurgable"      "0"
-          "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+		//TODO seems to no work yet, modifier is applied but damage reduction has to be retested
+		"modifier_raigyaku_debuff"
+		{
+			"Duration"        "%damage_reduction_duration"     
+			"IsDebuff"        "1"
+			"IsPurgable"      "0"
+			"Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"     "%damage_reduction"
+			}
 
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+					"EffectAttachType" "follow_origin"
 
-          "OnCreated"
-          {
-            "AttachEffect"
-                {
-                    "EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
-                    "EffectAttachType" "follow_origin"
+					"Target" "TARGET"
+					"ControlPointEntities"
+					{
+						"CASTER"    "attach_hitloc"
+					}
+				}
+			}
 
-                    "Target" "TARGET"
-                    "ControlPointEntities"
-                   {
-                      "CASTER"    "attach_hitloc"
-                    }
-                }
-          }
-          "OnAttackLanded"
-          {
-            "RunScript"
-            {
-                "ScriptFile"    "heroes/raikage/raigyaku_suihei.lua"
-                "Function"        "AddSuiheiDebuff"
-            }
-          }
-
-
-      }
-
-
+		}
     }
-
 }
