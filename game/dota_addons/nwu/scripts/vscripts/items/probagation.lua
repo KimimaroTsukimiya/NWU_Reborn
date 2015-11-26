@@ -51,5 +51,6 @@ function ConjureImage( event )
 
  -- Without MakeIllusion the unit counts as a hero, e.g. if it dies to neutrals it says killed by neutrals, it respawns, etc.
  illusion:MakeIllusion()
+ GameMode:RemoveWearables( illusion )
 
 end

@@ -79,6 +79,7 @@ function ConjureImage( event )
      illusion:MakeIllusion()
      event.caster.bunshins[event.caster.bunshinCount] = illusion
     caster.bunshinCount =  caster.bunshinCount + 1
+    GameMode:RemoveWearables( illusion )
   
 end
 

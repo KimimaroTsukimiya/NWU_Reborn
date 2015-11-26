@@ -56,6 +56,7 @@ function ConjureImage( event )
 	-- Without MakeIllusion the unit counts as a hero, e.g. if it dies to neutrals it says killed by neutrals, it respawns, etc.
 	illusion:MakeIllusion()
 	event.caster.bunshin = illusion
+	GameMode:RemoveWearables( illusion )
 	-- Move to the same direction as the caster
 	Timers:CreateTimer(0.05,
 		function() 

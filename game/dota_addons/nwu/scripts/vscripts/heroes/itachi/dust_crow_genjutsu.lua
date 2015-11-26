@@ -81,6 +81,7 @@ function createBunshin( event )
  illusion:SetHealth(caster:GetHealth())
  FindClearSpaceForUnit(illusion, event.ability.old_position, false)
  event.ability.bunshin = illusion
+ GameMode:RemoveWearables( illusion )
 
 end
 
