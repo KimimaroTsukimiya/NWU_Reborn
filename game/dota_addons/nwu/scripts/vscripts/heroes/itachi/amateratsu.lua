@@ -1,5 +1,5 @@
 --- Itachi amateratsu
--- @author	muZk
+-- @author	muZk /modifed by LearningDave
 -- @brief	Itachi amateratsu ability functions
 
 --- Initialize ability variables
@@ -8,6 +8,8 @@ function initialize(event)
 	EmitSoundOn("itachi_amateratsu", event.caster)
 	event.ability.saved_damage = 0
 	event.ability:ApplyDataDrivenModifier(event.caster, event.target, "modifier_itachi_amateratsu", {duration = duration})
+	event.ability:ApplyDataDrivenModifier(event.caster, event.target, "modifier_itachi_amateratsu_fire_sound", {duration = duration})
+	
 end
 
 --- Save damage taken by target
@@ -40,6 +42,7 @@ function spread_fire( event )
 			if not ally:HasModifier("modifier_itachi_amateratsu_spread_fire") and not ally:HasModifier("modifier_itachi_amateratsu_spread_fire_cd") then
 				event.ability:ApplyDataDrivenModifier(event.caster, ally, "modifier_itachi_amateratsu_spread_fire", {Duration = duration})
 				event.ability:ApplyDataDrivenModifier(event.caster, ally, "modifier_itachi_amateratsu_spread_fire_cd", {Duration = 55})
+				event.ability:ApplyDataDrivenModifier(event.caster, ally, "modifier_itachi_amateratsu_fire_sound", {Duration = duration})
 			end
 		end
 	end

@@ -19,6 +19,7 @@
 	{
 		"particle"  "particles/units/heroes/hero_huskar/huskar_burning_spear_debuff.vpcf"
 		"soundfile"	"soundevents/itachi_amateratsu.vsndevts"
+		"soundfile"	"soundevents/itachi_amateratsu_burning.vsndevts"
 	}
 	
 	// Special
@@ -128,6 +129,23 @@
 			"Passive"			"0"
 			"IsHidden"			"1"
 			"IsDebuff"			"0"
+		}
+
+		"modifier_itachi_amateratsu_fire_sound"
+		{
+			"Passive"			"0"
+			"IsHidden"			"1"
+			"IsDebuff"			"0"
+
+			"ThinkInterval"  "0.75"
+			"OnIntervalThink"
+			{
+				"FireSound"
+				{
+					"EffectName"	"itachi_amateratsu_burning"
+					"Target" 		"TARGET"
+				}
+			}
 		}
 		
 	}

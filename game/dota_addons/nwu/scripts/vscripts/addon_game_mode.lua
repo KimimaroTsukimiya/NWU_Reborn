@@ -32,6 +32,7 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/loading_screen.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/itachi_crows.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/itachi_amateratsu.vsndevts", context)
+  PrecacheResource("soundfile", "soundevents/itachi_amateratsu_burning.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/naruto_rasen_shuriken.vsndevts", context)
 
   -- Entire items can be precached by name

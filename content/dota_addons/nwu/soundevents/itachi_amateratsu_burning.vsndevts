@@ -1,4 +1,4 @@
-"itachi_amateratsu"
+"itachi_amateratsu_burning"
 {
     "operator_stacks"
     {
@@ -14,10 +14,10 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/itachi_amateratsu.vsnd"
+                              "value0"        "sounds/itachi_amateratsu_burning.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "5.00000"  }
+                    "volume"            {   "value"     "1.00000"  }
                     "pitch_rand_min"    {   "value"     "1.000000"  }
                     "pitch_rand_max"    {   "value"     "1.000000"  }
                     "pitch"             {   "value"     "1.000000"  }

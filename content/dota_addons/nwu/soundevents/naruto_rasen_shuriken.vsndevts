@@ -17,7 +17,7 @@
                               "value0"        "sounds/naruto_rasen_shuriken.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "10.00000"  }
+                    "volume"            {   "value"     "5.00000"  }
                     "pitch_rand_min"    {   "value"     "1.000000"  }
                     "pitch_rand_max"    {   "value"     "1.000000"  }
                     "pitch"             {   "value"     "1.000000"  }
