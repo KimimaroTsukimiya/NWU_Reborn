@@ -12,10 +12,11 @@ function naruto_kage_bunshin_mastery:OnSpellStart( event )
 	local hero_position = caster:GetAbsOrigin()
 	caster:AddNoDraw()
 	target:AddNoDraw()
-	FindClearSpaceForUnit( caster, target:GetAbsOrigin(), false )
-	FindClearSpaceForUnit( target, hero_position, false )
+	FindClearSpaceForUnit( caster, target:GetAbsOrigin(), true )
+	FindClearSpaceForUnit( target, hero_position, true )
 	caster:RemoveNoDraw()
 	target:RemoveNoDraw()
+
 end
 
 --------------------------------------------------------------------------------

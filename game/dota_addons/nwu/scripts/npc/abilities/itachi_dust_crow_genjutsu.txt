@@ -11,6 +11,7 @@
 	"precache"
 	{
 		"soundfile"		"soundevents/itachi_crows.vsndevts"
+		"soundfile"		"soundevents/hero_pick.vsndevts"
 		"particle"		"particles/units/heroes/hero_antimage/antimage_blink_end.vpcf"
 		"particle"		"particles/units/heroes/hero_antimage/antimage_blink_start.vpcf"
 		"particle"		"particles/world_creature_fx/crows.vpcf"
@@ -62,11 +63,7 @@
 			"Function"		"createBunshin"
 		}
 
-		"FireSound"
-		{
-			"EffectName"	"itachi_crows"
-			"Target" 		"TARGET"
-		}
+		
 	}
 
 	"Modifiers"
@@ -88,7 +85,6 @@
 					"dummy_particle"	"modifier_itachi_crows"
 				}
 
-				
 			}
 
 			"OnDestroy"
@@ -104,6 +100,7 @@
 					"ScriptFile"	"heroes/itachi/dust_crow_genjutsu.lua"
 					"Function"		"destroyBunshin"		
 				}
+				
 			}
 
 			"States"

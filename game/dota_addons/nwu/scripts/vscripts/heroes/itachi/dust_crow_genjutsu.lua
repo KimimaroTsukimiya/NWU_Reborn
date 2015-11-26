@@ -94,7 +94,7 @@ function killBunshin( keys )
 		local dummy = CreateUnitByName("npc_dummy_unit", position, false, keys.caster, keys.caster, keys.caster:GetTeam())
 		dummy:AddNewModifier(caster, nil, "modifier_phased", {})
 		keys.ability:ApplyDataDrivenModifier(keys.caster, dummy, dummy_modifier, {duration = duration})
-		dummy:EmitSound("soundevents/itachi_crows.vsndevts")
+		EmitSoundOn("itachi_crows", dummy)
 
 		-- Timer to remove the dummy
 		Timers:CreateTimer(duration, function() dummy:RemoveSelf() end)
@@ -116,8 +116,8 @@ function destroyBunshin( keys )
 	local dummy = CreateUnitByName("npc_dummy_unit", keys.ability.bunshin:GetAbsOrigin(), false, keys.caster, keys.caster, keys.caster:GetTeam())
 	dummy:AddNewModifier(caster, nil, "modifier_phased", {})
 	keys.ability:ApplyDataDrivenModifier(keys.caster, dummy, "modifier_itachi_crows", {duration = duration})
-	dummy:EmitSound("soundevents/itachi_crows.vsndevts")
-
+	
+	EmitSoundOn("itachi_crows", dummy)
 		-- Timer to remove the dummy
 	Timers:CreateTimer(duration, function() dummy:RemoveSelf() end)
 		
