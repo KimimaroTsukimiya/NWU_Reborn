@@ -1,0 +1,1232 @@
+﻿"lang"
+{
+
+	"Language"		"English"
+	"Tokens"
+	{		
+		"addon_game_name"			"Naruto Wars Reborn"
+		
+		//"DOTA_Basics"							"ABILITIES"
+		//"DOTA_Upgrades"							"ITEMS"
+		//"DOTA_Shop_Category_Basics"				"ABILITIES"
+		//"DOTA_Shop_Category_Upgrades"			"ITEMS"
+		
+
+
+			// *************** ERROR MESSAGES ****************
+
+		"error_must_target_owner_illusion"			"Must target own Illisions"
+
+
+		//--------------------
+		//Heroes
+		//--------------------
+
+		//--------------------
+		//Zabuza
+		//--------------------
+		"npc_dota_hero_bloodseeker" 						"Zabuza"
+		"npc_dota_hero_bloodseeker_lore"  					""
+		// Weak Spot
+		"DOTA_Tooltip_ability_zabuza_weak_spot"						"Weak Spot"
+		"DOTA_Tooltip_ability_zabuza_weak_spot_description"			"Zabuza studies his enemies defences. It will take him 8 seconds to find a weak spot in an enemies defence, with every hit dealt, Zabuza will look for his opponents weak spot, which reduces the time it takes to find a weak spot by 1 second."
+		"DOTA_Tooltip_modifier_weak_spot"							"Weak Spot"
+		"DOTA_Tooltip_modifier_weak_spot_description"				"The next attack will deal extra damage."
+		// Stealth
+		"DOTA_Tooltip_ability_zabuza_stealth"						"Stealth"
+		"DOTA_Tooltip_ability_zabuza_stealth_description"			"Zabuza is known to be a great 'silent killer'. His ability to go in or out of battle withount been detected makes him very dangerous. Cast range improves per level."
+		// Track
+		"DOTA_Tooltip_ability_zabuza_track"						"Track"
+		"DOTA_Tooltip_ability_zabuza_track_description"			"Tracks an enemy hero for 30 seconds or until it dies. Gives vision of the target and reduces his armor, Zabuza and his allies will move faster if they are close to the target. If the target dies, Zabuza gets bonus gold."
+		"DOTA_Tooltip_modifier_track_aura_datadriven"						"Track"
+		"DOTA_Tooltip_modifier_track_aura_datadriven_description"			"This Unit is tracked. It has reduced armor and gives vision to the enemy team."
+		// Ninpou: Kirigakure No Jutsu
+		"DOTA_Tooltip_ability_zabuza_kirigakure_no_jutsu"						"Ninpou: Kirigakure No Jutsu"
+		"DOTA_Tooltip_ability_zabuza_kirigakure_no_jutsu_description"			"Ninja Art: Hidden Mist Jutsu. This move uses water to create a thick heavy mist. The mist is so thick, that enemies won't be able to target correctly. Last for 7 seconds."
+
+		//--------------------
+		//Jirobo
+		//--------------------
+		"npc_dota_hero_earthshaker" "Jiroubo"
+
+		//--------------------
+		//Hidan
+		//--------------------
+		"npc_dota_hero_doom_bringer" "Hidan"
+		"npc_dota_hero_doom_bringer_lore"  								"The only true immortal known in the shinobi world, Hidan is a ruthless worshipper of Jashin and a member of Akatsuki. Through experimenting with the various techniques of his religion, Hidan has gained the ability to survive any injury. Even if he is decapitated Hidan will still survive, although he cannot control the rest of his body. Despite being a religious man Hidan is known to be an extremely disrespectful shinobi. He constantly complains and swears to his allies, including his superiors. The only respect he ever gives is to his god whom he works to fulfil his commandments. His insistence on following his religion’s laws often brings him into conflict with his partner Kakuzu. Since he is unable to be killed by any attack, Hidan and Kakuzu were a perfect team as Kakuzu’s rage could never kill the immortal. His extreme durability and raw strength are what allowed him to become a valued member of Akatsuki."
+		// Cull the Weak
+		"DOTA_Tooltip_ability_hidan_cull_the_weak"						"Cull the Weak"
+		"DOTA_Tooltip_ability_hidan_cull_the_weak_description"			"Hidan throws his scythe at the target point and then rips it back, pulling any enemy units within a cone directly in front of him.  Enemies hit by this ability are mini stunned and will take physical damage as they are pulled directly in front of Hidan. Damage done to creeps by this ability is doubled. Cull the Weak costs health from Hidan if any enemy units are hit, but will lose no health if enemies are not affected."
+		"DOTA_Tooltip_modifier_hidan_cull_the_weak_ms_slow"				"Cull the Weak"
+		"DOTA_Tooltip_modifier_hidan_cull_the_weak_ms_slow_description" "This Unit is slowed."
+		// Taunt
+		"DOTA_Tooltip_ability_hidan_taunt"									"Taunt"
+		"DOTA_Tooltip_ability_hidan_taunt_description"						"Hidan taunts his opponents with a number of profanities, forcing nearby enemies to focus their attacks on him. Each basic attack made against Hidan during this time will grant him additional strength for a moderate duration.  "
+		"DOTA_Tooltip_modifier_hidan_taunt_bonus_str"						"Taunt"
+		"DOTA_Tooltip_modifier_hidan_taunt_bonus_str_description"			"This Unit has increased Strength."
+		"DOTA_Tooltip_modifier_beserkers_call_enemy_datadriven"				"Taunt"
+		"DOTA_Tooltip_modifier_beserkers_call_enemy_datadriven_description"	"This Unit is forced to attack Hidan."
+		// Jashin's Blessing
+		"DOTA_Tooltip_ability_hidan_jashins_blessing"						"Jashin's Blessing"
+		"DOTA_Tooltip_ability_hidan_jashins_blessing_description"			"Upon taking fatal damage, Hidan health is restored to a certain percentage of his maximum HP."
+		"DOTA_Tooltip_modifier_modifier_jashins_blessing"					"Jashin's Blessing"
+		"DOTA_Tooltip_modifier_modifier_jashins_blessing_description"		"Hidan won't die from fatal damage."
+		// Death Possession Blood
+		"DOTA_Tooltip_ability_hidan_death_possession_blood"						"Death Possession Blood"
+		"DOTA_Tooltip_ability_hidan_death_possession_blood_description"			"Passively grants the ability to acquire blood from the last hero Hidan has attacked. Upon activation, Hidan instantly creates a large symbol on the ground while taking a dark new appearance. While in this form, enemy Heroes whose blood Hidan currently possesses are cursed to take the same amount of damage as Hidan as long as Hidan remains within the symbol. If Hidan moves outside the circle, damage will still be returned to the target but at a reduced percentage. Also gives the ability to inflict Self Pain."
+		// Self Pain
+		"DOTA_Tooltip_ability_hidan_self_pain"							"Self Pain"
+		"DOTA_Tooltip_ability_hidan_self_pain_description"				"Hidan takes out a retractable spear and impales himself in a vital area, dealing pure damage. Hidan cannot die from this ability but will instead leave him with at least one HP."
+		
+
+
+
+		//--------------------
+		//Kidoumaru
+		//--------------------
+		"npc_dota_hero_windrunner"  "Kidoumaru"
+
+		//--------------------
+		//Madara
+		//--------------------
+		"npc_dota_hero_ogre_magi"  										"Madara"
+		"npc_dota_hero_ogre_magi_lore"  								"Widely considered to be the strongest Uchiha to have ever lived, Uchiha Madara is a legendary shinobi who was the leader of his clan before he became a co-founder of Konohagakure. Madara was the first of his clan to gain the Eternal Mangekyo Sharingan after inheriting his brother’s eyes. This newfound power elevated him to the top of the Uchiha hierarchy where he constantly waged war with their rival clan, the Senju. After being defeated in battle, Madara agreed to an alliance proposed by Hashirama to unite as a single ninja village. However, his rivalry with his lifelong rival Hashirama Senju did not end after their agreement to ally under Konoha and it soon led to a deathmatch between the two legendary shinobi at the Valley of the End. Although Madara had lost the battle for Konoha, he had survived and managed to acquire some of Hashirama’s DNA. Filled with new purpose, Madara began preparations for his Eye of the Moon plan which would set the entire ninja world under an eternal genjutsu."
+		// Fire Release: Great Fire Annihilation (Katon: Goka Mekkyaku)
+		"DOTA_Tooltip_ability_madara_fire_release"						"Great Fire Annihilation"
+		"DOTA_Tooltip_ability_madara_fire_release_description"			"Sends out a wave of fire that travels a target point pushing all enemies hit towards the target point while dealing magic damage. Upon reaching maximum distance, the fire wave will explode, dealing magic damage and stunning all enemy units within the area.  Any trees touched by this ability will burn if Wood Release: Deep Forest Emergence is leveled."
+		// Wood Release: Deep Forest Emergence (Mokuton: Jukai Kotan)
+		"DOTA_Tooltip_ability_madara_wood_release"						"Deep Forest Emergence"
+		"DOTA_Tooltip_ability_madara_wood_release_description"			"Creates a large number of trees that circle around a target area for a short period time. This ability also allows Madara to set trees on fire when affected by his other abilities. Trees that have been lit on fire can be passed through, but will burn nearby enemies causing them to be slowed take magic damage per second. Burn effect will persist for a short period of time after an enemy leaves the radius of burning trees."
+		// Susano’o Ribcage
+		"DOTA_Tooltip_ability_madara_susano"							"Susano’o Ribcage"
+		"DOTA_Tooltip_ability_madara_susano_description"				"Upon activation, grants magic resistance and burns nearby enemies while draining the user’s mana. Using this ability again will deactivate it and stop mana from draining. Trees within the radius of the burn will be lit on fire if Wood Release: Deep Forest Emergence is leveled. If Madara runs out of mana, the effect will end."
+		// Susano’o Ribcage activated
+		"DOTA_Tooltip_ability_madara_susano_active"						"Susano’o Ribcage"
+		"DOTA_Tooltip_ability_madara_susano_active_description"			"Upon activation, grants magic resistance and burns nearby enemies while draining the user’s mana. Using this ability again will deactivate it and stop mana from draining. Trees within the radius of the burn will be lit on fire if Wood Release: Deep Forest Emergence is leveled. If Madara runs out of mana, the effect will end."
+		"DOTA_Tooltip_modifier_madara_susano"							"Susano’o Ribcage"
+		"DOTA_Tooltip_modifier_madara_susano_description"				"Nearby Units will burn."
+		// Heaven Concealed (Tengai Shinsei)
+		"DOTA_Tooltip_ability_madara_meteor"							"Heaven Concealed"
+		"DOTA_Tooltip_ability_madara_meteor_description"				"Summons a gigantic meteor that will crash onto a target area if the channelling is complete. While channelling, a large shadow will shroud the area that is visible to both teams. The meteor will cause large amounts of magical damage and stun all enemies upon impact. All trees hit by the impact will be set on fire if Deep Forest Emergence is leveled. This ability will give no effect if it is cancelled."
+		
+
+		//--------------------
+		//Kisame
+		//--------------------
+		"npc_dota_hero_kunkka"  										"Kisame"
+		"npc_dota_hero_kunkka_lore"  									"Feared as the Monster of the Hidden Mist, Hoshigaki Kisame is a dangerous S-Rank missing nin and one of the Seven Ninja Swordsmen of the Mist. He loves to fight and is often aggressive towards anyone he meets. Despite this Kisame has shown to be very loyal to his allies unless they endanger the mission. He bears the great sword Samehada (Shark Skin) and uses it to shave his enemies and drain their chakra. Kisame has an abundance of chakra that is said to almost match a tailed beast. It is from this great source of power that he gets the title The Tailed Beast without a Tail. Regarded as one of the most powerful shinobi to ever come out of Kirigakure (Village of the Hidden Mist), he earned membership into Akatsuki through his own strength. "
+		"npc_dota_hero_kunkka_description"  							"Playing Kisame is about becoming inescapable as you slowly drown your enemies. This hero favors longer more drawn out confrontations meaning that survivability is of top priority. His abilities offer him great utility in almost any situation whether it be ganking, team fighting, or taking on an enemy one on one. Kisame is very mana dependant as his ultimate consumes mana over time. His passive somewhat remedies this problem as his attacks will drain mana from enemies while gaining the stolen mana. However, this mechanic can be deceptive to Kisame’s mana problems as a larger max mana pool requires more mana to sustain his ultimate. This means that his mana drain is more effective the smaller Kisame’s max mana pool is.  Kisame can easily dominate a team fight so long as he can stick onto various heroes. Through proper micro of his clones and intelligent maneuvering, Kisame is a walking pain train that forces the fight onto the enemy."
+		//Water Release: Water Shark Bullet Technique (Suiton: Suikodan no Jutsu)
+		"DOTA_Tooltip_ability_kisame_suikodan_no_jutsu"					"Water Shark Bullet Technique"
+		"DOTA_Tooltip_ability_kisame_suikodan_no_jutsu_description"		"Active: Through shaping water into the form of a large shark, Kisame sends a wave to a target location. The shark bullet deals magical damage, reduces armor, and slows enemies it contacts."
+		//Water Release debuff
+		"DOTA_Tooltip_modifier_suikodan_no_jutsu_debuff"				"Water Shark Bullet Technique"
+		"DOTA_Tooltip_modifier_suikodan_no_jutsu_debuff_description"		"This Unit has reduced Armor and Movementspeed."		
+		//Water Clone Technique (Mizu Bunshin no Jutsu)					
+		"DOTA_Tooltip_ability_kisame_mizu_bunshin_no_jutsu"				"Water Clone Technique"
+		"DOTA_Tooltip_ability_kisame_mizu_bunshin_no_jutsu_description"	"Active: Kisame creates clones out of water to command in battle. Kisame splits into the clones and is placed randomly amongst them. Water clones deal very little damage and take additional incoming damage. They both possess Water Prison Technique as well as a passive Samehada. Clone abilities level up with Water Clone Technique."
+		//Samehada
+		"DOTA_Tooltip_ability_kisame_samehada"							"Samehada"
+		"DOTA_Tooltip_ability_kisame_samehada_description"				"Passive: Samehada - The great sword Samehada shaves off enemy chakra when it connects. Kisame’s next basic attack will steal mana from the target based upon their maximum mana pool."	
+		"DOTA_Tooltip_modifier_samehada"								"Samehada"
+		"DOTA_Tooltip_modifier_samehada_description"					"Kisame's next attack will steal Chakra."
+		//Water Prison
+		"DOTA_Tooltip_ability_kisame_water_prison"						"Water Prison"
+		"DOTA_Tooltip_ability_kisame_water_prison_description"			"After fusing with Samehada, Kisame transforms into a shark like creature while creating a large dome of water. Kisame acts as the center of the dome as it follows along with his movement. Enemy units caught within the dome will take magic damage over time and are slowed. Throughout the duration of the transformation, Kisame gains bonus health regeneration. If Kisame runs out of chakra the transformation ends."
+		"DOTA_Tooltip_ability_kisame_water_prison_lore"					"Active: Kisame’s shark like appearance isn’t just for looks..."
+		//Water Prison debuff
+		"Dota_Tooltip_modifer_water_prison_slow"						"Water Prison"
+		"Dota_Tooltip_modifer_water_prison_slow_description"			"This Unit has decreased Movementspeed."
+		
+		//--------------------
+		//Gaara
+		//--------------------
+		"npc_dota_hero_lion"  											"Gaara"
+		"npc_dota_hero_lion_lore"  										""
+		// Sabaku Kyuu
+		"DOTA_Tooltip_ability_gaara_sabaku_kyuu"						"Sabaku Kyuu"
+		"DOTA_Tooltip_ability_gaara_sabaku_kyuu_description"			"Sand Coffin. Gaara encases his target in his chakra-infused sand, crushing and immobilizing the victim. Holds for 2.8 seconds."
+		// Ryuusa Bakuryu
+		"DOTA_Tooltip_ability_gaara_ryuusa_bakuryu"						"Ryuusa Bakuryu"
+		"DOTA_Tooltip_ability_gaara_ryuusa_bakuryu_description"			"Sand Tsunami. Gaara creates a massive amount of sand in the form of a wave, covering and drowning the opponent in an ocean of sand. Stuns for 1 second."
+		// Suna no Yoroi
+		"DOTA_Tooltip_ability_gaara_suna_no_yoroi"						"Suna no Yoroi"
+		"DOTA_Tooltip_ability_gaara_suna_no_yoroi_description"			"Sand Armor. Gaara covers himself in sand, which acts as an extra set of armor, defending himself from harm. Absorbs 35% of the incoming damage."
+		"DOTA_Tooltip_modifier_mana_shield_datadriven"					"Suna no Yoroi"
+		"DOTA_Tooltip_modifier_mana_shield_datadriven_description"		""
+		// Sabaku Taiso
+		"DOTA_Tooltip_ability_gaara_sabaku_taiso"						"Sabaku Taiso"
+		"DOTA_Tooltip_ability_gaara_sabaku_taiso_description"			"Sand Burial. Makes the ground tremble and break, creating a desert in a large area ahead of Gaara, casting time 1 second."
+		
+
+		//--------------------
+		//Sakura
+		//--------------------
+		"npc_dota_hero_phantom_assassin"  								"Sakura"
+		"npc_dota_hero_phantom_assassin_lore"  							""
+		// Earth Slam
+		"DOTA_Tooltip_ability_sakura_earth_slam"						"Earth Slam"
+		"DOTA_Tooltip_ability_sakura_earth_slam_description"			"Sakura gathers chakra into her fist and slams the ground beneath her, rupturing the earth, damaging and stunning nearby enemies. Stuns for 2 seconds."
+		"DOTA_Tooltip_modifier_sakura_earth_slam"						"Earth Slam"
+		"DOTA_Tooltip_modifier_sakura_earth_slam_description"			"This Unit is stunned."
+		// Chakra Burst
+		"DOTA_Tooltip_ability_sakura_chakra_burst"						"Chakra Burst"
+		"DOTA_Tooltip_ability_sakura_chakra_burst_description"			"By gathering chakra in her legs, Sakura increases her movespeed to the maximum."
+		"DOTA_Tooltip_modifier_sakura_chakra_burst"						"Chakra Burst"
+		"DOTA_Tooltip_modifier_sakura_chakra_burst_description"			"This Unit has MAX Movement Speed."
+		// Chakra Enhanced Strength
+		"DOTA_Tooltip_ability_sakura_chakra_enhanced_strength"				"Chakra Enhanced Strength"
+		"DOTA_Tooltip_ability_sakura_chakra_enhanced_strength_description"	"By having excellent chakra control, Sakura can increase her strenght to deliver powerful punches. Gives a 15% Chance to push back enemies."
+		// Inner Sakura
+		"DOTA_Tooltip_ability_sakura_inner_sakura"						"Inner Sakura"
+		"DOTA_Tooltip_ability_sakura_inner_sakura_description"			"Sakura unleashes her inner self, which can be described as her 'true' personality. Her inner self gives her a strong sense of mind, and overwhelming physical strength. During this time, she is near 'unbeatable'. Last for 20 seconds."
+		"DOTA_Tooltip_modifier_sakura_inner_sakura"						"Inner Sakura"
+		"DOTA_Tooltip_modifier_sakura_inner_sakura_description"			"This Unit has increased Attack Damage and Armor."
+
+
+
+
+		//--------------------
+		//Naruto
+		//--------------------
+		"npc_dota_hero_dragon_knight"  									"Naruto"
+		"npc_dota_hero_dragon_knight_lore"  							""
+		// Kage Bunshin Rasengan
+		"DOTA_Tooltip_ability_naruto_kage_bunshin_rasengan"					"Kage Bunshin Rasengan"
+		"DOTA_Tooltip_ability_naruto_kage_bunshin_rasengan_description"		"By combining two of his techniques, Naruto creates a shadow clone that charges the enemy target, and hits him with a rasengan. the rasengan doesnt do as much damage as a real one, but is enough to slow the enemies movements for a few seconds. The shadow clone lasts for 20 seconds."
+		"DOTA_Tooltip_modifier_naruto_bunshin_rasengan_slow"				"Kage Bunshin Rasengan"
+		"DOTA_Tooltip_modifier_naruto_bunshin_rasengan_slow_description"	"This Unit has decreased Movement Speed."
+		// Kawazu Kumite
+		"DOTA_Tooltip_ability_naruto_kawazu_kumite"							"Kawazu Kumite"
+		"DOTA_Tooltip_ability_naruto_kawazu_kumite_description"				"Frog Kata is a fighting style used exclusively by those who have mastered Sage Mode. The senjutsu chakra used during Sage Mode activates the body in various ways, enhancing the user's speed, strength, and stamina. During this move Naruto summons a clone to help him fight. Clone last for 20 seconds. Frog Kata last for 5 seconds."
+		"DOTA_Tooltip_modfiier_naruto_kawazu_kumite"						"Kawazu Kumite"
+		"DOTA_Tooltip_modfiier_naruto_kawazu_kumite_description"			"This Unit has increased Agility and Strength."
+		// Kage Bunshin Mastery
+		"DOTA_Tooltip_ability_naruto_kage_bunshin_mastery"					"Kage Bunshin Mastery"
+		"DOTA_Tooltip_ability_naruto_kage_bunshin_mastery_description"		"After many years of training, Naruto has been able to master Kage Bunshin No Jutsu to its full potential, combining this jutsu with almost all of his techniques, Naruto can summon a maximun of 3 clones in sage mode without losing his sage chakra. Increases the resistance and damage of the clones, and allows naruto to swap places with any of his clones in a 600 AOE. Can summon a maximun of 3 clones."
+		// Futon: Rasenshuriken
+		"DOTA_Tooltip_ability_naruto_rasenshuriken"							"Rasenshuriken"
+		"DOTA_Tooltip_ability_naruto_rasenshuriken_description"				"Naruto's most powerful attack. By manipulating the wind chakra of the Wind Release: Rasengan, Naruto is able to mold the chakra in the form of a giant fuma shuriken, with the Rasengan in the center remaining a perfect sphere. Stuns for 3 seconds in a 300 AOE."
+		"DOTA_Tooltip_modifier_storm_bolt_datadriven"						"Rasenshuriken"
+		"DOTA_Tooltip_modifier_storm_bolt_datadriven_description"			"This Unit is stunned."
+
+		//--------------------
+		//Itachi
+		//--------------------
+		"npc_dota_hero_antimage"  										"Itachi"
+		"npc_dota_hero_antimage_lore"  									""
+
+		//--------------------
+		//Sasuke
+		//--------------------
+		"npc_dota_hero_storm_spirit"  									"Sasuke"
+
+		//--------------------
+		//Kakashi
+		//--------------------
+		"npc_dota_hero_beastmaster"  									"Kakashi"
+		"npc_dota_hero_beastmaster_lore"  								""
+		// Kage Bunshin Rasengan
+		"DOTA_Tooltip_ability_kakashi_doton"							"Doton: Tsuiga No Jutsu"
+		"DOTA_Tooltip_ability_kakashi_doton_description"				"Earth Style: Earth Tracking Fangs Jutsu. Kakashi summons a ninja dog with the help of a ninja scroll, the dog pins the target to the ground, immobilizing and dealing damage."
+		// Sharingan
+		"DOTA_Tooltip_ability_kakashi_sharingan"						"Sharingan"
+		"DOTA_Tooltip_ability_kakashi_sharingan_description"			"Kakashi is known worldwide as 'The Copy Ninja Kakashi'. Using his sharingan Kakashi can copy one jutsu (The second skill, generally) from enemies or allies. Lasts for 120 seconds. You can type -sharingan to see your remaining time."
+		// Kage Bunshi No Jutsu
+		"DOTA_Tooltip_ability_kakashi_bunshin"							"Kage Bunshi No Jutsu"
+		"DOTA_Tooltip_ability_kakashi_bunshin_description"				"Shadow clone jutsu. Kakashi creates a shadow clone of himself, granting it a portion of his chakra, making it seem like its the real Kakashi, Kakashi vanishes for a few seconds in order to escape."
+		// Chidori
+		"DOTA_Tooltip_ability_kakashi_chidori"							"Chidori"
+		"DOTA_Tooltip_ability_kakashi_chidori_description"				"Kakashi channels a large amount of lightning chakra in his hand, the amount of chakra is so great that it becomes visible, once the technique is complete, Kakashi charges his target and thrusts the chidori into the target, dealing damage."
+
+		//--------------------
+		//Guy
+		//--------------------
+		"npc_dota_hero_centaur"  										"Guy"
+		"npc_dota_hero_centaur_lore"  									""
+		// Dynamic Entry
+		"DOTA_Tooltip_ability_guy_dynamic_entry"						"Dynamic Entry"
+		"DOTA_Tooltip_ability_guy_dynamic_entry_description"			"Guy's signature move. A spinning kick in the air, which propels the user forward. Dealing damage to the target and gives the target a hard time to aim. Last for 10 seconds."
+		"DOTA_Tooltip_modifier_guy_dynamic_entry_miss"					"Dynamic Entry"
+		"DOTA_Tooltip_modifier_guy_dynamic_entry_miss_description"		"This Unit has a chance to miss its attacks."
+		// Power of Youth
+		"DOTA_Tooltip_ability_guy_power_of_youth"						"Power of Youth"
+		"DOTA_Tooltip_ability_guy_power_of_youth_description"			"Burn with the flame of youth'. Every attack motivates Guy, guiding each strike with greater ease than the last. Increases attack speed with every successfully hit to a maximum of 100%. If Guy changes targets, his speed drops to half of where it was."
+		"DOTA_Tooltip_modifier_guy_power_of_youth_as_bonus"				"Power of Youth"
+		"DOTA_Tooltip_modifier_guy_power_of_youth_as_bonus_description" "This Unit has increased Attack Speed."
+		// Gouken Mastery
+		"DOTA_Tooltip_ability_guy_gouken_mastery"						"Gouken Mastery"
+		"DOTA_Tooltip_ability_guy_gouken_mastery_description"			"Strong Fist is Guy's and Lee's characteristic fighting style, the purpose of which is to cause external damage and break bones."
+		// Hachimon Tonkou: Dairoku Keimon
+		"DOTA_Tooltip_ability_guy_open_gates"							"Dairoku Keimon"
+		"DOTA_Tooltip_ability_guy_open_gates_description"				"Maito Guy opens the six Celestial Gates, which gives him access to an enormous amount of chakra, granting him a burst of power and speed, when the effect wears off it has the reverse effect."
+		"DOTA_Tooltip_modifier_guy_open_gates"							"Hachimon Tonkou: Dairoku Keimon"
+		"DOTA_Tooltip_modifier_guy_open_gates_description"				"This Unit has increased Agility and Movement Speed."
+
+		//--------------------
+		//Onoki
+		//--------------------
+		"npc_dota_hero_sven"											"Onoki"
+		//Jinton
+		"DOTA_Tooltip_ability_onoki_jinton"								"Jinton: Genkai Hakuri no Jutsu"
+		"DOTA_Tooltip_ability_onoki_jinton_Description"					"The target, and everything touching the cube are pulverized on the molecular level, breaking down into dust. Hold units that are within a radious of the enemy."
+		"DOTA_Tooltip_modifier_jinton_stun"								"Jinton: Genkai Hakuri no Jutsu"
+		"DOTA_Tooltip_modifier_jinton_stun_description"					"This Unit is stunned."
+		//Stalagmite Armor
+		"DOTA_Tooltip_ability_onoki_stalagmite_armor"					"Stalagmite Armor"
+		"DOTA_Tooltip_ability_onoki_stalagmite_armor_Description"		"Onoki covers his target in a layer of earth, giving it extra armor, and the ability too deliver damage back to enemies."
+		//Turn to Dust
+		"DOTA_Tooltip_ability_onoki_turn_to_dust"						"Turn to Dust"
+		"DOTA_Tooltip_ability_onoki_turn_to_dust_Description"			"Onoki turns his enemies weapon to dust, drastically reducing their ability to fight back."
+		"DOTA_Tooltip_modifier_turn_to_dust_debuff"						"Turn to Dust"
+		"DOTA_Tooltip_modifier_turn_to_dust_debuff_description"			"This Unit has decreased Attack Damage."
+		//Doton: Kajugan no Jutsu
+		"DOTA_Tooltip_ability_onoki_kajutan_no_jutsu"					"Doton: Kajugan no Jutsu"
+		"DOTA_Tooltip_ability_onoki_kajutan_no_jutsu_Description"		"Onoki causes units to literally crumble around him."
+		
+		//--------------------
+		//Neji
+		//--------------------
+		"npc_dota_hero_axe"  											"Neji"
+		//Kaiten
+		"DOTA_Tooltip_ability_neji_kaiten"								"Kaiten"
+		"DOTA_Tooltip_ability_neji_kaiten_Description"					"Hand of the eight divinations: Heavenly spin. Neji expels chakra from all of his tenketsu, and spins around, forming a sphere of chakra around him. Neji pushes back enemies around him, and becomes invurnable for 1 second."
+		//Hakke Kuuhekishou modifier_neji_internal_bleeding_ms_slow
+		"DOTA_Tooltip_ability_neji_internal_bleeding"					"Internal Bleeding"
+		"DOTA_Tooltip_ability_neji_internal_bleeding_Description"		"The Jyuuken fighting style attacks the enemies Chakra network directly and stops the flow of chakra. However, because the chakra network is so closely connected to the internal organs, that they are virtually one. This move will damage the enemies organs internally. Last for 11 seconds."
+		"DOTA_Tooltip_modifier_neji_internal_bleeding_ms_slow"			    "Internal Bleeding"	
+		"DOTA_Tooltip_modifier_neji_internal_bleeding_ms_slow_description"	"This Unit's Movement Speed is reduced."
+		//Byakugan
+		"DOTA_Tooltip_ability_neji_byakugan"							"Byakugan"
+		"DOTA_Tooltip_ability_neji_byakugan_Description"				"The Byakugan is the Hyuuga clan's blood line trait, which allows them to see the enemies internal body. Using byakugan, they can master all of the Hyuuga arts.|n-Adds a slow effect for Internal Bleeding that last for 3 seconds.|n-Increases stun of Kaiten by 0.75 seconds per level.|n-Increase base damage by 7 per level."
+		//Hakke Hyaku Nijuuhachi Shou
+		"DOTA_Tooltip_ability_neji_hyaku_nijuuhachi_shou"				"Hakke Hyaku Nijuuhachi Shou"
+		"DOTA_Tooltip_ability_neji_hyaku_nijuuhachi_shou_Description"	"Neji binds the target and deals damage over time, enemies near the target are silenced until they get away from it. Lasts for 3 seconds."
+		"DOTA_Tooltip_neji_hyaku_nijuuhachi_shou"						"Hakke Hyaku Nijuuhachi Shou"
+		"DOTA_Tooltip_neji_hyaku_nijuuhachi_shou_description"			"This Unit is stunned."
+
+		//--------------------
+		//Raikage
+		//--------------------
+		"npc_dota_hero_sand_king"  										"Raikage"
+		"DOTA_Tooltip_ability_raikage_raiga_no_bomu"					"Raiga no Bomu"
+		"DOTA_Tooltip_ability_raikage_raiga_no_bomu_Description"		"A grabs target unit and throws it into the ground with such force it affects units around him."
+		"DOTA_Tooltip_ability_raikage_lariat"							"Lariat"
+		"DOTA_Tooltip_ability_raikage_lariat_Description"				"A moves at max speed towards target point; if he hits a unit, it deals damage and stuns nearby enemies."
+		"DOTA_Tooltip_ability_raikage_raigyaku_suihei"					"Raigyaku Suihei"
+		"DOTA_Tooltip_ability_raikage_raigyaku_suihei_Description"		"A delivers a powerful strike, dealing splash damage and reducing enemy attack power."
+		"DOTA_Tooltip_ability_raikage_raiton_no_yoroi"					"Raiton no Yoroi"
+		"DOTA_Tooltip_ability_raikage_raiton_no_yoroi_Description"		"A covers his body with electricity, pushing his body to the max. Reduces physical damage taken and when A accumulates 350 damage taken, he releases a wave of electricty dealing 50 damage and purging units for 0.25 seconds within an AoE of 250."
+		"DOTA_Tooltip_raikage_knockup"									"Raiga no Bomu"
+		"DOTA_Tooltip_raikage_knockup_description"						"-7 Armor"
+		"DOTA_Tooltip_modifier_raigyaku_debuff"							"Raigyaku Suihei"
+		"DOTA_Tooltip_modifier_raigyaku_debuff_description"				"Reduced Attackdamage"
+		"DOTA_Tooltip_modifier_raigyaku"								"Raigyaku Suihei"
+		"DOTA_Tooltip_modifier_raigyaku_description"					"Raikage's next attack will deal Spell damage based on his Strength in an AoE of 250 and lower's target's Attackdamage"
+		"DOTA_Tooltip_modifier_raiton_no_yoroi_charge"					"Raiton no Yoroi"
+		"DOTA_Tooltip_modifier_raiton_no_yoroi_charge_description"		"A's body is covered in electricity"
+		"DOTA_Tooltip_modifier_modifer_raikage_purge"					"Raiton no Yoroi"
+		"DOTA_Tooltip_modifier_modifer_raikage_purge_description"		"Reducded Movementspeed"
+
+		//--------------------
+		//Anko
+		//--------------------
+		"npc_dota_hero_medusa"  									"Anko"
+		"DOTA_Tooltip_ability_anko_giant_snake"						"Kuchiyose no Jutsu: Kyodaija"
+		"DOTA_Tooltip_ability_anko_giant_snake_Description"			"Summoning Jutsu: Giant Snake. Anko summons a Giant Snake that will grab the first target it encounters, dealing damage, then dragging the victim back to Anko."
+		"DOTA_Tooltip_ability_anko_senei_jyashu"					"Senei Jyashu"
+		"DOTA_Tooltip_ability_anko_senei_jyashu_Description"		"Sublime Snake Hands. Anko uses her snakes for defensive purposes. Anko summon a snake every two seconds that will guard and attack any enemy that comes too close. Does damage every 2 seconds to a random enemy in 300 AOE, also grant some magic resistance."
+		"DOTA_Tooltip_ability_anko_senei_ta_jashu"					"Senei Ta Jashu"
+		"DOTA_Tooltip_ability_anko_senei_ta_jashu_Description"		"Striking Snakes. This jutsu allows the user to eject snakes from their wrist. These snakes are primarily used to attack from a distance, and inflict poisonous wounds on the victim's body. The poison last for 3 seconds and makes the victim unable to do any jutsu."
+		"DOTA_Tooltip_ability_anko_sojasosai_no_jutsu"				"Sojasosai no Jutsu"
+		"DOTA_Tooltip_ability_anko_sojasosai_no_jutsu_Description"	"Twin Snake Sacrifice. This forbidden jutsu is a murder-suicide attack; killing both the user and the target. Anko makes a one-handed seal with hers and the victims hand. Two snakes are then summoned from the user's sleeve, biting both their wrists and killing them with deadly venom."
+	
+		//--------------------
+		//Temari
+		//--------------------
+		"npc_dota_hero_enchantress"  									"Temari"
+		"DOTA_Tooltip_ability_temari_fusajin_no_jutsu"					"Fusajin no Jutsu"
+		"DOTA_Tooltip_ability_temari_fusajin_no_jutsu_Description"		"Dust Wind. Temari releases a vicious wind that rips apart trees and flesh."
+		"DOTA_Tooltip_ability_temari_kamaitachi_no_jutsu"				"Kamaitachi No Jutsu"
+		"DOTA_Tooltip_ability_temari_kamaitachi_no_jutsu_Description"	"Wind Scythe Jutsu. Temari releases a powerful gust of wind, that can shred trees into pieces and pick up enemies in its path, suspending them helplessly in the air before plummeting them to the ground. Holds enemies in the air for 1.3 seconds."
+		
+		//------------------------
+		// Items
+		//------------------------
+    	//Leather gloves -> handguards
+    	"DOTA_Tooltip_ability_item_handguards"										"Handguards"
+		"DOTA_Tooltip_ability_item_handguards_Lore"									"Whether it be forming seals, wielding weapons, or simply striking, these handguards protect one of the most important assets a shinobi can have on the battlefield."
+    	"DOTA_Tooltip_ability_item_handguards_attackspeed"							"Bonus Attackspeed: +"
+
+    	//Mask of Ne
+    	"DOTA_Tooltip_ability_item_mask_of_ne"										"Mask of Ne"
+		"DOTA_Tooltip_ability_item_mask_of_ne_Lore"									"The mask of Ne, or ANBU root, is a beginner's mask that helps its bearer to specialize in certain attacks."
+    	"DOTA_Tooltip_ability_item_mask_of_ne_bonus_lifesteal"						"Lifesteal: +"
+    	
+    	//Ring of regenration
+    	"DOTA_Tooltip_ability_item_ring_of_regeneration"							"Ring of Regeneration"
+		"DOTA_Tooltip_ability_item_ring_of_regeneration_Lore"						"These rings are especially useful for ninjas who need extra stamina on extended missions."
+    	"DOTA_Tooltip_ability_item_ring_of_regeneration_bonus_hp_reg_constant"		"Hp Regeneration: +"
+    	
+    	//ANBU Mask
+    	"DOTA_Tooltip_ability_item_anbu_mask"										"ANBU Mask"
+		"DOTA_Tooltip_ability_item_anbu_mask_Lore"									"Ninjas who exceed the level of a Jounin are given one of these unique masks. Their owners are known for their abilities in manipulating chakra."
+    	"DOTA_Tooltip_ability_item_anbu_mask_bonus_mana_reg_percentage"				"%Chakra Regeneration: +"
+    	
+    	//Running Shoes
+    	"DOTA_Tooltip_ability_item_shinobi_sandals"									"Shinobi Sandals"
+		"DOTA_Tooltip_ability_item_shinobi_sandals_Lore"							"The standard made Shinobi Sandal is the most common form of footwear to be seen on a ninja, both when at war and while at home."
+    	"DOTA_Tooltip_ability_item_shinobi_sandals_bonus_movement_speed_constant"	"Movement Speed: +"
+    	
+    	//Shinobi Cloak
+    	"DOTA_Tooltip_ability_item_shinobi_cloak"									"Shinobi Cloak"
+		"DOTA_Tooltip_ability_item_shinobi_cloak_Lore"								"It is not uncommon for ninjas to wear a traveling cloak during their journeys as they grant increased protection from the elements and enemy techniques."
+    	"DOTA_Tooltip_ability_item_shinobi_cloak_bonus_magic_resistance"			"%Jutsu Resistance: +"
+    	
+    	//Gem of Truesight
+    	"DOTA_Tooltip_ability_item_byakugan_lens"									"Byakugan Lens"
+    	"DOTA_Tooltip_ability_item_byakugan_lens_description"						"Grants Truesight"
+		"DOTA_Tooltip_ability_item_byakugan_lens_Lore"								"The power of the Byakugan allows the user to see the chakra network of any living being, regardless of their stealth or camouflage."
+    	
+    	//Shinobi Claws
+    	"DOTA_Tooltip_ability_item_shinobi_claws"									"Shinobi Claws"
+		"DOTA_Tooltip_ability_item_shinobi_claws_Lore"								"A vicious weapon that is used by shinobi who aim to shred their foe."
+    	"DOTA_Tooltip_ability_item_shinobi_claws_bonus_damage"						"Attack Damage: +"
+
+    	//Broadsword
+    	"DOTA_Tooltip_ability_item_broadsword_datadriven"							"Broadsword"
+		"DOTA_Tooltip_ability_item_broadsword_datadriven_Lore"						"A basic sword that grants its owner increased attack power. Combining this sword with other items may unlock the forbidden powers that are held within."
+    	"DOTA_Tooltip_ability_item_broadsword_datadriven_bonus_damage"				"Attack Damage: +"
+
+    	//Metal Gauntlets
+    	"DOTA_Tooltip_ability_item_metal_gauntlets"									"Metal Gauntlets"
+		"DOTA_Tooltip_ability_item_metal_gauntlets_Lore"							"These pairs of Steel Gauntlets help the user unleash swift attacks upon their enemies. The talons of these Gauntlets are capable of dealing serious piercing damage."
+		"DOTA_Tooltip_ability_item_metal_gauntlets_bonus_damage"					"Attack Damage: +"
+    	"DOTA_Tooltip_ability_item_metal_gauntlets_bonus_attackspeed"				"Attackspeed: +"
+
+		//Tenten's Spear
+    	"DOTA_Tooltip_ability_item_tentens_spear"									"Tenten's Spear"
+		"DOTA_Tooltip_ability_item_tentens_spear_Lore"								"Owned by a weapons specialist, Tenten's spear is summoned through a summoning scroll and can be thrusted at enemies for heavy damage."
+		"DOTA_Tooltip_ability_item_tentens_spear_bonus_damage"						"Attack Damage: +"
+
+		//Forehead Protector
+    	"DOTA_Tooltip_ability_item_forehead_protector"								"Forehead Protector"
+		"DOTA_Tooltip_ability_item_forehead_protector_Lore"							"A Shinobi's Forehead Protector is one of their most personal possessions. While mainly used to identify a ninja's allegiance, they also offer a slight amount of protection for the User."
+		"DOTA_Tooltip_ability_item_forehead_protector_bonus_armor"					"Armor: +"
+		//Forehead Protector
+    	"DOTA_Tooltip_ability_item_forehead_protector_iwagakure"								"Forehead Protector"
+		"DOTA_Tooltip_ability_item_forehead_protector_iwagakure_Lore"							"A Shinobi's Forehead Protector is one of their most personal possessions. While mainly used to identify a ninja's allegiance, they also offer a slight amount of protection for the User."
+		"DOTA_Tooltip_ability_item_forehead_protector_iwagakure_bonus_armor"					"Armor: +"
+		//Forehead Protector
+    	"DOTA_Tooltip_ability_item_forehead_protector_kirigakure_scarred"								"Forehead Protector"
+		"DOTA_Tooltip_ability_item_forehead_protector_kirigakure_scarred_Lore"							"A Shinobi's Forehead Protector is one of their most personal possessions. While mainly used to identify a ninja's allegiance, they also offer a slight amount of protection for the User."
+		"DOTA_Tooltip_ability_item_forehead_protector_kirigakure_scarred_bonus_armor"					"Armor: +"
+		//Forehead Protector
+    	"DOTA_Tooltip_ability_item_forehead_protector_kumogakure"								"Forehead Protector"
+		"DOTA_Tooltip_ability_item_forehead_protector_kumogakure_Lore"							"A Shinobi's Forehead Protector is one of their most personal possessions. While mainly used to identify a ninja's allegiance, they also offer a slight amount of protection for the User."
+		"DOTA_Tooltip_ability_item_forehead_protector_kumogakure_bonus_armor"					"Armor: +"
+		//Forehead Protector
+    	"DOTA_Tooltip_ability_item_forehead_protector_konoha"								"Forehead Protector"
+		"DOTA_Tooltip_ability_item_forehead_protector_konoha_Lore"							"A Shinobi's Forehead Protector is one of their most personal possessions. While mainly used to identify a ninja's allegiance, they also offer a slight amount of protection for the User."
+		"DOTA_Tooltip_ability_item_forehead_protector_konoha_bonus_armor"					"Armor: +"
+		//Forehead Protector
+    	"DOTA_Tooltip_ability_item_forehead_protector_konoha_scarred"								"Forehead Protector"
+		"DOTA_Tooltip_ability_item_forehead_protector_konoha_scarred_Lore"							"A Shinobi's Forehead Protector is one of their most personal possessions. While mainly used to identify a ninja's allegiance, they also offer a slight amount of protection for the User."
+		"DOTA_Tooltip_ability_item_forehead_protector_konoha_scarred_bonus_armor"					"Armor: +"
+		//Forehead Protector
+    	"DOTA_Tooltip_ability_item_forehead_protector_otogakure"								"Forehead Protector"
+		"DOTA_Tooltip_ability_item_forehead_protector_otogakure_Lore"							"A Shinobi's Forehead Protector is one of their most personal possessions. While mainly used to identify a ninja's allegiance, they also offer a slight amount of protection for the User."
+		"DOTA_Tooltip_ability_item_forehead_protector_otogakure_bonus_armor"					"Armor: +"
+		//Forehead Protector
+    	"DOTA_Tooltip_ability_item_forehead_protector_sunagakure"								"Forehead Protector"
+		"DOTA_Tooltip_ability_item_forehead_protector_sunagakure_Lore"							"A Shinobi's Forehead Protector is one of their most personal possessions. While mainly used to identify a ninja's allegiance, they also offer a slight amount of protection for the User."
+		"DOTA_Tooltip_ability_item_forehead_protector_sunagakure_bonus_armor"					"Armor: +"
+		//Forehead Protector
+    	"DOTA_Tooltip_ability_item_forehead_protector_yugakure_scarred"								"Forehead Protector"
+		"DOTA_Tooltip_ability_item_forehead_protector_yugakure_scarred_Lore"							"A Shinobi's Forehead Protector is one of their most personal possessions. While mainly used to identify a ninja's allegiance, they also offer a slight amount of protection for the User."
+		"DOTA_Tooltip_ability_item_forehead_protector_yugakure_scarred_bonus_armor"					"Armor: +"
+
+
+
+
+		//Shin Guards
+    	"DOTA_Tooltip_ability_item_shin_guards"										"Shin Guards"
+    	"DOTA_Tooltip_ability_item_shin_guards_description"							"Passive: Block - %block_chance%%% Chance to block %damage_block_melee% Damage as Melee Hero and %damage_block_ranged% Damage as Range Hero."
+		"DOTA_Tooltip_ability_item_shin_guards_Lore"								"These Shin Guards are most commonly used by ANBU operatives during assination missions. They offer basic protection from enemy attacks at a cheap cost."
+
+		//Javelin
+    	"DOTA_Tooltip_ability_item_javelin_datadriven"								"Javelin"
+    	"DOTA_Tooltip_ability_item_javelin_datadriven_Description"					"Passive: Pierce - Grants a %chance%%% chance to deal %extra_dmg% bonus damage."
+		"DOTA_Tooltip_ability_item_javelin_datadriven_Lore"							"A mighty spear used in the Second Shinobi War, this weapon was common while ninjas striked their foes from afar."
+		"DOTA_Tooltip_ability_item_javelin_datadriven_bonus_damage"					"Attack Damage: +"
+
+		//Mithril Hammer
+    	"DOTA_Tooltip_ability_item_mithril_hammer_datadriven"						"Mithril Hammer"
+		"DOTA_Tooltip_ability_item_mithril_hammer_datadriven_Lore"					"For Ishigakure, these war hammers were once a popular alternative to the kunai during the First Shinobi War. To this day, veterans use these weapons to remind them of their glory days."
+		"DOTA_Tooltip_ability_item_mithril_hammer_datadriven_bonus_damage"			"Attack Damage: +"
+
+		//Shinobi Uniform
+    	"DOTA_Tooltip_ability_item_shinobi_uniform"									"Shinobi Uniform"
+		"DOTA_Tooltip_ability_item_shinobi_uniform_Lore"							"These standard issued shinobi uniforms are used by nearly all ninjas, from Genin rank to Jounin."
+		"DOTA_Tooltip_ability_item_shinobi_uniform_bonus_armor"						"Armor: +"
+
+		//Samurai Helm
+    	"DOTA_Tooltip_ability_item_samurai_helm"									"Samurai Helm"
+		"DOTA_Tooltip_ability_item_samurai_helm_Lore"								"The unique helm of the samurai is rarely seen on ninjas, but they add a significant amount of protection to their bearers."
+		"DOTA_Tooltip_ability_item_samurai_helm_bonus_armor"						"Armor: +"
+		"DOTA_Tooltip_ability_item_samurai_helm_bonus_hpreg"						"Hp Regeneration: +"
+
+		//Samurai Armor
+    	"DOTA_Tooltip_ability_item_samurai_armor"									"Samurai Armor"
+		"DOTA_Tooltip_ability_item_samurai_armor_Lore"								"The heavy armor of the samurai is rarely worn by shinobi, but offers a great amount of protection when needed."
+		"DOTA_Tooltip_ability_item_samurai_armor_bonus_armor"						"Armor: +"
+
+		//Gloves of Strength
+    	"DOTA_Tooltip_ability_item_gloves_of_strength"								"Gloves of Strength"
+		"DOTA_Tooltip_ability_item_gloves_of_strength_Lore"							"These gloves help with hand-to-hand combat, adding increased power to every blow."
+		"DOTA_Tooltip_ability_item_gloves_of_strength_bonus_str"					"Strength: +"
+
+		//Idate's Boot - training_weights
+    	"DOTA_Tooltip_ability_item_training_weights"								"Training Weights"
+		"DOTA_Tooltip_ability_item_training_weights_Lore"							"Training weights have been traditionally used as a simple way for a shinobi to train their body and increase their speed."
+		"DOTA_Tooltip_ability_item_training_weights_bonus_agi"						"Agility: +"
+
+		//Amulet of Anubis
+    	"DOTA_Tooltip_ability_item_amulet_of_anubis"								"Amulet of Anubis"
+		"DOTA_Tooltip_ability_item_amulet_of_anubis_Lore"							"These amulets once belonged to Anubis, a powerful spirit who guides those who hold the powerful artifact."
+		"DOTA_Tooltip_ability_item_amulet_of_anubis_bonus_int"						"Intelligence: +"
+
+		//Leaf of Konoha
+    	"DOTA_Tooltip_ability_item_leaf_of_konoha"									"Leaf of Konoha"
+		"DOTA_Tooltip_ability_item_leaf_of_konoha_Lore"								"A special leaf that originates from Konoha. These leaves help many young ninja on their way to acheiving their dreams."
+		"DOTA_Tooltip_ability_item_leaf_of_konoha_bonus_int"						"Intelligence: +"
+		"DOTA_Tooltip_ability_item_leaf_of_konoha_bonus_agi"						"Agility: +"
+		"DOTA_Tooltip_ability_item_leaf_of_konoha_bonus_str"						"Strength: +"
+
+		//Sakuras Fighting Gloves
+    	"DOTA_Tooltip_ability_item_sakuras_fighting_gloves"							"Sakura's Fighting Gloves"
+		"DOTA_Tooltip_ability_item_sakuras_fighting_gloves_Lore"					"After training for three years, these are the gloves Sakura frequently dons into combat as she channels her legendary strength."
+		"DOTA_Tooltip_ability_item_sakuras_fighting_gloves_bonus_str"				"Strength: +"
+		"DOTA_Tooltip_ability_item_sakuras_fighting_gloves_bonus_int"				"Intelligence: +"
+		"DOTA_Tooltip_ability_item_sakuras_fighting_gloves_bonus_agi"				"Agility: +"
+
+		//Sakuras Fighting Gloves Recipe
+    	"DOTA_Tooltip_ability_item_recipe_sakuras_fighting_gloves"					"Sakuras Fighting Gloves"
+		"DOTA_Tooltip_ability_item_recipe_sakuras_fighting_glovess_Lore"			"After training for three years, these are the gloves Sakura frequently dons into combat as she channels her legendary strength."
+		"DOTA_Tooltip_ability_item_recipe_sakuras_fighting_gloves_bonus_str"		"Strength: +"
+		"DOTA_Tooltip_ability_item_recipe_sakuras_fighting_gloves_bonus_int"		"Intelligence: +"
+		"DOTA_Tooltip_ability_item_recipe_sakuras_fighting_gloves_bonus_agi"		"Agility: +"
+
+		//The Spark of Agility Recipe
+    	"DOTA_Tooltip_ability_item_recipe_the_spark_of_agility"						"The Spark of Agility"
+		"DOTA_Tooltip_ability_item_recipe_the_spark_of_agility_Lore"				"The spark within can increase the neuro-activites of the brain, granting the sharpest reflexes a shinobi can ask for."
+		"DOTA_Tooltip_ability_item_recipe_the_spark_of_agility_bonus_str"			"Strength: +"
+		"DOTA_Tooltip_ability_item_recipe_the_spark_of_agility_bonus_int"			"Intelligence: +"
+		"DOTA_Tooltip_ability_item_recipe_the_spark_of_agility_bonus_agi"			"Agility: +"
+
+		//The Spark of Agility
+    	"DOTA_Tooltip_ability_item_the_spark_of_agility"							"The Spark of Agility"
+		"DOTA_Tooltip_ability_item_the_spark_of_agility_Lore"						"The spark within can increase the neuro activites of the brain, granting the sharpest reflexes a shinobi can ask for."
+		"DOTA_Tooltip_ability_item_the_spark_of_agility_bonus_str"					"Strength: +"
+		"DOTA_Tooltip_ability_item_the_spark_of_agility_bonus_int"					"Intelligence: +"
+		"DOTA_Tooltip_ability_item_the_spark_of_agility_bonus_agi"					"Agility: +"
+
+		//Celestrial Shield Recipe
+    	"DOTA_Tooltip_ability_item_recipe_celestrial_shield"						"Celestial Shield"
+		"DOTA_Tooltip_ability_item_recipe_celestrial_shield_Lore"					"The Celestial Shield reflects the true self within, bringing the wisdom needed to move gracefully into combat."
+		"DOTA_Tooltip_ability_item_recipe_celestrial_shield_bonus_str"				"Strength: +"
+		"DOTA_Tooltip_ability_item_recipe_celestrial_shield_bonus_int"				"Intelligence: +"
+		"DOTA_Tooltip_ability_item_recipe_celestrial_shield_bonus_agi"				"Agility: +"
+
+		//Celestrial Shield
+    	"DOTA_Tooltip_ability_item_celestrial_shield"								"Celestrial Shield"
+		"DOTA_Tooltip_ability_item_celestrial_shield_Lore"							"The Celestrial Shield reflects the true self within, bringing the wisdom needed to move gracefully into combat."
+		"DOTA_Tooltip_ability_item_celestrial_shield_bonus_str"						"Strength: +"
+		"DOTA_Tooltip_ability_item_celestrial_shield_bonus_int"						"Intelligence: +"
+		"DOTA_Tooltip_ability_item_celestrial_shield_bonus_agi"						"Agility: +"
+
+		//Shinobi Waist Pouch
+    	"DOTA_Tooltip_ability_item_shinobi_waist_pouch"								"Shinobi Waist Pouch"
+		"DOTA_Tooltip_ability_item_shinobi_waist_pouch_Lore"						"A basic pouch in which a shinobi carries their ninja tools."
+		"DOTA_Tooltip_ability_item_shinobi_waist_pouch_bonus_str"					"Strength: +"
+		"DOTA_Tooltip_ability_item_shinobi_waist_pouch_bonus_int"					"Intelligence: +"
+		"DOTA_Tooltip_ability_item_shinobi_waist_pouch_bonus_agi"					"Agility: +"
+
+		//Belt of Strength - Firm Nunchaku
+    	"DOTA_Tooltip_ability_item_firm_nunchaku"									"Firm Nunchaku"
+		"DOTA_Tooltip_ability_item_firm_nunchaku_Lore"								"These strange weapons serve as an unorthodox tool for those strong enough to deal heavy damage with them. "
+		"DOTA_Tooltip_ability_item_firm_nunchaku_bonus_str"							"Strength: +"
+
+		//Snake Skin
+    	"DOTA_Tooltip_ability_item_snake_skin"										"Snake Skin"
+		"DOTA_Tooltip_ability_item_snake_skin_Lore"									"These skin sheddings of the white snake bring flexibility to the user's skin, giving them smooth agile-like movements."
+		"DOTA_Tooltip_ability_item_snake_skin_bonus_agi"							"Agility: +"
+
+		//Anbu Cloak
+    	"DOTA_Tooltip_ability_item_anbu_cloak"										"Anbu Cloak"
+		"DOTA_Tooltip_ability_item_anbu_cloak_Lore"									"A common cloak used by the ANBU to shroud them in mystery."
+		"DOTA_Tooltip_ability_item_anbu_cloak_bonus_int"							"Intelligence: +"
+
+		//Axe of Strength - Vambraces 
+    	"DOTA_Tooltip_ability_item_vambraces"										"Vambraces"
+		"DOTA_Tooltip_ability_item_vambraces_Lore"									"Vambraces are heavy pieces of equipment that have been used for both extreme strength training and raw offensive power. "
+		"DOTA_Tooltip_ability_item_vambraces_bonus_str"								"Strength: +"
+
+		//Blade of Agility - Swift Katana
+    	"DOTA_Tooltip_ability_item_swift_katana"									"Swift Katana"
+		"DOTA_Tooltip_ability_item_swift_katana_Lore"								"The katana is one of the fastest swords ever made, capable of being drawn and wielded at deadly speeds."
+		"DOTA_Tooltip_ability_item_swift_katana_bonus_agi"							"Agility: +"
+
+		//Staff Of Faith
+    	"DOTA_Tooltip_ability_item_staff_of_faith"									"Staff Of Faith"
+		"DOTA_Tooltip_ability_item_staff_of_faith_Lore"								"An ancient staff that has guided many shinobi during hard times."
+		"DOTA_Tooltip_ability_item_staff_of_faith_bonus_int"						"Intelligence: +"
+
+		//Kage's Relic
+    	"DOTA_Tooltip_ability_item_kages_relic"										"Kage's Relic"
+		"DOTA_Tooltip_ability_item_kages_relic_Lore"								"A Kage's Relic is an antique item that belonged to the first Kage of each village. The relic represents one's immense power and abilities."
+		"DOTA_Tooltip_ability_item_kages_relic_bonus_str"							"Strength: +"
+		"DOTA_Tooltip_ability_item_kages_relic_bonus_int"							"Intelligence: +"
+		"DOTA_Tooltip_ability_item_kages_relic_bonus_agi"							"Agility: +"
+
+		//Yondaime Sealed Kunai
+    	"DOTA_Tooltip_ability_item_yondaime_sealed_kunai"							"Yondaime Sealed Kunai"
+		"DOTA_Tooltip_ability_item_yondaime_sealed_kunai_Lore"						"This sealed kunai helped Yondaime of Konoha gain his nickname 'The Yellow Flash'. It allows the user to blink to a target location in a flash."
+
+		//Soldier Pill
+    	//"DOTA_Tooltip_ability_item_clarity"											"Soldier Pill"
+
+    	//Medicine
+    	"DOTA_Tooltip_ability_item_flask"											"Medicine"
+    	"DOTA_Tooltip_ability_item_flask_lore"										"While not as effective as medical nin-jutsu, Medicine provides near instant relief to shinobi who lack the aid of a medic-nin."
+
+    	//Food Supply
+    	"DOTA_Tooltip_ability_item_tango"											"Food Supply"
+    	"DOTA_Tooltip_ability_item_tango_lore"										"A sufficient supply of food is essential for ninjas on long missions."
+
+
+    	//Hero's Water
+    	"DOTA_Tooltip_ability_item_bottle"											"Hero's Water"
+    	"DOTA_Tooltip_ability_item_bottle_description"								"Use: Regenerate - Consumes a charge to restore Health and Chakra over time. Healing stops if attacked. Hero's Water can be refilled at your team's fountain. Runes can be stored in Hero's Water for later use, and are activated automatically after 2 minutes. If Hero's Water does not have full charges and is palced on a courier, the courier will move 30% slower. Hold Control to use Regenerate on an allied hero. Stored runes cannot be shared."
+    	"DOTA_Tooltip_ability_item_bottle_Note0"									"Health Restored: 110 \nChakra Restored: 70\nDuration: 3"
+
+		//Kunai
+    	"DOTA_Tooltip_ability_item_kunai"											"Kunai"
+    	"DOTA_Tooltip_ability_item_kunai_lore"										"Ninjas are taught to wield these simple weapons from the moment they start training, and are still used even by the most powerful of shinobi."
+    	"DOTA_Tooltip_ability_item_kunai_description"								"Active: Chop - Destroy a target tree or ward. \nPassive: Quell - Increases attack damage against non-hero units, based on whether the equipped hero is ranged or melee."
+    	"DOTA_Tooltip_ability_item_kunai_bonus_damage_melee"						"%Melee bonus Attack Damage:"
+		"DOTA_Tooltip_ability_item_kunai_bonus_damage_range"						"%Ranged bonus Attack Damage:"
+
+    	//Clarity
+    	"DOTA_Tooltip_ability_item_clarity"											"Clarity"
+    	"DOTA_Tooltip_ability_item_description"										"Use: Restores chakra to the target unit over time. If the unit is attacked, the effect is lost. Hold control to use Clarity on an allied hero."
+
+
+    	//Sand Eyes
+    	"DOTA_Tooltip_ability_item_ward_observer"									"Third Eye"
+    	"DOTA_Tooltip_ability_item_ward_observer_lore"								"In a war of stealth and trickery, observation is the key to victory."
+    	
+    	//Sand Eyes Improved
+    	"DOTA_Tooltip_ability_item_ward_sentry"										"Sentry Eyes"
+    	"DOTA_Tooltip_ability_item_ward_sentry_lore"								"For many ninjas, the detection of their presence will most likely mean their death."
+
+
+    	//Dust of Appearance
+    	"DOTA_Tooltip_ability_item_dust"											"Dust of Appearance"
+
+    	//Animal Courier
+    	"DOTA_Tooltip_ability_item_courier"											"Pakkun"
+
+    	//Scroll of Town Portal
+    	"DOTA_Tooltip_ability_item_tpscroll"										"Summoning Scroll"
+
+    	//Shinobi Trends
+    	"DOTA_Tooltip_ability_item_shinobi_trends"									"Shinobi Trends"
+		"DOTA_Tooltip_ability_item_shinobi_trends_Lore"								"These artificial legs help shinobis who have lost a leg or two regain their speed on the battlefield. Their chakra infused engineering allow the user to redirect their chakra flow to meet the demands of the battlefield."
+		"DOTA_Tooltip_ability_item_shinobi_trends_movementspeed"					"Movement Speed: +"
+		"DOTA_Tooltip_ability_item_shinobi_trends_attackspeed"						"Attack Speed: +"
+
+    	//Shinobi Trends of Strength
+    	"DOTA_Tooltip_ability_item_shinobi_trends_str"								"Shinobi Trends of Strength"
+		"DOTA_Tooltip_ability_item_shinobi_trends_str_Lore"							"These artificial legs help shinobis who have lost a leg or two regain their speed on the battlefield. Their chakra infused engineering allow the user to redirect their chakra flow to meet the demands of the battlefield."
+		"DOTA_Tooltip_ability_item_shinobi_trends_str_movementspeed"				"Movement Speed: +"
+		"DOTA_Tooltip_ability_item_shinobi_trends_str_attackspeed"					"Attack Speed: +"
+		"DOTA_Tooltip_ability_item_shinobi_trends_str_bonus_str"					"Strength: +"
+
+		//Shinobi Trends of Agility
+    	"DOTA_Tooltip_ability_item_shinobi_trends_agi"								"Shinobi Trends of Agility"
+		"DOTA_Tooltip_ability_item_shinobi_trends_agi_Lore"							"These artificial legs help shinobis who have lost a leg or two regain their speed on the battlefield. Their chakra infused engineering allow the user to redirect their chakra flow to meet the demands of the battlefield."
+		"DOTA_Tooltip_ability_item_shinobi_trends_agi_movementspeed"				"Movement Speed: +"
+		"DOTA_Tooltip_ability_item_shinobi_trends_agi_attackspeed"					"Attack Speed: +"
+		"DOTA_Tooltip_ability_item_shinobi_trends_agi_bonus_agi"					"Agility: +"
+
+		//Shinobi Trends of Intelligence
+    	"DOTA_Tooltip_ability_item_shinobi_trends_int"								"Shinobi Trends of Intelligence"
+		"DOTA_Tooltip_ability_item_shinobi_trends_int_Lore"							"These artificial legs help shinobis who have lost a leg or two regain their speed on the battlefield. Their chakra infused engineering allow the user to redirect their chakra flow to meet the demands of the battlefield."
+		"DOTA_Tooltip_ability_item_shinobi_trends_int_movementspeed"				"Movement Speed: +"
+		"DOTA_Tooltip_ability_item_shinobi_trends_int_attackspeed"					"Attack Speed: +"
+		"DOTA_Tooltip_ability_item_shinobi_trends_int_bonus_int"					"Intelligence: +"
+
+		//Idate's Sandals
+    	"DOTA_Tooltip_ability_item_idates_sandals"									"Idate's Sandals"
+    	"DOTA_Tooltip_ability_item_idates_sandals_Description"						"Active: Phase - Increases Movement Speed by %movementspeed_cast_percent%%% and lets you move through units. Phase is cancelled upon using another item or ability."
+		"DOTA_Tooltip_ability_item_idates_sandals_Lore"								"These sandals once belonged to Idate, known as one of the fastest runners to have ever lived."
+		"DOTA_Tooltip_ability_item_idates_sandals_movementspeed"					"Movement Speed: +"
+		"DOTA_Tooltip_ability_item_idates_sandals_bonus_damage"						"Attack Damage: +"
+		"DOTA_Tooltip_idates_sandals_phase"											"Idate's Sandals"
+		"DOTA_Tooltip_idates_sandals_phase_description"								"This Unit's Movementspeed is increased by 10%%."
+
+		//The Fourth's Legcy
+    	"DOTA_Tooltip_ability_item_the_fourths_legacy"								"The Fourth's Legacy"
+    	"DOTA_Tooltip_ability_item_the_fourths_Description"							"Active: Teleport - Teleports you to an allied non-hero unit or structure.\n\nFlat movement speed bonuses from multiple pairs of boots do not stack."
+		"DOTA_Tooltip_ability_item_the_fourths_legacy_Lore"							"The Fourth Hokage Yondaime, also known as "Konoha's Yellow Flash," is remembered far and wide for his legendary speed."
+		"DOTA_Tooltip_ability_item_the_fourths_legacy_movementspeed"				"Movement Speed: +"
+	
+		//Transmutation Gloves
+    	"DOTA_Tooltip_ability_item_transmutation_gloves"							"Transmutation Gloves"
+    	"DOTA_Tooltip_ability_item_transmutation_gloves_Description"				"Active: Transmute - Kills a non-hero target for 190 gold and 2.5x experience."
+		"DOTA_Tooltip_ability_item_transmutation_gloves_Lore"						"These special gloves, enhanced with alchemy, are designed to be a form of upgraded auto-mail. By reaching over a lesser enemy, the enemy can be turned into gold for personal use."
+		"DOTA_Tooltip_ability_item_transmutation_gloves_attackspeed"				"Attack Speed: +"
+	
+		//Gai's Fist Of Might
+    	"DOTA_Tooltip_ability_item_gais_fist_of_might"								"Gai's Fist Of Might"
+		"DOTA_Tooltip_ability_item_gais_fist_of_might_Lore"							"The greatest master of taijutsu that Konoha has ever seen, Gai uses his special gloves to enable him to attack at extreme speeds."
+		"DOTA_Tooltip_ability_item_gais_fist_of_might_attackspeed"					"Attack Speed: +"
+	
+		//Ring of Health
+    	"DOTA_Tooltip_ability_item_ring_of_health_datadriven"						"Ring Of Health"
+		"DOTA_Tooltip_ability_item_ring_of_health_datadriven_Lore"					"Many generations ago, these rings were the ultimates tools for regenerating one's health when at war."
+		"DOTA_Tooltip_ability_item_ring_of_health_datadriven_bonus_hp_reg_constant"	"Hp Regeneration: +"
+	
+		//Silver Watch
+    	"DOTA_Tooltip_ability_item_silver_watch"									"Silver Watch"
+		"DOTA_Tooltip_ability_item_silver_watch_Lore"								"This special silver watch is given to state alchemists who pass the state test. These watches amplify the powers of their transmutation circles and... wait a second.. Hey! Isn't this from Full Metal Alchemist?"
+		"DOTA_Tooltip_ability_item_silver_watch_bonus_mana_reg_percentage"			"%Chakra Regeneration: +"
+	
+		//Amplified Silver Watch
+    	"DOTA_Tooltip_ability_item_amplified_silver_watch"							 "Amplified Silver Watch"
+		"DOTA_Tooltip_ability_item_amplified_silver_watch_Lore"				 		 "These amplified silver watches not only improves mana regeneration, it now improves the endurance of the user."
+		"DOTA_Tooltip_ability_item_amplified_silver_watch_bonus_mana_reg_percentage" "%Chakra Regeneration: +"
+		"DOTA_Tooltip_ability_item_amplified_silver_watch_bonus_hp_reg_constant"	 "Hp Regeneration: +"
+		"DOTA_Tooltip_ability_item_amplified_silver_watch_bonus_damage"				 "Attack Damage: +"
+
+		//Essence of Agility
+    	"DOTA_Tooltip_ability_item_essence_of_agility"								"Essence Of Wind"
+		"DOTA_Tooltip_ability_item_essence_of_agility_Lore"							"A natural element that amplifies the wind chakra inside the user, granting them increased agility."
+		"DOTA_Tooltip_ability_item_essence_of_agility_bonus_agi"					"Agility: +"
+		
+		//Essence Of Nature
+    	"DOTA_Tooltip_ability_item_essence_of_nature"								"Essence Of Water"
+		"DOTA_Tooltip_ability_item_essence_of_nature_Lore"							"A natural element that amplifies the inner chakra inside the user, granting them increased intelligence."
+		"DOTA_Tooltip_ability_item_essence_of_nature_bonus_int"						"Intelligence: +"
+	
+		//Essence of Brutality
+    	"DOTA_Tooltip_ability_item_essence_of_brutality"							"Essence of Earth"
+		"DOTA_Tooltip_ability_item_essence_of_brutality_Lore"						"A natural element that amplifies the earth chakra inside the user, granting them increased strength."
+		"DOTA_Tooltip_ability_item_essence_of_brutality_bonus_str"					"Strength: +"
+	
+		//Essence of Tranquility
+    	"DOTA_Tooltip_ability_item_essence_of_tranquility"							"Essence of Lighting"
+		"DOTA_Tooltip_ability_item_essence_of_tranquility_Lore"						"A natural element that amplifies the User's ability to exert their chakra, giving them increased damage output."
+		"DOTA_Tooltip_ability_item_essence_of_tranquility_bonus_damage"				"Attack Damage: +"
+	
+		//Red Sun
+    	"DOTA_Tooltip_ability_item_red_sun"											"Essence of Fire"
+		"DOTA_Tooltip_ability_item_red_sun_Lore"									"Allows the bearer to harness the power of the sun. Legends say this artifact can be used to forge the most powerful of weapons."
+		"DOTA_Tooltip_ability_item_red_sun_bonus_damage"							"Attack Damage: +"
+	
+		//Blue Moon
+    	"DOTA_Tooltip_ability_item_blue_moon"										"Essence of Ice"
+		"DOTA_Tooltip_ability_item_blue_moon_Description"							"Passive: Cold Attack - Attacks slow the movement and attack speed of the target.\n\nBlue Moon is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.  Blue Moon can be combined with Lifesteal Attack Modifiers."
+		"DOTA_Tooltip_ability_item_blue_moon_Lore"									"Allows the bearer to harness the power of the moon. Legends say this artifcat can be used to forge the most powerful of weapons."
+		"DOTA_Tooltip_ability_item_blue_moon_bonus_str"								"Strength: +"
+		"DOTA_Tooltip_ability_item_blue_moon_bonus_int"								"Intelligence: +"
+		"DOTA_Tooltip_ability_item_blue_moon_bonus_agi"								"Agility: +"
+		"DOTA_Tooltip_blue_moon_slow"												"Blue Moon"
+		"DOTA_Tooltip_blue_moon_slow_description"									"-10%% Movementspeed and -15%% Attackspeed"
+		
+
+		//Point Booster
+    	"DOTA_Tooltip_ability_item_point_booster_datadriven"						"Point Booster"
+		"DOTA_Tooltip_ability_item_point_booster_datadriven_Lore"					"It is known that combining all three boosters creates an extremely useful relic."
+		"DOTA_Tooltip_ability_item_point_booster_datadriven_bonus_hp"				"Health: +"
+		"DOTA_Tooltip_ability_item_point_booster_datadriven_bonus_mana"				"Chakra: +"
+
+		//Vitality Booster
+    	"DOTA_Tooltip_ability_item_vitality_booster_datadriven"						"Vitality Booster"
+		"DOTA_Tooltip_ability_item_vitality_booster_datadriven_Lore"				"It is widely known that combining all three boosters can create an extremely useful relic."
+		"DOTA_Tooltip_ability_item_vitality_booster_datadriven_bonus_hp"			"Health: +"
+
+		//Energy Booster - Chakra Booster
+    	"DOTA_Tooltip_ability_item_chakra_booster"									"Chakra Booster"
+		"DOTA_Tooltip_ability_item_chakra_booster_Lore"								"It is widely known that combining all three boosters can create an extremely useful relic."
+		"DOTA_Tooltip_ability_item_chakra_booster_bonus_mana"						"Chakra: +"
+
+		//Jiraiyas sandals 															
+    	"DOTA_Tooltip_ability_item_jiraiyas_sandals"								"Jiraiyas Sandals"
+    	"DOTA_Tooltip_ability_item_jiraiyas_sandals_description"					"Active: Mana - Restores %restore_mana% of your Chakra and the Chakra of all allied Units in a %radius% AOE."
+		"DOTA_Tooltip_ability_item_jiraiyas_sandals_Lore"							"Special sandals used by the legendary Sannin himself. These sandals have helped it's owner barely escape a variety of tricky situations."
+		"DOTA_Tooltip_ability_item_jiraiyas_sandals_bonus_mana"						"Chakra: +"
+		"DOTA_Tooltip_ability_item_jiraiyas_sandals_movementspeed"					"Movement Speed: +"
+
+		//Akatsuki Ring
+    	"DOTA_Tooltip_ability_item_akatsuki_ring"									"Akatsuki Ring"
+		"DOTA_Tooltip_ability_item_akatsuki_ring_Lore"								"The Akatsuki's Rings are special pieces of jewelry that all Akatsuki members must wear. To this day, it is still not known what specifically they are used for..."
+		"DOTA_Tooltip_ability_item_akatsuki_ring_bonus_damage"						"Attack Damage: +"
+		"DOTA_Tooltip_ability_item_akatsuki_ring_description"						"Passive: Akatsuki Aura - Grants mana regeneration and armor in a %radius% area of effect.\nMultiple instances of Akatsuki Aura do not stack."
+		"DOTA_Tooltip_ability_item_akatsuki_ring_bonus_armor"						"Attack Damage: +"
+		"DOTA_Tooltip_akatsuki_ring_aura"											"Akatsuki Ring"
+		"DOTA_Tooltip_akatsuki_ring_aura_description"								"+3 Armor\n+65%% Chakra Regeneration"
+
+		//First Hokage's Necklace
+    	"DOTA_Tooltip_ability_item_first_hokages_necklace"							"First Hokage's Necklace"
+    	"DOTA_Tooltip_ability_item_first_hokages_necklace_Description"				"Active: Restore - Heals %heal_amount% HP and gives +%heal_bonus_armor% armor in an area.\nPassive - Aura Bonus +4.0 HP Regen in a 900 AOE.\n\nMultiple instances of First Hokage's Necklace do not stack."
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_Lore"						"The First Hokage was reknowned for his god like strength and powerful healing abilties. The necklace he wore has been passed through the generations, helping shinobi decades beyond his death."
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_bonus_str"				"Strength: +"
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_bonus_agi"				"Agility: +"
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_bonus_int"				"Intelligence: +"
+		"DOTA_Tooltip_ability_item_first_hokages_necklace_bonus_armor"				"Armor: +"
+		"DOTA_Tooltip_modifier_item_mekansm_datadriven_heal_armor"					"First Hokage's Necklace"
+		"DOTA_Tooltip_modifier_item_mekansm_datadriven_heal_armor_description"		"+2 Armor"		
+		"DOTA_Tooltip_modifier_item_mekansm_datadriven_aura"						"First Hokage's Necklace"
+		"DOTA_Tooltip_modifier_item_mekansm_datadriven_aura_description"			"+2 HP Regeneration"
+
+
+		//Retractable Shield
+    	"DOTA_Tooltip_ability_item_retractable_shield"								"Retractable Shield"
+    	"DOTA_Tooltip_ability_item_retractable_shield_Description"					"Active: Armor Bonus - Gives +%active_armor% armor to all allied units in %active_radius% AOE. Lasts %active_duration_hero% seconds."
+		"DOTA_Tooltip_ability_item_retractable_shield_Lore"							"This Retractable Shield is a personal defense tool of the knight Temujin. When closed, it appears to look like a bracelet. However, once opened, it can repel all types of conventional attacks."
+		"DOTA_Tooltip_ability_item_retractable_shield_bonus_str"					"Strength: +"
+		"DOTA_Tooltip_ability_item_retractable_shield_bonus_agi"					"Agility: +"
+		"DOTA_Tooltip_ability_item_retractable_shield_bonus_int"					"Intelligence: +"
+		"DOTA_Tooltip_ability_item_retractable_shield_bonus_armor"					"Armor: +"
+		"Dota_Tooltip_modifier_item_buckler_datadriven_active"						"Retractable Shield"
+		"Dota_Tooltip_modifier_item_buckler_datadriven_active_description"			"+2 Armor"
+
+		//Tobi's Mask
+    	"DOTA_Tooltip_ability_item_tobis_mask"										"Tobi's Mask"
+		"DOTA_Tooltip_ability_item_tobis_mask_Description"							"Passive: Aura - Grants +%damage_aura_percent%%% damage, +%armor_aura% armor, +0.8 mana regeneration and +%lifesteal_aura_percent%%% lifesteal to nearby allies in %aura_radius% AOE."
+		"DOTA_Tooltip_ability_item_tobis_mask_Lore"									"Tobi is a good boy..."
+		"DOTA_Tooltip_modifier_item_vladmir_datadriven_general_aura"				"Tobi's Mask - Aura"
+		"DOTA_Tooltip_modifier_item_vladmir_datadriven_general_aura_description"	"+15%% damage\n+5 Armor\n+0.8 chakra regeneration\n+16%% lifesteal(melee only)"
+
+		//Bingo Book
+    	"DOTA_Tooltip_ability_item_bingo_book"										"Bingo Book"
+		"DOTA_Tooltip_ability_item_bingo_book_description"							"Active: Track Enemies (ping on enemies location)"
+		"DOTA_Tooltip_ability_item_bingo_book_Lore"									"The Bingo Book is a widely used information source on missing-nins and criminals that might pose a threat to any of the five shinobi villages. This bingo book has been updated to learn enemy locations for future assasination."
+		"DOTA_Tooltip_ability_item_bingo_book_bonus_str"							"Strength: +"
+		"DOTA_Tooltip_ability_item_bingo_book_bonus_agi"							"Agility: +"
+		"DOTA_Tooltip_ability_item_bingo_book_bonus_int"							"Intelligence: +"
+		"DOTA_Tooltip_ability_item_bingo_book_bonus_mana_reg_percentage"			"%Chakra Regeneration: +"
+
+		//Magatama Amulet
+    	"DOTA_Tooltip_ability_item_magatama_amulet"									"Magatama Amulet"
+		"DOTA_Tooltip_ability_item_magatama_amulet_Lore"							"The key that is necessary to open an artificial spring generator."
+		"DOTA_Tooltip_ability_item_magatama_amulet_bonus_str"						"Strength: +"
+		"DOTA_Tooltip_ability_item_magatama_amulet_bonus_agi"						"Agility: +"
+		"DOTA_Tooltip_ability_item_magatama_amulet_bonus_int"						"Intelligence: +"
+		"DOTA_Tooltip_ability_item_magatama_amulet_bonus_hp_reg_constant"							"Hp Regeneration: +"
+		"DOTA_Tooltip_magatama_amulet_aura"											"Magatama Amulet"
+		"DOTA_Tooltip_magatama_amulet_aura_description"								"Aura: +2 Hp Regeneration"
+
+		//Kongou Nyoi
+    	"DOTA_Tooltip_ability_item_kongou_nyoi"										"Kongou Nyoi"
+    	"DOTA_Tooltip_ability_item_kongou_nyoi_description"							"Passive: 30%% Chance to deal 100 damage in 300 AOE\nActive: Track Enemies (ping on enemies location)"
+		"DOTA_Tooltip_ability_item_kongou_nyoi_Lore"								"Within this weapon lies The Elder Monkey, a being who is able to fight at the user's side, or transform into a large extendable staff. This staff is as hard as adamantine and can cut like a sword."
+		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_str"							"Strength: +"
+		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_agi"							"Agility: +"
+		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_int"							"Intelligence: +"
+		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_hp_reg_constant"				"Hp Regeneration: +"
+		"DOTA_Tooltip_ability_item_kongou_nyoi_bonus_mana_reg_percentage"			"%Chakra Regeneration: +"
+
+		//Flying Courier
+    	"DOTA_Tooltip_ability_item_flying_courier"									"Kongou Nyoi"
+		"DOTA_Tooltip_ability_item_flying_courier_Lore"								"Creates a small flying unit that can carry items to and from your base. If it dies the items will fall to the ground."
+
+		//Sage Scroll
+		"DOTA_Tooltip_ability_item_sage_scroll"										"Sage Scroll"
+    	"DOTA_Tooltip_ability_item_sage_scroll_Description"							"Active: Hex - Turns a target unit into a harmless critter for %hex_duration% seconds. Destroys illusions. \n<font color='#FF7800'>Negates all the target's armor, magic resistance, evasion and passive abilities for the duration.</font>"
+		"DOTA_Tooltip_ability_item_sage_scroll_Note0"								"Instantly destroys illusions."
+		"DOTA_Tooltip_ability_item_sage_scroll_Note1"								"The target will have a base movement speed of 100, but buffs granting maximum movement speed won't be disabled."
+		"DOTA_Tooltip_ability_item_sage_scroll_Lore"								"With just a touch on the forehead, the legendary Sannin Jiraiya is able to turn his foe into a frog. Or at the very least, convinces others he is able to do so!"
+		"DOTA_Tooltip_ability_item_sage_scroll_bonus_str"							"Strength: +"
+		"DOTA_Tooltip_ability_item_sage_scroll_bonus_agi"							"Agility: +"
+		"DOTA_Tooltip_ability_item_sage_scroll_bonus_int"							"Intelligence: +"
+		"DOTA_Tooltip_ability_item_sage_scroll_bonus_mana_reg_percentage"			"%Chakra Regeneration: +"
+
+		//Hoshikage's Star
+    	"DOTA_Tooltip_ability_item_hoshikages_star"									"Hoshikage's Star"
+		"DOTA_Tooltip_ability_item_hoshikages_star_Description"						"Active: Thunder Clap - 350 Magic Damage in 250 AOE, 40 Movement Speed and Attack Speed slow for 3.5 seconds) - 10 Charges."
+		"DOTA_Tooltip_ability_item_hoshikages_star_Lore"							"A star that had once fallen into a village, it's inhabitants used the star's chakra to train their bodies. The star's chakra is so powerful, it can make a user 8 times stronger than before."
+		"DOTA_Tooltip_ability_item_hoshikages_star_bonus_int"						"Intelligence: +"
+		"DOTA_Tooltip_ability_item_hoshikages_star_bonus_mana_reg_percentage"		"%Chakra Regeneration: +"
+		"DOTA_Tooltip_hoshi_star_slow"												"Hosikage's Star"
+		"DOTA_Tooltip_hoshi_star_slow_description"									"-40%% Movementspeed"
+
+		"DOTA_Tooltip_ability_item_recipe_hoshikages_star"                  		"Recipe Hoshikages Star"
+		"DOTA_Tooltip_ability_item_recipe_hoshikages_star_Description"              "Active: Thunder Clap (350 Damage in 250 AOE, 40% ms and as slow for 3.5 seconds) - 10 Charges"
+
+		//The Totsuka
+    	"DOTA_Tooltip_ability_item_the_totsuka"										"Sword of Totsuka"
+    	"DOTA_Tooltip_ability_item_the_totsuka_Description"							"Soul Burn - Silences target unit for %silence_duration% seconds and amplifies the damage it takes by %silence_damage_percent%%%."
+		"DOTA_Tooltip_ability_item_the_totsuka_Lore"								"The legendary sword wielded by Itachi's Susano'o, it seals its victims into a permanent genjutsu upon contact."
+		"DOTA_Tooltip_ability_item_the_totsuka_bonus_int"							"Intelligence: +"
+		"DOTA_Tooltip_ability_item_the_totsuka_bonus_damage"						"Attack Damage: +"
+		"DOTA_Tooltip_ability_item_the_totsuka_attackspeed"							"Attack Speed: +"
+		"DOTA_Tooltip_ability_item_the_totsuka_bonus_mana_reg_percentage"			"%Chakra Regeneration: +"
+		"DOTA_Tooltip_modifier_totsuka_silence"												"Soul Burn"
+		"DOTA_Tooltip_modifier_totsuka_silence_description"									"This Unit is silenced and takes damage over time."
+		"DOTA_Tooltip_ability_item_the_totsuka_Note1"								"Does not directly amplify damage as it is dealt, but rather saves all damage values and deals 30% of it 5 seconds after cast."
+		"DOTA_Tooltip_ability_item_the_totsuka_Note2"								"This means that the damage can be avoided by becoming spell immune or invulnerable at the end of the duration."
+		"DOTA_Tooltip_ability_item_the_totsuka_Note3"								"The damage is applied exactly 5 seconds after cast, but only if the target still has the debuff on."
+		"DOTA_Tooltip_ability_item_the_totsuka_Note4"								"This means when the debuff gets dispeled prematurely, no damage is dealt."
+		"DOTA_Tooltip_ability_item_the_totsuka_Note5"								"It also means when the debuff gets prolonged (by e.g re-casting it), the damage is not further delayed."
+		"DOTA_Tooltip_ability_item_the_totsuka_Note6"								"This in return means that successive casts on the same target only refresh the silence duration. \nIn order to amplify damage again, the already existing debuff must disappear first."
+		"DOTA_Tooltip_ability_item_the_totsuka_Note7"								"Only considers magical, physical and pure damage (after all reductions). Other sources of health loss are ignored."
+
+
+		//Karites Touch
+    	"DOTA_Tooltip_ability_item_karites_touch"									"Karite's Touch"
+    	"DOTA_Tooltip_ability_item_karites_touch_description"						"Active: Energy Blast - Deals 400 (damage varies per level) Magic Damage instantly to a target enemy unit. This item can be upgraded."
+		"DOTA_Tooltip_ability_item_karites_touch_Lore"								"Known as the Reaper's Touch, it is said that a Shinigami's finger was once cut off and fell onto the shinobi world. The finger is believed to be able to shoot dark beams of energy, able to instantly annihilate lesser foes."
+		"DOTA_Tooltip_ability_item_karites_touch_bonus_intellect"					"Intelligence: + "
+		"DOTA_Tooltip_ability_item_karites_touch_bonus_str"							"Strength: + "
+		"DOTA_Tooltip_ability_item_karites_touch_bonus_agi"							"Agility: + "
+		"DOTA_Tooltip_ability_item_karites_touch_bonus_damage"						"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_karites_touch_Note0"								"Karite's Touch goes up to level 4."
+		//Karites Touch 2
+    	"DOTA_Tooltip_ability_item_karites_touch_2"									"Karites Touch v2"
+    	"DOTA_Tooltip_ability_item_karites_touch_2_description"						"Active: Energy Blast - Deals 400 (damage varies per level) Magic Damage instantly to a target enemy unit. This item can be upgraded."
+		"DOTA_Tooltip_ability_item_karites_touch_2_Lore"							"Known as the Reaper's Touch, it is said that a Shinigami's finger was once cut off and fell onto the shinobi world. The finger is believed to be able to shoot dark beams of energy, able to instantly annihilate lesser foes."
+		"DOTA_Tooltip_ability_item_karites_touch_2_bonus_intellect"					"Intelligence: + "
+		"DOTA_Tooltip_ability_item_karites_touch_2_bonus_str"				   		"Strength: + "
+		"DOTA_Tooltip_ability_item_karites_touch_2_bonus_agi"						"Agility: + "
+		"DOTA_Tooltip_ability_item_karites_touch_2_bonus_damage"					"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_karites_touch_2_Note0"								"Karite's Touch goes up to level 4."
+		//Karites Touch 3
+    	"DOTA_Tooltip_ability_item_karites_touch_3"									"Karites Touch v3"
+    	"DOTA_Tooltip_ability_item_karites_touch_3_description"						"Active: Energy Blast - Deals 400 (damage varies per level) Magic Damage instantly to a target enemy unit. This item can be upgraded."
+		"DOTA_Tooltip_ability_item_karites_touch_3_Lore"							"Known as the Reaper's Touch, it is said that a Shinigami's finger was once cut off and fell onto the shinobi world. The finger is believed to be able to shoot dark beams of energy, able to instantly annihilate lesser foes."
+		"DOTA_Tooltip_ability_item_karites_touch_3_bonus_intellect"					"Intelligence: +"
+		"DOTA_Tooltip_ability_item_karites_touch_3_bonus_str"						"Strength: + "
+		"DOTA_Tooltip_ability_item_karites_touch_3_bonus_agi"						"Agility: + "
+		"DOTA_Tooltip_ability_item_karites_touch_3_bonus_damage"					"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_karites_touch_3_Note0"								"Karite's Touch goes up to level 4."
+		//Karites Touch 4 
+    	"DOTA_Tooltip_ability_item_karites_touch_4"									"Karites Touch v4"
+		"DOTA_Tooltip_ability_item_karites_touch_4_description"						"Active: Energy Blast - Deals 400 (damage varies per level) Magic Damage instantly to a target enemy unit. This item can be upgraded."
+		"DOTA_Tooltip_ability_item_karites_touch_4_Lore"							"Known as the Reaper's Touch, it is said that a Shinigami's finger was once cut off and fell onto the shinobi world. The finger is believed to be able to shoot dark beams of energy, able to instantly annihilate lesser foes."
+		"DOTA_Tooltip_ability_item_karites_touch_4_bonus_intellect"					"Intelligence: + "
+		"DOTA_Tooltip_ability_item_karites_touch_4_bonus_str"						"Strength: + "
+		"DOTA_Tooltip_ability_item_karites_touch_4_bonus_agi"						"Agility: + "
+		"DOTA_Tooltip_ability_item_karites_touch_4_bonus_damage"					"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_karites_touch_4_Note0"								"Karite's Touch goes up to level 4."
+		//Hexagonal Crystal
+    	"DOTA_Tooltip_ability_item_hexagonal_crystal"								"Hexagonal Crystal"
+    	"DOTA_Tooltip_ability_item_hexagonal_crystal_Description"					"Active: Reset Cooldowns - Resets the cooldowns of all your items and abilities."
+		"DOTA_Tooltip_ability_item_hexagonal_crystal_Lore"							"This oddly shaped trinket was given to Princess Koyuki as a key to turn the Land of Snow into the Land of Spring. It is from this function that it is believed to give new life to the user."
+		"DOTA_Tooltip_ability_item_hexagonal_crystal_bonus_mana_reg_percentage"		"%Chakra Regeneration: + "
+		"DOTA_Tooltip_ability_item_hexagonal_crystal_bonus_hp_reg_constant"			"Hp Regeneration: + "
+		"DOTA_Tooltip_ability_item_hexagonal_crystal_bonus_damage"					"Attack Damage: + "
+
+		//Rengeki - Bashosen
+    	"DOTA_Tooltip_ability_item_bashosen"										"Bashosen"
+    	"DOTA_Tooltip_ability_item_bashosen_Description"							"Active: Thunder Clap (Deals 200 magic damage to enemies within a radius of 250 while decreasing movement speed and attack speed by 30 for 3.5 seconds) - 10 Charges"
+		"DOTA_Tooltip_ability_item_bashosen_Lore"									"This oddly shaped trinket was given to Princess Koyuki as a key to turn the Land of Snow into the Land of Spring. It is from this function that the trinket is believed to give new life to the user."
+		"DOTA_Tooltip_ability_item_bashosen_bonus_mana_reg_percentage"				"%Chakra Regeneration: + "
+		"DOTA_Tooltip_ability_item_bashosen_bonus_int"								"Intelligence: + "
+		"DOTA_Tooltip_ability_item_bashosen_ms_slow"                                "Movement Speed Slow: "
+		"DOTA_Tooltip_ability_item_bashosen_attack_speed_slow"                      "Attack Speed Slow: "
+		"DOTA_Tooltip_modifier_bashosen_slow"										"Bashosen"
+		"DOTA_Tooltip_modifier_bashosen_slow_Description" 							"-30%% Movementspeed" 
+
+		//Giant Iron Fan
+    	"DOTA_Tooltip_ability_item_giant_iron_fan"									"Giant Iron Fan"
+		"DOTA_Tooltip_ability_item_giant_iron_fan_Lore"								"A target unit is swept up in a cyclone and made invulnerable for 2.5 seconds. Deals 50 damage on enemies upon landing."
+		"DOTA_Tooltip_ability_item_giant_iron_fan_Description"						"Active: Cyclone - A target unit is swept up in a cyclone and made invulnerable. Cyclone can be cast on yourself."
+		"DOTA_Tooltip_ability_item_giant_iron_fan_bonus_mana_reg_percentage"		"%Chakra Regeneration: +"
+		"DOTA_Tooltip_ability_item_giant_iron_fan_bonus_int"						"Intelligence: +"
+		"DOTA_Tooltip_ability_item_giant_iron_fan_movementspeed_percentage"			"%Movement speed: +"
+		"DOTA_Tooltip_modifier_storm_cyclone"										"Cyclone"
+		"DOTA_Tooltip_modifier_storm_cyclone_description"							"This Unit is disabled."
+
+		//Onbu's Paw - The Will of Fire
+    	"DOTA_Tooltip_ability_item_the_will_of_fire"								"The Will of Fire"
+		"DOTA_Tooltip_ability_item_the_will_of_fire_Lore"							"It is widely believed that inside every shinobi of Konoha lies The Will of Fire, a burning determination to protect one's home and people for generations to come."
+		"DOTA_Tooltip_ability_item_the_will_of_fire_bonus_str"						"Strength: +"
+		"DOTA_Tooltip_ability_item_the_will_of_fire_bonus_hp_reg_constant"			"Hp Regeneration: +"
+		"DOTA_Tooltip_ability_item_the_will_of_fire_bonus_hp"						"Hit Points: +"
+
+		//Demon Booster
+    	"DOTA_Tooltip_ability_item_demon_booster"									"Demon Booster"
+		"DOTA_Tooltip_ability_item_demon_booster_Lore"								"Trapped within this container lies the powers of the bijuu, a force that can be slightly utilized to gain an immense amount of energy."
+		"DOTA_Tooltip_ability_item_demon_booster_bonus_hp_reg_constant"				"Hp Regeneration: +"
+		"DOTA_Tooltip_ability_item_demon_booster_bonus_hp"							"Hit Points: +"
+		"DOTA_Tooltip_ability_item_demon_booster_bonus_mana_reg_percentage"			"%Chakra Regeneration: +"
+		"DOTA_Tooltip_ability_item_demon_booster_bonus_mana"						"Chakra: +"
+
+		//Reminisce
+    	"DOTA_Tooltip_ability_item_reminisce"										"Reminisce"
+    	"DOTA_Tooltip_ability_item_reminisce_description"							"Passive: Block - %block_chance%%% Chance to block %damage_block_melee% Damage as Melee Hero and %damage_block_ranged% Damage as Range Hero."
+		"DOTA_Tooltip_ability_item_reminisce_Lore"									"This artifact can recall past experiences to bring forth inner strength. By bringing out this inner power, the user's self-determination and endurance will rise to a whole new level."
+		"DOTA_Tooltip_ability_item_reminisce_bonus_hp_reg_constant"					"Hp Regeneration: +"
+		"DOTA_Tooltip_ability_item_reminisce_bonus_hp"								"Hit Points: +"
+
+		//Kaguya Armor
+    	"DOTA_Tooltip_ability_item_kaguya_armor"									"Kaguya Armor"
+    	"DOTA_Tooltip_ability_item_kaguya_armor_Description"						"Active: Damage Return - Returns any damage you take to the unit that dealt the damage.  Lasts %duration% seconds."
+		"DOTA_Tooltip_ability_item_kaguya_armor_Lore"								"Armor of the Rabbit Goddess, some things are best left untouched."
+		"DOTA_Tooltip_ability_item_kaguya_armor_bonus_armor"						"Armor: +"
+    	"DOTA_Tooltip_ability_item_kaguya_armor_bonus_damage"						"Attack Damage: +"
+    	"DOTA_Tooltip_ability_item_kaguya_armor_bonus_int"							"Intelligence: +"
+    	"Dota_Tooltip_kaguya_armor_return"											"Kaguya Armor"
+    	"Dota_Tooltip_kaguya_armor_return_description"								"Returns any damage you take to the unit that dealt the damage."
+
+    	//Trinity Booster
+    	"DOTA_Tooltip_ability_item_trinity_booster"									"Trinity Booster"
+		"DOTA_Tooltip_ability_item_trinity_booster_Lore"							"Once the powers of all three boosters have been combined, a powerful relic called the 'Trinity Booster' is born."
+		"DOTA_Tooltip_ability_item_trinity_booster_bonus_mana_reg_percentage"		"%Chakra Regeneration: +"
+		"DOTA_Tooltip_ability_item_trinity_booster_bonus_hp"						"Hit Points: +"
+		"DOTA_Tooltip_ability_item_reminisce_bonus_hp_reg_constant"					"Hp Regeneration: +"
+		"DOTA_Tooltip_ability_item_trinity_booster_bonus_mana"						"Intelligence: +"
+
+		//Hokage Armor
+    	"DOTA_Tooltip_ability_item_hokage_armor"									"Hokage Armor"
+    	"DOTA_Tooltip_ability_item_hokage_armor_Description"						"Passive:  Assault Aura - Increases attack speed by %as_aura%%% and armor by %armor_aura%%% to nearby allied units, and decreases armor by %minus_armor_aura%%% for nearby enemies in %minus_radius% AOE.\n\nMultiple instances of Assault Aura do not stack."
+		"DOTA_Tooltip_ability_item_hokage_armor_Lore"								"The iconic armor of the Third Hokage bears a striking resemblance to the appearence and protection of a Samurai's attire."
+		"DOTA_Tooltip_ability_item_hokage_armor_bonus_armor"						"Armor: +"
+    	"DOTA_Tooltip_ability_item_hokage_armor_attackspeed"						"Bonus Attackspeed: +"
+    	"DOTA_Tooltip_item_hokage_armor_aura_enemy"									"Hokage Armor"
+    	"DOTA_Tooltip_item_hokage_armor_aura_enemy_description"						"-5 Armor"
+    	"DOTA_Tooltip_item_hokage_armor_aura"										"Hokage Armor"
+    	"DOTA_Tooltip_item_hokage_armor_aura_description"							"+5 Armor\n+15%% Attackspeed"
+
+    	//Gelel Stone
+    	"DOTA_Tooltip_ability_item_gelel_stone"										"Gelel Stone"
+    	"DOTA_Tooltip_ability_item_gelel_stone_Description"							"Active: Avatar - Grants Spell Immunity and 100% Magic Damage Resistance for %duration% seconds.  Some Ultimate abilities are able to disable through Black King Bar."
+		"DOTA_Tooltip_ability_item_gelel_stone_Lore"								"The Gelel Stone is a powerful relic that can grant any user powers beyond their wildest dreams."
+		"DOTA_Tooltip_ability_item_gelel_stone_bonus_str"							"Strength: +"
+    	"DOTA_Tooltip_ability_item_gelel_stone_bonus_damage"						"Attack Damage: +"
+    	"DOTA_Tooltip_modifier_item_black_king_bar_datadriven_active"				"Gelel Stone - Avatar"
+    	"DOTA_Tooltip_modifier_item_black_king_bar_datadriven_active_description"	"This Unit is spell immun and has 100% Magic Damage Resistance."
+
+    	//Haku's Overcoat
+    	"DOTA_Tooltip_ability_item_hakus_overcoat"									"Haku's Overcoat"
+    	"DOTA_Tooltip_ability_item_hakus_overcoat_Description"						"Active: Frost Armor - Creates a shield around you, which adds armor and slows attacking units. \n<font color='#FF7800'>The slow is triggered by any source of damage.</font>"
+		"DOTA_Tooltip_ability_item_hakus_overcoat_Lore"								"The coat of the mysterious shinobi Haku has adapted to the user's unique Ice Release techniques, to the point that it emits a freezing aura of its own. "
+		"DOTA_Tooltip_ability_item_hakus_overcoat_bonus_armor"						"Armor: +"
+    	"DOTA_Tooltip_ability_item_hakus_overcoat_bonus_int"						"Intelligence: +"
+    	"DOTA_Tooltip_hakus_overcoat_aura"											"Haku's Overcoat"
+    	"DOTA_Tooltip_hakus_overcoat_aura_description"								"-25%% Attackspeed"
+    	"DOTA_Tooltip_modifier_frost_armor_slow"									"Haku's Overcoat - Frost Armor"
+    	"DOTA_Tooltip_modifier_frost_armor_slow_description"						"-20%% Attackspeed\n-30%% Movementspeed"
+    	"DOTA_Tooltip_modifier_frost_armor"											"Haku's Overcoat - Frost Armor"
+    	"DOTA_Tooltip_modifier_frost_armor_description"								"+3 Armor"
+
+    	//Chakra Armor
+    	"DOTA_Tooltip_ability_item_chakra_armor"									"Chakra Armor"
+		"DOTA_Tooltip_ability_item_chakra_armor_Lore"								"Chakra Armor is a unique type of armor that absorbs chakra from ninjutsu and genjutsu while at the same time amplifying the wearer's chakra."
+		"DOTA_Tooltip_ability_item_chakra_armor_Description"						"Spellblock - Passively blocks most targeted spells once every 17 seconds. Can be cast on an allied unit to temporarily transfer the buff."
+		"DOTA_Tooltip_ability_item_chakra_armor_bonus_str"							"Strength: +"
+		"DOTA_Tooltip_ability_item_chakra_armor_bonus_int"							"Intelligence: +"
+		"DOTA_Tooltip_ability_item_chakra_armor_bonus_agi"							"Agility: +"
+		"DOTA_Tooltip_ability_item_chakra_armor_bonus_mana_reg_percentage"			"%Chakra Regeneration: +"
+		"DOTA_Tooltip_ability_item_chakra_armor_bonus_hp_reg_constant"				"Hp Regeneration: +"
+
+		//Flak Jacket
+    	"DOTA_Tooltip_ability_item_flak_jacket"										"Flak Jacket"
+		"DOTA_Tooltip_ability_item_flak_jacket_Lore"								"A form of protective clothing for shinobi, designed specifically to provide protection from jutsus."
+		"DOTA_Tooltip_ability_item_flak_jacket_bonus_hp_reg_constant"				"Hp Regeneration: +"
+		"DOTA_Tooltip_ability_item_flak_jacket_magic_resis"							"%Spell Reduction: +"
+
+		//Twin-Fangs Of Abyss
+    	"DOTA_Tooltip_ability_item_twin_fangs_of_abyss"								"Twin-Fangs Of Abyss"
+    	"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_Description"				"Passive: Greater Maim - %maim_chance%%% chance to slow %maim_slow_movement%%% Movementspeed and %maim_slow_attack% Attackspeed for %maim_duration% seconds."
+		"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_Lore"						"A weapon of mystery... created through combining two of the three bladed weapons into a single two bladed weapon. The powers the remaining blades have been combined into the vicious resulting weapon."
+		"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_bonus_damage"				"Attack Damage: +"
+		"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_bonus_str"					"Strength: +"
+		"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_bonus_agi"					"Agility: +"
+		"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_attackspeed"					"Bonus Attackspeed: +"
+		"DOTA_Tooltip_ability_item_twin_fangs_of_abyss_movementspeed_percentage"	"Movement Percentage: +"
+
+		//Jashin's Amulet
+    	"DOTA_Tooltip_ability_item_jashins_amulet"									"Jashin's Amulet"
+    	"DOTA_Tooltip_ability_item_jashins_amulet_description"						"Active: Unholy Rage - Grants 175%% Lifesteal for 3.5 seconds."
+		"DOTA_Tooltip_ability_item_jashins_amulet_Lore"								"An amulet of the evil god Jashin, his followers hope to bring marvelous pain and death upon the world."
+		"DOTA_Tooltip_ability_item_jashins_amulet_bonus_damage"						"Attack Damage: +"
+		"DOTA_Tooltip_ability_item_jashins_amulet_bonus_str"						"Strength: +"
+		"DOTA_Tooltip_ability_item_jashins_amulet_bonus_armor"						"Armor: +"
+    	"DOTA_Tooltip_ability_item_jashins_amulet_bonus_lifesteal"					"Lifesteal: +"
+    	"DOTA_Tooltip_modifier_item_jashin_unholy_rage"								"Unholy Rage"
+    	"DOTA_Tooltip_modifier_item_jashin_unholy_rage_description"					"+150%% Lifesteal"
+
+		//Ikazuchi
+    	"DOTA_Tooltip_ability_item_ikazuchi"										"Ikazuchi"
+    	"DOTA_Tooltip_ability_item_ikazuchi_Description"							"Passive: Chain Lightning - Grants a %lightning_chance%%% chance on attack to release a Chain Lightning that hits %lightning_bounces% targets, dealing %lightning_damage% damage.\n\nIkazuchi is a Unique Attack Modifier that stacks with other Unique Attack Modifiers, but overrides them when Chain Lightning occurs. "
+		"DOTA_Tooltip_ability_item_ikazuchi_Lore"									"Ikazuchi is the name given to the two swords of Kurosuki Raiga, one of the 7 Swordsmen of the Mist. Their power allows the user to use Lightning Release techniques at their disposal."
+		"DOTA_Tooltip_ability_item_ikazuchi_bonus_damage"							"Attack Damage: +"
+		"DOTA_Tooltip_ability_item_ikazuchi_attackspeed"							"Bonus Attackspeed: +"
+
+		//Lunar Sword
+    	"DOTA_Tooltip_ability_item_lunar_sword"										"Lunar Sword"
+		"DOTA_Tooltip_ability_item_lunar_sword_Description"							"Passive: Cold Attack - Attacks slow the movement and attack speed of the target.\n\nLunar Sword is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.  Lunar sword can be combined with Lifesteal Attack Modifiers."
+		"DOTA_Tooltip_ability_item_lunar_sword_Lore"								"Forged with the power of the Blue Moon, this sword is able to freeze anything it touches."
+		"DOTA_Tooltip_ability_item_lunar_sword_bonus_str"							"Strength: +"
+		"DOTA_Tooltip_ability_item_lunar_sword_bonus_int"							"Intelligence: +"
+		"DOTA_Tooltip_ability_item_lunar_sword_bonus_agi"							"Agility: +"
+		"DOTA_Tooltip_ability_item_lunar_sword_bonus_hp"							"Hit Points: +"
+		"DOTA_Tooltip_ability_item_lunar_sword_bonus_mana"							"Chakra: +"
+		"DOTA_Tooltip_lunar_sword_slow"												"Lunar Sword"
+		"DOTA_Tooltip_lunar_sword_slow_description"									"-20%% Movementspeed\n-25%% Attackspeed"
+
+		//Tri-Blades
+    	"DOTA_Tooltip_ability_item_tri_blades"										"Tri-Blades"
+    	"DOTA_Tooltip_ability_item_tri_blades_Description"							"Passive: Maim - %maim_chance%%% chance to slow %maim_movement_speed%%% Movementspeed and %maim_attack_speed% Attackspeed for %maim_duration% seconds."
+		"DOTA_Tooltip_ability_item_tri_blades_Lore"									"A weapon for shinobi who focus more on strength rather than speed, it can rip and slash enemies to great effect."
+		"DOTA_Tooltip_ability_item_tri_blades_bonus_str"							"Strength: +"
+		"DOTA_Tooltip_ability_item_tri_blades_bonus_damage"							"Attack Damage: +"
+
+		//Sarutobi's Helm
+    	"DOTA_Tooltip_ability_item_sarutobis_helm"									"Sarutobi's Helm"
+		"DOTA_Tooltip_ability_item_sarutobis_helm_Lore"								"This strange helm has been used by the Third Hokage Sarutobi Hiruzen for countless battles. It's increased protection may seem strange to most shinobi, but it can often mean the difference between life and death."
+		"DOTA_Tooltip_ability_item_sarutobis_helm_bonus_damage"						"Attack Damage: +"
+		"DOTA_Tooltip_ability_item_sarutobis_helm_bonus_armor"						"Armor: +"
+		"DOTA_Tooltip_ability_item_sarutobis_helm_lifesteal_bonus"					"Lifesteal: +"
+
+		//Poison Gauntlets
+    	"DOTA_Tooltip_ability_item_poison_gauntlets"								"Petrification Gauntlets"
+    	"DOTA_Tooltip_ability_item_poison_gauntlets_Description"					"Passive: Poison Attack - Poisons the target, dealing %damage_per_second% damage per second and decreasing %movespeed_slow%%% Movementspeed for %duration% seconds.\n\nPoison Gauntlets is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.  Poison Gauntlets can be combined with Lifesteal Attack Modifiers."
+		"DOTA_Tooltip_ability_item_poison_gauntlets_Lore"							"Recently, Kirigakure has begun to equip every new shinobi a pair of these special gauntlets. Those who use these gauntlets in combat can inflict upon their foes a deadly poison, slowing and damaging their victim overtime."
+		"DOTA_Tooltip_ability_item_poison_gauntlets_bonus_damage"					"Attack Damage: +"
+		"DOTA_Tooltip_ability_item_poison_gauntlets_attackspeed"					"Bonus Attackspeed: +"
+		"DOTA_Tooltip_modifier_orb_of_venom_wc3_debuff"								"Poison Gauntlets"
+		"DOTA_Tooltip_modifier_orb_of_venom_wc3_debuff_description"					"-30%% Movementspeed\n20 Damage per Second"
+
+
+		//Kusanagi
+    	"DOTA_Tooltip_ability_item_kusanagi"										"Kusanagi"
+		"DOTA_Tooltip_ability_item_kusanagi_Description"							"Passive: Corruption - Your attacks reduce target's armor for 15 seconds.\n\nDesolator is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers."
+		"DOTA_Tooltip_ability_item_kusanagi_Lore"									"The legendary sword that Orochimaru wields into battle, this powerful weapon is known to be the sharpest of all blades."
+		"DOTA_Tooltip_ability_item_kusanagi_bonus_damage"							"Attack Damage: +"
+		"DOTA_Tooltip_kusanagi_corruption"											"Kusanagi"
+		"DOTA_Tooltip_kusanagi_corruption_description"									"-6 Armor"
+
+		//Shuko
+    	"DOTA_Tooltip_ability_item_shuko"											"Shuko"
+		"DOTA_Tooltip_ability_item_shuko_Lore"										"A weapon for shinobi who focus more on speed rather than strength, it can slice and dice enemies at intense speeds."
+		"DOTA_Tooltip_ability_item_shuko_attackspeed"								"Bonus Attackspeed: +"
+		"DOTA_Tooltip_ability_item_shuko_bonus_agi"									"Agility: +"
+		"DOTA_Tooltip_ability_item_shuko_movementspeed_percentage"					"Movement Percentage: +"
+		"DOTA_Tooltip_item_shuko_ms_modifier"										"Shuko"
+		"DOTA_Tooltip_item_shuko_ms_modifier_description"							"+10%% Movementspeed"
+
+		//Raijin
+    	"DOTA_Tooltip_ability_item_raijin"											"Raijin"
+    	"DOTA_Tooltip_ability_item_raijin_Description"								"Passive: Chain Lightning - Grants a %lightning_chance%%% chance on attack to release a Chain Lightning that hits %lightning_bounces% targets, dealing %lightning_damage% damage.\n\nRaijin is a Unique Attack Modifier that stacks with other Unique Attack Modifiers, but overrides them when Chain Lightning occurs. "
+		"DOTA_Tooltip_ability_item_raijin_Lore"										"This energy based sword was once owned by Tobirama Senju, the Second Hokage. It's wielder is able to manipulate lightning in order to unleash devestating attacks upon their foes."
+		"DOTA_Tooltip_ability_item_raijin_attackspeed"								"Bonus Attackspeed: +"
+		"DOTA_Tooltip_ability_item_raijin_bonus_damage"								"Attack Damage: +"
+
+		//Nidaime's Helm
+    	"DOTA_Tooltip_ability_item_nidaimes_helm"									"Nidaime's Helm"
+    	"DOTA_Tooltip_ability_item_nidaimes_helm_Description"						"Active: Frenzy - Gives %frenzy_as% attack speed and %frenzy_ms%%% movement speed. Lasts %frenzy_duration% seconds.\nPassive: Lifesteal - Grants %lifesteal_bonus%%% lifesteal on attacks.\n\nNidaime's Helm is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers."
+		"DOTA_Tooltip_ability_item_nidaimes_helm_Lore"								"The Second Hokage Tobirama Senju wore a unique helm into battle, giving him a distinct appearance on the battlefield. Simply wearing the helm once owned by him inspires many to do great deeds in battle."
+		"DOTA_Tooltip_ability_item_nidaimes_helm_lifesteal_bonus"					"%Lifesteal:"
+		"DOTA_Tooltip_custom_frenzy"												"Frenzy"
+		"DOTA_Tooltip_custom_frenzy_description"									"+100%% Attackspeed\n+15%% Movementspeed"
+
+		//Chakra Smasher
+    	"DOTA_Tooltip_ability_item_chakra_smasher"									"Chakra Smasher"
+		"DOTA_Tooltip_ability_item_chakra_smasher_Description"						"Active: Purge - Purges a target unit, removing its buffs, and slowing it. Instantly kills summoned units.\nPassive: Manabreak - Your attacks burn %mana_per_hit_heroes% mana and deal the same amount in physical damage. Does not stack with other manabreak abilities."
+		"DOTA_Tooltip_ability_item_chakra_smasher_Lore"								"Long ago, the Raikage of Kumogakure owned a powerful war hammer charged with his own immense chakra. The weapon soon became too powerful, and was said to have been sealed away deep inside the mountains."
+		"DOTA_Tooltip_ability_item_chakra_smasher_bonus_agi"						"Agility: +"
+		"DOTA_Tooltip_ability_item_chakra_smasher_bonus_int"						"Intelligence: +"
+		"DOTA_Tooltip_chakra_smasher_purge"											"Chakra Smasher"
+		"DOTA_Tooltip_chakra_smasher_purge_description"								"-50%% Movementspeed"
+
+		//Amenonuhoko - Sword of Nunoboko
+    	"DOTA_Tooltip_ability_item_sword_of_nunoboko"								"Sword of Nunoboko"
+    	"DOTA_Tooltip_ability_item_sword_of_nunoboko_description"					"Drops upon death."
+		"DOTA_Tooltip_ability_item_sword_of_nunoboko_Lore"							"A legendary weapon, said to be used by the Sage of the Six Paths when shaping the world."
+		"DOTA_Tooltip_ability_item_sword_of_nunoboko_bonus_damage"					"Attack Damage: + "
+
+		//Conch Shell Mace
+    	"DOTA_Tooltip_ability_item_conch_shell_mace"								"Conch Shell Mace"
+    	"DOTA_Tooltip_ability_item_conch_shell_mace_Description"					"Passive: Pierce - Grants a 35%% chance to deal 100 bonus damage.\nPassive: True Strike - Prevents your attacks from missing. True Strike does not work when attacking enemy structures."
+		"DOTA_Tooltip_ability_item_conch_shell_mace_Lore"							"Kotetsu's signature mace is riddled with sharp protusions all across its surface. This grants the weapon a great amount of destructive power, creating impacts that can be felt even after dodging the main attack."
+		"DOTA_Tooltip_ability_item_conch_shell_mace_bonus_damage"					"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_conch_shell_mace_attackspeed"					"Bonus Attack Speed: + "
+
+		//Silver Hands
+    	"DOTA_Tooltip_ability_item_silver_hands"									"Silver Hands"
+    	"DOTA_Tooltip_ability_item_silver_hands_description"						"Passive: Cleave - Deals %aoe_damage_percent% %% of attack damage in an area around the target. Ranged units cannot Cleave."
+    	"DOTA_Tooltip_ability_item_silver_hands_Lore"								"Once the Silver Watches have been smelted into a glove, a divine power will be awakened, one which will be able to crush those who fall prey to this metallic glove."
+		"DOTA_Tooltip_ability_item_silver_hands_bonus_damage"						"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_silver_hands_bonus_hp_reg_constant"				"Hp Regeneration: + "
+		"DOTA_Tooltip_ability_item_silver_hands_bonus_mana_regen_percentage"		"%Chakra Regeneration: + "
+		
+		//Solar Blade
+    	"DOTA_Tooltip_ability_item_solar_blade"										"Solar Blade"
+    	"DOTA_Tooltip_ability_item_solar_blade_Description"							"Passive: Fire - Deals %aoe_damage% damage per second and blinds enemies in a %radius% radius."	
+		"DOTA_Tooltip_ability_item_solar_blade_Lore"								"Forged with the power of the Red Sun, this sword can burn anything it touches into ashes."
+		"DOTA_Tooltip_ability_item_solar_blade_bonus_damage"						"Attack Damage: + "
+		"DOTA_Tooltip_solar_blade_aoe_dmg"											"Fire"
+		"DOTA_Tooltip_solar_blade_aoe_dmg_description"								"Enemy Units lose 40 HP per second in 500 AOE."
+
+		//Gale Blade
+    	"DOTA_Tooltip_ability_item_gale_blade"										"Gale Blade"
+		"DOTA_Tooltip_ability_item_gale_blade_Lore"									"Made from the leaves of Konoha and the metal of Imagakure, the Gale Blade is a special weapon and a unique combination of the two nation's heritages."
+		"DOTA_Tooltip_ability_item_gale_blade_bonus_damage"							"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_gale_blade_crit_bonus"							"%Critical Damage: "
+		"DOTA_Tooltip_ability_item_gale_blade_crit_chance"							"%Critical Chance: "
+
+		//Iron Crow
+    	"DOTA_Tooltip_ability_item_iron_crow"										"Iron Crow"
+    	"DOTA_Tooltip_ability_item_iron_crow_Description"							"Passive: Bash - Gives a %bash_chance%%% chance to stun for %bash_duration% seconds."
+		"DOTA_Tooltip_ability_item_iron_crow_Lore"									"The Iron Crow was an old weapon that was first used during the Second Shinobi Wars. Its main advantage came from its ability to overcome a foe with a single blow, disabling the target completely."
+		"DOTA_Tooltip_ability_item_iron_crow_bonus_damage"							"Attack Damage: + "
+		"DOTA_Tooltip_ability_item_iron_crow_bonus_str"								"Strength: + "
+		"DOTA_Tooltip_iron_crow_bash"												"Iron Crow"
+		"DOTA_Tooltip_iron_crow_bash_description"									"This Unit is stunned."
+
+		//Probagation
+    	"DOTA_Tooltip_ability_item_probagation"										"Scroll of Seals"
+    	"DOTA_Tooltip_ability_item_probagation_Description"							"Active: Mirror Image - Creates 3 images of your hero that last 20 seconds.\n\nMelee images deal tbd%% damage and take tbd%% damage, while Ranged images deal tbd%% and take tbd%% damage.\n"
+		"DOTA_Tooltip_ability_item_probagation_Note0"								"Has a 0.1 second cast time during which you are invulnerable."
+		"DOTA_Tooltip_ability_item_probagation_Note1"								"Many effects are removed upon using Probagation."
+		"DOTA_Tooltip_ability_item_probagation_Lore"								"Seen by only a few select eyes, this old weapon was once used by the Hyuuga clan during the First Shinobi Wars. Since then, this weapon has been sealed into the earth, waiting to be used once again."
+		"DOTA_Tooltip_ability_item_probagation_bonus_str"							"Strength: + "
+		"DOTA_Tooltip_ability_item_probagation_bonus_int"							"Intelligence: + "
+		"DOTA_Tooltip_ability_item_probagation_bonus_agi"							"Agility: + "
+		"DOTA_Tooltip_ability_item_probagation_movementspeed_percentage"			"%Movement Speed: + "
+    	"DOTA_Tooltip_ability_item_probagation_attackspeed"							"Bonus Attack Speed: + "
+
+    	//Assassin's Cloak
+    	"DOTA_Tooltip_ability_item_assassins_cloak"									"Akatsuki Cloak"
+		"DOTA_Tooltip_ability_item_assassins_cloak_Lore"							"In the shinobi world, the use of stealth is the difference between being the assassin or the assassinated. With this dark cloak, the user can strike in silence, delivering a decisive blow when the time is just right."
+    	"DOTA_Tooltip_ability_item_assassins_cloak_bonus_attack_speed"				"Bonus Attack Speed: + "
+    	"DOTA_Tooltip_ability_item_assassins_cloak_bonus_damage"					"Attack Damage: + "																		
+    	"DOTA_Tooltip_ability_item_assassins_cloak_Description"						"Active: Shadow Walk - Makes you invisible for %invis_duration% seconds or until you next attack or cast a spell. While invisible, you will have %invis_night_vision% extra night vision and can move %invis_ms%%% faster with the ability to walk through units and terrain. If attacking to break invisibility, you will gain %invis_damage% bonus damage on that attack. Upon taking hero-based damage, you will lose terrain ignoring capability for 2 seconds."
+		"DOTA_Tooltip_ability_item_assassins_cloak_Note0"							"Has a 0.3 second fade time."
+		"DOTA_Tooltip_ability_item_assassins_cloak_Note1"							"If the invisibility ends without attacking, the bonus damage is lost."
+		"DOTA_Tooltip_ability_item_assassins_cloak_note2"							"Backstab cannot miss."
+		"DOTA_Tooltip_modifier_item_assassins_cloak_invis"							"Shadow Walk"
+		"DOTA_Tooltip_modifier_item_assassins_cloak_invis_Description"				"Invisible, phased, gaining bonus night vision, movespeed, and backstab damage."
+
+    	//Ragnorok - Kurosawa 
+    	"DOTA_Tooltip_ability_item_kurosawa"										"Kurosawa"
+		"DOTA_Tooltip_ability_item_kurosawa_Lore"									"This blade was once wielded by the samurai Mifune, one of the greatest warriors to have ever lived. Its ability to find and cut enemy weakpoints is un-paralleled while in the right hands."
+    	"DOTA_Tooltip_ability_item_kurosawa_bonus_damage"							"Attack Damage: + "
+    	"DOTA_Tooltip_ability_item_kurosawa_crit_bonus"								"%Critical  Attack Damage: + "
+		"DOTA_Tooltip_ability_item_kurosawa_crit_chance"							"%Critical Chance: "
+    	
+    	//Good Guy's Suit
+    	"DOTA_Tooltip_ability_item_good_guys_suit"									"Good Guy's Sui"																	
+   		"DOTA_Tooltip_ability_item_good_guys_suit_description"						"Passive: Evasion - Grants %evasion_chance%%% chance to dodge an incoming attack."
+		"DOTA_Tooltip_ability_item_good_guys_suit_Lore"								"This... awkward looking green jump suit has proven to be surprisingly effective in combat. Its few users are known to be some of the strongest Taijutsu masters to have ever lived."
+    	"DOTA_Tooltip_ability_item_good_guys_suit_bonus_damage"						"Attack Damage: + "
+    	"DOTA_Tooltip_ability_item_good_guys_suit_bonus_agi"						"Agility: + "
+    	"DOTA_Tooltip_ability_item_good_guys_suit_attackspeed"						"Bonus Attack Speed: + "
+
+	}		
+}

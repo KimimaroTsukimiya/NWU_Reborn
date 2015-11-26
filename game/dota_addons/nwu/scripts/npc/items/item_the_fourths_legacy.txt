@@ -1,5 +1,6 @@
 "item_the_fourths_legacy"
-  {
+ {
+ 
     "ID"                      "1148"
     "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -11,7 +12,7 @@
     "AbilityCastAnimation"    "ACT_DOTA_DISABLED"
     "ItemQuality"             "rare"
 
-      // Time   
+	// Time   
     //-------------------------------------------------------------------------------------------------------------
     "AbilityChannelTime"      "3.0 3.0 3.0"
 
@@ -30,73 +31,12 @@
     "MaxUpgradeLevel"           "1"
     "ItemBaseLevel"             "1"
     "ItemAliases"               "boots of travel;active;teleport;ms;movementspeed"
-    "OnSpellStart"
-        {
-            "RunScript"
-            {
-              "ScriptFile"  "items/the_fourths_legacy.lua"
-              "Function"    "Teleport"
-            }
-        }
-
-    //pickup sounds
+	
+	//pickup sounds
     "UIPickupSound" "Item.PickUpRingShop" //Sound when adquiring the item
     "UIDropSound" "Item.DropRecipeShop" //Sound when dropping the item manually
 
-  "OnSpellStart"
-    {
-    "RunScript"
-    {
-      "ScriptFile"  "items/the_fourths_legacy.lua"
-      "Function"    "ChannelTeleport"
-      "Target"      "POINT"
-    }
-  }
-
-  "OnChannelFinish"
-  {
-    "RunScript"
-    {
-      "ScriptFile"  "items/the_fourths_legacy.lua"
-      "Function"    "FinishTeleport"
-      "Target"      "POINT"
-    }
-
-    "RunScript"
-    {
-      "ScriptFile"  "items/the_fourths_legacy.lua"
-      "Function"    "removeModifierOnTarget"
-      "modifier_name" "modifier_stunned"
-      "Target"      "POINT"
-    }
-  }
-
-  "OnChannelInterrupted"
-  {
-    "RunScript"
-    {
-      "ScriptFile"  "items/the_fourths_legacy.lua"
-      "Function"    "removeModifierOnTarget"
-      "modifier_name" "modifier_stunned"
-      "Target"      "POINT"
-    }
-  }
-
-    "Modifiers"
-    {
-
-      "item_the_fourths_legacy_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_NONE"
-         "Properties"
-          {
-              "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
-          }
-      }
-    }
-    // Special  
+	// Special  
     //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"
     {
@@ -106,5 +46,41 @@
         "movementspeed"                     "95.0"
       }
     }
-  }
+	
+	"OnSpellStart"
+    {
+		"RunScript"
+		{
+			"ScriptFile"  "items/the_fourths_legacy.lua"
+			"Function"    "ChannelTeleport"
+			"Target"      "POINT"
+		}
+	}
+
+	"OnChannelFinish"
+	{
+		"RunScript"
+		{
+			"ScriptFile"  "items/the_fourths_legacy.lua"
+			"Function"    "FinishTeleport"
+			"Target"      "POINT"
+		}
+	}
+
+    "Modifiers"
+    {
+		"item_the_fourths_legacy_modifier"
+		{
+			"Passive" "1"
+			"IsHidden"  "1"
+			"Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movementspeed"
+			}
+		}
+    }
+
+}
 

@@ -37,20 +37,10 @@
 		}
 		"02"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"fade_time"					"0.25"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_damage"				"0"
-		}
-		"04"
-		{
 			"var_type"					"FIELD_INTEGER"
 			"illusion_duration"			"30"
 		}
-		"05"
+		"03"
        {
         "var_type"                               "FIELD_FLOAT"
         "illusion_outgoing_damage_percent"       "-75"
@@ -65,91 +55,31 @@
 	
 
 	"OnSpellStart"
-	{
-		"FireEffect"
-		{
-			//"EffectName"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_windwalk.vpcf"
-			//"Target"	"CASTER"
-			//"EffectAttachType"	"attach_origin"
-		}
-		"FireSound"
-		{
-			//"Target"	"CASTER"
-			//"EffectName"	"Hero_BountyHunter.WindWalk"
-		}
-
-		"ApplyModifier"
-	    {
-	      "ModifierName"    "kakashi_bunshin_illusion"
-	      "Target"      "CASTER"
-	    }
+	{	
 		"ApplyModifier"
 		{
 			"Target"	"CASTER"
-			"ModifierName"	"modifier_wind_walk_fade_datadriven"
+			"ModifierName"	"modifier_wind_walk_datadriven"
 		}
-
-		"DelayedAction"
+		"ApplyModifier"
 		{
-			"Delay"	"%fade_time"
-
-			"Action" 
-			{
-				"ApplyModifier"
-				{
-					"Target"	"CASTER"
-					"ModifierName"	"modifier_wind_walk_datadriven"
-				}
-				"ApplyModifier"
-				{
-					"Target"	"CASTER"
-					"ModifierName"	"modifier_invisible"
-				}
-				"RunScript"
-				{
-					"ScriptFile"	"heroes/kakashi/bunshin.lua"
-					"Function"		"drawKakashi"
-				}
-			}  
+			"Target"	"CASTER"
+			"ModifierName"	"modifier_invisible"
+		}		
+		"RunScript"
+		{
+			"ScriptFile"      "heroes/kakashi/bunshin.lua"
+			"Function"        "ConjureImage"
+		}
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/kakashi/bunshin.lua"
+			"Function"		"drawKakashi"
 		}
 	}
 
 	"Modifiers"
 	{
-		"kakashi_bunshin_illusion"
-		    {
-		      "Duration"  "%illusion_duration"
-
-		      "OnCreated"
-		      {
-		        "RunScript"
-		        {
-		          "ScriptFile"      "heroes/kakashi/bunshin.lua"
-		          "Function"        "ConjureImage"
-		        }
-		      }
-
-		    }
-
-		"modifier_wind_walk_fade_datadriven"
-		{
-			"Duration"	"%fade_time"
-			"isBuff"	"1"
-			"EffectName"	"particles/generic_hero_status/status_invisibility_start.vpcf"
-			"EffectAttachType"	"follow_origin"
-
-			"OnAttackLanded"
-			{
-				
-				"Damage"
-				{
-					"Target"	"TARGET"
-					"Type"	"DAMAGE_TYPE_PHYSICAL"
-					"Damage"	"%bonus_damage"
-				}
-
-			}
-		}
 		"modifier_wind_walk_datadriven"
 		{
 			"Duration"	"%duration"
@@ -157,12 +87,6 @@
 
 			"OnAttackLanded"
 			{
-				"Damage"
-				{
-					"Target"	"TARGET"
-					"Type"	"DAMAGE_TYPE_PHYSICAL"
-					"Damage"	"%bonus_damage"
-				}
 				"RemoveModifier"
 				{
 					"Target"	"CASTER"
@@ -189,7 +113,6 @@
 				}
 			}
 
-
 			"States"
 			{
 				"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_ENABLED" 
@@ -209,7 +132,6 @@
 			}
 
 		}
-
 
 	}
 }

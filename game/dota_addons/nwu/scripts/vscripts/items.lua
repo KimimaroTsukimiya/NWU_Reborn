@@ -52,6 +52,54 @@ function GameMode:is_spell_blocked_by_chakra_armor(target)
 	return false
 end
 
+function GenericSpellFunction(event)
+	local modifier1 = event.Modifier1
+	local modifier2 = event.Modifier2
+	local doDamage = event.doDamage
+	local caster = event.caster
+	local target = event.target
+	local ability = event.ability
+	local ability_level = ability:GetLevel() - 1
+	
+	if modifier1 then
+		local duration1 = event.Duration1
+	
+		ability:ApplyDataDrivenModifier(
+			caster,
+			target,
+			modifier1,
+			{
+				duration = duration1
+			}
+		)
+	end
+	
+	if modifier2 then
+		local duration2 = event.Duration2
+	
+		ability:ApplyDataDrivenModifier(
+			caster,
+			target,
+			modifier2,
+			{
+				duration = duration2
+			}
+		)
+	end
+	
+	if doDamage then
+		local damage = ability:GetLevelSpecialValueFor("damage", ability_level)
+		ApplyDamage({
+			attacker = caster,
+			victim = target,
+			ability = ability,
+			damage = damage,
+			damage_type = ability:GetAbilityDamageType(),
+			ability=ability
+		})
+	end
+end
+
 --[[
 	Author: Mognakor
 	Test function for simple Linkens
@@ -60,16 +108,21 @@ function CheckForSpellBlock(event)
 	local filePath = event.filePath
 	local functionName = event.functionName
 	
-	if( GameMode:is_spell_blocked_by_chakra_armor(event.target) )then
-		print("spellblocked")
+	if( not(event.target:IsMagicImmune()) or event.PierceMagicImmune)then		
+		if( GameMode:is_spell_blocked_by_chakra_armor(event.target) )then
+			return
+		end
+	else
 		return
 	end
 	
-	print("path "..filePath)
-	print("function "..functionName)
-	require(filePath)
+	if event.GenericFunction ~= nil then
+		_G[event.GenericFunction](event);
+		return;
+	end
 	
-	_G[functionName](event);
-
-	print("success")
+	if filePath and functionName then
+		require(filePath)
+		_G[functionName](event);
+	end
 end
