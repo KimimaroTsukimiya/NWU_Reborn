@@ -10,6 +10,7 @@
     {
         "soundfile" "sounds/weapons/hero/storm_spirit/ball_orchid_01.vsnd"
         "particle"  "particles/units/heroes/sasuke/chidori_nagashi.vpcf"
+        "particle"  "particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
     }
 
     "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
@@ -34,24 +35,19 @@
 
     "OnSpellStart"
     {    
-        //"FireEffect"
-        //{
-        //    "EffectName"        "particles/units/heroes/sasuke/chidori_nagashi.vpcf"
-        //    "EffectAttachType"  "follow_origin"
-        //    "EffectRadius"      "%radius"
-        //    "Target"            "CASTER"
-        //    "ControlPoints"
-        //    {
-        //        "01"    "%radius 0 %radius"
-        //    }
-        //}
-
-        "ApplyModifier"
+        "FireEffect"
         {
-            "Target"    "CASTER"
-            "ModifierName"  "modifier_chidori_nagashi_effect"
-            "Duration"  "1"
+            "EffectName"        "particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
+            "EffectAttachType"  "follow_origin"
+            "Target"            "CASTER"
+            "Radius"            "%radius"
         }
+
+        //"ApplyModifier"
+        //{
+        //    "Target"    "CASTER"
+        //    "ModifierName"  "modifier_chidori_nagashi_effect"
+        //}
         
         "FireSound"
         {
@@ -84,16 +80,12 @@
     "modifier_chidori_nagashi_effect"
     {
         "Duration" "1"
-        "States"
-        {
-            "MODIFIER_STATE_NO_HEALTH_BAR" "MODIFIER_STATE_VALUE_ENABLED"
-        }
         "OnCreated" 
         {
             "AttachEffect"
             {
                 "Target" "CASTER"
-                "EffectName" "particles/units/heroes/sasuke/chidori_nagashi.vpcf"
+                "EffectName" "particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
                "EffectAttachType" "follow_origin"
                "EffectRadius"   "%radius"
             }

@@ -1,0 +1,93 @@
+"sasuke_kirin"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"              "ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"     "sasuke_kirin"
+
+    "precache"
+    {
+        "soundfile" "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
+        "particle"  "particles/units/heroes/hero_zuus/zuus_lightning_bolt.vpcf"
+        "particle"  "particles/units/heroes/hero_kunkka/kunkka_spell_torrent_splash.vpcf"
+    }
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_ULTIMATE"
+    "MaxLevel"               "3"
+    "AbilityCastPoint"       "1.25"
+    "AbilityCooldown"        "20 10 0"
+    "AbilityManaCost"        "300 400 500"
+    "AbilityCastRange"       "1000 1500 2500"
+    "AbilityDamage"          "150 250 350"
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "radius" "400"
+        }
+    }
+
+    "OnAbilityPhaseStart"
+    {
+        "FireSound"
+        {
+            "EffectName"    "Hero_Zuus.GodsWrath.PreCast"
+            "Target"        "CASTER"
+        }
+    }
+
+    "OnSpellStart"
+    {
+        "FireSound"
+        {
+            "EffectName"    "Hero_Zuus.GodsWrath.Target"
+            "Target"        "CASTER"
+        }
+
+        "FireEffect"
+        {
+            "Target"                "CASTER"
+            "EffectName"            "particles/units/heroes/hero_zuus/zuus_lightning_bolt.vpcf"
+            "EffectAttachType"      "start_at_customorigin"
+            "EffectRadius"          "%radius"
+            "ControlPoints"
+            {
+                "00"                "POINT"
+                "01"                "POINT"
+            }
+        }
+    
+        "ActOnTargets"
+        {
+            "Target"
+            {
+                "Center"            "POINT"
+                "Radius"            "%radius"
+                "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+            
+            "Action"
+            {
+                "Damage"
+                {
+                    "Target"            "TARGET"
+                    "Damage"            "%AbilityDamage"
+                    "Type"              "DAMAGE_TYPE_MAGICAL"
+                }
+            }
+        }
+                
+        "RunScript"
+        {
+            "ScriptFile"                "heroes/sasuke/kirin.lua"
+            "Function"                  "kirin_teleport"
+            "Target"                    "POINT"
+        }
+    }
+}

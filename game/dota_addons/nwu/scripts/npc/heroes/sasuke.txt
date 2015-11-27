@@ -4,8 +4,8 @@
 		  "Model" 			"models/sasuke/sasuke.vmdl"
 		  "Ability1"        "sasuke_chidori_nagashi"
 		  "Ability2"        "sasuke_chidori_eiso" 
-		  "Ability3"        "sasuke_chidori_koken" 
-		 // "Ability4"        "madara_meteor"
+		  //"Ability3"        "sasuke_chidori_koken" 
+		  "Ability4"        "sasuke_kirin"
 			
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
