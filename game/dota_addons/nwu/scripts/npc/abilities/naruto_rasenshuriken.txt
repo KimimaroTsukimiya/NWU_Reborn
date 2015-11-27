@@ -3,6 +3,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_datadriven"
+	"AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -27,11 +28,11 @@
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	"AbilityCastPoint"				"0.3 0.3 0.3"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"13.0"
+	"AbilityCooldown"				"65.0"
 
 	// Damage.
 	//-------------------------------------------------------------------------------------------------------------
@@ -39,7 +40,7 @@
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"140"
+	"AbilityManaCost"				"150 200 250"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------

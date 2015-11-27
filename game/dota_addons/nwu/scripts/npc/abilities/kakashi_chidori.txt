@@ -68,8 +68,6 @@
             }
         }
 
-
-
         "OnAbilityPhaseStart"
         {
 

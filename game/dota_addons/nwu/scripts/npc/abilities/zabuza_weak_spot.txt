@@ -65,12 +65,7 @@
 					"ScriptFile"	"heroes/zabuza/weak_spot.lua"	
 					"Function"		"weak_spot"
 				}
-
-
 			}
-
 		}
-
 	}
-
 }
