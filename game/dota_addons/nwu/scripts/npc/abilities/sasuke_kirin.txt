@@ -30,6 +30,7 @@
             "var_type"  "FIELD_INTEGER"
             "radius" "400"
         }
+
     }
 
     "OnAbilityPhaseStart"
@@ -47,19 +48,6 @@
         {
             "EffectName"    "Hero_Zuus.GodsWrath.Target"
             "Target"        "CASTER"
-        }
-
-        "FireEffect"
-        {
-            "Target"                "CASTER"
-            "EffectName"            "particles/units/heroes/hero_zuus/zuus_lightning_bolt.vpcf"
-            "EffectAttachType"      "start_at_customorigin"
-            "EffectRadius"          "%radius"
-            "ControlPoints"
-            {
-                "00"                "POINT"
-                "01"                "POINT"
-            }
         }
     
         "ActOnTargets"
@@ -88,6 +76,8 @@
             "ScriptFile"                "heroes/sasuke/kirin.lua"
             "Function"                  "kirin_teleport"
             "Target"                    "POINT"
+
+            "particle"                  "particles/units/heroes/hero_zuus/zuus_lightning_bolt.vpcf"
         }
     }
 }

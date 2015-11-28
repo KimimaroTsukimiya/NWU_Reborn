@@ -37,18 +37,10 @@
     {    
         "FireEffect"
         {
-            "EffectName"        "particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
+            "EffectName"        "particles/units/heroes/sasuke/chidori_nagashi.vpcf"
             "EffectAttachType"  "follow_origin"
             "Target"            "CASTER"
-            "Radius"            "%radius"
         }
-
-        //"ApplyModifier"
-        //{
-        //    "Target"    "CASTER"
-        //    "ModifierName"  "modifier_chidori_nagashi_effect"
-        //}
-        
         "FireSound"
         {
             "EffectName"            "Hero_StormSpirit.Orchid_BallLightning"
@@ -73,23 +65,14 @@
                     "Type"      "DAMAGE_TYPE_MAGICAL"
                     "Damage"    "%aoe_damage"
                 }
+
+                "FireEffect"
+                {
+                    "EffectName"        "particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
+                    "EffectAttachType"  "follow_origin"
+                    "Target"            "TARGET"
+                }
             }
         }
-    }
-
-    "modifier_chidori_nagashi_effect"
-    {
-        "Duration" "1"
-        "OnCreated" 
-        {
-            "AttachEffect"
-            {
-                "Target" "CASTER"
-                "EffectName" "particles/units/heroes/hero_zuus/zuus_static_field.vpcf"
-               "EffectAttachType" "follow_origin"
-               "EffectRadius"   "%radius"
-            }
-
-        }      
     }
 }

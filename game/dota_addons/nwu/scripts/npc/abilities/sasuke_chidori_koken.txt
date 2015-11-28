@@ -9,9 +9,6 @@
 	"AbilityTextureName"			"chidori_koken"
 	
 	"AbilityDuration"				"0.6 0.6 0.6 0.6"
-	
-	// Damage
-	//-------------------------------------------------------------------------------------------------------------
 	"AbilityDamage"					"30 45 60 75"
 
 	// Stats
@@ -25,6 +22,32 @@
 		"soundfile"							"soundevents/game_sounds_heroes/game_sounds_stormspirit.vsndevts"
 		"particle"							"particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
 	}
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"aoe_radius"				"275"
+		}
+		
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"move_slow"					"-80"
+		}
+		
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"attack_slow"				"-50"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"tooltip_duration"			"0.6 0.6 0.6 0.6"
+		}
+	}
 	
 	"Modifiers"
 	{
@@ -32,7 +55,7 @@
 		{
 			"Passive"						"1"
 			"IsPurgable"					"0"
-			"IsHidden"						"0"
+			"IsHidden"						"1"
 			"IsBuff"						"1"
 			
 			"OnCreated"
@@ -45,10 +68,10 @@
 			}
 		}
 		
-		"modifier_overload_damage_datadriven"
+		"modifier_chidori_koken_damage_datadriven"
 		{
 			"IsPurgable"					"0"
-			"IsHidden"						"1"
+			"IsHidden"						"0"
 			
 			"OnCreated"
 			{
@@ -81,6 +104,14 @@
 			
 				"ActOnTargets"
 				{
+					"Target"
+					{
+						"Center"			"TARGET"
+						"Radius"			"%aoe_radius"
+						"Teams"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types"				"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_MECHANICAL"
+						"Flags"				"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+					}
 					
 					"Action"
 					{
@@ -90,14 +121,33 @@
 							"Damage"		"%AbilityDamage"
 							"Type"			"DAMAGE_TYPE_MAGICAL"
 						}
+						
+						"ApplyModifier"
+						{
+							"Target"		"TARGET"
+							"ModifierName"	"modifier_chidori_koken_debuff_datadriven"
+						}
 					}
 				}
 			
 				"RemoveModifier"
 				{
 					"Target"				"CASTER"
-					"ModifierName"			"modifier_overload_damage_datadriven"
+					"ModifierName"			"modifier_chidori_koken_damage_datadriven"
 				}
+			}
+		}
+
+		"modifier_chidori_koken_debuff_datadriven"
+		{
+			"IsDebuff"						"1"
+		
+			"Duration"						"%tooltip_duration"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%move_slow"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_slow"
 			}
 		}
 	}
