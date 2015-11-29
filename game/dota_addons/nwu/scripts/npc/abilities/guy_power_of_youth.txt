@@ -45,39 +45,6 @@
             "var_type" "FIELD_FLOAT"
             "max_stacks" "4"
         }
-        "03"
-        {
-            "var_type" "FIELD_FLOAT"
-            "duration" "5"
-        }
-        "04"
-        {
-            "var_type" "FIELD_FLOAT"
-            "bonus_attack_speed_start" "1"
-        }
-    }
-
-    "OnUpgrade"
-    {
-     "RemoveModifier"
-      {
-        "ModifierName"  "modifier_guy_power_of_youth_as_bonus"
-        "Target"     "CASTER"
-      }
-      "ApplyModifier"
-      {
-        "ModifierName"  "modifier_guy_power_of_youth_as_bonus"
-        "Target"     "CASTER"
-      }
-    }
-
-    "OnCreated"
-    {
-      "RunScript"
-      {
-        "ScriptFile"  "heroes/guy/power_of_youth.lua"
-        "Function"    "power_of_youth_initiate"
-      }
     }
 
     "Modifiers"
@@ -87,12 +54,13 @@
         "Passive" "1"
         "IsHidden"  "1"
 
-            "OnAttackLanded"
+          "OnAttack"
           {
             "RunScript"
             {
               "ScriptFile"  "heroes/guy/power_of_youth.lua"
               "Function"    "power_of_youth"
+			  "modifier"	"modifier_guy_power_of_youth_as_bonus"
             }
           }
       }
@@ -105,7 +73,7 @@
 
           "Properties"
           {
-            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed_start"
+            "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
           }
       }
     }
