@@ -38,12 +38,12 @@
 		"01"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"bonus_agility"		"20 35 50"		
+			"bonus_ms"			"10 20 30"		
 		}
 		"02"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"bonus_ms"			"10 15 20"		
+			"var_type"			"FIELD_FLOAT"
+			"base_attack_time"			"1.4 1.2 1.0"		
 		}
 	}
 
@@ -66,6 +66,12 @@
 		{
 			"ModifierName"	"modifier_guy_open_gates"
 			"Target"		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/guy/open_gates.lua"
+			"Function"		"openGates"
 		}
 	}
 
@@ -108,12 +114,20 @@
                     }
                 }
 			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/guy/open_gates.lua"
+					"Function"		"removeBAT"
+				}
+			}
 			
 
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%bonus_agility"
-				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%bonus_ms"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%bonus_ms"
 			}
 		}
 	}

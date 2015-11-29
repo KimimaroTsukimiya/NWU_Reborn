@@ -157,7 +157,7 @@
 		{
 			_class = "C_OP_ContinuousEmitter"
 			m_flEmitRate = 12.600000
-			m_flEmissionDuration = 4.000000
+			m_flEmissionDuration = 60.000000
 		},
 	]
 	m_flConstantLifespan = 3.000000
