@@ -84,13 +84,6 @@
         "modifier_fade"       "modifier_item_imba_shadow_blade_fade"
         "sound_cast"        "DOTA_Item.InvisibilitySword.Activate"
       }
-
-        "RunScript"
-        {
-          "ScriptFile"      "invis.lua"
-          "Function"        "attachEffects"
-          "duration"        "%invis_duration"
-        }
     }
 
     "Modifiers"
@@ -146,7 +139,6 @@
 
         "OnAbilityExecuted"
         {
-
           "RemoveModifier"
           {
             "ModifierName"    "modifier_item_imba_shadow_blade_invis"
@@ -157,12 +149,6 @@
               "Types"     "DOTA_UNIT_TARGET_HERO"
               "Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_OUT_OF_WORLD"
             }
-          }
-
-           "RunScript"
-          {
-            "ScriptFile"      "invis.lua"
-            "Function"        "removeEffects"
           }
         }
 
@@ -191,12 +177,6 @@
               "Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_OUT_OF_WORLD"
             }
           }
-
-           "RunScript"
-          {
-            "ScriptFile"      "invis.lua"
-            "Function"        "removeEffects"
-          }
         }
 
         "OnDestroy"
@@ -217,12 +197,6 @@
           {
             "ScriptFile"    "items/assassins_cloak.lua"
             "Function"      "ShadowBladeInvisCancel"
-          }
-
-           "RunScript"
-          {
-            "ScriptFile"      "invis.lua"
-            "Function"        "removeEffects"
           }
         }
 
