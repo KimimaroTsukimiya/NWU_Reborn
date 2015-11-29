@@ -5,6 +5,8 @@
 require('items')
 -- music.lua, relevant functions to control the music each will player will listen to/not listen to
 require('music')
+-- rescale.lua, relevant functions rescale the model sizes
+require('rescale')
 
 --cheats.lua, includes functions which listen to chat inputs of the players
 if CHEATS_ACTIVATED then
@@ -29,6 +31,7 @@ function GameMode:OnNPCSpawned(keys)
     if npc:IsRealHero() then
       GameMode:RemoveWearables( npc )
     end
+    GameMode:RescaleUnit(npc)
 
 end
 

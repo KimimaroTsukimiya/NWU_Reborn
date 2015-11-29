@@ -16,6 +16,7 @@
 	  "particle"	"particles/generic_hero_status/status_invisibility_start.vpcf"
 	  "particle"	"particles/items_fx/chain_lightning.vpcf"
 	  "particle"	"particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+	  "particle"	"particles/units/heroes/invis/wyvern_winters_curse_buff.vpcf"
 	 }
 
 	// Time		
@@ -82,6 +83,13 @@
 			"ScriptFile"      "heroes/kakashi/bunshin.lua"
 			"Function"        "ConjureImage"
 		}
+		"RunScript"
+		{
+			"ScriptFile"      "invis.lua"
+			"Function"        "attachEffects"
+			"duration"        "%invis_duration"
+		}
+
 	}
 
 	"Modifiers"
@@ -103,6 +111,12 @@
 					"Target"	"CASTER"
 					"ModifierName"	"modifier_invisible"
 				}
+
+		           "RunScript"
+		          {
+		            "ScriptFile"      "invis.lua"
+		            "Function"        "removeEffects"
+		          }
 			}
 
 			"OnAbilityExecuted"
@@ -117,6 +131,12 @@
 					"Target"	"CASTER"
 					"ModifierName"	"modifier_invisible"
 				}
+
+           "RunScript"
+          {
+            "ScriptFile"      "invis.lua"
+            "Function"        "removeEffects"
+          }
 			}
 
 			"States"
@@ -135,6 +155,12 @@
 					}
 					"ModifierName"	"modifier_invisible"
 				}
+				
+           "RunScript"
+          {
+            "ScriptFile"      "invis.lua"
+            "Function"        "removeEffects"
+          }
 			}
 
 		}
@@ -184,6 +210,5 @@
             
 			}
 		}
-
 	}
 }
