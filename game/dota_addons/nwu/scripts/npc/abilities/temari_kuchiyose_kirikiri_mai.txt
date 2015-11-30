@@ -12,6 +12,8 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityTextureName"			""
 	"AbilityCastAnimation" 			"ACT_DOTA_CAST_TORNADO"
+	"FightRecapLevel"				"1"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	// Stats
 	//-------------------------------------------------------------------------------------------------------------
