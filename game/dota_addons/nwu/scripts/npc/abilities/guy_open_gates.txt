@@ -16,6 +16,7 @@
 		"particle"			"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
 		"particle"			"particles/status_fx/status_effect_gods_strength.vpcf"
 		 "particle"	"particles/addons_gameplay/lamp_flame_tintable.vpcf"
+		 "particle"			"particles/units/heroes/guy/wyvern_winters_curse_buff.vpcf"
 	}
 	
 	// Casting
@@ -67,6 +68,7 @@
 			"ModifierName"	"modifier_guy_open_gates"
 			"Target"		"CASTER"
 		}
+
 	}
 
 	"Modifiers"
@@ -104,6 +106,28 @@
                       "CASTER"    "attach_right_hand"
                     }
                 }
+
+                 "AttachEffect"
+	                {
+                    	"EffectName" "particles/units/heroes/guy/wyvern_winters_curse_buff.vpcf"
+                    	"EffectAttachType" "follow_origin"
+                    	"Target" "CASTER"
+                    	"ControlPointEntities"
+                   		{
+                      		"CASTER"    "attach_origin"
+                    	}
+                	}
+
+                	"AttachEffect"
+	                {
+                    	"EffectName" "particles/units/heroes/guy/wyvern_winters_curse_buff.vpcf"
+                    	"EffectAttachType" "follow_origin"
+                    	"Target" "CASTER"
+                    	"ControlPointEntities"
+                   		{
+                      		"CASTER"    "attach_hitloc"
+                    	}
+                	}
 			}
 
 			"Properties"
