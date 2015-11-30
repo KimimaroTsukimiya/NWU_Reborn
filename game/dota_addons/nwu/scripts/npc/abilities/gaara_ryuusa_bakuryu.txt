@@ -137,7 +137,7 @@
 
 				}
 
-				"ThinkInterval"		"0.5"
+				"ThinkInterval"		"0.45"
 
 				"OnIntervalThink"
 				{
