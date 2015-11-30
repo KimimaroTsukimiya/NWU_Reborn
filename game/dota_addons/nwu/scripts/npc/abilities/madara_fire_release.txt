@@ -15,6 +15,7 @@
 	"precache"
 	{
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
+		"soundfile"			"soundevents/madara_katon.vsndevts"
 		"particle"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
 		"particle"			"particles/addons_gameplay/pit_lava_blast.vpcf"
 	}
@@ -108,7 +109,7 @@
 	{
 		"FireSound"
 		{
-			"EffectName"			"Hero_Mirana.ArrowCast"
+			"EffectName"			"madara_katon"
 			"Target"				"CASTER"
 		}
 
