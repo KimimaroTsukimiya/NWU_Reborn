@@ -12,7 +12,7 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityDamage"					"120 190 260 330"
 	"AbilityCooldown"				"15"
-	"AbilityManaCost"				"140 150 160 170"
+	"AbilityManaCost"				"125 140 155 170"
 	"AbilityCastRange"				"600"
 	"AbilityCastPoint"				"0.3"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"

@@ -60,7 +60,7 @@
             {
               "ScriptFile"  "heroes/guy/power_of_youth.lua"
               "Function"    "power_of_youth"
-			  "modifier"	"modifier_guy_power_of_youth_as_bonus"
+			         "modifier"	"modifier_guy_power_of_youth_as_bonus"
             }
           }
       }

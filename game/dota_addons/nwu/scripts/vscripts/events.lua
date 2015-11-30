@@ -13,6 +13,17 @@ if CHEATS_ACTIVATED then
   require('cheats')
 end
 
+-- Cleanup a player when they leave
+function GameMode:OnDisconnect(keys)
+  DebugPrint('[BAREBONES] Player Disconnected ' .. tostring(keys.userid))
+  DebugPrintTable(keys)
+
+  local name = keys.name
+  local networkid = keys.networkid
+  local reason = keys.reason
+  local userid = keys.userid
+
+end
 
 -- The overall game state has changed
 function GameMode:OnGameRulesStateChange(keys)
