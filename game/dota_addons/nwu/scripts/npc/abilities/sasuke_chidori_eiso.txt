@@ -1,0 +1,63 @@
+"sasuke_chidori_eiso"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"              "ability_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"     "sasuke_chidori_eiso"
+
+    "precache"
+    {
+        "soundfile" "soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
+        "particle"  "particles/econ/items/razor/razor_punctured_crest/razor_static_link_beam_blade.vpcf"
+    }
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+    "AbilityCastPoint"       "0.2 0.2 0.2 0.2"
+    "AbilityCooldown"        "20"
+    "AbilityManaCost"        "100 110 120 130"
+    "AbilityCastRange"       "250"
+    "AbilityDamage"          "50 75 100 125"
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_FLOAT"
+            "stun_duration" "1 1.5 2 2.5"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "proj_speed"   "1250"
+        }
+        "03"
+        {
+            "var_type"  "FIELD_INTEGER"
+            "damage"    "50 75 100 125"
+        }
+    }
+
+    "OnSpellStart"
+    {    
+        "FireSound"
+        {
+            "EffectName"    "Ability.PlasmaFieldImpact"
+            "Target"        "CASTER"
+        }
+                
+        "RunScript"
+        {
+            "ScriptFile"                "heroes/sasuke/chidori_eiso.lua"
+            "Function"                  "chidori_eiso"
+            "Target"                    "TARGET"
+
+            "particle"                  "particles/units/heroes/hero_zuus/zuus_lightning_bolt.vpcf"
+        }
+    }
+}
