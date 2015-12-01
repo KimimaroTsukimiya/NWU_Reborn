@@ -351,8 +351,8 @@ CVattachmentList CVattachmentList_0
 				CVattachmentInfluence
 				{
 					string m_influenceName = "bone_handR"
-					float(3) m_vTranslationOffset = ( 0.000015, -0.000021, -34.162380 )
-					float(3) m_vRotationOffset = ( 0.000009, -0.000006, -0.000003 )
+					float(3) m_vTranslationOffset = ( -6.565941, -0.000018, -42.988846 )
+					float(3) m_vRotationOffset = ( 0.000009, -0.000006, -0.000020 )
 					float m_flWeight = 1.000000
 					bool m_bRoot = false
 				}

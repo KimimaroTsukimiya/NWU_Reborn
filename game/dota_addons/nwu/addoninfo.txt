@@ -1,12 +1,8 @@
 "AddonInfo"
 {
 "TeamCount" "10"
-  "maps"      "nwu dota"
+  "maps"      "dota"
   "IsPlayable"  "1"
-  "nwu"
-  {
-          "MaxPlayers"                    "8"
-  }
   "dota"
   {
           "MaxPlayers"                    "8"

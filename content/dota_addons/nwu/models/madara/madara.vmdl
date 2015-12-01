@@ -448,6 +448,36 @@ CVattachmentList CVattachmentList_0
 					bool m_bRoot = false
 				}
 			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_left_hand"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "hand l"
+					float(3) m_vTranslationOffset = ( 12.986145, -0.000002, -2.476639 )
+					float(3) m_vRotationOffset = ( -0.000000, 0.000000, -0.000020 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_right_hand"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "hand r"
+					float(3) m_vTranslationOffset = ( -11.095787, 0.000002, -2.949249 )
+					float(3) m_vRotationOffset = ( -0.000000, 0.000000, -0.000020 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
 		}
 	]
 }
