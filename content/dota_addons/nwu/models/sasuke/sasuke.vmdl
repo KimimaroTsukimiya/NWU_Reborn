@@ -62,7 +62,11 @@ CVModel CVModel_0
 	]
 	CVattachmentListReference[] m_pAttachmentLists = 
 	[
-		
+		CVattachmentListReference
+		{
+			CVattachmentList* m_pObject = &CVattachmentList_0
+			string m_sFileName = ""
+		}
 	]
 	CVanimGroupReference m_pAnimGroup = CVanimGroupReference
 	{
@@ -298,6 +302,74 @@ CVhitBoxSetList CVhitBoxSetList_0
 		}
 	]
 	string m_AutoCreateSetName = ""
+}
+
+CVattachmentList CVattachmentList_0
+{
+	string m_name = ""
+	CVattachment[] m_attachments = 
+	[
+		CVattachment
+		{
+			string m_name = "attach_left_hand"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "Bone_Arm2_L"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, -41.540253 )
+					float(3) m_vRotationOffset = ( -0.000000, 0.000000, -0.000011 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_hitloc"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "Bone_Chest"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_origin"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "m3bone_root"
+					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_right_hand"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "Bone_Arm2_R"
+					float(3) m_vTranslationOffset = ( 0.000015, 0.000006, -36.375664 )
+					float(3) m_vRotationOffset = ( 0.000006, -0.000000, 0.000003 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		}
+	]
 }
 
 CVanimGroup CVanimGroup_0

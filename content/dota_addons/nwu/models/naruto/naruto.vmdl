@@ -506,13 +506,28 @@ CVattachmentList CVattachmentList_0
 		},
 		CVattachment
 		{
-			string m_name = "attach_rasengan"
+			string m_name = "attach_right_hand"
 			CVattachmentInfluence[] m_influences = 
 			[
 				CVattachmentInfluence
 				{
 					string m_influenceName = "Bone_Rhand2"
 					float(3) m_vTranslationOffset = ( -9.228947, 0.000000, -40.695358 )
+					float(3) m_vRotationOffset = ( -0.000000, 0.000000, -0.000001 )
+					float m_flWeight = 1.000000
+					bool m_bRoot = false
+				}
+			]
+		},
+		CVattachment
+		{
+			string m_name = "attach_left_hand"
+			CVattachmentInfluence[] m_influences = 
+			[
+				CVattachmentInfluence
+				{
+					string m_influenceName = "Bone_Lhand"
+					float(3) m_vTranslationOffset = ( 3.358358, -0.000000, -24.088440 )
 					float(3) m_vRotationOffset = ( -0.000000, 0.000000, -0.000001 )
 					float m_flWeight = 1.000000
 					bool m_bRoot = false
