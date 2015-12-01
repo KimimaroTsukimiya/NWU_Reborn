@@ -83,11 +83,6 @@
 			"ScriptFile"      "heroes/kakashi/bunshin.lua"
 			"Function"        "ConjureImage"
 		}
-		"RunScript"
-		{
-			"ScriptFile"      "invis.lua"
-			"Function"        "attachEffects"
-		}
 
 	}
 

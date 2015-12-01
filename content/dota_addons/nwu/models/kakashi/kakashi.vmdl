@@ -891,7 +891,7 @@ CVanimGroup CVanimGroup_1
 			[
 				CActivity
 				{
-					string m_Name = "ACT_DOTA_CHANNEL_ABILITY_4"
+					string m_Name = "ACT_DOTA_CAST_ABILITY_5"
 					int m_nWeight = 1
 				}
 			]
