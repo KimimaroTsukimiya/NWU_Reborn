@@ -8,7 +8,6 @@
   "Ability4"        "anko_sojasosai_no_jutsu"      
   "ModelScale"		"0.80"
   "LoadoutScale"	"0.80" 
-  //"Model" 		"models/zabuza/zabuza.vmdl"
   "ItemSlots"
   { }
 

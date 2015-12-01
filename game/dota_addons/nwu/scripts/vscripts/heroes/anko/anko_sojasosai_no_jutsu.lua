@@ -34,10 +34,11 @@ function anko_sojasosai_no_jutsu( keys )
 	-- Apply Animation to Target
 
 	-- Apply damage to Self
-	caster:SetHealth(caster:GetHealth() - final_damage)
 
-	if (caster:GetHealth() <= 0) then
-		caster:Kill(caster, nil)
+	if (caster:GetHealth() - final_damage > 0) then
+		caster:SetHealth(caster:GetHealth() - final_damage)
+	elseif (caster:GetHealth() - final_damage <= 0) then
+		caster:Kill(ability, caster)
 	end
 
 	-- Apply Animation to Self

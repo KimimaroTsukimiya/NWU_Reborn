@@ -5,11 +5,11 @@
 {
 	// General
 	"BaseClass"						"ability_lua"
-	"AbilityTextureName"			"pudge_meat_hook"
+	"AbilityTextureName"			""
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"FightRecapLevel"				"1"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"ScriptFile"					"heroes/anko/anko_giant_snake.lua"	
 
 	// Precache
