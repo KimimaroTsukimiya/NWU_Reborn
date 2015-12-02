@@ -11,9 +11,13 @@
   "ItemSlots"
   { }
 
-  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
   "AttackAnimationPoint"		"0.4"
- // "AttackRate"				"1.0"
+
+  "AttackDamageMin"   "23"
+  "AttackDamageMax"   "23"
+  "AttackRate"    "1.700000"
+
   "AttackRange"				"100"
   "MovementSpeed"			"300"
   "AttributeBaseStrength" "17" // Base strength

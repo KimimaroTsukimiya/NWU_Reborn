@@ -10,6 +10,9 @@
 	// Unit attribute
 	"AttackRange"					"100"
 	
+	"AttackDamageMin"		"25"
+	"AttackDamageMax"		"25"
+	"AttackRate"		"1.700000"	
     // Movement
     //----------------------------------------------------------------
 	"MovementSpeed"					"295"

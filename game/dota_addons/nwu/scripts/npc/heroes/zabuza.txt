@@ -10,7 +10,9 @@
 		  "Model" 			"models/zabuza/zabuza.vmdl"
 	 	  "ItemSlots"
 	  	  { }
-
+		"AttackDamageMin"		"21"
+		"AttackDamageMax"		"21"
+		"AttackRate"		"1.700000"
 	  	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 		  "AttackAnimationPoint"		"0.4"
 		 // "AttackRate"				"1.0"

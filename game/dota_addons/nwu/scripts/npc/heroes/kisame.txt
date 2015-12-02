@@ -11,7 +11,9 @@
 			"LoadoutScale"		"0.65" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
+		  "AttackDamageMin"   "26"
+		  "AttackDamageMax"   "31"
+		  "AttackRate"    "1.700000"		  
 		  "AttackRange"				"128"
 		  "MovementSpeed"			"315"
 		  "AttributeBaseStrength" "22" // Base strength
