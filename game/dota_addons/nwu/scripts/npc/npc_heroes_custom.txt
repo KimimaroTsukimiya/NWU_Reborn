@@ -494,7 +494,7 @@
 		  "Ability1"         "shikamaru_kage_kubishibari"
 		  "Ability2"         "shikamaru_explosive_kunai" 
 		  "Ability3"         "shikamaru_meditation" 
-		  "Ability4"         "gaara_sabaku_taiso"
+		  "Ability4"         "shikamaru_kage_nui"
 		  "ModelScale"		"1.05"
 		"LoadoutScale"		"1.05" 
 
