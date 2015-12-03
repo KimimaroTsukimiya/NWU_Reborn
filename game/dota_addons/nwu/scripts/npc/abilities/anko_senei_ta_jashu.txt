@@ -13,7 +13,7 @@
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"FightRecapLevel"				"1"
-	"AbilityTextureName"			""
+	"AbilityTextureName"			"anko_senei_ta_jashu"
 	
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
