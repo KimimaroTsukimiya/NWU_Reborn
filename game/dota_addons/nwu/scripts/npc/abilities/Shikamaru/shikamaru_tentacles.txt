@@ -101,7 +101,7 @@
 			{
 				"RunScript"
 				{
-					"ScriptFile"	"heroes/hero_shikamaru/kage_nui.lua"
+					"ScriptFile"	"heroes/shikamaru/kage_nui.lua"
 					"Function"		"SetDamage"
 				}
 			}
