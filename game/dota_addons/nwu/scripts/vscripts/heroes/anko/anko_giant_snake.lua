@@ -134,8 +134,6 @@ function anko_giant_snake:OnProjectileHit( hTarget, vLocation )
 				ParticleManager:ReleaseParticleIndex( nFXIndex )
 			end
 
-			
-
 			AddFOWViewer( self:GetCaster():GetTeamNumber(), hTarget:GetOrigin(), self.vision_radius, self.vision_duration, false )
 			self.hVictim = hTarget
 			bTargetPulled = true
@@ -174,8 +172,6 @@ function anko_giant_snake:OnProjectileHit( hTarget, vLocation )
 			ParticleManager:SetParticleControlEnt( self.nChainParticleFXIndex, 1, self:GetCaster(), PATTACH_POINT_FOLLOW, "attach_weapon_chain_rt", self:GetCaster():GetOrigin() + self.vHookOffset, true);
 		end
 
-		EmitSoundOn( "Hero_Pudge.AttackHookRetract", hTarget )
-
 		if self:GetCaster():IsAlive() then
 			self:GetCaster():RemoveGesture( ACT_DOTA_OVERRIDE_ABILITY_1 );
 			self:GetCaster():StartGesture( ACT_DOTA_CHANNEL_ABILITY_1 );
@@ -183,6 +179,7 @@ function anko_giant_snake:OnProjectileHit( hTarget, vLocation )
 
 		self.bRetracting = true
 	else
+		EmitSoundOn( "Hero_Pudge.AttackHookRetract", hTarget )
 		if self:GetCaster() and self:GetCaster():IsHero() then
 			local hHook = self:GetCaster():GetTogglableWearable( DOTA_LOADOUT_TYPE_WEAPON )
 			if hHook ~= nil then
@@ -204,6 +201,7 @@ function anko_giant_snake:OnProjectileHit( hTarget, vLocation )
 
 		self.hVictim = nil
 		ParticleManager:DestroyParticle( self.nChainParticleFXIndex, true )
+
 		EmitSoundOn( "Hero_Pudge.AttackHookRetractStop", self:GetCaster() )
 	end
 
