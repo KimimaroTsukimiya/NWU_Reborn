@@ -78,11 +78,6 @@
 			"var_type"						"FIELD_FLOAT"
 			"end_vision_duration"					"3.0"
 		}
-		"08"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"channel_duration"					"2.5"
-		}
 	}
 
 	"OnSpellStart"
