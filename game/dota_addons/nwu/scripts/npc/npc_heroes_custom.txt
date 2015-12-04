@@ -494,7 +494,7 @@
 		  "Ability1"         "shikamaru_kage_kubishibari"
 		  "Ability2"         "shikamaru_explosive_kunai" 
 		  "Ability3"         "shikamaru_meditation" 
-		  "Ability4"         "gaara_sabaku_taiso"
+		  "Ability4"         "shikamaru_kage_nui"
 		  "ModelScale"		"1.05"
 		"LoadoutScale"		"1.05" 
 
@@ -508,11 +508,11 @@
 		"AttackDamageMax"			"30"	// Damage range max.
 
 		  "MovementSpeed"			"290"
-		  "AttributeBaseStrength" "18" // Base strength
-		  "AttributeStrengthGain" "2.15" // Strength bonus per level.
+		  "AttributeBaseStrength" "17" // Base strength
+		  "AttributeStrengthGain" "1.8" // Strength bonus per level.
 		  "AttributeBaseAgility" "15" // Base agility
 		  "AttributeAgilityGain" "1.5" // Agility bonus per level.
-		"AttributeBaseIntelligence" "21" // Base intelligence
+		"AttributeBaseIntelligence" "23" // Base intelligence
 		  "AttributeIntelligenceGain" "3" // Intelligence bonus per level.
 		  
 	 	  "ItemSlots"
