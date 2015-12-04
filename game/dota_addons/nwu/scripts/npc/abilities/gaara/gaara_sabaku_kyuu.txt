@@ -72,7 +72,7 @@
 				"Target"			"TARGET"
 				"Duration"			"%duration"
 				"Distance"			"0"
-				"Height"			"500"
+				"Height"			"300"
 				"OverrideAnimation"			"ACT_DOTA_DISABLED"
 			
 				"EffectName"				"particles/generic_gameplay/generic_stunned.vpcf"
