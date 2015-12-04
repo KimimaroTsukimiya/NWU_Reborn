@@ -6,7 +6,10 @@
 		  "Ability2"        "sasuke_chidori_eiso" 
 		  "Ability3"        "sasuke_chidori_koken" 
 		  "Ability4"        "sasuke_kirin"
-			
+
+		"AttackDamageMin"		"22"
+		"AttackDamageMax"		"22"
+		"AttackRate"		"1.700000"		  
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"

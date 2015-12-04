@@ -7,6 +7,10 @@
 		  "Ability3"        "madara_susano" 
 		  "Ability4"        "madara_meteor"
 		  "Ability5"        ""
+
+		"AttackDamageMin"		"34"
+		"AttackDamageMax"		"39"
+		"AttackRate"		"1.700000"
 		
 		  "AttackAnimationPoint"   "0.4"
 		  "ModelScale"		"0.930000"

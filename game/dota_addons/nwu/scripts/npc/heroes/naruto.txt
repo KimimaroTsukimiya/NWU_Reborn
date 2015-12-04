@@ -10,8 +10,12 @@
 		"ModelScale"		"1.00"
 		"LoadoutScale"		"1.00" 
 		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
+		 
 		  "AttackRange"				"100"
+
+		  "AttackDamageMin"   "23"
+		  "AttackDamageMax"   "23"
+		  "AttackRate"    "1.700000"
 
 		  "MovementSpeed"			"305"
 		  "AttributeBaseStrength" "21" // Base strength

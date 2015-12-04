@@ -4,6 +4,9 @@
 		  "Model" 			"models/kidoumaru/kidoumaru.vmdl"
 	 	  "ItemSlots"
 	  	  { }
+		  "AttackDamageMin"   "24"
+		  "AttackDamageMax"   "24"
+		  "AttackRate"    "1.700000"	  	  
 
 	  	  "Village"			"otogakure"
 	  	  "Gender"			"male"

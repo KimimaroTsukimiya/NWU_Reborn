@@ -1,0 +1,76 @@
+"onoki_stalagmite_armor"
+{
+
+	"BaseClass"			 			"ability_datadriven"
+	"AbilityTextureName"			"onoki_stalagmite_armor"
+	"MaxLevel" 						"4"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+
+	"AbilityCastRange"				"700"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+	"AbilityCooldown"				"20"
+	"AbilityManaCost"				"100"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"3 5 7 9"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_return_rate"	"0.7"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3 4 5 6"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_stalagmite_armor"
+			"Target"		"TARGET"
+			"Duration"		"%duration"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_stalagmite_armor"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsBuff"			"1"
+			"Duration"			"%stun_duration"
+	
+			//"EffectName"		"particle_name"
+			//"EffectAttachType"	"follow_origin"
+	
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+			}
+
+			"OnAttacked"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/onoki/onoki_stalagmite_armor.lua"
+					"Function"		"return_damage"
+					"DamageTaken"	"%attack_damage"
+				}
+			}
+		}
+	}
+}

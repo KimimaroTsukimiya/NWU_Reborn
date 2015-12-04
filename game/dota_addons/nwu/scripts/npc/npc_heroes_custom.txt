@@ -12,10 +12,14 @@
 	  "LoadoutScale"	"0.80" 
 	  "ItemSlots"
 	  { }
-	
+	  "AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
 	  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 	  "AttackAnimationPoint"		"0.4"
-	 // "AttackRate"				"1.0"
+	
+	  "AttackDamageMin"   "23"
+	  "AttackDamageMax"   "23"
+	  "AttackRate"    "1.700000"
+	
 	  "AttackRange"				"100"
 	  "MovementSpeed"			"300"
 	  "AttributeBaseStrength" "17" // Base strength
@@ -39,8 +43,11 @@
 			"LoadoutScale"		"0.35" 
 
 		  
+		  "AttackDamageMin"   "19"
+		  "AttackDamageMax"   "19"
+		  "AttackRate"    "1.700000"
+
 		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
 		  "AttackRange"				"600"
 		  "MovementSpeed"			"290"
 		  "AttributeBaseStrength" "18" // Base strength
@@ -78,7 +85,11 @@
 			"ModelScale"		"0.68"
 		"LoadoutScale"		"0.68" 
 		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
+			
+		  "AttackDamageMin"   "27"
+		  "AttackDamageMax"   "27"
+		  "AttackRate"    "1.700000"
+
 		  "AttackRange"				"100"
 
 		  "MovementSpeed"			"300"
@@ -111,6 +122,10 @@
 		 "ModelScale"		"0.8"
 		 "LoadoutScale"		"0.8" 
 
+		 "AttackDamageMin"   "22"
+		  "AttackDamageMax"   "26"
+		  "AttackRate"    "1.700000"
+
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackRange"				"275"
 
@@ -137,6 +152,10 @@
 		// Unit attribute
 		"AttackRange"					"100"
 		"AttackAnimationPoint"			"0.4"
+	
+		"AttackDamageMin"   "16"
+		"AttackDamageMax"   "16"
+		"AttackRate"    "1.700000"
 		
 	    // Movement
 	    //----------------------------------------------------------------
@@ -163,6 +182,10 @@
 		 	  "ItemSlots"
 		  	  { }
 	
+		  	  "AttackDamageMin"   "22"
+			  "AttackDamageMax"   "22"
+			  "AttackRate"    "1.700000"
+	
 		  	  "Village"			"otogakure"
 		  	  "Gender"			"male"
 			}
@@ -176,10 +199,11 @@
 		  "Ability3"        "kakashi_bunshin" 
 		  "Ability4"        "kakashi_empty"
 		  "Ability5"        "kakashi_chidori"
-		
+			"AttackDamageMin"   "23"
+		  "AttackDamageMax"   "23"
+		  "AttackRate"    "1.700000"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
 		  "MovementSpeed"			"305"
 		  "AttributeBaseStrength" "22" // Base strength
@@ -200,6 +224,9 @@
 			  "Model" 			"models/kidoumaru/kidoumaru.vmdl"
 		 	  "ItemSlots"
 		  	  { }
+			  "AttackDamageMin"   "24"
+			  "AttackDamageMax"   "24"
+			  "AttackRate"    "1.700000"	  	  
 	
 		  	  "Village"			"otogakure"
 		  	  "Gender"			"male"
@@ -217,7 +244,9 @@
 			"LoadoutScale"		"0.65" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
+		  "AttackDamageMin"   "26"
+		  "AttackDamageMax"   "31"
+		  "AttackRate"    "1.700000"		  
 		  "AttackRange"				"128"
 		  "MovementSpeed"			"315"
 		  "AttributeBaseStrength" "22" // Base strength
@@ -243,6 +272,10 @@
 		  "Ability3"        "madara_susano" 
 		  "Ability4"        "madara_meteor"
 		  "Ability5"        ""
+
+		"AttackDamageMin"		"34"
+		"AttackDamageMax"		"39"
+		"AttackRate"		"1.700000"
 		
 		  "AttackAnimationPoint"   "0.4"
 		  "ModelScale"		"0.930000"
@@ -273,8 +306,12 @@
 		"ModelScale"		"1.00"
 		"LoadoutScale"		"1.00" 
 		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
+		 
 		  "AttackRange"				"100"
+
+		  "AttackDamageMin"   "23"
+		  "AttackDamageMax"   "23"
+		  "AttackRate"    "1.700000"
 
 		  "MovementSpeed"			"305"
 		  "AttributeBaseStrength" "21" // Base strength
@@ -301,7 +338,11 @@
 			"LoadoutScale"		"0.75" 
 			  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 			  "AttackAnimationPoint"   "0.4"
-			 // "AttackRate"				"0.7"
+			  
+			"AttackDamageMin"		"16"
+			"AttackDamageMax"		"16"
+			"AttackRate"		"1.700000"
+	
 			  "AttackRange"				"128"
 			  "MovementSpeed"			"300"
 			  "AttributeBaseStrength" "19" // Base strength
@@ -329,6 +370,9 @@
 		// Unit attribute
 		"AttackRange"					"100"
 		
+		"AttackDamageMin"		"25"
+		"AttackDamageMax"		"25"
+		"AttackRate"		"1.700000"	
 	    // Movement
 	    //----------------------------------------------------------------
 		"MovementSpeed"					"295"
@@ -356,6 +400,10 @@
 		  "Ability2"        "raikage_raigyaku_suihei" 
 		  "Ability3"        "raikage_lariat" 
 		  "Ability4"        "raikage_raiga_no_bomu"
+
+		"AttackDamageMin"		"25"
+		"AttackDamageMax"		"25"
+		"AttackRate"		"1.700000"
 
 		  "Village"			"kumogakure"
 			"ModelScale"		"0.75"
@@ -390,7 +438,9 @@
 
 		"ModelScale"		"0.73"
 		"LoadoutScale"		"0.73" 
-
+		"AttackDamageMin"		"23"
+		"AttackDamageMax"		"23"
+		"AttackRate"		"1.700000"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
@@ -416,7 +466,10 @@
 		  "Ability2"        "sasuke_chidori_eiso" 
 		  "Ability3"        "sasuke_chidori_koken" 
 		  "Ability4"        "sasuke_kirin"
-			
+
+		"AttackDamageMin"		"22"
+		"AttackDamageMax"		"22"
+		"AttackRate"		"1.700000"		  
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
@@ -441,11 +494,13 @@
 		  "Ability1"         "shikamaru_kage_kubishibari"
 		  "Ability2"         "shikamaru_explosive_kunai" 
 		  "Ability3"         "shikamaru_meditation" 
-		  "Ability4"         "gaara_sabaku_taiso"
+		  "Ability4"         "shikamaru_kage_nui"
 		  "ModelScale"		"1.05"
 		"LoadoutScale"		"1.05" 
 
-		  
+		"AttackDamageMin"		"19"
+		"AttackDamageMax"		"19"
+		"AttackRate"		"1.700000"		  
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"500"
@@ -453,11 +508,11 @@
 		"AttackDamageMax"			"30"	// Damage range max.
 
 		  "MovementSpeed"			"290"
-		  "AttributeBaseStrength" "18" // Base strength
-		  "AttributeStrengthGain" "2.15" // Strength bonus per level.
+		  "AttributeBaseStrength" "17" // Base strength
+		  "AttributeStrengthGain" "1.8" // Strength bonus per level.
 		  "AttributeBaseAgility" "15" // Base agility
 		  "AttributeAgilityGain" "1.5" // Agility bonus per level.
-		"AttributeBaseIntelligence" "21" // Base intelligence
+		"AttributeBaseIntelligence" "23" // Base intelligence
 		  "AttributeIntelligenceGain" "3" // Intelligence bonus per level.
 		  
 	 	  "ItemSlots"
@@ -477,7 +532,9 @@
 	  //"Model" 		"models/zabuza/zabuza.vmdl"
 	  "ItemSlots"
 	  { }
-	
+	    "AttackDamageMin"   "16"
+	    "AttackDamageMax"   "16"
+	    "AttackRate"    "1.700000"
 	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 	  "AttackAnimationPoint"		"0.4"
 	 // "AttackRate"				"1.0"
@@ -501,7 +558,9 @@
 		  "Ability3"         "yondaime_agile_speed" 
 		 // "Ability4"         "gaara_sabaku_taiso"
 		  //"ModelScale"		"0.5"
-		
+		"AttackDamageMin"		"20"
+		"AttackDamageMax"		"20"
+		"AttackRate"		"1.700000"		
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -532,7 +591,9 @@
 			  "Model" 			"models/zabuza/zabuza.vmdl"
 		 	  "ItemSlots"
 		  	  { }
-	
+			"AttackDamageMin"		"21"
+			"AttackDamageMax"		"21"
+			"AttackRate"		"1.700000"
 		  	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 			  "AttackAnimationPoint"		"0.4"
 			 // "AttackRate"				"1.0"

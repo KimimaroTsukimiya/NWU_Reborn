@@ -10,8 +10,11 @@
 			"LoadoutScale"		"0.35" 
 
 		  
+		  "AttackDamageMin"   "19"
+		  "AttackDamageMax"   "19"
+		  "AttackRate"    "1.700000"
+
 		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
 		  "AttackRange"				"600"
 		  "MovementSpeed"			"290"
 		  "AttributeBaseStrength" "18" // Base strength

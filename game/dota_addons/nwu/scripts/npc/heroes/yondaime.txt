@@ -7,7 +7,9 @@
 		  "Ability3"         "yondaime_agile_speed" 
 		 // "Ability4"         "gaara_sabaku_taiso"
 		  //"ModelScale"		"0.5"
-		
+		"AttackDamageMin"		"20"
+		"AttackDamageMax"		"20"
+		"AttackRate"		"1.700000"		
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"

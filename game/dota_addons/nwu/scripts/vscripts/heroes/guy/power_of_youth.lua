@@ -25,8 +25,8 @@ function power_of_youth( keys )
 	
 	-- Check if that old target is the same as the attacked target
 	if caster.POY_target ~= target then
-		-- If its not the same target then set it as the new target and halve the modifier
-		caster:SetModifierStackCount(modifier, ability, stack_count/2 + 1)
+		-- If its not the same target then set it as the new target and remove the modifier
+		caster:RemoveModifierByName(modifier)
 		caster.POY_target = target
 		return
 	end

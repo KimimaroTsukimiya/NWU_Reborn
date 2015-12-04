@@ -1,0 +1,150 @@
+"gaara_sabaku_kyuu"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"gaara_sabaku_kyuu"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+				"particle"	"particles/generic_gameplay/generic_silence.vpcf"
+				"particle"	"particles/units/heroes/gaara/sand_explosion.vpcf"
+				"particle"	"particles/econ/events/coal/coal_projectile_explosion.vpcf"
+				"particle"	"particles/units/heroes/gaara/sandstorm_explosion/sandstorm_explosion.vpcf"
+	}	
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0 0 0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityChannelTime"			"2.8 2.8 2.8"
+	"AbilityCooldown"				"20 20 20 20"
+
+	//Damage
+	"AbilityDamage"					"100 150 200 250"
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 115 130 145"		
+
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"tick_interval"					"0.1"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"duration"						"2.8 2.8 2.8"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"delay_to_dmg"					"1.4 1.4 1.4"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"radius"						"75"
+		}
+	}
+
+	"OnSpellStart"
+	{
+
+		"Knockback"
+		{
+				"Target"			"TARGET"
+				"Duration"			"%duration"
+				"Distance"			"0"
+				"Height"			"300"
+				"OverrideAnimation"			"ACT_DOTA_DISABLED"
+			
+				"EffectName"				"particles/generic_gameplay/generic_stunned.vpcf"
+				"EffectAttachType"			"follow_overhead"
+		}
+		
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_gaara_sabaku_kyuu"
+			"Target" 		"TARGET"
+			"Duration"		"%duration"
+		}
+
+		
+		
+		"FireSound"
+		{
+				
+		}
+		
+	}
+
+	"OnChannelInterrupted"
+	{
+		"RemoveModifier"
+			{
+				"ModifierName"	"modifier_knockback"
+				"Target"		"TARGET"
+			}
+
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_gaara_sabaku_kyuu"
+			"Target" 		"TARGET"
+		}
+	}
+
+
+
+	"Modifiers"
+	{
+		"modifier_gaara_sabaku_kyuu"
+		{
+			"Passive"			"0"
+			"IsHidden"			"1"
+			"IsDebuff"			"0"
+
+	
+			"OnCreated"
+			{
+
+					"RunScript"
+					{
+						"ScriptFile"			"heroes/gaara/sabaku_kyuu.lua"
+						"Function"				"applyDamage"
+						"particle_impact"       "particles/units/heroes/gaara/sandstorm_explosion/sandstorm_explosion.vpcf"
+					}
+
+					"AttachEffect"
+					{
+						"EffectName"		"particles/units/heroes/gaara/sandsturm.vpcf"
+						"EffectAttachType"	"attach_hitloc"
+						"Target"			"TARGET"
+
+						"ControlPoints"
+						{
+							"01"	"200 200 0"
+						}
+					}
+			}
+
+
+		}
+	}
+}

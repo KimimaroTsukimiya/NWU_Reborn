@@ -1,0 +1,82 @@
+// Anko's Senei Jyashu Ability Modified from Bristleback Ability
+// Author: Zenicus
+// Date: 11.11.2015.
+// Game version: 6.84
+"anko_senei_jyashu"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"anko_senei_jyashu"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_cast.vpcf"
+		"particle"			"particles/units/heroes/hero_medusa/medusa_mystic_snake_projectile.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"300"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"seek_radius"		"300"		// If you change this, also change the AbilityCastRange above
+		}
+		"02"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"snake_damage"		"70 90 110 130" 
+		}
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"snake_damage_interval"		"2" 
+		}
+		"04"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"senei_jyashu_magic_resist"		"4 8 12 16"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"projectile_speed"		"1250"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_senei_jyashu"
+		{
+			"Passive"		"1"
+			"IsHidden"		"1"
+			
+			"ThinkInterval" "2"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/anko/anko_senei_jyashu.lua"
+					"Function"		"anko_senei_jyashu"
+					"sound_enemy"		"Hero_Medusa.MysticSnake.Target"
+					"mystic_snake_projectile"	"particles/units/heroes/hero_medusa/medusa_mystic_snake_projectile.vpcf"
+				}
+			}
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%senei_jyashu_magic_resist"
+			}
+		}
+		
+
+	}
+}
+

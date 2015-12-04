@@ -1,0 +1,80 @@
+"burning_tree"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"              "ability_datadriven"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    //"AbilityTextureName"     "spellicon"
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "radius" "400"
+        }
+        "02"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "aoe_damage" "20 25 30 35"
+        }
+        "03"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "duration" "2 3 4 5"
+        }
+        "04"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "bonus_damage_percent" "5 10 15 20"
+        }
+    }
+
+    "Modifiers"
+    {
+        "burning_damage_aoe"
+      {
+        "Passive"       "1"
+        "OnCreated"
+        { 
+          "AttachEffect"
+          {
+            "Target"    "CASTER"
+            "EffectName" "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+            "EffectAttachType"  "follow_origin"
+            "EffectRadius"        "200"
+          }
+        }
+        "ThinkInterval"     "1"
+        "OnIntervalThink"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "heroes/burning_tree/burning_tree.lua"
+            "Function"    "burning_tree"
+          }
+        }
+      }
+
+      "burning_tree_dot"
+      {
+        "IsDebuff"  "1"
+        "Hidden"    "0"
+        "Duration"  "%duration"
+        "ThinkInterval"     "1"
+        "OnIntervalThink"
+        {
+           "Damage"
+          {
+            "Target"  "TARGET"
+            "Type"    "DAMAGE_TYPE_MAGICAL"
+            "Damage"  "%aoe_damage"
+          }
+        }
+         
+      }
+    }
+}
