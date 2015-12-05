@@ -12,6 +12,7 @@
 	  "LoadoutScale"	"0.80" 
 	  "ItemSlots"
 	  { }
+	  "ArmorPhysical"   "1.000000"
 	  "AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
 	  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 	  "AttackAnimationPoint"		"0.4"
@@ -42,7 +43,7 @@
 		  "ModelScale"		"0.35"
 			"LoadoutScale"		"0.35" 
 
-		  
+		  "ArmorPhysical"		"1.000000"
 		  "AttackDamageMin"   "19"
 		  "AttackDamageMax"   "19"
 		  "AttackRate"    "1.700000"
@@ -89,7 +90,7 @@
 		  "AttackDamageMin"   "27"
 		  "AttackDamageMax"   "27"
 		  "AttackRate"    "1.700000"
-
+		  "ArmorPhysical"		"3.000000"
 		  "AttackRange"				"100"
 
 		  "MovementSpeed"			"300"
@@ -125,7 +126,7 @@
 		 "AttackDamageMin"   "22"
 		  "AttackDamageMax"   "26"
 		  "AttackRate"    "1.700000"
-
+		  
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackRange"				"275"
 
@@ -156,7 +157,7 @@
 		"AttackDamageMin"   "16"
 		"AttackDamageMax"   "16"
 		"AttackRate"    "1.700000"
-		
+		"ArmorPhysical"		"1.000000"
 	    // Movement
 	    //----------------------------------------------------------------
 		"MovementSpeed"					"300"
@@ -185,7 +186,7 @@
 		  	  "AttackDamageMin"   "22"
 			  "AttackDamageMax"   "22"
 			  "AttackRate"    "1.700000"
-	
+			  "ArmorPhysical"		"1.000000"
 		  	  "Village"			"otogakure"
 		  	  "Gender"			"male"
 			}
@@ -202,6 +203,7 @@
 			"AttackDamageMin"   "23"
 		  "AttackDamageMax"   "23"
 		  "AttackRate"    "1.700000"
+		  "ArmorPhysical"		"1.000000"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackRange"				"100"
@@ -227,7 +229,7 @@
 			  "AttackDamageMin"   "24"
 			  "AttackDamageMax"   "24"
 			  "AttackRate"    "1.700000"	  	  
-	
+			  "ArmorPhysical"		"1.000000"
 		  	  "Village"			"otogakure"
 		  	  "Gender"			"male"
 			}
@@ -239,7 +241,7 @@
 		  "Ability2"         "kisame_mizu_bunshin_no_jutsu" 
 		  "Ability3"         "kisame_samehada" 
 		  "Ability4"         "kisame_water_prison"
-
+		  "ArmorPhysical"		"1.000000"
 			"ModelScale"		"0.65"
 			"LoadoutScale"		"0.65" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
@@ -302,7 +304,7 @@
 		  "Ability2"        "naruto_kawazu_kumite" 
 		  "Ability3"        "naruto_kage_bunshin_mastery" 
 		  "Ability4"        "naruto_rasenshuriken"
-
+		  "ArmorPhysical"		"1.000000"
 		"ModelScale"		"1.00"
 		"LoadoutScale"		"1.00" 
 		  "AttackAnimationPoint"   "0.4"
@@ -333,7 +335,7 @@
 			  "Ability2"         "neji_internal_bleeding" 
 			  "Ability3"         "neji_byakugan" 
 			  "Ability4"         "neji_hyaku_nijuuhachi_shou"
-	
+			  "ArmorPhysical"		"1.000000"
 			"ModelScale"		"0.75"
 			"LoadoutScale"		"0.75" 
 			  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
@@ -369,7 +371,7 @@
 	
 		// Unit attribute
 		"AttackRange"					"100"
-		
+		"ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"25"
 		"AttackDamageMax"		"25"
 		"AttackRate"		"1.700000"	
@@ -400,7 +402,7 @@
 		  "Ability2"        "raikage_raigyaku_suihei" 
 		  "Ability3"        "raikage_lariat" 
 		  "Ability4"        "raikage_raiga_no_bomu"
-
+		  "ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"25"
 		"AttackDamageMax"		"25"
 		"AttackRate"		"1.700000"
@@ -435,7 +437,7 @@
 		  "Ability3"        "sakura_chakra_enhanced_strength" 
 		  "Ability4"        "sakura_inner_sakura"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
-
+		  "ArmorPhysical"		"1.000000"
 		"ModelScale"		"0.73"
 		"LoadoutScale"		"0.73" 
 		"AttackDamageMin"		"23"
@@ -466,7 +468,7 @@
 		  "Ability2"        "sasuke_chidori_eiso" 
 		  "Ability3"        "sasuke_chidori_koken" 
 		  "Ability4"        "sasuke_kirin"
-
+		  "ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"22"
 		"AttackDamageMax"		"22"
 		"AttackRate"		"1.700000"		  
@@ -497,7 +499,7 @@
 		  "Ability4"         "shikamaru_kage_nui"
 		  "ModelScale"		"1.05"
 		"LoadoutScale"		"1.05" 
-
+		"ArmorPhysical"		"0.000000"
 		"AttackDamageMin"		"19"
 		"AttackDamageMax"		"19"
 		"AttackRate"		"1.700000"		  
@@ -532,6 +534,7 @@
 	  //"Model" 		"models/zabuza/zabuza.vmdl"
 	  "ItemSlots"
 	  { }
+	  "ArmorPhysical"   "1.000000"
 	    "AttackDamageMin"   "16"
 	    "AttackDamageMax"   "16"
 	    "AttackRate"    "1.700000"
@@ -561,6 +564,7 @@
 		"AttackDamageMin"		"20"
 		"AttackDamageMax"		"20"
 		"AttackRate"		"1.700000"		
+		"ArmorPhysical"		"1.000000"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -593,6 +597,7 @@
 		  	  { }
 			"AttackDamageMin"		"21"
 			"AttackDamageMax"		"21"
+			"ArmorPhysical"		"2.000000"
 			"AttackRate"		"1.700000"
 		  	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 			  "AttackAnimationPoint"		"0.4"
