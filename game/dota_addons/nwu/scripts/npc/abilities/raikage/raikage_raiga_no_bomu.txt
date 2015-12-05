@@ -52,6 +52,11 @@
 			"var_type"					"FIELD_FLOAT"
 			"armor_reduction_duration"	"2 3 4"//TODO
 		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"cast_range"			"120"//TODO
+		}
 	}
 	
 	// Data driven
