@@ -108,10 +108,10 @@
 			"ModifierName"		"modifier_kisame_metamorphosis"
 			"Target"			"CASTER"
 		}
-		"RunScript"
+		"ApplyModifier"
 		{
-			"ScriptFile"	"heroes/kisame/water_prison.lua"
-			"Function"		"AddHPReg"
+			"ModifierName"		"modifer_water_prison_hp_reg"
+			"Target"			"CASTER"
 		}
 	}
 
@@ -124,10 +124,10 @@
 			"Target"			"CASTER"
 		}
 
-		"RunScript"
+		"ApplyModifier"
 		{
-			"ScriptFile"	"heroes/kisame/water_prison.lua"
-			"Function"		"AddHPReg"
+			"ModifierName"		"modifer_water_prison_hp_reg"
+			"Target"			"CASTER"
 		}
 		
 
@@ -145,10 +145,10 @@
 			"ModifierName"	"modifier_kisame_metamorphosis"
 			"Target" 		"CASTER"
 		}
-		"RunScript"
+		"RemoveModifier"
 		{
-			"ScriptFile"	"heroes/kisame/water_prison.lua"
-			"Function"		"RemoveHPReg"
+			"ModifierName"	"modifer_water_prison_hp_reg"
+			"Target" 		"CASTER"
 		}
 	}
 
@@ -170,7 +170,22 @@
 
           "Properties"
           {
+
             "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow_percentage"
+          } 
+        
+		}
+
+		"modifer_water_prison_hp_reg"
+		{
+
+          "Passive"     "0"
+          "IsHidden"      "0"
+          "IsDebuff"      "0"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE" "%hp_reg_per_second_percentage"
           } 
         
 		}
