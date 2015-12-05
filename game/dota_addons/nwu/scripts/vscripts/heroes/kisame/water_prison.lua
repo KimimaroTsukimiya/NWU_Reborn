@@ -82,3 +82,25 @@ function domeFollowHero( keys )
 		end
 	end
 end
+
+
+function AddHPReg( keys )
+	local hp_reg_percentage = keys.ability:GetLevelSpecialValueFor("hp_reg_per_second_percentage", keys.ability:GetLevel() - 1 )
+
+	local hp_reg_bonus = keys.caster:GetMaxHealth() / 100 * 2
+	local new_reg = keys.caster:GetHealthRegen() + hp_reg_bonus
+	keys.ability.bonus_reg = hp_reg_bonus
+	print(hp_reg_bonus)
+	print(keys.caster:GetHealthRegen())
+	print(new_reg)
+	keys.caster:SetBaseHealthRegen(new_reg - 1.05)
+	print(keys.caster:GetHealthRegen())
+end
+
+function RemoveHPReg( keys )
+	print(keys.caster:GetHealthRegen())
+	print(keys.ability.bonus_reg)
+	print(keys.caster:GetHealthRegen() - keys.ability.bonus_reg)
+	keys.caster:SetBaseHealthRegen(keys.caster:GetHealthRegen() - keys.ability.bonus_reg - 1.05)
+	print(keys.caster:GetHealthRegen())
+end

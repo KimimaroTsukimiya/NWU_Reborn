@@ -70,6 +70,11 @@
 			"var_type"				"FIELD_FLOAT"
 			"damage_per_millisecond"				"4.0 6.4 8.8"
 		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hp_reg_per_second_percentage"		"2"
+		}
 
 	}
 
@@ -103,7 +108,11 @@
 			"ModifierName"		"modifier_kisame_metamorphosis"
 			"Target"			"CASTER"
 		}
-		
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/kisame/water_prison.lua"
+			"Function"		"AddHPReg"
+		}
 	}
 
 
@@ -114,6 +123,13 @@
 			"ModifierName"		"modifier_kisame_metamorphosis"
 			"Target"			"CASTER"
 		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/kisame/water_prison.lua"
+			"Function"		"AddHPReg"
+		}
+		
 
 	}
 
@@ -128,6 +144,11 @@
 		{
 			"ModifierName"	"modifier_kisame_metamorphosis"
 			"Target" 		"CASTER"
+		}
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/kisame/water_prison.lua"
+			"Function"		"RemoveHPReg"
 		}
 	}
 
