@@ -56,13 +56,13 @@
          "04"
         {
             "var_type" "FIELD_FLOAT"
-            "duration" "2.0 2.0 2.0 2.0"
+            "duration" "2.0"
         }
 
          "05"
         {
             "var_type" "FIELD_FLOAT"
-            "bonus_damage" "7.0"
+            "bonus_damage" "7 14 21 28"
         }
     }
 

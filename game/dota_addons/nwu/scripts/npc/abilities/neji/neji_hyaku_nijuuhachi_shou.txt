@@ -62,11 +62,6 @@
 		"05"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"damage"						"300 400 500"
-		}
-		"06"
-		{
-			"var_type"						"FIELD_INTEGER"
 			"damage_per_interval"			"10 13.33 16.66"
 		}
 	}
