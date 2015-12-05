@@ -38,21 +38,25 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
 	{
+
 		"01"
 		{
-			"var_type"			"FIELD_FLOAT"
-			"wave_speed"		"700.0"
+			"var_type"			"FIELD_INTEGER"
+			"fire_range"		"625"
 		}
+		
 		"02"
 		{
 			"var_type"			"FIELD_INTEGER"
 			"wave_radius_start"		"175"
 		}
+
 		"03"
 		{
-			"var_type"			"FIELD_INTEGER"
-			"fire_range"		"625"
+			"var_type"			"FIELD_FLOAT"
+			"wave_speed"		"700.0"
 		}
+		
 		"04"
 		{
 			"var_type"			"FIELD_INTEGER"
@@ -68,12 +72,12 @@
 			"var_type"						"FIELD_INTEGER"
 			"explosion_stun_duration"		"1"
 		}
-		"07"
+		"08"
 		{
 			"var_type"						"FIELD_INTEGER"
 			"explosion_damage"				"80 115 150 185"
 		}
-		"08"
+		"07"
 		{
 			"var_type"						"FIELD_INTEGER"
 			"wave_damage"				"60 85 110 135"
