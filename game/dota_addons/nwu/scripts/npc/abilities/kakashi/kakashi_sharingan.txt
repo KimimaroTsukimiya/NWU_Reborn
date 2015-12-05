@@ -6,18 +6,10 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"kakashi_sharingan"
 	"CastFilterRejectCaster"    	"1" 
-	// Precache
-	//-------------------------------------------------------------------------------------------------------------
-	"precache"
-	{
-		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
-		"particle"			"particles/units/heroes/hero_vengeful/vengeful_magic_missle.vpcf"		
-	}
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -39,16 +31,6 @@
 	{
 		"01"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"magic_missile_speed"	"700"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"magic_missile_stun"	"1.5 2 2.5 3"
-		}
-		"03"
-		{
 			"var_type"				"FIELD_FLOAT"
 			"copy_timer"			"120"
 		}
@@ -61,13 +43,6 @@
 			"ScriptFile"	"heroes/kakashi/sharingan.lua"
 			"Function"		"sharingan"
 		}	
-
-		"ApplyModifier"
-		{
-			"ModifierName"	"kakashi_sharingan_modifier"
-			"Target" 		"CASTER"
-			"Duration"		"%copy_timer"
-		}
 	}
 
 	"Modifiers"
@@ -79,7 +54,15 @@
 			"IsBuff"			"1"
 	
 			"Duration"			"%copy_timer"
+			
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/kakashi/sharingan.lua"
+					"Function"		"sharingan_end"
+				}
+			}
 		}
 	}
-	
 }
