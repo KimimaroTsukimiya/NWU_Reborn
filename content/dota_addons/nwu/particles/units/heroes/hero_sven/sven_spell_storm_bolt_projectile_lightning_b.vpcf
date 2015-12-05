@@ -5,10 +5,10 @@
 	m_nMaxParticles = 32
 	m_nInitialParticles = 2
 	m_ConstantColor =
-[
-115,
-145,
-247,
+	[
+		115,
+		145,
+		247,
 		255,
 	]
 	m_Renderers =
@@ -37,10 +37,10 @@
 		{
 			_class = "C_OP_ColorInterpolate"
 			m_ColorFade =
-[
-115,
-145,
-247,
+			[
+				115,
+				145,
+				247,
 				255,
 			]
 		},
@@ -53,6 +53,10 @@
 			m_nField = 10
 			m_RateMin = -4.000000
 			m_RateMax = 4.000000
+		},
+		{
+			_class = "C_OP_BasicMovement"
+			m_bDisableOperator = true
 		},
 	]
 	m_Initializers =
