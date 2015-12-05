@@ -16,7 +16,8 @@
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
-
+		    "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		  "MovementSpeed"			"310"
 		  "AttributeBaseStrength" "22" // Base strength
 		  "AttributeStrengthGain" "2.75" // Strength bonus per level.

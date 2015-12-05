@@ -11,7 +11,8 @@
 		"AttackDamageMin"		"25"
 		"AttackDamageMax"		"25"
 		"AttackRate"		"1.700000"
-
+  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		  "Village"			"kumogakure"
 			"ModelScale"		"0.75"
 		"LoadoutScale"		"0.75" 

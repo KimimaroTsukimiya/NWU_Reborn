@@ -8,6 +8,8 @@
 		  "AttackDamageMax"   "24"
 		  "AttackRate"    "1.700000"	  	  
 		  "ArmorPhysical"		"1.000000"
+		    "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 	  	  "Village"			"otogakure"
 	  	  "Gender"			"male"
 		}

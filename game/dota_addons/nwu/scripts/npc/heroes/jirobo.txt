@@ -4,7 +4,8 @@
 		  "Model" 			"models/jiroubo/jiroubo.vmdl"
 	 	  "ItemSlots"
 	  	  { }
-
+	  	    "StatusHealth"    "145"
+  			"StatusHealthRegen"   "0.300000"
 	  	  "AttackDamageMin"   "22"
 		  "AttackDamageMax"   "22"
 		  "AttackRate"    "1.700000"

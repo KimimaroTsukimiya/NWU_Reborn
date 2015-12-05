@@ -17,7 +17,8 @@
 		  "AttackRange"				"500"
 		"AttackDamageMin"			"20"	// Damage range min.
 		"AttackDamageMax"			"30"	// Damage range max.
-
+		  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		  "MovementSpeed"			"290"
 		  "AttributeBaseStrength" "17" // Base strength
 		  "AttributeStrengthGain" "1.8" // Strength bonus per level.

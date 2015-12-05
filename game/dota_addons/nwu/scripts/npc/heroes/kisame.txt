@@ -13,7 +13,9 @@
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackDamageMin"   "26"
 		  "AttackDamageMax"   "31"
-		  "AttackRate"    "1.700000"		  
+		  "AttackRate"    "1.700000"		
+		    "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"  
 		  "AttackRange"				"128"
 		  "MovementSpeed"			"315"
 		  "AttributeBaseStrength" "22" // Base strength

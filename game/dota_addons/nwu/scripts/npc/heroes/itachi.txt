@@ -21,7 +21,8 @@
     // Movement
     //----------------------------------------------------------------
 	"MovementSpeed"					"300"
-
+	"StatusHealth"    "145"
+  	"StatusHealthRegen"   "0.300000"
     // Attibutes
     //----------------------------------------------------------------
 	"AttributePrimary"				"DOTA_ATTRIBUTE_AGILITY"
