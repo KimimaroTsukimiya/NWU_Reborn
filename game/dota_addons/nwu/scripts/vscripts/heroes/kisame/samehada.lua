@@ -12,7 +12,7 @@ function StealMana( event )
 	local mana = target:GetMana()
 	print("steal percentage: "..manasteal_percentage)
 	print("start mana: "..mana)
-	local reduce_mana_amount = mana / 100 * manasteal_percentage
+	local reduce_mana_amount = target:GetMaxMana() / 100 * manasteal_percentage
 	local new_mana = mana - reduce_mana_amount
 	target:SetMana(new_mana)
 	local new_caster_mana = caster:GetMana() + reduce_mana_amount;

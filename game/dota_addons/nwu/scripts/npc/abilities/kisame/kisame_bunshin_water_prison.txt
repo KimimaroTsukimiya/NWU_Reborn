@@ -23,11 +23,11 @@
 
 	// Damage.
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"40"
+	"AbilityDamage"					"0"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"110 130 155 185"
+	"AbilityManaCost"				"0"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -42,8 +42,7 @@
 
 	"precache"
 	{
-		"particle"  "particles/status_fx/status_effect_shaman_shackle.vpcf" 	
-		"particle"	"particles/units/heroes/hero_shadowshaman/shadowshaman_shackle.vpcf"
+		"particle"	"particles/units/heroes/kisame/shadowshaman_shackle.vpcf"
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts"
 	}
 
@@ -89,8 +88,7 @@
 				"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
 			}
 
-			"StatusEffectName" 		"particles/status_fx/status_effect_shaman_shackle.vpcf" 	   
-			"StatusEffectPriority"  "10"
+	
 
 			"OverrideAnimation"     "ACT_DOTA_DISABLED"
 
@@ -104,7 +102,7 @@
 				
 				"AttachEffect"
 				{
-					"EffectName"			"particles/units/heroes/hero_shadowshaman/shadowshaman_shackle.vpcf"
+					"EffectName"			"particles/units/heroes/kisame/shadowshaman_shackle.vpcf"
 					"EffectAttachType"		"follow_origin"
 					"Target"				"TARGET"
 					"ControlPointEntities"

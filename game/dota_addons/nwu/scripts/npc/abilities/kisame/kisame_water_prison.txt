@@ -51,7 +51,7 @@
 		"05"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"mana_cost_per_second_percentage"	"3"
+			"mana_cost_per_second_percentage"	"5"
 		}
 
 		"06"

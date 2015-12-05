@@ -40,16 +40,26 @@
         "var_type"                  "FIELD_FLOAT"
         "illusion_duration"         "20 20 20"
       }
+
       "02"
       {
         "var_type"                               "FIELD_FLOAT"
-        "illusion_outgoing_damage_percent"       "-90"
+        "illusion_max_hp_percentage"              "14 18 22 26"
       }
-       "03"
+
+      "03"
       {
         "var_type"                               "FIELD_FLOAT"
-        "illusion_incoming_damage_percent"       "700 600 500 400"
-      }			
+        "damage_percentage"              "10"
+      }
+
+      "04"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "bonus_damage"              "1"
+      }
+
+      		
 	}
 
 	"OnSpellStart"
@@ -84,7 +94,37 @@
 
         }
       }
+
+      "modifier_water_bunshin"
+      {
+        "Passive"     "0"
+        "IsHidden"      "0"
+        "IsBuff"      "1"
+        "duration"      "%illusion_duration"
+
+
+        "OnDestroy"
+        {
+          "RunScript"
+          {
+            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+            "Function"        "RemoveBunshin"
+          }
+        }
+      }
+
+       "modifier_water_bunshin_bonus_damage"
+      {
+        "Passive"     "0"
+        "IsHidden"      "1"
+        "IsDebuff"      "0"
+        "Duration"      "%illusion_duration"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"  "%bonus_damage"
+          }
+      }
 	 }
 	
 }
-

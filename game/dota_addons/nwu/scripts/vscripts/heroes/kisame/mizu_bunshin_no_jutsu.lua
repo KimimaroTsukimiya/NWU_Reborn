@@ -7,13 +7,13 @@ function ConjureImage( event )
  local unit_name = caster:GetUnitName()
  local origin = caster:GetAbsOrigin() + RandomVector(100)
  local duration = ability:GetLevelSpecialValueFor( "illusion_duration", ability:GetLevel() - 1 )
- local outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage_percent", ability:GetLevel()-1)
- local incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage_percent", ability:GetLevel()-1)
+ local damage_percentage = ability:GetLevelSpecialValueFor( "damage_percentage", ability:GetLevel() - 1 )
+local illusion_max_hp_percentage = ability:GetLevelSpecialValueFor( "illusion_max_hp_percentage", ability:GetLevel()-1)
 
  -- handle_UnitOwner needs to be nil, else it will crash the game.
- local illusion = CreateUnitByName(unit_name, origin, true, caster, nil, caster:GetTeamNumber())
+ local illusion = CreateUnitByName("kisame_bunshin", origin, true, caster, nil, caster:GetTeamNumber())
  PrintTable(illusion)
- illusion:SetPlayerID(caster:GetPlayerID())
+ 
  illusion:SetControllableByPlayer(player, true)
  
  --if kisame has his ulti activated, his bunshin should turn into the shark model and have the water prison modifier
@@ -27,48 +27,37 @@ function ConjureImage( event )
   illusion:HeroLevelUp(false)
  end
 
- -- Set the skill points to 0 and learn the skills of the caster
- illusion:SetAbilityPoints(0)
- for abilitySlot=0,15 do
-  local ability = caster:GetAbilityByIndex(abilitySlot)
-  if ability ~= nil then 
-   local abilityLevel = ability:GetLevel()
-   local abilityName = ability:GetAbilityName()
-   local illusionAbility = illusion:FindAbilityByName(abilityName)
-   if illusionAbility ~= nil then
-    illusionAbility:SetLevel(abilityLevel)
-   end
-  end
- end
-
- -- Recreate the items of the caster
- for itemSlot=0,5 do
-  local item = caster:GetItemInSlot(itemSlot)
-  if item ~= nil then
-   local itemName = item:GetName()
-   local newItem = CreateItem(itemName, illusion, illusion)
-   illusion:AddItem(newItem)
-  end
- end
-
-
-
-
-
  -- Set the unit as an illusion
  -- modifier_illusion controls many illusion properties like +Green damage not adding to the unit damage, not being able to cast spells and the team-only blue particle 
- illusion:AddNewModifier(caster, ability, "modifier_illusion", { duration = duration, outgoing_damage = outgoingDamage, incoming_damage = incomingDamage })
- illusion:SetHealth(caster:GetHealth())
- -- Without MakeIllusion the unit counts as a hero, e.g. if it dies to neutrals it says killed by neutrals, it respawns, etc.
- illusion:MakeIllusion()
+ability:ApplyDataDrivenModifier(caster, illusion, "modifier_water_bunshin",  {duration = duration})
+ability:ApplyDataDrivenModifier(caster, illusion, "modifier_water_bunshin_bonus_damage",  {duration = duration})
+
+ 
+ local hp_caster_percentage = caster:GetHealth() / (caster:GetMaxHealth() / 100)
+ --illusion:SetHealth(illusion:GetMaxHealth() / 100 * hp_caster_percentage)
+
  GameMode:RemoveWearables( illusion )
 
-
 illusion:RemoveAbility(caster:GetAbilityByIndex(1):GetName())
+
+
 -- add water prison (channeled hold) to bunshin
-AbilityWater = illusion:AddAbility("kisame_bunshin_water_prison")
-AbilityWater:SetAbilityIndex(1)
+AbilityWater = illusion:FindAbilityByName("kisame_bunshin_water_prison")
+AbilityWater:SetAbilityIndex(0)
 AbilityWater:SetLevel(event.ability:GetLevel())
+
+ print(illusion:GetMaxHealth())
+ illusion:SetMaxHealth(caster:GetMaxHealth() / 100 * illusion_max_hp_percentage)
+ print(illusion:GetMaxHealth())
+
+
+illusion:SetBaseDamageMin(caster:GetAverageTrueAttackDamage() / 100 * damage_percentage)
+illusion:SetBaseDamageMax(caster:GetAverageTrueAttackDamage() / 100 * damage_percentage)
+
+
+
+--local bonus_damage_preattack = caster:GetBonusDamageFromPrimaryStat() / 100 * damage_percentage
+--caster:SetModifierStackCount( "modifier_water_bunshin_bonus_damage", ability, bonus_damage_preattack)
 
 end
 function NoDraw( keys )
@@ -76,6 +65,9 @@ function NoDraw( keys )
 
 end
 function draw( keys )
-  print("asb")
   keys.caster:RemoveNoDraw()
+end
+
+function RemoveBunshin( keys )
+  keys.target:Destroy()
 end
