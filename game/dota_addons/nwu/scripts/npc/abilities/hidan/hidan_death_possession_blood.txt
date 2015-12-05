@@ -91,12 +91,7 @@
 			"EffectName"		"Hero_Terrorblade.Metamorphosis"
 			"Target"			"CASTER"
 		}
-		"FireEffect"
-		{
-			"EffectName"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
-			"EffectAttachType"	"follow_origin"
-			"Target"			"CASTER"
-		}
+
 		"ApplyModifier"
 		{
 			"ModifierName"		"modifier_hidan_metamorphosis"
@@ -131,8 +126,7 @@
 		"modifier_hidan_metamorphosis"
 		{
 			
-			"EffectName" 		"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
-			"EffectAttachType"  "follow_origin"
+
 			"duration"			"%duration"
 
 			"AllowsIllusionDuplicate"	"1"
