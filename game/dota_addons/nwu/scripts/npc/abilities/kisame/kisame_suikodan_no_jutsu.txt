@@ -78,7 +78,12 @@
 		{
 			"var_type"			"FIELD_INTEGER"
 			"slow_duration"		"4 4 4 4"
-		}			
+		}
+		"09"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"cast_range"		"450"
+		}				
 	}
 
 	"OnSpellStart"

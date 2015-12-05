@@ -79,7 +79,7 @@
 
 	"Modifiers"
 	{
-		"modifier_kubishibari"
+		"modifier_bunshin_water_prison_hold"
 		{
 			"IsDebuff"			"1"
 	
