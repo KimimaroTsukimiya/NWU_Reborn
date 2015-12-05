@@ -29,6 +29,11 @@
 			"var_type"			"FIELD_FLOAT"
 			"stun_radius"		"200 225 250 275"
 		}
+		"03"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"cast_range"		"500"
+		}
 	}
 
 	"precache"
