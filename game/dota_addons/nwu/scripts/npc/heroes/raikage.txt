@@ -7,7 +7,7 @@
 		  "Ability2"        "raikage_raigyaku_suihei" 
 		  "Ability3"        "raikage_lariat" 
 		  "Ability4"        "raikage_raiga_no_bomu"
-
+		  "ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"25"
 		"AttackDamageMax"		"25"
 		"AttackRate"		"1.700000"

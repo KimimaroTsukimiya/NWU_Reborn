@@ -9,7 +9,7 @@
 		  "ModelScale"		"0.35"
 			"LoadoutScale"		"0.35" 
 
-		  
+		  "ArmorPhysical"		"1.000000"
 		  "AttackDamageMin"   "19"
 		  "AttackDamageMax"   "19"
 		  "AttackRate"    "1.700000"

@@ -6,7 +6,7 @@
 		  "Ability2"        "sasuke_chidori_eiso" 
 		  "Ability3"        "sasuke_chidori_koken" 
 		  "Ability4"        "sasuke_kirin"
-
+		  "ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"22"
 		"AttackDamageMax"		"22"
 		"AttackRate"		"1.700000"		  

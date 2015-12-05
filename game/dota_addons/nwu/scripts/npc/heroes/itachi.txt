@@ -17,7 +17,7 @@
 	"AttackDamageMin"   "16"
 	"AttackDamageMax"   "16"
 	"AttackRate"    "1.700000"
-	
+	"ArmorPhysical"		"1.000000"
     // Movement
     //----------------------------------------------------------------
 	"MovementSpeed"					"300"

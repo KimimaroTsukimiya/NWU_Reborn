@@ -7,7 +7,7 @@
 		  "Ability3"        "sakura_chakra_enhanced_strength" 
 		  "Ability4"        "sakura_inner_sakura"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
-
+		  "ArmorPhysical"		"1.000000"
 		"ModelScale"		"0.73"
 		"LoadoutScale"		"0.73" 
 		"AttackDamageMin"		"23"

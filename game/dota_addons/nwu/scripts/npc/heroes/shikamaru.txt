@@ -8,7 +8,7 @@
 		  "Ability4"         "shikamaru_kage_nui"
 		  "ModelScale"		"1.05"
 		"LoadoutScale"		"1.05" 
-
+		"ArmorPhysical"		"0.000000"
 		"AttackDamageMin"		"19"
 		"AttackDamageMax"		"19"
 		"AttackRate"		"1.700000"		  

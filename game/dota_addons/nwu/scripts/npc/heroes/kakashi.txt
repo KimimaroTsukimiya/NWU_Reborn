@@ -11,6 +11,7 @@
 			"AttackDamageMin"   "23"
 		  "AttackDamageMax"   "23"
 		  "AttackRate"    "1.700000"
+		  "ArmorPhysical"		"1.000000"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackRange"				"100"

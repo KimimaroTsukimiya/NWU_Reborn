@@ -8,7 +8,7 @@
 	  	  "AttackDamageMin"   "22"
 		  "AttackDamageMax"   "22"
 		  "AttackRate"    "1.700000"
-
+		  "ArmorPhysical"		"1.000000"
 	  	  "Village"			"otogakure"
 	  	  "Gender"			"male"
 		}

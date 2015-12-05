@@ -19,7 +19,7 @@
 		 "AttackDamageMin"   "22"
 		  "AttackDamageMax"   "26"
 		  "AttackRate"    "1.700000"
-
+		  
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackRange"				"275"
 
