@@ -66,6 +66,11 @@
 			"var_type"			"FIELD_INTEGER"
 			"vision_radius"		"225"
 		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"range"		"600"
+		}
 	}
 
 	"OnSpellStart"

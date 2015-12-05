@@ -30,6 +30,21 @@
 			"var_type"				"FIELD_INTEGER"
 			"max_clones"			"3"
 		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"illusion_outgoing_damage_percent"			"30 35 40 45"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"illusion_incoming_damage_percent"			"600 500 450 400"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"range"					"600"
+		}
 
 	}
 }

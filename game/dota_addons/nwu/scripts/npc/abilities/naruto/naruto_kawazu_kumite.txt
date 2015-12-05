@@ -58,7 +58,17 @@
       {
         "var_type"                               "FIELD_FLOAT"
         "duration"                            "5"
-      }   	
+      }   
+        "06"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "strength_bonus"                "10 20 30 40"
+      }
+        "07"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "agility_bonus"                "10 20 30 40"
+      }	
 	}
 
 

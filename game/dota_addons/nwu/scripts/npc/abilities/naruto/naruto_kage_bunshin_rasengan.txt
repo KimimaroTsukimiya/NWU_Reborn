@@ -70,6 +70,11 @@
 			"var_type"				"FIELD_FLOAT"
 			"illusion_incoming_damage_percent"			"700 600 500 450 400"
 		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"range"					"800"
+		}
 	}
 
 	 "OnCreated"
