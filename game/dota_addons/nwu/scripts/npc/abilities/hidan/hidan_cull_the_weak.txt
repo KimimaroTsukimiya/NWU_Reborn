@@ -109,11 +109,6 @@
 			"Target"				"POINT"
 		}
 
-		"RunScript"
-		{
-			"ScriptFile"			"heroes/hidan/cull_the_weak.lua"
-			"Function"				"health_cost"
-		}
 
 	}
 
@@ -131,6 +126,21 @@
 
 	"OnProjectileFinish"
 	{
+
+		"DelayedAction"
+		{
+			"Delay"     "0.3"
+			"Action"    
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"heroes/hidan/cull_the_weak.lua"
+					"Function"				"health_cost"
+				}
+			}
+		}
+		
+
 		"RunScript"
 		{
 			"ScriptFile"			"heroes/hidan/cull_the_weak.lua"
