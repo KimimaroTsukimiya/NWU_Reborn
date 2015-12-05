@@ -21,11 +21,7 @@ local illusion_max_hp_percentage = ability:GetLevelSpecialValueFor( "illusion_ma
     illusion:SetOriginalModel("models/kisame_new/kisame_samehada.vmdl")
  end
 
- -- Level Up the unit to the casters level
- local casterLevel = caster:GetLevel()
- for i=1,casterLevel-1 do
-  illusion:HeroLevelUp(false)
- end
+
 
  -- Set the unit as an illusion
  -- modifier_illusion controls many illusion properties like +Green damage not adding to the unit damage, not being able to cast spells and the team-only blue particle 
@@ -33,8 +29,7 @@ ability:ApplyDataDrivenModifier(caster, illusion, "modifier_water_bunshin",  {du
 ability:ApplyDataDrivenModifier(caster, illusion, "modifier_water_bunshin_bonus_damage",  {duration = duration})
 
  
- local hp_caster_percentage = caster:GetHealth() / (caster:GetMaxHealth() / 100)
- --illusion:SetHealth(illusion:GetMaxHealth() / 100 * hp_caster_percentage)
+
 
  GameMode:RemoveWearables( illusion )
 
@@ -50,11 +45,13 @@ AbilityWater:SetLevel(event.ability:GetLevel())
  illusion:SetMaxHealth(caster:GetMaxHealth() / 100 * illusion_max_hp_percentage)
  print(illusion:GetMaxHealth())
 
+ local hp_caster_percentage = caster:GetHealth() / (caster:GetMaxHealth() / 100)
+ illusion:SetHealth(illusion:GetMaxHealth() / 100 * hp_caster_percentage)
 
 illusion:SetBaseDamageMin(caster:GetAverageTrueAttackDamage() / 100 * damage_percentage)
 illusion:SetBaseDamageMax(caster:GetAverageTrueAttackDamage() / 100 * damage_percentage)
 
-
+illusion:SetOriginalModel(caster:GetModelName())
 
 --local bonus_damage_preattack = caster:GetBonusDamageFromPrimaryStat() / 100 * damage_percentage
 --caster:SetModifierStackCount( "modifier_water_bunshin_bonus_damage", ability, bonus_damage_preattack)
