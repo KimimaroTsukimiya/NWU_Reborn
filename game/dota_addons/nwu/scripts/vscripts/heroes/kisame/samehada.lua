@@ -43,5 +43,22 @@ function SamehadaResetCooldown( keys )
 	end
 	
 end
-
+--[[
+	Author: LearningDave
+	Date: december, 6th 2015.
+	Steals mana from target
+]]
+function StealManaBunshin( event )
+	-- Variables
+	local caster = event.caster
+	local ability = event.ability
+	local target = event.target
+	local manasteal_percentage = event.ability:GetLevelSpecialValueFor("manasteal_percentage", event.ability:GetLevel() - 1 )
+	local mana = target:GetMana()
+	print("steal percentage: "..manasteal_percentage)
+	print("start mana: "..mana)
+	local reduce_mana_amount = target:GetMana() / 100 * manasteal_percentage
+	local new_mana = mana - reduce_mana_amount
+	target:SetMana(new_mana)
+end
 
