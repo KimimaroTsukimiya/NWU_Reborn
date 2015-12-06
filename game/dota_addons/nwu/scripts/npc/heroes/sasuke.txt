@@ -9,6 +9,7 @@
 		  "ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"22"
 		"AttackDamageMax"		"22"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		  "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"
 		"AttackRate"		"1.700000"		  
