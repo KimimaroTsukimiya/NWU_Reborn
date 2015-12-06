@@ -71,6 +71,7 @@ function createBunshin( event )
    illusion:AddItem(newItem)
   end
  end
+ illusion:SetForwardVector(caster:GetForwardVector())
 
 
  -- Set the unit as an illusion
