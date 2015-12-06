@@ -73,14 +73,6 @@
             {
                
 
-                "AttachEffect"
-                {
-                    "EffectName"    "particles/generic_gameplay/generic_manaburn.vpcf"
-                    "EffectAttachType"  "attach_hitloc"
-                    "Target"        "TARGET"
-                }
-            
-              
                 "RunScript"
                 {
                     "ScriptFile"    "heroes/kisame/samehada.lua"

@@ -34,12 +34,18 @@ ability:ApplyDataDrivenModifier(caster, illusion, "modifier_water_bunshin_bonus_
  GameMode:RemoveWearables( illusion )
 
 illusion:RemoveAbility(caster:GetAbilityByIndex(1):GetName())
-
+illusion:SetForwardVector(caster:GetForwardVector())
 
 -- add water prison (channeled hold) to bunshin
 AbilityWater = illusion:FindAbilityByName("kisame_bunshin_water_prison")
 AbilityWater:SetAbilityIndex(0)
 AbilityWater:SetLevel(event.ability:GetLevel())
+
+-- add water prison (channeled hold) to bunshin
+AbilityWater = illusion:FindAbilityByName("kisame_samehada_bunshin")
+AbilityWater:SetAbilityIndex(1)
+AbilityWater:SetLevel(event.ability:GetLevel())
+
 
  print(illusion:GetMaxHealth())
  illusion:SetMaxHealth(caster:GetMaxHealth() / 100 * illusion_max_hp_percentage)
@@ -52,6 +58,9 @@ illusion:SetBaseDamageMin(caster:GetAverageTrueAttackDamage() / 100 * damage_per
 illusion:SetBaseDamageMax(caster:GetAverageTrueAttackDamage() / 100 * damage_percentage)
 
 illusion:SetOriginalModel(caster:GetModelName())
+
+
+
 
 --local bonus_damage_preattack = caster:GetBonusDamageFromPrimaryStat() / 100 * damage_percentage
 --caster:SetModifierStackCount( "modifier_water_bunshin_bonus_damage", ability, bonus_damage_preattack)
