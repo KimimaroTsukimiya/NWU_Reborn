@@ -22,13 +22,14 @@ function ReleaseAoeDamage( event )
 		
 		local damage_table = {
 			attacker = caster,
-			victim = target,
+			victim = nil,
 			ability = ability,
 			damage_type = ability:GetAbilityDamageType(),
 			damage = spell_damage
 		}
 	
 		for _,target in pairs(targetEntities) do
+			damage_table.victim = target
 			ApplyDamage(damage_table)
 			ability:ApplyDataDrivenModifier(caster, target, "modifier_raigyaku_debuff",{})
 		end
@@ -45,7 +46,7 @@ function SuiheiResetCooldown( keys )
 	-- Variables
 	local caster = keys.caster
 	local ability = keys.ability
-	local cooldown = ability:GetCooldown( ability:GetLevel() )
+	local cooldown = ability:GetCooldown( ability:GetLevel() -1)
 	local modifierName = "modifier_raigyaku"
 	
 	-- Remove cooldown
