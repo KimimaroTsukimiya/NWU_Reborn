@@ -3,7 +3,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityTextureName"			"kisame_mizu_bunshin_no_jutsu"
@@ -20,8 +20,8 @@
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"450"
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
-
+	"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+  
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"27.0 24.0 21.0 18.0"
@@ -64,15 +64,22 @@
 
 	"OnSpellStart"
   {
+      "RunScript"
+          {
+            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+            "Function"        "NoDraw"
+          }
     "ApplyModifier"
     {
       "ModifierName"    "mizu_bunshin_no_jutsu_illusion"
       "Target"          "CASTER"
     }
+
   }
 
     "Modifiers"
     {
+
 
        "mizu_bunshin_no_jutsu_illusion"
       {
@@ -80,15 +87,36 @@
         "IsHidden"  "1"
         "OnCreated"
         {
-          "RunScript"
+           "DelayedAction"
           {
-            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
-            "Function"        "ConjureImage"
+            "Delay"     "0.1"
+            "Action"    
+            {
+                   "RunScript"
+              {
+                "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+                "Function"        "ConjureImage"
+              }
+              "RunScript"
+              {
+                "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+                "Function"        "ConjureImage"
+              }
+            }
           }
-          "RunScript"
+
+          "DelayedAction"
           {
-            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
-            "Function"        "ConjureImage"
+            "Delay"     "0.3"
+            "Action"    
+            {
+              "RunScript"
+              {
+                "ScriptFile"  "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+                "Function"    "draw"
+              }
+
+            }
           }
 
 

@@ -15,7 +15,7 @@ local illusion_max_hp_percentage = ability:GetLevelSpecialValueFor( "illusion_ma
  PrintTable(illusion)
  
  illusion:SetControllableByPlayer(player, true)
- 
+ illusion:SetOwner(caster)
  --if kisame has his ulti activated, his bunshin should turn into the shark model and have the water prison modifier
  if caster:HasModifier("modifier_kisame_metamorphosis") then 
     illusion:SetOriginalModel("models/kisame_new/kisame_samehada.vmdl")
@@ -58,8 +58,8 @@ illusion:SetBaseDamageMin(caster:GetAverageTrueAttackDamage() / 100 * damage_per
 illusion:SetBaseDamageMax(caster:GetAverageTrueAttackDamage() / 100 * damage_percentage)
 
 illusion:SetOriginalModel(caster:GetModelName())
-
-
+illusion:AddNoDraw()
+table.insert(event.ability.bunshins, illusion)
 
 
 --local bonus_damage_preattack = caster:GetBonusDamageFromPrimaryStat() / 100 * damage_percentage
@@ -68,12 +68,111 @@ illusion:SetOriginalModel(caster:GetModelName())
 end
 function NoDraw( keys )
   keys.caster:AddNoDraw()
-
+  keys.ability.bunshins = {}
 end
+
+
 function draw( keys )
+  local locationTable = {}
+  local first = false
+  local second = false
+  local third = false
+  local finished = false
+  table.insert(locationTable, keys.caster:GetAbsOrigin())
   keys.caster:RemoveNoDraw()
+  for key,oneBunshin in pairs(keys.ability.bunshins) do 
+  	table.insert(locationTable, oneBunshin:GetAbsOrigin())
+  	FindClearSpaceForUnit(oneBunshin, oneBunshin:GetAbsOrigin() + Vector(100, 100, 0), true)
+  end
+  local random = math.random()
+  print("1")
+    while not finished do
+     	random = math.random()
+     	print(random)
+     	if random < 0.331 then
+     		if not first then
+     			FindClearSpaceForUnit(caster, locationTable[1], true)
+     			finished = true
+     			first = true
+     		end
+     	elseif random < 0.661 then
+     		if not second then
+	     		FindClearSpaceForUnit(caster, locationTable[2], true)
+	     		finished = true
+	     		second = true
+     		end
+     	elseif random < 1.01 then
+     		if not third then
+	     		FindClearSpaceForUnit(caster, locationTable[3], true)
+	     		finished = true
+	     		third = true
+     		end
+     	end
+    end
+    finished = false
+    print("2")
+     while not finished do
+     	random = math.random()
+     	print(random)
+     	if random < 0.331 then
+     		if not first then
+     			FindClearSpaceForUnit(keys.ability.bunshins[1], locationTable[1], true)
+     			finished = true
+     			first = true
+     		end
+     	
+     	elseif random < 0.661 then
+     		if not second then
+	     		FindClearSpaceForUnit(keys.ability.bunshins[1], locationTable[2], true)
+	     		finished = true
+	     		second = true
+     		end
+     	elseif random < 1.01 then
+     		if not third then
+	     		FindClearSpaceForUnit(keys.ability.bunshins[1], locationTable[3], true)
+	     		finished = true
+	     		third = true
+	     	end
+     	end
+    end
+    finished = false;
+    print("3")
+
+    while not finished do
+     	random = math.random()
+     	print(random)
+     	print(first)
+     	print(second)
+     	print(third)
+     	if random < 0.331 then
+     		if not first then
+     			FindClearSpaceForUnit(keys.ability.bunshins[2], locationTable[1], true)
+     			finished = true
+     			first = true
+     		end
+     	elseif random < 0.661 then
+     		if not second then
+	     		FindClearSpaceForUnit(keys.ability.bunshins[2], locationTable[2], true)
+	     		finished = true
+	     		second = true
+     		end
+     	
+     	elseif random < 1.01 then
+     		if not third then
+	     		FindClearSpaceForUnit(keys.ability.bunshins[2], locationTable[3], true)
+	     		finished = true
+	     		third = true
+	     	end
+     	end
+    end
+    print("4")
+ 	keys.caster:RemoveNoDraw()
+ 	 for key,oneBunshin in pairs(keys.ability.bunshins) do 
+ 	 	oneBunshin:RemoveNoDraw()
+  	end
 end
 
 function RemoveBunshin( keys )
   keys.target:Destroy()
 end
+

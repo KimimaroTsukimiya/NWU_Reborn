@@ -45,10 +45,8 @@
 	// Bounds
 	//----------------------------------------------------------------
 	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"			// Hull type used for navigation/locomotion.
-	"HealthBarOffset"			"170"
-
-
-	
+	"HealthBarOffset"		"140"
+	"RingRadius"		"70"
 	"IsSummoned"                "1"
 	// Status
 	//----------------------------------------------------------------
