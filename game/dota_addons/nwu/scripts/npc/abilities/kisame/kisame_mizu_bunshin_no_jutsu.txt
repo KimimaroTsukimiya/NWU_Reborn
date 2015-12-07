@@ -77,8 +77,6 @@
       "Target"          "CASTER"
     }
 
-
-
     "FireSound"
         {
           "EffectName"  "Hero_NagaSiren.MirrorImage"

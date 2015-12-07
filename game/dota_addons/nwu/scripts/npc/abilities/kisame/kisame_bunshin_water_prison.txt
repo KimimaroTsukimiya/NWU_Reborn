@@ -46,6 +46,8 @@
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts"
 	}
 
+
+
 	"OnSpellStart"
 	{
 		"FireSound"
@@ -129,6 +131,16 @@
 						"CASTER"	"attach_hitloc" //Attach to the hands or any desired attach point of the hero
 						"CASTER"	"attach_hitloc"
 					}
+				}
+			}
+
+			"ThinkInterval"  "0.1"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/kisame/bunshin_water_prison.lua"
+					"Function"		"stopChannelOnDead"
 				}
 			}
 		}
