@@ -12,6 +12,8 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
+    "soundfile"         "soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+    "particle"          "particles/units/heroes/hero_siren/naga_siren_mirror_image.vpcf"
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
 		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
 		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
@@ -75,12 +77,18 @@
       "Target"          "CASTER"
     }
 
+
+
+    "FireSound"
+        {
+          "EffectName"  "Hero_NagaSiren.MirrorImage"
+          "Target"    "CASTER"
+        }
+
   }
 
     "Modifiers"
     {
-
-
        "mizu_bunshin_no_jutsu_illusion"
       {
         "Duration"  "1"
@@ -118,8 +126,6 @@
 
             }
           }
-
-
         }
       }
 

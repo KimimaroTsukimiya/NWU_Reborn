@@ -69,6 +69,12 @@ end
 function NoDraw( keys )
   keys.caster:AddNoDraw()
   keys.ability.bunshins = {}
+  keys.caster:Stop()
+
+ local particle = ParticleManager:CreateParticle("particles/units/heroes/hero_siren/naga_siren_mirror_image.vpcf", PATTACH_ABSORIGIN_FOLLOW, keys.caster)
+ParticleManager:SetParticleControl(particle, 0, keys.caster:GetAbsOrigin()) -- Origin
+
+  keys.ability.bunshinParticle = particle
 end
 
 
@@ -170,6 +176,7 @@ function draw( keys )
  	 for key,oneBunshin in pairs(keys.ability.bunshins) do 
  	 	oneBunshin:RemoveNoDraw()
   	end
+    ParticleManager:DestroyParticle(keys.ability.bunshinParticle, true)
 end
 
 function RemoveBunshin( keys )
