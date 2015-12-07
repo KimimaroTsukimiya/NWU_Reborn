@@ -1,4 +1,4 @@
-"kisme_shark"
+"kisame_shark"
 {
     "operator_stacks"
     {
@@ -17,7 +17,7 @@
                               "value0"        "sounds/kisame_shark.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "3.00000"  }
+                    "volume"            {   "value"     "1.00000"  }
                     "pitch_rand_min"    {   "value"     "1.000000"  }
                     "pitch_rand_max"    {   "value"     "1.000000"  }
                     "pitch"             {   "value"     "1.000000"  }
