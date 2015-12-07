@@ -12,7 +12,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+		"soundfile" 		"soundevents/kisame_shark.vsndevts"
 		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
 		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
 	}
@@ -89,10 +89,10 @@
 	"OnSpellStart"
 	{
 		"FireSound"
-		{
-			"EffectName"	"Hero_VengefulSpirit.WaveOfTerror"
-			"Target" 		"CASTER"
-		}
+        {
+          "EffectName"  "kisame_shark"
+          "Target"    "CASTER"
+        }
 
 		"RunScript"
 		{
