@@ -174,8 +174,7 @@ end
 function fireExplosion(keys)
 	local target_point = keys.target_points[1]
 	print(target_point)
-	local particle = ParticleManager:CreateParticle("particles/addons_gameplay/pit_lava_blast.vpcf", PATTACH_CUSTOMORIGIN, nil) 
+	local particle = ParticleManager:CreateParticle("particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire_explosion.vpcf", PATTACH_CUSTOMORIGIN, nil) 
 	ParticleManager:SetParticleControl(particle , 0, target_point)
-
-	
+	ParticleManager:SetParticleControl(particle , 3, target_point)
 end

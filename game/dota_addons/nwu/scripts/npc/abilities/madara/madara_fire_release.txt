@@ -18,6 +18,7 @@
 		"soundfile"			"soundevents/madara_katon.vsndevts"
 		"particle"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
 		"particle"			"particles/addons_gameplay/pit_lava_blast.vpcf"
+		"particle"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire_explosion.vpcf"
 	}
 	
 	// Casting
@@ -67,7 +68,7 @@
 			"var_type"			"FIELD_INTEGER"
 			"explosion_radius"		"475"
 		}
-		"06"
+		"12"
 		{
 			"var_type"						"FIELD_INTEGER"
 			"explosion_stun_duration"		"1"
@@ -97,7 +98,7 @@
             "var_type"  "FIELD_INTEGER"
             "duration" "2 3 4 5"
         }
-        "12"
+        "06"
         { 
             "var_type"  "FIELD_INTEGER"
             "bonus_damage_percent" "5 10 15 20"
@@ -161,16 +162,11 @@
 
 	"OnProjectileFinish"
 	{
-
-
-		"FireSound"
+		"RunScript"
 		{
-			"EffectName"			"Hero_Mirana.ArrowImpact"
-			"Target"
-			{
-				"Center"			"TARGET"
-				"Flags"     		"DOTA_UNIT_TARGET_FLAG_DEAD"
-			}
+			"ScriptFile"	"heroes/madara/fire_release.lua"
+			"Function"		"fireExplosion"
+			"TARGET"		"POINT"
 		}
 
 		"ActOnTargets"
