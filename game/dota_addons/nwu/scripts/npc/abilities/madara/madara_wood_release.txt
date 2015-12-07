@@ -12,7 +12,7 @@
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"650"
-	"AbilityCastPoint"				"0.7 0.7 0.7 0.7"
+	"AbilityCastPoint"				"0.6 0.6 0.6 0.6"
 	"AOERadius"						"%radius"
 
 	// Time		
@@ -75,9 +75,19 @@
 	"precache"
 	{
 		"soundfile"						"soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+		"soundfile"						"soundevents/madara_trees.vsndevts"
 		"particle"						"particles/units/heroes/hero_kunkka/kunkka_spell_torrent_bubbles.vpcf"
 		"particle"						"particles/units/heroes/hero_kunkka/kunkka_spell_torrent_splash.vpcf"
 	}
+
+	"OnAbilityPhaseStart"
+	 {
+	 	"RunScript"
+	 	{
+	 		"ScriptFile"	"heroes/madara/wood_release.lua"
+			"Function"		"wood_sound"
+	 	}
+	 } 
 	
 	"OnSpellStart"
 	{

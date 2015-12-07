@@ -105,13 +105,17 @@
 		
 	}
 
-	"OnSpellStart"
-	{
-		"FireSound"
+	"OnAbilityPhaseStart"
+	 {
+	 	"FireSound"
 		{
 			"EffectName"			"madara_katon"
 			"Target"				"CASTER"
 		}
+	 } 
+
+	"OnSpellStart"
+	{
 
 		"RunScript"
 		{

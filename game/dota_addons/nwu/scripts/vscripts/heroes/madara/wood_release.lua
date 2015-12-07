@@ -27,3 +27,8 @@ function wood_release( keys )
 	end
 	AddFOWViewer( keys.caster:GetTeamNumber(), target_point, tree_vision, tree_duration, false )
 end
+
+function wood_sound( keys )
+	print("test")
+	EmitSoundOnClient("madara_trees", PlayerResource:GetPlayer( keys.caster:GetPlayerID()))
+end
