@@ -7,6 +7,9 @@ Layer0
 	//---- Do not Cast Shadows ----
 	F_DO_NOT_CAST_SHADOWS 1
 
+	//---- Effect Proxies ----
+	F_USE_STATUS_EFFECTS_PROXY 1
+
 	//---- Blend To Full ----
 	g_flEnvMapBlendToFull "0.000"
 	g_flMetalnessBlendToFull "0.000"
@@ -27,7 +30,14 @@ Layer0
 	g_flTexCoordRotation "0.000"
 	g_vTexCoordOffset "[0.000 0.000]"
 	g_vTexCoordScale "[1.000 1.000]"
-	TextureColor "materials/temari/temari.tga"
+	TextureColor "materials/onuki/onoki_main.tga"
+
+	//---- Detail 1 ----
+	g_vDetailTexCoordScale "[1.000 1.000]"
+
+	//---- Detail 2 ----
+	g_flDetail2BlendFactor "0.000"
+	TextureDetail2 "materials/default/default_detail2.tga"
 
 	//---- Fresnel ----
 	TextureFresnelWarpColor "materials/default/default_fresnelwarpcolor.tga"

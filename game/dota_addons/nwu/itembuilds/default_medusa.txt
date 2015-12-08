@@ -1,0 +1,41 @@
+"itembuilds/test_medusa.txt"
+{
+	"author"	"LearningDave"
+	"hero"		"npc_dota_hero_medusa"
+	"Title"		"Naruto Wars Reborn"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"    		"item_shin_guards"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"    		"item_gloves_of_strength"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_bottle"
+			"item"          "item_sakuras_fighting_gloves"
+			"item"          "item_reminisce"
+			"item"   		"item_shinobi_sandals"
+		}
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"			"item_the_fourths_legacy"
+			"item"			"item_kaguya_armor"
+			"item"			"item_flak_jacket"
+			"item"			"item_the_will_of_fire"
+
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"			"item_gelel_stone"
+			"item"			"item_twin_fangs_of_abyss"
+			"item"			"item_yondaime_sealed_kunai"	
+		}		
+	}
+}

@@ -7,8 +7,8 @@ CVModel CVModel_0
 		[
 			CVmesh
 			{
-				string m_meshName = "temari"
-				string m_meshFile = "models/temari/temari.fbx"
+				string m_meshName = "onoki_test"
+				string m_meshFile = "models/onuki/onoki_test.fbx"
 				string m_materialSearchPath = ""
 				bool m_bSkinParentedObjects = true
 				bool m_bLegacySkinParentedTransforms = false
@@ -106,7 +106,7 @@ CVModel CVModel_0
 	[
 		
 	]
-	CVMaterialRemapList* m_pMaterialRemapList = &CVMaterialRemapList_0
+	CVMaterialRemapList* m_pMaterialRemapList = NULL
 	float m_flFbxScale = 1.000000
 	float m_flQCScale = 1.000000
 	float(3) m_vOrigin = ( 0.000000, 0.000000, 0.000000 )
@@ -124,32 +124,5 @@ CVModel CVModel_0
 	CVanimGroupReference[] m_pAnimGroups = 
 	[
 		
-	]
-}
-
-CVMaterialRemapList CVMaterialRemapList_0
-{
-	CVMaterialRemap[] m_vMaterialRemapList = 
-	[
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "milkshapeexported1.vmat"
-			string m_sReplaceMaterial = "materials/temari/temari.vmat"
-		},
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "milkshapeexported2.vmat"
-			string m_sReplaceMaterial = "materials/temari/temari.vmat"
-		},
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "milkshapeexported3.vmat"
-			string m_sReplaceMaterial = "materials/temari/fan.vmat"
-		},
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "milkshapeexported4.vmat"
-			string m_sReplaceMaterial = "materials/temari/fan.vmat"
-		}
 	]
 }
