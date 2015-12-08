@@ -1,3 +1,4 @@
+//Kakashi
 "itembuilds/test_beastmaster.txt"
 {
 	"author"	"LearningDave"
@@ -35,8 +36,7 @@
 			"item"			"item_gelel_stone"
 			"item"			"item_the_will_of_fire"
 			"item"			"item_silver_hands"
-			"item"			"item_ikazuchi"		
-			"item"			"item_jashins_amulet"	
+			"item"			"item_ikazuchi"			
 		}		
 	}
 }

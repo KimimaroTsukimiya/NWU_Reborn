@@ -1,3 +1,4 @@
+//Shikamaru
 "itembuilds/test_shadow_shaman.txt"
 {
 	"author"	"LearningDave"
@@ -27,17 +28,18 @@
 		}
 		"#DOTA_Item_Build_Core_Items"
 		{
-			"item"			"item_sage_scroll"
+			"item"			"item_first_hokages_necklace"
 			"item"          "item_ward_observer"
 			"item"   		"item_ward_sentry"
 		}
 
 		"#DOTA_Item_Build_Luxury"
 		{
+			"item"			"item_yondaime_sealed_kunai"
+			"item"			"item_sage_scroll"
 			"item"			"item_giant_iron_fan"
 			"item"			"item_the_totsuka"
 			"item"			"item_assassins_cloak"
-			"item"			"item_first_hokages_necklace"
 			"item"			"item_bingo_book"
 		}		
 	}

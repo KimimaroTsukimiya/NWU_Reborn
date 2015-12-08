@@ -1,3 +1,4 @@
+//Itachi
 "itembuilds/test_antimage.txt"
 {
 	"author"	"LearningDave"
@@ -28,16 +29,15 @@
 		{
 			"item"			"item_chakra_smasher"
 			"item"			"item_probagation"
-			"item"			"item_good_guys_suit"
 		}
 
 		"#DOTA_Item_Build_Luxury"
 		{
+			"item"			"item_good_guys_suit"
 			"item"			"item_gelel_stone"
 			"item"			"item_karites_touch"
 			"item"			"item_the_will_of_fire"
 			"item"			"item_kurosawa"
-			"item"			"item_silver_hands"
 			"item"			"item_kongou_nyoi"
 			"item"			"item_conch_shell_mace"			
 		}		

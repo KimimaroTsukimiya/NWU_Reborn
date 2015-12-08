@@ -1,3 +1,4 @@
+//Gaara
 "itembuilds/test_lion.txt"
 {
 	"author"	"LearningDave"
@@ -20,12 +21,11 @@
 		{
 			"item"			"item_tobis_mask"
 			"item"			"item_idates_sandals"
-			"item"          "item_reminisce"
 		}
 		"#DOTA_Item_Build_Core_Items"
 		{
 			"item"			"item_gelel_stone"
-			"item"          "item_assassins_cloak"
+			"item"			"item_probagation"
 			"item"   		"item_chakra_smasher"
 		}
 
@@ -33,8 +33,6 @@
 		{
 			"item"			"item_good_guys_suit"
 			"item"			"item_ikazuchi"
-			"item"			"item_probagation"
-			"item"			"item_jashins_amulet"
 			"item"			"item_kurosawa"
 			"item"   		"item_iron_crow"
 		}		

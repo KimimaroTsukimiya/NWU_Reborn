@@ -1,3 +1,4 @@
+//Madara
 "itembuilds/test_ogre_magi.txt"
 {
 	"author"	"LearningDave"

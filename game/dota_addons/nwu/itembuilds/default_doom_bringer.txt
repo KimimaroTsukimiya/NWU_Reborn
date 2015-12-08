@@ -1,3 +1,4 @@
+//Hidan
 "itembuilds/test_doom_bringer.txt"
 {
 	"author"	"LearningDave"
@@ -24,7 +25,6 @@
 		}
 		"#DOTA_Item_Build_Core_Items"
 		{
-			"item"			"item_the_fourths_legacy"
 			"item"			"item_kaguya_armor"
 			"item"			"item_flak_jacket"
 			"item"			"item_the_will_of_fire"

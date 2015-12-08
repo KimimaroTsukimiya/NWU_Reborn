@@ -1,3 +1,4 @@
+//Zabuza
 "itembuilds/test_bloodseeker.txt"
 {
 	"author"	"LearningDave"
@@ -25,7 +26,6 @@
 		}
 		"#DOTA_Item_Build_Core_Items"
 		{
-			"item"			"item_silver_hands"
 			"item"			"item_kusanagi"
 			"item"			"item_probagation"
 			"item"			"item_gelel_stone"
@@ -33,10 +33,12 @@
 
 		"#DOTA_Item_Build_Luxury"
 		{
+
 			"item"			"item_the_will_of_fire"
 			"item"			"item_good_guys_suit"
 			"item"			"item_kurosawa"
-			"item"			"item_conch_shell_mace"			
+			"item"			"item_conch_shell_mace"
+			"item"			"item_silver_hands"	
 		}		
 	}
 }

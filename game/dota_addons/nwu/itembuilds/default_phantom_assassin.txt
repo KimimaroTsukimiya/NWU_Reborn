@@ -1,3 +1,4 @@
+//Sakura
 "itembuilds/test_phantom_assassin.txt"
 {
 	"author"	"LearningDave"
@@ -27,18 +28,19 @@
 		"#DOTA_Item_Build_Core_Items"
 		{
 			"item"			"item_gelel_stone"
-			"item"			"item_iron_crow"
-			"item"			"item_jashins_amulet"	
+			"item"			"item_the_will_of_fire"
+				
 			"item"			"item_kurosawa"
 		}
 
 		"#DOTA_Item_Build_Luxury"
 		{
 			"item"			"item_twin_fangs_of_abyss"
-			"item"			"item_the_will_of_fire"
+			"item"			"item_jashins_amulet"
 			"item"			"item_kongou_nyoi"
 			"item"          "item_chakra_armor"
 			"item"			"item_silver_hands"
+			"item"			"item_hokage_armor"
 		}		
 	}
 }
