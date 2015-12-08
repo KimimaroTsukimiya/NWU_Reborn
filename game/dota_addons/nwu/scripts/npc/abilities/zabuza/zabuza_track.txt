@@ -78,17 +78,18 @@
 	}
 
 	"OnSpellStart"
-	{
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_track_aura_datadriven"
-			"Target"		"TARGET"
-		}
-
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_track_datadriven"
-			"Target"		"TARGET"
+	{	
+		"RunScript"
+        {
+			"ScriptFile"    "items.lua"
+			"Function"      "CheckForSpellBlock"
+			"GenericFunction"	"GenericSpellFunction"
+			
+			"Modifier1"		"modifier_track_aura_datadriven"
+			"Duration1"		"%duration"
+			
+			"Modifier2"		"modifier_track_datadriven"
+			"Duration2"		"%duration"
 		}
 
 		"FireEffect"
