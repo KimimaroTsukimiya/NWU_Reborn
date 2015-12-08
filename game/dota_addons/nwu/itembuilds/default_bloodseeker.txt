@@ -1,0 +1,42 @@
+"itembuilds/test_bloodseeker.txt"
+{
+	"author"	"LearningDave"
+	"hero"		"npc_dota_hero_bloodseeker"
+	"Title"		"Naruto Wars Reborn"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"          "item_tango"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"          "item_shinobi_waist_pouch"
+			"item"          "item_shinobi_waist_pouch"
+			"item"          "item_shinobi_waist_pouch"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_idates_sandals"
+			"item"			"item_shuko"
+		}
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"			"item_silver_hands"
+			"item"			"item_kusanagi"
+			"item"			"item_probagation"
+			"item"			"item_gelel_stone"
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"			"item_the_will_of_fire"
+			"item"			"item_good_guys_suit"
+			"item"			"item_kurosawa"
+			"item"			"item_conch_shell_mace"			
+		}		
+	}
+}

@@ -8,7 +8,7 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"FightRecapLevel"				"2"
-	"AbilityTextureName"			"shadow_shaman_mass_serpent_ward"
+	"AbilityTextureName"			"shikamaru_kage_nui"
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------

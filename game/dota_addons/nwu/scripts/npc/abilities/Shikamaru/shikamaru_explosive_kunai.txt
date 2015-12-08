@@ -10,7 +10,7 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"FightRecapLevel"				"1"
-	"AbilityTextureName"			"crystal_maiden_crystal_nova"
+	"AbilityTextureName"			"shikamaru_explosive_kunai"
 	"AOERadius"						"%radius"
 	
 	// Casting

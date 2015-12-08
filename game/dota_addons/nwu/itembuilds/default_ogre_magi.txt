@@ -1,0 +1,43 @@
+"itembuilds/test_ogre_magi.txt"
+{
+	"author"	"LearningDave"
+	"hero"		"npc_dota_hero_ogre_magi"
+	"Title"		"Naruto Wars Reborn"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"    		"item_courier"
+			"item"    		"item_ward_observer"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"          "item_shinobi_waist_pouch"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_flying_courier"
+			"item"			"item_jiraiyas_sandals"
+			"item"          "item_ward_observer"
+			"item"   		"item_ward_sentry"
+		}
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"			"item_sage_scroll"
+			"item"          "item_ward_observer"
+			"item"   		"item_ward_sentry"
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"			"item_giant_iron_fan"
+			"item"			"item_the_totsuka"
+			"item"			"item_assassins_cloak"
+			"item"			"item_first_hokages_necklace"
+			"item"			"item_bingo_book"
+		}		
+	}
+}
