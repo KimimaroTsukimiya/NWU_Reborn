@@ -62,3 +62,24 @@ function GameMode:PlayGameMusicForState7(PlayerCount)
 end
 
 
+
+--[[Author: LearningDave
+  Date: december, 09th 2015.
+]]
+function GameMode:PlayKillSound(killer, killed)
+  if killer == "npc_dota_hero_dragon_knight" then 
+    if killed == "npc_dota_hero_storm_spirit" then 
+      print("naruto killed sasuke")
+      EmitGlobalSound("naruto_kills_sasuke")
+    elseif killed == "npc_dota_hero_beastmaster" then 
+      print("naruto killed kakashi")
+    else                 
+      print("blah")
+    end
+  elseif killer == "npc_dota_hero_storm_spirit" then 
+      print("sasuke killed someone")
+  else                 
+      print("not sasu killed someone")
+  end
+end
+
