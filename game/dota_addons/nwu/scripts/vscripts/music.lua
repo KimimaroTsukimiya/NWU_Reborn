@@ -77,6 +77,13 @@ function GameMode:PlayKillSound(killer, killed)
       print("blah")
     end
   elseif killer == "npc_dota_hero_storm_spirit" then 
+      if killed == "npc_dota_hero_dragon_knight" then
+        EmitGlobalSound("sasuke_kills_naruto")
+      elseif killed == "npc_dota_hero_lion" then
+        EmitGlobalSound("sasuke_kills_gaara")
+      elseif killed == "npc_dota_hero_antimage" then
+        EmitGlobalSound("sasuke_kills_itachi")
+      end
       print("sasuke killed someone")
   else                 
       print("not sasu killed someone")

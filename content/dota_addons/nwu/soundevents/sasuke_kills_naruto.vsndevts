@@ -1,4 +1,4 @@
-"naruto_kills_sasuke"
+"sasuke_kills_naruto"
 {
     "operator_stacks"
     {
@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/naruto_kills_sasuke.vsnd"
+                              "value0"        "sounds/sasuke_kills_naruto.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
