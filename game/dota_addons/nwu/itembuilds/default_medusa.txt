@@ -28,12 +28,11 @@
 			"item"			"item_the_fourths_legacy"
 			"item"			"item_kaguya_armor"
 			"item"			"item_flak_jacket"
-			"item"			"item_the_will_of_fire"
-
 		}
 
 		"#DOTA_Item_Build_Luxury"
 		{
+			"item"			"item_the_will_of_fire"
 			"item"			"item_gelel_stone"
 			"item"			"item_twin_fangs_of_abyss"
 			"item"			"item_yondaime_sealed_kunai"	

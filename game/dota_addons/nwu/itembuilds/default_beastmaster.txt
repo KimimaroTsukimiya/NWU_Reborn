@@ -21,18 +21,20 @@
 
 		"#DOTA_Item_Build_Early_Game"
 		{
+			"item"			"item_bottle"
 			"item"			"item_shinobi_trends_str"
 			"item"			"item_ring_of_health_datadriven"
 			"item"			"item_tri_blades"
 		}
 		"#DOTA_Item_Build_Core_Items"
 		{
-			"item"			"item_kongou_nyoi"
+			"item"			"item_bingo_book"
 			"item"			"item_twin_fangs_of_abyss"
 		}
 
 		"#DOTA_Item_Build_Luxury"
 		{
+			"item"			"item_sage_scroll"
 			"item"			"item_gelel_stone"
 			"item"			"item_the_will_of_fire"
 			"item"			"item_silver_hands"
