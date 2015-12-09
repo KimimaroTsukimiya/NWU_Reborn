@@ -262,7 +262,7 @@ function GameMode:OnEntityKilled( keys )
   --Items
   if killerEntity ~= nil then
     GameMode:SupportItemCooldownReset(killedUnit, killerEntity)
-    GameMode:PlayKillSound(killerEntity:GetName(), killedUnit:GetName())
+    GameMode:PlayKillSound(killerEntity, killedUnit)
   end
 
 

@@ -67,22 +67,26 @@ end
   Date: december, 09th 2015.
 ]]
 function GameMode:PlayKillSound(killer, killed)
-  if killer == "npc_dota_hero_dragon_knight" then 
-    if killed == "npc_dota_hero_storm_spirit" then 
+
+  local killerName = killer:GetName()
+  local killedName = killed:GetName()
+
+  if killerName == "npc_dota_hero_dragon_knight" then 
+    if killedName == "npc_dota_hero_storm_spirit" then 
       print("naruto killed sasuke")
-      EmitGlobalSound("naruto_kills_sasuke")
-    elseif killed == "npc_dota_hero_beastmaster" then 
+      EmitSoundOn("naruto_kills_sasuke", killer)
+    elseif killedName == "npc_dota_hero_beastmaster" then 
       print("naruto killed kakashi")
     else                 
       print("blah")
     end
-  elseif killer == "npc_dota_hero_storm_spirit" then 
-      if killed == "npc_dota_hero_dragon_knight" then
-        EmitGlobalSound("sasuke_kills_naruto")
-      elseif killed == "npc_dota_hero_lion" then
-        EmitGlobalSound("sasuke_kills_gaara")
-      elseif killed == "npc_dota_hero_antimage" then
-        EmitGlobalSound("sasuke_kills_itachi")
+  elseif killerName == "npc_dota_hero_storm_spirit" then 
+      if killedName == "npc_dota_hero_dragon_knight" then
+        EmitSoundOn("sasuke_kills_naruto", killer)
+      elseif killedName == "npc_dota_hero_lion" then
+       EmitSoundOn("sasuke_kills_gaara", killer)
+      elseif killedName == "npc_dota_hero_antimage" then
+        EmitSoundOn("sasuke_kills_itachi", killer)
       end
       print("sasuke killed someone")
   else                 
