@@ -205,6 +205,7 @@
 		{
 			"IsHidden"		"1"
 			"IsPurgable"	"0"
+			"Priority"		"MODIFIER_PRIORITY_HIGH"
 			"States"
 			{
 				"MODIFIER_STATE_INVISIBLE" 			"MODIFIER_STATE_VALUE_DISABLED"
