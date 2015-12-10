@@ -21,6 +21,7 @@
 
 		"#DOTA_Item_Build_Early_Game"
 		{
+			"item"			"item_bottle"
 			"item"			"item_shinobi_trends_str"
 			"item"			"item_the_spark_of_agility"
 			"item"			"item_shuko"
@@ -39,7 +40,8 @@
 			"item"			"item_the_will_of_fire"
 			"item"			"item_kurosawa"
 			"item"			"item_kongou_nyoi"
-			"item"			"item_conch_shell_mace"			
+			"item"			"item_conch_shell_mace"	
+			"item"			"item_the_fourths_legacy"		
 		}		
 	}
 }

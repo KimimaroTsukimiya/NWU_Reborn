@@ -36,7 +36,6 @@
 
 			"item"			"item_the_will_of_fire"
 			"item"			"item_good_guys_suit"
-			"item"			"item_kurosawa"
 			"item"			"item_conch_shell_mace"
 			"item"			"item_silver_hands"	
 		}		

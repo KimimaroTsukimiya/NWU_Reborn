@@ -90,7 +90,7 @@ function GameMode:PlayKillSound(killer, killed)
       end
       print("sasuke killed someone")
   else                 
-      print("not sasu killed someone")
+     
   end
 end
 

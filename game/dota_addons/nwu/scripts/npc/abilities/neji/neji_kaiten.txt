@@ -14,14 +14,13 @@
 
     // Casting
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastRange"              "0"
-    "AbilityDuration"               "3"
+    "AbilityCastRange"              "0.0"
 
 
     // Time     
     //-------------------------------------------------------------------------------------------------------------
     "AbilityCooldown"               "15"
-    "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
+    "AbilityCastPoint"              "0.1 0.1 0.1 0.1"
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
@@ -109,7 +108,7 @@
         {
             "ModifierName"    "modifier_neji_kaiten_untouchable"
             "Target"         "CASTER"
-            "Duration"        "1"
+            "Duration"        "0.7"
         }     
 
     }
@@ -118,9 +117,11 @@
     {
         "modifier_neji_kaiten_untouchable"
         {
-            "Duration"  "1"
+            "Duration"  "0.7"
             "States"
             {
+                "MODIFIER_STATE_COMMAND_RESTRICTED"  "MODIFIER_STATE_VALUE_ENABLED"
+                "MODIFIER_STATE_UNSELECTABLE"        "MODIFIER_STATE_VALUE_ENABLED"
                 "MODIFIER_STATE_INVULNERABLE"        "MODIFIER_STATE_VALUE_ENABLED"
             }
         }
