@@ -19,6 +19,10 @@ end
 function Kakashi_Sharingan:LevelUp_Stolen(keys)
 	print("LevelUp_Stolen",self.caster:GetPlayerID(),keys.player)
 	
+	for k,v in pairs(keys) do
+		print(kv,)
+	end
+	
 	if( self.caster:GetPlayerID() ~= (keys.player-1) ) then
 		return;
 	end

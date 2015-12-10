@@ -43,7 +43,9 @@ function ChainLightning( event )
 				targetVec = target:GetAbsOrigin()
 				targetVec.z = target:GetAbsOrigin().z + target:GetBoundingMaxs().z
 				if dummy ~= nil then
-					dummy:RemoveSelf()
+					if not dummy:IsNull() then
+						dummy:RemoveSelf()
+					end
 				end
 				dummy = CreateUnitByName("npc_dummy_unit", targetVec, false, hero, hero, hero:GetTeam())
 				-- Track the possible targets to bounce from the units in radius
@@ -67,7 +69,7 @@ function ChainLightning( event )
 					    v = nil
 					end
 					dummy:RemoveSelf()
-				    print("End Chain, no more targets")
+				    --print("End Chain, no more targets")
 					return	
 				end
 
@@ -79,7 +81,7 @@ function ChainLightning( event )
 				damage = damage - (damage*decay)
 				ApplyDamage({ victim = target, attacker = hero, damage = damage, damage_type = DAMAGE_TYPE_MAGICAL })
 				PopupDamage(target,math.floor(damage))
-				print("Bounce "..bounces.." Hit Unit "..target:GetEntityIndex().. " for "..damage.." damage")
+				--print("Bounce "..bounces.." Hit Unit "..target:GetEntityIndex().. " for "..damage.." damage")
 
 				-- play the sound
 				EmitSoundOn("Hero_Zuus.ArcLightning.Target",target)
@@ -92,7 +94,9 @@ function ChainLightning( event )
 				
 				-- fire the timer again if spell bounces remain
 				if bounces > 0 then
-					dummy:RemoveSelf()
+					if(not dummy:IsNull())then
+						dummy:RemoveSelf()
+					end
 					return time_between_bounces
 
 				else
@@ -100,8 +104,10 @@ function ChainLightning( event )
 					   	v.struckByChain = false
 					   	v = nil
 					end
-					dummy:RemoveSelf()
-					print("End Chain, no more bounces")
+					if not dummy:IsNull() then
+						dummy:RemoveSelf()
+					end
+					--print("End Chain, no more bounces")
 				end
 			end
 		})
