@@ -143,7 +143,6 @@
               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
           }
       }
-
     }
 
 }

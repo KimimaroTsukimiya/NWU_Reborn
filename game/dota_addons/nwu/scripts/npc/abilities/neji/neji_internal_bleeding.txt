@@ -74,21 +74,15 @@
 
 	"OnSpellStart"
 	{
-
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_neji_internal_bleeding_dot"
-			"Target" 		"TARGET"
-			"Duration"		"%duration"
-		}
-
 		"RunScript"
-		{
-			"ModifierName"	"modifier_neji_internal_bleeding_ms_slow"
-			"ScriptFile"	"heroes/neji/internal_bleeding.lua"
-			"Function"		"apply_ms_slow"
+        {
+			"ScriptFile"    "items.lua"
+			"Function"      "CheckForSpellBlock"
+			"GenericFunction"	"GenericSpellFunction"
+			
+			"Modifier1"		"modifier_neji_internal_bleeding_dot"
+			"Duration1"		"%duration"
 		}
-		
 	}
 
 	"Modifiers"
@@ -99,15 +93,26 @@
 			"IsHidden"			"1"
 			"IsDebuff"			"1"
 			"ThinkInterval"  "%tick_interval"
-				"OnIntervalThink"
+			
+			"OnCreated"
+			{
+				"RunScript"
 				{
-					"RunScript"
-					{
-						"ScriptFile"	"heroes/neji/internal_bleeding.lua"
-						"Function"		"internal_bleeding"
-						"ms_slow"		"%ms_slow"
-					}
+					"ModifierName"	"modifier_neji_internal_bleeding_ms_slow"
+					"ScriptFile"	"heroes/neji/internal_bleeding.lua"
+					"Function"		"apply_ms_slow"
 				}
+			}			
+
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/neji/internal_bleeding.lua"
+					"Function"		"internal_bleeding"
+					"ms_slow"		"%ms_slow"
+				}
+			}
 		}
 	}
 }

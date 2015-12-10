@@ -7,7 +7,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"guy_dynamic_entry"
 
@@ -26,7 +26,7 @@
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"375"
-	"AbilityCastPoint"				"0.5 0.5 0.5"
+	"AbilityCastPoint"				"0.25 0.25 0.25"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
@@ -57,57 +57,15 @@
 
 	"OnSpellStart"
 	{
-
 		"RunScript"
-		{
-			"ScriptFile"	"heroes/guy/dynamic_entry.lua"
-			"Function"		"dynamic_entry"
-		}
-
-		"FireSound"
-		{
-				
-		}
-		
-		"DelayedAction"
-		{
-			"Delay"     "0.2"
-			"Action"    
-			{
-				"Damage"
-				{
-					"Target"		"TARGET"
-					"Type"			"DAMAGE_TYPE_PHYSICAL"
-					"Damage"		"%AbilityDamage"
-				}
-
-				"ApplyModifier"
-				{
-					"ModifierName"	"modifier_guy_dynamic_entry_miss"
-					"Target" 		"TARGET"
-					"Duration"		"%duration"
-				}
-
-				 "FireSound"
-			    {
-			      "EffectName"  "Hero_Brewmaster.ThunderClap"
-			      "Target"    "CASTER"
-			    }
-			     "FireSound"
-	            {
-	              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
-	              "Target"    "TARGET"
-	            }
-
-			        "FireEffect"
-				    {
-				      "EffectName"        "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
-				      "EffectAttachType"  "follow_origin"
-				      "EffectRadius"    "200"
-				      "Target"            "TARGET"
-				    }
-				     
-			}
+        {
+			"ScriptFile"    "items.lua"
+			"Function"      "CheckForSpellBlock"
+			
+			"filePath"		"heroes/guy/dynamic_entry"
+			"functionName"	"dynamic_entry_start"
+			
+			"EntryModifier"	"modifier_guy_dynamic_entry_miss"
 		}
 	}
 
@@ -117,14 +75,36 @@
 		{
 			"IsDebuff"	"1"
 			"Duration"	"%duration"
-			  "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
-          "EffectAttachType"  "follow_origin"
+			"EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+			"EffectAttachType"  "follow_origin"
       
-          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
-          "StatusEffectPriority"  "10"
+			"StatusEffectName"		"particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+			"StatusEffectPriority"  "10"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_MISS_PERCENTAGE" "%miss_chance"
+			}
+			
+			"OnCreated"
+			{	
+				"FireSound"
+			    {
+			      "EffectName"  "Hero_Brewmaster.ThunderClap"
+			      "Target"    "CASTER"
+			    }
+			     "FireSound"
+	            {
+	              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
+	              "Target"    "TARGET"
+	            }
+			
+				"FireEffect"
+				{
+				  "EffectName"        	"particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+				  "EffectAttachType"  	"follow_origin"
+				  "EffectRadius"		"200"
+				  "Target"            	"TARGET"
+				}
 			}
 		}
 	}
