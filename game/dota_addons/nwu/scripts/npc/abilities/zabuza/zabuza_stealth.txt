@@ -48,13 +48,18 @@
 	"OnSpellStart"
 	{
 
-		"RunScript"
+		"Blink"
 		{
-			"ScriptFile"	"heroes/zabuza/stealth.lua"
-			"Function"		"stealth"
+			"Target"	"TARGET"
 		}
-		
-		
+
+
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/zabuza/stealth.lua"
+					"Function"		"attackAfterBlink"
+				}
+
 		"FireSound"
 		{
 				
