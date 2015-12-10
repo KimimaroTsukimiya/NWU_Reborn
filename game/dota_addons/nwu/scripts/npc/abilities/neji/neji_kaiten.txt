@@ -20,7 +20,7 @@
     // Time     
     //-------------------------------------------------------------------------------------------------------------
     "AbilityCooldown"               "15"
-    "AbilityCastPoint"              "0.1 0.1 0.1 0.1"
+    "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
@@ -108,7 +108,7 @@
         {
             "ModifierName"    "modifier_neji_kaiten_untouchable"
             "Target"         "CASTER"
-            "Duration"        "0.7"
+            "Duration"        "0.4"
         }     
 
     }
@@ -117,7 +117,7 @@
     {
         "modifier_neji_kaiten_untouchable"
         {
-            "Duration"  "0.7"
+            "Duration"  "0.4"
             "States"
             {
                 "MODIFIER_STATE_COMMAND_RESTRICTED"  "MODIFIER_STATE_VALUE_ENABLED"

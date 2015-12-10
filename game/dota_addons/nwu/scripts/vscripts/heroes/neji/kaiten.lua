@@ -16,7 +16,6 @@ function apply_stun( keys )
 			if targetEntities then
 				for _,target in pairs(targetEntities) do
 					target:AddNewModifier(keys.caster, target, "modifier_neji_kaiten_stun", {Duration = duration})
-					
 				end
 			end
 		return nil

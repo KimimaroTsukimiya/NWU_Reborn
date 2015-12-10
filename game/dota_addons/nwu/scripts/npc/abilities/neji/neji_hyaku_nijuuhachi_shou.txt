@@ -100,45 +100,12 @@
 
 	"OnChannelInterrupted"
 	{
-		"RemoveModifier"
-		{
-			"ModifierName"	"modifier_hyaku_nijuuhachi_shou"
-			"Target"
-			{
-				"Center"	"TARGET"
-				"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-			}
-		}
-
-		"RemoveModifier"
-		{
-			"ModifierName"	"modifier_hyaku_nijuuhachi_shou_invis"
-			"Target"
-			{
-				"Center"	"TARGET"
-				"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-			}
-		}
-
-		"RemoveModifier"
-		{
-			"ModifierName"	"modifier_hyaku_nijuuhachi_shou_caster"
-			"Target" 		"CASTER"
-		}
-
 		"RunScript"
 		{
-			//"ScriptFile"	"heroes/neji/hyaku_nijuuhachi_shou.lua"
-			//"Function"		"FiendsGripStopSound"
-			//"sound"			"Hero_Bane.FiendsGrip"
+			"ScriptFile"	"heroes/neji/hyaku_nijuuhachi_shou.lua"
+			"Function"		"removeModifiers"
 		}
-
-		"RunScript"
-		{
-			//"ScriptFile"	"heroes/neji/hyaku_nijuuhachi_shou.lua"
-			//"Function"		"FiendsGripStopSound"
-			//"sound"			"Hero_Bane.FiendsGrip.Cast"
-		}
+		
 	}
 
 	"OnChannelFinish"
@@ -169,19 +136,6 @@
 			"Target" 		"CASTER"
 		}
 
-		"RunScript"
-		{
-			//"ScriptFile"	"heroes/neji/hyaku_nijuuhachi_shou.lua"
-			//"Function"		"FiendsGripStopSound"
-			//"sound"			"Hero_Bane.FiendsGrip"
-		}
-
-		"RunScript"
-		{
-			//"ScriptFile"	"heroes/neji/hyaku_nijuuhachi_shou.lua"
-			//"Function"		"FiendsGripStopSound"
-			//"sound"			"Hero_Bane.FiendsGrip.Cast"
-		}
 	}
 
 	"Modifiers"
@@ -246,8 +200,24 @@
 		{
 			"IsHidden"	"1"
 
-			"EffectName"	"particles/units/heroes/neji/baguam.vpcf"
-			"EffectAttachType"	"attach_origin"
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/neji/hyaku_nijuuhachi_shou.lua"
+					"Function"		"createParticle"
+				}
+			
+			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/neji/hyaku_nijuuhachi_shou.lua"
+					"Function"		"removeParticle"
+				}
+			}
 
 			"States"
 			{
