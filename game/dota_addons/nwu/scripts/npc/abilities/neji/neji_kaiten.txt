@@ -30,6 +30,7 @@
      "precache"
     {
       "particle"  "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+      "particle"  "particles/units/heroes/neji/kaiten.vpcf"
       "particle"  "particles/generic_gameplay/generic_purge.vpcf"
       "particle"   "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
     }
@@ -61,10 +62,8 @@
 
     "OnSpellStart"
     {
-        "FireSound"
-        {
-            //TODO
-        }
+       
+
 
         "Knockback"
                 {
@@ -122,6 +121,25 @@
     {
         "modifier_neji_kaiten_untouchable"
         {
+
+            "OnCreated"
+            {
+                 "RunScript"
+                {
+                    "ScriptFile"    "heroes/neji/kaiten.lua"
+                    "Function"      "createParticle"
+                }
+            }
+
+            "OnDestroy"
+            {
+                 "RunScript"
+                {
+                    "ScriptFile"    "heroes/neji/kaiten.lua"
+                    "Function"      "removeParticle"
+                }
+            }
+
             "Duration"  "0.4"
             "States"
             {

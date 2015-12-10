@@ -134,12 +134,12 @@ CVMaterialRemapList CVMaterialRemapList_0
 		CVMaterialRemap
 		{
 			string m_sSearchMaterial = "baguam.vmat"
-			string m_sReplaceMaterial = "particles/units/heroes/neji/baguam.vmat"
+			string m_sReplaceMaterial = "materials/neji/baguam.vmat"
 		},
 		CVMaterialRemap
 		{
 			string m_sSearchMaterial = "black_circle.vmat"
-			string m_sReplaceMaterial = "black.vmat"
+			string m_sReplaceMaterial = "materials/neji/circle.vmat"
 		}
 	]
 }
