@@ -52,14 +52,11 @@
 		{
 			"Target"	"TARGET"
 		}
-
-
 				"RunScript"
 				{
 					"ScriptFile"	"heroes/zabuza/stealth.lua"
 					"Function"		"attackAfterBlink"
 				}
-
 		"FireSound"
 		{
 				
