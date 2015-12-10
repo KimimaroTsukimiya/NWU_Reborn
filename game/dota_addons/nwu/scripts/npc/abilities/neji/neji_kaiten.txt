@@ -19,12 +19,12 @@
 
     // Time     
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"               "15"
+    "AbilityCooldown"               "16"
     "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"               "80 100 120 140"
+    "AbilityManaCost"               "100 120 140 160"
     
 
      "precache"
@@ -54,7 +54,7 @@
         "04"
         {
             "var_type" "FIELD_FLOAT"
-            "bonus_damage" "7 14 21 28"
+            "stun_duration" "1 1.5 2 2.5"
         }
 
     }
@@ -64,13 +64,6 @@
         "FireSound"
         {
             //TODO
-        }
-
-        "RunScript"
-        {
-
-            "ScriptFile"    "heroes/neji/kaiten.lua"
-            "Function"        "apply_stun"
         }
 
         "Knockback"
@@ -89,6 +82,18 @@
                     "IsFixedDistance"   "0"
                     "ShouldStun"        "0" 
                 }
+
+        "Stun"
+        {
+            "Target"
+            {
+                "Center"            "CASTER"
+                "Radius"            "%aoe_target"
+                "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+            "Duration"          "%stun_duration"
+        }
 
 
         "Damage"

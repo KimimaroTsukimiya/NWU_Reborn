@@ -38,28 +38,19 @@
 
     "AbilitySpecial"
     {
+
         "01"
-        { 
-            "var_type"  "FIELD_INTEGER"
-            "extra_range_attack" "400"
-        }
-        "02"
-        {
-            "var_type" "FIELD_INTEGER"
-            "slow_ms" "10 20 30 40"
-        }
-        "03"
         {
             "var_type" "FIELD_FLOAT"
             "vision_aoe" "2000.0 2400.0 2800.0 3200.0"
         }
-         "04"
+         "02"
         {
             "var_type" "FIELD_FLOAT"
             "duration" "2.0"
         }
 
-         "05"
+         "03"
         {
             "var_type" "FIELD_FLOAT"
             "bonus_damage" "7 7 7 7"

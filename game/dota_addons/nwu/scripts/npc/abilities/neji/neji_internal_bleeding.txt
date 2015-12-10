@@ -43,7 +43,7 @@
 		"02"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"duration"						"4 6 8 10"
+			"duration"						"11"
 		}
 		"03"
 		{
@@ -58,7 +58,7 @@
 		"05"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"byagukan_slow"						"0"
+			"ms_slow"						"-10 -20 -30 -40"
 		}
 		"06"
 		{
@@ -83,6 +83,13 @@
 			"Modifier1"		"modifier_neji_internal_bleeding_dot"
 			"Duration1"		"%duration"
 		}
+
+		"ApplyModifier"
+				{
+					"ModifierName"	"modifier_neji_internal_bleeding_ms_slow"
+					"Target" 		"TARGET"
+					"Duration"		"%ms_slow_duration"
+				}
 	}
 
 	"Modifiers"
@@ -92,17 +99,7 @@
 			"Passive"			"0"
 			"IsHidden"			"1"
 			"IsDebuff"			"1"
-			"ThinkInterval"  "%tick_interval"
-			
-			"OnCreated"
-			{
-				"RunScript"
-				{
-					"ModifierName"	"modifier_neji_internal_bleeding_ms_slow"
-					"ScriptFile"	"heroes/neji/internal_bleeding.lua"
-					"Function"		"apply_ms_slow"
-				}
-			}			
+			"ThinkInterval"  "%tick_interval"			
 
 			"OnIntervalThink"
 			{
@@ -112,6 +109,19 @@
 					"Function"		"internal_bleeding"
 					"ms_slow"		"%ms_slow"
 				}
+			}
+		}
+
+		"modifier_neji_internal_bleeding_ms_slow"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+
+			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"Properties"
+			{
+			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow" 
 			}
 		}
 	}
