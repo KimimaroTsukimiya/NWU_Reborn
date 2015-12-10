@@ -20,9 +20,10 @@ function dynamic_entry_hit(keys)
 	local target = keys.target
 	local caster = keys.caster
 	local ability = keys.ability
-	local ability_level = ability:GetLevel() - 1
-	local damage = ability:GetLevelSpecialValueFor("AbilityDamage", ability_level)
+	local damage = ability:GetAbilityDamage()
 	local particle_impact = "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
+	
+	print(damage)
 
 	ability:ApplyDataDrivenModifier(
 			caster,
@@ -39,7 +40,7 @@ function dynamic_entry_periodic(gameEntity, keys)
 	local target = l_keys.target
 	local caster = l_keys.caster
 
-	local velocity = 1400
+	local velocity = 2500
 
 	local vector = target:GetAbsOrigin() - caster:GetAbsOrigin()
 	local direction = vector:Normalized()
@@ -75,7 +76,7 @@ function dynamic_entry_start(keys)
 	
 	local timer_tbl =
 		{
-			callback = LariatPeriodic,
+			callback = dynamic_entry_periodic,
 			keys = keys,
 			distance = 0,
 			point = caster:GetAbsOrigin()

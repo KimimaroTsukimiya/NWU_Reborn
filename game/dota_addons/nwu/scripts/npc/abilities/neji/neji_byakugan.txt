@@ -62,7 +62,7 @@
          "05"
         {
             "var_type" "FIELD_FLOAT"
-            "bonus_damage" "7 14 21 28"
+            "bonus_damage" "7 7 7 7"
         }
     }
 
@@ -143,7 +143,6 @@
               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
           }
       }
-
     }
 
 }
