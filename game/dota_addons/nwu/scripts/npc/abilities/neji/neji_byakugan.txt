@@ -51,7 +51,7 @@
         "03"
         {
             "var_type" "FIELD_FLOAT"
-            "vision_aoe" "600.0 700.0 800.0 900.0"
+            "vision_aoe" "2000.0 2400.0 2800.0 3200.0"
         }
          "04"
         {
@@ -87,11 +87,7 @@
             "Target"         "CASTER"
             "Duration"        "%duration"
         }
-            
-        
-        
     }
-
 
     "Modifiers"
     {
@@ -115,8 +111,6 @@
                 
                     "Action"    
                     {
-                        
-
                         "ApplyModifier"
                         {
                             "ModifierName"  "modifier_truesight_reveal"
@@ -130,14 +124,14 @@
         "modifier_truesight_reveal"
         {
             "IsDebuff"          "1"
-            "IsHidden"          "1"
-            "Duration"          "0.5"   //The True Sight effect lingers for 0.5 seconds.
+            "IsHidden"          "0"
+            "Priority"          "MODIFIER_PRIORITY_HIGH"
+            "Duration"          "2"   //The True Sight effect lingers for 0.5 seconds.
             "States"
             {
                 "MODIFIER_STATE_INVISIBLE"  "MODIFIER_STATE_VALUE_DISABLED"
             }
         }
-
 
         "modifier_neji_byakugan_bonus_damage"
       {
