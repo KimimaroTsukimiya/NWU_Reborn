@@ -25,24 +25,24 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
 	{
-		"01"
+		"09"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"duration"				"40 44 48 52"
 		}
-		"02"
+		"10"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"transformation_time"	"0.35"
 		}
 
-		"03"
+		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"radius"				"450"
 		}
 
-		"04"
+		"03"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"ms_slow_percentage"	"-20"
@@ -70,10 +70,15 @@
 			"var_type"				"FIELD_FLOAT"
 			"damage_per_millisecond"				"4.0 6.4 8.8"
 		}
-		"09"
+		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"hp_reg_per_second_percentage"		"2.5"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"		"40 64 88"
 		}
 
 	}

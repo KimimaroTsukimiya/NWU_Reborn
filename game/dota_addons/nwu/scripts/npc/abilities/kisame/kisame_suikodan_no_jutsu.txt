@@ -28,9 +28,7 @@
 	"AbilityCooldown"				"12.0 12.0 12.0 12.0"
 	"AbilityDuration"				"0.2 0.2 0.2 0.2"
 
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"110 150 190 230"
+
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -40,42 +38,42 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
 	{
-		"01"
+		"07"
 		{
 			"var_type"			"FIELD_FLOAT"
 			"wave_speed"		"2000.0"
 		}
-		"02"
+		"10"
 		{
 			"var_type"			"FIELD_INTEGER"
 			"wave_width"		"450"
 		}
-		"03"
+		"05"
 		{
 			"var_type"			"FIELD_INTEGER"
 			"armor_reduction"	"-1 -2 -3 -4"
 		}
-		"04"
+		"06"
 		{
 			"var_type"			"FIELD_FLOAT"
 			"debuff_duration"	"4 4 4 4"
 		}
-		"05"
+		"01"
 		{
 			"var_type"			"FIELD_FLOAT"
 			"wave_range"		"800"
 		}
-		"06"
+		"08"
 		{
 			"var_type"			"FIELD_FLOAT"
 			"wave_aoe"			"150"
 		}
-		"07"
+		"03"
 		{
 			"var_type"			"FIELD_INTEGER"
 			"ms_slow_percentage"	"-25 -25 -25 -25"
 		}
-		"08"
+		"04"
 		{
 			"var_type"			"FIELD_INTEGER"
 			"slow_duration"		"4 4 4 4"
@@ -84,6 +82,11 @@
 		{
 			"var_type"			"FIELD_INTEGER"
 			"cast_range"		"450"
+		}	
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"damage"		"110 150 190 230"
 		}				
 	}
 
@@ -130,7 +133,7 @@
 		{
 			"Target"		"TARGET"
 			"Type"			"DAMAGE_TYPE_MAGICAL"
-			"Damage"		"%AbilityDamage"
+			"Damage"		"%damage"
 		}
 	}
 
