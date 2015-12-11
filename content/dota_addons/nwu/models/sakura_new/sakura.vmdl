@@ -1,245 +1,1525 @@
-<!-- schema text {7e125a45-3d83-4043-b292-9e24f8ef27b4} generic {198980d8-3a93-4919-b4c6-dd1fb07a3a4b} -->
-CVModel CVModel_0
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 {
-	CVmeshList m_meshList = CVmeshList
+	_class = "CVModel"
+	m_meshList =
 	{
-		CVmesh[] m_meshList = 
+		_class = "CVmeshList"
+		m_meshList =
 		[
-			CVmesh
 			{
-				string m_meshName = "sakura"
-				string m_meshFile = "models/sakura_new/sakura.fbx"
-				string m_materialSearchPath = ""
-				bool m_bSkinParentedObjects = true
-				bool m_bLegacySkinParentedTransforms = false
-				bool m_bExpensiveTangents = false
-				bool m_bExpensiveVertices = false
-				bool m_bIgnoreCloth = false
-				bool m_bGetSkinningFromLod0 = false
-				CVmorphInfo* m_pMorphInfo = NULL
-			}
+				_class = "CVmesh"
+				m_meshName = "sakura"
+				m_meshFile = "models/sakura_new/sakura.fbx"
+				m_materialSearchPath = ""
+				m_bSkinParentedObjects = true
+				m_bLegacySkinParentedTransforms = false
+				m_bExpensiveTangents = false
+				m_bExpensiveVertices = false
+				m_bIgnoreCloth = false
+				m_bGetSkinningFromLod0 = false
+				m_pMorphInfo = null
+			},
 		]
 	}
-	CVClothProxyMeshList m_clothProxyMeshList = CVClothProxyMeshList
+	m_clothProxyMeshList =
 	{
-		CVClothProxyMesh[] m_clothProxyMeshList = 
+		_class = "CVClothProxyMeshList"
+		m_flClothEnableThreshold = 0.050000
+		m_bCreateStaticBone = false
+		m_nMaxBonesPerVertex = 4
+		m_bRemoveUnusedBonesEnabled = false
+		m_bDriveMeshesWithBacksolvedJointsOnly = true
+		m_flMatchProxiesToMeshes = 1.000000
+		m_flReservedFloat = 0.000000
+		m_nReservedInt = 0
+		m_bReservedBool1 = false
+		m_bReservedBool2 = false
+		m_bReservedBool3 = false
+		m_bReservedBool4 = false
+		m_clothProxyMeshList =
 		[
-			
 		]
-		float m_flClothEnableThreshold = 0.050000
-		bool m_bCreateStaticBone = false
-		int m_nMaxBonesPerVertex = 4
-		bool m_bRemoveUnusedBonesEnabled = false
-		bool m_bDriveMeshesWithBacksolvedJointsOnly = true
-		float m_flMatchProxiesToMeshes = 1.000000
-		float m_flReservedFloat = 0.000000
-		int m_nReservedInt = 0
-		bool m_bReservedBool1 = false
-		bool m_bReservedBool2 = false
-		bool m_bReservedBool3 = false
-		bool m_bReservedBool4 = false
 	}
-	CVphysicsMeshList m_physicsMeshList = CVphysicsMeshList
+	m_physicsMeshList =
 	{
-		CVphysicsMesh[] m_meshList = 
+		_class = "CVphysicsMeshList"
+		m_meshList =
 		[
-			
 		]
 	}
-	CVmodelInfo* m_pModelInfo = NULL
-	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
+	m_pModelInfo = null
+	m_pBoneFlagList =
 	{
-		CVBoneFlagList* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVBoneFlagListReference"
+		m_pObject = null
 	}
-	CVhitBoxSetListReference[] m_pHitBoxSetLists = 
+	m_pHitBoxSetLists =
 	[
-		
-	]
-	CVattachmentListReference[] m_pAttachmentLists = 
-	[
-		
-	]
-	CVanimGroupReference m_pAnimGroup = CVanimGroupReference
-	{
-		CVanimGroup* m_pObject = &CVanimGroup_0
-		string m_sFileName = ""
-	}
-	CVNodeMaterialGroupListReference m_pMaterialGroupList = CVNodeMaterialGroupListReference
-	{
-		NodeMaterialGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVMeshGroupListReference m_pMeshGroupList = CVMeshGroupListReference
-	{
-		MeshGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVLODGroupListReference m_pLodGroupList = CVLODGroupListReference
-	{
-		LODGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVpropBreakableListReference m_pPropBreakableList = CVpropBreakableListReference
-	{
-		CVpropBreakableList* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVpropDataListReference m_pPropDataList = CVpropDataListReference
-	{
-		CVpropDataList* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVConstraintListReference[] m_pConstraintLists = 
-	[
-		
-	]
-	string m_collision = ""
-	string m_softbody = ""
-	string m_sMDLFilename = ""
-	string[] m_sOffsetHitboxSets = 
-	[
-		
-	]
-	float(3) m_vHitboxSetOffset = ( 0.000000, 0.000000, 0.000000 )
-	string[] m_scriptFiles = 
-	[
-		
-	]
-	CVMaterialRemapList* m_pMaterialRemapList = &CVMaterialRemapList_0
-	float m_flFbxScale = 1.000000
-	float m_flQCScale = 1.000000
-	float(3) m_vOrigin = ( 0.000000, 0.000000, 0.000000 )
-	CVPsfList* m_pPsfList = NULL
-	string m_keyValueText = ""
-	bool m_bStaticProp = false
-	bool m_bEnableClothProcessing = true
-	float m_flClothEnableThreshold = 0.050000
-	int m_nMaxClothVertsPerMesh = 2048
-	bool m_bBuildClothBoneHierarchy = false
-	symbol m_nNavType = AUTH_NAV_MESH
-	bool m_bMakeUniqueVMeshes = false
-	bool m_bMakeImplicitBindPoseSequence = false
-	bool m_bAdjustSkeletonFromBoneFlags = false
-	CVanimGroupReference[] m_pAnimGroups = 
-	[
-		
-	]
-}
-
-CVanimGroup CVanimGroup_0
-{
-	string m_Name = ""
-	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
-	{
-		CVReferenceSkeleton* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
-	{
-		CVBoneFlagList* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVseqGroupReference m_pSeqGroup = CVseqGroupReference
-	{
-		CVseqGroup* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVanimGroupReference[] m_pAnimGroups = 
-	[
-		
-	]
-	CVanim[] m_Vanim = 
-	[
-		CVanim
 		{
-			string m_Animationname = "sakura_ani"
-			string m_Filepath = "models/sakura_new/sakura_ani.FBX"
-			int m_nStartframe = 0
-			int m_nEndframe = 750
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
+			_class = "CVhitBoxSetListReference"
+			m_pObject =
 			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
+				_class = "CVhitBoxSetList"
+				m_HitBoxSets =
+				[
+					{
+						_class = "CVhitBoxSet"
+						m_name = "default"
+						m_HitBoxes =
+						[
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new15"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new15"
+								m_vMinBounds =
+								[
+									-15.101761,
+									-11.557489,
+									-17.806618,
+								]
+								m_vMaxBounds =
+								[
+									18.923119,
+									16.943953,
+									1.660309,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new3"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new3"
+								m_vMinBounds =
+								[
+									-60.210499,
+									-60.831100,
+									-60.767399,
+								]
+								m_vMaxBounds =
+								[
+									60.461102,
+									60.064899,
+									60.040699,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new2"
+								m_vMinBounds =
+								[
+									-12.707939,
+									-13.294659,
+									0.827682,
+								]
+								m_vMaxBounds =
+								[
+									12.849426,
+									9.666719,
+									22.649948,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new26"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new26"
+								m_vMinBounds =
+								[
+									-11.539326,
+									-8.135931,
+									-28.862461,
+								]
+								m_vMaxBounds =
+								[
+									7.500944,
+									8.586065,
+									0.161377,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new25"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new25"
+								m_vMinBounds =
+								[
+									-6.639799,
+									-7.636640,
+									-28.865879,
+								]
+								m_vMaxBounds =
+								[
+									6.886965,
+									7.975805,
+									-0.451218,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new10"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new10"
+								m_vMinBounds =
+								[
+									-23.754650,
+									-4.371356,
+									-5.862000,
+								]
+								m_vMaxBounds =
+								[
+									-0.502781,
+									5.434762,
+									4.203384,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new4"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new4"
+								m_vMinBounds =
+								[
+									0.249052,
+									-4.396834,
+									-5.804871,
+								]
+								m_vMaxBounds =
+								[
+									23.500921,
+									5.409284,
+									4.260513,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new23"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new23"
+								m_vMinBounds =
+								[
+									-5.490813,
+									-4.041673,
+									-32.973133,
+								]
+								m_vMaxBounds =
+								[
+									5.232411,
+									8.296556,
+									0.278534,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new24"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new24"
+								m_vMinBounds =
+								[
+									-5.238912,
+									-4.041672,
+									-32.946281,
+								]
+								m_vMaxBounds =
+								[
+									5.484311,
+									8.296556,
+									0.305477,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new11"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new11"
+								m_vMinBounds =
+								[
+									-19.687466,
+									-3.295201,
+									-3.802643,
+								]
+								m_vMaxBounds =
+								[
+									-0.751953,
+									4.715431,
+									3.815475,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new5"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new5"
+								m_vMinBounds =
+								[
+									0.234825,
+									-3.181422,
+									-3.887665,
+								]
+								m_vMaxBounds =
+								[
+									19.170376,
+									4.829209,
+									3.730453,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new21"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new21"
+								m_vMinBounds =
+								[
+									-5.674390,
+									-19.526251,
+									-10.786750,
+								]
+								m_vMaxBounds =
+								[
+									5.024299,
+									7.247034,
+									0.835331,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new20"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new20"
+								m_vMinBounds =
+								[
+									-5.028681,
+									-19.450096,
+									-10.768723,
+								]
+								m_vMaxBounds =
+								[
+									5.670004,
+									7.323188,
+									0.853252,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new13"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new13"
+								m_vMinBounds =
+								[
+									-6.701407,
+									-4.936852,
+									-14.863235,
+								]
+								m_vMaxBounds =
+								[
+									7.382115,
+									1.852083,
+									-0.408493,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new16"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new16"
+								m_vMinBounds =
+								[
+									-7.444081,
+									-6.563807,
+									-14.997002,
+								]
+								m_vMaxBounds =
+								[
+									6.821142,
+									3.819648,
+									-0.542252,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new14"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new14"
+								m_vMinBounds =
+								[
+									-6.783905,
+									-4.936852,
+									-14.842865,
+								]
+								m_vMaxBounds =
+								[
+									7.299716,
+									1.852083,
+									-0.388123,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new17"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new17"
+								m_vMinBounds =
+								[
+									-6.222935,
+									-6.563807,
+									-15.017998,
+								]
+								m_vMaxBounds =
+								[
+									8.042284,
+									3.819648,
+									-0.563248,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new1"
+								m_vMinBounds =
+								[
+									-11.442257,
+									-11.126125,
+									-1.130981,
+								]
+								m_vMaxBounds =
+								[
+									11.404037,
+									14.422218,
+									26.109726,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new12"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new12"
+								m_vMinBounds =
+								[
+									-15.536423,
+									-4.802979,
+									-3.616364,
+								]
+								m_vMaxBounds =
+								[
+									-0.439072,
+									6.015318,
+									3.993149,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new6"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new6"
+								m_vMinBounds =
+								[
+									-0.277912,
+									-5.931663,
+									-3.826538,
+								]
+								m_vMaxBounds =
+								[
+									15.671219,
+									5.456725,
+									3.782974,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+						]
+					},
+				]
+				m_AutoCreateSetName = ""
+			}
+		},
+	]
+	m_pAttachmentLists =
+	[
+		{
+			_class = "CVattachmentListReference"
+			m_pObject =
+			{
+				_class = "CVattachmentList"
+				m_name = ""
+				m_attachments =
+				[
+					{
+						_class = "CVattachment"
+						m_name = "attach_origin"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new21"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_hitloc"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new15"
+								m_vTranslationOffset =
+								[
+									-9.773783,
+									0.000002,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									-0.000000,
+									0.000000,
+									-0.000010,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_right_hand"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new12"
+								m_vTranslationOffset =
+								[
+									-11.706890,
+									0.000002,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									-0.000000,
+									0.000000,
+									-0.000010,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_left_hand"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new6"
+								m_vTranslationOffset =
+								[
+									10.463245,
+									-0.000002,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									-0.000000,
+									0.000000,
+									-0.000010,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_left_foot"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new20"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_right_foot"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new21"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+				]
+			}
+		},
+	]
+	m_pAnimGroup =
+	{
+		_class = "CVanimGroupReference"
+		m_pObject =
+		{
+			_class = "CVanimGroup"
+			m_Name = ""
+			m_pReferenceSkeleton =
+			{
+				_class = "CVReferenceSkeletonReference"
+				m_pObject = null
+			}
+			m_pBoneFlagList =
+			{
+				_class = "CVBoneFlagListReference"
+				m_pObject = null
+			}
+			m_pSeqGroup =
+			{
+				_class = "CVseqGroupReference"
+				m_pObject = null
+			}
+			m_pAnimGroups =
+			[
+			]
+			m_Vanim =
+			[
 				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				
+					_class = "CVanim"
+					m_Animationname = "sakura_ani"
+					m_Filepath = "models/sakura_new/sakura_ani.FBX"
+					m_nStartframe = 0
+					m_nEndframe = 750
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "sakura_run"
+					m_Filepath = "models/sakura_new/sakura_ani.fbx"
+					m_nStartframe = 94
+					m_nEndframe = 127
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = true
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_RUN"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "sakura_die"
+					m_Filepath = "models/sakura_new/sakura_ani.fbx"
+					m_nStartframe = 659
+					m_nEndframe = 690
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_DIE"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "sakura_idle"
+					m_Filepath = "models/sakura_new/sakura_ani.fbx"
+					m_nStartframe = 156
+					m_nEndframe = 203
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = true
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_IDLE"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "sakura_attack_1"
+					m_Filepath = "models/sakura_new/sakura_ani.fbx"
+					m_nStartframe = 222
+					m_nEndframe = 245
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_ATTACK"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "sakura_attack_2"
+					m_Filepath = "models/sakura_new/sakura_ani.fbx"
+					m_nStartframe = 282
+					m_nEndframe = 307
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_ATTACK2"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "sakura_cast_spell_1"
+					m_Filepath = "models/sakura_new/sakura_ani.fbx"
+					m_nStartframe = 470
+					m_nEndframe = 490
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_CAST_ABILITY_1"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "sakura_cast_ulti"
+					m_Filepath = "models/sakura_new/sakura_ani.fbx"
+					m_nStartframe = 577
+					m_nEndframe = 600
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_CAST_ABILITY_4"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "sakura_bash"
+					m_Filepath = "models/sakura_new/sakura_ani.fbx"
+					m_nStartframe = 348
+					m_nEndframe = 371
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_ATTACK_EVENT"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
 			]
-			CAnimationEvent[] m_AnimationEvents = 
+			m_sScripts =
 			[
-				
 			]
-			CMotionFrame[] m_MotionFrames = 
+			m_folderNames =
 			[
-				
 			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
 		}
-	]
-	string[] m_sScripts = 
+	}
+	m_pMaterialGroupList =
+	{
+		_class = "CVNodeMaterialGroupListReference"
+		m_pObject = null
+	}
+	m_pMeshGroupList =
+	{
+		_class = "CVMeshGroupListReference"
+		m_pObject = null
+	}
+	m_pLodGroupList =
+	{
+		_class = "CVLODGroupListReference"
+		m_pObject = null
+	}
+	m_pPropBreakableList =
+	{
+		_class = "CVpropBreakableListReference"
+		m_pObject = null
+	}
+	m_pPropDataList =
+	{
+		_class = "CVpropDataListReference"
+		m_pObject = null
+	}
+	m_pConstraintLists =
 	[
-		
 	]
-	string[] m_folderNames = 
+	m_collision = ""
+	m_softbody = ""
+	m_sMDLFilename = ""
+	m_sOffsetHitboxSets =
 	[
-		
 	]
-}
-
-CVMaterialRemapList CVMaterialRemapList_0
-{
-	CVMaterialRemap[] m_vMaterialRemapList = 
+	m_vHitboxSetOffset =
 	[
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "sakurafar1.vmat"
-			string m_sReplaceMaterial = "materials/sakura/sakura_new.vmat"
-		},
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "sakurafar2.vmat"
-			string m_sReplaceMaterial = "materials/sakura/sakura_new2.vmat"
-		},
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "sakurafar3.vmat"
-			string m_sReplaceMaterial = "materials/sakura/sakura_new.vmat"
-		},
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "sakurafar4.vmat"
-			string m_sReplaceMaterial = "materials/sakura/sakura_new.vmat"
-		}
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_scriptFiles =
+	[
+	]
+	m_pMaterialRemapList =
+	{
+		_class = "CVMaterialRemapList"
+		m_vMaterialRemapList =
+		[
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "sakurafar1.vmat"
+				m_sReplaceMaterial = "materials/sakura/sakura_new.vmat"
+			},
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "sakurafar2.vmat"
+				m_sReplaceMaterial = "materials/sakura/sakura_new2.vmat"
+			},
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "sakurafar3.vmat"
+				m_sReplaceMaterial = "materials/sakura/sakura_new.vmat"
+			},
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "sakurafar4.vmat"
+				m_sReplaceMaterial = "materials/sakura/sakura_new.vmat"
+			},
+		]
+	}
+	m_flFbxScale = 1.000000
+	m_flQCScale = 1.000000
+	m_vOrigin =
+	[
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_pPsfList = null
+	m_keyValueText = ""
+	m_bStaticProp = false
+	m_bEnableClothProcessing = true
+	m_flClothEnableThreshold = 0.050000
+	m_nMaxClothVertsPerMesh = 2048
+	m_bBuildClothBoneHierarchy = false
+	m_nNavType = "AUTH_NAV_MESH"
+	m_bMakeUniqueVMeshes = false
+	m_bMakeImplicitBindPoseSequence = false
+	m_bAdjustSkeletonFromBoneFlags = false
+	m_pAnimGroups =
+	[
 	]
 }

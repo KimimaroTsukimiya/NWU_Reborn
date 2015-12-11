@@ -64,40 +64,50 @@
     "Modifiers"
     {
         "modifier_sakura_chakra_enhanced_strength"
-        {
-            "Passive"                   "1"
-            "IsHidden"                  "1"
-            "IsPurgable"                "0"
-            
-           "OnAttackLanded"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+          "OnAttackStart"
         {
           "Random"
           {
             "Chance" "%chance"
             "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
-            "OnSuccess"
+            "OnSuccess"  
             {
-              "Knockback"
+              "RunScript"
               {
-                  "Target"            "TARGET"
-                  "Center"             "CASTER"
-                  "Distance"            "%distance"
-                  "Duration"            "%duration"
-                  "Height"            "0"
-                  "IsFixedDistance"    "1"
-                  "ShouldStun"        "1"    
-              }
-              "Damage"
-              {
-                  "Target"        "TARGET"
-                  "Type"            "DAMAGE_TYPE_MAGICAL"
-                  "Damage"        "%bonus_damage"
+                "ScriptFile"  "heroes/sakura/chakra_enhanced_strength.lua"
+                "Function"    "chakra_enhanced_strength"
+                "modifier_name" "modifier_sakura_chakra_enhanced_strength_bash"
               }
             }
           }
         }
-            
+
+      }
+      "modifier_sakura_chakra_enhanced_strength_bash"
+      {
+        "OverrideAnimation"     "ACT_DOTA_ATTACK_EVENT"
+        "IsHidden"  "1"
+        "Duration"  "1"
+
+        "OnAttackLanded"
+        {
+
+            "RunScript"
+            {
+              "ScriptFile"  "heroes/sakura/chakra_enhanced_strength.lua"
+              "Function"    "chakra_enhanced_strength_apply"
+              "range"       "%distance"
+              "distance"    "%distance"
+              "duration"    "%duration"
+              "damage"      "%bonus_damage"
+              "modifier_name" "modifier_sakura_chakra_enhanced_strength_bash"
+            }
+              
         }
+      }
     }
 
 }

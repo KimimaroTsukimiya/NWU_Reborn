@@ -12,10 +12,12 @@
 	  "LoadoutScale"	"0.80" 
 	  "ItemSlots"
 	  { }
+	  "ArmorPhysical"   "1.000000"
 	  "AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
 	  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 	  "AttackAnimationPoint"		"0.4"
-	
+	  "StatusHealth"    "145"
+	  "StatusHealthRegen"   "0.300000"
 	  "AttackDamageMin"   "23"
 	  "AttackDamageMax"   "23"
 	  "AttackRate"    "1.700000"
@@ -42,11 +44,12 @@
 		  "ModelScale"		"0.35"
 			"LoadoutScale"		"0.35" 
 
-		  
+		  "ArmorPhysical"		"1.000000"
 		  "AttackDamageMin"   "19"
 		  "AttackDamageMax"   "19"
 		  "AttackRate"    "1.700000"
-
+		  "StatusHealth"    "145"
+ 		  "StatusHealthRegen"   "0.300000"
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackRange"				"600"
 		  "MovementSpeed"			"290"
@@ -89,9 +92,10 @@
 		  "AttackDamageMin"   "27"
 		  "AttackDamageMax"   "27"
 		  "AttackRate"    "1.700000"
-
+		  "ArmorPhysical"		"3.000000"
 		  "AttackRange"				"100"
-
+		  "StatusHealth"    "145"
+ 		  "StatusHealthRegen"   "0.300000"
 		  "MovementSpeed"			"300"
 		  "AttributeBaseStrength" "19" // Base strength
 		  "AttributeStrengthGain" "2.2" // Strength bonus per level.
@@ -112,20 +116,22 @@
 		"Model" 			"models/hidan/tesst.vmdl"
 	  	  "Village"			"yugakure_scarred"
 	  	  "Gender"			"male"
+		  "AbilityLayout"	"5"
 	  	  "Ability1"        "hidan_cull_the_weak"
 		  "Ability2"        "hidan_taunt" 
 		  "Ability3"        "hidan_jashins_blessing" 
-		  "Ability4"        "hidan_death_possession_blood"
-		  "Ability5"        ""
+		  "Ability4"        "hidan_self_pain"
+		  "Ability5"        "hidan_death_possession_blood"
 		  "Ability6"        ""
-		    "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
+		 "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		 "ModelScale"		"0.8"
 		 "LoadoutScale"		"0.8" 
-
+		   "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		 "AttackDamageMin"   "22"
 		  "AttackDamageMax"   "26"
 		  "AttackRate"    "1.700000"
-
+		  
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackRange"				"275"
 
@@ -156,11 +162,12 @@
 		"AttackDamageMin"   "16"
 		"AttackDamageMax"   "16"
 		"AttackRate"    "1.700000"
-		
+		"ArmorPhysical"		"1.000000"
 	    // Movement
 	    //----------------------------------------------------------------
 		"MovementSpeed"					"300"
-	
+		"StatusHealth"    "145"
+	  	"StatusHealthRegen"   "0.300000"
 	    // Attibutes
 	    //----------------------------------------------------------------
 		"AttributePrimary"				"DOTA_ATTRIBUTE_AGILITY"
@@ -181,11 +188,12 @@
 			  "Model" 			"models/jiroubo/jiroubo.vmdl"
 		 	  "ItemSlots"
 		  	  { }
-	
+		  	    "StatusHealth"    "145"
+	  			"StatusHealthRegen"   "0.300000"
 		  	  "AttackDamageMin"   "22"
 			  "AttackDamageMax"   "22"
 			  "AttackRate"    "1.700000"
-	
+			  "ArmorPhysical"		"1.000000"
 		  	  "Village"			"otogakure"
 		  	  "Gender"			"male"
 			}
@@ -202,6 +210,9 @@
 			"AttackDamageMin"   "23"
 		  "AttackDamageMax"   "23"
 		  "AttackRate"    "1.700000"
+		    "StatusHealth"    "145"
+  		"StatusHealthRegen"   "0.300000"
+		  "ArmorPhysical"		"1.000000"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackRange"				"100"
@@ -258,7 +269,9 @@
 			  "AttackDamageMin"   "24"
 			  "AttackDamageMax"   "24"
 			  "AttackRate"    "1.700000"	  	  
-	
+			  "ArmorPhysical"		"1.000000"
+			    "StatusHealth"    "145"
+	  "StatusHealthRegen"   "0.300000"
 		  	  "Village"			"otogakure"
 		  	  "Gender"			"male"
 			}
@@ -270,14 +283,16 @@
 		  "Ability2"         "kisame_mizu_bunshin_no_jutsu" 
 		  "Ability3"         "kisame_samehada" 
 		  "Ability4"         "kisame_water_prison"
-
+		  "ArmorPhysical"		"1.000000"
 			"ModelScale"		"0.65"
 			"LoadoutScale"		"0.65" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackDamageMin"   "26"
 		  "AttackDamageMax"   "31"
-		  "AttackRate"    "1.700000"		  
+		  "AttackRate"    "1.700000"		
+		    "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"  
 		  "AttackRange"				"128"
 		  "MovementSpeed"			"315"
 		  "AttributeBaseStrength" "22" // Base strength
@@ -307,7 +322,8 @@
 		"AttackDamageMin"		"34"
 		"AttackDamageMax"		"39"
 		"AttackRate"		"1.700000"
-		
+		  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		  "AttackAnimationPoint"   "0.4"
 		  "ModelScale"		"0.930000"
 		 // "AttackRate"				"0.7"
@@ -319,7 +335,7 @@
 		  "AttributeIntelligenceGain" "2.4" // Intelligence bonus per level.
 		  "AttributeBaseAgility" "15" // Base agility
 		  "AttributeAgilityGain" "1.6" // Agility bonus per level.
-		  
+		  "ArmorPhysical"		"5.000000"
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha"
@@ -333,13 +349,14 @@
 		  "Ability2"        "naruto_kawazu_kumite" 
 		  "Ability3"        "naruto_kage_bunshin_mastery" 
 		  "Ability4"        "naruto_rasenshuriken"
-
+		  "ArmorPhysical"		"1.000000"
 		"ModelScale"		"1.00"
 		"LoadoutScale"		"1.00" 
 		  "AttackAnimationPoint"   "0.4"
 		 
 		  "AttackRange"				"100"
-
+  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		  "AttackDamageMin"   "23"
 		  "AttackDamageMax"   "23"
 		  "AttackRate"    "1.700000"
@@ -364,12 +381,13 @@
 			  "Ability2"         "neji_internal_bleeding" 
 			  "Ability3"         "neji_byakugan" 
 			  "Ability4"         "neji_hyaku_nijuuhachi_shou"
-	
+			  "ArmorPhysical"		"1.000000"
 			"ModelScale"		"0.75"
 			"LoadoutScale"		"0.75" 
 			  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 			  "AttackAnimationPoint"   "0.4"
-			  
+			    "StatusHealth"    "145"
+	  "StatusHealthRegen"   "0.300000"
 			"AttackDamageMin"		"16"
 			"AttackDamageMax"		"16"
 			"AttackRate"		"1.700000"
@@ -397,10 +415,11 @@
 		"Ability2"			"onoki_stalagmite_armor"
 		"Ability3"			"onoki_turn_to_dust"
 		"Ability4"			"onoki_kajutan_no_jutsu"
-	
+		  "StatusHealth"    "145"
+	  "StatusHealthRegen"   "0.300000"
 		// Unit attribute
 		"AttackRange"					"100"
-		
+		"ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"25"
 		"AttackDamageMax"		"25"
 		"AttackRate"		"1.700000"	
@@ -431,11 +450,12 @@
 		  "Ability2"        "raikage_raigyaku_suihei" 
 		  "Ability3"        "raikage_lariat" 
 		  "Ability4"        "raikage_raiga_no_bomu"
-
+		  "ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"25"
 		"AttackDamageMax"		"25"
 		"AttackRate"		"1.700000"
-
+  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		  "Village"			"kumogakure"
 			"ModelScale"		"0.75"
 		"LoadoutScale"		"0.75" 
@@ -460,22 +480,23 @@
 		"npc_dota_hero_phantom_assassin" //sakura
 		{
 		  "override_hero"   "npc_dota_hero_phantom_assassin"
-		  "Model" 			"models/sakura/sakura.vmdl"
+		  "Model" 			"models/sakura_new/sakura.vmdl"
 		  "Ability1"        "sakura_earth_slam"
 		  "Ability2"        "sakura_chakra_burst" 
 		  "Ability3"        "sakura_chakra_enhanced_strength" 
 		  "Ability4"        "sakura_inner_sakura"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
-
-		"ModelScale"		"0.73"
-		"LoadoutScale"		"0.73" 
+		  "ArmorPhysical"		"1.000000"
+		"ModelScale"		"0.83"
+		"LoadoutScale"		"0.83" 
 		"AttackDamageMin"		"23"
 		"AttackDamageMax"		"23"
 		"AttackRate"		"1.700000"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"100"
-
+		    "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		  "MovementSpeed"			"310"
 		  "AttributeBaseStrength" "22" // Base strength
 		  "AttributeStrengthGain" "2.75" // Strength bonus per level.
@@ -492,14 +513,17 @@
 		"npc_dota_hero_storm_spirit" //sasuke
 		{
 		  "override_hero"   "npc_dota_hero_storm_spirit"
-		  "Model" 			"models/sasuke/sasuke.vmdl"
+		  "Model" 			"models/sasuke_new/sasuke.vmdl"
 		  "Ability1"        "sasuke_chidori_nagashi"
 		  "Ability2"        "sasuke_chidori_eiso" 
 		  "Ability3"        "sasuke_chidori_koken" 
 		  "Ability4"        "sasuke_kirin"
-
+		  "ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"22"
 		"AttackDamageMax"		"22"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		"AttackRate"		"1.700000"		  
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -511,8 +535,8 @@
 		  "AttributeIntelligenceGain" "2.9" // Intelligence bonus per level.
 		  "AttributeBaseAgility" "16" // Base agility
 		  "AttributeAgilityGain" "2.1" // Agility bonus per level.
-		  "ModelScale"		"0.57"
-		 "LoadoutScale"		"0.57" 
+		  "ModelScale"		"0.72"
+		 "LoadoutScale"		"0.72" 
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha_scarred"
@@ -528,7 +552,7 @@
 		  "Ability4"         "shikamaru_kage_nui"
 		  "ModelScale"		"1.05"
 		"LoadoutScale"		"1.05" 
-
+		"ArmorPhysical"		"0.000000"
 		"AttackDamageMin"		"19"
 		"AttackDamageMax"		"19"
 		"AttackRate"		"1.700000"		  
@@ -537,7 +561,8 @@
 		  "AttackRange"				"500"
 		"AttackDamageMin"			"20"	// Damage range min.
 		"AttackDamageMax"			"30"	// Damage range max.
-
+		  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		  "MovementSpeed"			"290"
 		  "AttributeBaseStrength" "17" // Base strength
 		  "AttributeStrengthGain" "1.8" // Strength bonus per level.
@@ -563,6 +588,9 @@
 	  //"Model" 		"models/zabuza/zabuza.vmdl"
 	  "ItemSlots"
 	  { }
+	    "StatusHealth"    "145"
+	  "StatusHealthRegen"   "0.300000"
+	  "ArmorPhysical"   "1.000000"
 	    "AttackDamageMin"   "16"
 	    "AttackDamageMax"   "16"
 	    "AttackRate"    "1.700000"
@@ -591,7 +619,10 @@
 		  //"ModelScale"		"0.5"
 		"AttackDamageMin"		"20"
 		"AttackDamageMax"		"20"
+		  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		"AttackRate"		"1.700000"		
+		"ArmorPhysical"		"1.000000"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -622,8 +653,11 @@
 			  "Model" 			"models/zabuza/zabuza.vmdl"
 		 	  "ItemSlots"
 		  	  { }
+		  	    "StatusHealth"    "145"
+	  "StatusHealthRegen"   "0.300000"
 			"AttackDamageMin"		"21"
 			"AttackDamageMax"		"21"
+			"ArmorPhysical"		"2.000000"
 			"AttackRate"		"1.700000"
 		  	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 			  "AttackAnimationPoint"		"0.4"
