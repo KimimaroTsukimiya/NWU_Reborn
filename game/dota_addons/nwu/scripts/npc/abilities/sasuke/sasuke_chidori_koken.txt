@@ -21,6 +21,7 @@
 	{
 		"soundfile"							"soundevents/game_sounds_heroes/game_sounds_stormspirit.vsndevts"
 		"particle"							"particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
+		"particle"  "particles/econ/items/spirit_breaker/spirit_breaker_thundering_flail/spirit_breaker_thundering_flail.vpcf"
 	}
 
 	"AbilitySpecial"
@@ -78,11 +79,11 @@
 				"AttachEffect"
 				{
 					"Target"				"CASTER"
-					"EffectName"			"particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
+					"EffectName"			"particles/econ/items/spirit_breaker/spirit_breaker_thundering_flail/spirit_breaker_thundering_flail.vpcf"
 					"EffectAttachType"		"start_at_customorigin"
 					"ControlPointEntities"
 					{
-						"CASTER"			"attach_attack1"
+						"CASTER"			"attach_sword"
 					}
 				}
 			}
