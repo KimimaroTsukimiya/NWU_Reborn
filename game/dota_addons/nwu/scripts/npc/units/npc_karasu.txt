@@ -6,7 +6,7 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
-		"Model"						"models/kisame/kisame.vmdl"	// Model.
+		"Model"						"models/kankuro/karasu.vmdl"	// Model.
 		"ModelScale"				"0.8"
 		
 		// Abilities
