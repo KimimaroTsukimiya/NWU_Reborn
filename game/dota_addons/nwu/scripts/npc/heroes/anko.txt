@@ -10,10 +10,12 @@
   "LoadoutScale"	"0.80" 
   "ItemSlots"
   { }
+  "ArmorPhysical"   "1.000000"
   "AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
   "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
   "AttackAnimationPoint"		"0.4"
-
+  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
   "AttackDamageMin"   "23"
   "AttackDamageMax"   "23"
   "AttackRate"    "1.700000"

@@ -11,7 +11,7 @@
 	"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
 	"FightRecapLevel"			"1"
-	"AbilityTextureName"		"shadow_shaman_shackles"
+	"AbilityTextureName"		"shikamaru_kage_kubishibari"
 	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -73,11 +73,29 @@
 			"Target" 		"CASTER"
 		}
 
-		"ApplyModifier"
+		"RunScript"
+        {
+			"ScriptFile"    "items.lua"
+			"Function"      "CheckForSpellBlock"
+			"GenericFunction"	"GenericSpellFunction"
+			
+			"Modifier1"		"modifier_kubishibari"
+			"Duration1"		"%channel_time"
+		}
+	}
+	
+	"OnChannelInterrupted"
+	{
+		"RemoveModifier"
 		{
 			"ModifierName"	"modifier_kubishibari"
 			"Target" 		"TARGET"
-			"Duration"		"%channel_time"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/shikamaru/kage_kubishibari.lua"
+			"Function"		"StopSound"
 		}
 	}
 

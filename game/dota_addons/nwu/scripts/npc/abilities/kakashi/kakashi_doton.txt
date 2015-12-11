@@ -77,14 +77,16 @@
 		"DeleteOnHit"	"1"
 
 		"RunScript"
-			{
-				"ScriptFile"    "items.lua"
-				"Function"      "CheckForSpellBlock"
-				
-				"GenericFunction"	"GenericSpellFunction"
-				"Modifier1"		"modifier_kakashi_doton"
-				"Duration1"		"%stun_duration"
-			}
+		{
+			"ScriptFile"    "items.lua"
+			"Function"      "CheckForSpellBlock"
+			
+			"GenericFunction"	"GenericSpellFunction"
+			"Modifier1"		"modifier_kakashi_doton"
+			"Duration1"		"%stun_duration"
+			
+			"doDamage"		"true"
+		}
 
 		"FireSound"
 		{

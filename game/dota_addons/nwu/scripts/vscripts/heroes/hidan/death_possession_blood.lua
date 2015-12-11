@@ -100,14 +100,14 @@ end
 	Adds Self Pain to Hidan'S abilities
 ]]
 function addSelfPainAbility( keys )
-	keys.caster:AddAbility("hidan_self_pain")
-	local ability_index = keys.caster:FindAbilityByName("hidan_self_pain"):GetAbilityIndex()
-    keys.caster:GetAbilityByIndex(ability_index):SetLevel(keys.ability:GetLevel())
+	selfPain = keys.caster:FindAbilityByName("hidan_self_pain")
+    selfPain:SetLevel(keys.ability:GetLevel())
 end
 --[[Author LearningDave
 	Date november, 2th 2015
 	Removes Self Pain from Hidan'S abilities
 ]]
 function removeSelfPain( keys )
-	keys.caster:RemoveAbility("hidan_self_pain")
+	selfPain = keys.caster:FindAbilityByName("hidan_self_pain")
+    selfPain:SetLevel(0)
 end

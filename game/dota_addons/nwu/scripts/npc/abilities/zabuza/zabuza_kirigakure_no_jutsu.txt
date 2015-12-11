@@ -53,6 +53,11 @@
 			"var_type"				"FIELD_INTEGER"
 			"miss_percentage"		"40 50 60 70"
 		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_range"		"450"
+		}
 	}
 
 	"OnSpellStart"

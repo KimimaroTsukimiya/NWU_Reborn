@@ -107,9 +107,15 @@ end
 function CheckForSpellBlock(event)
 	local filePath = event.filePath
 	local functionName = event.functionName
+	local ability = event.ability
 	
 	if( not(event.target:IsMagicImmune()) or event.PierceMagicImmune)then		
 		if( GameMode:is_spell_blocked_by_chakra_armor(event.target) )then
+		
+			if ability:IsChanneling() then
+				ability:EndChannel(true)
+			end
+		
 			return
 		end
 	else

@@ -1,0 +1,74 @@
+"kisame_bunshin"
+{
+	// General
+	//----------------------------------------------------------------
+	"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+	"Model"						"models/kisame/kisame.vmdl"
+	"SoundSet"					"Hero_Kunkka"					// Name of sound set.
+	"GameSoundsFile"			"soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+	"Level"						"1"
+	"ModelScale"		"0.65"
+
+	// Precache
+	//----------------------------------------------------------------
+	"precache"
+	{
+		"model"				"models/heroes/kisame/kisame.vmdl"
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+	}
+
+	// Abilities
+	//----------------------------------------------------------------
+	"Ability1"					"kisame_bunshin_water_prison"			// Ability 1.
+	"Ability2"					"kisame_samehada_bunshin"			// Ability 2.
+	"Ability3"					""			// Ability 3.
+	"Ability4"					""			// Ability 4.
+	"Ability5"					""			// Ability 5.
+
+	// Armor
+	//----------------------------------------------------------------
+	"ArmorPhysical"		"1.000000"			// Physical protection.
+	"MagicalResistance"				"25"			// Magical protection.
+
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageMin"			"20"			// Damage range min.		//20,27,35
+	"AttackDamageMax"			"20"		// Damage range max.
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackRate"				"1.7"		// Speed of attack.
+	"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+	"AttackAcquisitionRange"	"300"		// Range within a target can be acquired.
+	"AttackRange"				"128"		// Range within a target can be attacked.
+
+
+	// Bounds
+	//----------------------------------------------------------------
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"			// Hull type used for navigation/locomotion.
+	"HealthBarOffset"		"140"
+	"RingRadius"		"70"
+	"IsSummoned"                "1"
+	// Status
+	//----------------------------------------------------------------
+	"StatusHealth"				"200"		// Base health.
+	"StatusHealthRegen"			"0.0"		// Health regeneration rate.
+	"StatusMana"				"0"			// Base mana.
+	"StatusManaRegen"			"0"			// Mana regeneration rate.
+
+	// Team
+	//----------------------------------------------------------------
+	"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+	"CombatClassAttack"     "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    "CombatClassDefend"     "DOTA_COMBAT_CLASS_DEFEND_STRONG"
+    "UnitRelationShipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+        
+           // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
+
+
+
+	//Inventory
+	"HasInventory"				"1"
+
+}

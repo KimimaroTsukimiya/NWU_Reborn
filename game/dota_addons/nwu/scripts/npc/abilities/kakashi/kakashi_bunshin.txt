@@ -62,6 +62,11 @@
         "var_type"                               "FIELD_FLOAT"
         "ms_debuff"       						"-20 -25 -30 -40"
        }
+       "09"
+       {
+        "var_type"                               "FIELD_FLOAT"
+        "illusion_outgoing_damage_percent_tooltip"       "25"
+       }
 		
 	}
 	

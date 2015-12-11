@@ -1,0 +1,149 @@
+"kisame_bunshin_water_prison"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"					"ability_datadriven"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELED"
+	"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"			"1"
+	"AbilityTextureName"		"kisame_bunshin_water_prison"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"400"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityChannelTime"			"1.25 1.5 1.75 2.00"
+	"AbilityCooldown"				"14.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"channel_time"		"1.25 1.50 1.75 2.00"
+		}
+	}
+
+	"precache"
+	{
+		"particle"	"particles/units/heroes/kisame/shadowshaman_shackle.vpcf"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts"
+	}
+
+
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_ShadowShaman.Shackles.Cast"
+			"Target" 		"CASTER"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_bunshin_water_prison_hold"
+			"Target" 		"TARGET"
+			"Duration"		"%channel_time"
+		}
+	}
+
+	"OnChannelFinish"
+	{
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_bunshin_water_prison_hold"
+			"Target" 		"TARGET"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/shikamaru/kage_kubishibari.lua"
+			"Function"		"StopSound"
+		}
+	}
+
+	"OnChannelInterrupted"
+	{
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_bunshin_water_prison_hold"
+			"Target" 		"TARGET"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/shikamaru/kage_kubishibari.lua"
+			"Function"		"StopSound"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_bunshin_water_prison_hold"
+		{
+			"IsDebuff"			"1"
+	
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+
+	
+			"OverrideAnimation"     "ACT_DOTA_DISABLED"
+
+			"OnCreated"
+			{
+				"FireSound"
+				{
+					"EffectName"	"Hero_ShadowShaman.Shackles"
+					"Target" 		"TARGET"
+				}
+				
+				"AttachEffect"
+				{
+					"EffectName"			"particles/units/heroes/kisame/shadowshaman_shackle.vpcf"
+					"EffectAttachType"		"follow_origin"
+					"Target"				"TARGET"
+					"ControlPointEntities"
+					{
+						"TARGET"	"attach_hitloc"
+						"TARGET"	"attach_hitloc"
+						"TARGET"	"attach_hitloc"
+						"TARGET"	"attach_hitloc"
+						"TARGET"	"attach_hitloc"
+						"CASTER"	"attach_hitloc" //Attach to the hands or any desired attach point of the hero
+						"CASTER"	"attach_hitloc"
+					}
+				}
+			}
+
+			"ThinkInterval"  "0.1"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/kisame/bunshin_water_prison.lua"
+					"Function"		"stopChannelOnDead"
+				}
+			}
+		}
+	}
+
+}

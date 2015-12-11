@@ -1,0 +1,45 @@
+//Sasuke
+"itembuilds/test_storm_spirit.txt"
+{
+	"author"	"LearningDave"
+	"hero"		"npc_dota_hero_storm_spirit"
+	"Title"		"Naruto Wars Reborn"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+
+			"item"          "item_tango"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"          "item_shinobi_waist_pouch"
+			"item"          "item_shinobi_waist_pouch"
+			"item"          "item_shinobi_waist_pouch"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_bottle"
+			"item"			"item_shinobi_sandals"
+			"item"			"item_sakuras_fighting_gloves"
+			"item"          "item_bashosen"
+		}
+
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"   		"item_sage_scroll"
+			"item"			"item_chakra_armor"
+			"item"          "item_hoshikages_star"
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"          "item_giant_iron_fan"
+            "item"          "item_hakus_overcoat"
+            "item"   		"item_lunar_sword"
+		}		
+	}
+}

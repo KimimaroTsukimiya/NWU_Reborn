@@ -6,10 +6,11 @@
 	"Ability2"			"onoki_stalagmite_armor"
 	"Ability3"			"onoki_turn_to_dust"
 	"Ability4"			"onoki_kajutan_no_jutsu"
-
+	  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 	// Unit attribute
 	"AttackRange"					"100"
-	
+	"ArmorPhysical"		"1.000000"
 	"AttackDamageMin"		"25"
 	"AttackDamageMax"		"25"
 	"AttackRate"		"1.700000"	

@@ -15,3 +15,15 @@ function stealth( keys )
 	  end
 	  )
 end
+
+
+function attackAfterBlink( keys )
+		keys.caster:Stop()
+		local order = 
+		{
+			UnitIndex = keys.target:entindex(),
+			OrderType = DOTA_UNIT_ORDER_ATTACK_TARGET,
+			TargetIndex = keys.caster:entindex()
+		}
+		ExecuteOrderFromTable(order)
+end

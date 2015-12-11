@@ -6,6 +6,12 @@ function power_of_youth( keys )
 	local modifier = keys.modifier
 	local max_stacks = ability:GetLevelSpecialValueFor("max_stacks", ability_level)
 
+	--Prevent Sharingan
+	if(not caster:HasAbility("guy_power_of_youth") )then
+		caster:RemoveModifierByName("modifier_guy_power_of_youth")
+		caster:RemoveModifierByName(modifier)
+	end
+	
 	-- Check if we have an old target
 	if caster.POY_target == nil then
 		caster.POY_target = target
@@ -26,7 +32,7 @@ function power_of_youth( keys )
 	-- Check if that old target is the same as the attacked target
 	if caster.POY_target ~= target then
 		-- If its not the same target then set it as the new target and remove the modifier
-		caster:RemoveModifierByName(modifier)
+		caster:SetModifierStackCount(modifier, ability, 1)
 		caster.POY_target = target
 		return
 	end

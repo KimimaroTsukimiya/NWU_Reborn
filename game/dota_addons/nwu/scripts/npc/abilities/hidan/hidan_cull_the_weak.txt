@@ -29,9 +29,7 @@
 	"AbilityCooldown"				"10"
 	"AbilityDuration"				"4"
 
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"70 100 130 160"
+
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -44,7 +42,7 @@
 		"01"
 		{
 			"var_type"			 "FIELD_FLOAT"
-			"pull_radius_start" "20.0"
+			"pull_radius_start" "110.0"
 		}
 		"02"
 		{
@@ -109,11 +107,6 @@
 			"Target"				"POINT"
 		}
 
-		"RunScript"
-		{
-			"ScriptFile"			"heroes/hidan/cull_the_weak.lua"
-			"Function"				"health_cost"
-		}
 
 	}
 
@@ -131,6 +124,21 @@
 
 	"OnProjectileFinish"
 	{
+
+		"DelayedAction"
+		{
+			"Delay"     "0.3"
+			"Action"    
+			{
+				"RunScript"
+				{
+					"ScriptFile"			"heroes/hidan/cull_the_weak.lua"
+					"Function"				"health_cost"
+				}
+			}
+		}
+		
+
 		"RunScript"
 		{
 			"ScriptFile"			"heroes/hidan/cull_the_weak.lua"

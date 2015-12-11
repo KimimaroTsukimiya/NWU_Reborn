@@ -14,23 +14,23 @@
 
     // Casting
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastRange"              "0"
-    "AbilityDuration"               "3"
+    "AbilityCastRange"              "0.0"
 
 
     // Time     
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"               "15"
+    "AbilityCooldown"               "16"
     "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"               "80 100 120 140"
+    "AbilityManaCost"               "100 120 140 160"
     
 
      "precache"
     {
       "particle"  "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+      "particle"  "particles/units/heroes/neji/kaiten.vpcf"
       "particle"  "particles/generic_gameplay/generic_purge.vpcf"
       "particle"   "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
     }
@@ -55,24 +55,14 @@
         "04"
         {
             "var_type" "FIELD_FLOAT"
-            "bonus_damage" "7 14 21 28"
+            "stun_duration" "1 1.5 2 2.5"
         }
 
     }
 
     "OnSpellStart"
     {
-        "FireSound"
-        {
-            //TODO
-        }
-
-        "RunScript"
-        {
-
-            "ScriptFile"    "heroes/neji/kaiten.lua"
-            "Function"        "apply_stun"
-        }
+    
 
         "Knockback"
                 {
@@ -90,6 +80,18 @@
                     "IsFixedDistance"   "0"
                     "ShouldStun"        "0" 
                 }
+
+        "Stun"
+        {
+            "Target"
+            {
+                "Center"            "CASTER"
+                "Radius"            "%aoe_target"
+                "Teams"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+            }
+            "Duration"          "%stun_duration"
+        }
 
 
         "Damage"
@@ -109,7 +111,7 @@
         {
             "ModifierName"    "modifier_neji_kaiten_untouchable"
             "Target"         "CASTER"
-            "Duration"        "1"
+            "Duration"        "0.4"
         }     
 
     }
@@ -118,9 +120,30 @@
     {
         "modifier_neji_kaiten_untouchable"
         {
-            "Duration"  "1"
+
+            "OnCreated"
+            {
+                 "RunScript"
+                {
+                    "ScriptFile"    "heroes/neji/kaiten.lua"
+                    "Function"      "createParticle"
+                }
+            }
+
+            "OnDestroy"
+            {
+                 "RunScript"
+                {
+                    "ScriptFile"    "heroes/neji/kaiten.lua"
+                    "Function"      "removeParticle"
+                }
+            }
+
+            "Duration"  "0.4"
             "States"
             {
+                "MODIFIER_STATE_COMMAND_RESTRICTED"  "MODIFIER_STATE_VALUE_ENABLED"
+                "MODIFIER_STATE_UNSELECTABLE"        "MODIFIER_STATE_VALUE_ENABLED"
                 "MODIFIER_STATE_INVULNERABLE"        "MODIFIER_STATE_VALUE_ENABLED"
             }
         }

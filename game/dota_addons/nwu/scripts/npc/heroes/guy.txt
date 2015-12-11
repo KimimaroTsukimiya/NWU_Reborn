@@ -15,9 +15,10 @@
 		  "AttackDamageMin"   "27"
 		  "AttackDamageMax"   "27"
 		  "AttackRate"    "1.700000"
-
+		  "ArmorPhysical"		"3.000000"
 		  "AttackRange"				"100"
-
+		  "StatusHealth"    "145"
+ 		  "StatusHealthRegen"   "0.300000"
 		  "MovementSpeed"			"300"
 		  "AttributeBaseStrength" "19" // Base strength
 		  "AttributeStrengthGain" "2.2" // Strength bonus per level.

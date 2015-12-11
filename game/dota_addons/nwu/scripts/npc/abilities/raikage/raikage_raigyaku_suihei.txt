@@ -141,7 +141,6 @@
             
         }
 
-		//TODO seems to no work yet, modifier is applied but damage reduction has to be retested
 		"modifier_raigyaku_debuff"
 		{
 			"Duration"        "%damage_reduction_duration"     

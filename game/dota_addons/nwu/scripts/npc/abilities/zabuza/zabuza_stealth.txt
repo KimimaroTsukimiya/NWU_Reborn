@@ -38,19 +38,25 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
 	{
-
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_range"				"250 275 300 325"
+		}
 	}
 
 	"OnSpellStart"
 	{
 
-		"RunScript"
+		"Blink"
 		{
-			"ScriptFile"	"heroes/zabuza/stealth.lua"
-			"Function"		"stealth"
+			"Target"	"TARGET"
 		}
-		
-		
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/zabuza/stealth.lua"
+					"Function"		"attackAfterBlink"
+				}
 		"FireSound"
 		{
 				

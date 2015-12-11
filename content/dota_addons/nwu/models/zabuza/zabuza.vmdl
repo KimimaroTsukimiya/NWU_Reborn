@@ -938,11 +938,7 @@ CVanimGroup CVanimGroup_1
 			bool m_bDisable = false
 			CActivity[] m_Activities = 
 			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_CAST_ABILITY_1"
-					int m_nWeight = 1
-				}
+				
 			]
 			CAnimationEvent[] m_AnimationEvents = 
 			[

@@ -6,12 +6,13 @@
 		  "Ability2"         "neji_internal_bleeding" 
 		  "Ability3"         "neji_byakugan" 
 		  "Ability4"         "neji_hyaku_nijuuhachi_shou"
-
+		  "ArmorPhysical"		"1.000000"
 		"ModelScale"		"0.75"
 		"LoadoutScale"		"0.75" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 		  "AttackAnimationPoint"   "0.4"
-		  
+		    "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		"AttackDamageMin"		"16"
 		"AttackDamageMax"		"16"
 		"AttackRate"		"1.700000"

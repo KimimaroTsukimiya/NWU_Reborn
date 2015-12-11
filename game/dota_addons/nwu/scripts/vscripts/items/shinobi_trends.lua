@@ -12,7 +12,8 @@ function swap_to_item(keys, ItemName)
 	end
 	
 	keys.caster:RemoveItem(keys.ability)
-	keys.caster:AddItem(CreateItem(ItemName, keys.caster, keys.caster))  --This should be put into the same slot that the removed item was in.
+	local trends = CreateItem(ItemName, keys.caster, keys.caster)  --This should be put into the same slot that the removed item was in.
+	keys.caster:AddItem(trends)
 	
 	for i=0, 5, 1 do  --Remove all dummy items from the player's inventory.
 		local current_item = keys.caster:GetItemInSlot(i)

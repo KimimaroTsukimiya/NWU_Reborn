@@ -3,13 +3,13 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 	"AbilityTextureName"			"hidan_self_pain"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastPoint"				"0.5"
-
+	"MaxLevel" 						"3"
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"11"

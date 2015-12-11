@@ -6,13 +6,14 @@
 		  "Ability2"        "naruto_kawazu_kumite" 
 		  "Ability3"        "naruto_kage_bunshin_mastery" 
 		  "Ability4"        "naruto_rasenshuriken"
-
+		  "ArmorPhysical"		"1.000000"
 		"ModelScale"		"1.00"
 		"LoadoutScale"		"1.00" 
 		  "AttackAnimationPoint"   "0.4"
 		 
 		  "AttackRange"				"100"
-
+  "StatusHealth"    "145"
+  "StatusHealthRegen"   "0.300000"
 		  "AttackDamageMin"   "23"
 		  "AttackDamageMax"   "23"
 		  "AttackRate"    "1.700000"

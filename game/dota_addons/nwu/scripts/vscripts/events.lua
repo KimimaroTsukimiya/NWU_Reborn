@@ -8,6 +8,7 @@ require('music')
 -- rescale.lua, relevant functions rescale the model sizes
 require('rescale')
 
+
 --cheats.lua, includes functions which listen to chat inputs of the players
 if CHEATS_ACTIVATED then
   require('cheats')
@@ -261,7 +262,10 @@ function GameMode:OnEntityKilled( keys )
   --Items
   if killerEntity ~= nil then
     GameMode:SupportItemCooldownReset(killedUnit, killerEntity)
+    GameMode:PlayKillSound(killerEntity, killedUnit)
   end
+
+
 
 end
 

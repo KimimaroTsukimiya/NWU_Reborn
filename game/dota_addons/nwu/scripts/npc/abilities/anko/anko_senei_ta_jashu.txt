@@ -62,6 +62,11 @@
 			"var_type"						"FIELD_FLOAT"
 			"damage_per_tick"				"25 40 55 70"
 		}
+		"05"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"cast_range"				"200"
+		}
 	}
 	"OnSpellStart"
 	{

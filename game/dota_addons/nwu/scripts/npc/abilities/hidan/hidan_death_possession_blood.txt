@@ -19,9 +19,6 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityManaCost"				"50"
 
-	//Stats
-	"AbilityDamage"					"40 64 88"
-
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
@@ -29,7 +26,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"duration"				"10 14 18"
+			"duration"				"10 12 14"
 		}
 		"02"
 		{
@@ -61,6 +58,13 @@
 			"tick_interval_modifier"			"0.1"
 		}
 
+		"07"
+		{
+			"var_type"								"FIELD_FLOAT"
+			"returned_damage_inside_percentage"	"100"
+		}
+
+
 	}
 
 	"precache"
@@ -71,7 +75,17 @@
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
 		"particle"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+		"particle"	"particles/units/heroes/hero_bloodseeker/bloodseeker_bloodritual_ring.vpcf"
 		"model"		"models/hidan/hidan.vmdl"
+	}
+
+	"OnCreated"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifier_hidan_target_change"
+			"Target"			"CASTER"
+		}
 	}
 
 	"OnSpellStart"
@@ -81,22 +95,19 @@
 			"EffectName"		"Hero_Terrorblade.Metamorphosis"
 			"Target"			"CASTER"
 		}
-		"FireEffect"
-		{
-			"EffectName"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
-			"EffectAttachType"	"follow_origin"
-			"Target"			"CASTER"
-		}
+
 		"ApplyModifier"
 		{
 			"ModifierName"		"modifier_hidan_metamorphosis"
 			"Target"			"CASTER"
 		}
+
 		"ApplyModifier"
 		{
-			"ModifierName"		"modifier_hidan_target_change"
+			"ModifierName"		"modifier_hidan_damage_blood_target"
 			"Target"			"CASTER"
 		}
+
 
 		"RunScript"
 		{
@@ -119,8 +130,7 @@
 		"modifier_hidan_metamorphosis"
 		{
 			
-			"EffectName" 		"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
-			"EffectAttachType"  "follow_origin"
+
 			"duration"			"%duration"
 
 			"AllowsIllusionDuplicate"	"1"
@@ -175,13 +185,15 @@
 			{
 				"AttachEffect"
 				{
-					"EffectName"	"particles/units/heroes/hero_riki/riki_smokebomb.vpcf"
+					"EffectName"	"particles/units/heroes/hero_bloodseeker/bloodseeker_bloodritual_ring.vpcf"
 					"EffectAttachType"	"attach_origin"
 					"Target"		"TARGET"
 
 					"ControlPoints"
 					{
+						"00"	"%radius %radius 0"
 						"01"	"%radius %radius 0"
+						"03"	"%radius %radius 0"
 					}
 				}
 			}
@@ -224,10 +236,9 @@
 	"modifier_hidan_target_change"
 		{
 			
-			"Passive"			"0"
+			"Passive"			"1"
 			"IsHidden"			"1"
 			"IsDebuff"			"0"
-			"Duration"			"%duration"
 
 			"OnAttackLanded"
 			{
@@ -238,6 +249,16 @@
 				}
 			}
 
+			
+		}
+
+		"modifier_hidan_damage_blood_target"
+		{
+
+			"Passive"			"0"
+			"IsHidden"			"1"
+			"IsDebuff"			"0"
+			"duration"			"%duration"	
 			"OnTakeDamage"
 			// "%attack_damage" is set to the damage value after mitigation
 			{

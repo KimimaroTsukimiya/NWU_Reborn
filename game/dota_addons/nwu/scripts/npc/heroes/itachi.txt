@@ -17,11 +17,12 @@
 	"AttackDamageMin"   "16"
 	"AttackDamageMax"   "16"
 	"AttackRate"    "1.700000"
-	
+	"ArmorPhysical"		"1.000000"
     // Movement
     //----------------------------------------------------------------
 	"MovementSpeed"					"300"
-
+	"StatusHealth"    "145"
+  	"StatusHealthRegen"   "0.300000"
     // Attibutes
     //----------------------------------------------------------------
 	"AttributePrimary"				"DOTA_ATTRIBUTE_AGILITY"

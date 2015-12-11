@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/loading_screen.vsnd"
+                              "value0"        "sounds/kokuten.vsnd"
                         }
                     }
                     "volume"            {   "value"     "1.00000"  }

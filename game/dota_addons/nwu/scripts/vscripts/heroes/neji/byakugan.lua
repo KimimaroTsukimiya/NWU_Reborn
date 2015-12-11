@@ -8,7 +8,16 @@ function vision( keys )
 	local ability_level = ability:GetLevel() - 1
 	local radius = ability:GetLevelSpecialValueFor("vision_aoe", ability_level)
 	local duration = ability:GetLevelSpecialValueFor("duration", ability_level)
-	--Add temporary vision for a given team ( nTeamID, vLocation, flRadius, flDuration, bObstructedVision)
-	AddFOWViewer(caster:GetTeamNumber(), caster:GetAbsOrigin(), radius, duration, true) 
-
+	local dayTime = caster:GetDayTimeVisionRange()
+	local night = caster:GetNightTimeVisionRange()
+	keys.caster:SetDayTimeVisionRange(radius)
+	keys.caster:SetNightTimeVisionRange(radius)
+	Timers:CreateTimer( duration, function()
+		print(dayTime)
+		print(night)
+    	keys.caster:SetDayTimeVisionRange(dayTime)
+		keys.caster:SetNightTimeVisionRange(night)
+		return nil
+	end
+	)
 end

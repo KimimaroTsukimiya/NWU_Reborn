@@ -16,6 +16,7 @@
     "ItemInitialCharges"      "0"
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
+    "ItemPurchasable"          "0"    
     "ItemRequiresCharges"     "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"

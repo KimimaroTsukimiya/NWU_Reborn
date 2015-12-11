@@ -1,0 +1,46 @@
+//Sakura
+"itembuilds/test_phantom_assassin.txt"
+{
+	"author"	"LearningDave"
+	"hero"		"npc_dota_hero_phantom_assassin"
+	"Title"		"Naruto Wars Reborn"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"          "item_tango"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"          "item_shinobi_waist_pouch"
+			"item"          "item_shinobi_waist_pouch"
+			"item"          "item_shinobi_waist_pouch"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_shinobi_trends_str"
+			"item"			"item_yondaime_sealed_kunai"
+			"item"			"item_nidaimes_helm"
+		}
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"			"item_gelel_stone"
+			"item"			"item_the_will_of_fire"
+				
+			"item"			"item_kurosawa"
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"			"item_twin_fangs_of_abyss"
+			"item"			"item_jashins_amulet"
+			"item"			"item_kongou_nyoi"
+			"item"          "item_chakra_armor"
+			"item"			"item_silver_hands"
+			"item"			"item_hokage_armor"
+		}		
+	}
+}

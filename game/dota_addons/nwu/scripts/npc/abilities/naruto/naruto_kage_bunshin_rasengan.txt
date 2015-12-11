@@ -15,8 +15,8 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
-		"particle"			"particles/units/heroes/hero_vengeful/vengeful_magic_missle.vpcf"		
+		"particle"			"particles/units/heroes/naruto/sven_spell_storm_bolt.vpcf"
+		"particle"			"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
 	}
 
 	// Casting
@@ -58,7 +58,7 @@
 		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"magic_missile_speed"			"500"
+			"speed"			"500"
 		}
 		"05"
 		{
@@ -69,6 +69,11 @@
 		{
 			"var_type"				"FIELD_FLOAT"
 			"illusion_incoming_damage_percent"			"700 600 500 450 400"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"range"					"800"
 		}
 	}
 
@@ -83,51 +88,26 @@
 
 	"OnSpellStart"
 	{
-		"FireSound"
+		"RemoveModifier"
 		{
-			"EffectName"	"Hero_VengefulSpirit.MagicMissile"
-			"Target" 		"CASTER"
+			"ModifierName"		"modifier_epicenter_precast_datadriven"
+			"Target"			"CASTER"
 		}
-		
-		"TrackingProjectile"
+	
+		"RunScript"
 		{
-			"Target"           	"TARGET"
-			"EffectName"		"particles/units/heroes/hero_vengeful/vengeful_magic_missle.vpcf"
-			"Dodgeable"			"1"
-			"ProvidesVision"	"0"
-			"MoveSpeed"        	"%magic_missile_speed"
-			"EffectAttachType"	"attach_hitloc"
-		}		
-	}
+			"ScriptFile"			"heroes/naruto/kage_bunshin_rasengan.lua"
+			"Function"				"ConjureImage"
+			"modifier_caster"		"modifier_imba_storm_bolt_caster"
+			"particle_bolt"			"particles/units/heroes/naruto/sven_spell_storm_bolt.vpcf"
+			"sound_cast"			"Hero_Sven.StormBolt"
+			"sound_impact"			"Hero_Sven.StormBoltImpact"
+			"particle_impact"		"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
 
-	"OnProjectileHitUnit"
-	{
-		"DeleteOnHit"	"1"
-		"FireSound"
-		{
-			"EffectName"	"Hero_VengefulSpirit.MagicMissileImpact"
-			"Target" 		"TARGET"
+			// Spell Blocking
+			"GenericFunction"		"GenericSpellFunction"
+			"doDamage"				"true"
 		}
-		
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_naruto_bunshin_rasengan_slow"
-			"Target" 		"TARGET"
-			"Duration"		"%slow_duration"
-		}
-
-		"Damage"
-		{
-			"Target"		"TARGET"
-			"Type"			"DAMAGE_TYPE_MAGICAL"
-			"Damage"		"%AbilityDamage"
-		}	
-
-		 "RunScript"
-        {
-          "ScriptFile"      "heroes/naruto/kage_bunshin_rasengan.lua"
-          "Function"        "ConjureImage"
-        }					
 	}	
 
 	"Modifiers"
@@ -138,9 +118,16 @@
 			"IsHidden"			"0"
 			"IsDebuff"			"1"
 	
-			"EffectName"		"particle_name"
-			"EffectAttachType"	"follow_origin"
-	
+			"OnCreated"
+			{
+				"Damage"
+				{
+					"Target"		"TARGET"
+					"Type"			"DAMAGE_TYPE_MAGICAL"
+					"Damage"		"%AbilityDamage"
+				}
+			}
+
 			"Properties"
 			{
 			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%slow_movement_percentage" 
@@ -162,5 +149,51 @@
 	        }
 	      }
 	    }
+
+	    "modifier_imba_storm_bolt_caster"
+		{
+			"Passive"			"0"
+			"IsBuff"			"0"
+			"IsPurgable"		"0"
+			"OverrideAnimation" "ACT_DOTA_RUN"
+
+			"OnCreated"
+			{		   
+				"AttachEffect"
+				{
+					"EffectName"		"particles/units/heroes/naruto/sven_spell_storm_bolt.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"Target"			"TARGET"
+					"ControlPointEntities"
+					{
+						"TARGET"	"attach_right_hand"
+					}
+				}
+			}
+			
+		}
+
+		 "modifier_imba_storm_bolt_caster_hit"
+		{
+			"Passive"			"0"
+			"IsBuff"			"0"
+			"IsPurgable"		"0"
+			"OverrideAnimation" "ACT_DOTA_ATTACK2"
+
+			"OnCreated"
+			{		   
+				"AttachEffect"
+				{
+					"EffectName"		"particles/units/heroes/naruto/sven_spell_storm_bolt.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"Target"			"TARGET"
+					"ControlPointEntities"
+					{
+						"TARGET"	"attach_right_hand"
+					}
+				}
+			}
+			
+		}
 	}
 }

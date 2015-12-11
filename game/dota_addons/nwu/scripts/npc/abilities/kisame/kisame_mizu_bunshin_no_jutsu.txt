@@ -3,7 +3,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityTextureName"			"kisame_mizu_bunshin_no_jutsu"
@@ -12,6 +12,8 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
+    "soundfile"         "soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+    "particle"          "particles/units/heroes/hero_siren/naga_siren_mirror_image.vpcf"
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
 		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
 		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
@@ -20,8 +22,8 @@
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"450"
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
-
+	"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+  
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"27.0 24.0 21.0 18.0"
@@ -38,53 +40,123 @@
       "01"
       {
         "var_type"                  "FIELD_FLOAT"
-        "illusion_duration"         "20 20 20"
+        "illusion_duration"         "18 18 18"
       }
+
       "02"
       {
         "var_type"                               "FIELD_FLOAT"
-        "illusion_outgoing_damage_percent"       "-90"
+        "illusion_max_hp_percentage"              "14 18 22 26"
       }
-       "03"
+
+      "03"
       {
         "var_type"                               "FIELD_FLOAT"
-        "illusion_incoming_damage_percent"       "700 600 500 400"
-      }			
+        "damage_percentage"              "10"
+      }
+
+      "04"
+      {
+        "var_type"                               "FIELD_FLOAT"
+        "bonus_damage"              "1"
+      }
+
+      		
 	}
 
 	"OnSpellStart"
   {
+      "RunScript"
+          {
+            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+            "Function"        "NoDraw"
+          }
     "ApplyModifier"
     {
       "ModifierName"    "mizu_bunshin_no_jutsu_illusion"
       "Target"          "CASTER"
     }
+
+    "FireSound"
+        {
+          "EffectName"  "Hero_NagaSiren.MirrorImage"
+          "Target"    "CASTER"
+        }
+
   }
 
     "Modifiers"
     {
-
        "mizu_bunshin_no_jutsu_illusion"
       {
         "Duration"  "1"
         "IsHidden"  "1"
         "OnCreated"
         {
-          "RunScript"
+           "DelayedAction"
           {
-            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
-            "Function"        "ConjureImage"
-          }
-          "RunScript"
-          {
-            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
-            "Function"        "ConjureImage"
+            "Delay"     "0.1"
+            "Action"    
+            {
+                   "RunScript"
+              {
+                "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+                "Function"        "ConjureImage"
+              }
+              "RunScript"
+              {
+                "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+                "Function"        "ConjureImage"
+              }
+            }
           }
 
+          "DelayedAction"
+          {
+            "Delay"     "0.3"
+            "Action"    
+            {
+              "RunScript"
+              {
+                "ScriptFile"  "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+                "Function"    "draw"
+              }
 
+            }
+          }
         }
+      }
+
+      "modifier_water_bunshin"
+      {
+        "Passive"     "0"
+        "IsHidden"      "0"
+        "IsBuff"      "1"
+        "duration"      "%illusion_duration"
+
+
+        "OnDestroy"
+        {
+          "RunScript"
+          {
+            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+            "Function"        "RemoveBunshin"
+          }
+        }
+      }
+
+       "modifier_water_bunshin_bonus_damage"
+      {
+        "Passive"     "0"
+        "IsHidden"      "1"
+        "IsDebuff"      "0"
+        "Duration"      "%illusion_duration"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"  "%bonus_damage"
+          }
       }
 	 }
 	
 }
-

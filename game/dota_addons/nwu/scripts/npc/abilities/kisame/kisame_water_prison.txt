@@ -51,7 +51,7 @@
 		"05"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"mana_cost_per_second_percentage"	"3"
+			"mana_cost_per_second_percentage"	"5"
 		}
 
 		"06"
@@ -69,6 +69,11 @@
 		{
 			"var_type"				"FIELD_FLOAT"
 			"damage_per_millisecond"				"4.0 6.4 8.8"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"hp_reg_per_second_percentage"		"2.5"
 		}
 
 	}
@@ -103,7 +108,11 @@
 			"ModifierName"		"modifier_kisame_metamorphosis"
 			"Target"			"CASTER"
 		}
-		
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifer_water_prison_hp_reg"
+			"Target"			"CASTER"
+		}
 	}
 
 
@@ -114,6 +123,13 @@
 			"ModifierName"		"modifier_kisame_metamorphosis"
 			"Target"			"CASTER"
 		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifer_water_prison_hp_reg"
+			"Target"			"CASTER"
+		}
+		
 
 	}
 
@@ -127,6 +143,11 @@
 		"RemoveModifier"
 		{
 			"ModifierName"	"modifier_kisame_metamorphosis"
+			"Target" 		"CASTER"
+		}
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifer_water_prison_hp_reg"
 			"Target" 		"CASTER"
 		}
 	}
@@ -149,7 +170,22 @@
 
           "Properties"
           {
+
             "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow_percentage"
+          } 
+        
+		}
+
+		"modifer_water_prison_hp_reg"
+		{
+
+          "Passive"     "0"
+          "IsHidden"      "0"
+          "IsDebuff"      "0"
+
+          "Properties"
+          {
+            "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE" "%hp_reg_per_second_percentage"
           } 
         
 		}

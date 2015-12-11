@@ -12,7 +12,7 @@
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"naruto_rasenshuriken"
 	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-	"AOERadius"						"%bolt_aoe"
+	"AOERadius"						"%rs_aoe"
 
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
@@ -49,22 +49,27 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bolt_speed"			"1000"
+			"rs_speed"			"1000"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"bolt_stun_duration"	"3.0"
+			"rs_stun_duration"	"3.0"
 		}
 		"03"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"bolt_aoe"			"300"
+			"rs_aoe"			"300"
 		}
 		"04"
 		{
 			"var_type"			"FIELD_INTEGER"
 			"vision_radius"		"225"
+		}
+		"05"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"range"		"600"
 		}
 	}
 
@@ -77,7 +82,7 @@
 		    "Dodgeable"        	"1"
 		    "ProvidesVision"   	"1"
 		    "VisionRadius"		"%vision_radius"
-		    "MoveSpeed"        	"%bolt_speed"
+		    "MoveSpeed"        	"%rs_speed"
 		    "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
 		}
 
@@ -96,59 +101,48 @@
 			"Target"			"TARGET"
 		}
 
-		"FireEffect"
-		{
-			"EffectName"	"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
-			"EffectAttachType"	"attach_origin"
-			"Target"		"TARGET"
-			"ControlPointEntities"
-			{
-				"TARGET"	"attach_origin"
-				"TARGET"	"attach_origin"
-				"TARGET"	"attach_origin"
-				"TARGET"	"attach_origin"	//CP3 has a child explosion origin
-			}
-		}
-
-		"ActOnTargets"
-		{
-			"Target"
-			{
-				"Center" "POINT"
-                "Radius" "%bolt_aoe"
-                "Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY" 
-                "Types" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
-			}
-
-			"Action"
-			{
-				"Damage"
-				{
-					"Target"	"TARGET"
-					"Type"		"DAMAGE_TYPE_MAGICAL"
-					"Damage"	"%AbilityDamage"
-				}
-
-				"ApplyModifier"
-				{
-					"ModifierName"	"modifier_storm_bolt_datadriven"
-					"Target"		"TARGET"
-				}
-
-			}
+		"RunScript"
+        {
+			"ScriptFile"    "items.lua"
+			"Function"      "CheckForSpellBlock"
+			
+			"filePath"		"heroes/naruto/rasenshuriken"
+			"functionName"	"rasenshuriken_impact"
+			
+			"AoE"		"rs_aoe"
+			"rs_modifier"	"modifier_rasenshuriken_datadriven"
+			
+			"PierceMagicImmune"	"true"
 		}
 	}
 
 	"Modifiers"
 	{
-		"modifier_storm_bolt_datadriven"
+		"modifier_rasenshuriken_datadriven"
 		{
-			"Duration"		"%bolt_stun_duration"
+			"Duration"		"%rs_stun_duration"
 			"IsDebuff"		"1"
 			"OverrideAnimation"	"ACT_DOTA_DISABLED"
 
 			"EffectName"	"particles/generic_gameplay/generic_stunned.vpcf"
 			"EffectAttachType"	"follow_overhead"
+			
+			"OnCreated"
+			{
+				"FireEffect"
+				{
+					"EffectName"	"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
+					"EffectAttachType"	"attach_origin"
+					"Target"		"TARGET"
+					"ControlPointEntities"
+					{
+						"TARGET"	"attach_origin"
+						"TARGET"	"attach_origin"
+						"TARGET"	"attach_origin"
+						"TARGET"	"attach_origin"	//CP3 has a child explosion origin
+					}
+				}
+			}
 
 			"States"
 			{

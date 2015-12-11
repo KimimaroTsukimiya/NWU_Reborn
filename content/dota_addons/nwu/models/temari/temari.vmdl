@@ -133,23 +133,23 @@ CVMaterialRemapList CVMaterialRemapList_0
 	[
 		CVMaterialRemap
 		{
-			string m_sSearchMaterial = "milkshapeexported2.vmat"
-			string m_sReplaceMaterial = "materials/temari/temari.vmat"
-		},
-		CVMaterialRemap
-		{
 			string m_sSearchMaterial = "milkshapeexported1.vmat"
 			string m_sReplaceMaterial = "materials/temari/temari.vmat"
 		},
 		CVMaterialRemap
 		{
+			string m_sSearchMaterial = "milkshapeexported2.vmat"
+			string m_sReplaceMaterial = "materials/temari/temari.vmat"
+		},
+		CVMaterialRemap
+		{
 			string m_sSearchMaterial = "milkshapeexported3.vmat"
-			string m_sReplaceMaterial = "materials/temari/temari_fan.vmat"
+			string m_sReplaceMaterial = "materials/temari/fan.vmat"
 		},
 		CVMaterialRemap
 		{
 			string m_sSearchMaterial = "milkshapeexported4.vmat"
-			string m_sReplaceMaterial = "materials/temari/temari_fan.vmat"
+			string m_sReplaceMaterial = "materials/temari/fan.vmat"
 		}
 	]
 }

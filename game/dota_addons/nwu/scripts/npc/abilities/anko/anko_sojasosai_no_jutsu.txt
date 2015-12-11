@@ -46,6 +46,11 @@
 			"var_type"						"FIELD_FLOAT"
 			"damage_percent"				"50 60 70"
 		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"cast_range"				"50 60 70"
+		}
 	}
 	"OnSpellStart"
 	{
