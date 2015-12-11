@@ -81,6 +81,7 @@
 	"precache"
 	{
 		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+		"soundfile"	"soundevents/kisame_ulti.vsndevts"
 		"particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
@@ -95,7 +96,7 @@
 		
 		"FireSound"
 		{
-			"EffectName"		"Hero_Terrorblade.Metamorphosis"
+			"EffectName"		"kisame_ulti"
 			"Target"			"CASTER"
 		}
 		"FireEffect"
@@ -119,6 +120,11 @@
 
 	"OnToggleOn"
 	{
+			"FireSound"
+		{
+			"EffectName"		"kisame_ulti"
+			"Target"			"CASTER"
+		}
 		"ApplyModifier"
 		{
 			"ModifierName"		"modifier_kisame_metamorphosis"

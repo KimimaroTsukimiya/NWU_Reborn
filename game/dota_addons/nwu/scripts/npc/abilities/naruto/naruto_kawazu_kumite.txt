@@ -13,6 +13,7 @@
 	"precache"
 	{
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+    "soundfile"     "soundevents/naruto_bunshin.vsndevts"
 		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
 		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
 	}
@@ -83,6 +84,11 @@
 
 	"OnSpellStart"
   {
+    "FireSound"
+    {
+      "EffectName"  "naruto_bunshin"
+      "Target"     "CASTER"
+    }
     "ApplyModifier"
     {
       "ModifierName"  "modfiier_naruto_kawazu_kumite"

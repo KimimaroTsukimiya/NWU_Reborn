@@ -73,6 +73,15 @@
 		}
 	}
 
+	"OnAbilityPhaseStart"
+	{
+			"FireSound"
+		{
+			"EffectName"		"naruto_rasen_shuriken"
+			"Target"			"CASTER"
+		}
+	}
+
 	"OnSpellStart"
 	{
 		"TrackingProjectile"
@@ -86,11 +95,7 @@
 		    "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
 		}
 
-		"FireSound"
-		{
-			"EffectName"		"naruto_rasen_shuriken"
-			"Target"			"CASTER"
-		}
+	
 	}
 
 	"OnProjectileHitUnit"

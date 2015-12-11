@@ -13,6 +13,7 @@
 	"precache"
 	{
 		"soundfile" 		"soundevents/kisame_shark.vsndevts"
+		"soundfile" 		"soundevents/kisame_shark_cast.vsndevts"
 		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
 		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
 	}
@@ -86,13 +87,25 @@
 		}				
 	}
 
-	"OnSpellStart"
+	"OnAbilityPhaseStart"
 	{
 		"FireSound"
         {
           "EffectName"  "kisame_shark"
           "Target"    "CASTER"
         }
+
+        "FireSound"
+        {
+          "EffectName"  "kisame_shark_cast"
+          "Target"    "CASTER"
+        }
+
+	}
+
+	"OnSpellStart"
+	{
+		
 
 		"RunScript"
 		{
