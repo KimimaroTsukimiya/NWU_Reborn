@@ -1,0 +1,124 @@
+// Karasu's Poison Gas ability
+// Author: Zenicus
+// Date: 12.6.2015.
+"karasu_poison_gas"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"			""
+	"AOERadius"						"625"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.2"
+	"AbilityCastRange"				"900"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"500"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"14.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"32"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"tick_rate"				"1.0"
+		}
+	}
+
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+		"particle"  "particles/units/heroes/hero_alchemist/alchemist_acid_spray.vpcf"
+	}
+
+	"OnSpellStart"
+	{
+	 	"CreateThinker"
+	 	{
+	 		"ModifierName"	"modifier_poison_gas_thinker"
+	 		"Target" 		"POINT"
+	 	}
+	} 
+
+	"Modifiers"
+	{
+		"modifier_poison_gas_thinker"
+		{
+			"Aura"					"modifier_poison_gas"
+			"Aura_Radius"			"%radius"
+			"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"Aura_Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL"
+			"Aura_Flags"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+			"Duration"				"%duration"
+
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/kankuro/karasu_poison_gas.lua"
+					"Function"		"PoisonGasSound"
+				}
+
+				"AttachEffect"
+				{
+					"EffectName"		"particles/units/heroes/hero_alchemist/alchemist_acid_spray.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"Target"			"TARGET"
+					"ControlPoints"
+					{
+						"00" "0 0 0"
+						"01" "%radius 1 1"
+						"15" "25 150 25"
+						"16" "0 0 0"
+					}
+				}
+			}
+		}
+
+		"modifier_poison_gas"
+		{
+			"IsDebuff"		"1"
+			"ThinkInterval"	"%tick_rate"
+			"OnIntervalThink"
+			{
+				"FireSound"
+				{
+					"EffectName" 	"Hero_Alchemist.AcidSpray.Damage"
+					"Target"		"TARGET"
+				}
+				"Damage"
+				{
+					"Target"		 "TARGET"
+					"Type"			 "DAMAGE_TYPE_PHYSICAL"
+					"Damage"		 "%damage"
+				}
+			}
+		}
+	}
+}

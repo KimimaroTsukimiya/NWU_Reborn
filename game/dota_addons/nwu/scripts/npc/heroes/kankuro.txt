@@ -1,0 +1,31 @@
+"npc_dota_hero_warlock" //kankuro
+{
+  "override_hero"   "npc_dota_hero_warlock"
+  //"Model"           ""
+  "Ability1"        "kankuro_summon_kuroari"
+  "Ability2"        "kankuro_summon_karasu"
+  //"Ability3"        ""
+  //"Ability4"        ""      
+  "ModelScale"		"0.80"
+  "LoadoutScale"	"0.80" 
+  "ItemSlots"
+  { }
+  "AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
+  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
+  "AttackAnimationPoint"		"0.4"
+
+  "AttackDamageMin"   "23"
+  "AttackDamageMax"   "23"
+  "AttackRate"    "1.700000"
+
+  "AttackRange"				"100"
+  "MovementSpeed"			"300"
+  "AttributeBaseStrength" "17" // Base strength
+  "AttributeStrengthGain" "2" // Strength bonus per level.
+  "AttributeBaseIntelligence" "15" // Base intelligence
+  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
+  "AttributeBaseAgility" "23" // Base agility
+  "AttributeAgilityGain" "3.1" // Agility bonus per level.
+
+  "Village"			"kirigakure"
+}	

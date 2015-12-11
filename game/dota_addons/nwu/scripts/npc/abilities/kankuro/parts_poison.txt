@@ -1,0 +1,82 @@
+// Dismantle Parts' passive poison
+// Author: Zenicus
+// Date: December 10, 2015
+
+"parts_poison"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			""
+	"MaxLevel"						"1"
+		
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"poison_movement_speed_melee"		"-25"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"poison_duration"					"3.0"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"poison_damage_per_second"			"10.0"
+		}
+		"04"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"poison_damage_interval"			"1.0"
+		}
+	}
+	
+	"OnSpellCreated"
+	{
+		"RunScript"
+		{
+			"ScriptFile"					"parts_poison.lua"
+			"Function"						"parts_poison"
+			"modifier_name" 				"modifier_parts_poison_attack_melee"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_parts_poison_attack_melee"
+		{
+			"Duration"				"%poison_duration"
+			"Passive"				"0"
+			"IsHidden"				"0"
+			"IsBuff"				"0"
+			"IsDebuff"				"1"
+			"IsPurgable"			"1"
+			
+			"EffectName"			"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+			"EffectAttachType"		"follow_origin"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%poison_movement_speed_melee"
+			}
+			
+			"ThinkInterval" 		"%poison_damage_interval"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"					"parts_poison"
+					"Function"						"modifier_parts_poison_attack_on_interval_think"
+					"PoisonDamagePerSecond"			"%poison_damage_per_second"
+					"PoisonDamageInterval"			"%poison_damage_interval"
+				}
+			}
+		}
+	}
+}
