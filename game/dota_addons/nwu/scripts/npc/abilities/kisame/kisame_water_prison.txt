@@ -86,6 +86,7 @@
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
 		"particle"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+		"particle"	"particles/units/heroes/kisame/water_dome.vpcf"
 		"model"		"models/kisame_new/kisame_samehada.vmdl"
 	}
 
@@ -205,12 +206,7 @@
 					"projectile_model"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 				}
 
-				"AttachEffect"
-				{
-					//"EffectName" 		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
-					//"EffectAttachType"	"follow_origin"
-					//"Target"			"TARGET"
-				}
+
 			}
 
 
