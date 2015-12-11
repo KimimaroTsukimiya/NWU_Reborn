@@ -242,7 +242,7 @@
 	  "ItemSlots"
 	  { }
 	  "AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
-	  "AttributePrimary" 		"DOTA_ATTRIBUTE_INTELLECT"
+	  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 	  "AttackAnimationPoint"		"0.4"
 	
 	  "AttackDamageMin"   "23"
@@ -344,14 +344,14 @@
 		"npc_dota_hero_dragon_knight" //naruto
 		{
 		  "override_hero"   "npc_dota_hero_dragon_knight"
-		  "Model" 			"models/naruto/naruto.vmdl"
+		  "Model" 			"models/naruto_new/naruto.vmdl"
 		 "Ability1"        "naruto_kage_bunshin_rasengan"
 		  "Ability2"        "naruto_kawazu_kumite" 
 		  "Ability3"        "naruto_kage_bunshin_mastery" 
 		  "Ability4"        "naruto_rasenshuriken"
 		  "ArmorPhysical"		"1.000000"
-		"ModelScale"		"1.00"
-		"LoadoutScale"		"1.00" 
+		"ModelScale"		"0.57"
+		"LoadoutScale"		"0.57" 
 		  "AttackAnimationPoint"   "0.4"
 		 
 		  "AttackRange"				"100"
@@ -480,15 +480,15 @@
 		"npc_dota_hero_phantom_assassin" //sakura
 		{
 		  "override_hero"   "npc_dota_hero_phantom_assassin"
-		  "Model" 			"models/sakura/sakura.vmdl"
+		  "Model" 			"models/sakura_new/sakura.vmdl"
 		  "Ability1"        "sakura_earth_slam"
 		  "Ability2"        "sakura_chakra_burst" 
 		  "Ability3"        "sakura_chakra_enhanced_strength" 
 		  "Ability4"        "sakura_inner_sakura"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "ArmorPhysical"		"1.000000"
-		"ModelScale"		"0.73"
-		"LoadoutScale"		"0.73" 
+		"ModelScale"		"0.83"
+		"LoadoutScale"		"0.83" 
 		"AttackDamageMin"		"23"
 		"AttackDamageMax"		"23"
 		"AttackRate"		"1.700000"
@@ -513,7 +513,7 @@
 		"npc_dota_hero_storm_spirit" //sasuke
 		{
 		  "override_hero"   "npc_dota_hero_storm_spirit"
-		  "Model" 			"models/sasuke/sasuke.vmdl"
+		  "Model" 			"models/sasuke_new/sasuke.vmdl"
 		  "Ability1"        "sasuke_chidori_nagashi"
 		  "Ability2"        "sasuke_chidori_eiso" 
 		  "Ability3"        "sasuke_chidori_koken" 
@@ -535,8 +535,8 @@
 		  "AttributeIntelligenceGain" "2.9" // Intelligence bonus per level.
 		  "AttributeBaseAgility" "16" // Base agility
 		  "AttributeAgilityGain" "2.1" // Agility bonus per level.
-		  "ModelScale"		"0.57"
-		 "LoadoutScale"		"0.57" 
+		  "ModelScale"		"0.72"
+		 "LoadoutScale"		"0.72" 
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha_scarred"

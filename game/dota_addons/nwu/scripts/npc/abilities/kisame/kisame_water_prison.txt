@@ -25,24 +25,24 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
 	{
-		"01"
+		"09"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"duration"				"40 44 48 52"
 		}
-		"02"
+		"10"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"transformation_time"	"0.35"
 		}
 
-		"03"
+		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"radius"				"450"
 		}
 
-		"04"
+		"03"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"ms_slow_percentage"	"-20"
@@ -70,10 +70,15 @@
 			"var_type"				"FIELD_FLOAT"
 			"damage_per_millisecond"				"4.0 6.4 8.8"
 		}
-		"09"
+		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
 			"hp_reg_per_second_percentage"		"2.5"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"		"40 64 88"
 		}
 
 	}
@@ -81,11 +86,13 @@
 	"precache"
 	{
 		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+		"soundfile"	"soundevents/kisame_ulti.vsndevts"
 		"particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
 		"particle"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+		"particle"	"particles/units/heroes/kisame/water_dome.vpcf"
 		"model"		"models/kisame_new/kisame_samehada.vmdl"
 	}
 
@@ -94,7 +101,7 @@
 		
 		"FireSound"
 		{
-			"EffectName"		"Hero_Terrorblade.Metamorphosis"
+			"EffectName"		"kisame_ulti"
 			"Target"			"CASTER"
 		}
 		"FireEffect"
@@ -118,6 +125,11 @@
 
 	"OnToggleOn"
 	{
+			"FireSound"
+		{
+			"EffectName"		"kisame_ulti"
+			"Target"			"CASTER"
+		}
 		"ApplyModifier"
 		{
 			"ModifierName"		"modifier_kisame_metamorphosis"
@@ -205,12 +217,7 @@
 					"projectile_model"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 				}
 
-				"AttachEffect"
-				{
-					//"EffectName" 		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
-					//"EffectAttachType"	"follow_origin"
-					//"Target"			"TARGET"
-				}
+
 			}
 
 

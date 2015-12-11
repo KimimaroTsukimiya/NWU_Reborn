@@ -15,6 +15,11 @@ function ModelSwapStart( keys )
 
 	-- Sets the new model and projectile
 	caster:SetOriginalModel(model)
+
+
+	local particle = ParticleManager:CreateParticle("particles/units/heroes/kisame/water_dome.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
+	ParticleManager:SetParticleControl(particle, 0, caster:GetAbsOrigin()) -- Origin
+
 end
 --[[Author LearningDave
 	Date october, 9th 2015

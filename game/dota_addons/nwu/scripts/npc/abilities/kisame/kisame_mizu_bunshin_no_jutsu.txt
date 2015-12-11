@@ -37,19 +37,19 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
 	{
-      "01"
+      "03"
       {
         "var_type"                  "FIELD_FLOAT"
         "illusion_duration"         "18 18 18"
       }
 
-      "02"
+      "01"
       {
         "var_type"                               "FIELD_FLOAT"
         "illusion_max_hp_percentage"              "14 18 22 26"
       }
 
-      "03"
+      "02"
       {
         "var_type"                               "FIELD_FLOAT"
         "damage_percentage"              "10"

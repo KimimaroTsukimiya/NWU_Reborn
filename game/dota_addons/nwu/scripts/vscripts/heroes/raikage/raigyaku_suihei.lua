@@ -58,3 +58,22 @@ function SuiheiResetCooldown( keys )
 		end
 	)
 end
+
+
+function attachEffect( keys )
+
+	-- Fire particle
+	local fxIndex = ParticleManager:CreateParticle( "particles/econ/items/spirit_breaker/spirit_breaker_thundering_flail/spirit_breaker_thundering_flail.vpcf", PATTACH_CUSTOMORIGIN, keys.caster )
+	ParticleManager:SetParticleControlEnt( fxIndex, 0, keys.caster, PATTACH_POINT_FOLLOW, "attach_lefthand", keys.target:GetAbsOrigin(), true)
+	keys.ability.left = fxIndex
+-- Fire particle
+	local fxIndex = ParticleManager:CreateParticle( "particles/econ/items/spirit_breaker/spirit_breaker_thundering_flail/spirit_breaker_thundering_flail.vpcf", PATTACH_CUSTOMORIGIN, keys.caster )
+	ParticleManager:SetParticleControlEnt( fxIndex, 0, keys.caster, PATTACH_POINT_FOLLOW, "attach_righthand", keys.target:GetAbsOrigin(), true)
+	keys.ability.right = fxIndex
+end
+
+
+function removeEffect( keys )
+	ParticleManager:DestroyParticle( keys.ability.right, true )
+	ParticleManager:DestroyParticle( keys.ability.left, true )
+end

@@ -1,403 +1,635 @@
-<!-- schema text {7e125a45-3d83-4043-b292-9e24f8ef27b4} generic {198980d8-3a93-4919-b4c6-dd1fb07a3a4b} -->
-CVModel CVModel_0
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 {
-	CVmeshList m_meshList = CVmeshList
+	_class = "CVModel"
+	m_meshList =
 	{
-		CVmesh[] m_meshList = 
+		_class = "CVmeshList"
+		m_meshList =
 		[
-			CVmesh
 			{
-				string m_meshName = "kankuro"
-				string m_meshFile = "models/kankuro/kankuro.fbx"
-				string m_materialSearchPath = ""
-				bool m_bSkinParentedObjects = true
-				bool m_bLegacySkinParentedTransforms = false
-				bool m_bExpensiveTangents = false
-				bool m_bExpensiveVertices = false
-				bool m_bIgnoreCloth = false
-				bool m_bGetSkinningFromLod0 = false
-				CVmorphInfo* m_pMorphInfo = NULL
-			}
+				_class = "CVmesh"
+				m_meshName = "kankuro"
+				m_meshFile = "models/kankuro/kankuro.fbx"
+				m_materialSearchPath = ""
+				m_bSkinParentedObjects = true
+				m_bLegacySkinParentedTransforms = false
+				m_bExpensiveTangents = false
+				m_bExpensiveVertices = false
+				m_bIgnoreCloth = false
+				m_bGetSkinningFromLod0 = false
+				m_pMorphInfo = null
+			},
 		]
 	}
-	CVClothProxyMeshList m_clothProxyMeshList = CVClothProxyMeshList
+	m_clothProxyMeshList =
 	{
-		CVClothProxyMesh[] m_clothProxyMeshList = 
+		_class = "CVClothProxyMeshList"
+		m_flClothEnableThreshold = 0.050000
+		m_bCreateStaticBone = false
+		m_nMaxBonesPerVertex = 4
+		m_bRemoveUnusedBonesEnabled = false
+		m_bDriveMeshesWithBacksolvedJointsOnly = true
+		m_flMatchProxiesToMeshes = 1.000000
+		m_flReservedFloat = 0.000000
+		m_nReservedInt = 0
+		m_bReservedBool1 = false
+		m_bReservedBool2 = false
+		m_bReservedBool3 = false
+		m_bReservedBool4 = false
+		m_clothProxyMeshList =
 		[
-			
-		]
-		float m_flClothEnableThreshold = 0.050000
-		bool m_bCreateStaticBone = false
-		int m_nMaxBonesPerVertex = 4
-		bool m_bRemoveUnusedBonesEnabled = false
-		bool m_bDriveMeshesWithBacksolvedJointsOnly = true
-		float m_flMatchProxiesToMeshes = 1.000000
-		float m_flReservedFloat = 0.000000
-		int m_nReservedInt = 0
-		bool m_bReservedBool1 = false
-		bool m_bReservedBool2 = false
-		bool m_bReservedBool3 = false
-		bool m_bReservedBool4 = false
-	}
-	CVphysicsMeshList m_physicsMeshList = CVphysicsMeshList
-	{
-		CVphysicsMesh[] m_meshList = 
-		[
-			
 		]
 	}
-	CVmodelInfo* m_pModelInfo = NULL
-	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
+	m_physicsMeshList =
 	{
-		CVBoneFlagList* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVphysicsMeshList"
+		m_meshList =
+		[
+		]
 	}
-	CVhitBoxSetListReference[] m_pHitBoxSetLists = 
+	m_pModelInfo = null
+	m_pBoneFlagList =
+	{
+		_class = "CVBoneFlagListReference"
+		m_pObject = null
+	}
+	m_pHitBoxSetLists =
 	[
-		CVhitBoxSetListReference
 		{
-			CVhitBoxSetList* m_pObject = &CVhitBoxSetList_0
-			string m_sFileName = ""
-		}
-	]
-	CVattachmentListReference[] m_pAttachmentLists = 
-	[
-		
-	]
-	CVanimGroupReference m_pAnimGroup = CVanimGroupReference
-	{
-		CVanimGroup* m_pObject = &CVanimGroup_0
-		string m_sFileName = ""
-	}
-	CVNodeMaterialGroupListReference m_pMaterialGroupList = CVNodeMaterialGroupListReference
-	{
-		NodeMaterialGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVMeshGroupListReference m_pMeshGroupList = CVMeshGroupListReference
-	{
-		MeshGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVLODGroupListReference m_pLodGroupList = CVLODGroupListReference
-	{
-		LODGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVpropBreakableListReference m_pPropBreakableList = CVpropBreakableListReference
-	{
-		CVpropBreakableList* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVpropDataListReference m_pPropDataList = CVpropDataListReference
-	{
-		CVpropDataList* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVConstraintListReference[] m_pConstraintLists = 
-	[
-		
-	]
-	string m_collision = ""
-	string m_softbody = ""
-	string m_sMDLFilename = ""
-	string[] m_sOffsetHitboxSets = 
-	[
-		
-	]
-	float(3) m_vHitboxSetOffset = ( 0.000000, 0.000000, 0.000000 )
-	string[] m_scriptFiles = 
-	[
-		
-	]
-	CVMaterialRemapList* m_pMaterialRemapList = &CVMaterialRemapList_0
-	float m_flFbxScale = 1.000000
-	float m_flQCScale = 1.000000
-	float(3) m_vOrigin = ( 0.000000, 0.000000, 0.000000 )
-	CVPsfList* m_pPsfList = NULL
-	string m_keyValueText = ""
-	bool m_bStaticProp = false
-	bool m_bEnableClothProcessing = true
-	float m_flClothEnableThreshold = 0.050000
-	int m_nMaxClothVertsPerMesh = 2048
-	bool m_bBuildClothBoneHierarchy = false
-	symbol m_nNavType = AUTH_NAV_MESH
-	bool m_bMakeUniqueVMeshes = false
-	bool m_bMakeImplicitBindPoseSequence = false
-	bool m_bAdjustSkeletonFromBoneFlags = false
-	CVanimGroupReference[] m_pAnimGroups = 
-	[
-		
-	]
-}
-
-CVhitBoxSetList CVhitBoxSetList_0
-{
-	CVhitBoxSet[] m_HitBoxSets = 
-	[
-		CVhitBoxSet
-		{
-			string m_name = "default"
-			CVhitBox[] m_HitBoxes = 
-			[
-				CVhitBox
-				{
-					string m_name = "bone_CHEST"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_CHEST"
-					float(3) m_vMinBounds = ( -17.546211, -13.233298, -35.145996 )
-					float(3) m_vMaxBounds = ( 18.450783, 26.598099, 11.263016 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_pl_1"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_pl_1"
-					float(3) m_vMinBounds = ( 0.039701, -8.367788, -6.712997 )
-					float(3) m_vMaxBounds = ( 22.925997, 7.532000, 4.865997 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_pl_2"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_pl_2"
-					float(3) m_vMinBounds = ( -22.991196, -7.835279, -6.994003 )
-					float(3) m_vMaxBounds = ( -0.087801, 8.064509, 4.584991 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_n_1"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_n_1"
-					float(3) m_vMinBounds = ( -7.240202, -11.792700, -25.890701 )
-					float(3) m_vMaxBounds = ( 10.466398, 10.822998, 8.077599 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_n_2"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_n_2"
-					float(3) m_vMinBounds = ( -11.471466, -13.349199, -26.580696 )
-					float(3) m_vMaxBounds = ( 7.406425, 11.857199, 8.579704 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_ruke_1"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_ruke_1"
-					float(3) m_vMinBounds = ( 1.193100, -5.468570, -6.002014 )
-					float(3) m_vMaxBounds = ( 22.733700, 6.184608, 3.887985 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_ruka_2"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_ruka_2"
-					float(3) m_vMinBounds = ( -23.855705, -5.734819, -5.450012 )
-					float(3) m_vMaxBounds = ( -2.353504, 5.918358, 4.439987 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_koleno_1"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_koleno_1"
-					float(3) m_vMinBounds = ( -5.441830, -12.223598, -43.251114 )
-					float(3) m_vMaxBounds = ( 12.022507, 9.568030, -2.933811 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_koleno_2"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_koleno_2"
-					float(3) m_vMinBounds = ( -11.456997, -13.891499, -44.028008 )
-					float(3) m_vMaxBounds = ( 7.577496, 12.070000, -3.710709 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_head"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_head"
-					float(3) m_vMinBounds = ( -10.631698, -10.402849, -6.848022 )
-					float(3) m_vMaxBounds = ( 10.631698, 10.882959, 24.186981 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_kulak_1"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_kulak_1"
-					float(3) m_vMinBounds = ( 4.439201, -4.752689, -4.929016 )
-					float(3) m_vMaxBounds = ( 16.504601, 4.030789, 1.908997 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_kulak_2"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_kulak_2"
-					float(3) m_vMinBounds = ( -18.237503, -4.752690, -4.929016 )
-					float(3) m_vMaxBounds = ( -6.172104, 4.030789, 1.908997 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_st_1"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_st_1"
-					float(3) m_vMinBounds = ( -3.961249, -14.719298, -10.962624 )
-					float(3) m_vMaxBounds = ( 5.001410, 4.230430, -1.801726 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "bone_st_2"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "bone_st_2"
-					float(3) m_vMinBounds = ( -5.001410, -14.719299, -10.434124 )
-					float(3) m_vMaxBounds = ( 3.961239, 4.230431, -1.273227 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				}
-			]
-		}
-	]
-	string m_AutoCreateSetName = ""
-}
-
-CVanimGroup CVanimGroup_0
-{
-	string m_Name = ""
-	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
-	{
-		CVReferenceSkeleton* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
-	{
-		CVBoneFlagList* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVseqGroupReference m_pSeqGroup = CVseqGroupReference
-	{
-		CVseqGroup* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVanimGroupReference[] m_pAnimGroups = 
-	[
-		
-	]
-	CVanim[] m_Vanim = 
-	[
-		CVanim
-		{
-			string m_Animationname = "kankuro_animations"
-			string m_Filepath = "models/kankuro/kankuro_animations.FBX"
-			int m_nStartframe = 0
-			int m_nEndframe = 2875
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
+			_class = "CVhitBoxSetListReference"
+			m_pObject =
 			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
+				_class = "CVhitBoxSetList"
+				m_HitBoxSets =
+				[
+					{
+						_class = "CVhitBoxSet"
+						m_name = "default"
+						m_HitBoxes =
+						[
+							{
+								_class = "CVhitBox"
+								m_name = "bone_CHEST"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_CHEST"
+								m_vMinBounds =
+								[
+									-70.546204,
+									-13.233300,
+									-35.146000,
+								]
+								m_vMaxBounds =
+								[
+									18.450783,
+									26.598099,
+									11.263016,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_pl_1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_pl_1"
+								m_vMinBounds =
+								[
+									0.039701,
+									-8.367788,
+									-6.712997,
+								]
+								m_vMaxBounds =
+								[
+									22.925997,
+									7.532000,
+									4.865997,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_pl_2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_pl_2"
+								m_vMinBounds =
+								[
+									-22.991196,
+									-7.835279,
+									-6.994003,
+								]
+								m_vMaxBounds =
+								[
+									-0.087801,
+									8.064509,
+									4.584991,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_n_1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_n_1"
+								m_vMinBounds =
+								[
+									-7.240202,
+									-11.792700,
+									-25.890701,
+								]
+								m_vMaxBounds =
+								[
+									10.466398,
+									10.822998,
+									8.077599,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_n_2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_n_2"
+								m_vMinBounds =
+								[
+									-11.471466,
+									-13.349199,
+									-26.580696,
+								]
+								m_vMaxBounds =
+								[
+									7.406425,
+									11.857199,
+									8.579704,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_ruke_1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_ruke_1"
+								m_vMinBounds =
+								[
+									1.193100,
+									-5.468570,
+									-6.002014,
+								]
+								m_vMaxBounds =
+								[
+									22.733700,
+									6.184608,
+									3.887985,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_ruka_2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_ruka_2"
+								m_vMinBounds =
+								[
+									-23.855705,
+									-5.734819,
+									-5.450012,
+								]
+								m_vMaxBounds =
+								[
+									-2.353504,
+									5.918358,
+									4.439987,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_koleno_1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_koleno_1"
+								m_vMinBounds =
+								[
+									-5.441830,
+									-12.223598,
+									-43.251114,
+								]
+								m_vMaxBounds =
+								[
+									12.022507,
+									9.568030,
+									-2.933811,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_koleno_2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_koleno_2"
+								m_vMinBounds =
+								[
+									-11.456997,
+									-13.891499,
+									-44.028008,
+								]
+								m_vMaxBounds =
+								[
+									7.577496,
+									12.070000,
+									-3.710709,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_head"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_head"
+								m_vMinBounds =
+								[
+									-10.631698,
+									-10.402849,
+									-6.848022,
+								]
+								m_vMaxBounds =
+								[
+									10.631698,
+									10.882959,
+									24.186981,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_kulak_1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_kulak_1"
+								m_vMinBounds =
+								[
+									4.439201,
+									-4.752689,
+									-4.929016,
+								]
+								m_vMaxBounds =
+								[
+									16.504601,
+									4.030789,
+									1.908997,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_kulak_2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_kulak_2"
+								m_vMinBounds =
+								[
+									-18.237503,
+									-4.752690,
+									-4.929016,
+								]
+								m_vMaxBounds =
+								[
+									-6.172104,
+									4.030789,
+									1.908997,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_st_1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_st_1"
+								m_vMinBounds =
+								[
+									-3.961249,
+									-14.719298,
+									-10.962624,
+								]
+								m_vMaxBounds =
+								[
+									5.001410,
+									4.230430,
+									-1.801726,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_st_2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_st_2"
+								m_vMinBounds =
+								[
+									-5.001410,
+									-14.719299,
+									-10.434124,
+								]
+								m_vMaxBounds =
+								[
+									3.961239,
+									4.230431,
+									-1.273227,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+						]
+					},
+				]
+				m_AutoCreateSetName = ""
 			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
-		}
+		},
 	]
-	string[] m_sScripts = 
+	m_pAttachmentLists =
 	[
-		
 	]
-	string[] m_folderNames = 
-	[
-		
-	]
-}
-
-CVMaterialRemapList CVMaterialRemapList_0
-{
-	CVMaterialRemap[] m_vMaterialRemapList = 
-	[
-		CVMaterialRemap
+	m_pAnimGroup =
+	{
+		_class = "CVanimGroupReference"
+		m_pObject =
 		{
-			string m_sSearchMaterial = "milkshapeexported1.vmat"
-			string m_sReplaceMaterial = "materials/kankuro/kankuro.vmat"
+			_class = "CVanimGroup"
+			m_Name = ""
+			m_pReferenceSkeleton =
+			{
+				_class = "CVReferenceSkeletonReference"
+				m_pObject = null
+			}
+			m_pBoneFlagList =
+			{
+				_class = "CVBoneFlagListReference"
+				m_pObject = null
+			}
+			m_pSeqGroup =
+			{
+				_class = "CVseqGroupReference"
+				m_pObject = null
+			}
+			m_pAnimGroups =
+			[
+			]
+			m_Vanim =
+			[
+				{
+					_class = "CVanim"
+					m_Animationname = "kankuro_animations"
+					m_Filepath = "models/kankuro/kankuro_animations.FBX"
+					m_nStartframe = 0
+					m_nEndframe = 2875
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+			]
+			m_sScripts =
+			[
+			]
+			m_folderNames =
+			[
+			]
 		}
+	}
+	m_pMaterialGroupList =
+	{
+		_class = "CVNodeMaterialGroupListReference"
+		m_pObject = null
+	}
+	m_pMeshGroupList =
+	{
+		_class = "CVMeshGroupListReference"
+		m_pObject = null
+	}
+	m_pLodGroupList =
+	{
+		_class = "CVLODGroupListReference"
+		m_pObject = null
+	}
+	m_pPropBreakableList =
+	{
+		_class = "CVpropBreakableListReference"
+		m_pObject = null
+	}
+	m_pPropDataList =
+	{
+		_class = "CVpropDataListReference"
+		m_pObject = null
+	}
+	m_pConstraintLists =
+	[
+	]
+	m_collision = ""
+	m_softbody = ""
+	m_sMDLFilename = ""
+	m_sOffsetHitboxSets =
+	[
+	]
+	m_vHitboxSetOffset =
+	[
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_scriptFiles =
+	[
+	]
+	m_pMaterialRemapList =
+	{
+		_class = "CVMaterialRemapList"
+		m_vMaterialRemapList =
+		[
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "milkshapeexported1.vmat"
+				m_sReplaceMaterial = "materials/kankuro/kankuro.vmat"
+			},
+		]
+	}
+	m_flFbxScale = 1.000000
+	m_flQCScale = 1.000000
+	m_vOrigin =
+	[
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_pPsfList = null
+	m_keyValueText = ""
+	m_bStaticProp = false
+	m_bEnableClothProcessing = true
+	m_flClothEnableThreshold = 0.050000
+	m_nMaxClothVertsPerMesh = 2048
+	m_bBuildClothBoneHierarchy = false
+	m_nNavType = "AUTH_NAV_MESH"
+	m_bMakeUniqueVMeshes = false
+	m_bMakeImplicitBindPoseSequence = false
+	m_bAdjustSkeletonFromBoneFlags = false
+	m_pAnimGroups =
+	[
 	]
 }

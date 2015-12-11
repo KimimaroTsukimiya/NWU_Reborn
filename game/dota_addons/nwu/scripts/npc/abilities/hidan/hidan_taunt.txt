@@ -13,6 +13,7 @@
 	"precache"
 	{
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
+		"soundfile"			"soundevents/hidan_taunt.vsndevts"
 		"particle"			"particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
 		"particle"			"particles/status_fx/status_effect_beserkers_call.vpcf"
 	}
@@ -73,7 +74,7 @@
 	{
 		"FireSound"
 		{
-			"EffectName"	"Hero_Axe.Berserkers_Call"
+			"EffectName"	"hidan_taunt"
 			"Target" 		"CASTER"
 		}
 

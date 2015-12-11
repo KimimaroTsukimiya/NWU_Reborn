@@ -1,15 +1,15 @@
 		"npc_dota_hero_phantom_assassin" //sakura
 		{
 		  "override_hero"   "npc_dota_hero_phantom_assassin"
-		  "Model" 			"models/sakura/sakura.vmdl"
+		  "Model" 			"models/sakura_new/sakura.vmdl"
 		  "Ability1"        "sakura_earth_slam"
 		  "Ability2"        "sakura_chakra_burst" 
 		  "Ability3"        "sakura_chakra_enhanced_strength" 
 		  "Ability4"        "sakura_inner_sakura"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "ArmorPhysical"		"1.000000"
-		"ModelScale"		"0.73"
-		"LoadoutScale"		"0.73" 
+		"ModelScale"		"0.83"
+		"LoadoutScale"		"0.83" 
 		"AttackDamageMin"		"23"
 		"AttackDamageMax"		"23"
 		"AttackRate"		"1.700000"

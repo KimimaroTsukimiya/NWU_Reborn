@@ -2,7 +2,7 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
+	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -39,8 +39,18 @@
 	"precache"
 	{
 		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
+		"soundfile"	"soundevents/sakura_slam.vsndevts"
 		"particle"	"particles/units/heroes/hero_centaur/centaur_warstomp.vpcf"
 		"particle"	"particles/generic_gameplay/generic_stunned.vpcf"
+	}
+
+	"OnAbilityPhaseStart"
+	{
+			"FireSound"
+		{
+			"EffectName"		"sakura_slam"
+			"Target" 			"CASTER"
+		}
 	}
 
 	"OnSpellStart"
@@ -56,6 +66,8 @@
 				"01"	"%radius 0 %radius"
 			}
 		}
+
+	
 
 		"FireSound"
 		{
