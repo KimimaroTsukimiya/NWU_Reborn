@@ -1,0 +1,38 @@
+// Dismantle Parts jutsu resistance
+// Author: Zenicus
+// Date: 12.10.2015.
+"jutsu_resistance"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	"AbilityTextureName"			""
+	"MaxLevel"						"1"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"bonus_magic_resist_percentage"		"50"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_jutsu_resistance"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%bonus_magic_resist_percentage"
+			}
+		}
+	}
+	
+}

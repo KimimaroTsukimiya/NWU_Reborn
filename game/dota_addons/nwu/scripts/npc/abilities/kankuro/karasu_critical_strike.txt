@@ -1,0 +1,79 @@
+// Karasu's Critical Strike ability
+// Author: Zenicus
+// Date: 12.6.2015.
+"karasu_critical_strike"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"MaxLevel"				"1"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "crit_bonus"                 "200.0"
+      }
+      "02"
+      {
+        "var_type"                  "FIELD_FLOAT"
+        "crit_chance"                 "20.0"
+      }
+    }
+	
+	"Modifiers"
+    {
+      "modifier_karasu_crit"
+      {
+         "Passive" "1"
+         "IsHidden"  "1"
+         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+        "OnAttackStart"
+        {
+          "Random"
+          {
+            "Chance" "%crit_chance"
+            "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+            "OnSuccess"  
+            {
+              "RunScript"
+              {
+                "ScriptFile"  "items/gale_blade.lua"
+                "Function"    "gale_blade"
+                "modifier_name" "karasu_crit"
+              }
+            }
+          }
+        }
+      }
+      "karasu_crit"
+      {
+        "IsHidden"  "1"
+        "Duration"  "1"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"   "%crit_bonus"
+        }
+        "OnAttackLanded"
+        {
+          "FireEffect"
+          {
+            "EffectName"     "particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+            "EffectAttachType"   "follow_origin"
+            "Target"       "TARGET"
+          } 
+          "RemoveModifier"
+          {
+            "ModifierName"    "karasu_crit"
+            "Target"      "CASTER"  
+          }
+        }
+      }
+    }
+
+}
+
