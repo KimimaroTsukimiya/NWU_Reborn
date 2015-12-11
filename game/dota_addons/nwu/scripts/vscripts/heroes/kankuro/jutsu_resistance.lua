@@ -8,6 +8,7 @@ function jutsu_resistance( keys )
 	local ability = keys.ability
 	local resist = ability:GetSpecialValueFor("bonus_magic_resist_percentage")
 
+	print ("Magic Resist",caster.GetBaseMagicalResistanceValue())
 	caster.SetBaseMagicalResistanceValue(resist)
 
 end

@@ -37,11 +37,11 @@
 		}
 	}
 	
-	"OnSpellCreated"
+	"OnSpellStart"
 	{
 		"RunScript"
 		{
-			"ScriptFile"					"parts_poison.lua"
+			"ScriptFile"					"heroes/kankuro/parts_poison.lua"
 			"Function"						"parts_poison"
 			"modifier_name" 				"modifier_parts_poison_attack_melee"
 		}
@@ -58,8 +58,9 @@
 			"IsDebuff"				"1"
 			"IsPurgable"			"1"
 			
-			"EffectName"			"particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+			"EffectName"			"Hero_Brewmaster.ThunderClap.Target"
 			"EffectAttachType"		"follow_origin"
+			"Target"    "TARGET"
 			
 			"Properties"
 			{
@@ -71,7 +72,7 @@
 			{
 				"RunScript"
 				{
-					"ScriptFile"					"parts_poison"
+					"ScriptFile"					"heroes/kankuro/parts_poison.lua"
 					"Function"						"modifier_parts_poison_attack_on_interval_think"
 					"PoisonDamagePerSecond"			"%poison_damage_per_second"
 					"PoisonDamageInterval"			"%poison_damage_interval"
