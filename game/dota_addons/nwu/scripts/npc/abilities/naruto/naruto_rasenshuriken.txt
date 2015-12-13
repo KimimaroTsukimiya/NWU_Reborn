@@ -23,6 +23,7 @@
 		"particle"			"particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
 		"particle"			"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
 		"particle"			"particles/generic_gameplay/generic_stunned.vpcf"
+		"particle"			"particles/units/heroes/naruto/shuriken2.vpcf"
 	}
 	
 	// Casting
@@ -87,12 +88,12 @@
 		"TrackingProjectile"
 		{
 			"Target"           	"TARGET"
-		    "EffectName"       	"particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
+		    "EffectName"       	"particles/units/heroes/naruto/shuriken2.vpcf"
 		    "Dodgeable"        	"1"
 		    "ProvidesVision"   	"1"
 		    "VisionRadius"		"%vision_radius"
 		    "MoveSpeed"        	"%rs_speed"
-		    "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+		    
 		}
 
 	
