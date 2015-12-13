@@ -104,6 +104,7 @@
 		},
 		{
 			m_ChildRef = resource:"particles/units/heroes/naruto/shuriken_wind.vpcf"
+			m_bDisableChild = true
 		},
 	]
 }
