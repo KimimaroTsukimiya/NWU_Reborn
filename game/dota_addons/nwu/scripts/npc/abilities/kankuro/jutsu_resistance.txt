@@ -21,6 +21,20 @@
 		}
 	}
 	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_jutsu_resistance"
+			"Target" 		"CASTER"
+		}
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/kankuro/jutsu_resistance.lua"
+			"Function"		"jutsu_resistance"
+		}
+	}
+	
 	"Modifiers"
 	{
 		"modifier_jutsu_resistance"
