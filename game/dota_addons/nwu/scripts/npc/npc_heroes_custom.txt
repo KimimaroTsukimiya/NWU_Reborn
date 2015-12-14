@@ -410,13 +410,17 @@
 	"npc_dota_hero_sven" //onoki
 	{
 		"override_hero"		"npc_dota_hero_sven"
-	
+		"Model"					"models/onuki/onoki_model.vmdl"
 		"Ability1"			"onoki_jinton"
 		"Ability2"			"onoki_stalagmite_armor"
 		"Ability3"			"onoki_turn_to_dust"
 		"Ability4"			"onoki_kajutan_no_jutsu"
 		  "StatusHealth"    "145"
 	  "StatusHealthRegen"   "0.300000"
+	
+	  	"ModelScale"		"2.3"
+		"LoadoutScale"		"2.3" 
+	
 		// Unit attribute
 		"AttackRange"					"100"
 		"ArmorPhysical"		"1.000000"
