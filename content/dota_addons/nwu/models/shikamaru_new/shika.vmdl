@@ -2237,17 +2237,17 @@
 			{
 				_class = "CVMaterialRemap"
 				m_sSearchMaterial = "imported_material_01.vmat"
-				m_sReplaceMaterial = "materials/shikamaru/shika_new.vmat"
+				m_sReplaceMaterial = "materials/shikamaru/shika2.vmat"
 			},
 			{
 				_class = "CVMaterialRemap"
 				m_sSearchMaterial = "imported_material_02.vmat"
-				m_sReplaceMaterial = "materials/shikamaru/shika_new.vmat"
+				m_sReplaceMaterial = "materials/shikamaru/shika2.vmat"
 			},
 			{
 				_class = "CVMaterialRemap"
 				m_sSearchMaterial = "imported_material_03.vmat"
-				m_sReplaceMaterial = "materials/shikamaru/shika_new.vmat"
+				m_sReplaceMaterial = "materials/shikamaru/shika2.vmat"
 			},
 		]
 	}
