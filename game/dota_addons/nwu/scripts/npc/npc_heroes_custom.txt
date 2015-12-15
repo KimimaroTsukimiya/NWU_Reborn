@@ -200,7 +200,7 @@
 		"npc_dota_hero_beastmaster" //kakashi
 		{
 		  "override_hero"   "npc_dota_hero_beastmaster"
-		  "Model" 			"models/kakashi/kakashi.vmdl"
+		  "Model" 			"models/kakashi/kaka.vmdl"
 		  "ModelScale"		"0.770000"
 		  "Ability1"        "kakashi_doton"
 		  "Ability2"        "kakashi_sharingan" 
@@ -418,8 +418,8 @@
 		  "StatusHealth"    "145"
 	  "StatusHealthRegen"   "0.300000"
 	
-	  	"ModelScale"		"2.3"
-		"LoadoutScale"		"2.3" 
+	  	"ModelScale"		"2.0"
+		"LoadoutScale"		"2.0" 
 	
 		// Unit attribute
 		"AttackRange"					"100"

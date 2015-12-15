@@ -9,8 +9,8 @@
 	  "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"
 
-  	"ModelScale"		"2.3"
-	"LoadoutScale"		"2.3" 
+  	"ModelScale"		"2.0"
+	"LoadoutScale"		"2.0" 
 
 	// Unit attribute
 	"AttackRange"					"100"
