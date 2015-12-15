@@ -1,0 +1,66 @@
+"yondaime_yellow_flash"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"              "ability_datadriven"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"     "spirit_breaker_empowering_haste"
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "4"
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "bonus_dmg_percent" "2 3 4 5"
+        }
+        "02"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "distance_cap" "500"
+        }
+		"03"
+        { 
+            "var_type"  "FIELD_INTEGER"
+            "duration" "7"
+        }
+    }
+
+	"Modifiers"
+	{
+		"modifier_yellow_flash"
+		{
+			"Passive" "1"
+			"IsHidden"  "1"
+
+			"ThinkInterval" "0.3"
+            "OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"  "heroes/yondaime_alternate/yellow_flash.lua"
+					"Function"    "yellow_flash"
+					
+					"modifier"		"modifier_yellow_flash_bonus"
+					"DistanceCap"	"%distance_cap"
+					"BonusDmg"		"%bonus_dmg_percent"
+					"duration"		"%duration"
+				}
+			}
+		}
+
+		"modifier_yellow_flash_bonus"
+		{
+			"Passive" "1"
+			"IsHidden"  "0"
+			"IsBuff"  "1"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "1"
+			}
+		}
+	}
+}

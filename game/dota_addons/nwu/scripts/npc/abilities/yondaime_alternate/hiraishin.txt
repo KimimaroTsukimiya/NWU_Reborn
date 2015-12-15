@@ -1,0 +1,53 @@
+"yondaime_marked_kunai"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+	"BaseClass"					"ability_datadriven"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT" //| DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityType" 				"DOTA_ABILITY_TYPE_ULTIMATE"
+	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"		"juggernaut_omni_slash"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"			"800"
+	"AbilityCastPoint"			"0.3 0.3 0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"			"0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"			"90"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+    }
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"  	"heroes/yondaime_alternate/hiraishin.lua"
+			"Function"    	"hiraishin"
+			
+			"Target"		"POINT"
+		}
+	}
+	
+	"Modifiers"
+	{
+	}
+}

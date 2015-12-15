@@ -643,39 +643,42 @@
 	
 	  "Village"			"kirigakure"
 	}	
-		"npc_dota_hero_juggernaut" //yondaime
-		{
-		  "override_hero"   "npc_dota_hero_juggernaut"
-		  "Model" 			"models/yondaime/yondaime.vmdl"
-		  "Ability1"         "yondaime_dash_strike"
-		 // "Ability2"         "gaara_ryuusa_bakuryu" 
-		  "Ability3"         "yondaime_agile_speed" 
-		 // "Ability4"         "gaara_sabaku_taiso"
-		  //"ModelScale"		"0.5"
-		"AttackDamageMin"		"20"
-		"AttackDamageMax"		"20"
-		  "StatusHealth"    "145"
-  "StatusHealthRegen"   "0.300000"
+	"npc_dota_hero_juggernaut" //yondaime
+	{
+		"override_hero"   "npc_dota_hero_juggernaut"
+		"Model" 			"models/yondaime/yondaime.vmdl"
+		"Ability1"         "yondaime_marked_kunai"
+		"Ability2"         "yondaime_rasengan" 
+		"Ability3"         "yondaime_yellow_flash" 
+		// "Ability4"         "gaara_sabaku_taiso"
+		//"ModelScale"		"0.5"
+	
+	
+		"AttackDamageMin"		"22"
+		"AttackDamageMax"		"28"
+		"StatusHealth"    "145"
+		"StatusHealthRegen"   "0.300000"
 		"AttackRate"		"1.700000"		
 		"ArmorPhysical"		"1.000000"
-		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
-		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
-		  "AttackRange"				"100"
-		  "MovementSpeed"			"295"
-		  "AttributeBaseStrength" "17" // Base strength
-		  "AttributeStrengthGain" "1.9" // Strength bonus per level.
-		  "AttributeBaseIntelligence" "14" // Base intelligence
-		  "AttributeIntelligenceGain" "1.6" // Intelligence bonus per level.
-		  "AttributeBaseAgility" "21" // Base agility
-		  "AttributeAgilityGain" "2.5" // Agility bonus per level.
-
-		  "Village"			"konoha"
-		  "Gender"			"male"
-		  
-	 	  "ItemSlots"
-	  	  { }
-		}
+		"AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+		"AttackAnimationPoint"   "0.4"
+		// "AttackRate"				"0.7"
+		"AttackRange"				"100"
+		"MovementSpeed"			"300"
+		
+		"AttributeBaseStrength" "17" // Base strength
+		"AttributeStrengthGain" "1.9" // Strength bonus per level.
+		"AttributeBaseAgility" "21" // Base agility
+		"AttributeAgilityGain" "2.5" // Agility bonus per level.
+		"AttributeBaseIntelligence" "14" // Base intelligence
+		"AttributeIntelligenceGain" "1.6" // Intelligence bonus per level.
+	
+		"Village"			"konoha"
+		"Gender"			"male"
+	
+		"ItemSlots"
+		{ }
+	}
 	"npc_dota_hero_bloodseeker" //zabuza
 			{
 			  "override_hero"   "npc_dota_hero_bloodseeker"

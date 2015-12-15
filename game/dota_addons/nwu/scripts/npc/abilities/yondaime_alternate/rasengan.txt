@@ -1,0 +1,83 @@
+"yondaime_rasengan"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"        "raikage_raiton_no_yoroi" //TODO
+
+    "AbilityDamage"            "75.0 125.0 175.0 225.0"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "0"
+    "AbilityDuration"               "15.0"
+
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "12"
+    "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "55 70 85 100"
+
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+     "precache"
+    {
+    }
+
+    "AbilitySpecial"
+    {
+		"01"
+		{
+            "var_type" "FIELD_FLOAT"
+            "pushback_speed" "1350.0"
+        }
+		"02"
+		{
+            "var_type" "FIELD_FLOAT"
+            "pushback_duration" "0.3"
+        }
+    }
+
+    "OnSpellStart"
+    {           
+        "ApplyModifier"
+        {
+            "ModifierName"          "modifier_rasengan"
+            "Target"                "CASTER"
+        }
+    }
+
+
+    "Modifiers"
+    {
+        "modifier_rasengan"
+        {
+            "IsBuff"            "1"
+            "Duration"          "%AbilityDuration"
+        
+
+            "OnAttackLanded"
+			{
+				"RunScript"
+				{
+					"ScriptFile"  	"heroes/yondaime_alternate/rasengan.lua"
+					"Function"    	"rasengan"
+					
+					"pushback_speed"	"%pushback_speed"
+					"pushback_duration"	"%pushback_duration"
+					"modifier"	"modifier_rasengan"
+				}
+			}	
+        }
+
+    }
+
+}
