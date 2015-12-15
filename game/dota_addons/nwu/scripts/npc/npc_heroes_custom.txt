@@ -201,7 +201,8 @@
 		{
 		  "override_hero"   "npc_dota_hero_beastmaster"
 		  "Model" 			"models/kakashi/kaka.vmdl"
-		  "ModelScale"		"0.770000"
+		  "ModelScale"		"0.72"
+		  "LoadoutScale"		"0.72" 
 		  "Ability1"        "kakashi_doton"
 		  "Ability2"        "kakashi_sharingan" 
 		  "Ability3"        "kakashi_bunshin" 
@@ -549,13 +550,13 @@
 		"npc_dota_hero_shadow_shaman"  //Shikamaru
 		{
 		  "override_hero"   "npc_dota_hero_shadow_shaman" 
-		  "Model" 		"models/shikamaru/shikamaru.vmdl"
+		  "Model" 		"models/shikamaru_new/shika.vmdl"
 		  "Ability1"         "shikamaru_kage_kubishibari"
 		  "Ability2"         "shikamaru_explosive_kunai" 
 		  "Ability3"         "shikamaru_meditation" 
 		  "Ability4"         "shikamaru_kage_nui"
-		  "ModelScale"		"1.05"
-		"LoadoutScale"		"1.05" 
+		  "ModelScale"		"0.51"
+		"LoadoutScale"		"0.51" 
 		"ArmorPhysical"		"0.000000"
 		"AttackDamageMin"		"19"
 		"AttackDamageMax"		"19"

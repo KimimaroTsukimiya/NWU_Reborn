@@ -9,7 +9,7 @@
 			{
 				_class = "CVmesh"
 				m_meshName = "shika"
-				m_meshFile = "materials/shika.smd"
+				m_meshFile = "models/shikamaru_new/shika.smd"
 				m_materialSearchPath = ""
 				m_bSkinParentedObjects = true
 				m_bLegacySkinParentedTransforms = false
@@ -55,14 +55,2136 @@
 	}
 	m_pHitBoxSetLists =
 	[
+		{
+			_class = "CVhitBoxSetListReference"
+			m_pObject =
+			{
+				_class = "CVhitBoxSetList"
+				m_HitBoxSets =
+				[
+					{
+						_class = "CVhitBoxSet"
+						m_name = "default"
+						m_HitBoxes =
+						[
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new41"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new41"
+								m_vMinBounds =
+								[
+									-27.832863,
+									-22.318676,
+									-34.315002,
+								]
+								m_vMaxBounds =
+								[
+									27.971626,
+									27.897015,
+									8.276993,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new40"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new40"
+								m_vMinBounds =
+								[
+									-91.309700,
+									-92.125397,
+									-120.884003,
+								]
+								m_vMaxBounds =
+								[
+									90.967300,
+									92.513100,
+									95.691002,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new39"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new39"
+								m_vMinBounds =
+								[
+									-32.118057,
+									-9.484978,
+									-11.288193,
+								]
+								m_vMaxBounds =
+								[
+									0.848037,
+									11.350037,
+									8.135803,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new17"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new17"
+								m_vMinBounds =
+								[
+									-0.709164,
+									-11.850748,
+									-12.058395,
+								]
+								m_vMaxBounds =
+								[
+									31.791634,
+									8.980577,
+									6.747604,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new38"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new38"
+								m_vMinBounds =
+								[
+									-36.845367,
+									-9.620548,
+									-9.597137,
+								]
+								m_vMaxBounds =
+								[
+									-2.305267,
+									8.594799,
+									8.836868,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new16"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new16"
+								m_vMinBounds =
+								[
+									1.959934,
+									-8.739029,
+									-8.407623,
+								]
+								m_vMaxBounds =
+								[
+									36.498531,
+									9.477890,
+									10.026367,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new51"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new51"
+								m_vMinBounds =
+								[
+									-14.432793,
+									-16.693787,
+									-55.911606,
+								]
+								m_vMaxBounds =
+								[
+									13.303127,
+									14.964207,
+									-3.866302,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new49"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new49"
+								m_vMinBounds =
+								[
+									-20.729464,
+									-14.381727,
+									-56.672699,
+								]
+								m_vMaxBounds =
+								[
+									14.064970,
+									17.252565,
+									-4.613892,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new37"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new37"
+								m_vMinBounds =
+								[
+									-11.575668,
+									-7.881686,
+									-4.651855,
+								]
+								m_vMaxBounds =
+								[
+									0.259338,
+									7.208375,
+									5.177139,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new18"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new18"
+								m_vMinBounds =
+								[
+									-0.023964,
+									-7.700909,
+									-5.167313,
+								]
+								m_vMaxBounds =
+								[
+									11.810036,
+									7.389007,
+									4.663681,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new50"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new50"
+								m_vMinBounds =
+								[
+									-11.672004,
+									-12.308609,
+									-62.480301,
+								]
+								m_vMaxBounds =
+								[
+									11.386132,
+									12.612726,
+									-2.798103,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new48"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new48"
+								m_vMinBounds =
+								[
+									-12.177029,
+									-9.829119,
+									-62.264793,
+								]
+								m_vMaxBounds =
+								[
+									11.048328,
+									15.092058,
+									-2.584496,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new36"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new36"
+								m_vMinBounds =
+								[
+									-3.814667,
+									-1.391554,
+									-2.713943,
+								]
+								m_vMaxBounds =
+								[
+									1.939339,
+									1.522061,
+									4.298050,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new33"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new33"
+								m_vMinBounds =
+								[
+									-0.984268,
+									-1.714825,
+									-2.364899,
+								]
+								m_vMaxBounds =
+								[
+									0.631729,
+									1.998975,
+									1.938110,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new30"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new30"
+								m_vMinBounds =
+								[
+									-1.372963,
+									-1.861985,
+									-2.454025,
+								]
+								m_vMaxBounds =
+								[
+									0.520035,
+									1.164154,
+									2.170975,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new26"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new26"
+								m_vMinBounds =
+								[
+									-1.272362,
+									-1.831544,
+									-2.260605,
+								]
+								m_vMaxBounds =
+								[
+									0.647636,
+									1.900035,
+									2.021393,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new23"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new23"
+								m_vMinBounds =
+								[
+									-1.032570,
+									-2.238034,
+									-2.799469,
+								]
+								m_vMaxBounds =
+								[
+									0.621429,
+									1.617045,
+									1.911530,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new14"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new14"
+								m_vMinBounds =
+								[
+									-0.431870,
+									-2.027632,
+									-4.370728,
+								]
+								m_vMaxBounds =
+								[
+									1.722130,
+									-0.636442,
+									0.125259,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new11"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new11"
+								m_vMinBounds =
+								[
+									-0.629257,
+									-1.721663,
+									-2.364639,
+								]
+								m_vMaxBounds =
+								[
+									0.985741,
+									2.007937,
+									1.931366,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new8"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new8"
+								m_vMinBounds =
+								[
+									-0.638367,
+									-1.866492,
+									-2.449463,
+								]
+								m_vMaxBounds =
+								[
+									1.371635,
+									2.053328,
+									2.166534,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new5"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new5"
+								m_vMinBounds =
+								[
+									-0.648560,
+									-1.835552,
+									-2.255295,
+								]
+								m_vMaxBounds =
+								[
+									1.273438,
+									1.895387,
+									2.016708,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new2"
+								m_vMinBounds =
+								[
+									-0.616455,
+									-2.371920,
+									-3.171951,
+								]
+								m_vMaxBounds =
+								[
+									1.038544,
+									1.464667,
+									1.530060,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new46"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new46"
+								m_vMinBounds =
+								[
+									-7.685647,
+									-18.012098,
+									-16.269434,
+								]
+								m_vMaxBounds =
+								[
+									8.374203,
+									8.715300,
+									-1.578199,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new47"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new47"
+								m_vMinBounds =
+								[
+									-8.398193,
+									-17.300297,
+									-16.129969,
+								]
+								m_vMaxBounds =
+								[
+									7.661713,
+									9.426899,
+									-1.446294,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new35"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new35"
+								m_vMinBounds =
+								[
+									-2.205482,
+									-1.748645,
+									-2.242661,
+								]
+								m_vMaxBounds =
+								[
+									1.804520,
+									2.842434,
+									3.159332,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new32"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new32"
+								m_vMinBounds =
+								[
+									-0.733368,
+									-1.869401,
+									-1.675156,
+								]
+								m_vMaxBounds =
+								[
+									0.474632,
+									1.818999,
+									1.702835,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new28"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new28"
+								m_vMinBounds =
+								[
+									-0.897102,
+									-1.997998,
+									-1.881470,
+								]
+								m_vMaxBounds =
+								[
+									0.551895,
+									1.980901,
+									1.906525,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new25"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new25"
+								m_vMinBounds =
+								[
+									-0.813576,
+									-2.055275,
+									-1.911163,
+								]
+								m_vMaxBounds =
+								[
+									0.593422,
+									2.003344,
+									1.926849,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new22"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new22"
+								m_vMinBounds =
+								[
+									-0.810654,
+									-1.975119,
+									-2.009216,
+								]
+								m_vMaxBounds =
+								[
+									0.552345,
+									2.023623,
+									2.043777,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new13"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new13"
+								m_vMinBounds =
+								[
+									-1.842392,
+									-2.724712,
+									-3.190369,
+								]
+								m_vMaxBounds =
+								[
+									2.164612,
+									2.948912,
+									2.209625,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new10"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new10"
+								m_vMinBounds =
+								[
+									-0.475403,
+									-1.870773,
+									-1.671127,
+								]
+								m_vMaxBounds =
+								[
+									0.732597,
+									1.817627,
+									1.701874,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new7"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new7"
+								m_vMinBounds =
+								[
+									-0.551102,
+									-1.999454,
+									-1.882858,
+								]
+								m_vMaxBounds =
+								[
+									0.896896,
+									1.979365,
+									1.905151,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new4"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new4"
+								m_vMinBounds =
+								[
+									-0.592560,
+									-2.057184,
+									-1.912796,
+								]
+								m_vMaxBounds =
+								[
+									0.814438,
+									2.001456,
+									1.924210,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new1"
+								m_vMinBounds =
+								[
+									-0.594521,
+									-2.118278,
+									-1.947815,
+								]
+								m_vMaxBounds =
+								[
+									0.767479,
+									1.880384,
+									2.106171,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new45"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new45"
+								m_vMinBounds =
+								[
+									-8.362599,
+									-10.053597,
+									-5.696882,
+								]
+								m_vMaxBounds =
+								[
+									8.357087,
+									0.732699,
+									3.994480,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new44"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new44"
+								m_vMinBounds =
+								[
+									-8.359253,
+									-10.053499,
+									-5.697223,
+								]
+								m_vMaxBounds =
+								[
+									8.360424,
+									0.728000,
+									3.994305,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new34"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new34"
+								m_vMinBounds =
+								[
+									-3.394341,
+									-3.041524,
+									-1.951447,
+								]
+								m_vMaxBounds =
+								[
+									1.840660,
+									1.747375,
+									1.952545,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new31"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new31"
+								m_vMinBounds =
+								[
+									-4.559677,
+									-1.671111,
+									-1.779846,
+								]
+								m_vMaxBounds =
+								[
+									0.603317,
+									1.625588,
+									1.410156,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new27"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new27"
+								m_vMinBounds =
+								[
+									-5.687134,
+									-1.676923,
+									-2.124313,
+								]
+								m_vMaxBounds =
+								[
+									0.727844,
+									1.730836,
+									1.624695,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new24"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new24"
+								m_vMinBounds =
+								[
+									-5.500412,
+									-1.871007,
+									-2.099030,
+								]
+								m_vMaxBounds =
+								[
+									0.669586,
+									1.834002,
+									1.590973,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new21"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new21"
+								m_vMinBounds =
+								[
+									-4.592743,
+									-1.840083,
+									-2.130676,
+								]
+								m_vMaxBounds =
+								[
+									0.682251,
+									1.813015,
+									1.694321,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new19"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new19"
+								m_vMinBounds =
+								[
+									-15.637989,
+									-20.199238,
+									-4.393204,
+								]
+								m_vMaxBounds =
+								[
+									15.626305,
+									35.396557,
+									52.852783,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new20"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new20"
+								m_vMinBounds =
+								[
+									-6.764969,
+									-19.728889,
+									-3.342712,
+								]
+								m_vMaxBounds =
+								[
+									6.742035,
+									37.945198,
+									3.976288,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new12"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new12"
+								m_vMinBounds =
+								[
+									-0.833054,
+									-3.603201,
+									-2.382614,
+								]
+								m_vMaxBounds =
+								[
+									4.401947,
+									1.184698,
+									1.521393,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new9"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new9"
+								m_vMinBounds =
+								[
+									-0.603050,
+									-1.673094,
+									-1.777313,
+								]
+								m_vMaxBounds =
+								[
+									4.558937,
+									1.623506,
+									1.407684,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new6"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new6"
+								m_vMinBounds =
+								[
+									-0.728035,
+									-1.679097,
+									-2.127228,
+								]
+								m_vMaxBounds =
+								[
+									5.686951,
+									1.728522,
+									1.621765,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new3"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new3"
+								m_vMinBounds =
+								[
+									-0.580429,
+									-2.004523,
+									-2.062302,
+								]
+								m_vMaxBounds =
+								[
+									5.587570,
+									1.700546,
+									1.627701,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_new0"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_new0"
+								m_vMinBounds =
+								[
+									-0.681725,
+									-1.842170,
+									-2.127594,
+								]
+								m_vMaxBounds =
+								[
+									4.592262,
+									1.810901,
+									1.692398,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+						]
+					},
+				]
+				m_AutoCreateSetName = ""
+			}
+		},
 	]
 	m_pAttachmentLists =
 	[
+		{
+			_class = "CVattachmentListReference"
+			m_pObject =
+			{
+				_class = "CVattachmentList"
+				m_name = ""
+				m_attachments =
+				[
+					{
+						_class = "CVattachment"
+						m_name = "attach_left_hand"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new0"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_origin"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "Object001"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_hitloc"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new40"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_right_hand"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new27"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_attack_1"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new27"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_attach_2"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_new27"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+				]
+			}
+		},
 	]
 	m_pAnimGroup =
 	{
 		_class = "CVanimGroupReference"
-		m_pObject = null
+		m_pObject =
+		{
+			_class = "CVanimGroup"
+			m_Name = ""
+			m_pReferenceSkeleton =
+			{
+				_class = "CVReferenceSkeletonReference"
+				m_pObject = null
+			}
+			m_pBoneFlagList =
+			{
+				_class = "CVBoneFlagListReference"
+				m_pObject = null
+			}
+			m_pSeqGroup =
+			{
+				_class = "CVseqGroupReference"
+				m_pObject = null
+			}
+			m_pAnimGroups =
+			[
+			]
+			m_Vanim =
+			[
+				{
+					_class = "CVanim"
+					m_Animationname = "Shika anim"
+					m_Filepath = "models/shikamaru_new/Shika anim.smd"
+					m_nStartframe = 0
+					m_nEndframe = 469
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "shika_stand"
+					m_Filepath = "models/shikamaru_new/shika anim.smd"
+					m_nStartframe = 10
+					m_nEndframe = 36
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = true
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_IDLE"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "shika_run"
+					m_Filepath = "models/shikamaru_new/shika anim.smd"
+					m_nStartframe = 60
+					m_nEndframe = 87
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = true
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_RUN"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "shika_attack_1"
+					m_Filepath = "models/shikamaru_new/shika anim.smd"
+					m_nStartframe = 349
+					m_nEndframe = 375
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_ATTACK"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "shika_die"
+					m_Filepath = "models/shikamaru_new/shika anim.smd"
+					m_nStartframe = 400
+					m_nEndframe = 475
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_DIE"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "shika_cast_hold"
+					m_Filepath = "models/shikamaru_new/shika anim.smd"
+					m_nStartframe = 258
+					m_nEndframe = 287
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = true
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_CHANNEL_ABILITY_1"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "shika_cast_2"
+					m_Filepath = "models/shikamaru_new/shika anim.smd"
+					m_nStartframe = 349
+					m_nEndframe = 375
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_CAST_ABILITY_2"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "shika_cast_4"
+					m_Filepath = "models/shikamaru_new/shika anim.smd"
+					m_nStartframe = 349
+					m_nEndframe = 375
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_CAST_ABILITY_4"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "shika_cast_hold"
+					m_Filepath = "models/shikamaru_new/shika anim.smd"
+					m_nStartframe = 242
+					m_nEndframe = 261
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_CAST_ABILITY_1"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+			]
+			m_sScripts =
+			[
+			]
+			m_folderNames =
+			[
+			]
+		}
 	}
 	m_pMaterialGroupList =
 	{
@@ -107,7 +2229,28 @@
 	m_scriptFiles =
 	[
 	]
-	m_pMaterialRemapList = null
+	m_pMaterialRemapList =
+	{
+		_class = "CVMaterialRemapList"
+		m_vMaterialRemapList =
+		[
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "imported_material_01.vmat"
+				m_sReplaceMaterial = "materials/shikamaru/shika_new.vmat"
+			},
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "imported_material_02.vmat"
+				m_sReplaceMaterial = "materials/shikamaru/shika_new.vmat"
+			},
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "imported_material_03.vmat"
+				m_sReplaceMaterial = "materials/shikamaru/shika_new.vmat"
+			},
+		]
+	}
 	m_flFbxScale = 1.000000
 	m_flQCScale = 1.000000
 	m_vOrigin =
