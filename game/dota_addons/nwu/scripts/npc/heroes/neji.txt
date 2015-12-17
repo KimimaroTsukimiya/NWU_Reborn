@@ -17,6 +17,9 @@
 		"AttackDamageMax"		"16"
 		"AttackRate"		"1.700000"
 
+		"Role"			"Initiator,Disabler,Carry"
+		"Rolelevels"	"3,3,1"
+
 		  "AttackRange"				"128"
 		  "MovementSpeed"			"300"
 		  "AttributeBaseStrength" "19" // Base strength

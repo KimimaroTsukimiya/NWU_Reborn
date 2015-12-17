@@ -10,6 +10,8 @@
 		  "AttackDamageMax"   "22"
 		  "AttackRate"    "1.700000"
 		  "ArmorPhysical"		"1.000000"
+		  	"Role"			"Support,Initiator,Disabler,Nuker"
+		"Rolelevels"	"1,3,2,1"
 	  	  "Village"			"otogakure"
 	  	  "Gender"			"male"
 		}

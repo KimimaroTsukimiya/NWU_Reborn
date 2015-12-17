@@ -11,6 +11,8 @@
 		"ModelScale"		"0.83"
 		"LoadoutScale"		"0.83" 
 		"AttackDamageMin"		"23"
+		"Role"			"Carry,Disabler,Initiator,Durable"
+		"Rolelevels"	"1,2,2,1"
 		"AttackDamageMax"		"23"
 		"AttackRate"		"1.700000"
 		  "AttackAnimationPoint"   "0.4"

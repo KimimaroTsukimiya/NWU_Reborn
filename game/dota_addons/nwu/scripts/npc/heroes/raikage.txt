@@ -14,6 +14,8 @@
   "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"
 		  "Village"			"kumogakure"
+		  "Role"			"Initiator,Durable,Disabler"
+		"Rolelevels"		"3,3,2"
 			"ModelScale"		"0.75"
 		"LoadoutScale"		"0.75" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"

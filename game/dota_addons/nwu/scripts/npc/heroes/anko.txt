@@ -19,6 +19,8 @@
   "AttackDamageMin"   "23"
   "AttackDamageMax"   "23"
   "AttackRate"    "1.700000"
+  "Role"      "Disabler,Initiator,Durable,Nuker"
+  "Rolelevels"  "2,2,2,1"
 
   "AttackRange"				"100"
   "MovementSpeed"			"300"

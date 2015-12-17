@@ -11,7 +11,8 @@
 
   	"ModelScale"		"2.0"
 	"LoadoutScale"		"2.0" 
-
+	"Role"			"Support,Nuker,Disabler,Durable,Initiator"
+	"Rolelevels"	"2,2,2,1,1"
 	// Unit attribute
 	"AttackRange"					"100"
 	"ArmorPhysical"		"1.000000"

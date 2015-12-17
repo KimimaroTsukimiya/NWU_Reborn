@@ -13,6 +13,8 @@
 		"AttackDamageMax"		"19"
 		"AttackRate"		"1.700000"		  
 		  "AttackAnimationPoint"   "0.4"
+		  	"Role"			"Support,Pusher,Disabler,Nuker,Initiator"
+		"Rolelevels"	"2,3,3,2,1"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"500"
 		"AttackDamageMin"			"20"	// Damage range min.

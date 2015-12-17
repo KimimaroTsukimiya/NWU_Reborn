@@ -14,6 +14,9 @@
 	"AttackRange"					"100"
 	"AttackAnimationPoint"			"0.4"
 
+	"Role"			"Carry,Escape,Nuker"
+	"Rolelevels"	"3,3,1"
+
 	"AttackDamageMin"   "16"
 	"AttackDamageMax"   "16"
 	"AttackRate"    "1.700000"

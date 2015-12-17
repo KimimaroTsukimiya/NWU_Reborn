@@ -12,6 +12,8 @@
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackDamageMin"   "26"
+		  "Role"			"Carry,Disabler,Initiator,Durable,Nuker"
+		"Rolelevels"	"1,1,1,1,1"
 		  "AttackDamageMax"   "31"
 		  "AttackRate"    "1.700000"		
 		    "StatusHealth"    "145"

@@ -12,6 +12,9 @@
 		"LoadoutScale"		"0.68" 
 		  "AttackAnimationPoint"   "0.4"
 			
+		  "Role"			"Carry,Jungler"
+		  "Rolelevels"	"2,1"
+
 		  "AttackDamageMin"   "27"
 		  "AttackDamageMax"   "27"
 		  "AttackRate"    "1.700000"

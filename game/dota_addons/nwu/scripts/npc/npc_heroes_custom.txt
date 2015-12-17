@@ -21,6 +21,8 @@
 	  "AttackDamageMin"   "23"
 	  "AttackDamageMax"   "23"
 	  "AttackRate"    "1.700000"
+	  "Role"      "Disabler,Initiator,Durable,Nuker"
+	  "Rolelevels"  "2,2,2,1"
 	
 	  "AttackRange"				"100"
 	  "MovementSpeed"			"300"
@@ -43,7 +45,8 @@
 		  "Ability4"         "gaara_sabaku_taiso"
 		  "ModelScale"		"0.35"
 			"LoadoutScale"		"0.35" 
-
+		  "Role"			"Disabler,Support,Nuker"
+		  "Rolelevels"	"2,3,2"
 		  "ArmorPhysical"		"1.000000"
 		  "AttackDamageMin"   "19"
 		  "AttackDamageMax"   "19"
@@ -65,13 +68,6 @@
 	  	  "Gender"			"male"
 	  	  "Village"			"sunagakure"
 
-	  	  "Bot"
-		{
-			"Loadout"
-			{
-				"item_sakuras_fighting_gloves"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
-			}
-           }
 
 
 		}
@@ -89,6 +85,9 @@
 		"LoadoutScale"		"0.68" 
 		  "AttackAnimationPoint"   "0.4"
 			
+		  "Role"			"Carry,Jungler"
+		  "Rolelevels"	"2,1"
+
 		  "AttackDamageMin"   "27"
 		  "AttackDamageMax"   "27"
 		  "AttackRate"    "1.700000"
@@ -126,6 +125,8 @@
 		 "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		 "ModelScale"		"0.8"
 		 "LoadoutScale"		"0.8" 
+		 "Role"			"Carry,Disabler,Initiator,Durable,Nuker"
+		"Rolelevels"	"1,2,2,2,1"
 		   "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"
 		 "AttackDamageMin"   "22"
@@ -158,6 +159,9 @@
 		// Unit attribute
 		"AttackRange"					"100"
 		"AttackAnimationPoint"			"0.4"
+	
+		"Role"			"Carry,Escape,Nuker"
+		"Rolelevels"	"3,3,1"
 	
 		"AttackDamageMin"   "16"
 		"AttackDamageMax"   "16"
@@ -194,6 +198,8 @@
 			  "AttackDamageMax"   "22"
 			  "AttackRate"    "1.700000"
 			  "ArmorPhysical"		"1.000000"
+			  	"Role"			"Support,Initiator,Disabler,Nuker"
+			"Rolelevels"	"1,3,2,1"
 		  	  "Village"			"otogakure"
 		  	  "Gender"			"male"
 			}
@@ -210,6 +216,8 @@
 		  "Ability5"        "kakashi_chidori"
 			"AttackDamageMin"   "23"
 		  "AttackDamageMax"   "23"
+		  "Role"			"Carry,Support,Escape,Disabler,Initiator"
+		"Rolelevels"	"2,1,1,1,2"
 		  "AttackRate"    "1.700000"
 		    "StatusHealth"    "145"
   		"StatusHealthRegen"   "0.300000"
@@ -245,7 +253,8 @@
 	  "AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
 	  "AttributePrimary" 		"DOTA_ATTRIBUTE_INTELLECT"
 	  "AttackAnimationPoint"		"0.4"
-	
+	  "Role"      "Support,Jungler,Pusher,Carry"
+	  "Rolelevels"  "2,1,3,2"
 	  "AttackDamageMin"   "23"
 	  "AttackDamageMax"   "23"
 	  "AttackRate"    "1.700000"
@@ -290,6 +299,8 @@
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		  "AttackAnimationPoint"   "0.4"
 		  "AttackDamageMin"   "26"
+		  "Role"			"Carry,Disabler,Initiator,Durable,Nuker"
+		"Rolelevels"	"1,1,1,1,1"
 		  "AttackDamageMax"   "31"
 		  "AttackRate"    "1.700000"		
 		    "StatusHealth"    "145"
@@ -319,7 +330,8 @@
 		  "Ability3"        "madara_susano" 
 		  "Ability4"        "madara_meteor"
 		  "Ability5"        ""
-
+		  "Role"			"Support,Nuker,Disabler,Durable,Initiator"
+		"Rolelevels"	"2,2,2,1,1"
 		"AttackDamageMin"		"34"
 		"AttackDamageMax"		"39"
 		"AttackRate"		"1.700000"
@@ -361,6 +373,8 @@
 		  "AttackDamageMin"   "23"
 		  "AttackDamageMax"   "23"
 		  "AttackRate"    "1.700000"
+		  "Role"			"Carry,Pusher,Durable,Disabler,Initiator"
+		"Rolelevels"	"2,3,2,2,1"
 
 		  "MovementSpeed"			"305"
 		  "AttributeBaseStrength" "21" // Base strength
@@ -393,6 +407,9 @@
 			"AttackDamageMax"		"16"
 			"AttackRate"		"1.700000"
 	
+			"Role"			"Initiator,Disabler,Carry"
+			"Rolelevels"	"3,3,1"
+	
 			  "AttackRange"				"128"
 			  "MovementSpeed"			"300"
 			  "AttributeBaseStrength" "19" // Base strength
@@ -421,7 +438,8 @@
 	
 	  	"ModelScale"		"2.0"
 		"LoadoutScale"		"2.0" 
-	
+		"Role"			"Support,Nuker,Disabler,Durable,Initiator"
+		"Rolelevels"	"2,2,2,1,1"
 		// Unit attribute
 		"AttackRange"					"100"
 		"ArmorPhysical"		"1.000000"
@@ -462,6 +480,8 @@
   "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"
 		  "Village"			"kumogakure"
+		  "Role"			"Initiator,Durable,Disabler"
+		"Rolelevels"		"3,3,2"
 			"ModelScale"		"0.75"
 		"LoadoutScale"		"0.75" 
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
@@ -495,6 +515,8 @@
 		"ModelScale"		"0.83"
 		"LoadoutScale"		"0.83" 
 		"AttackDamageMin"		"23"
+		"Role"			"Carry,Disabler,Initiator,Durable"
+		"Rolelevels"	"1,2,2,1"
 		"AttackDamageMax"		"23"
 		"AttackRate"		"1.700000"
 		  "AttackAnimationPoint"   "0.4"
@@ -529,6 +551,8 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		  "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"
+  "Role"			"Carry,Escape,Nuker,Initiator,Disabler"
+		"Rolelevels"	"2,1,3,1,2"
 		"AttackRate"		"1.700000"		  
 		  "AttackAnimationPoint"   "0.4"
 		 // "AttackRate"				"0.7"
@@ -555,13 +579,15 @@
 		  "Ability2"         "shikamaru_explosive_kunai" 
 		  "Ability3"         "shikamaru_meditation" 
 		  "Ability4"         "shikamaru_kage_nui"
-		  "ModelScale"		"0.51"
-		"LoadoutScale"		"0.51" 
+		  "ModelScale"		"0.50"
+		"LoadoutScale"		"0.50" 
 		"ArmorPhysical"		"0.000000"
 		"AttackDamageMin"		"19"
 		"AttackDamageMax"		"19"
 		"AttackRate"		"1.700000"		  
 		  "AttackAnimationPoint"   "0.4"
+		  	"Role"			"Support,Pusher,Disabler,Nuker,Initiator"
+		"Rolelevels"	"2,3,3,2,1"
 		 // "AttackRate"				"0.7"
 		  "AttackRange"				"500"
 		"AttackDamageMin"			"20"	// Damage range min.
@@ -597,6 +623,8 @@
 	  "StatusHealthRegen"   "0.300000"
 	  "ArmorPhysical"   "1.000000"
 	    "AttackDamageMin"   "16"
+	    "Role"      "Support,Carry,Nuker,Disabler"
+	    "Rolelevels"  "1,1,3,1"
 	    "AttackDamageMax"   "16"
 	    "AttackRate"    "1.700000"
 	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
@@ -662,6 +690,8 @@
 	  "StatusHealthRegen"   "0.300000"
 			"AttackDamageMin"		"21"
 			"AttackDamageMax"		"21"
+			"Role"			"Carry"
+			"Rolelevels"	"1"
 			"ArmorPhysical"		"2.000000"
 			"AttackRate"		"1.700000"
 		  	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
