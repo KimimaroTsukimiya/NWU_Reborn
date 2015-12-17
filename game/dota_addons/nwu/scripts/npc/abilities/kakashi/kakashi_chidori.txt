@@ -130,6 +130,8 @@
 			"IsPurgable"		"0"
 			"OverrideAnimation" "ACT_DOTA_CAST_ABILITY_5"
 
+		
+
 			"OnCreated"
 			{		   
 				"AttachEffect"
