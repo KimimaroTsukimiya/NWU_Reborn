@@ -50,6 +50,7 @@
 		  "ArmorPhysical"		"1.000000"
 		  "AttackDamageMin"   "19"
 		  "AttackDamageMax"   "19"
+		  "AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		  "AttackRate"    "1.700000"
 		  "StatusHealth"    "145"
  		  "StatusHealthRegen"   "0.300000"
