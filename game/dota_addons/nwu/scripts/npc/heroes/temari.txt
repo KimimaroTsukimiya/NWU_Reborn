@@ -16,7 +16,7 @@
     "AttackDamageMin"   "16"
     "Role"      "Support,Carry,Nuker,Disabler"
     "Rolelevels"  "1,1,3,1"
-    "AttackDamageMax"   "16"
+    "AttackDamageMax"   "20"
     "AttackRate"    "1.700000"
   "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
   "AttackAnimationPoint"		"0.4"

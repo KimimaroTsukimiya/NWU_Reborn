@@ -16,7 +16,7 @@
 		  "Rolelevels"	"2,1"
 
 		  "AttackDamageMin"   "27"
-		  "AttackDamageMax"   "27"
+		  "AttackDamageMax"   "31"
 		  "AttackRate"    "1.700000"
 		  "ArmorPhysical"		"3.000000"
 		  "AttackRange"				"100"

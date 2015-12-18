@@ -16,7 +16,7 @@
   "Role"      "Support,Jungler,Pusher,Carry"
   "Rolelevels"  "2,1,3,2"
   "AttackDamageMin"   "23"
-  "AttackDamageMax"   "23"
+  "AttackDamageMax"   "31"
   "AttackRate"    "1.700000"
 
   "AttackRange"				"100"

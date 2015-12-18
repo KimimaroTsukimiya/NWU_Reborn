@@ -12,7 +12,7 @@
 		  "Rolelevels"	"2,3,2"
 		  "ArmorPhysical"		"1.000000"
 		  "AttackDamageMin"   "19"
-		  "AttackDamageMax"   "19"
+		  "AttackDamageMax"   "26"
 		  "AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		  "AttackRate"    "1.700000"
 		  "StatusHealth"    "145"

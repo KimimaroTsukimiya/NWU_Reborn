@@ -9,7 +9,7 @@
 		  "Ability4"        "raikage_raiga_no_bomu"
 		  "ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"25"
-		"AttackDamageMax"		"25"
+		"AttackDamageMax"		"27"
 		"AttackRate"		"1.700000"
   "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"

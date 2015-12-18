@@ -13,7 +13,7 @@
 	  	    "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"
 		"AttackDamageMin"		"21"
-		"AttackDamageMax"		"21"
+		"AttackDamageMax"		"23"
 		"Role"			"Carry"
 		"Rolelevels"	"1"
 		"ArmorPhysical"		"2.000000"

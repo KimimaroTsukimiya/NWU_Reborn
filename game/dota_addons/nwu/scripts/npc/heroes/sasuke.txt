@@ -8,7 +8,7 @@
 		  "Ability4"        "sasuke_kirin"
 		  "ArmorPhysical"		"1.000000"
 		"AttackDamageMin"		"22"
-		"AttackDamageMax"		"22"
+		"AttackDamageMax"		"32"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		  "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"

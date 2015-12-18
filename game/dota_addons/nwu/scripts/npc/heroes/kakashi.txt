@@ -10,7 +10,7 @@
 		  "Ability4"        "kakashi_empty"
 		  "Ability5"        "kakashi_chidori"
 			"AttackDamageMin"   "23"
-		  "AttackDamageMax"   "23"
+		  "AttackDamageMax"   "30"
 		  "Role"			"Carry,Support,Escape,Disabler,Initiator"
 		"Rolelevels"	"2,1,1,1,2"
 		  "AttackRate"    "1.700000"

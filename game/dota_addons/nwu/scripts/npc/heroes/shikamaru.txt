@@ -10,7 +10,7 @@
 		"LoadoutScale"		"0.50" 
 		"ArmorPhysical"		"0.000000"
 		"AttackDamageMin"		"19"
-		"AttackDamageMax"		"19"
+		"AttackDamageMax"		"29"
 		"AttackRate"		"1.700000"		  
 		  "AttackAnimationPoint"   "0.4"
 		  	"Role"			"Support,Pusher,Disabler,Nuker,Initiator"

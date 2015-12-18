@@ -18,7 +18,7 @@
 	"Rolelevels"	"3,3,1"
 
 	"AttackDamageMin"   "16"
-	"AttackDamageMax"   "16"
+	"AttackDamageMax"   "26"
 	"AttackRate"    "1.700000"
 	"ArmorPhysical"		"1.000000"
     // Movement
