@@ -58,6 +58,7 @@
 
       "modifier_orb_of_venom_wc3_debuff"
       {
+        "Duration"      "%duration"
         "IsDebuff"      "1"
         "Properties"
         {
