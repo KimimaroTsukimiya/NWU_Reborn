@@ -7,8 +7,9 @@ function yellow_flash(keys)
 	local bonus_dmg_percent=keys.BonusDmg
 	local distance_cap = keys.DistanceCap
 	
-	if ( not caster.yf_stacks ) then
-		caster.yf_stacks = 0
+	if ( not caster.yf_stacks_pos ) then
+		caster.yf_stacks_pos = 0
+		caster.yf_stacks_neg = 0
 	end
 	
 	if ( not origin ) then
@@ -27,20 +28,24 @@ function yellow_flash(keys)
 	end
 	
 	local bonus_dmg = (dist * bonus_dmg_percent)/100
-	caster.yf_stacks = bonus_dmg + caster.yf_stacks
+	caster.yf_stacks_pos = bonus_dmg + caster.yf_stacks_pos
 	
-	if not caster:HasModifier(modifier) and (caster.yf_stacks >= 1) then
+	local cur_stack = caster.yf_stacks_pos-caster.yf_stacks_neg
+	if not caster:HasModifier(modifier) and (cur_stack >= 1) then
 		ability:ApplyDataDrivenModifier(caster, caster, modifier, {})
 	end
 	
-	caster:SetModifierStackCount(modifier, ability, caster.yf_stacks)
+	caster:SetModifierStackCount(modifier, ability, cur_stack)
 	
 	-- Movement
 	Timers:CreateTimer(duration, function()
-		caster.yf_stacks = caster.yf_stacks - bonus_dmg
+		--print(caster.yf_stacks_pos,caster.yf_stacks_neg,bonus_dmg)
+		caster.yf_stacks_neg = caster.yf_stacks_neg + bonus_dmg
 		
-		if( caster.yf_stacks >= 1 ) then
-			caster:SetModifierStackCount( modifier, ability, caster.yf_stacks )
+		cur_stack = caster.yf_stacks_pos-caster.yf_stacks_neg
+		
+		if( cur_stack >= 1 ) then
+			caster:SetModifierStackCount( modifier, ability, cur_stack )
 		else
 			caster:RemoveModifierByName(modifier)
 		end

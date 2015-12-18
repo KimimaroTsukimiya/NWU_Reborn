@@ -1,34 +1,34 @@
 "npc_dota_hero_juggernaut" //yondaime
 {
-	"override_hero"   "npc_dota_hero_juggernaut"
-	"AbilityLayout"	"5"
-	"Model" 			"models/yondaime/yondaime.vmdl"
-	"Ability1"         "yondaime_marked_kunai"
-	"Ability2"         "yondaime_yellow_flash" 
-	"Ability3"         "yondaime_rasengan" 
-	// "Ability4"         "gaara_sabaku_taiso"
-	
+	"override_hero"		"npc_dota_hero_juggernaut"
+	"Model"				"models/yondaime/yondaime.vmdl"
 	//"ModelScale"		"0.5"
+	
+	"AbilityLayout"	"5"
+	"Ability1"		"yondaime_marked_kunai"
+	"Ability2"		"yondaime_yellow_flash" 
+	"Ability3"		"yondaime_rasengan" 
+	"Ability4"		"yondaime_hiraishin_jump"
+	"Ability5"		"yondaime_hiraishin_mark"
+	"Ability6"		"attribute_bonus"
 
-
-	"AttackDamageMin"		"22"
-	"AttackDamageMax"		"28"
-	"StatusHealth"    "145"
-	"StatusHealthRegen"   "0.300000"
+	"AttackDamageMin"	"22"
+	"AttackDamageMax"	"28"
+	"StatusHealth"    	"145"
+	"StatusHealthRegen"	"0.300000"
 	"AttackRate"		"1.700000"		
 	"ArmorPhysical"		"1.000000"
-	"AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 	"AttackAnimationPoint"   "0.4"
-	// "AttackRate"				"0.7"
-	"AttackRange"				"100"
-	"MovementSpeed"			"300"
+	"AttackRange"		"100"
+	"MovementSpeed"		"300"
 	
-	"AttributeBaseStrength" "17" // Base strength
-	"AttributeStrengthGain" "1.9" // Strength bonus per level.
-	"AttributeBaseAgility" "21" // Base agility
-	"AttributeAgilityGain" "2.5" // Agility bonus per level.
-	"AttributeBaseIntelligence" "14" // Base intelligence
-	"AttributeIntelligenceGain" "1.6" // Intelligence bonus per level.
+	"AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+	"AttributeBaseStrength"		"17"	// Base strength
+	"AttributeStrengthGain"		"1.9"	// Strength bonus per level.
+	"AttributeBaseAgility"		"21"	// Base agility
+	"AttributeAgilityGain"		"2.5"	// Agility bonus per level.
+	"AttributeBaseIntelligence" "14" 	// Base intelligence
+	"AttributeIntelligenceGain" "1.6"	// Intelligence bonus per level.
 
 	"Village"			"konoha"
 	"Gender"			"male"
