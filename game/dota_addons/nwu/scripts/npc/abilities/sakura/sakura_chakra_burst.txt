@@ -41,12 +41,7 @@
 
 	"OnSpellStart"
 	{
-	        "RunScript"
-	        {
-	            "ScriptFile"        "heroes/sakura/chakra_burst.lua"
-	            "Function"          "gainMaxMoveSpeed"
-	            "Target"            "CASTER"
-	        }
+	     
 	        "ApplyModifier"
 	        {
 	        	"ModifierName"	"modifier_sakura_chakra_burst"
@@ -67,6 +62,7 @@
 			{
 			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%ms_bonus" 
 			}
+
 
 			"OnCreated"
 			{
