@@ -47,7 +47,7 @@ function Precache( context )
   -- Models
   --PrecacheModel("models/asuma/asuma.vmdl", context)
   PrecacheModel("models/gaara/gaara.vmdl", context)
-  PrecacheModel("models/gai/gai.vmdl", context)
+  PrecacheModel("models/guy/gai.vmdl", context)
   PrecacheModel("models/hidan/tesst.vmdl", context)
   PrecacheModel("models/hidan/hidan.vmdl", context)
   PrecacheModel("models/itachi/itachi.vmdl", context)

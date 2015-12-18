@@ -1,15 +1,15 @@
 		"npc_dota_hero_centaur" //guy
 		{
 		  "override_hero"   "npc_dota_hero_centaur"
-		  "Model" 			"models/gai/gai.vmdl"
+		  "Model" 			"models/guy/gai.vmdl"
 		  "Ability1"        "guy_dynamic_entry"
 
 		  "Ability2"        "guy_power_of_youth" 
 		  "Ability3"        "guy_gouken_mastery" 
 		  "Ability4"        "guy_open_gates"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
-			"ModelScale"		"0.68"
-		"LoadoutScale"		"0.68" 
+			"ModelScale"		"0.93"
+		"LoadoutScale"		"0.93" 
 		  "AttackAnimationPoint"   "0.4"
 			
 		  "Role"			"Carry,Jungler"
