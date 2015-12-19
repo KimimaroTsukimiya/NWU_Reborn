@@ -73,80 +73,14 @@
 	
 	"OnSpellStart"
 	{
-
-
-		"Knockback"
+		"RunScript"
 		{
-				"Target"			"TARGET"
-				"Duration"			"%knock_up"
-				"Distance"			"0"
-				"Height"			"500"
-				"OverrideAnimation"			"ACT_DOTA_DISABLED"
+			"ScriptFile"    "items.lua"
+			"Function"      "CheckForSpellBlock"
 			
-				"EffectName"				"particles/generic_gameplay/generic_stunned.vpcf"
-				"EffectAttachType"			"follow_overhead"
-		}
-
-		"Knockback"
-		{
-				"Target"			"CASTER"
-				"Duration"			"%knock_up"
-				"Distance"			"0"
-				"Height"			"300"
-		}
-
-		"DelayedAction"
-		{
-			"Delay"						"%knock_up"
-			"Action"
-			{
-
-				"FireEffect"
-				{
-					"EffectName"       "particles/units/heroes/hero_centaur/centaur_warstomp.vpcf"
-					"EffectAttachType"  "follow_origin"
-					"Target"            "TARGET"
-				}
-			
-
-				"FireSound"
-				{
-					"EffectName"		"Hero_Centaur.HoofStomp"
-					"Target" 			"CASTER"
-				}
-
-				"Damage"
-				{
-					"Target"
-     				 {
-					        "Center"    "TARGET"
-					        "Radius"  "%target_aoe"
-					        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
-					        "Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-     				 }
-      				"Type"      		"DAMAGE_TYPE_MAGICAL"
-					"Damage"			"%AbilityDamage"
-				}
-
-				"ApplyModifier"
-			    	{
-				      "ModifierName"  "raikage_knockup"
-				      "Target"
-				      {
-				        "Center"  "TARGET"
-				        "Radius"  "%target_aoe"
-				        "Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
-				        "Types"   "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
-				      }
-				      "Duration"    "%armor_reduction_duration"
-			    	}
-
-			   "FireSound"
-				{
-					"soundfile"	"sounds/weapons/hero/centaur/hoof_stomp.vsnd" 
-				}
-
-			}
+			"GenericFunction"	"GenericSpellFunction"
+			"Modifier1"		"raikage_raiga_no_bomu_dummy"
+			"Duration1"		"0.75"
 		}
 	}
 		
@@ -155,21 +89,106 @@
 	{
 		"raikage_knockup"
 		{
-		  "Passive"     "0"
-          "IsHidden"      "0"
-          "IsDebuff"      "1"
-          
-          "EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
-          "EffectAttachType"  "follow_origin"
-      
-          "StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
-          "StatusEffectPriority"  "10"
+			"Passive"     "0"
+			"IsHidden"      "0"
+			"IsDebuff"      "1"
 
-          "Properties"
-          {
-            "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%reduce_armor"
-          }
+			"EffectName"    "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+			"EffectAttachType"  "follow_origin"
+
+			"StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+			"StatusEffectPriority"  "10"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%reduce_armor"
+			}
+		}
+		
+		"raikage_raiga_no_bomu_dummy"
+		{
+			"Passive"     "0"
+			"IsHidden"      "1"
+		
+			"OnCreated"
+			{
+				"Knockback"
+				{
+						"Target"			"TARGET"
+						"Duration"			"%knock_up"
+						"Distance"			"0"
+						"Height"			"500"
+						"OverrideAnimation"			"ACT_DOTA_DISABLED"
+					
+						"EffectName"				"particles/generic_gameplay/generic_stunned.vpcf"
+						"EffectAttachType"			"follow_overhead"
+				}
+
+				"Knockback"
+				{
+						"Target"			"CASTER"
+						"Duration"			"%knock_up"
+						"Distance"			"0"
+						"Height"			"300"
+				}
+				
+				
+				"DelayedAction"
+				{
+					"Delay"						"%knock_up"
+					
+					"Action"
+					{
+					
+						"Damage"
+						{
+							"Target"
+							 {
+								"Center"    "TARGET"
+								"Radius"  "%target_aoe"
+								"Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+								"Types"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+							 }
+							 
+							"Type"      		"DAMAGE_TYPE_MAGICAL"
+							"Damage"			"%AbilityDamage"
+						}
+						
+						"ApplyModifier"
+						{
+							"ModifierName"  "raikage_knockup"
+							"Target"
+							{
+								"Center"  "TARGET"
+								"Radius"  "%target_aoe"
+								"Teams"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+								"Types"   "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+							}
+							"Duration"    "%armor_reduction_duration"
+						}
+					
+					
+						"FireSound"
+						{
+							"soundfile"	"sounds/weapons/hero/centaur/hoof_stomp.vsnd" 
+						}
+
+						"FireEffect"
+						{
+							"EffectName"       "particles/units/heroes/hero_centaur/centaur_warstomp.vpcf"
+							"EffectAttachType"  "follow_origin"
+							"Target"            "TARGET"
+						}
+
+						"FireSound"
+						{
+							"EffectName"		"Hero_Centaur.HoofStomp"
+							"Target" 			"CASTER"
+						}
 	
+					}
+				}
+			}
 		}
 	}
 }
