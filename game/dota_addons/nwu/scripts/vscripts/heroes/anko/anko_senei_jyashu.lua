@@ -39,8 +39,8 @@ function anko_senei_jyashu(params)
 
 	if (#full_enemies > 0) then
 		
-		rnd = RandomInt(0, #full_enemies)
-		--print ("Rnd = ", rnd)
+		rnd = RandomInt(1, #full_enemies)
+		print ("Rnd = ", rnd, #full_enemies)
 		local target_enemy = full_enemies[rnd]
 		--print ("Found One", target_enemy)
 
