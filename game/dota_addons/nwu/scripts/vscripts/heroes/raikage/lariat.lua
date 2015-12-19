@@ -75,7 +75,7 @@ function LariatPeriodic(gameEntity, keys)
 	end
 
 	-- If the target reached the ground then remove physics
-	if vector:Length2D() <= 2*caster:GetPaddedCollisionRadius() then
+	if vector:Length2D() <= 3*caster:GetPaddedCollisionRadius() then
 		if( keys.origin ~= nil) then
 			local timer_tbl =
 			{
