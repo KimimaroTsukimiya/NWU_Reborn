@@ -53,7 +53,7 @@
 		"03"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"damage"	"75 100 125 150"
+			"damage"	"50 75 100 125"
 		}
 			}
 
