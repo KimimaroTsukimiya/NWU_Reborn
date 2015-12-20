@@ -4,6 +4,7 @@
 {
         "consumables"
         {
+                "item"    "item_teleport_scroll"  
                 "item"    "item_clarity"
                 "item"    "item_enchanted_mango"
                 "item"    "item_tango"
@@ -167,7 +168,7 @@
 
         "sideshop1"
         {
-            "item"    "item_teleport_scroll"
+           
             "item"    "item_firm_nunchaku"
             "item"    "item_shinobi_claws"
             "item"    "item_yondaime_sealed_kunai"
@@ -184,6 +185,7 @@
 
         "sideshop2"
         {
+         "item"    "item_teleport_scroll"
             "item"   "item_chakra_booster"
             "item"   "item_shinobi_cloak"
             "item"   "item_shinobi_uniform"

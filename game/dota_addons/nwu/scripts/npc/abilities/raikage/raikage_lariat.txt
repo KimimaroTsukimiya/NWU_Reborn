@@ -64,7 +64,7 @@
 			"var_type"              "FIELD_INTEGER"
 			"radius"                "350"
 		}
-             "06"
+             "05"
             {
                 "var_type"              "FIELD_INTEGER"
                 "cast_range"         "400 600 800 1000"
