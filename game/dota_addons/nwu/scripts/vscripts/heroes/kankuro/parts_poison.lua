@@ -1,26 +1,15 @@
-function parts_poison(keys)
-
-	local caster = keys.caster
-	local caster_location = caster:GetAbsOrigin() 
-	local player = caster:GetPlayerOwnerID()
-	local ability = keys.ability
-
-	print("Parts Poison")
-	ability:ApplyDataDrivenModifier(caster, caster, keys.modifier_name, {})
-end
-
 --[[ ============================================================================================================
 	Author: Zenicus
-	Date: February 4, 2015
-	Called regularly while Poison Attack is affecting a unit.  Damages them.
-	Additional parameters: keys.PoisonDamagePerSecond and keys.PoisonDamageInterval
+	Date: December 13, 2015
+	Called when the dismantle part attacks on a target.
 ================================================================================================================= ]]
-function modifier_parts_poison_attack_on_interval_think(keys)	
+
+function parts_poison(keys)
 
 	print("Poisoned")
 	local damage_to_deal = keys.PoisonDamagePerSecond * keys.PoisonDamageInterval   --This gives us the damage per interval.
 	local current_hp = keys.caster:GetHealth()
-	
+	print("Poisoned Damage", damage_to_deal)
 	if damage_to_deal >= current_hp then  --Poison Attack damage over time is non-lethal, so deal less damage if needed.
 		damage_to_deal = current_hp - 1
 	end

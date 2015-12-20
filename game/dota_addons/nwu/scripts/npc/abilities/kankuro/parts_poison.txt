@@ -35,9 +35,14 @@
 			"var_type"							"FIELD_FLOAT"
 			"poison_damage_interval"			"1.0"
 		}
+		"05"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"ms_slow"							"-25"
+		}
 	}
 	
-	"OnSpellStart"
+	"OnUpgrade"
 	{
 		"RunScript"
 		{
@@ -62,20 +67,74 @@
 			"EffectAttachType"		"follow_origin"
 			"Target"    "TARGET"
 			
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%poison_movement_speed_melee"
-			}
-			
-			"ThinkInterval" 		"%poison_damage_interval"
-			"OnIntervalThink"
+			"OnAttack"
 			{
 				"RunScript"
 				{
 					"ScriptFile"					"heroes/kankuro/parts_poison.lua"
-					"Function"						"modifier_parts_poison_attack_on_interval_think"
+					"Function"						"modifier_parts_poison_attack"
 					"PoisonDamagePerSecond"			"%poison_damage_per_second"
 					"PoisonDamageInterval"			"%poison_damage_interval"
+				}
+				
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_parts_poison_slow"
+					"Target" 		"TARGET"
+					"Duration"		"%poison_duration"
+				}
+				
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_parts_poison_dot"
+					"Target" 		"TARGET"
+					"Duration"		"%duration"
+				}
+			}
+			
+			"modifier_poison_dot"
+			{
+			  "Passive"    	  "0"
+			  "IsHidden"      "0"
+			  "IsDebuff"      "1"
+				"ThinkInterval"	"1.0"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"heroes/kankuro/parts_poison.lua"
+						"Function"			"parts_poison"
+					}
+				}   
+			}
+		
+			"modifier_poison_slow"
+			{
+				"Passive"		"0"
+				"IsHidden"		"0"
+				"IsBuff"		"0"
+				"IsDebuff"		"1"
+				"IsPurgable"	"1"
+				
+				"EffectName"    		"particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
+				"EffectAttachType"  	"follow_origin"
+			  
+				"StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
+				"StatusEffectPriority"  "10"
+			  
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow"
+				}
+				
+				"OnCreated"
+				{
+					"FireSound"
+					{
+					  "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
+					  "Target"    "TARGET"
+					}     
+
 				}
 			}
 		}

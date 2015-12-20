@@ -11,12 +11,12 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"jutsu_resistance"			// Ability 1.
+		"Ability1"					"parts_jutsu_resistance"			// Ability 1.
 		"Ability2"					"parts_poison"				// Ability 2.
 		
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"0"			// Physical protection.
+		"ArmorPhysical"				"1"			// Physical protection.
 		"MagicalResistance"			"50"		// Magical protection (percentage).
 	
 		// Attack

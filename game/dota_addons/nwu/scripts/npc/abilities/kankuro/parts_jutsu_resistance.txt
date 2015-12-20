@@ -1,0 +1,48 @@
+// Dismantle Parts jutsu resistance
+// Author: Zenicus
+// Date: 12.10.2015.
+"parts_jutsu_resistance"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"						"1"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"magic_resist_bonus"			"50"
+		}
+	}
+	
+	"OnUpgrade"
+	{
+		"RunScript"
+		{
+		  "ScriptFile"  		"heroes/kankuro/parts_jutsu_resistance.lua"
+		  "Function"    		"jutsu_resistance"
+		  "modifier_name" 		"modifier_jutsu_resistance"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_jutsu_resistance"
+		{
+			"Passive"				"1"
+			"IsHidden"				"1"
+			
+			"OnCreated"
+			{
+				"RunScript"
+				{
+				  "ScriptFile"  		"heroes/kankuro/parts_jutsu_resistance.lua"
+				  "Function"    		"modifier_jutsu_resistance"
+				}
+			}
+		}
+	}
+}
