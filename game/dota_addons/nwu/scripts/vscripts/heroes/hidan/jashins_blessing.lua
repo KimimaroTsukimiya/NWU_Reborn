@@ -12,6 +12,16 @@ function ResetHp( keys )
 	local cooldown = ability:GetCooldown( ability:GetLevel() )
 	local modifierName = "modifier_jashins_blessing"
 	if not keys.caster:IsAlive() then
+
+
+	local particle = ParticleManager:CreateParticle("particles/units/heroes/hidan/omniknight_purification.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
+	ParticleManager:SetParticleControl(particle, 0, caster:GetAbsOrigin()) -- Origin
+	ParticleManager:SetParticleControl(particle, 1, caster:GetAbsOrigin()) -- Origin
+
+		EmitSoundOn("Hero_Omniknight.Purification", caster) 
+
+
+
 		local hp = keys.caster:GetMaxHealth() / 100 * reset_hp_percentage
 		keys.caster:SetHealth(hp)
 		-- Remove cooldown

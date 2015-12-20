@@ -18,6 +18,7 @@ end
 function FinishChidori(keys)
 	RemovePhysics(keys.caster)
 	keys.caster:RemoveModifierByName(keys.modifier_caster)
+	keys.caster:RemoveModifierByName("modifier_raikiri_stunned")
 end
 
 function Launch(keys)	
@@ -29,9 +30,12 @@ function Launch(keys)
 	local sound_impact = keys.sound_impact
 	local particle_impact = keys.particle_impact
 
+	
+
+
 	caster:EmitSound(keys.sound_cast)
 	AddPhysics(caster)
-
+	ability:ApplyDataDrivenModifier(caster, caster, "modifier_raikiri_stunned", {})
 	-- Movement
 	Timers:CreateTimer(0, function()
 		local vector = target:GetAbsOrigin() - caster:GetAbsOrigin()

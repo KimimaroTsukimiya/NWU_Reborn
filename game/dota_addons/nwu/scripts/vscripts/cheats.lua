@@ -72,7 +72,7 @@ function GameMode:Wtf()
                     local player = PlayerResource:GetPlayer(i)
                     
                     local hero = player:GetAssignedHero()
-                    hero:SetBaseHealthRegen(10000)
+                 
 					hero:SetBaseManaRegen(1000)
                     for i=0, hero:GetAbilityCount()-1 do 
                         if  hero:GetAbilityByIndex(i) ~= nil then

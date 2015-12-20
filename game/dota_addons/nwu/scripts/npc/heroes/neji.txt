@@ -14,8 +14,11 @@
 		    "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"
 		"AttackDamageMin"		"16"
-		"AttackDamageMax"		"16"
+		"AttackDamageMax"		"26"
 		"AttackRate"		"1.700000"
+
+		"Role"			"Initiator,Disabler,Carry"
+		"Rolelevels"	"3,3,1"
 
 		  "AttackRange"				"128"
 		  "MovementSpeed"			"300"

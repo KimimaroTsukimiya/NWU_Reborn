@@ -64,7 +64,7 @@ function LariatPeriodic(gameEntity, keys)
 	caster:SetPhysicsVelocity(direction * velocity)
 	
 	local targetEntities = FindUnitsInRadius(caster:GetOpposingTeamNumber(), caster:GetAbsOrigin(), nil,
-		2*caster:GetPaddedCollisionRadius(), DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, FIND_CLOSEST, false)
+		3*caster:GetPaddedCollisionRadius(), DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, FIND_CLOSEST, false)
 	
 	local target = targetEntities[1]
 	if(target) then	
@@ -75,7 +75,7 @@ function LariatPeriodic(gameEntity, keys)
 	end
 
 	-- If the target reached the ground then remove physics
-	if vector:Length2D() <= 2*caster:GetPaddedCollisionRadius() then
+	if vector:Length2D() <= caster:GetPaddedCollisionRadius() then
 		if( keys.origin ~= nil) then
 			local timer_tbl =
 			{

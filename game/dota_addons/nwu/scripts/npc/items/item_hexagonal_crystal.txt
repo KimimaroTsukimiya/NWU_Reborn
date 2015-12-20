@@ -17,6 +17,7 @@
     "ItemDroppable"         "1"
     "ItemSellable"          "1"
     "ItemRequiresCharges"     "0"
+     "ItemPurchasable" "0"
     "ItemShareability"        "ITEM_NOT_SHAREABLE"
     "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
     "MaxUpgradeLevel"       "1"

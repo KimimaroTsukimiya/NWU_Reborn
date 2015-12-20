@@ -15,8 +15,10 @@
   "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"
 		  "AttackDamageMin"   "23"
-		  "AttackDamageMax"   "23"
+		  "AttackDamageMax"   "30"
 		  "AttackRate"    "1.700000"
+		  "Role"			"Carry,Pusher,Durable,Disabler,Initiator"
+		"Rolelevels"	"2,3,2,2,1"
 
 		  "MovementSpeed"			"305"
 		  "AttributeBaseStrength" "21" // Base strength

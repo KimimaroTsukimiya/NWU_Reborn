@@ -8,10 +8,12 @@
 		  "Ability4"         "gaara_sabaku_taiso"
 		  "ModelScale"		"0.35"
 			"LoadoutScale"		"0.35" 
-
+		  "Role"			"Disabler,Support,Nuker"
+		  "Rolelevels"	"2,3,2"
 		  "ArmorPhysical"		"1.000000"
 		  "AttackDamageMin"   "19"
-		  "AttackDamageMax"   "19"
+		  "AttackDamageMax"   "26"
+		  "AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		  "AttackRate"    "1.700000"
 		  "StatusHealth"    "145"
  		  "StatusHealthRegen"   "0.300000"
@@ -30,13 +32,6 @@
 	  	  "Gender"			"male"
 	  	  "Village"			"sunagakure"
 
-	  	  "Bot"
-		{
-			"Loadout"
-			{
-				"item_sakuras_fighting_gloves"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
-			}
-           }
 
 
 		}

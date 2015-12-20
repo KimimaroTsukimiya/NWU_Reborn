@@ -16,6 +16,8 @@
 		 "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 		 "ModelScale"		"0.8"
 		 "LoadoutScale"		"0.8" 
+		 "Role"			"Carry,Disabler,Initiator,Durable,Nuker"
+		"Rolelevels"	"1,2,2,2,1"
 		   "StatusHealth"    "145"
   "StatusHealthRegen"   "0.300000"
 		 "AttackDamageMin"   "22"

@@ -145,5 +145,17 @@
 			}
 			
 		}
+
+
+		"modifier_raikiri_stunned"
+		{
+			"Passive"			"0"
+
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+			
+		}
 	}
 }

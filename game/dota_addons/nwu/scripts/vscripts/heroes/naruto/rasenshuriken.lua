@@ -8,10 +8,8 @@ function rasenshuriken_impact(keys)
 	
 	local aoe = keys.AoE
 	local modifier = keys.rs_modifier
+	local targetEntities = FindUnitsInRadius(caster:GetTeamNumber(), target:GetAbsOrigin(), nil, aoe, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_HERO, 0, FIND_ANY_ORDER, false)
 
-	local targetEntities = FindUnitsInRadius(caster:GetOpposingTeamNumber(), target:GetAbsOrigin(), nil,
-		aoe, DOTA_UNIT_TARGET_TEAM_FRIENDLY, target_flags , DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
-		
 	if( not targetEntities )then
 		return
 	end
