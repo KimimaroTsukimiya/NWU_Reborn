@@ -50,7 +50,12 @@
 			"var_type"				"FIELD_FLOAT"
 			"stun_duration"	"1.5 2 2.5 3"
 		}
-	}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"	"25 50 75 100"
+		}
+			}
 
 	"OnSpellStart"
 	{

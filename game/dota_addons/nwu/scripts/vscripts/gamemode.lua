@@ -5,7 +5,7 @@
 -- You can also change the cvar 'barebones_spew' at any time to 1 or 0 for output/no output
 BAREBONES_DEBUG_SPEW = false
 --Set this to false to deactive cheat inputs(cheats.lua) and true to activate cheat inputs 
-CHEATS_ACTIVATED = true 
+CHEATS_ACTIVATED = true
 
 if GameMode == nil then
     DebugPrint( '[BAREBONES] creating barebones game mode' )

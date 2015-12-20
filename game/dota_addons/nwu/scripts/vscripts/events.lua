@@ -10,9 +10,8 @@ require('rescale')
 
 
 --cheats.lua, includes functions which listen to chat inputs of the players
-if CHEATS_ACTIVATED then
   require('cheats')
-end
+
 
 -- Cleanup a player when they leave
 function GameMode:OnDisconnect(keys)

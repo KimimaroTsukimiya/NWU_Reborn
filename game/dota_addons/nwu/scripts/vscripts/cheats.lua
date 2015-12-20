@@ -13,17 +13,22 @@ function GameMode:OnPlayerChat(keys)
 	local text = keys.text
 	local playerID = keys.userid-1
 	local bTeamOnly = keys.teamonly
-    GameMode:Setup_Hero_Tables()
-    -- Handle '-command'
-    if StringStartsWith(text, "-") then
-        text = string.sub(text, 2, string.len(text))
-    end
 
-	local input = split(text)
-	local command = input[1]
-	if CHEAT_CODES[command] then
-		CHEAT_CODES[command](input[2])
-    end        
+    if CHEATS_ACTIVATED then
+        
+        GameMode:Setup_Hero_Tables()
+        -- Handle '-command'
+        if StringStartsWith(text, "-") then
+            text = string.sub(text, 2, string.len(text))
+        end
+
+        local input = split(text)
+        local command = input[1]
+        if CHEAT_CODES[command] then
+            CHEAT_CODES[command](input[2])
+        end  
+    end
+      
 end
 --[[Author: LearningDave
   Date: october, 30th 2015.
