@@ -31,6 +31,6 @@
   "AttributeBaseAgility" "14" // Base agility
   "AttributeAgilityGain" "1.6" // Agility bonus per level.
 
-  "gender"      "female"
+  "Gender"      "female"
   "Village"			"kirigakure"
 }	
