@@ -14,6 +14,7 @@ function remove_physics(caster)
 	--caster:SetNavCollisionType(PHYSICS_NAV_SLIDE)
 	caster:SetAutoUnstuck(true)
 	caster:FollowNavMesh(true)
+	caster:RemoveModifierByName("modifier_dynamic_entry_stunned")
 end
 
 function dynamic_entry_hit(keys)
@@ -73,6 +74,7 @@ function dynamic_entry_start(keys)
 	local target = keys.target
 	
 	add_physics(caster)
+	keys.ability:ApplyDataDrivenModifier(caster, caster, "modifier_dynamic_entry_stunned", {})
 	
 	local timer_tbl =
 		{
