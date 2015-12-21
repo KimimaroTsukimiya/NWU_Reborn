@@ -1,7 +1,7 @@
 function chakra_enhanced_strength( keys )
 	if not keys.target:IsBuilding() then
 		keys.ability.enemy = keys.target
-		keys.ability:ApplyDataDrivenModifier(keys.caster, keys.target, keys.modifier_name, {duration = 1})
+		keys.ability:ApplyDataDrivenModifier(keys.caster, keys.caster, keys.modifier_name, {duration = 1})
 	end
 end
 
