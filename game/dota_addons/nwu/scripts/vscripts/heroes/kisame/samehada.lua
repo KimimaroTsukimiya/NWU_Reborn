@@ -4,24 +4,26 @@
 	Steals mana from target and gives it to the caster
 ]]
 function StealMana( event )
-	-- Variables
-	local caster = event.caster
-	local ability = event.ability
-	local target = event.target
-	local manasteal_percentage = event.ability:GetLevelSpecialValueFor("manasteal_percentage", event.ability:GetLevel() - 1 )
-	local mana = target:GetMana()
-	print("steal percentage: "..manasteal_percentage)
-	print("start mana: "..mana)
-	local reduce_mana_amount = target:GetMaxMana() / 100 * manasteal_percentage
-	local new_mana = mana - reduce_mana_amount
-	target:SetMana(new_mana)
-	local new_caster_mana = caster:GetMana() + reduce_mana_amount;
-	caster:SetMana(new_caster_mana)
+	if not event.target:IsBuilding() and event.target:GetMaxMana() > 0 then
+		-- Variables
+		local caster = event.caster
+		local ability = event.ability
+		local target = event.target
+		local manasteal_percentage = event.ability:GetLevelSpecialValueFor("manasteal_percentage", event.ability:GetLevel() - 1 )
+		local mana = target:GetMana()
+		print("steal percentage: "..manasteal_percentage)
+		print("start mana: "..mana)
+		local reduce_mana_amount = target:GetMaxMana() / 100 * manasteal_percentage
+		local new_mana = mana - reduce_mana_amount
+		target:SetMana(new_mana)
+		local new_caster_mana = caster:GetMana() + reduce_mana_amount;
+		caster:SetMana(new_caster_mana)
 
-	-- Fire particle
-	local fxIndex = ParticleManager:CreateParticle( "particles/generic_gameplay/generic_manaburn.vpcf", PATTACH_CUSTOMORIGIN, target )
-	ParticleManager:SetParticleControl( fxIndex, 0, target:GetAbsOrigin() )
-	ParticleManager:SetParticleControlEnt( fxIndex, 1, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target:GetAbsOrigin(), true )
+		-- Fire particle
+		local fxIndex = ParticleManager:CreateParticle( "particles/generic_gameplay/generic_manaburn.vpcf", PATTACH_CUSTOMORIGIN, target )
+		ParticleManager:SetParticleControl( fxIndex, 0, target:GetAbsOrigin() )
+		ParticleManager:SetParticleControlEnt( fxIndex, 1, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target:GetAbsOrigin(), true )
+	end
 end
 --[[
 	Author: LearningDave
