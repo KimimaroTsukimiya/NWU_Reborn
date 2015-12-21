@@ -90,52 +90,13 @@
 			
 			"OnAttackLanded"
 			{
-				"FireSound"
+				
+				"RunScript"
 				{
-					"Target"				"TARGET"
-					"EffectName"			"Hero_StormSpirit.Overload"
+					"ScriptFile"			"heroes/sasuke/chidori_koken.lua"
+					"Function"				"releaseAoeDamage"
 				}
 			
-				"FireEffect"
-				{
-					"Target"				"TARGET"
-					"EffectName"			"particles/units/heroes/hero_stormspirit/stormspirit_overload_discharge.vpcf"
-					"EffectAttachType"		"start_at_origin"
-				}
-			
-				"ActOnTargets"
-				{
-					"Target"
-					{
-						"Center"			"TARGET"
-						"Radius"			"%aoe_radius"
-						"Teams"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
-						"Types"				"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_MECHANICAL"
-						"Flags"				"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-					}
-					
-					"Action"
-					{
-						"Damage"
-						{
-							"Target"		"TARGET"
-							"Damage"		"%AbilityDamage"
-							"Type"			"DAMAGE_TYPE_MAGICAL"
-						}
-						
-						"ApplyModifier"
-						{
-							"Target"		"TARGET"
-							"ModifierName"	"modifier_chidori_koken_debuff_datadriven"
-						}
-					}
-				}
-			
-				"RemoveModifier"
-				{
-					"Target"				"CASTER"
-					"ModifierName"			"modifier_chidori_koken_damage_datadriven"
-				}
 			}
 		}
 
