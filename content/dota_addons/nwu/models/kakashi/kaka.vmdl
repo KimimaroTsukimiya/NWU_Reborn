@@ -3515,6 +3515,11 @@
 					m_bDisable = false
 					m_Activities =
 					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_DIE"
+							m_nWeight = 1
+						},
 					]
 					m_AnimationEvents =
 					[
