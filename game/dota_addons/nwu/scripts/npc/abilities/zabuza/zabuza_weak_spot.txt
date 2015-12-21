@@ -67,5 +67,30 @@
 				}
 			}
 		}
+
+		"modifier_weak_spot_reset_cd"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"OnAttackLanded"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/zabuza/weak_spot.lua"	
+					"Function"		"weak_spot_reset_cd"
+				}
+			}
+
+			"ThinkInterval"	"0.3"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/zabuza/weak_spot.lua"	
+					"Function"		"addCrit"
+				}
+			}
+		}
 	}
 }
