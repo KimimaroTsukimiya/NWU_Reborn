@@ -81,7 +81,7 @@
   "npc_dota_hero_brewmaster" "0"
   "npc_dota_hero_phantom_lancer" "0"
   "npc_dota_hero_treant" "0"
-  "npc_dota_hero_ogre_magi" "1"
+  "npc_dota_hero_ogre_magi" "0"
   "npc_dota_hero_chaos_knight" "0"
   "npc_dota_hero_phantom_assassin" "1"
   "npc_dota_hero_gyrocopter" "0"
