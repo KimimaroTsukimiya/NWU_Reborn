@@ -25,7 +25,7 @@
 		  "AttackRate"    "1.700000"
 		  
 		  "AttackAnimationPoint"   "0.4"
-		  "AttackRange"				"275"
+		  "AttackRange"				"100"
 
 		  "MovementSpeed"			"290"
 		  "AttributeBaseStrength" "27" // Base strength
