@@ -4,6 +4,9 @@
 	Resets Hidan's hp if he would die by the received damage
 ]]
 function ResetHp( keys )
+
+	if keys.caster:IsRealHero() then
+
 	-- Variables
 	local caster = keys.caster
 	local ability = keys.ability
@@ -33,4 +36,6 @@ function ResetHp( keys )
 			end
 		)
 		end
+
+	end
 end
