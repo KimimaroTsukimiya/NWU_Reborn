@@ -1,0 +1,56 @@
+"yondaime_hiraishin_jump"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+	"BaseClass"					"ability_datadriven"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"		"DAMAGE_TYPE_PHYSICAL"
+	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"		"juggernaut_omni_slash"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"			"1000"
+	"AbilityCastPoint"			"0.3 0.3 0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"			"0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"			"90"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+		"particle"	"particles/units/heroes/hero_juggernaut/juggernaut_omni_slash_tgt.vpcf"
+		"particle"	"particles/units/heroes/hero_juggernaut/juggernaut_omni_slash_trail.vpcf"
+	}
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+    }
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"  	"heroes/yondaime_alternate/hiraishin.lua"
+			"Function"    	"hiraishin"
+			
+			"Target"		"POINT"
+			"Range"			"1000"
+		}
+	}
+	
+	"Modifiers"
+	{
+	}
+}
