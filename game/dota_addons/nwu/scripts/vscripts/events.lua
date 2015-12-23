@@ -32,6 +32,12 @@ function GameMode:OnGameRulesStateChange(keys)
   -- This internal handling is used to set up main barebones functions
   GameMode:_OnGameRulesStateChange(keys)
   local newState = GameRules:State_Get()
+
+  if newState == 4 then
+     local shopkeeper = Entities:FindByModel(nil, "models/heroes/shopkeeper/shopkeeper.vmdl")
+     shopkeeper:SetModelScale(3.0)
+  end
+   
   --This function controls the music on each gamestate
   GameMode:PlayGameMusic(newState)
 end

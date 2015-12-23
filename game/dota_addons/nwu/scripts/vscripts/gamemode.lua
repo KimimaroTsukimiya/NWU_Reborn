@@ -102,8 +102,6 @@ end
 function GameMode:OnGameInProgress()
   DebugPrint("[BAREBONES] The game has officially begun")
 
-
-
 end
 
 -- This function initializes the game mode and is called before anyone loads into the game
