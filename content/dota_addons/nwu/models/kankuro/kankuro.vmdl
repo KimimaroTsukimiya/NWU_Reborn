@@ -9,7 +9,7 @@
 			{
 				_class = "CVmesh"
 				m_meshName = "kankuro"
-				m_meshFile = "models/kankuro/kankuro.fbx"
+				m_meshFile = "models/kankuro/kankuro.smd"
 				m_materialSearchPath = ""
 				m_bSkinParentedObjects = true
 				m_bLegacySkinParentedTransforms = false
@@ -75,96 +75,15 @@
 								m_sBoneName = "bone_CHEST"
 								m_vMinBounds =
 								[
-									-70.546204,
-									-13.233300,
-									-35.146000,
+									-57.546200,
+									-63.233299,
+									-85.146004,
 								]
 								m_vMaxBounds =
 								[
-									18.450783,
-									26.598099,
-									11.263016,
-								]
-								m_bTranslationOnly = false
-								m_cRenderColor =
-								[
-									0,
-									0,
-									0,
-									0,
-								]
-							},
-							{
-								_class = "CVhitBox"
-								m_name = "bone_pl_1"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_pl_1"
-								m_vMinBounds =
-								[
-									0.039701,
-									-8.367788,
-									-6.712997,
-								]
-								m_vMaxBounds =
-								[
-									22.925997,
-									7.532000,
-									4.865997,
-								]
-								m_bTranslationOnly = false
-								m_cRenderColor =
-								[
-									0,
-									0,
-									0,
-									0,
-								]
-							},
-							{
-								_class = "CVhitBox"
-								m_name = "bone_pl_2"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_pl_2"
-								m_vMinBounds =
-								[
-									-22.991196,
-									-7.835279,
-									-6.994003,
-								]
-								m_vMaxBounds =
-								[
-									-0.087801,
-									8.064509,
-									4.584991,
-								]
-								m_bTranslationOnly = false
-								m_cRenderColor =
-								[
-									0,
-									0,
-									0,
-									0,
-								]
-							},
-							{
-								_class = "CVhitBox"
-								m_name = "bone_n_1"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_n_1"
-								m_vMinBounds =
-								[
-									-7.240202,
-									-11.792700,
-									-25.890701,
-								]
-								m_vMaxBounds =
-								[
-									10.466398,
-									10.822998,
-									8.077599,
+									68.450798,
+									56.598099,
+									21.263000,
 								]
 								m_bTranslationOnly = false
 								m_cRenderColor =
@@ -183,14 +102,14 @@
 								m_sBoneName = "bone_n_2"
 								m_vMinBounds =
 								[
-									-11.471466,
-									-13.349199,
+									-11.471472,
+									-13.349198,
 									-26.580696,
 								]
 								m_vMaxBounds =
 								[
-									7.406425,
-									11.857199,
+									7.406422,
+									11.857198,
 									8.579704,
 								]
 								m_bTranslationOnly = false
@@ -204,21 +123,21 @@
 							},
 							{
 								_class = "CVhitBox"
-								m_name = "bone_ruke_1"
+								m_name = "bone_n_1"
 								m_sSurfaceProperty = ""
 								m_nGroupId = 0
-								m_sBoneName = "bone_ruke_1"
+								m_sBoneName = "bone_n_1"
 								m_vMinBounds =
 								[
-									1.193100,
-									-5.468570,
-									-6.002014,
+									-7.240207,
+									-11.792698,
+									-25.890701,
 								]
 								m_vMaxBounds =
 								[
-									22.733700,
-									6.184608,
-									3.887985,
+									10.466393,
+									10.822998,
+									8.077599,
 								]
 								m_bTranslationOnly = false
 								m_cRenderColor =
@@ -231,21 +150,21 @@
 							},
 							{
 								_class = "CVhitBox"
-								m_name = "bone_ruka_2"
+								m_name = "bone_pl_2"
 								m_sSurfaceProperty = ""
 								m_nGroupId = 0
-								m_sBoneName = "bone_ruka_2"
+								m_sBoneName = "bone_pl_2"
 								m_vMinBounds =
 								[
-									-23.855705,
-									-5.734819,
-									-5.450012,
+									-22.991211,
+									-7.835279,
+									-6.994003,
 								]
 								m_vMaxBounds =
 								[
-									-2.353504,
-									5.918358,
-									4.439987,
+									-0.087814,
+									8.064508,
+									4.584991,
 								]
 								m_bTranslationOnly = false
 								m_cRenderColor =
@@ -258,21 +177,21 @@
 							},
 							{
 								_class = "CVhitBox"
-								m_name = "bone_koleno_1"
+								m_name = "bone_pl_1"
 								m_sSurfaceProperty = ""
 								m_nGroupId = 0
-								m_sBoneName = "bone_koleno_1"
+								m_sBoneName = "bone_pl_1"
 								m_vMinBounds =
 								[
-									-5.441830,
-									-12.223598,
-									-43.251114,
+									0.039686,
+									-8.367788,
+									-6.712997,
 								]
 								m_vMaxBounds =
 								[
-									12.022507,
-									9.568030,
-									-2.933811,
+									22.925982,
+									7.531999,
+									4.865997,
 								]
 								m_bTranslationOnly = false
 								m_cRenderColor =
@@ -291,15 +210,204 @@
 								m_sBoneName = "bone_koleno_2"
 								m_vMinBounds =
 								[
-									-11.456997,
+									-11.457003,
 									-13.891499,
-									-44.028008,
+									-44.027996,
 								]
 								m_vMaxBounds =
 								[
-									7.577496,
-									12.070000,
-									-3.710709,
+									7.577492,
+									12.069998,
+									-3.710697,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_koleno_1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_koleno_1"
+								m_vMinBounds =
+								[
+									-5.441835,
+									-12.223598,
+									-43.251102,
+								]
+								m_vMaxBounds =
+								[
+									12.022501,
+									9.568027,
+									-2.933804,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_ruka_2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_ruka_2"
+								m_vMinBounds =
+								[
+									-23.855713,
+									-5.734819,
+									-5.450012,
+								]
+								m_vMaxBounds =
+								[
+									-2.353512,
+									5.918358,
+									4.439987,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_ruke_1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_ruke_1"
+								m_vMinBounds =
+								[
+									1.193089,
+									-5.468569,
+									-6.002014,
+								]
+								m_vMaxBounds =
+								[
+									22.733688,
+									6.184608,
+									3.887985,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_st_2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_st_2"
+								m_vMinBounds =
+								[
+									-5.001414,
+									-14.719298,
+									-10.434113,
+								]
+								m_vMaxBounds =
+								[
+									3.961235,
+									4.230430,
+									-1.273216,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_st_1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_st_1"
+								m_vMinBounds =
+								[
+									-3.961254,
+									-14.719298,
+									-10.962616,
+								]
+								m_vMaxBounds =
+								[
+									5.001405,
+									4.230430,
+									-1.801720,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_kulak_2"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_kulak_2"
+								m_vMinBounds =
+								[
+									-18.237511,
+									-4.752689,
+									-4.929016,
+								]
+								m_vMaxBounds =
+								[
+									-6.172112,
+									4.030789,
+									1.908997,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "bone_kulak_1"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "bone_kulak_1"
+								m_vMinBounds =
+								[
+									4.439186,
+									-4.752689,
+									-4.929016,
+								]
+								m_vMaxBounds =
+								[
+									16.504585,
+									4.030789,
+									1.908997,
 								]
 								m_bTranslationOnly = false
 								m_cRenderColor =
@@ -319,122 +427,14 @@
 								m_vMinBounds =
 								[
 									-10.631698,
-									-10.402849,
-									-6.848022,
+									-10.402848,
+									-6.848007,
 								]
 								m_vMaxBounds =
 								[
 									10.631698,
-									10.882959,
-									24.186981,
-								]
-								m_bTranslationOnly = false
-								m_cRenderColor =
-								[
-									0,
-									0,
-									0,
-									0,
-								]
-							},
-							{
-								_class = "CVhitBox"
-								m_name = "bone_kulak_1"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_kulak_1"
-								m_vMinBounds =
-								[
-									4.439201,
-									-4.752689,
-									-4.929016,
-								]
-								m_vMaxBounds =
-								[
-									16.504601,
-									4.030789,
-									1.908997,
-								]
-								m_bTranslationOnly = false
-								m_cRenderColor =
-								[
-									0,
-									0,
-									0,
-									0,
-								]
-							},
-							{
-								_class = "CVhitBox"
-								m_name = "bone_kulak_2"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_kulak_2"
-								m_vMinBounds =
-								[
-									-18.237503,
-									-4.752690,
-									-4.929016,
-								]
-								m_vMaxBounds =
-								[
-									-6.172104,
-									4.030789,
-									1.908997,
-								]
-								m_bTranslationOnly = false
-								m_cRenderColor =
-								[
-									0,
-									0,
-									0,
-									0,
-								]
-							},
-							{
-								_class = "CVhitBox"
-								m_name = "bone_st_1"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_st_1"
-								m_vMinBounds =
-								[
-									-3.961249,
-									-14.719298,
-									-10.962624,
-								]
-								m_vMaxBounds =
-								[
-									5.001410,
-									4.230430,
-									-1.801726,
-								]
-								m_bTranslationOnly = false
-								m_cRenderColor =
-								[
-									0,
-									0,
-									0,
-									0,
-								]
-							},
-							{
-								_class = "CVhitBox"
-								m_name = "bone_st_2"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_st_2"
-								m_vMinBounds =
-								[
-									-5.001410,
-									-14.719299,
-									-10.434124,
-								]
-								m_vMaxBounds =
-								[
-									3.961239,
-									4.230431,
-									-1.273227,
+									10.882958,
+									24.186996,
 								]
 								m_bTranslationOnly = false
 								m_cRenderColor =
@@ -454,6 +454,117 @@
 	]
 	m_pAttachmentLists =
 	[
+		{
+			_class = "CVattachmentListReference"
+			m_pObject =
+			{
+				_class = "CVattachmentList"
+				m_name = ""
+				m_attachments =
+				[
+					{
+						_class = "CVattachment"
+						m_name = "attach_origin"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "m3bone_root"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_hitloc"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_CHEST"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_left_hand"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_kulak_1"
+								m_vTranslationOffset =
+								[
+									10.678955,
+									-0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									-0.000000,
+									-0.000001,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_right_hand"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "bone_kulak_2"
+								m_vTranslationOffset =
+								[
+									-9.015831,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									-0.000000,
+									-0.000001,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+				]
+			}
+		},
 	]
 	m_pAnimGroup =
 	{
@@ -484,10 +595,148 @@
 			[
 				{
 					_class = "CVanim"
-					m_Animationname = "kankuro_animations"
-					m_Filepath = "models/kankuro/kankuro_animations.FBX"
-					m_nStartframe = 0
-					m_nEndframe = 2875
+					m_Animationname = "kank_idle"
+					m_Filepath = "models/kankuro/kankuro_animations.smd"
+					m_nStartframe = 32
+					m_nEndframe = 63
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = true
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_IDLE"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "kank_run"
+					m_Filepath = "models/kankuro/kankuro_animations.smd"
+					m_nStartframe = 469
+					m_nEndframe = 501
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = true
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_RUN"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "kank_die"
+					m_Filepath = "models/kankuro/kankuro_animations.smd"
+					m_nStartframe = 623
+					m_nEndframe = 657
 					m_flFps = 30.000000
 					m_Loop =
 					{
@@ -507,6 +756,356 @@
 					m_bDisable = false
 					m_Activities =
 					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_DIE"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "kank_attack_01"
+					m_Filepath = "models/kankuro/kankuro_animations.smd"
+					m_nStartframe = 161
+					m_nEndframe = 184
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_ATTACK"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "kank_attack_02"
+					m_Filepath = "models/kankuro/kankuro_animations.smd"
+					m_nStartframe = 221
+					m_nEndframe = 248
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_ATTACK2"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "kank_cast_1"
+					m_Filepath = "models/kankuro/kankuro_animations.smd"
+					m_nStartframe = 347
+					m_nEndframe = 373
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_CAST_ABILITY_1"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "kank_cast_2"
+					m_Filepath = "models/kankuro/kankuro_animations.smd"
+					m_nStartframe = 347
+					m_nEndframe = 373
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_CAST_ABILITY_2"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "kank_cast_4"
+					m_Filepath = "models/kankuro/kankuro_animations.smd"
+					m_nStartframe = 347
+					m_nEndframe = 373
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_CAST_ABILITY_4"
+							m_nWeight = 1
+						},
 					]
 					m_AnimationEvents =
 					[
@@ -605,7 +1204,7 @@
 		[
 			{
 				_class = "CVMaterialRemap"
-				m_sSearchMaterial = "milkshapeexported1.vmat"
+				m_sSearchMaterial = "undefined.vmat"
 				m_sReplaceMaterial = "materials/kankuro/kankuro.vmat"
 			},
 		]

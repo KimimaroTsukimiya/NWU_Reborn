@@ -1,7 +1,7 @@
 "npc_dota_hero_warlock" //kankuro
 {
   "override_hero"   "npc_dota_hero_warlock"
-  //"Model"           ""
+  "Model"           "models/kankuro/kankuro.vmdl"
   "Ability1"        "kankuro_summon_kuroari"
   "Ability2"        "kankuro_summon_karasu"
   //"Ability3"        ""

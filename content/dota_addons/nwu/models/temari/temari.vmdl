@@ -1,155 +1,144 @@
-<!-- schema text {7e125a45-3d83-4043-b292-9e24f8ef27b4} generic {198980d8-3a93-4919-b4c6-dd1fb07a3a4b} -->
-CVModel CVModel_0
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 {
-	CVmeshList m_meshList = CVmeshList
+	_class = "CVModel"
+	m_meshList =
 	{
-		CVmesh[] m_meshList = 
+		_class = "CVmeshList"
+		m_meshList =
 		[
-			CVmesh
 			{
-				string m_meshName = "temari"
-				string m_meshFile = "models/temari/temari.fbx"
-				string m_materialSearchPath = ""
-				bool m_bSkinParentedObjects = true
-				bool m_bLegacySkinParentedTransforms = false
-				bool m_bExpensiveTangents = false
-				bool m_bExpensiveVertices = false
-				bool m_bIgnoreCloth = false
-				bool m_bGetSkinningFromLod0 = false
-				CVmorphInfo* m_pMorphInfo = NULL
-			}
+				_class = "CVmesh"
+				m_meshName = "temari"
+				m_meshFile = "models/temari/temari.smd"
+				m_materialSearchPath = ""
+				m_bSkinParentedObjects = true
+				m_bLegacySkinParentedTransforms = false
+				m_bExpensiveTangents = false
+				m_bExpensiveVertices = false
+				m_bIgnoreCloth = false
+				m_bGetSkinningFromLod0 = false
+				m_pMorphInfo = null
+			},
 		]
 	}
-	CVClothProxyMeshList m_clothProxyMeshList = CVClothProxyMeshList
+	m_clothProxyMeshList =
 	{
-		CVClothProxyMesh[] m_clothProxyMeshList = 
+		_class = "CVClothProxyMeshList"
+		m_flClothEnableThreshold = 0.050000
+		m_bCreateStaticBone = false
+		m_nMaxBonesPerVertex = 4
+		m_bRemoveUnusedBonesEnabled = false
+		m_bDriveMeshesWithBacksolvedJointsOnly = true
+		m_flMatchProxiesToMeshes = 1.000000
+		m_flReservedFloat = 0.000000
+		m_nReservedInt = 0
+		m_bReservedBool1 = false
+		m_bReservedBool2 = false
+		m_bReservedBool3 = false
+		m_bReservedBool4 = false
+		m_clothProxyMeshList =
 		[
-			
 		]
-		float m_flClothEnableThreshold = 0.050000
-		bool m_bCreateStaticBone = false
-		int m_nMaxBonesPerVertex = 4
-		bool m_bRemoveUnusedBonesEnabled = false
-		bool m_bDriveMeshesWithBacksolvedJointsOnly = true
-		float m_flMatchProxiesToMeshes = 1.000000
-		float m_flReservedFloat = 0.000000
-		int m_nReservedInt = 0
-		bool m_bReservedBool1 = false
-		bool m_bReservedBool2 = false
-		bool m_bReservedBool3 = false
-		bool m_bReservedBool4 = false
 	}
-	CVphysicsMeshList m_physicsMeshList = CVphysicsMeshList
+	m_physicsMeshList =
 	{
-		CVphysicsMesh[] m_meshList = 
+		_class = "CVphysicsMeshList"
+		m_meshList =
 		[
-			
 		]
 	}
-	CVmodelInfo* m_pModelInfo = NULL
-	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
+	m_pModelInfo = null
+	m_pBoneFlagList =
 	{
-		CVBoneFlagList* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVBoneFlagListReference"
+		m_pObject = null
 	}
-	CVhitBoxSetListReference[] m_pHitBoxSetLists = 
+	m_pHitBoxSetLists =
 	[
-		
 	]
-	CVattachmentListReference[] m_pAttachmentLists = 
+	m_pAttachmentLists =
 	[
-		
 	]
-	CVanimGroupReference m_pAnimGroup = CVanimGroupReference
+	m_pAnimGroup =
 	{
-		CVanimGroup* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVanimGroupReference"
+		m_pObject = null
 	}
-	CVNodeMaterialGroupListReference m_pMaterialGroupList = CVNodeMaterialGroupListReference
+	m_pMaterialGroupList =
 	{
-		NodeMaterialGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVNodeMaterialGroupListReference"
+		m_pObject = null
 	}
-	CVMeshGroupListReference m_pMeshGroupList = CVMeshGroupListReference
+	m_pMeshGroupList =
 	{
-		MeshGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVMeshGroupListReference"
+		m_pObject = null
 	}
-	CVLODGroupListReference m_pLodGroupList = CVLODGroupListReference
+	m_pLodGroupList =
 	{
-		LODGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVLODGroupListReference"
+		m_pObject = null
 	}
-	CVpropBreakableListReference m_pPropBreakableList = CVpropBreakableListReference
+	m_pPropBreakableList =
 	{
-		CVpropBreakableList* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVpropBreakableListReference"
+		m_pObject = null
 	}
-	CVpropDataListReference m_pPropDataList = CVpropDataListReference
+	m_pPropDataList =
 	{
-		CVpropDataList* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVpropDataListReference"
+		m_pObject = null
 	}
-	CVConstraintListReference[] m_pConstraintLists = 
+	m_pConstraintLists =
 	[
-		
 	]
-	string m_collision = ""
-	string m_softbody = ""
-	string m_sMDLFilename = ""
-	string[] m_sOffsetHitboxSets = 
+	m_collision = ""
+	m_softbody = ""
+	m_sMDLFilename = ""
+	m_sOffsetHitboxSets =
 	[
-		
 	]
-	float(3) m_vHitboxSetOffset = ( 0.000000, 0.000000, 0.000000 )
-	string[] m_scriptFiles = 
+	m_vHitboxSetOffset =
 	[
-		
+		0.000000,
+		0.000000,
+		0.000000,
 	]
-	CVMaterialRemapList* m_pMaterialRemapList = &CVMaterialRemapList_0
-	float m_flFbxScale = 1.000000
-	float m_flQCScale = 1.000000
-	float(3) m_vOrigin = ( 0.000000, 0.000000, 0.000000 )
-	CVPsfList* m_pPsfList = NULL
-	string m_keyValueText = ""
-	bool m_bStaticProp = false
-	bool m_bEnableClothProcessing = true
-	float m_flClothEnableThreshold = 0.050000
-	int m_nMaxClothVertsPerMesh = 2048
-	bool m_bBuildClothBoneHierarchy = false
-	symbol m_nNavType = AUTH_NAV_MESH
-	bool m_bMakeUniqueVMeshes = false
-	bool m_bMakeImplicitBindPoseSequence = false
-	bool m_bAdjustSkeletonFromBoneFlags = false
-	CVanimGroupReference[] m_pAnimGroups = 
+	m_scriptFiles =
 	[
-		
 	]
-}
-
-CVMaterialRemapList CVMaterialRemapList_0
-{
-	CVMaterialRemap[] m_vMaterialRemapList = 
+	m_pMaterialRemapList =
+	{
+		_class = "CVMaterialRemapList"
+		m_vMaterialRemapList =
+		[
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "undefined.vmat"
+				m_sReplaceMaterial = "materials/temari/temari.vmat"
+			},
+		]
+	}
+	m_flFbxScale = 1.000000
+	m_flQCScale = 1.000000
+	m_vOrigin =
 	[
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "milkshapeexported1.vmat"
-			string m_sReplaceMaterial = "materials/temari/temari.vmat"
-		},
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "milkshapeexported2.vmat"
-			string m_sReplaceMaterial = "materials/temari/temari.vmat"
-		},
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "milkshapeexported3.vmat"
-			string m_sReplaceMaterial = "materials/temari/fan.vmat"
-		},
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "milkshapeexported4.vmat"
-			string m_sReplaceMaterial = "materials/temari/fan.vmat"
-		}
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_pPsfList = null
+	m_keyValueText = ""
+	m_bStaticProp = false
+	m_bEnableClothProcessing = true
+	m_flClothEnableThreshold = 0.050000
+	m_nMaxClothVertsPerMesh = 2048
+	m_bBuildClothBoneHierarchy = false
+	m_nNavType = "AUTH_NAV_MESH"
+	m_bMakeUniqueVMeshes = false
+	m_bMakeImplicitBindPoseSequence = false
+	m_bAdjustSkeletonFromBoneFlags = false
+	m_pAnimGroups =
+	[
 	]
 }
