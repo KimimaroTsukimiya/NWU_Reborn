@@ -55,6 +55,12 @@
             "var_type" "FIELD_FLOAT"
             "bonus_damage" "7 7 7 7"
         }
+
+          "04"
+        {
+            "var_type" "FIELD_FLOAT"
+            "bonus_damage_tooltip" "7 14 21 28"
+        }
     }
 
     "OnSpellStart"
