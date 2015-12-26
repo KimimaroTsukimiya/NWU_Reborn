@@ -35,7 +35,9 @@ function GameMode:OnGameRulesStateChange(keys)
 
   if newState == 4 then
      local shopkeeper = Entities:FindByModel(nil, "models/heroes/shopkeeper/shopkeeper.vmdl")
-     shopkeeper:SetModelScale(3.0)
+     shopkeeper:SetModelScale(2.4)
+     local shopkeeper_dire = Entities:FindByModel(nil, "models/heroes/shopkeeper_dire/shopkeeper_dire.vmdl")
+     shopkeeper_dire:SetModelScale(2.4)
   end
    
   --This function controls the music on each gamestate

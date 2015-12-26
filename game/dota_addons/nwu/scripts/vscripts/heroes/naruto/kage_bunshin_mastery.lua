@@ -35,8 +35,11 @@ function naruto_kage_bunshin_mastery:CastFilterResultTarget( target )
 	local ability = self
 	local caster = ability:GetCaster()
 
+
+	print(target:GetName())
+	print(caster:GetName())
 	-- Check illusion target
-	if target:IsIllusion() and target:GetTeamNumber() == caster:GetTeamNumber() and caster == target:GetOwner() then 
+	if target:IsIllusion() and target:GetTeamNumber() == caster:GetTeamNumber() and caster:GetName() == target:GetName() then 
 		return UF_SUCCESS
 	else
 		return UF_FAIL_CUSTOM
@@ -49,7 +52,7 @@ function naruto_kage_bunshin_mastery:GetCustomCastErrorTarget( target )
 	local caster = ability:GetCaster()
 
 	-- Check illusion target
-	if target:IsIllusion() and target:GetTeamNumber() == caster:GetTeamNumber() and caster == target:GetOwner() then 
+	if target:IsIllusion() and target:GetTeamNumber() == caster:GetTeamNumber() and caster:GetName() == target:GetName() then 
 		return ""
 	else
 		return "#error_must_target_owner_illusion"

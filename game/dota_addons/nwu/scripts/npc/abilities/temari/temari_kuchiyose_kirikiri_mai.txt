@@ -76,6 +76,11 @@
 			"var_type"					"FIELD_INTEGER"
 			"cyclone_max_height"		"400"
 		}
+		"10"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"cyclone_count_tooltips"		"5"
+		}
 	}
 	
 	"OnSpellStart"

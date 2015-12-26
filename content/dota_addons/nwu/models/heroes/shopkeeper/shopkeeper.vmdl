@@ -1151,12 +1151,12 @@
 			{
 				_class = "CVMaterialRemap"
 				m_sSearchMaterial = "02_-_eyes.vmat"
-				m_sReplaceMaterial = "materials/secret_shop/shopkeeper_2.vmat"
+				m_sReplaceMaterial = "materials/secret_shop/ss_radiant_eyes.vmat"
 			},
 			{
 				_class = "CVMaterialRemap"
 				m_sSearchMaterial = "01_-_body.vmat"
-				m_sReplaceMaterial = "materials/secret_shop/shopkeeper_1.vmat"
+				m_sReplaceMaterial = "materials/secret_shop/ss_radiant_body.vmat"
 			},
 		]
 	}
