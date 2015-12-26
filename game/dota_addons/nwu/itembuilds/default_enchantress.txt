@@ -21,13 +21,15 @@
 		"#DOTA_Item_Build_Early_Game"
 		{
 			"item"			"item_flying_courier"
-			"item"			"item_jiraiyas_sandals"
+			"item"			"item_idates_sandals"
 			"item"          "item_sakuras_fighting_gloves"
 			"item"          "item_ward_observer"
 			"item"   		"item_ward_sentry"
 		}
 		"#DOTA_Item_Build_Core_Items"
 		{
+			"item"			"item_jiraiyas_sandals"
+			"item"			"item_yondaime_sealed_kunai"
 			"item"			"item_sage_scroll"
 			"item"          "item_ward_observer"
 			"item"   		"item_ward_sentry"

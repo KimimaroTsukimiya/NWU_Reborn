@@ -49,6 +49,12 @@
 	"OnSpellStart"
 	{
 
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/temari/temari_sheer_wind.lua"
+			"Function"		"sheer_wind_call"
+		}
+
 		"TrackingProjectile"
 		{
 			"Target"           	"TARGET"

@@ -59,7 +59,7 @@
 		"06"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"base_damage"			"85 150 215 280"
+			"base_damage"			"70 120 170"
 		}
 		"07"
 		{
@@ -85,6 +85,13 @@
 	
 	"OnSpellStart"
 	{
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/temari/temari_sheer_wind.lua"
+			"Function"		"sheer_wind_call"
+		}
+		
 		"RunScript"
 		{
 			"ScriptFile"								"heroes/temari/temari_kuchiyose_kirikiri_mai.lua"
