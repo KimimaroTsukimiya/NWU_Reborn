@@ -74,6 +74,11 @@
           {
             "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%movementspeed_cast_percent"
           }
+		  
+		  "States"
+			{
+				"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
       }
     }
     // Special  

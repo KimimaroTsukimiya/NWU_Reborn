@@ -4,7 +4,7 @@
     // ----------------------------------------------------------------------------------------
     "BaseClass"              "ability_datadriven"
     "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "AbilityTextureName"     "spirit_breaker_empowering_haste"
+    "AbilityTextureName"     "yondaime_yellow_flash"
 
     "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
     "MaxLevel"               "4"

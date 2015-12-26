@@ -6,7 +6,7 @@
     "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
     "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
-    "AbilityTextureName"        "raikage_raiton_no_yoroi" //TODO
+    "AbilityTextureName"        "yondaime_rasengan"
 
     "AbilityDamage"            "75.0 125.0 175.0 225.0"
 
