@@ -19,7 +19,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"particle"			"particles/units/heroes/temari/invoker_tornado.vpcf"
+		"particle"			"particles/units/heroes/hero_chaos_knight/chaos_knight_chaos_bolt.vpcf"
 	}
 	
 	// Casting
@@ -52,7 +52,7 @@
 		"TrackingProjectile"
 		{
 			"Target"           	"TARGET"
-			"EffectName"		"particles/units/heroes/hero_invoker/invoker_tornado.vpcf"
+			"EffectName"		"particles/units/heroes/hero_chaos_knight/chaos_knight_chaos_bolt.vpcf"
 			"Dodgeable"			"0"
 			"ProvidesVision"	"0"
 			"MoveSpeed"        	"%magic_missile_speed"
