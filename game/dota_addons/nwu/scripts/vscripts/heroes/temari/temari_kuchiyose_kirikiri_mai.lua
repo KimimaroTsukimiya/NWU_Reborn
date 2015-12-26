@@ -20,6 +20,8 @@ function temari_kuchiyose_kirikiri_mai_on_spell_start(keys)
 	local pointer_distance = math.sqrt((mouse_point.y - caster_point.y)^2 + (mouse_point.x - caster_point.x)^2)
 	local tornado_radius = keys.AreaOfEffect
 	local tornado_travel_distance = keys.ability:GetLevelSpecialValueFor("travel_distance", ability:GetLevel() - 1)
+	REALCASTER = keys.caster
+
 
 	--Create 5 Tornadoes & 5 Dummy Units, calculate where and when the Tornadoes projectile will end up.
 	for i = 0, 4 do
@@ -138,7 +140,10 @@ function temari_kuchiyose_kirikiri_mai_on_projectile_hit_unit(keys)
 	local burst_damage = ability:GetLevelSpecialValueFor("base_damage", ability:GetLevel() - 1)
 	keys.target:EmitSound("Hero_Invoker.Tornado.Target")
 
-	ApplyDamage({victim = keys.target, attacker = keys.caster, damage = burst_damage, damage_type = DAMAGE_TYPE_MAGICAL,})
+	print(REALCASTER)
+
+
+	ApplyDamage({victim = keys.target, attacker = REALCASTER, damage = burst_damage, damage_type = DAMAGE_TYPE_MAGICAL,})
 
 	--Stop the sound when the cycloning ends.
 	Timers:CreateTimer({

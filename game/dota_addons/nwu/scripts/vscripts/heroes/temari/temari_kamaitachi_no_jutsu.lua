@@ -14,6 +14,9 @@ function temari_kamaitachi_no_jutsu_on_spell_start(keys)
 	local ability = keys.ability
 	local caster = keys.caster
 
+	REALCASTER = caster
+	print(REALCASTER)
+
 	tornado_travel_distance = keys.ability:GetLevelSpecialValueFor("travel_distance", ability:GetLevel() - 1)
 	tornado_lift_duration = keys.ability:GetLevelSpecialValueFor("lift_duration",  ability:GetLevel() - 1)
 
@@ -147,8 +150,10 @@ function modifier_temari_kamaitachi_no_jutsu_on_destroy(keys)
 	if keys.target.temari_tornado_forward_vector ~= nil then
 		keys.target:SetForwardVector(keys.target.temari_tornado_forward_vector)
 	end
-	
-	ApplyDamage({victim = keys.target, attacker = keys.caster, damage = keys.BaseDamage, damage_type = DAMAGE_TYPE_MAGICAL,})
+	print(keys.target)
+	print(keys.BaseDamage)
+	print(REALCASTER)
+	ApplyDamage({victim = keys.target, attacker = REALCASTER, damage = keys.BaseDamage, damage_type = DAMAGE_TYPE_MAGICAL,})
 	
 	keys.target.temari_tornado_degrees_to_spin = nil
 end
