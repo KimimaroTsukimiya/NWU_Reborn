@@ -27,6 +27,6 @@
   "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
   "AttributeBaseAgility" "23" // Base agility
   "AttributeAgilityGain" "3.1" // Agility bonus per level.
-
+"Gender"      "male"
   "Village"			"kirigakure"
 }	

@@ -12,15 +12,14 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-	"AbilityCastAnimation" 			"ACT_DOTA_CAST_TORNADO"
 	"FightRecapLevel"				"1"
-	"AbilityTextureName"			""
+	"AbilityTextureName"			"temari_fusajin_no_jutsu"
 	
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"particle"			"particles/neutral_fx/tornado_ambient.vpcf"
+		"particle"			"particles/units/heroes/temari/invoker_tornado.vpcf"
 	}
 	
 	// Casting
@@ -49,31 +48,22 @@
 	}
 	"OnSpellStart"
 	{
-		"FireSound"
-		{
-			"EffectName"	"Hero_VengefulSpirit.MagicMissile"
-			"Target" 		"CASTER"
-		}
-		
+
 		"TrackingProjectile"
 		{
 			"Target"           	"TARGET"
-			"EffectName"		"particles/neutral_fx/tornado_ambient.vpcf"
+			"EffectName"		"particles/units/heroes/hero_invoker/invoker_tornado.vpcf"
 			"Dodgeable"			"0"
 			"ProvidesVision"	"0"
 			"MoveSpeed"        	"%magic_missile_speed"
-			"SourceAttachment"	"DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+			"SourceAttachment"	"attach_right_hand"
 		}		
 	}
 
 	"OnProjectileHitUnit"
 	{
 		"DeleteOnHit"	"1"
-		"FireSound"
-		{
-			"EffectName"	"Hero_VengefulSpirit.MagicMissileImpact"
-			"Target" 		"TARGET"
-		}
+
 
 		"Damage"
 		{

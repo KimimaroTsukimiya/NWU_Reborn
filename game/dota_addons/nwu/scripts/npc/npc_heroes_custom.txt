@@ -269,7 +269,7 @@
 	  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
 	  "AttributeBaseAgility" "23" // Base agility
 	  "AttributeAgilityGain" "3.1" // Agility bonus per level.
-	
+	"Gender"      "male"
 	  "Village"			"kirigakure"
 	}	
 	"npc_dota_hero_windrunner" //kidoumaru
@@ -616,9 +616,9 @@
 	  "Ability2"        "temari_kamaitachi_no_jutsu"
 	  "Ability3"        "temari_sheer_wind" 
 	  "Ability4"        "temari_kuchiyose_kirikiri_mai"
-	  "ModelScale"		"1.08"
-	  "LoadoutScale"	"1.08" 
-	  //"Model" 		"models/zabuza/zabuza.vmdl"
+	  "ModelScale"		"1.75"
+	  "LoadoutScale"	"1.75" 
+	  "Model" 		"models/temari/temari.vmdl"
 	  "ItemSlots"
 	  { }
 	    "StatusHealth"    "145"
@@ -629,19 +629,19 @@
 	    "Rolelevels"  "1,1,3,1"
 	    "AttackDamageMax"   "20"
 	    "AttackRate"    "1.700000"
-	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 	  "AttackAnimationPoint"		"0.4"
 	 // "AttackRate"				"1.0"
-	  "AttackRange"				"100"
-	  "MovementSpeed"			"300"
+	  "AttackRange"				"575"
+	  "MovementSpeed"			"295"
 	  "AttributeBaseStrength" "17" // Base strength
-	  "AttributeStrengthGain" "2" // Strength bonus per level.
-	  "AttributeBaseIntelligence" "15" // Base intelligence
-	  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
-	  "AttributeBaseAgility" "23" // Base agility
-	  "AttributeAgilityGain" "3.1" // Agility bonus per level.
+	  "AttributeStrengthGain" "1.7" // Strength bonus per level.
+	  "AttributeBaseIntelligence" "21" // Base intelligence
+	  "AttributeIntelligenceGain" "2.8" // Intelligence bonus per level.
+	  "AttributeBaseAgility" "14" // Base agility
+	  "AttributeAgilityGain" "1.5" // Agility bonus per level.
 	
 	  "Village"			"kirigakure"
+	  "Gender"      "female"  
 	}	
 	"npc_dota_hero_juggernaut" //yondaime
 	{
