@@ -39,7 +39,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"travel_speed"			"1000"
+			"travel_speed"			"800"
 		}
 		"03"
 		{

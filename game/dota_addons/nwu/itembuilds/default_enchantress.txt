@@ -21,7 +21,7 @@
 		"#DOTA_Item_Build_Early_Game"
 		{
 			"item"			"item_flying_courier"
-			"item"			"item_idates_sandals"
+			"item"			"item_shinobi_sandals"
 			"item"          "item_sakuras_fighting_gloves"
 			"item"          "item_ward_observer"
 			"item"   		"item_ward_sentry"
