@@ -112,7 +112,6 @@
 		{
 			"ScriptFile"		"heroes/temari/temari_kamaitachi_no_jutsu.lua"
 			"Function"			"temari_kamaitachi_no_jutsu_on_projectile_hit_unit"
-			"BaseDamage"		"%base_damage"
 		}
 	}
 	

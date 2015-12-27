@@ -149,6 +149,7 @@ function GameMode:RemoveWearables( hero )
     local model = hero:FirstMoveChild()
     while model ~= nil do
         if model ~= nil and model:GetClassname() ~= "" and model:GetClassname() == "dota_item_wearable" then
+          print(model:GetName())
             --print(model:GetModelName())
             table.insert(wearables, model)
         end
