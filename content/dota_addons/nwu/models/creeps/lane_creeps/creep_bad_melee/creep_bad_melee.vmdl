@@ -1602,11 +1602,6 @@
 					m_bDisable = false
 					m_Activities =
 					[
-						{
-							_class = "CActivity"
-							m_Name = "ACT_DOTA_RUN"
-							m_nWeight = 1
-						},
 					]
 					m_AnimationEvents =
 					[
@@ -1667,8 +1662,8 @@
 					m_Animationname = "zetsu_attack"
 					m_Filepath = "models/creeps/zetsu_attack.fbx"
 					m_nStartframe = 0
-					m_nEndframe = 100
-					m_flFps = 30.000000
+					m_nEndframe = 65
+					m_flFps = 53.000000
 					m_Loop =
 					{
 						_class = "CAnimationLoop"
@@ -1844,6 +1839,91 @@
 						{
 							_class = "CActivity"
 							m_Name = "ACT_DOTA_SPAWN"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+						{
+							_class = "CMotionFrame"
+							m_nFrame = 0
+							m_bExtractTX = true
+							m_bExtractTY = true
+							m_bExtractTZ = false
+							m_bExtractRX = false
+							m_bExtractRY = false
+							m_bExtractRZ = false
+							m_bDiscardTX = false
+							m_bDiscardTY = false
+							m_bDiscardTZ = false
+							m_bDiscardRX = false
+							m_bDiscardRY = false
+							m_bDiscardRZ = false
+						},
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "run"
+					m_Filepath = "models/creeps/lane_creeps/creep_bad_melee/run.fbx"
+					m_nStartframe = 0
+					m_nEndframe = 19
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = true
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_RUN"
 							m_nWeight = 1
 						},
 					]

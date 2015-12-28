@@ -44,6 +44,7 @@ function GameMode:OnGameRulesStateChange(keys)
   GameMode:PlayGameMusic(newState)
 end
 
+
 -- An NPC has spawned somewhere in game.  This includes heroes
 function GameMode:OnNPCSpawned(keys)
     local npc = EntIndexToHScript(keys.entindex)

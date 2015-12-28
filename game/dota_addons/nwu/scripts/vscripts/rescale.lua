@@ -4,7 +4,10 @@ function GameMode:RescaleUnit( unit )
     elseif  unit:GetName() == "npc_dota_courier" then 
     	GameMode:rescaleCourier(unit)
     elseif  unit:GetModelName() == "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl" then 
-    	unit:SetModelScale(2.0)
+    	--unit:SetModelScale(2.0)
+    elseif  unit:GetModelName() == "models/props_gameplay/donkey_wings.vmdl" then 
+    	print("test")
+    	unit:SetModelScale(5.0)
     else                 
     	
     end
