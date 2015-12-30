@@ -246,7 +246,7 @@
 	  "Model"           "models/kankuro/kankuro.vmdl"
 	  "Ability1"        "kankuro_summon_kuroari"
 	  "Ability2"        "kankuro_summon_karasu"
-	  //"Ability3"        ""
+	  "Ability3"        "kankuro_kugusta_no_jutsu"
 	  "Ability4"        "kankuro_summon_sanshouuo"      
 	  "ModelScale"		"0.80"
 	  "LoadoutScale"	"0.80" 
@@ -261,14 +261,14 @@
 	  "AttackDamageMax"   "31"
 	  "AttackRate"    "1.700000"
 	
-	  "AttackRange"				"100"
-	  "MovementSpeed"			"300"
-	  "AttributeBaseStrength" "17" // Base strength
-	  "AttributeStrengthGain" "2" // Strength bonus per level.
-	  "AttributeBaseIntelligence" "15" // Base intelligence
-	  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
-	  "AttributeBaseAgility" "23" // Base agility
-	  "AttributeAgilityGain" "3.1" // Agility bonus per level.
+	  "AttackRange"				"500"
+	  "MovementSpeed"			"290"
+	  "AttributeBaseStrength" "19" // Base strength
+	  "AttributeStrengthGain" "2.1" // Strength bonus per level.
+	  "AttributeBaseIntelligence" "21" // Base intelligence
+	  "AttributeIntelligenceGain" "3" // Intelligence bonus per level.
+	  "AttributeBaseAgility" "15" // Base agility
+	  "AttributeAgilityGain" "1.25" // Agility bonus per level.
 	"Gender"      "male"
 	  "Village"			"kirigakure"
 	}	

@@ -16,7 +16,7 @@
 		"particle"		"particles/units/heroes/hero_invoker/invoker_forge_spirit_ambient.vpcf"
 		"particle"		"particles/units/heroes/hero_invoker/invoker_forge_spirit_death.vpcf"
 		"particle"		"particles/units/heroes/hero_invoker/invoker_forged_spirit_projectile.vpcf"
-		"model"			"models/heroes/invoker/forge_spirit.vmdl"
+		"model"			"models/kankuro/karasu.vmdl"
 	}
 
 	// Casting

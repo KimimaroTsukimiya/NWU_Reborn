@@ -24,7 +24,7 @@ function dismantle_parts( keys )
 		parts_unit:CreatureLevelUp(1)
 		parts_unit:FindAbilityByName("parts_jutsu_resistance"):SetLevel(1)
 		parts_unit:FindAbilityByName("parts_poison"):SetLevel(1)
-
+		parts_unit:SetOwner(keys.caster:GetOwner())
 		--Stores the unit for tracking
 		parts_unit:SetControllableByPlayer(player, true)
 

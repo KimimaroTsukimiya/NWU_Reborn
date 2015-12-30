@@ -9,7 +9,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"FightRecapLevel"				"1"
-	"AbilityTextureName"			""
+	"AbilityTextureName"			"karasu_dismantle_parts"
 	
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@
 		"particle"		"particles/units/heroes/hero_invoker/invoker_forge_spirit_ambient.vpcf"
 		"particle"		"particles/units/heroes/hero_invoker/invoker_forge_spirit_death.vpcf"
 		"particle"		"particles/units/heroes/hero_invoker/invoker_forged_spirit_projectile.vpcf"
-		"model"			"models/heroes/invoker/forge_spirit.vmdl"
+		"model"			"models/heroes/clinkz/clinkz_arrow.vmdl"
 	}
 
 	// Casting

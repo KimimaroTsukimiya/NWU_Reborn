@@ -8,6 +8,7 @@
 	"BaseClass"				"ability_datadriven"
 	"MaxLevel"				"1"
 	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "AbilityTextureName"      "karasu_critical_strike"
 	
     //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"

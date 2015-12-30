@@ -8,7 +8,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityTextureName"			""
+	"AbilityTextureName"			"parts_poison"
 	"MaxLevel"						"1"
 		
 	// Special	
@@ -42,61 +42,68 @@
 		}
 	}
 	
-	"OnUpgrade"
+	"precache"
 	{
-		"RunScript"
-		{
-			"ScriptFile"					"heroes/kankuro/parts_poison.lua"
-			"Function"						"parts_poison"
-			"modifier_name" 				"modifier_parts_poison_attack_melee"
-		}
+
+		"particle"		"particles/items2_fx/orb_of_venom.vpcf"
+		
 	}
 	
+
+
 	"Modifiers"
 	{
 		"modifier_parts_poison_attack_melee"
 		{
-			"Duration"				"%poison_duration"
-			"Passive"				"0"
+			"Passive"				"1"
 			"IsHidden"				"0"
-			"IsBuff"				"0"
-			"IsDebuff"				"1"
-			"IsPurgable"			"1"
+			"IsBuff"				"1"
+			"IsDebuff"				"0"
+			"IsPurgable"			"0"
 			
-			"EffectName"			"Hero_Brewmaster.ThunderClap.Target"
-			"EffectAttachType"		"follow_origin"
-			"Target"    "TARGET"
-			
-			"OnAttack"
+			"OnCreated"
 			{
-				"RunScript"
-				{
-					"ScriptFile"					"heroes/kankuro/parts_poison.lua"
-					"Function"						"modifier_parts_poison_attack"
-					"PoisonDamagePerSecond"			"%poison_damage_per_second"
-					"PoisonDamageInterval"			"%poison_damage_interval"
-				}
-				
 				"ApplyModifier"
 				{
-					"ModifierName"	"modifier_parts_poison_slow"
-					"Target" 		"TARGET"
-					"Duration"		"%poison_duration"
-				}
-				
-				"ApplyModifier"
-				{
-					"ModifierName"	"modifier_parts_poison_dot"
-					"Target" 		"TARGET"
+					"ModifierName"	"modifier_parts_duration"
+					"Target" 		"CASTER"
 					"Duration"		"%duration"
 				}
 			}
+
+			"OnAttack"
+			{
+				
+
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_poison_dot"
+					"Target" 		"TARGET"
+					"Duration"		"%poison_duration"
+				}
+
+			}
+
+		}
+
+		"modifier_parts_duration"
+			{
+			  "Passive"    	  "0"
+			  "IsHidden"      "0"
+			  "IsBuff"      "1"
+			  "Duration"   		"30"
+			}
+
 			
 			"modifier_poison_dot"
 			{
 			  "Passive"    	  "0"
 			  "IsHidden"      "0"
 			  "IsDebuff"      "1"
+
+			 "EffectName"    "particles/items2_fx/orb_of_venom.vpcf"
+        		"EffectAttachType"  "attach_hitloc"
+
 				"ThinkInterval"	"1.0"
 				"OnIntervalThink"
 				{
@@ -104,39 +111,16 @@
 					{
 						"ScriptFile"		"heroes/kankuro/parts_poison.lua"
 						"Function"			"parts_poison"
+						"PoisonDamagePerSecond"			"%poison_damage_per_second"
+						"PoisonDamageInterval"			"%poison_damage_interval"
 					}
-				}   
-			}
-		
-			"modifier_poison_slow"
-			{
-				"Passive"		"0"
-				"IsHidden"		"0"
-				"IsBuff"		"0"
-				"IsDebuff"		"1"
-				"IsPurgable"	"1"
-				
-				"EffectName"    		"particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
-				"EffectAttachType"  	"follow_origin"
-			  
-				"StatusEffectName"    "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"     
-				"StatusEffectPriority"  "10"
-			  
+				}  
+
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_slow"
-				}
-				
-				"OnCreated"
-				{
-					"FireSound"
-					{
-					  "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
-					  "Target"    "TARGET"
-					}     
-
-				}
+				} 
 			}
+
 		}
 	}
-}

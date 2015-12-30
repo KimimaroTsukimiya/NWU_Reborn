@@ -59,6 +59,13 @@ function Precache( context )
   PrecacheModel("models/kisame_new/kisame_samehada.vmdl", context)
   PrecacheModel("models/madara/madara.vmdl", context)
   PrecacheModel("models/naruto/naruto.vmdl", context)
+  PrecacheModel("models/kankuro/kankuro.vmdl", context)
+  PrecacheModel("models/kankuro/karasu.vmdl", context)
+  PrecacheModel("models/kankuro/kuroari.vmdl", context)
+  PrecacheModel("models/kankuro/puppet2.vmdl", context)
+  PrecacheModel("models/heroes/clinkz/clinkz_arrow.vmdl", context)
+
+
   PrecacheModel("models/neji/neji.vmdl", context)
   PrecacheModel("models/temari/temari.vmdl", context)
   --PrecacheModel("models/onuki/onuki.vmdl", context)

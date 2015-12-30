@@ -17,7 +17,8 @@
 		"particle"		"particles/units/heroes/hero_invoker/invoker_forge_spirit_ambient.vpcf"
 		"particle"		"particles/units/heroes/hero_invoker/invoker_forge_spirit_death.vpcf"
 		"particle"		"particles/units/heroes/hero_invoker/invoker_forged_spirit_projectile.vpcf"
-		"model"			"models/heroes/invoker/forge_spirit.vmdl"
+		"particle"		"particles/units/heroes/kank/lotus_orb_shield.vpcf"
+		"model"			"models/kankuro/puppet2.vmdl"
 	}
 
 	// Casting
@@ -98,6 +99,39 @@
 				"MODIFIER_STATE_DISARMED"						"MODIFIER_STATE_VALUE_ENABLED"
 			}
 			
+			
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"        "particles/units/heroes/kank/lotus_orb_shield.vpcf"
+					"EffectAttachType"  "follow_origin"
+					"Target"            "CASTER"
+				}
+
+
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center"  	"CASTER"
+						"Radius" 	"%aura_radius"
+						"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+						"Types" 	"DOTA_UNIT_TARGET_HERO"
+					}
+				
+					"Action"    
+					{
+						"AttachEffect"
+						{
+							"EffectName"        "particles/units/heroes/kank/lotus_orb_shield.vpcf"
+							"EffectAttachType"  "follow_origin"
+							"Target"            "CASTER"
+						}
+					}
+				}
+			}
+
 			"OnDestroy"
 			{
 				"RunScript"
