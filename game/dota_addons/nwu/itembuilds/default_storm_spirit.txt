@@ -30,6 +30,7 @@
 
 		"#DOTA_Item_Build_Core_Items"
 		{
+			"item"   		"item_tpscroll"
 			"item"   		"item_sage_scroll"
 			"item"			"item_chakra_armor"
 			"item"          "item_hoshikages_star"

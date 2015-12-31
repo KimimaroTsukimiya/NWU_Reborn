@@ -73,13 +73,11 @@
 
 			"OnAttack"
 			{
-				
-
-				"ApplyModifier"
+				"RunScript"
 				{
-					"ModifierName"	"modifier_poison_dot"
-					"Target" 		"TARGET"
-					"Duration"		"%poison_duration"
+					"ScriptFile"	"heroes/kankuro/parts_poison.lua"
+					"Function"		"applyPoison"
+					"PoisonDuration"  "%poison_duration"
 				}
 
 			}

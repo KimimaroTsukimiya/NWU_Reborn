@@ -1,8 +1,8 @@
-//Madara
-"itembuilds/test_ogre_magi.txt"
+//Kankuro
+"itembuilds/test_warlock.txt"
 {
 	"author"	"LearningDave"
-	"hero"		"npc_dota_hero_ogre_magi"
+	"hero"		"npc_dota_hero_warlock"
 	"Title"		"Naruto Wars Reborn"
 
 	"Items"
@@ -22,6 +22,7 @@
 		{
 			"item"			"item_flying_courier"
 			"item"			"item_jiraiyas_sandals"
+			"item"          "item_sakuras_fighting_gloves"
 			"item"          "item_ward_observer"
 			"item"   		"item_ward_sentry"
 		}

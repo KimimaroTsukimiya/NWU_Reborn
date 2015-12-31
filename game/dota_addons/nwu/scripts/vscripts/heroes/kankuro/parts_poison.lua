@@ -16,3 +16,11 @@ function parts_poison(keys)
 	
 	ApplyDamage({victim = keys.target, attacker = keys.caster, damage = damage_to_deal, damage_type = DAMAGE_TYPE_MAGICAL,})
 end
+
+function applyPoison( keys )
+
+	if not keys.target:IsBuilding() then
+		keys.ability:ApplyDataDrivenModifier(keys.caster, keys.target, "modifier_poison_dot", {Duration = keys.PoisonDuration})
+	end
+
+end

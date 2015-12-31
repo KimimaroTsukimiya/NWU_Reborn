@@ -183,15 +183,15 @@
 								m_sBoneName = "Bip001 Spine3"
 								m_vMinBounds =
 								[
-									-50.699402,
-									-30.502300,
-									-22.430599,
+									-40.699402,
+									-15.036000,
+									-21.544800,
 								]
 								m_vMaxBounds =
 								[
 									20.303900,
-									30.783100,
-									25.673800,
+									25.378855,
+									18.936975,
 								]
 								m_bTranslationOnly = false
 								m_cRenderColor =

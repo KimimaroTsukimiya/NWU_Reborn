@@ -27,6 +27,7 @@
 		}
 		"#DOTA_Item_Build_Core_Items"
 		{
+			"item"   		"item_tpscroll"
 			"item"			"item_chakra_smasher"
 			"item"			"item_kongou_nyoi"
 			"item"			"item_chakra_armor"

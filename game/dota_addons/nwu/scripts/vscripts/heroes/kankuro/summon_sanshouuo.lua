@@ -23,6 +23,15 @@ function summon_sanshouuo( keys )
 
 	keys.ability:ApplyDataDrivenModifier( sanshouuo, sanshouuo, keys.Modifier, {} )
 	
+
+	Timers:CreateTimer( duration+1, function()
+		if sanshouuo:IsAlive() then
+			keys.target:ForceKill(false)
+		end
+		return nil
+		end
+	)
+
 end
 
 function end_summon( keys )
