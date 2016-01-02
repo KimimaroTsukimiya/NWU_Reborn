@@ -268,8 +268,8 @@
 	  "AttributeBaseIntelligence" "21" // Base intelligence
 	  "AttributeIntelligenceGain" "3" // Intelligence bonus per level.
 	  "AttributeBaseAgility" "15" // Base agility
-	  "AttributeAgilityGain" "1.25" // Agility bonus per level.
-	"Gender"      "male"
+	  "AttributeAgilityGain" "1.25" // Agility bonus per level. 
+	  "Gender"      "male"
 	  "Village"			"kirigakure"
 	}	
 	"npc_dota_hero_windrunner" //kidoumaru
@@ -538,6 +538,41 @@
 	  	  "Village"			"konoha"
 
 	  	  "Gender"			"female"
+		}
+	"npc_dota_hero_batrider" //sarutobi
+		{
+		  "override_hero"   "npc_dota_hero_batrider"
+		  "Ability1"        "sarutobi_katon_doton_combo"
+		  "Ability2"        ""
+		  "Ability3"        ""
+		  "Ability4"        "" 
+		  "ModelScale"		"0.90"
+		  "LoadoutScale"		"0.90" 
+		  //"Model" 			""
+		  "ItemSlots"
+		  { }
+			"StatusHealth"    "145"
+			"StatusHealthRegen"   "0.300000"
+			"AttackDamageMin"		"21"
+			"AttackDamageMax"		"23"
+			"Role"			"Initiator,Disabler,Carry"
+			"Rolelevels"	"1"
+			"ArmorPhysical"		"2.000000"
+			"AttackRate"		"1.700000"
+		  	  "AttributePrimary" 		"DOTA_ATTRIBUTE_INTELLECT"
+			  "AttackAnimationPoint"		"0.4"
+			 // "AttackRate"				"1.0"
+			  "AttackRange"				"100"
+			  "MovementSpeed"			"300"
+			  "AttributeBaseStrength" "17" // Base strength
+			  "AttributeStrengthGain" "2" // Strength bonus per level.
+			  "AttributeBaseIntelligence" "15" // Base intelligence
+			  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
+			  "AttributeBaseAgility" "23" // Base agility
+			  "AttributeAgilityGain" "3.1" // Agility bonus per level.
+	
+		  	  "Village"			"kirigakure"
+		  	  "Gender"			"male"
 		}
 		"npc_dota_hero_storm_spirit" //sasuke
 		{
