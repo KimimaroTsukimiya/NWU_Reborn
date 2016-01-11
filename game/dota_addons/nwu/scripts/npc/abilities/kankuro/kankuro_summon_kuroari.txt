@@ -71,10 +71,17 @@
 			"Target" 		"TARGET"
 		}
 
+
 		"RunScript"
-		{
-			"ScriptFile"	"heroes/kankuro/summon_kuroari.lua"
-			"Function"		"summon_kuroari"
-		}
+        {
+          "ScriptFile"    "items.lua"
+          "Function"      "CheckForSpellBlock"
+          
+          "GenericFunction" "GenericSpellFunction"
+          "filePath"      "heroes/kankuro/summon_kuroari"
+          "functionName"  "summon_kuroari"
+          
+          "doDamage"    "false"
+        }
 	}
 }
