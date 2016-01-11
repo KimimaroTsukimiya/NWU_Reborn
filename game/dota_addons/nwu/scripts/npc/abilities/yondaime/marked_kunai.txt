@@ -23,7 +23,7 @@
 	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"			"650 725 800 875"
+	"AbilityCastRange"			"725 850 975 1100"
 	"AbilityCastPoint"			"0.1 0.1 0.1"
 	
 	// Time		
@@ -75,18 +75,18 @@
 		"08"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"dagger_duration"				"12 16 20 24"	
+			"dagger_duration"				"30 30 30 30"	
 		}
 
 		"09"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"creep_damage"				"50 80 110 140"	
+			"creep_damage"				"60 90 120 150"	
 		}
 		"10"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"hero_damage"				"25 40 55 70"	
+			"hero_damage"				"30 45 60 75"	
 		}
 
     }

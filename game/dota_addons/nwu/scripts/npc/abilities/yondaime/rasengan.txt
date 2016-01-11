@@ -35,7 +35,7 @@
     "AbilitySpecial"
     {
         "01"
-        {
+        { 
             "var_type" "FIELD_FLOAT"
             "bonus_damage" "25 50 75 100"
         }
@@ -47,12 +47,17 @@
         "03"
         {
             "var_type" "FIELD_FLOAT"
-            "distance" "400"
+            "distance" "700"
         }
          "04"
         {
             "var_type" "FIELD_FLOAT"
             "bonus_damage_real" "1"
+        }
+          "05"
+        {
+            "var_type" "FIELD_FLOAT"
+            "base_bonus_damage" "50"
         }
     }
 

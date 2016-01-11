@@ -6,6 +6,7 @@
     "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
     "BaseClass"               "item_datadriven"
     "AbilityTextureName"      "item_sage_scroll"
+    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
     "AbilityCastRange"        "%cast_range"
     "AbilityManaCost"         "%manacost"
     // Stats

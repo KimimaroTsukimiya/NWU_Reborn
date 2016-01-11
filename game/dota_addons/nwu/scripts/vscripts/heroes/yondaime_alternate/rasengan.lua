@@ -8,6 +8,8 @@ function rasengan(keys)
 	end
 	local range = keys.ability:GetLevelSpecialValueFor( "distance", ( keys.ability:GetLevel() - 1 ) )
 	local bonus_damage_percent = keys.ability:GetLevelSpecialValueFor( "bonus_damage", ( keys.ability:GetLevel() - 1 ) )
+	local base_bonus_damage = keys.ability:GetLevelSpecialValueFor( "base_bonus_damage", ( keys.ability:GetLevel() - 1 ) )
+	
 	keys.caster:RemoveModifierByName(keys.modifier)
 	keys.caster:RemoveModifierByName(keys.damageModifier)
 
@@ -20,8 +22,8 @@ function rasengan(keys)
 	local knockbackModifierTable =
 	{
 		should_stun = 1,
-		knockback_duration = 0.2,
-		duration = 0.2,
+		knockback_duration = 1,
+		duration = 1,
 		knockback_distance = len,
 		knockback_height = 0,
 		center_x = keys.caster:GetAbsOrigin().x,
@@ -30,7 +32,7 @@ function rasengan(keys)
 	}
 	keys.target:AddNewModifier( keys.caster, nil, "modifier_knockback", knockbackModifierTable )
 	
-	local damage = caster:GetAverageTrueAttackDamage() + (caster:GetAverageTrueAttackDamage() / 100 * bonus_damage_percent)
+	local damage = caster:GetAverageTrueAttackDamage() + (caster:GetAverageTrueAttackDamage() / 100 * bonus_damage_percent) + base_bonus_damage
 	ApplyDamage({ victim = target, attacker = caster, damage = damage, damage_type = DAMAGE_TYPE_PHYSICAL })
 	
 	local particle = ParticleManager:CreateParticle("particles/units/heroes/yondaime/raseng_impact.vpcf", PATTACH_POINT_FOLLOW, keys.caster) 
