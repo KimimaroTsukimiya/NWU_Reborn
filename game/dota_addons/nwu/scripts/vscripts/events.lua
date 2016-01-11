@@ -68,6 +68,12 @@ function GameMode:OnNPCSpawned(keys)
         AddFOWViewer(npc:GetTeamNumber(),Vector(-2500, -2000, 240), 10000000000, 0.1, false)
         AddFOWViewer(npc:GetTeamNumber(),Vector(-5932, -5348, 240), 10000000000, 0.1, false)
         npc.notFirstTime = true
+
+        if npc:GetUnitName() == "npc_dota_hero_lion" then
+          npc:AddItem(CreateItem("item_chakra_armor_male", npc, npc))
+        end
+
+
       end
     end
     GameMode:RescaleUnit(npc)

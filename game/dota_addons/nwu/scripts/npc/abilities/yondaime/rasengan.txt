@@ -28,6 +28,7 @@
 	//-------------------------------------------------------------------------------------------------------------
      "precache"
     {
+        "soundfile" "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
         "particle"  "particles/units/heroes/yondaime/raseng_model.vpcf"
         "particle"  "particles/units/heroes/yondaime/raseng_impact.vpcf"
     }
@@ -79,6 +80,7 @@
             "Function"      "rasengan_bonus_damage"
         }
 
+
     }
 
 
@@ -110,6 +112,11 @@
                     "ModifierName"    "modifier_ransengan_animation"
                     "Target"         "CASTER"
                     "Duration"        "1"
+                }
+                "FireSound"
+                {
+                    "EffectName"            "Hero_Crystal.CrystalNova"
+                    "Target"                "CASTER"
                 }
             }
 

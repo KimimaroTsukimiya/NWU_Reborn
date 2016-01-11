@@ -688,9 +688,9 @@
 		"Ability1"		"yondaime_marked_kunai"
 		"Ability2"		"yondaime_rasengan" 
 		"Ability3"		"yondaime_agile_speed" 
-		"Ability4"		"yondaime_body_flicker"
-		"Ability5"		"yondaime_hiraishin_jump"
-		"Ability6"		"attribute_bonus"
+		"Ability5"		"yondaime_body_flicker"
+		"Ability6"		"yondaime_hiraishin_jump"
+		"Ability4"		"attribute_bonus"
 	
 		"AttackDamageMin"	"25"
 		"AttackDamageMax"	"31"
