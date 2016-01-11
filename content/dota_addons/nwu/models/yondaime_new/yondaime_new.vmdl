@@ -973,7 +973,7 @@
 					},
 					{
 						_class = "CVattachment"
-						m_name = "attach_left_hand"
+						m_name = "attach_right_hand"
 						m_influences =
 						[
 							{
@@ -998,7 +998,7 @@
 					},
 					{
 						_class = "CVattachment"
-						m_name = "attach_right_hand"
+						m_name = "attach_left_hand"
 						m_influences =
 						[
 							{
@@ -1488,7 +1488,7 @@
 					[
 						{
 							_class = "CActivity"
-							m_Name = "ACT_DOTA_CAST_ABILITY_1"
+							m_Name = "ACT_DOTA_CAST_ABILITY_5"
 							m_nWeight = 1
 						},
 					]
@@ -1557,7 +1557,7 @@
 					[
 						{
 							_class = "CActivity"
-							m_Name = "ACT_DOTA_CAST_ABILITY_2"
+							m_Name = "ACT_DOTA_CAST_ABILITY_3"
 							m_nWeight = 1
 						},
 					]
@@ -1604,7 +1604,7 @@
 					m_Animationname = "yond_spell3"
 					m_Filepath = "models/yondaime_new/yondaime_new_ani.smd"
 					m_nStartframe = 243
-					m_nEndframe = 298
+					m_nEndframe = 271
 					m_flFps = 30.000000
 					m_Loop =
 					{
@@ -1626,7 +1626,7 @@
 					[
 						{
 							_class = "CActivity"
-							m_Name = "ACT_DOTA_CAST_ABILITY_3"
+							m_Name = "ACT_DOTA_CAST_ABILITY_2"
 							m_nWeight = 1
 						},
 					]
@@ -1696,6 +1696,75 @@
 						{
 							_class = "CActivity"
 							m_Name = "ACT_DOTA_CAST_ABILITY_4"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents =
+					[
+					]
+					m_MotionFrames =
+					[
+					]
+					m_pIkRules =
+					[
+					]
+					m_pAlignAnimation = null
+					m_adjustAnimation =
+					{
+						_class = "CAdjustAnimation"
+						m_translation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+						m_rotation =
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+						]
+					}
+					m_Keywords =
+					[
+					]
+					m_sequenceParams =
+					{
+						_class = "CVAnimResourceSequenceParams"
+						m_flFadeInTime = 0.200000
+						m_flFadeOutTime = 0.200000
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					_class = "CVanim"
+					m_Animationname = "yond_attack_spell_cast_1"
+					m_Filepath = "models/yondaime_new/yondaime_new_ani.smd"
+					m_nStartframe = 102
+					m_nEndframe = 127
+					m_flFps = 30.000000
+					m_Loop =
+					{
+						_class = "CAnimationLoop"
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop =
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities =
+					[
+						{
+							_class = "CActivity"
+							m_Name = "ACT_DOTA_CAST_ABILITY_1"
 							m_nWeight = 1
 						},
 					]

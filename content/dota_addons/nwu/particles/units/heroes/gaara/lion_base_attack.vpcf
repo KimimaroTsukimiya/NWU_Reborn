@@ -126,6 +126,7 @@
 		},
 		{
 			m_ChildRef = resource:"particles/units/heroes/hero_lion/lion_base_attack_trail.vpcf"
+			m_bDisableChild = true
 		},
 		{
 			m_ChildRef = resource:"particles/units/heroes/hero_lion/lion_base_attack_fingera.vpcf"
@@ -138,6 +139,9 @@
 		{
 			m_ChildRef = resource:"particles/units/heroes/gaara/attack_particle.vpcf"
 			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/gaara/basic_attack.vpcf"
 		},
 	]
 }

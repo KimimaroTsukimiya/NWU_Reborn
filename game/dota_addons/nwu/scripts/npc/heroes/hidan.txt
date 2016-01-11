@@ -29,7 +29,7 @@
 
 		  "MovementSpeed"			"290"
 		  "AttributeBaseStrength" "27" // Base strength
-		  "AttributeStrengthGain" "2.8" // Strength bonus per level.
+		  "AttributeStrengthGain" "2.4" // Strength bonus per level.
 		  "AttributeBaseIntelligence" "17" // Base intelligence
 		  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
 		  "AttributeBaseAgility" "15" // Base agility

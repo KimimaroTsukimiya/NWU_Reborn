@@ -50,6 +50,8 @@ function Precache( context )
   PrecacheModel("models/guy/gai.vmdl", context)
   PrecacheModel("models/hidan/tesst.vmdl", context)
   PrecacheModel("models/hidan/hidan.vmdl", context)
+  PrecacheModel("models/yondaime_new/yondaime_new.vmdl", context)
+  PrecacheModel("models/yondaime_new/yondakunai.vmdl", context)
   PrecacheModel("models/itachi/itachi.vmdl", context)
   --PrecacheModel("models/jiroubo/jiroubo.vmdl", context)
   PrecacheModel("models/kakashi/kaka.vmdl", context)
@@ -80,6 +82,7 @@ function Precache( context )
   PrecacheModel("models/items/tiny_01/tiny_haunted_tree.vmdl", context)
   PrecacheModel("models/props_gameplay/frog.vmdl", context)
   
+
   -- Stuff
   PrecacheResource("particle_folder", "particles/hero", context)
   PrecacheResource("particle_folder", "particles/ambient", context)

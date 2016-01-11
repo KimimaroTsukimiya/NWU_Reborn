@@ -32,6 +32,7 @@ function ReleaseFire( keys )
 	local ability_index = keys.caster:FindAbilityByName("madara_wood_release"):GetAbilityIndex()
     local wood_ability = keys.caster:GetAbilityByIndex(ability_index)
     local wood_ability_level = keys.caster:GetAbilityByIndex(ability_index):GetLevel()
+    local tree_burn_aoe = wood_ability:GetLevelSpecialValueFor("tree_vision", wood_ability_level)
     local tree_burn_duration = wood_ability:GetLevelSpecialValueFor("tree_burn_duration", wood_ability_level)
     local burn_damage = wood_ability:GetLevelSpecialValueFor("burn_damage", wood_ability_level)
     local burn_ms_slow_percentage = wood_ability:GetLevelSpecialValueFor("burn_ms_slow_percentage", wood_ability_level)
@@ -89,12 +90,9 @@ function ReleaseFire( keys )
 						
 						local particle = ParticleManager:CreateParticle("particles/units/heroes/madara/burning_tree.vpcf", PATTACH_CUSTOMORIGIN, nil) 
           				ParticleManager:SetParticleControl(particle , 0, origin)
- 						
-
+          				print(tree_burn_aoe)
           				Timers:CreateTimer( function()
-          						
-
-          						local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), origin, nil, ability.tree_width, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, FIND_ANY_ORDER, false)
+          						local targetEntities = FindUnitsInRadius(keys.caster:GetTeamNumber(), origin, nil, tree_burn_aoe, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 0, FIND_ANY_ORDER, false)
 							    if targetEntities then
 							      for _,oneTarget in pairs(targetEntities) do
 							        local modfifier = oneTarget:FindModifierByName("burning_tree_dot")

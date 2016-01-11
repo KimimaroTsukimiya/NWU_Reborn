@@ -7,6 +7,8 @@ require('items')
 require('music')
 -- rescale.lua, relevant functions rescale the model sizes
 require('rescale')
+-- label.lua, relevant functions to modify the name/label of a player
+require('label')
 
 
 --cheats.lua, includes functions which listen to chat inputs of the players
@@ -22,6 +24,7 @@ function GameMode:OnDisconnect(keys)
   local networkid = keys.networkid
   local reason = keys.reason
   local userid = keys.userid
+
 
 end
 
@@ -39,9 +42,15 @@ function GameMode:OnGameRulesStateChange(keys)
      local shopkeeper_dire = Entities:FindByModel(nil, "models/heroes/shopkeeper_dire/shopkeeper_dire.vmdl")
      shopkeeper_dire:SetModelScale(2.4)
   end
-   
+
   --This function controls the music on each gamestate
   GameMode:PlayGameMusic(newState)
+
+  if newState == 2 then
+    GameMode:ChangeBuildings()
+  end
+  
+
 end
 
 
@@ -50,8 +59,19 @@ function GameMode:OnNPCSpawned(keys)
     local npc = EntIndexToHScript(keys.entindex)
     if npc:IsRealHero() then
       GameMode:RemoveWearables( npc )
+      if not npc.notFirstTime and npc:GetUnitName() ~= "npc_dota_hero_antimage" then
+        AddFOWViewer(npc:GetTeamNumber(),Vector(5528, 5000, 256), 10000000000, 0.1, false)
+        AddFOWViewer(npc:GetTeamNumber(),Vector(1500, 1000, 256), 10000000000, 0.1, false)
+        AddFOWViewer(npc:GetTeamNumber(),Vector(-2500, 6000, 256), 10000000000, 0.1, false)
+        AddFOWViewer(npc:GetTeamNumber(),Vector(6200, -500, 256), 10000000000, 0.1, false)
+
+        AddFOWViewer(npc:GetTeamNumber(),Vector(-2500, -2000, 240), 10000000000, 0.1, false)
+        AddFOWViewer(npc:GetTeamNumber(),Vector(-5932, -5348, 240), 10000000000, 0.1, false)
+        npc.notFirstTime = true
+      end
     end
     GameMode:RescaleUnit(npc)
+
 
 end
 
@@ -106,6 +126,23 @@ function GameMode:OnItemPurchased( keys )
 
   if itemName == "item_forehead_protector" then
     GameMode:ForeheadProtectorOnItemPickedUp(player, itemName)
+  end 
+
+  if itemName == "item_flying_courier" then
+    Timers:CreateTimer( 0.5, function()
+        local flying_courier = Entities:FindByModel(nil, "models/props_gameplay/donkey_wings.vmdl")
+        flying_courier:SetModelScale(1.2)
+        return nil
+     end
+     )
+  end 
+  if itemName == "courier_radiant_flying" then
+    Timers:CreateTimer( 0.5, function()
+        local flying_courier = Entities:FindByModel(nil, "models/props_gameplay/donkey_dire.vmdl")
+        flying_courier:SetModelScale(1.2)
+        return nil
+     end
+     )
   end 
  
 end
@@ -236,6 +273,14 @@ function GameMode:OnPlayerPickHero(keys)
   end
   local heroClass = keys.hero
   local heroEntity = EntIndexToHScript(keys.heroindex)
+
+
+
+
+
+  -- modifies the name/label of a player
+  GameMode:setPlayerHealthLabel(player)
+
 end
 
 -- A player killed another player in a multi-team context

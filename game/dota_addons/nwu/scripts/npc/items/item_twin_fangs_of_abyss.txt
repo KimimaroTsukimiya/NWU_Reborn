@@ -30,7 +30,7 @@
         "modifier_item_sange_and_yasha_datadriven"
       {
         "Passive"     "1"
-        "IsHidden"      "1"
+        "IsHidden"      "0"
         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
         
         "Properties"

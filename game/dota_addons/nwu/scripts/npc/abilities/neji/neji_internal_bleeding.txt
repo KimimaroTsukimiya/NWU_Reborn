@@ -16,6 +16,7 @@
 	"precache"
 	{
 				"particle"	"particles/generic_gameplay/generic_silence.vpcf"
+				"particle"	"particles/units/heroes/neji/neji_w_debuff_a.vpcf"
 	}	
 
 	// Casting
@@ -100,6 +101,24 @@
 			"IsHidden"			"1"
 			"IsDebuff"			"1"
 			"ThinkInterval"  "%tick_interval"			
+
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/neji/internal_bleeding.lua"
+					"Function"		"startEffect"
+				}
+			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/neji/internal_bleeding.lua"
+					"Function"		"endEffect"
+				}
+			}
 
 			"OnIntervalThink"
 			{

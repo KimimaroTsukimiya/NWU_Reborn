@@ -4,9 +4,6 @@ Layer0
 {
 	shader "hero.vfx"
 
-	//---- Do not Cast Shadows ----
-	F_DO_NOT_CAST_SHADOWS 1
-
 	//---- Effect Proxies ----
 	F_USE_STATUS_EFFECTS_PROXY 1
 

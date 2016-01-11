@@ -149,8 +149,8 @@ function hiraishin_order(targetEntities,caster)
 end
 
 function hiraishin_dash( caster, closest_seal, keys, hiraishinFacs )
-	local fac_x = keys.fac_x
-	local fac_y = keys.fac_y
+	local fac_x = 0
+	local fac_y = 0
 	local origin_dist = keys.origin_dist
 	
 	local mid = ( caster:GetAbsOrigin() + closest_seal:GetAbsOrigin() ) / 2

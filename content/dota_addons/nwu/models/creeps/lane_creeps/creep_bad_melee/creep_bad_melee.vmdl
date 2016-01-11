@@ -2041,7 +2041,7 @@
 			{
 				_class = "CVMaterialRemap"
 				m_sSearchMaterial = "ntxr000.vmat"
-				m_sReplaceMaterial = "materials/creep/akatsuki_melee.vmat"
+				m_sReplaceMaterial = "materials/akatsuki_melee_dark.vmat"
 			},
 		]
 	}

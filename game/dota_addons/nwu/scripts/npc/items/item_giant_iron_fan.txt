@@ -35,17 +35,17 @@
     "OnSpellStart"
     {
 
-      "ApplyModifier"
-      {
-        "ModifierName"  "modifier_storm_cyclone" //modifier_cyclone is built-in
-        "Target"
-        {
-          "Center"  "TARGET"
-          "Teams"   "DOTA_UNIT_TARGET_TEAM_BOTH"
-          "Types"   "DOTA_UNIT_TARGET_HERO"
-        }
-        "Duration"    "%duration_hero"
-      }
+      "RunScript"
+    {
+      "ScriptFile"    "items.lua"
+      "Function"      "CheckForSpellBlock"
+      
+      "GenericFunction" "GenericSpellFunction"
+      "Modifier1"   "modifier_storm_cyclone"
+      "Duration1"   "%duration_hero"
+      
+      "doDamage"    "false"
+    }
       
       "ApplyModifier"
       {
