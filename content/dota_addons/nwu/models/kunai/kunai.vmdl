@@ -9,7 +9,7 @@
 			{
 				_class = "CVmesh"
 				m_meshName = "kunai"
-				m_meshFile = "models/kunai.smd"
+				m_meshFile = "models/kunai/kunai.smd"
 				m_materialSearchPath = ""
 				m_bSkinParentedObjects = true
 				m_bLegacySkinParentedTransforms = false
@@ -115,7 +115,7 @@
 			{
 				_class = "CVMaterialRemap"
 				m_sSearchMaterial = "material__29.vmat"
-				m_sReplaceMaterial = "materials/kunai_basic.vmat"
+				m_sReplaceMaterial = "materials/kunai/kunai.vmat"
 			},
 		]
 	}

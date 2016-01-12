@@ -41,3 +41,23 @@ end
 function removeEffect( keys )
 	ParticleManager:DestroyParticle(keys.caster.rasenParticle, true)
 end
+
+
+function rasenshuriken_start( keys )
+
+	-- Create the projectile
+	local info = {
+		Target = keys.target,
+		Source = keys.caster,
+		Ability = keys.ability,
+		EffectName = "particles/units/heroes/naruto/rasenshuriken_alt.vpcf",
+		bDodgeable = true,
+		bProvidesVision = true,
+		iMoveSpeed = keys.rs_speed,
+        iVisionRadius = keys.vision_radius,
+        iVisionTeamNumber = keys.caster:GetTeamNumber(),
+		iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_1
+	}
+	ProjectileManager:CreateTrackingProjectile( info )
+
+end

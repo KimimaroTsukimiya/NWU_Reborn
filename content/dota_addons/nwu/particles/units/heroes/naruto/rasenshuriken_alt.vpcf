@@ -74,8 +74,8 @@
 		},
 		{
 			_class = "C_INIT_RandomRadius"
-			m_flRadiusMax = 1.500000
-			m_flRadiusMin = 1.500000
+			m_flRadiusMax = 4.000000
+			m_flRadiusMin = 4.000000
 		},
 	]
 	m_Emitters =
@@ -102,12 +102,14 @@
 		},
 		{
 			m_ChildRef = resource:"particles/units/heroes/naruto/rasenshuriken_swirl.vpcf"
+			m_bDisableChild = true
 		},
 		{
 			m_ChildRef = resource:"particles/units/heroes/naruto/shuriken_glow.vpcf"
 		},
 		{
 			m_ChildRef = resource:"particles/units/heroes/naruto/rasenshuriken_core.vpcf"
+			m_bDisableChild = true
 		},
 	]
 }

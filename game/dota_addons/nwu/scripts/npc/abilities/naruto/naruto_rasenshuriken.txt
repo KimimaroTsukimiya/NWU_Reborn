@@ -93,16 +93,16 @@
 
 	"OnSpellStart"
 	{
-		"TrackingProjectile"
+
+		"RunScript"
 		{
-			"Target"           	"TARGET"
-		    "EffectName"       	"particles/units/heroes/naruto/rasenshuriken_alt.vpcf"
-		    "Dodgeable"        	"1"
-		    "ProvidesVision"   	"1"
-		    "VisionRadius"		"%vision_radius"
-		    "MoveSpeed"        	"%rs_speed"
-		    
+			"ScriptFile"	"heroes/naruto/rasenshuriken.lua"
+			"Function"		"rasenshuriken_start"
+			"Target"		"TARGET"
+			"rs_speed"		"%rs_speed"
+			"vision_radius"	"%vision_radius"
 		}
+		
 
 		"RunScript"
 		{

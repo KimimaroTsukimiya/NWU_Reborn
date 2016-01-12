@@ -11,7 +11,7 @@
 			m_ModelList =
 			[
 				{
-					m_model = resource:"models/kunai_alt.vmdl"
+					m_model = resource:"models/kunai/kunai.vmdl"
 				},
 			]
 			m_bAnimated = true
@@ -56,6 +56,7 @@
 			m_flDegreesMin = 180.000000
 			m_flDegreesMax = 180.000000
 			m_nFieldOutput = 20
+			m_bDisableOperator = true
 		},
 	]
 	m_Emitters =
