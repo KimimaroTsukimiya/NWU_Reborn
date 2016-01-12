@@ -24,6 +24,8 @@
 		"particle"			"particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion.vpcf"
 		"particle"			"particles/generic_gameplay/generic_stunned.vpcf"
 		"particle"			"particles/units/heroes/naruto/shuriken2.vpcf"
+		"particle"			"particles/units/heroes/naruto/rasenshuriken_alt.vpcf"
+		"particle"  		"particles/units/heroes/yondaime/raseng_model.vpcf"
 	}
 	
 	// Casting
@@ -81,6 +83,12 @@
 			"EffectName"		"naruto_rasen_shuriken"
 			"Target"			"CASTER"
 		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/naruto/rasenshuriken.lua"
+			"Function"		"addEffect"
+		}
 	}
 
 	"OnSpellStart"
@@ -88,12 +96,18 @@
 		"TrackingProjectile"
 		{
 			"Target"           	"TARGET"
-		    "EffectName"       	"particles/units/heroes/naruto/shuriken2.vpcf"
+		    "EffectName"       	"particles/units/heroes/naruto/rasenshuriken_alt.vpcf"
 		    "Dodgeable"        	"1"
 		    "ProvidesVision"   	"1"
 		    "VisionRadius"		"%vision_radius"
 		    "MoveSpeed"        	"%rs_speed"
 		    
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/naruto/rasenshuriken.lua"
+			"Function"		"removeEffect"
 		}
 
 	

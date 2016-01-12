@@ -32,6 +32,10 @@ function createDaggerParticle( keys )
 	table.insert(keys.caster.daggers, dummy)
 	ability.kunai = dummy
 
+	local particle = ParticleManager:CreateParticle("particles/units/heroes/yondaime/kunai_ground.vpcf", PATTACH_POINT_FOLLOW, dummy) 
+	ParticleManager:SetParticleControlEnt(particle, 0, dummy, PATTACH_POINT_FOLLOW, "attach_origin", dummy:GetAbsOrigin(), true)
+	ParticleManager:SetParticleControlEnt(particle, 1, dummy, PATTACH_POINT_FOLLOW, "attach_origin", dummy:GetAbsOrigin(), true)
+	ParticleManager:SetParticleControlEnt(particle, 3, dummy, PATTACH_POINT_FOLLOW, "attach_origin", dummy:GetAbsOrigin(), true)
 
 	local kunai_duration = ability:GetLevelSpecialValueFor("dagger_duration", (ability:GetLevel() - 1))
 

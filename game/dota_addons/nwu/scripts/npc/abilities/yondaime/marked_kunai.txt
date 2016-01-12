@@ -19,6 +19,8 @@
 		"particle"		"particles/units/heroes/hero_bounty_hunter/bounty_hunter_track_haste.vpcf"
 		"particle"		"particles/units/heroes/yondaime/blink_core.vpcf"
 		"model"			"models/heroes/yondaime/yondakunai.vmdl"
+		"particle"		"particles/units/heroes/yondaime/kunai_ground.vpcf"
+		
 	}
 	
 	// Casting

@@ -61,6 +61,11 @@
 			"var_type"					"FIELD_FLOAT"
 			"damage_per_second"			"50"
 		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"damage_per_second"			"50"
+		}
 	}
 	
 	"OnSpellStart"
@@ -74,14 +79,8 @@
 
 		"RunScript"
         {
-          "ScriptFile"    "items.lua"
-          "Function"      "CheckForSpellBlock"
-          
-          "GenericFunction" "GenericSpellFunction"
-          "filePath"      "heroes/kankuro/summon_kuroari"
-          "functionName"  "summon_kuroari"
-          
-          "doDamage"    "false"
+          "ScriptFile"    "heroes/kankuro/summon_kuroari.lua"
+          "Function"      "summon_kuroari"
         }
 	}
 }
