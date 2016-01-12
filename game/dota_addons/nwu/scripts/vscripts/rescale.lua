@@ -32,9 +32,9 @@ end
 
 function GameMode:ChangeBuildings( keys)
     local hokageBuilding = Entities:FindByModel(nil, "models/props_structures/radiant_ancient001.vmdl")
-    hokageBuilding:SetModelScale(0.70)
+    hokageBuilding:SetModelScale(0.55)
     local akatBase = Entities:FindByModel(nil, "models/props_structures/dire_ancient_base001.vmdl")
-    akatBase:SetModelScale(0.70) 
+    akatBase:SetModelScale(0.55) 
 
     --alliance towers
     local allianceTower = Entities:FindByModel(nil, "models/props_structures/radiant_tower002.vmdl")
