@@ -55,7 +55,7 @@ function BuffEffect( keys)
 	local modifierName = "modifier_jashins_blessing"
 
 	local particle = ParticleManager:CreateParticle("particles/units/heroes/hidan/hidan_passive_ready_a.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
-	ParticleManager:SetParticleControlEnt(particle, 3, caster, PATTACH_POINT_FOLLOW, "attach_hitloc", caster:GetAbsOrigin(), true)
+	ParticleManager:SetParticleControlEnt(particle, 3, caster, PATTACH_POINT_FOLLOW, "attach_origin", caster:GetAbsOrigin(), true)
 	keys.ability.buffeffect = particle 
 
 end

@@ -1,80 +1,85 @@
+
 "onoki_stalagmite_armor"
 {
-
-	"BaseClass"			 			"ability_datadriven"
-	"AbilityTextureName"			"onoki_stalagmite_armor"
-	"MaxLevel" 						"4"
-
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"  
+	"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+	"AbilityTextureName"			"onoki_stalagmite_armor"
 
-	"AbilityCastRange"				"700"
-	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts"
+		"particle"			"particles/units/heroes/hero_dark_seer/dark_seer_surge.vpcf"
+	}
 
-	"AbilityCooldown"				"20"
-	"AbilityManaCost"				"100"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0 11.0 10.0 9.0"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
 
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityModifierSupportValue"	"2.5"	// Value much higher than manacost
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
 	{
 		"01"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_armor"			"3 5 7 9"
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3.0 4.5 6.0 7.5"
 		}
+		// Extra
 		"02"
 		{
-			"var_type"				"FIELD_FLOAT"
-			"damage_return_rate"	"0.7"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"3 4 5 6"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"cast_range"			"700"
+			"var_type"				"FIELD_INTEGER"
+			"move_speed"			"522"
 		}
 	}
 
 	"OnSpellStart"
 	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Dark_Seer.Surge"
+			"Target" 		"TARGET"
+		}
+
 		"ApplyModifier"
 		{
-			"ModifierName"	"modifier_stalagmite_armor"
-			"Target"		"TARGET"
+			"ModifierName"	"modifier_onoki_speed_datadriven"
+			"Target" 		"TARGET"
 			"Duration"		"%duration"
 		}
 	}
 
 	"Modifiers"
 	{
-		"modifier_stalagmite_armor"
+		"modifier_onoki_speed_datadriven"
 		{
-			"Passive"			"0"
-			"IsHidden"			"0"
-			"IsBuff"			"1"
-			"Duration"			"%stun_duration"
+			"IsBuff"		"1"
 	
-			//"EffectName"		"particle_name"
-			//"EffectAttachType"	"follow_origin"
+			"EffectName"		"particles/units/heroes/hero_dark_seer/dark_seer_surge.vpcf"
+			"EffectAttachType"	"follow_hitloc"
 	
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
-			}
-
-			"OnAttacked"
-			{
-				"RunScript"
-				{
-					"ScriptFile"	"heroes/onoki/onoki_stalagmite_armor.lua"
-					"Function"		"return_damage"
-					"DamageTaken"	"%attack_damage"
-				}
+				"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE" 	"%move_speed"
 			}
 		}
 	}

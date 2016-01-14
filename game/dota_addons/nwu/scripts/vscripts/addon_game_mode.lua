@@ -43,7 +43,6 @@ function Precache( context )
 
   --PrecacheItemByNameSync("item_example_item", context)
 
-
   -- Models
   --PrecacheModel("models/asuma/asuma.vmdl", context)
   PrecacheModel("models/gaara/gaara.vmdl", context)
@@ -60,7 +59,7 @@ function Precache( context )
   PrecacheModel("models/kisame/kisame.vmdl", context)
   PrecacheModel("models/kisame_new/kisame_samehada.vmdl", context)
   PrecacheModel("models/madara/madara.vmdl", context)
-  PrecacheModel("models/naruto/naruto.vmdl", context)
+  PrecacheModel("models/naruto_new/naruto.vmdl", context)
   PrecacheModel("models/kankuro/kankuro.vmdl", context)
   PrecacheModel("models/kankuro/karasu.vmdl", context)
   PrecacheModel("models/kankuro/kuroari.vmdl", context)
