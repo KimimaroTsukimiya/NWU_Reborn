@@ -4,7 +4,7 @@ function do_damage(event)
 	local target = event.target
 	local max_life = target:GetMaxHealth() 
 	local threshold = max_life * ability:GetLevelSpecialValueFor("threshold_factor", ability:GetLevel()-1)
-	local current_life = target:GetHealth()
+	local current_life = target:GetMaxHealth()
 	local damage = threshold -- assume the target is below threshold (use threshold instead of max_life to prevent bugs)
 	local damage_type = ability:GetAbilityDamageType()
 

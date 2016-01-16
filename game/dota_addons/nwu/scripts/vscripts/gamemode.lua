@@ -5,7 +5,7 @@
 -- You can also change the cvar 'barebones_spew' at any time to 1 or 0 for output/no output
 BAREBONES_DEBUG_SPEW = false
 --Set this to false to deactive cheat inputs(cheats.lua) and true to activate cheat inputs 
-CHEATS_ACTIVATED = true 
+CHEATS_ACTIVATED = true
 
 if GameMode == nil then
     DebugPrint( '[BAREBONES] creating barebones game mode' )
@@ -102,8 +102,6 @@ end
 function GameMode:OnGameInProgress()
   DebugPrint("[BAREBONES] The game has officially begun")
 
-
-
 end
 
 -- This function initializes the game mode and is called before anyone loads into the game
@@ -151,6 +149,7 @@ function GameMode:RemoveWearables( hero )
     local model = hero:FirstMoveChild()
     while model ~= nil do
         if model ~= nil and model:GetClassname() ~= "" and model:GetClassname() == "dota_item_wearable" then
+          print(model:GetName())
             --print(model:GetModelName())
             table.insert(wearables, model)
         end

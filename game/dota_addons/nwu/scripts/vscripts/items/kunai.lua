@@ -4,7 +4,7 @@
   Destroys the targeted tree
 ]]
 function cutTree( keys )
-	keys.target:RemoveSelf()
+	GridNav:DestroyTreesAroundPoint(keys.target:GetAbsOrigin(), 20, false)
 end
 --[[
   Author: LearningDave
@@ -13,6 +13,7 @@ end
 ]]
 function kunaiBuff( keys )
 	if not keys.target:IsHero() and not keys.target:IsBuilding() then
+
 		local caster = keys.caster
 		local target = keys.target
 		local bonus_damage_melee = keys.ability:GetLevelSpecialValueFor("bonus_damage_melee", keys.ability:GetLevel() - 1 )
@@ -32,4 +33,9 @@ function kunaiBuff( keys )
 			}
 		ApplyDamage( damageTable )
 	end
+end
+
+
+function test( keys )
+	print("tesst2")
 end

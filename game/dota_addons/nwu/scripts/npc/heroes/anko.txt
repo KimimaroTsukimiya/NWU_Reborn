@@ -24,12 +24,13 @@
 
   "AttackRange"				"100"
   "MovementSpeed"			"300"
-  "AttributeBaseStrength" "17" // Base strength
-  "AttributeStrengthGain" "2" // Strength bonus per level.
-  "AttributeBaseIntelligence" "15" // Base intelligence
+  "AttributeBaseStrength" "23" // Base strength
+  "AttributeStrengthGain" "3" // Strength bonus per level.
+  "AttributeBaseIntelligence" "16" // Base intelligence
   "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
-  "AttributeBaseAgility" "23" // Base agility
-  "AttributeAgilityGain" "3.1" // Agility bonus per level.
+  "AttributeBaseAgility" "14" // Base agility
+  "AttributeAgilityGain" "1.6" // Agility bonus per level.
 
+  "Gender"      "female"
   "Village"			"kirigakure"
 }	

@@ -13,14 +13,14 @@ function anko_sojasosai_no_jutsu( keys )
 	local damage_percent = ability:GetLevelSpecialValueFor("damage_percent", (ability:GetLevel() - 1))
 
 	--Get Target's Missing HP
-
+	
 	local target_missing_hp = target:GetMaxHealth() - target:GetHealth()
 
 	--print ("Target Missing HP", target:GetMaxHealth(), target:GetHealth(), target_missing_hp)
 
 	local final_damage = target_missing_hp * damage_percent/100
 
-	--print ("Final damage", final_damage)
+	--print ("Final damage", final_damage, target_missing_hp)
 	-- Apply damage to Target
 	local damageType = ability:GetAbilityDamageType()
 	local damageTable = {
@@ -30,18 +30,29 @@ function anko_sojasosai_no_jutsu( keys )
 						damage_type = damageType
 					}
 	ApplyDamage( damageTable )
-
+	print(final_damage)
+	print(damageType)
 	-- Apply Animation to Target
 
 	-- Apply damage to Self
 
 	if (caster:GetHealth() - final_damage > 0) then
-		caster:SetHealth(caster:GetHealth() - final_damage)
+
+		local damageSelf = {
+							victim = caster,
+							attacker = caster,
+							damage = final_damage,
+							damage_type = damageType
+						}
+		ApplyDamage( damageSelf )
+
 	elseif (caster:GetHealth() - final_damage <= 0) then
-		caster:Kill(ability, caster)
+		caster:SetHealth(1)
 	end
 
-	-- Apply Animation to Self
+
+	print(final_damage)
+	print(damageType)
 
 end
 

@@ -57,7 +57,7 @@
 		}
 	}
 
-	"OnChannelFinish"
+	"OnChannelSucceeded"
 	{
 		"RunScript"
 		{
@@ -66,6 +66,24 @@
 			"Target"      "POINT"
 		}
 	}
+
+    "OnChannelFinish"
+    {
+       "RunScript"
+        {
+            "ScriptFile"  "items/the_fourths_legacy.lua"
+            "Function"    "removeEffect"
+        }
+    }
+
+    "OnChannelInterrupted"
+    {
+        "RunScript"
+        {
+            "ScriptFile"  "items/the_fourths_legacy.lua"
+            "Function"    "removeEffect"
+        }
+    }
 
     "Modifiers"
     {

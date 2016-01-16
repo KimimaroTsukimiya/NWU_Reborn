@@ -1,0 +1,181 @@
+// Sarutobi's Katon Doton Combo ability
+// Author: Zenicus
+// Date: 1.1.2016
+// Game version: 6.84
+"sarutobi_katon_doton_combo"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"				   
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	   
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			""
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		//"soundfile"		"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+		"particle"		"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+	}
+
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12.0 12.0 12.0 12.0"
+	
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"80 120 160 200"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 110 120 140"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"start_radius"			"150 150 150 150"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"end_radius"			"250 250 250 250"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"range"					"600 600 600 600"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed"					"1050"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"burn_damage"			"4 6 8 10"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"burn_duration"			"10"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_reduction"		"-25 -30 -35 -40"
+		}
+				
+	}
+	
+	"OnSpellStart"
+	{
+		"LinearProjectile"
+		{
+			"Target" "POINT"
+			"EffectName" "particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+			"MoveSpeed" "%speed"
+			"StartRadius" "%start_radius"
+			"StartPosition" "attach_origin"
+			"EndRadius" "%end_radius"
+			"FixedDistance" "%range"
+			"TargetTeams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"TargetTypes" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO | DOTA_UNITY_TARGET_MECHANICAL"
+			"TargetFlags" "DOTA_UNIT_TARGET_FLAG_NONE"
+			"HasFrontalCone" "1"
+			"ProvidesVision" "0"
+		}
+		"FireSound"
+		{
+			"EffectName" "Hero_DragonKnight.BreathFire"
+			"Target" "CASTER"
+		}
+	}
+	
+	"OnProjectileHitUnit"
+	{
+		"DeleteOnHit" "0"
+		"Damage"
+		{
+			"Target" "TARGET"
+			"Type" "DAMAGE_TYPE_MAGICAL"
+			"Damage" "%AbilityDamage"
+		}
+		
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_sarutobi_katon_dot"
+			"Target" 		"TARGET"
+			"Duration"		"%burn_duration"
+		}
+		"ApplyModifier"
+		{
+			"ModifierName"  "modifier_sarutoboi_katon_damage_debuff"
+			"Target"		"TARGET"
+			"Duration" 		"%burn_duration"
+		}
+	}
+	
+	"Modifiers"
+	{
+        "modifier_sarutobi_katon_dot"
+        {
+			"Passive"     	"0"
+			"IsHidden"      "0"
+			"IsDebuff"      "1"
+			"ThinkInterval"	"1.0"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"heroes/sarutobi/sarutobi_katon_doton_combo.lua"
+					"Function"			"burn_dot"
+				}
+			}   
+        }
+		"modifier_sarutoboi_katon_damage_debuff"
+		{
+			"Duration"        "%burn_duration"     
+			"IsDebuff"        "1"
+			"IsPurgable"      "0"
+			"Attributes"    "MODIFIER_ATTRIBUTE_NONE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"     "%damage_reduction"
+			}
+
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName" "particles/units/heroes/hero_razor/razor_ambient_g.vpcf"
+					"EffectAttachType" "follow_origin"
+
+					"Target" "TARGET"
+					"ControlPointEntities"
+					{
+						"TARGET"    "attach_hitloc"
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -54,7 +54,7 @@
     "modifier_truesight_datadriven"
     {
       "Passive"     "1"
-      "IsHidden"      "1"
+      "IsHidden"      "0"
   
       "ThinkInterval"  "0.03"
       "OnIntervalThink"
@@ -89,7 +89,7 @@
 
     "modifier_truesight_reveal"
     {
-      "IsHidden"      "0"
+      "IsHidden"      "1"
       "Duration"      "0.5" //The True Sight effect lingers for 0.5 seconds.
 	  "Priority"		"MODIFIER_PRIORITY_HIGH"
       "States"

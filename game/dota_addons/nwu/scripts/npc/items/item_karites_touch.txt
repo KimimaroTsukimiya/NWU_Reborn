@@ -10,6 +10,7 @@
   "Model"             "models/props_gameplay/red_box.vmdl" 
   "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
   "AbilityTextureName"      "item_karites_touch"
+  "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
   "FightRecapLevel"       "1"
   
   // Stats    
@@ -17,6 +18,7 @@
   "AbilityCastRange"        "600"
   "AbilityCastPoint"        "0.0"
   "AbilityCooldown"       "35.0"
+  
   "AbilityManaCost"       "180"
   "ItemShareability"      "ITEM_NOT_SHAREABLE"
   "AbilitySharedCooldown"     "dagon"
@@ -81,12 +83,19 @@
   
   "OnSpellStart"
   {
-    "RunScript"
-    {
-      "ScriptFile"    "items/karites_touch.lua"
-      "Function"      "item_dagon_datadriven_on_spell_start"
-      "Damage"      "%damage"
-    }
+
+       "RunScript"
+        {
+          "ScriptFile"    "items.lua"
+          "Function"      "CheckForSpellBlock"
+          
+          "GenericFunction" "GenericSpellFunction"
+          "filePath"      "items/karites_touch.lua"
+          "functionName"  "item_dagon_datadriven_on_spell_start"
+          
+          "doDamage"    "true"
+        }
+
   }
   
   "Modifiers"

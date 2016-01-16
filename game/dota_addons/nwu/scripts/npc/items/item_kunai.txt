@@ -14,7 +14,7 @@
   
   // Stats    
   //-------------------------------------------------------------------------------------------------------------
-  "AbilityCastRange"        "100"
+  "AbilityCastRange"        "130"
   "AbilityCastPoint"        "0.0"
   "AbilityCooldown"       "5.0"
   "AbilityManaCost"       "0"
@@ -52,10 +52,12 @@
   
   "OnSpellStart"
   {
+
     "RunScript"
     {
       "ScriptFile"    "items/kunai.lua"
       "Function"      "cutTree"
+      "Target"      "TARGET"
     }
   }
   

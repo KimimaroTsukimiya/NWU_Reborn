@@ -6,17 +6,17 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
-		"Model"						"models/kisame/kisame.vmdl"	// Model.
+		"Model"						"models/heroes/clinkz/clinkz_arrow.vmdl"	// Model.
 		"ModelScale"				"0.2"
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"jutsu_resistance"			// Ability 1.
+		"Ability1"					"parts_jutsu_resistance"			// Ability 1.
 		"Ability2"					"parts_poison"				// Ability 2.
 		
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"0"			// Physical protection.
+		"ArmorPhysical"				"1"			// Physical protection.
 		"MagicalResistance"			"50"		// Magical protection (percentage).
 	
 		// Attack
@@ -46,7 +46,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"250"		// Base health.
+		"StatusHealth"				"100"		// Base health.
 		"StatusHealthRegen"			"1"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"1"		// Mana regeneration rate.

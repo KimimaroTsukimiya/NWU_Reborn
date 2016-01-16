@@ -54,3 +54,8 @@ function FinishTeleport(keys)
 		FindClearSpaceForUnit(caster, target:GetAbsOrigin(), true)
 	end
 end
+
+function removeEffect( keys )
+	ParticleManager:DestroyParticle(keys.ability.particle_caster, false)
+	ParticleManager:DestroyParticle(keys.ability.particle_target, false)
+end

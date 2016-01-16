@@ -8,7 +8,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityTextureName"			""
+	"AbilityTextureName"			"temari_sheer_wind"
 	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -38,20 +38,7 @@
 
 	"Modifiers"
 	{
-		"modifier_sheer_wind"
-		{
-			"Passive"	"1"
-			"IsHidden"	"1"
-
-			"OnAbilityExecuted"
-			{
-				"RunScript"
-				{
-					"ScriptFile"	"heroes/temari/temari_sheer_wind.lua"
-					"Function"		"sheer_wind"
-				}
-			}
-		}
+		
 
 		"modifier_sheer_wind_buff_stack"
 		{

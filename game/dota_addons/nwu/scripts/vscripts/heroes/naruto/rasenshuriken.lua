@@ -26,5 +26,38 @@ function rasenshuriken_impact(keys)
 		ApplyDamage({attacker = caster, victim = value, ability = ability, damage = damage, damage_type = damage_type})
 		
 	end
-	
+
+end
+
+function addEffect( keys )
+	local particle = ParticleManager:CreateParticle("particles/units/heroes/yondaime/raseng_model.vpcf", PATTACH_POINT_FOLLOW, keys.caster) 
+	ParticleManager:SetParticleControlEnt(particle, 0, keys.caster, PATTACH_POINT_FOLLOW, "attach_right_hand", keys.caster:GetAbsOrigin(), true)
+	ParticleManager:SetParticleControlEnt(particle, 1, keys.caster, PATTACH_POINT_FOLLOW, "attach_right_hand", keys.caster:GetAbsOrigin(), true)
+	ParticleManager:SetParticleControlEnt(particle, 3, keys.caster, PATTACH_POINT_FOLLOW, "attach_right_hand", keys.caster:GetAbsOrigin(), true)
+ 	keys.caster.rasenParticle = particle
+
+end
+
+function removeEffect( keys )
+	ParticleManager:DestroyParticle(keys.caster.rasenParticle, true)
+end
+
+
+function rasenshuriken_start( keys )
+
+	-- Create the projectile
+	local info = {
+		Target = keys.target,
+		Source = keys.caster,
+		Ability = keys.ability,
+		EffectName = "particles/units/heroes/naruto/rasenshuriken_alt.vpcf",
+		bDodgeable = true,
+		bProvidesVision = true,
+		iMoveSpeed = keys.rs_speed,
+        iVisionRadius = keys.vision_radius,
+        iVisionTeamNumber = keys.caster:GetTeamNumber(),
+		iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_1
+	}
+	ProjectileManager:CreateTrackingProjectile( info )
+
 end

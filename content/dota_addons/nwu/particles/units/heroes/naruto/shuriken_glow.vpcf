@@ -4,10 +4,10 @@
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 8
 	m_ConstantColor =
-[
-117,
-255,
-255,
+	[
+		117,
+		255,
+		255,
 		255,
 	]
 	m_Renderers =
@@ -42,16 +42,17 @@
 		{
 			_class = "C_OP_ColorInterpolate"
 			m_ColorFade =
-[
-117,
-255,
-255,
+			[
+				117,
+				255,
+				255,
 				255,
 			]
 		},
 		{
 			_class = "C_OP_InterpolateRadius"
-			m_flEndScale = 5.000000
+			m_flEndScale = 10.000000
+			m_flStartScale = 4.000000
 		},
 		{
 			_class = "C_OP_SpinUpdate"
@@ -90,10 +91,10 @@
 		{
 			_class = "C_INIT_RandomColor"
 			m_ColorMin =
-[
-117,
-255,
-255,
+			[
+				117,
+				255,
+				255,
 				255,
 			]
 		},

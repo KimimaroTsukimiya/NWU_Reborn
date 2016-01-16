@@ -13,17 +13,22 @@ function GameMode:OnPlayerChat(keys)
 	local text = keys.text
 	local playerID = keys.userid-1
 	local bTeamOnly = keys.teamonly
-    GameMode:Setup_Hero_Tables()
-    -- Handle '-command'
-    if StringStartsWith(text, "-") then
-        text = string.sub(text, 2, string.len(text))
-    end
 
-	local input = split(text)
-	local command = input[1]
-	if CHEAT_CODES[command] then
-		CHEAT_CODES[command](input[2])
-    end        
+    if CHEATS_ACTIVATED then
+        
+        GameMode:Setup_Hero_Tables()
+        -- Handle '-command'
+        if StringStartsWith(text, "-") then
+            text = string.sub(text, 2, string.len(text))
+        end
+
+        local input = split(text)
+        local command = input[1]
+        if CHEAT_CODES[command] then
+            CHEAT_CODES[command](input[2])
+        end  
+    end
+      
 end
 --[[Author: LearningDave
   Date: october, 30th 2015.
@@ -153,6 +158,7 @@ function GameMode:Setup_Hero_Tables()
         GameRules.heroTable[15] = "npc_dota_hero_bloodseeker"
         GameRules.heroTable[16] = "npc_dota_hero_axe"
 		GameRules.heroTable[17] = "npc_dota_hero_shadow_shaman"
+        GameRules.heroTable[18] = "npc_dota_hero_medusa"
     end
     if GameRules.nwrHeroTable == nil then
         GameRules.nwrHeroTable = {}
@@ -173,6 +179,7 @@ function GameMode:Setup_Hero_Tables()
         GameRules.nwrHeroTable[15] = "zabuza"
         GameRules.nwrHeroTable[16] = "neji"
 		GameRules.nwrHeroTable[17] = "shikamaru"
+        GameRules.nwrHeroTable[18] = "anko"
     end
 end
 

@@ -40,7 +40,7 @@ function createBunshin( event )
  local illusion = CreateUnitByName(unit_name, origin, true, caster, nil, caster:GetTeamNumber())
  illusion:SetPlayerID(caster:GetPlayerID())
  illusion:SetControllableByPlayer(player, true)
- 
+ illusion.realHero = false
 
  -- Level Up the unit to the casters level
  local casterLevel = caster:GetLevel()
@@ -111,7 +111,6 @@ function killBunshin( keys )
 end
 
 function destroyBunshin( keys )
-	print("test")
 	local duration = keys.ability:GetLevelSpecialValueFor( "illusion_duration", keys.ability:GetLevel() - 1 )
 		-- Dummy
 	local dummy_modifier = keys.dummy_particle

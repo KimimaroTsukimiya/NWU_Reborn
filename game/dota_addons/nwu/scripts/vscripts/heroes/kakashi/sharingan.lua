@@ -19,11 +19,19 @@ end
 function Kakashi_Sharingan:LevelUp_Stolen(keys)
 	print("LevelUp_Stolen",self.caster:GetPlayerID(),keys.player)
 	
-	for k,v in pairs(keys) do
-		print(k, v)
+	print("Sharingan")
+	for k,v in pairs(self) do
+		print(k,v)
 	end
 	
+	print("keys")
+	for k,v in pairs(keys) do
+		print(k,v)
+	end
+	print("endkeys")
+	
 	if( self.caster:GetPlayerID() ~= (keys.player-1) ) then
+		print("PlayerMismatch", self.caster:GetPlayerID() , (keys.player-1) )
 		return;
 	end
 	

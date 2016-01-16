@@ -2,6 +2,7 @@
 // Author: Zenicus
 // Date: 11/05/2015.
 "anko_giant_snake"
+
 {
 	// General
 	"BaseClass"						"ability_lua"
@@ -20,12 +21,13 @@
 		"particle"			"particles/units/heroes/hero_pudge/pudge_meathook_chain.vpcf"
 		"particle"			"particles/units/heroes/hero_pudge/pudge_meathook_impact.vpcf"
 		"particle"			"particles/units/heroes/hero_pudge/pudge_meathook.vpcf"
+		"particle"			"particles/units/heroes/anko/giant_snake_snake.vpcf"
 	}
 	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"550 700 850 1000"
-	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------

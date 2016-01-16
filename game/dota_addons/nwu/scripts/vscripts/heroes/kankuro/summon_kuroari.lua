@@ -17,7 +17,8 @@ function summon_kuroari( keys )
 	target:AddNewModifier(caster, ability, "modifier_stunned", {duration = puppet_duration})
 
 	--Creates the Puppet next to the Target
-	local kuroari = CreateUnitByName("npc_dota_invoker_forged_spirit", target_location + RandomVector(100), true, caster, caster, caster:GetTeamNumber())
+	local kuroari = CreateUnitByName("npc_kuroari", target_location + RandomVector(100), true, caster, caster, caster:GetTeamNumber())
+
 
 	--TODO: Make puppet invulnerable
 	kuroari:SetMaxHealth(10000)

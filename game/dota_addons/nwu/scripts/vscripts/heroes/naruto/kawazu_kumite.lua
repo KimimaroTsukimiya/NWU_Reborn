@@ -5,6 +5,11 @@
   outgoing and ingoing damage values are depending on 'naruto_kage_bunshin_mastery' ability lvl
 ]]
 function ConjureImage( event )
+
+  if event.caster:GetName() == "npc_dota_hero_dragon_knight" then
+    EmitSoundOn("naruto_bunshin", event.caster)
+  end
+
   print(event.caster.bunshinCount)
    if  event.caster.bunshinCount > 2 then
     event.caster.bunshins[0]:Destroy()

@@ -20,7 +20,7 @@
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
     "ItemQuality"         "rare"
-    "ItemAliases"         "linkens sphere;sphere;spell block;mana reg;chakra reg;chakra armor"
+    "ItemAliases"         "linkens sphere;sphere;spell block;mana reg;chakra reg;chakra armor;ca"
 
     "AbilityCooldown"     "17"
 

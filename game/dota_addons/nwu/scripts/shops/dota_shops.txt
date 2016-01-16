@@ -168,7 +168,7 @@
 
         "sideshop1"
         {
-           
+            "item"   "item_tpscroll"
             "item"    "item_firm_nunchaku"
             "item"    "item_shinobi_claws"
             "item"    "item_yondaime_sealed_kunai"
@@ -179,13 +179,11 @@
             "item"    "item_metal_gauntlets"
             "item"    "item_mask_of_ne"
             "item"    "item_samurai_helm"
-
-
         }
 
         "sideshop2"
         {
-         "item"    "item_teleport_scroll"
+            "item"    "item_silver_watch"
             "item"   "item_chakra_booster"
             "item"   "item_shinobi_cloak"
             "item"   "item_shinobi_uniform"

@@ -50,7 +50,7 @@
 		"modifier_truesight_datadriven"
 		{
 			"Passive"			"1"
-			"IsHidden"			"1"
+			"IsHidden"			"0"
 	
 			"ThinkInterval"  "0.03"
 			"OnIntervalThink"

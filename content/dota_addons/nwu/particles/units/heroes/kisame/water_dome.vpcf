@@ -27,38 +27,36 @@
 	m_Operators =
 	[
 		{
+			_class = "C_OP_LockToBone"
+			m_flLifeTimeFadeStart = 1.000000
+			m_flLifeTimeFadeEnd = 1.000000
+		},
+		{
 			_class = "C_OP_Decay"
 		},
 	]
 	m_Initializers =
 	[
 		{
-			_class = "C_INIT_InitialVelocityNoise"
-			m_flNoiseScale = 0.100000
-			m_flNoiseScaleLoc = 0.050000
-			m_vecOutputMin =
-			[
-				-26.000000,
-				-26.000000,
-				-16.000000,
-			]
-			m_vecOutputMax =
-			[
-				26.000000,
-				26.000000,
-				34.000000,
-			]
-			m_bDisableOperator = true
+			_class = "C_INIT_RemapCPtoScalar"
+			m_nField = 2
+		},
+		{
+			_class = "C_INIT_RemapCPtoScalar"
+		},
+		{
+			_class = "C_INIT_RemapCPtoScalar"
+			m_nField = 1
 		},
 	]
 	m_Emitters =
 	[
 		{
-			_class = "C_OP_InstantaneousEmitter"
-			m_nParticlesToEmit = 1
+			_class = "C_OP_MaintainEmitter"
+			m_nParticlesToMaintain = 1
 		},
 	]
-	m_flConstantLifespan = 3.000000
+	m_flConstantLifespan = 20.000000
 	m_flMaxRecreationTime = 0.100000
 	m_flConstantRadius = 1.500000
 }

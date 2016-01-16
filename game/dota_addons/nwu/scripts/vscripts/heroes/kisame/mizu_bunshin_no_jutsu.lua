@@ -8,7 +8,7 @@ function ConjureImage( event )
  local origin = caster:GetAbsOrigin() + RandomVector(100)
  local duration = ability:GetLevelSpecialValueFor( "illusion_duration", ability:GetLevel() - 1 )
  local damage_percentage = ability:GetLevelSpecialValueFor( "damage_percentage", ability:GetLevel() - 1 )
-local illusion_max_hp_percentage = ability:GetLevelSpecialValueFor( "illusion_max_hp_percentage", ability:GetLevel()-1)
+ local illusion_max_hp_percentage = ability:GetLevelSpecialValueFor( "illusion_max_hp_percentage", ability:GetLevel()-1)
 
  -- handle_UnitOwner needs to be nil, else it will crash the game.
  local illusion = CreateUnitByName("kisame_bunshin", origin, true, caster, nil, caster:GetTeamNumber())
@@ -58,8 +58,6 @@ illusion:SetBaseDamageMin(caster:GetAverageTrueAttackDamage() / 100 * damage_per
 illusion:SetBaseDamageMax(caster:GetAverageTrueAttackDamage() / 100 * damage_percentage)
 
 illusion:SetOriginalModel(caster:GetModelName())
-illusion:AddNoDraw()
-table.insert(event.ability.bunshins, illusion)
 
 
 --local bonus_damage_preattack = caster:GetBonusDamageFromPrimaryStat() / 100 * damage_percentage
@@ -70,6 +68,7 @@ function NoDraw( keys )
   keys.caster:AddNoDraw()
   keys.ability.bunshins = {}
   keys.caster:Stop()
+
 
  local particle = ParticleManager:CreateParticle("particles/units/heroes/hero_siren/naga_siren_mirror_image.vpcf", PATTACH_ABSORIGIN_FOLLOW, keys.caster)
 ParticleManager:SetParticleControl(particle, 0, keys.caster:GetAbsOrigin()) -- Origin
@@ -183,3 +182,12 @@ function RemoveBunshin( keys )
   keys.target:Destroy()
 end
 
+
+function removeModifier( keys )
+  Timers:CreateTimer( 2, function()
+      if keys.caster:HasModifier("mizu_bunshin_no_jutsu_illusion") then
+        keys.caster:RemoveModifierByName("mizu_bunshin_no_jutsu_illusion")
+      end
+    return nil
+  end)
+end

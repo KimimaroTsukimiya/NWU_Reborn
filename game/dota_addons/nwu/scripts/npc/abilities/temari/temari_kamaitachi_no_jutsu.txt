@@ -10,14 +10,13 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"AbilityTextureName"			""
-	"AbilityCastAnimation" 			"ACT_DOTA_CAST_TORNADO"
+	"AbilityTextureName"			"temari_kamaitachi_no_jutsu"
 	"FightRecapLevel"				"1"
 
 	// Stats
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"900 1100 1300 1500"
-	"AbilityCastPoint"				"0"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 	"AbilityCooldown"				"18"
 	"AbilityManaCost"				"120 130 140 150"
 	
@@ -40,7 +39,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"travel_speed"			"1000"
+			"travel_speed"			"800"
 		}
 		"03"
 		{
@@ -86,6 +85,13 @@
 	
 	"OnSpellStart"
 	{
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/temari/temari_sheer_wind.lua"
+			"Function"		"sheer_wind_call"
+		}
+		
 		"RunScript"
 		{
 			"ScriptFile"								"heroes/temari/temari_kamaitachi_no_jutsu.lua"
@@ -143,8 +149,6 @@
 				"MODIFIER_STATE_STUNNED"			"MODIFIER_STATE_VALUE_ENABLED"
 				"MODIFIER_STATE_ROOTED"				"MODIFIER_STATE_VALUE_ENABLED"
 				"MODIFIER_STATE_DISARMED"			"MODIFIER_STATE_VALUE_ENABLED"
-				"MODIFIER_STATE_INVULNERABLE"		"MODIFIER_STATE_VALUE_ENABLED"
-				"MODIFIER_STATE_NO_HEALTH_BAR"		"MODIFIER_STATE_VALUE_ENABLED"
 	        }
 	
 			"OnCreated"

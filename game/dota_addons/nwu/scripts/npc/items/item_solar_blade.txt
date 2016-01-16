@@ -50,31 +50,12 @@
         "ThinkInterval"     "1"
         "OnIntervalThink"
         {
-          "Damage"
+          "RunScript"
           {
-            "Target" //AOE
-            {
-              "Center" "CASTER"
-              "Radius" "%radius"
-              "Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
-              "Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_OTHER"
-            }
-            "Type"    "DAMAGE_TYPE_MAGICAL"
-            "Damage"  "%aoe_damage"
+            "ScriptFile"  "items/solar_blade.lua"
+            "Function"    "applyDamage"
           }
-          "AttachEffect"
-          {
-            "EffectName" "particles/dire_fx/fire_barracks_glow_b.vpcf"
-            "Target" //AOE
-            {
-              "Center" "CASTER"
-              "Radius" "%radius"
-              "Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY" 
-              "Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_OTHER"
-            }
-            "EffectAttachType"  "follow_origin"
-  
-          }
+
         }
       }
       "item_solar_blade_modifier"
@@ -87,6 +68,8 @@
                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
           }
       }
+
+
     }
     // Special  
     //-------------------------------------------------------------------------------------------------------------

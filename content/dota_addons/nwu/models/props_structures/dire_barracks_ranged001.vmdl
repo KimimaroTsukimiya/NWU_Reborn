@@ -1,0 +1,2619 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	_class = "CVModel"
+	m_meshList =
+	{
+		_class = "CVmeshList"
+		m_meshList =
+		[
+			{
+				_class = "CVmesh"
+				m_meshName = "yamatanoorochi"
+				m_meshFile = "models/buildings/yamatanoorochi/yamatanoorochi.fbx"
+				m_materialSearchPath = ""
+				m_bSkinParentedObjects = true
+				m_bLegacySkinParentedTransforms = false
+				m_bExpensiveTangents = false
+				m_bExpensiveVertices = false
+				m_bIgnoreCloth = false
+				m_bGetSkinningFromLod0 = false
+				m_pMorphInfo = null
+			},
+		]
+	}
+	m_clothProxyMeshList =
+	{
+		_class = "CVClothProxyMeshList"
+		m_flClothEnableThreshold = 0.050000
+		m_bCreateStaticBone = false
+		m_nMaxBonesPerVertex = 4
+		m_bRemoveUnusedBonesEnabled = false
+		m_bDriveMeshesWithBacksolvedJointsOnly = true
+		m_flMatchProxiesToMeshes = 1.000000
+		m_flReservedFloat = 0.000000
+		m_nReservedInt = 0
+		m_bReservedBool1 = false
+		m_bReservedBool2 = false
+		m_bReservedBool3 = false
+		m_bReservedBool4 = false
+		m_clothProxyMeshList =
+		[
+		]
+	}
+	m_physicsMeshList =
+	{
+		_class = "CVphysicsMeshList"
+		m_meshList =
+		[
+		]
+	}
+	m_pModelInfo = null
+	m_pBoneFlagList =
+	{
+		_class = "CVBoneFlagListReference"
+		m_pObject = null
+	}
+	m_pHitBoxSetLists =
+	[
+		{
+			_class = "CVhitBoxSetListReference"
+			m_pObject =
+			{
+				_class = "CVhitBoxSetList"
+				m_HitBoxSets =
+				[
+					{
+						_class = "CVhitBoxSet"
+						m_name = "default"
+						m_HitBoxes =
+						[
+							{
+								_class = "CVhitBox"
+								m_name = "Bone63"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone63"
+								m_vMinBounds =
+								[
+									-437.840454,
+									-148.388474,
+									-62.485535,
+								]
+								m_vMaxBounds =
+								[
+									438.320068,
+									114.510513,
+									484.707031,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone64"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone64"
+								m_vMinBounds =
+								[
+									-109.593040,
+									-148.388474,
+									-51.128601,
+								]
+								m_vMaxBounds =
+								[
+									11.532547,
+									31.202606,
+									58.912727,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone16"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone16"
+								m_vMinBounds =
+								[
+									-20.517494,
+									-20.135189,
+									-20.228355,
+								]
+								m_vMaxBounds =
+								[
+									23.753510,
+									24.120098,
+									28.696060,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone68"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone68"
+								m_vMinBounds =
+								[
+									-23.753536,
+									-20.135204,
+									-20.228371,
+								]
+								m_vMaxBounds =
+								[
+									20.517483,
+									24.120281,
+									28.696045,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone15"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone15"
+								m_vMinBounds =
+								[
+									-20.578781,
+									-15.361182,
+									-21.690170,
+								]
+								m_vMaxBounds =
+								[
+									22.198753,
+									20.232903,
+									27.246750,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone31"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone31"
+								m_vMinBounds =
+								[
+									-26.437084,
+									-13.926872,
+									-23.445244,
+								]
+								m_vMaxBounds =
+								[
+									25.417206,
+									25.451229,
+									29.503059,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone33"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone33"
+								m_vMinBounds =
+								[
+									-22.925964,
+									-24.297646,
+									-13.391277,
+								]
+								m_vMaxBounds =
+								[
+									32.279037,
+									23.959053,
+									36.620632,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone69"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone69"
+								m_vMinBounds =
+								[
+									-22.198689,
+									-15.361190,
+									-21.690170,
+								]
+								m_vMaxBounds =
+								[
+									20.578793,
+									20.232895,
+									27.246750,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone98"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone98"
+								m_vMinBounds =
+								[
+									-24.896736,
+									-12.005684,
+									-23.445244,
+								]
+								m_vMaxBounds =
+								[
+									26.437057,
+									25.451206,
+									16.884773,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone113"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone113"
+								m_vMinBounds =
+								[
+									-15.412956,
+									-13.141075,
+									-13.391285,
+								]
+								m_vMaxBounds =
+								[
+									22.925941,
+									23.959023,
+									34.840824,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone14"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone14"
+								m_vMinBounds =
+								[
+									-20.075954,
+									-14.550786,
+									-22.480423,
+								]
+								m_vMaxBounds =
+								[
+									20.989666,
+									20.366711,
+									33.660477,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone35"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone35"
+								m_vMinBounds =
+								[
+									-22.432110,
+									-19.229370,
+									-19.626862,
+								]
+								m_vMaxBounds =
+								[
+									22.960281,
+									27.730225,
+									32.661636,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone30"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone30"
+								m_vMinBounds =
+								[
+									-24.540581,
+									-11.512054,
+									-23.780136,
+								]
+								m_vMaxBounds =
+								[
+									26.666817,
+									25.463547,
+									34.370850,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone52"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone52"
+								m_vMinBounds =
+								[
+									-21.894852,
+									-20.200066,
+									-13.287308,
+								]
+								m_vMaxBounds =
+								[
+									37.187340,
+									26.783928,
+									42.587593,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone70"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone70"
+								m_vMinBounds =
+								[
+									-20.989807,
+									-14.550786,
+									-22.480453,
+								]
+								m_vMaxBounds =
+								[
+									20.075958,
+									20.366711,
+									33.660446,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone84"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone84"
+								m_vMinBounds =
+								[
+									-22.960308,
+									-19.229416,
+									-19.626862,
+								]
+								m_vMaxBounds =
+								[
+									22.431980,
+									27.730179,
+									32.661636,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone99"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone99"
+								m_vMinBounds =
+								[
+									-14.789246,
+									-11.512070,
+									-11.703842,
+								]
+								m_vMaxBounds =
+								[
+									18.886856,
+									20.565830,
+									20.696655,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone114"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone114"
+								m_vMinBounds =
+								[
+									-16.925850,
+									-10.856094,
+									-13.287331,
+								]
+								m_vMaxBounds =
+								[
+									21.895050,
+									26.784004,
+									12.423676,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone13"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone13"
+								m_vMinBounds =
+								[
+									-20.743294,
+									-13.963078,
+									-24.062347,
+								]
+								m_vMaxBounds =
+								[
+									19.886700,
+									17.251720,
+									27.391464,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone37"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone37"
+								m_vMinBounds =
+								[
+									-22.639114,
+									-19.825829,
+									-20.769714,
+								]
+								m_vMaxBounds =
+								[
+									20.264671,
+									25.757759,
+									29.289078,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone29"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone29"
+								m_vMinBounds =
+								[
+									-25.756668,
+									-11.485130,
+									-23.893295,
+								]
+								m_vMaxBounds =
+								[
+									25.376518,
+									23.507572,
+									30.549133,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone50"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone50"
+								m_vMinBounds =
+								[
+									-21.514458,
+									-23.178337,
+									-14.557884,
+								]
+								m_vMaxBounds =
+								[
+									33.283524,
+									24.128052,
+									64.021515,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone71"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone71"
+								m_vMinBounds =
+								[
+									-19.886642,
+									-13.963078,
+									-24.062378,
+								]
+								m_vMaxBounds =
+								[
+									20.743351,
+									17.251720,
+									27.391434,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone85"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone85"
+								m_vMinBounds =
+								[
+									-20.264713,
+									-19.825859,
+									-20.769745,
+								]
+								m_vMaxBounds =
+								[
+									22.639278,
+									25.757729,
+									29.289047,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone100"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone100"
+								m_vMinBounds =
+								[
+									-13.810577,
+									-11.482040,
+									-23.893295,
+								]
+								m_vMaxBounds =
+								[
+									19.923027,
+									23.507549,
+									21.702530,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone115"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone115"
+								m_vMinBounds =
+								[
+									-17.821716,
+									-13.277672,
+									-14.557907,
+								]
+								m_vMaxBounds =
+								[
+									21.514664,
+									24.128006,
+									11.439690,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone12"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone12"
+								m_vMinBounds =
+								[
+									-21.312214,
+									-11.970463,
+									-19.302841,
+								]
+								m_vMaxBounds =
+								[
+									18.544979,
+									25.343018,
+									33.233871,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone36"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone36"
+								m_vMinBounds =
+								[
+									-22.659676,
+									-19.868820,
+									-14.804184,
+								]
+								m_vMaxBounds =
+								[
+									20.701317,
+									27.888779,
+									28.782120,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone28"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone28"
+								m_vMinBounds =
+								[
+									-24.828468,
+									-18.160004,
+									-19.200165,
+								]
+								m_vMaxBounds =
+								[
+									25.043419,
+									27.245392,
+									34.732422,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone51"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone51"
+								m_vMinBounds =
+								[
+									-20.683388,
+									-25.578751,
+									-9.521149,
+								]
+								m_vMaxBounds =
+								[
+									30.465302,
+									22.152237,
+									37.917053,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone72"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone72"
+								m_vMinBounds =
+								[
+									-18.544933,
+									-11.970455,
+									-19.302872,
+								]
+								m_vMaxBounds =
+								[
+									21.312363,
+									25.343025,
+									33.233841,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone86"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone86"
+								m_vMinBounds =
+								[
+									-20.701366,
+									-19.868851,
+									-14.804214,
+								]
+								m_vMaxBounds =
+								[
+									22.659527,
+									27.888748,
+									28.782089,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone101"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone101"
+								m_vMinBounds =
+								[
+									-13.981163,
+									-9.124252,
+									-19.200165,
+								]
+								m_vMaxBounds =
+								[
+									19.986923,
+									27.245346,
+									22.838821,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone116"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone116"
+								m_vMinBounds =
+								[
+									-16.809799,
+									-13.473991,
+									-9.521164,
+								]
+								m_vMaxBounds =
+								[
+									20.683388,
+									22.152298,
+									13.178329,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone11"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone11"
+								m_vMinBounds =
+								[
+									-21.433517,
+									-29.382126,
+									-17.433289,
+								]
+								m_vMaxBounds =
+								[
+									23.900978,
+									24.754665,
+									36.350311,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone39"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone39"
+								m_vMinBounds =
+								[
+									-21.142715,
+									-34.946747,
+									-18.837921,
+								]
+								m_vMaxBounds =
+								[
+									18.714577,
+									27.549141,
+									23.688202,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone27"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone27"
+								m_vMinBounds =
+								[
+									-24.261856,
+									-33.354111,
+									-16.992737,
+								]
+								m_vMaxBounds =
+								[
+									24.276733,
+									26.401093,
+									32.850800,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone54"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone54"
+								m_vMinBounds =
+								[
+									-21.808365,
+									-38.356888,
+									-11.059326,
+								]
+								m_vMaxBounds =
+								[
+									26.361038,
+									24.098999,
+									33.904465,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone73"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone73"
+								m_vMinBounds =
+								[
+									-23.900932,
+									-29.382118,
+									-17.433319,
+								]
+								m_vMaxBounds =
+								[
+									21.433365,
+									24.754673,
+									36.350281,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone87"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone87"
+								m_vMinBounds =
+								[
+									-18.714420,
+									-34.946777,
+									-18.837814,
+								]
+								m_vMaxBounds =
+								[
+									21.142670,
+									27.549110,
+									23.688202,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone102"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone102"
+								m_vMinBounds =
+								[
+									-14.547531,
+									-10.176949,
+									-16.992737,
+								]
+								m_vMaxBounds =
+								[
+									19.525360,
+									26.401054,
+									4.506165,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone117"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone117"
+								m_vMinBounds =
+								[
+									-15.585464,
+									-10.566803,
+									-11.059372,
+								]
+								m_vMaxBounds =
+								[
+									21.808334,
+									24.098984,
+									12.317032,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone10"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone10"
+								m_vMinBounds =
+								[
+									-18.738979,
+									-28.751350,
+									-14.679565,
+								]
+								m_vMaxBounds =
+								[
+									24.298508,
+									23.622738,
+									35.471649,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone38"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone38"
+								m_vMinBounds =
+								[
+									-21.053982,
+									-29.740372,
+									-20.069672,
+								]
+								m_vMaxBounds =
+								[
+									18.803207,
+									26.488220,
+									23.885345,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone25"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone25"
+								m_vMinBounds =
+								[
+									-20.646240,
+									-28.552170,
+									-14.248703,
+								]
+								m_vMaxBounds =
+								[
+									25.227753,
+									27.086426,
+									32.467529,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone53"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone53"
+								m_vMinBounds =
+								[
+									-19.353745,
+									-33.277786,
+									-11.092819,
+								]
+								m_vMaxBounds =
+								[
+									25.347656,
+									22.948608,
+									34.031403,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone74"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone74"
+								m_vMinBounds =
+								[
+									-24.298573,
+									-28.751343,
+									-14.679657,
+								]
+								m_vMaxBounds =
+								[
+									18.739017,
+									23.622746,
+									35.471558,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone88"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone88"
+								m_vMinBounds =
+								[
+									-18.803253,
+									-29.740402,
+									-20.069702,
+								]
+								m_vMaxBounds =
+								[
+									21.053940,
+									26.488190,
+									23.885315,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone103"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone103"
+								m_vMinBounds =
+								[
+									-18.163376,
+									-6.380409,
+									-14.248703,
+								]
+								m_vMaxBounds =
+								[
+									20.646111,
+									27.086380,
+									6.053833,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone118"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone118"
+								m_vMinBounds =
+								[
+									-17.975586,
+									-6.565033,
+									-11.092758,
+								]
+								m_vMaxBounds =
+								[
+									19.353714,
+									22.948563,
+									15.440628,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone09"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone09"
+								m_vMinBounds =
+								[
+									-18.233292,
+									-36.163422,
+									-11.876984,
+								]
+								m_vMaxBounds =
+								[
+									21.828094,
+									22.426479,
+									33.227905,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone41"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone41"
+								m_vMinBounds =
+								[
+									-20.708736,
+									-35.554428,
+									-20.281067,
+								]
+								m_vMaxBounds =
+								[
+									19.148453,
+									20.909668,
+									14.392319,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone26"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone26"
+								m_vMinBounds =
+								[
+									-17.390045,
+									-33.927887,
+									-13.623779,
+								]
+								m_vMaxBounds =
+								[
+									22.646439,
+									24.118004,
+									27.075989,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone56"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone56"
+								m_vMinBounds =
+								[
+									-17.686050,
+									-39.204834,
+									-10.382919,
+								]
+								m_vMaxBounds =
+								[
+									22.085052,
+									17.682968,
+									25.409164,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone75"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone75"
+								m_vMinBounds =
+								[
+									-21.828152,
+									-36.163422,
+									-11.877014,
+								]
+								m_vMaxBounds =
+								[
+									18.233337,
+									22.426479,
+									33.227966,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone89"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone89"
+								m_vMinBounds =
+								[
+									-19.148514,
+									-35.554382,
+									-20.281067,
+								]
+								m_vMaxBounds =
+								[
+									20.708778,
+									20.909607,
+									14.392319,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone104"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone104"
+								m_vMinBounds =
+								[
+									-21.419357,
+									-3.876038,
+									-13.623779,
+								]
+								m_vMaxBounds =
+								[
+									17.390121,
+									24.117958,
+									11.586517,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone119"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone119"
+								m_vMinBounds =
+								[
+									-19.749374,
+									-4.955429,
+									-10.382996,
+								]
+								m_vMaxBounds =
+								[
+									17.686020,
+									17.682953,
+									21.814102,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone08"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone08"
+								m_vMinBounds =
+								[
+									-19.243221,
+									-34.848572,
+									-14.892212,
+								]
+								m_vMaxBounds =
+								[
+									20.516869,
+									17.602303,
+									19.087585,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone40"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone40"
+								m_vMinBounds =
+								[
+									-19.916393,
+									-34.049561,
+									-25.110748,
+								]
+								m_vMaxBounds =
+								[
+									19.940697,
+									14.614914,
+									11.883759,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone23"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone23"
+								m_vMinBounds =
+								[
+									-19.620590,
+									-34.070770,
+									-19.374634,
+								]
+								m_vMaxBounds =
+								[
+									19.188812,
+									15.604446,
+									12.964081,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone55"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone55"
+								m_vMinBounds =
+								[
+									-15.800034,
+									-38.646820,
+									-20.149994,
+								]
+								m_vMaxBounds =
+								[
+									21.888565,
+									10.878662,
+									19.730011,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone76"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone76"
+								m_vMinBounds =
+								[
+									-20.517036,
+									-34.848480,
+									-14.892303,
+								]
+								m_vMaxBounds =
+								[
+									19.243156,
+									17.602303,
+									19.087494,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone90"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone90"
+								m_vMinBounds =
+								[
+									-19.940742,
+									-34.049530,
+									-25.110779,
+								]
+								m_vMaxBounds =
+								[
+									19.916451,
+									14.614853,
+									11.883728,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone105"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone105"
+								m_vMinBounds =
+								[
+									-19.188858,
+									-2.837280,
+									-19.374634,
+								]
+								m_vMaxBounds =
+								[
+									19.620529,
+									15.604431,
+									12.964081,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone120"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone120"
+								m_vMinBounds =
+								[
+									-21.888626,
+									-4.286270,
+									-17.244934,
+								]
+								m_vMaxBounds =
+								[
+									15.800186,
+									10.878845,
+									19.729965,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone07"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone07"
+								m_vMinBounds =
+								[
+									-17.944992,
+									-37.702744,
+									-15.046600,
+								]
+								m_vMaxBounds =
+								[
+									17.260300,
+									-1.387451,
+									9.920868,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone47"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone47"
+								m_vMinBounds =
+								[
+									-18.649757,
+									-35.627655,
+									-29.816879,
+								]
+								m_vMaxBounds =
+								[
+									16.149437,
+									4.262848,
+									2.618240,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone24"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone24"
+								m_vMinBounds =
+								[
+									-18.935211,
+									-38.077286,
+									-22.600464,
+								]
+								m_vMaxBounds =
+								[
+									15.788376,
+									-0.123383,
+									6.884918,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone58"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone58"
+								m_vMinBounds =
+								[
+									-18.009872,
+									-39.882507,
+									-25.483170,
+								]
+								m_vMaxBounds =
+								[
+									16.648117,
+									0.123199,
+									8.227631,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone77"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone77"
+								m_vMinBounds =
+								[
+									-17.260361,
+									-37.702759,
+									-15.046631,
+								]
+								m_vMaxBounds =
+								[
+									17.945034,
+									-1.387466,
+									9.920929,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone91"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone91"
+								m_vMinBounds =
+								[
+									-34.915977,
+									-21.900513,
+									-30.654800,
+								]
+								m_vMaxBounds =
+								[
+									48.109413,
+									14.509354,
+									18.130203,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone106"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone106"
+								m_vMinBounds =
+								[
+									-39.995148,
+									-19.658829,
+									-32.170166,
+								]
+								m_vMaxBounds =
+								[
+									49.217041,
+									11.643768,
+									23.651947,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone121"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone121"
+								m_vMinBounds =
+								[
+									-38.874390,
+									-22.700653,
+									-36.114029,
+								]
+								m_vMaxBounds =
+								[
+									49.664612,
+									8.381958,
+									23.119583,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone06"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone06"
+								m_vMinBounds =
+								[
+									-48.424637,
+									-59.052460,
+									-30.611755,
+								]
+								m_vMaxBounds =
+								[
+									43.142334,
+									43.071419,
+									30.594177,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone42"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone42"
+								m_vMinBounds =
+								[
+									-47.026207,
+									-53.008636,
+									-46.480103,
+								]
+								m_vMaxBounds =
+								[
+									35.999077,
+									44.737534,
+									29.599899,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone19"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone19"
+								m_vMinBounds =
+								[
+									-47.458710,
+									-54.554749,
+									-43.595154,
+								]
+								m_vMaxBounds =
+								[
+									41.753677,
+									43.385422,
+									29.638763,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone57"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone57"
+								m_vMinBounds =
+								[
+									-47.901520,
+									-55.842926,
+									-44.067596,
+								]
+								m_vMaxBounds =
+								[
+									40.637680,
+									39.633087,
+									31.287903,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone78"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone78"
+								m_vMinBounds =
+								[
+									-43.142403,
+									-59.052475,
+									-30.611694,
+								]
+								m_vMaxBounds =
+								[
+									48.424644,
+									43.071503,
+									30.594238,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone92"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone92"
+								m_vMinBounds =
+								[
+									-17.127922,
+									-5.399506,
+									-9.534332,
+								]
+								m_vMaxBounds =
+								[
+									18.282169,
+									0.832001,
+									4.002365,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone107"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone107"
+								m_vMinBounds =
+								[
+									-16.800110,
+									-6.335693,
+									-10.653839,
+								]
+								m_vMaxBounds =
+								[
+									17.925095,
+									7.882919,
+									29.281464,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone122"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone122"
+								m_vMinBounds =
+								[
+									-16.075409,
+									-8.631348,
+									-12.804443,
+								]
+								m_vMaxBounds =
+								[
+									17.018494,
+									4.804443,
+									28.057953,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone01"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone01"
+								m_vMinBounds =
+								[
+									-57.958992,
+									1.645935,
+									-42.154873,
+								]
+								m_vMaxBounds =
+								[
+									58.438698,
+									149.494919,
+									0.750519,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone03"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone03"
+								m_vMinBounds =
+								[
+									-15.778008,
+									-33.464783,
+									-21.431549,
+								]
+								m_vMaxBounds =
+								[
+									17.929688,
+									-1.308777,
+									2.297760,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone45"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone45"
+								m_vMinBounds =
+								[
+									-16.856342,
+									-29.806763,
+									-28.820847,
+								]
+								m_vMaxBounds =
+								[
+									16.871052,
+									-0.217255,
+									-1.821350,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone21"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone21"
+								m_vMinBounds =
+								[
+									-16.436264,
+									-27.435028,
+									-28.446381,
+								]
+								m_vMaxBounds =
+								[
+									16.404648,
+									1.798035,
+									0.574615,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone59"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone59"
+								m_vMinBounds =
+								[
+									-15.394257,
+									-29.015991,
+									-29.410339,
+								]
+								m_vMaxBounds =
+								[
+									16.194046,
+									-0.560394,
+									2.542358,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone79"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone79"
+								m_vMinBounds =
+								[
+									-17.929642,
+									-33.464798,
+									-21.431427,
+								]
+								m_vMaxBounds =
+								[
+									15.778049,
+									-1.308701,
+									2.297668,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone95"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone95"
+								m_vMinBounds =
+								[
+									-19.179497,
+									-44.672821,
+									-30.158173,
+								]
+								m_vMaxBounds =
+								[
+									18.863796,
+									13.469299,
+									15.925323,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone110"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone110"
+								m_vMinBounds =
+								[
+									-19.921677,
+									-42.697556,
+									-29.943054,
+								]
+								m_vMaxBounds =
+								[
+									18.064224,
+									15.604324,
+									16.720856,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Bone123"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Bone123"
+								m_vMinBounds =
+								[
+									-20.728607,
+									-44.941589,
+									-29.914352,
+								]
+								m_vMaxBounds =
+								[
+									16.606506,
+									13.042816,
+									16.584442,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+						]
+					},
+				]
+				m_AutoCreateSetName = ""
+			}
+		},
+	]
+	m_pAttachmentLists =
+	[
+	]
+	m_pAnimGroup =
+	{
+		_class = "CVanimGroupReference"
+		m_pObject = null
+	}
+	m_pMaterialGroupList =
+	{
+		_class = "CVNodeMaterialGroupListReference"
+		m_pObject = null
+	}
+	m_pMeshGroupList =
+	{
+		_class = "CVMeshGroupListReference"
+		m_pObject = null
+	}
+	m_pLodGroupList =
+	{
+		_class = "CVLODGroupListReference"
+		m_pObject = null
+	}
+	m_pPropBreakableList =
+	{
+		_class = "CVpropBreakableListReference"
+		m_pObject = null
+	}
+	m_pPropDataList =
+	{
+		_class = "CVpropDataListReference"
+		m_pObject = null
+	}
+	m_pConstraintLists =
+	[
+	]
+	m_collision = ""
+	m_softbody = ""
+	m_sMDLFilename = ""
+	m_sOffsetHitboxSets =
+	[
+	]
+	m_vHitboxSetOffset =
+	[
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_scriptFiles =
+	[
+	]
+	m_pMaterialRemapList =
+	{
+		_class = "CVMaterialRemapList"
+		m_vMaterialRemapList =
+		[
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "*"
+				m_sReplaceMaterial = "materials/buildings/yamatanoorochi/yamatanoorochi.vmat"
+			},
+		]
+	}
+	m_flFbxScale = 1.000000
+	m_flQCScale = 1.000000
+	m_vOrigin =
+	[
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_pPsfList = null
+	m_keyValueText = ""
+	m_bStaticProp = false
+	m_bEnableClothProcessing = true
+	m_flClothEnableThreshold = 0.050000
+	m_nMaxClothVertsPerMesh = 2048
+	m_bBuildClothBoneHierarchy = false
+	m_nNavType = "AUTH_NAV_MESH"
+	m_bMakeUniqueVMeshes = false
+	m_bMakeImplicitBindPoseSequence = false
+	m_bAdjustSkeletonFromBoneFlags = false
+	m_pAnimGroups =
+	[
+	]
+}

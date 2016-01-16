@@ -85,11 +85,12 @@
 		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
 		"soundfile"	"soundevents/kisame_ulti.vsndevts"
 		"particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
+		"particle"  "particles/units/heroes/kisame/water_dome2.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
 		"particle"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
-		"particle"	"particles/units/heroes/kisame/water_dome.vpcf"
+		"particle"	"particles/units/heroes/kisame/water_dome2.vpcf"
 		"model"		"models/kisame_new/kisame_samehada.vmdl"
 	}
 
@@ -213,6 +214,8 @@
 					"model"					"models/kisame_new/kisame_samehada.vmdl"
 					"projectile_model"		"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
 				}
+
+				
 
 
 			}

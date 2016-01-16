@@ -4,6 +4,7 @@
     "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
     "BaseClass"               "item_datadriven"
     "AbilityTextureName"      "item_silver_watch"
+    "SideShop" "1"
     "SecretShop" "1"
     // Stats
     //-------------------------------------------------------------------------------------------------------------

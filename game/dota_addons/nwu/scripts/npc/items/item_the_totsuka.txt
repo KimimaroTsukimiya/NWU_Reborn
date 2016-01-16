@@ -52,11 +52,17 @@
         "Target"    "CASTER"
       }
 
-          "ApplyModifier"
-          {
-            "ModifierName"  "modifier_totsuka_silence"
-            "Target"  "TARGET"
-          }
+          "RunScript"
+        {
+          "ScriptFile"    "items.lua"
+          "Function"      "CheckForSpellBlock"
+          
+          "GenericFunction" "GenericSpellFunction"
+          "Modifier1"   "modifier_totsuka_silence"
+          "Duration1"   "%silence_duration"
+          
+          "doDamage"    "false"
+        }
 
           "FireSound"
           {

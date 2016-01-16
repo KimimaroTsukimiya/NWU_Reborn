@@ -52,6 +52,7 @@
         "modifier_agile_speed_ms"
         {
             "Passive" "1"
+            "IsHidden" "1"
 
             "Properties"
             {

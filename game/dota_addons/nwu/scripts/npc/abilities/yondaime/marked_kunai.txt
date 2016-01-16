@@ -1,0 +1,211 @@
+"yondaime_marked_kunai"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+	"BaseClass"					"ability_datadriven"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"		"yondaime_marked_kunai"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
+		"particle"			"particles/units/heroes/yondaime/kunai_alt.vpcf"
+		"particle"			"particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger_debuff.vpcf"
+		"particle"		"particles/units/heroes/hero_bounty_hunter/bounty_hunter_track_haste.vpcf"
+		"particle"		"particles/units/heroes/yondaime/blink_core.vpcf"
+		"model"			"models/heroes/yondaime/yondakunai.vmdl"
+		"particle"		"particles/units/heroes/yondaime/kunai_ground.vpcf"
+		
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"			"725 850 975 1100"
+	"AbilityCastPoint"			"0.1 0.1 0.1"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"			"12 10 8 6"	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"			"40 40 40 40"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+			"var_type"				"FIELD_INTEGER"
+			"bonus_move_speed_pct"	"8 12 16 20"
+		}
+		"02"
+        { 
+            "var_type"  			"FIELD_INTEGER"
+            "aura_radius" 			"600"
+        }
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"dagger_speed"			"2500"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"armor_reduction"		"-3 -4 -5 -6"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"				"4.0 5.0 6.0 7.0"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"dagger_radius"				"125"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"dagger_range"				"650 725 800 875"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"dagger_duration"				"30 30 30 30"	
+		}
+
+		"09"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"creep_damage"				"60 90 120 150"	
+		}
+		"10"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"hero_damage"				"30 45 60 75"	
+		}
+
+    }
+
+    "OnUpgrade"
+    {
+    	"RunScript"
+    	{
+    		"ScriptFile"	"heroes/yondaime/marked_kunai.lua"
+			"Function"		"learn_flicker"
+    	}
+    }
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/yondaime/marked_kunai.lua"
+			"Function"		"startKunai"
+			"Target"		"POINT"
+			"speed"			"%dagger_speed"
+		}
+
+		"FireSound"
+		{
+			"EffectName"		"Hero_PhantomAssassin.Dagger.Cast"
+			"Target"			"CASTER"
+		}
+	}
+	
+	"OnProjectileHitUnit"
+	{
+
+		"DeleteOnHit" "0"
+		"FireSound"
+		{
+			"EffectName"		"Hero_PhantomAssassin.Dagger.Target"
+			"Target"			"TARGET"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifier_marked_kunai_debuff"
+			"Target"			"TARGET"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/yondaime/marked_kunai.lua"
+			"Function"		"damage_unit"
+			"Target"		"TARGET"
+		}
+	}
+
+	"OnProjectileFinish"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/yondaime/marked_kunai.lua"
+			"Function"		"createDaggerParticle"
+			"Target"		"POINT"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_marked_kunai"
+		{
+			"Passive" "1"
+			"IsHidden"  "1"
+
+			"ThinkInterval" "0.3"
+            "OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"  "heroes/yondaime/marked_kunai.lua"
+					"Function"    "marked_kunai"
+					
+					"modifier"		"modifier_marked_kunai_bonus"
+					"modifierCheck"	"modifier_marked_kunai_dummy_aura"
+				}
+			}
+		}
+		
+		"modifier_marked_kunai_debuff"
+		{
+			"Duration"	"%duration"
+			"IsDebuff"	"1"
+
+			"Aura" 			"modifier_marked_kunai_dummy_aura"
+			"Aura_Radius" 	"%aura_radius"
+			"Aura_Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"Aura_Types" 	"DOTA_UNIT_TARGET_HERO"
+			"Aura_ApplyToCaster"	"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%armor_reduction"
+			}
+		}
+
+		"modifier_yondaime_marked_kunai"
+		{
+
+			"Passive"	"0"
+
+		
+			"States"
+			{
+				"MODIFIER_STATE_INVULNERABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR" 	"MODIFIER_STATE_VALUE_ENABLED"				
+				"MODIFIER_STATE_NOT_ON_MINIMAP" "MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_UNSELECTABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+
+		
+	}
+}

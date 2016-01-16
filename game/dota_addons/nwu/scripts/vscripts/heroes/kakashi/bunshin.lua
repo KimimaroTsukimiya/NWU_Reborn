@@ -1,6 +1,5 @@
 -- Creates an Illusion, making use of the built in modifier_illusion
 function ConjureImage( event )
-	print("Conjure Image")
 	local caster = event.caster
 	local player = caster:GetPlayerID()
 	local ability = event.ability
@@ -11,12 +10,12 @@ function ConjureImage( event )
 	local outgoingDamage = ability:GetLevelSpecialValueFor( "illusion_outgoing_damage_percent", ability:GetLevel()-1)
 	local incomingDamage = ability:GetLevelSpecialValueFor( "illusion_incoming_damage_percent", ability:GetLevel()-1)
 
-	print(outgoingDamage)
-	print(incomingDamage)
 	-- handle_UnitOwner needs to be nil, else it will crash the game.
-	local illusion = CreateUnitByName(unit_name, origin, true, caster, nil, caster:GetTeamNumber())
-	illusion:SetPlayerID(caster:GetPlayerID())
+	local illusion = CreateUnitByName(unit_name, origin, false, caster, nil, caster:GetTeamNumber())
+	illusion:SetOwner(caster)
+	illusion:SetPlayerID(caster:GetPlayerID()-1)
 	illusion:SetControllableByPlayer(player, true)
+	illusion:SetForwardVector(caster:GetForwardVector())
 
 	-- Level Up the unit to the casters level
 	local casterLevel = caster:GetLevel()
@@ -52,19 +51,21 @@ function ConjureImage( event )
 	-- Set the unit as an illusion
 	-- modifier_illusion controls many illusion properties like +Green damage not adding to the unit damage, not being able to cast spells and the team-only blue particle 
 	illusion:AddNewModifier(caster, ability, "modifier_illusion", { duration = duration, outgoing_damage = outgoingDamage, incoming_damage = incomingDamage })
+	illusion:AddNewModifier(caster, ability, "modifier_phased", { duration = 0.5 })
+	
 	ability:ApplyDataDrivenModifier(caster, illusion, "modifier_kakashi_bunshin_charge", {duration = duration})   
 	-- Without MakeIllusion the unit counts as a hero, e.g. if it dies to neutrals it says killed by neutrals, it respawns, etc.
 	illusion:MakeIllusion()
 	event.caster.bunshin = illusion
 	GameMode:RemoveWearables( illusion )
+	
+	print(illusion:GetOwner(),illusion:GetTeam())
 	-- Move to the same direction as the caster
 	Timers:CreateTimer(0.05,
 		function() 
-			FindClearSpaceForUnit(illusion, caster:GetAbsOrigin(), false)
 			illusion:MoveToPosition(run_to_position)
 		end
 	)
-
 end
 
 

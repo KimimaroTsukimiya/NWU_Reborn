@@ -66,16 +66,7 @@
 
 	"OnSpellStart"
   {
-      "RunScript"
-          {
-            "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
-            "Function"        "NoDraw"
-          }
-    "ApplyModifier"
-    {
-      "ModifierName"    "mizu_bunshin_no_jutsu_illusion"
-      "Target"          "CASTER"
-    }
+
 
     "FireSound"
         {
@@ -83,50 +74,20 @@
           "Target"    "CASTER"
         }
 
+                "RunScript"
+              {
+                "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+                "Function"        "ConjureImage"
+              }
+              "RunScript"
+              {
+                "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
+                "Function"        "ConjureImage"
+              }
   }
 
     "Modifiers"
     {
-       "mizu_bunshin_no_jutsu_illusion"
-      {
-        "Duration"  "1"
-        "IsHidden"  "1"
-        "OnCreated"
-        {
-           "DelayedAction"
-          {
-            "Delay"     "0.1"
-            "Action"    
-            {
-                   "RunScript"
-              {
-                "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
-                "Function"        "ConjureImage"
-              }
-              "RunScript"
-              {
-                "ScriptFile"      "heroes/kisame/mizu_bunshin_no_jutsu.lua"
-                "Function"        "ConjureImage"
-              }
-            }
-          }
-
-          "DelayedAction"
-          {
-            "Delay"     "0.3"
-            "Action"    
-            {
-              "RunScript"
-              {
-                "ScriptFile"  "heroes/kisame/mizu_bunshin_no_jutsu.lua"
-                "Function"    "draw"
-              }
-
-            }
-          }
-        }
-      }
-
       "modifier_water_bunshin"
       {
         "Passive"     "0"
@@ -157,6 +118,7 @@
             "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"  "%bonus_damage"
           }
       }
+
 	 }
 	
 }

@@ -6,6 +6,7 @@
     "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
     "BaseClass"               "item_datadriven"
     "AbilityTextureName"      "item_sage_scroll"
+    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
     "AbilityCastRange"        "%cast_range"
     "AbilityManaCost"         "%manacost"
     // Stats
@@ -49,13 +50,20 @@
         "EffectName"  "Hero_Lion.Hex.Target"
         "Target"    "TARGET"
       }
-      
-      "ApplyModifier"
+
+        "RunScript"
       {
-        "ModifierName"  "modifier_hex"
-        "Target"    "TARGET"
-        "Duration"    "%hex_duration"
+        "ScriptFile"    "items.lua"
+        "Function"      "CheckForSpellBlock"
+        
+        "GenericFunction" "GenericSpellFunction"
+        "Modifier1"   "modifier_hex"
+        "Duration1"   "%hex_duration"
+        
+        "doDamage"    "false"
       }
+      
+
     } 
 
     "Modifiers"
@@ -98,6 +106,7 @@
           "MODIFIER_STATE_HEXED"    "MODIFIER_STATE_VALUE_ENABLED"
           "MODIFIER_STATE_EVADE_DISABLED" "MODIFIER_STATE_VALUE_ENABLED"
           "MODIFIER_STATE_BLOCK_DISABLED" "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_SILENCED" "MODIFIER_STATE_VALUE_ENABLED"
         }
       }
 

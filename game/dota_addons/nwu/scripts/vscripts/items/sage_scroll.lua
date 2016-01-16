@@ -28,8 +28,14 @@ function voodoo_end( keys )
 
 	-- Checking for errors
 	if target.target_model ~= nil then
+		print(target.target_model)
 		target:SetModel(target.target_model)
 		target:SetOriginalModel(target.target_model)
+		if target.target_model == "models/creeps/roshan/roshan.vmdl" then
+			print("rescale")
+			target:SetModelScale(3.6)
+		end
+
 	end
 end
 

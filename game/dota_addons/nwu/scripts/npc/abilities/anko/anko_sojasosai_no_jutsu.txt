@@ -49,7 +49,7 @@
 		"02"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"cast_range"				"50 60 70"
+			"cast_range"					"100"
 		}
 	}
 	"OnSpellStart"

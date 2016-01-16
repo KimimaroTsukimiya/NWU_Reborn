@@ -11,6 +11,12 @@ function summon_karasu( keys )
 	local mana_gain = ability:GetSpecialValueFor("mana_gain")
 	local damage_gain = ability:GetSpecialValueFor("damage_gain")
 
+	local ability_index = keys.caster:FindAbilityByName("kankuro_kugusta_no_jutsu"):GetAbilityIndex()
+    local kugusta_ability = keys.caster:GetAbilityByIndex(ability_index)
+    local bonus_hp = 0
+    if kugusta_ability:GetLevel() > 0 then
+    	bonus_hp = kugusta_ability:GetLevelSpecialValueFor("extra_hp", kugusta_ability:GetLevel() - 1)
+	end
 	-- Ability variables
 	local puppet_duration = ability:GetSpecialValueFor("puppet_duration") 
 
@@ -30,19 +36,27 @@ function summon_karasu( keys )
 	karasu_unit:SetManaGain(mana_gain)
 	karasu_unit:SetDamageGain(damage_gain)
 
+	karasu_unit:SetMaxHealth(karasu_unit:GetMaxHealth() + bonus_hp)
+
 	--Determine Karasu's Skills
 	if (ability:GetLevel() == 1) then
 		karasu_unit:CreatureLevelUp(1)
-		karasu_unit:FindAbilityByName("karasu_critical_strike"):SetLevel(1)
+		karasu_unit:FindAbilityByName("karasu_daggers"):SetLevel(1)
+		karasu_unit:FindAbilityByName("karasu_poison_gas"):SetLevel(0)
+		karasu_unit:FindAbilityByName("karasu_critical_strike"):SetLevel(0)
+		karasu_unit:FindAbilityByName("karasu_dismantle_parts"):SetLevel(0)
 	elseif (ability:GetLevel() == 2) then
 		karasu_unit:CreatureLevelUp(2)
 		karasu_unit:FindAbilityByName("karasu_daggers"):SetLevel(1)
+		karasu_unit:FindAbilityByName("karasu_poison_gas"):SetLevel(0)
 		karasu_unit:FindAbilityByName("karasu_critical_strike"):SetLevel(1)
+		karasu_unit:FindAbilityByName("karasu_dismantle_parts"):SetLevel(0)
 	elseif (ability:GetLevel() == 3) then
 		karasu_unit:CreatureLevelUp(3)
 		karasu_unit:FindAbilityByName("karasu_daggers"):SetLevel(1)
 		karasu_unit:FindAbilityByName("karasu_poison_gas"):SetLevel(1)
 		karasu_unit:FindAbilityByName("karasu_critical_strike"):SetLevel(1)
+		karasu_unit:FindAbilityByName("karasu_dismantle_parts"):SetLevel(0)
 	elseif (ability:GetLevel() == 4) then
 		karasu_unit:CreatureLevelUp(4)
 		karasu_unit:FindAbilityByName("karasu_daggers"):SetLevel(1)

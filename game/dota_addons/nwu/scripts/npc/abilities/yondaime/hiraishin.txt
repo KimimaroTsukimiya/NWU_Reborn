@@ -1,0 +1,70 @@
+"yondaime_hiraishin_jump"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+	"BaseClass"					"ability_lua"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"		"DAMAGE_TYPE_PHYSICAL"
+	"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityTextureName"		"yondaime_hiraishin"
+	"ScriptFile"				"heroes/yondaime/hiraishin_ability.lua"
+	"AbilityType" 				"DOTA_ABILITY_TYPE_ULTIMATE"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"			"1000"
+	"AbilityCastPoint"			"0.0 0.0 0.0"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"			"80 60 40"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"			"100/140/180"
+	
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+		"particle"	"particles/units/heroes/hero_juggernaut/juggernaut_omni_slash_tgt.vpcf"
+		"particle"	"particles/units/heroes/hero_juggernaut/juggernaut_omni_slash_trail.vpcf"
+	}
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+    	"01"
+        {
+			"var_type"				"FIELD_INTEGER"
+			"damage"	"140 180 220"
+		}
+		"02"
+        { 
+            "var_type"  			"FIELD_INTEGER"
+            "armor_reduction" 			"-4 -6 -8"
+        }
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"armor_duration"			"5"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"range"			"1000"
+		}
+
+    }
+
+	
+	"Modifiers"
+	{
+
+
+
+	}
+}

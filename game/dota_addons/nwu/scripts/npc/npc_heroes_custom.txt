@@ -26,13 +26,14 @@
 	
 	  "AttackRange"				"100"
 	  "MovementSpeed"			"300"
-	  "AttributeBaseStrength" "17" // Base strength
-	  "AttributeStrengthGain" "2" // Strength bonus per level.
-	  "AttributeBaseIntelligence" "15" // Base intelligence
+	  "AttributeBaseStrength" "23" // Base strength
+	  "AttributeStrengthGain" "3" // Strength bonus per level.
+	  "AttributeBaseIntelligence" "16" // Base intelligence
 	  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
-	  "AttributeBaseAgility" "23" // Base agility
-	  "AttributeAgilityGain" "3.1" // Agility bonus per level.
+	  "AttributeBaseAgility" "14" // Base agility
+	  "AttributeAgilityGain" "1.6" // Agility bonus per level.
 	
+	  "Gender"      "female"
 	  "Village"			"kirigakure"
 	}	
 		"npc_dota_hero_lion" //gaara
@@ -135,11 +136,11 @@
 		  "AttackRate"    "1.700000"
 		  
 		  "AttackAnimationPoint"   "0.4"
-		  "AttackRange"				"275"
+		  "AttackRange"				"100"
 
 		  "MovementSpeed"			"290"
-		  "AttributeBaseStrength" "32" // Base strength
-		  "AttributeStrengthGain" "2.8" // Strength bonus per level.
+		  "AttributeBaseStrength" "27" // Base strength
+		  "AttributeStrengthGain" "2.4" // Strength bonus per level.
 		  "AttributeBaseIntelligence" "17" // Base intelligence
 		  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
 		  "AttributeBaseAgility" "15" // Base agility
@@ -242,33 +243,33 @@
 	"npc_dota_hero_warlock" //kankuro
 	{
 	  "override_hero"   "npc_dota_hero_warlock"
-	  //"Model"           ""
+	  "Model"           "models/kankuro/kankuro.vmdl"
 	  "Ability1"        "kankuro_summon_kuroari"
 	  "Ability2"        "kankuro_summon_karasu"
-	  //"Ability3"        ""
-	  //"Ability4"        ""      
+	  "Ability3"        "kankuro_kugusta_no_jutsu"
+	  "Ability4"        "kankuro_summon_sanshouuo"      
 	  "ModelScale"		"0.80"
 	  "LoadoutScale"	"0.80" 
 	  "ItemSlots"
 	  { }
-	  "AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
+	  "AttackCapabilities"    "DOTA_UNIT_CAP_RANGED_ATTACK"
 	  "AttributePrimary" 		"DOTA_ATTRIBUTE_INTELLECT"
 	  "AttackAnimationPoint"		"0.4"
-	  "Role"      "Support,Jungler,Pusher,Carry"
-	  "Rolelevels"  "2,1,3,2"
+	  "Role"      "Support,Jungler,Pusher"
+	  "Rolelevels"  "2,1,3"
 	  "AttackDamageMin"   "23"
 	  "AttackDamageMax"   "31"
 	  "AttackRate"    "1.700000"
 	
-	  "AttackRange"				"100"
-	  "MovementSpeed"			"300"
-	  "AttributeBaseStrength" "17" // Base strength
-	  "AttributeStrengthGain" "2" // Strength bonus per level.
-	  "AttributeBaseIntelligence" "15" // Base intelligence
-	  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
-	  "AttributeBaseAgility" "23" // Base agility
-	  "AttributeAgilityGain" "3.1" // Agility bonus per level.
-	
+	  "AttackRange"				"500"
+	  "MovementSpeed"			"290"
+	  "AttributeBaseStrength" "19" // Base strength
+	  "AttributeStrengthGain" "2.1" // Strength bonus per level.
+	  "AttributeBaseIntelligence" "21" // Base intelligence
+	  "AttributeIntelligenceGain" "3" // Intelligence bonus per level.
+	  "AttributeBaseAgility" "15" // Base agility
+	  "AttributeAgilityGain" "1.25" // Agility bonus per level. 
+	  "Gender"      "male"
 	  "Village"			"kirigakure"
 	}	
 	"npc_dota_hero_windrunner" //kidoumaru
@@ -538,6 +539,41 @@
 
 	  	  "Gender"			"female"
 		}
+	"npc_dota_hero_batrider" //sarutobi
+		{
+		  "override_hero"   "npc_dota_hero_batrider"
+		  "Ability1"        "sarutobi_katon_doton_combo"
+		  "Ability2"        ""
+		  "Ability3"        ""
+		  "Ability4"        "" 
+		  "ModelScale"		"0.90"
+		  "LoadoutScale"		"0.90" 
+		  //"Model" 			""
+		  "ItemSlots"
+		  { }
+			"StatusHealth"    "145"
+			"StatusHealthRegen"   "0.300000"
+			"AttackDamageMin"		"21"
+			"AttackDamageMax"		"23"
+			"Role"			"Initiator,Disabler,Carry"
+			"Rolelevels"	"1"
+			"ArmorPhysical"		"2.000000"
+			"AttackRate"		"1.700000"
+		  	  "AttributePrimary" 		"DOTA_ATTRIBUTE_INTELLECT"
+			  "AttackAnimationPoint"		"0.4"
+			 // "AttackRate"				"1.0"
+			  "AttackRange"				"100"
+			  "MovementSpeed"			"300"
+			  "AttributeBaseStrength" "17" // Base strength
+			  "AttributeStrengthGain" "2" // Strength bonus per level.
+			  "AttributeBaseIntelligence" "15" // Base intelligence
+			  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
+			  "AttributeBaseAgility" "23" // Base agility
+			  "AttributeAgilityGain" "3.1" // Agility bonus per level.
+	
+		  	  "Village"			"kirigakure"
+		  	  "Gender"			"male"
+		}
 		"npc_dota_hero_storm_spirit" //sasuke
 		{
 		  "override_hero"   "npc_dota_hero_storm_spirit"
@@ -615,9 +651,9 @@
 	  "Ability2"        "temari_kamaitachi_no_jutsu"
 	  "Ability3"        "temari_sheer_wind" 
 	  "Ability4"        "temari_kuchiyose_kirikiri_mai"
-	  "ModelScale"		"1.08"
-	  "LoadoutScale"	"1.08" 
-	  //"Model" 		"models/zabuza/zabuza.vmdl"
+	  "ModelScale"		"1.75"
+	  "LoadoutScale"	"1.75" 
+	  "Model" 		"models/temari/temari.vmdl"
 	  "ItemSlots"
 	  { }
 	    "StatusHealth"    "145"
@@ -628,53 +664,60 @@
 	    "Rolelevels"  "1,1,3,1"
 	    "AttackDamageMax"   "20"
 	    "AttackRate"    "1.700000"
-	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 	  "AttackAnimationPoint"		"0.4"
 	 // "AttackRate"				"1.0"
-	  "AttackRange"				"100"
-	  "MovementSpeed"			"300"
+	  "AttackRange"				"575"
+	  "MovementSpeed"			"295"
 	  "AttributeBaseStrength" "17" // Base strength
-	  "AttributeStrengthGain" "2" // Strength bonus per level.
-	  "AttributeBaseIntelligence" "15" // Base intelligence
-	  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
-	  "AttributeBaseAgility" "23" // Base agility
-	  "AttributeAgilityGain" "3.1" // Agility bonus per level.
+	  "AttributeStrengthGain" "1.7" // Strength bonus per level.
+	  "AttributeBaseIntelligence" "21" // Base intelligence
+	  "AttributeIntelligenceGain" "2.8" // Intelligence bonus per level.
+	  "AttributeBaseAgility" "14" // Base agility
+	  "AttributeAgilityGain" "1.5" // Agility bonus per level.
 	
 	  "Village"			"kirigakure"
+	  "Gender"      "female"  
 	}	
-		"npc_dota_hero_juggernaut" //yondaime
-		{
-		  "override_hero"   "npc_dota_hero_juggernaut"
-		  "Model" 			"models/yondaime/yondaime.vmdl"
-		  "Ability1"         "yondaime_dash_strike"
-		 // "Ability2"         "gaara_ryuusa_bakuryu" 
-		  "Ability3"         "yondaime_agile_speed" 
-		 // "Ability4"         "gaara_sabaku_taiso"
-		  //"ModelScale"		"0.5"
-		"AttackDamageMin"		"20"
-		"AttackDamageMax"		"20"
-		  "StatusHealth"    "145"
-  "StatusHealthRegen"   "0.300000"
+	"npc_dota_hero_juggernaut" //yondaime
+	{
+		"override_hero"		"npc_dota_hero_juggernaut"
+		"Model"				"models/yondaime_new/yondaime_new.vmdl"
+		//"ModelScale"		"0.5"
+		
+		"AbilityLayout"	"5"
+		"Ability1"		"yondaime_marked_kunai"
+		"Ability2"		"yondaime_rasengan" 
+		"Ability3"		"yondaime_agile_speed" 
+		"Ability5"		"yondaime_body_flicker"
+		"Ability6"		"yondaime_hiraishin_jump"
+		"Ability4"		"attribute_bonus"
+	
+		"AttackDamageMin"	"25"
+		"AttackDamageMax"	"31"
+		"StatusHealth"    	"145"
+		"StatusHealthRegen"	"0.300000"
 		"AttackRate"		"1.700000"		
 		"ArmorPhysical"		"1.000000"
-		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
-		  "AttackAnimationPoint"   "0.4"
-		 // "AttackRate"				"0.7"
-		  "AttackRange"				"100"
-		  "MovementSpeed"			"295"
-		  "AttributeBaseStrength" "17" // Base strength
-		  "AttributeStrengthGain" "1.9" // Strength bonus per level.
-		  "AttributeBaseIntelligence" "14" // Base intelligence
-		  "AttributeIntelligenceGain" "1.6" // Intelligence bonus per level.
-		  "AttributeBaseAgility" "21" // Base agility
-		  "AttributeAgilityGain" "2.5" // Agility bonus per level.
-
-		  "Village"			"konoha"
-		  "Gender"			"male"
-		  
-	 	  "ItemSlots"
-	  	  { }
-		}
+		"AttackAnimationPoint"   "0.4"
+		"AttackRange"		"100"
+		"MovementSpeed"		"310"
+		"MovementTurnRate""1.000000"
+	
+		
+		"AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"17"	// Base strength
+		"AttributeStrengthGain"		"1.9"	// Strength bonus per level.
+		"AttributeBaseAgility"		"21"	// Base agility
+		"AttributeAgilityGain"		"2.5"	// Agility bonus per level.
+		"AttributeBaseIntelligence" "16" 	// Base intelligence
+		"AttributeIntelligenceGain" "1.6"	// Intelligence bonus per level.
+	
+		"Village"			"konoha"
+		"Gender"			"male"
+	
+		"ItemSlots"
+		{ }
+	}
 	"npc_dota_hero_bloodseeker" //zabuza
 			{
 			  "override_hero"   "npc_dota_hero_bloodseeker"

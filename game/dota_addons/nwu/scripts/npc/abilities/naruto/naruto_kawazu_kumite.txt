@@ -84,11 +84,7 @@
 
 	"OnSpellStart"
   {
-    "FireSound"
-    {
-      "EffectName"  "naruto_bunshin"
-      "Target"     "CASTER"
-    }
+
     "ApplyModifier"
     {
       "ModifierName"  "modfiier_naruto_kawazu_kumite"
