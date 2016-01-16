@@ -76,8 +76,8 @@ function startKunai( keys )
 	local direction = targetPos - casterOrigin
 	local dagger_radius = ability:GetLevelSpecialValueFor("dagger_radius", (ability:GetLevel() - 1))
 	local distance = math.sqrt(direction.x * direction.x + direction.y * direction.y)
-
-
+	keys.caster.isDC = true
+   
 
 	direction = direction / direction:Length2D()
 
