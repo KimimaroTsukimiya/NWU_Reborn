@@ -85,27 +85,7 @@
 				"MODIFIER_PROPERTY_MISS_PERCENTAGE" "%miss_chance"
 			}
 			
-			"OnCreated"
-			{	
-				"FireSound"
-			    {
-			      "EffectName"  "Hero_Brewmaster.ThunderClap"
-			      "Target"    "CASTER"
-			    }
-			     "FireSound"
-	            {
-	              "EffectName"  "Hero_Brewmaster.ThunderClap.Target"
-	              "Target"    "TARGET"
-	            }
-			
-				"FireEffect"
-				{
-				  "EffectName"        	"particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf"
-				  "EffectAttachType"  	"follow_origin"
-				  "EffectRadius"		"200"
-				  "Target"            	"TARGET"
-				}
-			}
+
 		}
 
 
@@ -113,10 +93,7 @@
 		{
 			"Passive"			"0"
 
-			"States"
-			{
-				"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
-			}
+			
 			
 		}
 	}
