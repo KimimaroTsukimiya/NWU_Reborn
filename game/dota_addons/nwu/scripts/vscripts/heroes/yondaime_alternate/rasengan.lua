@@ -53,9 +53,16 @@ function rasengan_bonus_damage( keys )
 	ParticleManager:SetParticleControlEnt(particle, 0, keys.caster, PATTACH_POINT_FOLLOW, "attach_right_hand", keys.caster:GetAbsOrigin(), true)
 	ParticleManager:SetParticleControlEnt(particle, 1, keys.caster, PATTACH_POINT_FOLLOW, "attach_right_hand", keys.caster:GetAbsOrigin(), true)
 	ParticleManager:SetParticleControlEnt(particle, 3, keys.caster, PATTACH_POINT_FOLLOW, "attach_right_hand", keys.caster:GetAbsOrigin(), true)
- 	keys.caster.rasenParticle = particle
+ 	if not keys.caster.rasenParticle then
+ 		keys.caster.rasenParticle = {}
+ 	end
+ 	table.insert(keys.caster.rasenParticle, particle)
 end
 
 function destroyRasenParticle( keys )
-	ParticleManager:DestroyParticle(keys.caster.rasenParticle, true)
+	if keys.caster.rasenParticle then
+		for _,particle in pairs(keys.caster.rasenParticle) do
+			ParticleManager:DestroyParticle(particle, true)
+		end
+	end
 end

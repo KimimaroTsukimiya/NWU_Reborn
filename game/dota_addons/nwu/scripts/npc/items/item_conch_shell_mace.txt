@@ -38,6 +38,9 @@
                "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attackspeed"
 
           }   
+
+
+    
           
       "OnAttackStart"
         {

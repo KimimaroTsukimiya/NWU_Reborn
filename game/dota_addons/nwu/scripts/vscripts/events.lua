@@ -53,23 +53,7 @@ function GameMode:OnGameRulesStateChange(keys)
      local shopkeeper_dire = Entities:FindByModel(nil, "models/heroes/shopkeeper_dire/shopkeeper_dire.vmdl")
      shopkeeper_dire:SetModelScale(2.4)
   end
-  if newState == 6 then
-     -- A timer running every second that starts immediately on the next frame, respects pauses
-        Timers:CreateTimer(function()
-            for _,hero in pairs( Entities:FindAllByClassname( "npc_dota_hero*")) do
-              if hero ~= nil and hero:IsOwnedByAnyPlayer() and hero:GetPlayerOwnerID() ~= -1 then
-                if PlayerResource:GetConnectionState( hero:GetPlayerID() ) ~= 2 then
-                  GameRules:SendCustomMessage(hero:GetOwner():GetName() .." has 2 minutes to reconnect.", 0, 0)
-                    GameMode:ModifyGoldGainDC(hero)
-                elseif not hero:HasOwnerAbandoned() then
-                  hero.isDC = false
-                end 
-              end
-            end
-            return 1.0  
-        end
-        )
-  end
+ 
   --This function controls the music on each gamestate
   GameMode:PlayGameMusic(newState)
 
