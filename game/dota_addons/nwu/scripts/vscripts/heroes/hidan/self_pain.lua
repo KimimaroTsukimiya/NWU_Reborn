@@ -24,6 +24,10 @@ function self_pain( keys )
     local death_possession_blood_ability_level = keys.caster:GetAbilityByIndex(ability_index):GetLevel()
     local returned_damage_outside_percentage = death_possession_blood_ability:GetLevelSpecialValueFor( "returned_damage_outside_percentage", ( death_possession_blood_ability:GetLevel() - 1 ) )
 
+    local particle = ParticleManager:CreateParticle("particles/units/heroes/hidan/hidan_passive_a.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
+	ParticleManager:SetParticleControl(particle, 0, caster:GetAbsOrigin())
+	ParticleManager:SetParticleControl(particle, 1, caster:GetAbsOrigin()) 
+	ParticleManager:SetParticleControl(particle, 3, caster:GetAbsOrigin()) 
 
     if caster:HasModifier("modifier_hidan_metamorphosis") then 
     	if caster:HasModifier("modifier_hidan_in_circle") then 

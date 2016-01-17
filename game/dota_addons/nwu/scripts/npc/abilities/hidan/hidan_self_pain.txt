@@ -31,7 +31,7 @@
 
 	"precache"
 	{
-
+		"particle" "particles/units/heroes/hidan/hidan_passive_a.vpcf"
 	}
 
 	"OnSpellStart"
