@@ -18,6 +18,7 @@ function rasengan(keys)
 	local len = ( vTarget - vCaster ):Length2D()
 	len = range - range * ( len / range )
 
+    EmitSoundOn("Hero_Crystal.CrystalNova",caster)
 	
 	local knockbackModifierTable =
 	{

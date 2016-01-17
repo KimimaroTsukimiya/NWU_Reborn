@@ -55,15 +55,17 @@ end
 	Sets the target for this ability
 ]]
 function setTarget( keys )
-	keys.ability.bloodTarget = keys.target
-	keys.ability.targetTime = Time()
-	local targetTime = Time()
+	if keys.target:IsRealHero() then
+		keys.ability.bloodTarget = keys.target
+		keys.ability.targetTime = Time()
+		local targetTime = Time()
 
-	Timers:CreateTimer(20, function() 
-		if keys.ability.targetTime == targetTime then 
-			keys.ability.bloodTarget = nil 
-			end 
-	end)
+		Timers:CreateTimer(20, function() 
+			if keys.ability.targetTime == targetTime then 
+				keys.ability.bloodTarget = nil 
+				end 
+		end)
+	end
 end
 --[[Author LearningDave
 	Date november, 2th 2015

@@ -113,11 +113,7 @@
                     "Target"         "CASTER"
                     "Duration"        "1"
                 }
-                "FireSound"
-                {
-                    "EffectName"            "Hero_Crystal.CrystalNova"
-                    "Target"                "CASTER"
-                }
+
             }
 
 
