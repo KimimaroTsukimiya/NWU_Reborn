@@ -22,8 +22,8 @@ function rasengan(keys)
 	local knockbackModifierTable =
 	{
 		should_stun = 1,
-		knockback_duration = 1,
-		duration = 1,
+		knockback_duration = 0.75,
+		duration = 0.75,
 		knockback_distance = len,
 		knockback_height = 0,
 		center_x = keys.caster:GetAbsOrigin().x,
