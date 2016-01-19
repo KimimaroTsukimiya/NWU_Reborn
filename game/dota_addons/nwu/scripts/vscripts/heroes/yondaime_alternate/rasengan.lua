@@ -41,6 +41,8 @@ function rasengan(keys)
 	ParticleManager:SetParticleControlEnt(particle, 2, keys.target, PATTACH_POINT_FOLLOW, "attach_hitloc", keys.target:GetAbsOrigin(), true)
 	ParticleManager:SetParticleControlEnt(particle, 3, keys.target, PATTACH_POINT_FOLLOW, "attach_hitloc", keys.target:GetAbsOrigin(), true)
 
+	caster:Stop()
+
 end
 
 function rasengan_bonus_damage( keys )

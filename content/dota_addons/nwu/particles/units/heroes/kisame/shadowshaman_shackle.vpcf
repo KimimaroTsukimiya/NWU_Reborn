@@ -25,5 +25,13 @@
 		{
 			m_ChildRef = resource:"particles/units/heroes/kisame/shadowshaman_shackle_l.vpcf"
 		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/shikamaru/shika_shackle_net.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/shikamaru/shika_shackle_sub_rope.vpcf"
+			m_bDisableChild = true
+		},
 	]
 }
