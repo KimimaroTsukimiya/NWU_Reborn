@@ -30,7 +30,7 @@
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityChannelTime"			"2.5 2.5 2.5"
+	"AbilityChannelTime"			"2 2 2"
 	"AbilityCooldown"				"160"
 
 	// Cost
@@ -79,7 +79,7 @@
 		"04"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"channel_duration"					"2.5"
+			"channel_duration"					"2"
 		}
 		"02"
 		{
