@@ -1,8 +1,8 @@
-"onoki_turn_to_dust"
+"onoki_stalagmite_armor_new"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"						"ability_datadriven"
+	"BaseClass"				"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"  
@@ -58,8 +58,6 @@
 			"EffectName"	"Hero_Dark_Seer.Surge"
 			"Target" 		"TARGET"
 		}
-
-		
 
 		"ApplyModifier"
 		{
