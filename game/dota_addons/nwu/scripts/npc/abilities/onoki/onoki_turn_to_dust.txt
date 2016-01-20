@@ -1,87 +1,80 @@
 "onoki_turn_to_dust"
 {
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"						"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"  
-	"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
-	"AbilityTextureName"			"onoki_stalagmite_armor"
+	"BaseClass"			 		"ability_datadriven"
+	"AbilityTextureName"			"onoki_turn_to_dust"
+	"MaxLevel" 						"4"
 
-	// Precache
-	//-------------------------------------------------------------------------------------------------------------
-	"precache"
-	{
-		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts"
-		"particle"			"particles/units/heroes/hero_dark_seer/dark_seer_surge.vpcf"
-	}
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
-	
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"12.0 11.0 10.0 9.0"
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"50"
+	"AbilityCastRange"				"350"
 
-	// Stats
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityModifierSupportValue"	"2.5"	// Value much higher than manacost
-	
-	// Special
-	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
 	{
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"duration"				"3.0 4.5 6.0 7.5"
+			"ms_debuff"	"-10 -18 -26 -34"
 		}
-		// Extra
 		"02"
 		{
-			"var_type"				"FIELD_INTEGER"
-			"move_speed"			"522"
+			"var_type"				"FIELD_FLOAT"
+			"ms_buff"	"5 7 9 11"
 		}
-	}
-
-	"OnSpellStart"
-	{
-		"FireSound"
+		"03"
 		{
-			"EffectName"	"Hero_Dark_Seer.Surge"
-			"Target" 		"TARGET"
-		}
-
-		
-
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_onoki_speed_datadriven"
-			"Target" 		"TARGET"
-			"Duration"		"%duration"
+			"var_type"				"FIELD_FLOAT"
+			"aura_radius"	"350"
 		}
 	}
 
 	"Modifiers"
 	{
-		"modifier_onoki_speed_datadriven"
+
+		"modifier_onoki_turn_to_dust_aura_debuff"
 		{
-			"IsBuff"		"1"
-	
-			"EffectName"		"particles/units/heroes/hero_dark_seer/dark_seer_surge.vpcf"
-			"EffectAttachType"	"follow_hitloc"
-	
+			"Passive"				"1"
+			"IsHidden"				"1"
+			"IsBuff"				"1"
+			"Aura"					"modifier_turn_to_dust_debuff"
+			"Aura_Radius"			"350"
+			"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
+			//"EffectName"		"particles/items_fx/aura_vlads.vpcf"
+			//"EffectAttachType"  "follow_origin" 
+		}
+
+		"modifier_turn_to_dust_debuff"
+		{
+			"IsDebuff"			"1"
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE" 	"%move_speed"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_debuff"
 			}
 		}
+
+		"modifier_onoki_turn_to_dust_aura_buff"
+		{
+			"Passive"				"1"
+			"IsHidden"				"1"
+			"IsBuff"				"1"
+			"Aura"					"modifier_turn_to_dust_buff"
+			"Aura_Radius"			"350"
+			"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+			"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
+			//"EffectName"		"particles/items_fx/aura_vlads.vpcf"
+			//"EffectAttachType"  "follow_origin" 
+		}
+
+		"modifier_turn_to_dust_buff"
+		{
+			"IsBuff"			"1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_buff"
+			}
+		}
+
 	}
 }
