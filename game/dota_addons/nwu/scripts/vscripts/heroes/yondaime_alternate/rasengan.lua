@@ -3,6 +3,8 @@ function rasengan(keys)
 	local target = keys.target
 	local ability = keys.ability
 	
+	EmitSoundOn("minato_rasengan", keys.target)
+
 	if target:IsBuilding() then
 		return
 	end
@@ -18,7 +20,6 @@ function rasengan(keys)
 	local len = ( vTarget - vCaster ):Length2D()
 	len = range - range * ( len / range )
 
-    EmitSoundOn("Hero_Crystal.CrystalNova",caster)
 	
 	local knockbackModifierTable =
 	{
