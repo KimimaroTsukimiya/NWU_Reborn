@@ -83,7 +83,13 @@ function GameMode:setPlayerHealthLabel( player )
               PlayerResource:GetPlayer(player:GetPlayerID()):GetAssignedHero():SetCustomHealthLabel("Mother of NWR",  250, 0, 142)
             end
           end
-          
+
+         --zeni
+          if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 35436742 then
+            if PlayerResource:GetPlayer(player:GetPlayerID()):GetAssignedHero() ~= nil then
+              PlayerResource:GetPlayer(player:GetPlayerID()):GetAssignedHero():SetCustomHealthLabel("Peace",  30, 144, 255)
+            end
+          end
 
         end
     end

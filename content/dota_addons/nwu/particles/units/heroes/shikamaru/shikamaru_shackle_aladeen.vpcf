@@ -1,0 +1,31 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_Children =
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/shikamaru/shika_shackle_net.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/shikamaru/shika_shackle_sub_rope.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/shikamaru/shika_shackle_sub_rope.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/shikamaru/aladeen_shackle_body_points.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/shikamaru/2.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/shikamaru/shikamaru_spectral_test_tracking.vpcf"
+			m_bDisableChild = true
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/shikamaru/shikamaru_aladeen_rope_glow.vpcf"
+			m_bDisableChild = true
+		},
+	]
+}

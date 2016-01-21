@@ -72,7 +72,7 @@
 		"07"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"dagger_range"				"650 725 800 875"
+			"dagger_range"				"725 850 975 1100"
 		}
 		"08"
 		{

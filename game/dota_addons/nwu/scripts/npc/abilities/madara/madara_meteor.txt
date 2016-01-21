@@ -21,16 +21,17 @@
 				"particle"	"particles/units/heroes/hero_invoker/invoker_chaos_meteor_fly.vpcf"
 				"particle"	"particles/units/heroes/madara/shadow_2.vpcf"
 				"particle"	"particles/units/heroes/madara/burning_tree.vpcf"
+				"particle"	"particles/units/heroes/deidara/c4_explo_base.vpcf"
 	}	
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"650"
-	"AbilityCastPoint"				"0.5 0.5 0.5"
+	"AbilityCastPoint"				"0.0 0.0 0.0"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityChannelTime"			"2.5 2.5 2.5"
+	"AbilityChannelTime"			"2 2 2"
 	"AbilityCooldown"				"160"
 
 	// Cost
@@ -79,7 +80,7 @@
 		"04"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"channel_duration"					"2.5"
+			"channel_duration"					"2"
 		}
 		"02"
 		{

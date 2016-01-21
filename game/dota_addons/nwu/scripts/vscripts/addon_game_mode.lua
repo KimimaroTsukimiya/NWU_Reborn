@@ -38,11 +38,11 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/sasuke_kills_naruto.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/sasuke_kills_gaara.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/sasuke_kills_itachi.vsndevts", context)
+  PrecacheResource("soundfile", "soundevents/madara_trees.vsndevts", context)        
   -- Entire items can be precached by name
   -- Abilities can also be precached in this way despite the name
 
   --PrecacheItemByNameSync("item_example_item", context)
-
 
   -- Models
   --PrecacheModel("models/asuma/asuma.vmdl", context)
@@ -52,7 +52,7 @@ function Precache( context )
   PrecacheModel("models/hidan/hidan.vmdl", context)
   PrecacheModel("models/yondaime_new/yondaime_new.vmdl", context)
   PrecacheModel("models/yondaime_new/yondakunai.vmdl", context)
-  PrecacheModel("models/itachi/itachi.vmdl", context)
+  PrecacheModel("models/itachi_new/itachi.vmdl", context)
   --PrecacheModel("models/jiroubo/jiroubo.vmdl", context)
   PrecacheModel("models/kakashi/kaka.vmdl", context)
   --PrecacheModel("models/kidoumaru/kidoumaru.vmdl", context)
@@ -60,7 +60,7 @@ function Precache( context )
   PrecacheModel("models/kisame/kisame.vmdl", context)
   PrecacheModel("models/kisame_new/kisame_samehada.vmdl", context)
   PrecacheModel("models/madara/madara.vmdl", context)
-  PrecacheModel("models/naruto/naruto.vmdl", context)
+  PrecacheModel("models/naruto_new/naruto.vmdl", context)
   PrecacheModel("models/kankuro/kankuro.vmdl", context)
   PrecacheModel("models/kankuro/karasu.vmdl", context)
   PrecacheModel("models/kankuro/kuroari.vmdl", context)

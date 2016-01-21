@@ -9,7 +9,11 @@ require('music')
 require('rescale')
 -- label.lua, relevant functions to modify the name/label of a player
 require('label')
+-- leaverGold.lua, relevant functions to modify gold income after some1 disconnects the game
+require('leaverGold')
 
+TEAM_1_VIEW = false
+TEAM_2_VIEW = false
 
 --cheats.lua, includes functions which listen to chat inputs of the players
   require('cheats')
@@ -25,6 +29,13 @@ function GameMode:OnDisconnect(keys)
   local reason = keys.reason
   local userid = keys.userid
 
+end
+
+-- A player has reconnected to the game.  This function can be used to repaint Player-based particles or change
+-- state as necessary
+function GameMode:OnPlayerReconnect(keys)
+  DebugPrint( '[BAREBONES] OnPlayerReconnect' )
+  DebugPrintTable(keys) 
 
 end
 
@@ -42,6 +53,25 @@ function GameMode:OnGameRulesStateChange(keys)
      local shopkeeper_dire = Entities:FindByModel(nil, "models/heroes/shopkeeper_dire/shopkeeper_dire.vmdl")
      shopkeeper_dire:SetModelScale(2.4)
   end
+ 
+ --TODO LEAVRE SYSTEM
+  -- if newState == 6 then
+     -- A timer running every second that starts immediately on the next frame, respects pauses
+  --      Timers:CreateTimer(function()
+  --          for _,hero in pairs( Entities:FindAllByClassname( "npc_dota_hero*")) do
+  --            if hero ~= nil and hero:IsOwnedByAnyPlayer() and hero:GetPlayerOwnerID() ~= -1 then
+  --              if PlayerResource:GetConnectionState( hero:GetPlayerID() ) ~= 2 then
+  --                GameRules:SendCustomMessage(hero:GetName() .." has 2 minutes to reconnect.", 0, 0)
+  --                 GameMode:ModifyGoldGainDC(hero)
+  --              elseif not hero:HasOwnerAbandoned() then
+  --               hero.isDC = false
+  --              end 
+  --            end
+  --          end
+  --          return 1.0  
+  --     end
+  --      )
+  --end
 
   --This function controls the music on each gamestate
   GameMode:PlayGameMusic(newState)
@@ -57,27 +87,36 @@ end
 -- An NPC has spawned somewhere in game.  This includes heroes
 function GameMode:OnNPCSpawned(keys)
     local npc = EntIndexToHScript(keys.entindex)
+
+
     if npc:IsRealHero() then
       GameMode:RemoveWearables( npc )
-      if not npc.notFirstTime and npc:GetUnitName() ~= "npc_dota_hero_antimage" then
+      if npc:GetTeamNumber() == 1 and not TEAM_1_VIEW then
         AddFOWViewer(npc:GetTeamNumber(),Vector(5528, 5000, 256), 10000000000, 0.1, false)
         AddFOWViewer(npc:GetTeamNumber(),Vector(1500, 1000, 256), 10000000000, 0.1, false)
         AddFOWViewer(npc:GetTeamNumber(),Vector(-2500, 6000, 256), 10000000000, 0.1, false)
         AddFOWViewer(npc:GetTeamNumber(),Vector(6200, -500, 256), 10000000000, 0.1, false)
-
         AddFOWViewer(npc:GetTeamNumber(),Vector(-2500, -2000, 240), 10000000000, 0.1, false)
         AddFOWViewer(npc:GetTeamNumber(),Vector(-5932, -5348, 240), 10000000000, 0.1, false)
-        npc.notFirstTime = true
-
+        TEAM_1_VIEW= true
        -- if npc:GetUnitName() == "npc_dota_hero_lion" then
       --    npc:AddItem(CreateItem("item_chakra_armor_male", npc, npc))
        -- end
-
-
+      end
+      if npc:GetTeamNumber() == 2 and not TEAM_2_VIEW then
+        AddFOWViewer(npc:GetTeamNumber(),Vector(5528, 5000, 256), 10000000000, 0.1, false)
+        AddFOWViewer(npc:GetTeamNumber(),Vector(1500, 1000, 256), 10000000000, 0.1, false)
+        AddFOWViewer(npc:GetTeamNumber(),Vector(-2500, 6000, 256), 10000000000, 0.1, false)
+        AddFOWViewer(npc:GetTeamNumber(),Vector(6200, -500, 256), 10000000000, 0.1, false)
+        AddFOWViewer(npc:GetTeamNumber(),Vector(-2500, -2000, 240), 10000000000, 0.1, false)
+        AddFOWViewer(npc:GetTeamNumber(),Vector(-5932, -5348, 240), 10000000000, 0.1, false)
+       -- if npc:GetUnitName() == "npc_dota_hero_lion" then
+      --    npc:AddItem(CreateItem("item_chakra_armor_male", npc, npc))
+       -- end
+       TEAM_2_VIEW = true
       end
     end
     GameMode:RescaleUnit(npc)
-
 
 end
 
@@ -106,18 +145,13 @@ function GameMode:OnItemPickedUp(keys)
 
 end
 
--- A player has reconnected to the game.  This function can be used to repaint Player-based particles or change
--- state as necessary
-function GameMode:OnPlayerReconnect(keys)
-  DebugPrint( '[BAREBONES] OnPlayerReconnect' )
-  DebugPrintTable(keys) 
-end
+
 
 -- An item was purchased by a player
 function GameMode:OnItemPurchased( keys )
   DebugPrint( '[BAREBONES] OnItemPurchased' )
   DebugPrintTable(keys)
-
+    print("sd")
   -- The playerID of the hero who is buying something
   local plyID = keys.PlayerID
   if not plyID then return end

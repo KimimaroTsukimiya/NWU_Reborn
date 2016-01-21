@@ -43,9 +43,9 @@
 			"damage"	"140 180 220"
 		}
 		"02"
-        { 
+        {
             "var_type"  			"FIELD_INTEGER"
-            "armor_reduction" 			"-4 -6 -8"
+            "armor_reduction" 			"-4 -5 -6"
         }
 		"03"
 		{

@@ -33,44 +33,56 @@
 
 
     "Modifiers"
+  {
+    "modifier_item_radiance_datadriven"
     {
-      "solar_blade_aoe_dmg"
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
       {
-        "Passive"       "1"
-        "OnCreated"
-        { 
-          "AttachEffect"
-          {
-            "Target"    "CASTER"
-            "EffectName" "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
-            "EffectAttachType"  "follow_origin"
-            "EffectRadius"        "200"
-          }
-        }
-        "ThinkInterval"     "1"
-        "OnIntervalThink"
-        {
-          "RunScript"
-          {
-            "ScriptFile"  "items/solar_blade.lua"
-            "Function"    "applyDamage"
-          }
-
-        }
+        "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    "%bonus_damage"
       }
-      "item_solar_blade_modifier"
-      {
-         "Passive" "1"
-         "IsHidden"  "1"
-         "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
-         "Properties"
-          {
-               "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
-          }
-      }
-
-
     }
+    "modifier_item_radiance_datadriven_aura_emitter"
+    {
+      "Passive"       "1"
+      "IsHidden"        "0"
+      "EffectName" "particles/econ/items/huskar/huskar_searing_dominator/huskar_searing_lifebreak_cast_flame.vpcf"
+      "EffectAttachType"  "follow_origin"
+      
+      "Aura"          "modifier_item_radiance_datadriven_aura"
+      "Aura_Radius"       "%radius"
+      "Aura_Teams"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
+      "Aura_Types"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+      "Aura_Flags"      "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+      "Aura_ApplyToCaster"  "0"
+    }
+    "modifier_item_radiance_datadriven_aura"
+    {
+      "Passive"     "0"
+      "IsHidden"      "0"
+      "IsBuff"      "0"
+      "IsDebuff"      "1"
+      "IsPurgable"    "0"
+      "EffectName"      "particles/dire_fx/fire_barracks_glow_b.vpcf"
+      "EffectAttachType"    "follow_origin"
+      
+      "ThinkInterval"     "1"
+      "OnIntervalThink"
+      {
+        "RunScript"
+        {
+          "ScriptFile"      "items/solar_blade.lua"
+          "Function"        "modifier_item_radiance_datadriven_aura_on_interval_think"
+          "AuraDamageInterval"  "1"
+          "AuraDamagePerSecond" "%aoe_damage"
+        }
+      }
+      
+    }
+  }
     // Special  
     //-------------------------------------------------------------------------------------------------------------
     "AbilitySpecial"

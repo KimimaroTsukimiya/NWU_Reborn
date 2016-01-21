@@ -1,7 +1,7 @@
 "npc_dota_hero_antimage" //itachi
 {
 	"override_hero"			"npc_dota_hero_antimage"
-	"Model"					"models/itachi/itachi.vmdl"
+	"Model"					"models/itachi_new/itachi.vmdl"
 	"Ability1"				"itachi_tsukiyomi"
 	"Ability2"				"itachi_dust_crow_genjustsu"
 	"Ability3"				"itachi_sharingan"

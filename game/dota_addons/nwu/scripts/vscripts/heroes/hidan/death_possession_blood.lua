@@ -55,15 +55,23 @@ end
 	Sets the target for this ability
 ]]
 function setTarget( keys )
-	keys.ability.bloodTarget = keys.target
-	keys.ability.targetTime = Time()
-	local targetTime = Time()
+	if keys.target:IsRealHero() then
+		if keys.ability.bloodTarget then
+			keys.ability.bloodTarget:RemoveModifierByName("modifier_hidan_ulti_debuff")
+		end
+		keys.ability.bloodTarget = keys.target
+		keys.ability:ApplyDataDrivenModifier(keys.caster,keys.target,"modifier_hidan_ulti_debuff",{duration = 20})
+		
+		keys.ability.targetTime = Time()
+		local targetTime = Time()
 
-	Timers:CreateTimer(20, function() 
-		if keys.ability.targetTime == targetTime then 
-			keys.ability.bloodTarget = nil 
-			end 
-	end)
+		Timers:CreateTimer(20, function() 
+			if keys.ability.targetTime == targetTime then 
+				keys.target:RemoveModifierByName("modifier_hidan_ulti_debuff")
+				keys.ability.bloodTarget = nil 
+				end 
+		end)
+	end
 end
 --[[Author LearningDave
 	Date november, 2th 2015
@@ -118,4 +126,17 @@ end
 function removeSelfPain( keys )
 	selfPain = keys.caster:FindAbilityByName("hidan_self_pain")
     selfPain:SetLevel(0)
+end
+
+function addDebuff( keys )
+	local particle = ParticleManager:CreateParticle("particles/units/heroes/hidan/ritual_debuff_core.vpcf", PATTACH_ABSORIGIN_FOLLOW, keys.target)
+	ParticleManager:SetParticleControlEnt(particle, 0, keys.target, PATTACH_POINT_FOLLOW, "attach_origin", keys.target:GetAbsOrigin(), true)
+	ParticleManager:SetParticleControlEnt(particle, 1, keys.target, PATTACH_POINT_FOLLOW, "attach_origin", keys.target:GetAbsOrigin(), true)
+	keys.target.debuffHidan = particle
+end
+
+function removeDebuff( keys )
+
+	ParticleManager:DestroyParticle(keys.target.debuffHidan, true)
+
 end

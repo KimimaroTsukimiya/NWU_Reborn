@@ -8,35 +8,45 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 
 	"AbilityCastRange"				"700"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
 
 	"AbilityCooldown"				"20"
-	"AbilityManaCost"				"100"
+	"AbilityManaCost"				"35 40 45 50"
 
 	"AbilitySpecial"
 	{
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"bonus_armor"			"3 5 7 9"
+			"bonus_armor"			"2 3 4 5"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"damage_return_rate"	"0.7"
+			"damage"				"20 30 40 50"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"duration"				"3 4 5 6"
+			"damage_chance"			"10 15 20 25"
 		}
 		"04"
 		{
 			"var_type"				"FIELD_FLOAT"
+			"duration"				"25"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
 			"cast_range"			"700"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"1"
 		}
 	}
 
@@ -57,7 +67,7 @@
 			"Passive"			"0"
 			"IsHidden"			"0"
 			"IsBuff"			"1"
-			"Duration"			"%stun_duration"
+			"Duration"			"%duration"
 	
 			//"EffectName"		"particle_name"
 			//"EffectAttachType"	"follow_origin"
@@ -69,12 +79,21 @@
 
 			"OnAttacked"
 			{
-				"RunScript"
+				 "Random"
+          {
+            "Chance" "%damage_chance"
+            "PseudoRandom" "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+            "OnSuccess"  
+            {
+              "RunScript"
 				{
 					"ScriptFile"	"heroes/onoki/onoki_stalagmite_armor.lua"
 					"Function"		"return_damage"
 					"DamageTaken"	"%attack_damage"
 				}
+            }
+          }
+				
 			}
 		}
 	}

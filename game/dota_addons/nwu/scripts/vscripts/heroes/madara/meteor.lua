@@ -49,6 +49,11 @@ function meteorExplode(keys)
 	local particle = ParticleManager:CreateParticle("particles/units/heroes/hero_warlock/warlock_rain_of_chaos_explosion.vpcf", PATTACH_CUSTOMORIGIN, nil) 
 	ParticleManager:SetParticleControl(particle , 0, target_point)
 
+	local particle = ParticleManager:CreateParticle("particles/units/heroes/deidara/c4_explo_base.vpcf", PATTACH_CUSTOMORIGIN, nil) 
+	ParticleManager:SetParticleControl(particle , 0, target_point)
+	ParticleManager:SetParticleControl(particle , 3, target_point)
+
+
 	if wood_ability_level > 0 then
 		local trees = GridNav:GetAllTreesAroundPoint(target_point, aoe, false) 
 				if trees then

@@ -3,6 +3,8 @@ function rasengan(keys)
 	local target = keys.target
 	local ability = keys.ability
 	
+	EmitSoundOn("minato_rasengan", keys.target)
+
 	if target:IsBuilding() then
 		return
 	end
@@ -22,8 +24,8 @@ function rasengan(keys)
 	local knockbackModifierTable =
 	{
 		should_stun = 1,
-		knockback_duration = 1,
-		duration = 1,
+		knockback_duration = 0.75,
+		duration = 0.75,
 		knockback_distance = len,
 		knockback_height = 0,
 		center_x = keys.caster:GetAbsOrigin().x,
@@ -40,6 +42,8 @@ function rasengan(keys)
 	ParticleManager:SetParticleControlEnt(particle, 2, keys.target, PATTACH_POINT_FOLLOW, "attach_hitloc", keys.target:GetAbsOrigin(), true)
 	ParticleManager:SetParticleControlEnt(particle, 3, keys.target, PATTACH_POINT_FOLLOW, "attach_hitloc", keys.target:GetAbsOrigin(), true)
 
+	caster:Stop()
+
 end
 
 function rasengan_bonus_damage( keys )
@@ -52,9 +56,16 @@ function rasengan_bonus_damage( keys )
 	ParticleManager:SetParticleControlEnt(particle, 0, keys.caster, PATTACH_POINT_FOLLOW, "attach_right_hand", keys.caster:GetAbsOrigin(), true)
 	ParticleManager:SetParticleControlEnt(particle, 1, keys.caster, PATTACH_POINT_FOLLOW, "attach_right_hand", keys.caster:GetAbsOrigin(), true)
 	ParticleManager:SetParticleControlEnt(particle, 3, keys.caster, PATTACH_POINT_FOLLOW, "attach_right_hand", keys.caster:GetAbsOrigin(), true)
- 	keys.caster.rasenParticle = particle
+ 	if not keys.caster.rasenParticle then
+ 		keys.caster.rasenParticle = {}
+ 	end
+ 	table.insert(keys.caster.rasenParticle, particle)
 end
 
 function destroyRasenParticle( keys )
-	ParticleManager:DestroyParticle(keys.caster.rasenParticle, true)
+	if keys.caster.rasenParticle then
+		for _,particle in pairs(keys.caster.rasenParticle) do
+			ParticleManager:DestroyParticle(particle, true)
+		end
+	end
 end

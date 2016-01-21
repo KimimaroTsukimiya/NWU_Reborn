@@ -76,6 +76,7 @@
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_ambient.vpcf"
 		"particle"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
 		"particle"	"particles/units/heroes/hero_bloodseeker/bloodseeker_bloodritual_ring.vpcf"
+		"particle"	"particles/units/heroes/hidan/ritual_debuff_core.vpcf"
 		"model"		"models/hidan/hidan.vmdl"
 	}
 
@@ -283,6 +284,33 @@
 			"Passive"			"0"
 			"IsHidden"			"1"
 			"IsDebuff"			"0"
+
+		}
+
+		"modifier_hidan_ulti_debuff"
+		{
+			"Duration"			"20"
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hidan/death_possession_blood.lua"
+					"Function"		"addDebuff"
+				}
+			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hidan/death_possession_blood.lua"
+					"Function"		"removeDebuff"
+				}
+			}
 		}
 
 	}

@@ -34,6 +34,15 @@ function dynamic_entry_hit(keys)
 		)
 		
 	ApplyDamage({attacker = caster, victim = target, ability = ability, damage = damage, damage_type = ability:GetAbilityDamageType()})		
+
+	EmitSoundOn("Hero_Brewmaster.ThunderClap",caster)
+	EmitSoundOn("Hero_Brewmaster.ThunderClap.Target",target)
+
+
+	local particle = ParticleManager:CreateParticle("particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap.vpcf", PATTACH_ABSORIGIN_FOLLOW, target) 
+		  ParticleManager:SetParticleControlEnt(particle, 0, target, PATTACH_ABSORIGIN_FOLLOW, "follow_origin", target:GetAbsOrigin(), true)
+		  ParticleManager:SetParticleControlEnt(particle, 1, target, PATTACH_ABSORIGIN_FOLLOW, "follow_origin", target:GetAbsOrigin(), true)
+		  
 end
 
 function dynamic_entry_periodic(gameEntity, keys)
@@ -74,7 +83,7 @@ function dynamic_entry_start(keys)
 	local target = keys.target
 	
 	add_physics(caster)
-	keys.ability:ApplyDataDrivenModifier(caster, caster, "modifier_dynamic_entry_stunned", {})
+	keys.ability:ApplyDataDrivenModifier(caster, caster, "modifier_dynamic_entry_stunned", {duration = 3})
 	
 	local timer_tbl =
 		{

@@ -15,14 +15,24 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"bonus_damage_percent"	"-15 -20 -25 -30"
+			"ms_debuff"	"-10 -18 -26 -34"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"ms_buff"	"5 7 9 11"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aura_radius"	"350"
 		}
 	}
 
 	"Modifiers"
 	{
 
-		"modifier_onoki_turn_to_dust_aura"
+		"modifier_onoki_turn_to_dust_aura_debuff"
 		{
 			"Passive"				"1"
 			"IsHidden"				"1"
@@ -30,7 +40,7 @@
 			"Aura"					"modifier_turn_to_dust_debuff"
 			"Aura_Radius"			"350"
 			"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-			"Aura_Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
 			//"EffectName"		"particles/items_fx/aura_vlads.vpcf"
 			//"EffectAttachType"  "follow_origin" 
 		}
@@ -40,8 +50,31 @@
 			"IsDebuff"			"1"
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE" "%bonus_damage_percent"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_debuff"
 			}
 		}
+
+		"modifier_onoki_turn_to_dust_aura_buff"
+		{
+			"Passive"				"1"
+			"IsHidden"				"1"
+			"IsBuff"				"1"
+			"Aura"					"modifier_turn_to_dust_buff"
+			"Aura_Radius"			"350"
+			"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+			"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
+			//"EffectName"		"particles/items_fx/aura_vlads.vpcf"
+			//"EffectAttachType"  "follow_origin" 
+		}
+
+		"modifier_turn_to_dust_buff"
+		{
+			"IsBuff"			"1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_buff"
+			}
+		}
+
 	}
 }

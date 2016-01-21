@@ -1,0 +1,258 @@
+.SelectionRoot
+{
+    horizontal-align: center;
+    vertical-align: center;
+    flow-children: right;
+    height: 80%;
+}
+
+.FlowRight
+{
+    flow-children: right;
+}
+
+.FlowDown
+{
+    flow-children: down;
+}
+
+#HostLabel
+{
+	width: 500px;
+	text-align: center;
+	color: #FF0000;
+	font-size: 22px;
+	padding: 0px;
+	margin-top: 22px;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-top: 2px solid black;
+}
+
+/*----------------------
+
+       Tabs
+
+----------------------*/
+
+#TabButtons
+{
+	flow-children: right;
+}
+
+.TabContainer
+{
+	width: 500px;
+	height: 600px;
+	flow-children: down;
+}
+
+/*----------------------
+
+       Player List
+
+----------------------*/
+
+@define PlayerNameWidth: 150px;
+@define PlayerAvatarSize: 40px;
+@define PlayerRowHeight: 40px;
+
+.SelectionPanel
+{
+	flow-children: down;
+    padding: 10px 50px;
+    margin-right: 20px;
+	background-color: rgba(51, 51, 51, 245);
+}
+
+.SelectionSubPanel
+{
+	flow-children: down;
+}
+
+.SelectionSubPanelMarginTop
+{
+	margin-top: 20px;
+}
+
+.SelectionPanelTitle
+{
+	color: white;
+	font-size: 40px;
+	font-weight: Bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#PlayerListHeader
+{
+    flow-children: right;
+}
+
+#PlayerListHeaderName
+{
+    width: PlayerNameWidth;
+    margin-left: 60px;
+}
+
+#PlayerListHeaderTeam
+{
+    width: 200px;
+}
+
+.Player
+{
+	width: 500px;
+	color: #FF0000;
+	height: PlayerRowHeight;
+	flow-children: right;
+}
+
+#PlayerName
+{
+	font-size: 24px;
+	width: PlayerNameWidth;
+    vertical-align: middle;
+}
+
+#PlayerAvatar
+{
+    width: PlayerAvatarSize;
+    height: PlayerAvatarSize;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+/*----------------------
+
+      Mode Selection
+
+-----------------------*/
+
+.ModeItem
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	flow-children: right;
+}
+
+.ModeItemLabel
+{
+    font-size: 24px;
+	width: 230px;
+    vertical-align: center;
+}
+
+.ModeItemValue
+{
+	width: 250px;
+	vertical-align: center;
+}
+
+#StartButton
+{
+    height: 40px;
+    horizontal-align: center;
+    margin-top: 30px;
+}
+
+/*---------------------
+
+     Scoreboard
+	 
+----------------------*/
+
+#ScorePlayerList
+{
+	margin-left: 60px;
+	margin-top: 60px;
+	flow-children: down;
+	background-color: rgba(0, 0, 0, 200);
+}
+
+.ScoreboardRoot
+{
+	transform: translatex(-600px);
+	transition-property: transform;
+	transition-duration: 0.1s;
+	vertical-align: top;
+	horizontal-align: left;
+	padding: 10px;
+	flow-children: down;
+}
+
+.ScoreboardRoot.ScoreboardVisible
+{
+	transform: translatex(0px);
+}
+
+.HeaderScoreRow
+{
+	flow-children: right;
+	height: 40px;
+	border-bottom: 2px solid black;
+	margin-bottom: 1px;
+	background-color: black;
+	padding: 8px;
+	vertical-align: middle;
+}
+
+.ScoreRow
+{
+	flow-children: right;
+	height: 40px;
+	border-bottom: 2px solid black;
+	background-color: black;
+	padding: 8px;
+	vertical-align: middle;
+}
+
+#HeaderScoreName
+{
+	text-align: left;
+	width: 150px;
+}
+
+#ScoreName
+{
+	text-align: left;
+	width: 150px;
+}
+
+.HeaderScoreColumn
+{
+	width: 60px;
+	flow-children: down;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+}
+
+.HeaderScoreAvatarColumn
+{
+	width: 30px;
+	flow-children: down;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+}
+
+.ScoreAvatarColumn
+{
+	width: 30px;
+	flow-children: down;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+}
+
+.ScoreColumn
+{
+	width: 60px;
+	flow-children: down;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+}
