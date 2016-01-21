@@ -296,17 +296,19 @@
 
 			"OnCreated"
 			{
-				"AttachEffect"
+				"RunScript"
 				{
-					"EffectName"	"particles/units/heroes/hidan/ritual_debuff_core.vpcf"
-					"EffectAttachType"	"attach_hitloc"
-					"Target"		"TARGET"
+					"ScriptFile"	"heroes/hidan/death_possession_blood.lua"
+					"Function"		"addDebuff"
+				}
+			}
 
-					"ControlPoints"
-					{
-						"00"	"%radius %radius 0"
-						"01"	"%radius %radius 0"
-					}
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hidan/death_possession_blood.lua"
+					"Function"		"removeDebuff"
 				}
 			}
 		}

@@ -61,6 +61,7 @@
 		"particle"	"particles/units/heroes/shikamaru/shikamaru_shackle_aladeen.vpcf"
 		"particle"	"particles/units/heroes/shikamaru/shikamaru_aladeen_rope_glow.vpcf"
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts"
+		"particle"	"particles/units/heroes/shikamaru/shikamaru_spectral_test_tracking.vpcf"
 	}
 
 	"OnSpellStart"
@@ -136,8 +137,7 @@
 
 			"OnCreated"
 			{
-
-				
+	
 				"AttachEffect"
 				{
 					"EffectName"			"particles/units/heroes/shikamaru/shikamaru_shackle_aladeen.vpcf"

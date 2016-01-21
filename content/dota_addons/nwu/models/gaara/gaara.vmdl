@@ -1,1039 +1,1437 @@
-<!-- schema text {7e125a45-3d83-4043-b292-9e24f8ef27b4} generic {198980d8-3a93-4919-b4c6-dd1fb07a3a4b} -->
-CVModel CVModel_0
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 {
-	CVmeshList m_meshList = CVmeshList
+	_class = "CVModel"
+	m_meshList =
 	{
-		CVmesh[] m_meshList = 
+		_class = "CVmeshList"
+		m_meshList =
 		[
-			CVmesh
 			{
-				string m_meshName = "gaara"
-				string m_meshFile = "models/gaara/gaara.fbx"
-				string m_materialSearchPath = ""
-				bool m_bSkinParentedObjects = true
-				bool m_bLegacySkinParentedTransforms = false
-				bool m_bExpensiveTangents = false
-				bool m_bExpensiveVertices = false
-				bool m_bIgnoreCloth = false
-				bool m_bGetSkinningFromLod0 = false
-				CVmorphInfo* m_pMorphInfo = NULL
-			}
+				_class = "CVmesh"
+				m_meshName = "gaara"
+				m_meshFile = "models/gaara/gaara.fbx"
+				m_materialSearchPath = ""
+				m_bSkinParentedObjects = true
+				m_bLegacySkinParentedTransforms = false
+				m_bExpensiveTangents = false
+				m_bExpensiveVertices = false
+				m_bIgnoreCloth = false
+				m_bGetSkinningFromLod0 = false
+				m_pMorphInfo = null
+			},
 		]
 	}
-	CVClothProxyMeshList m_clothProxyMeshList = CVClothProxyMeshList
+	m_clothProxyMeshList =
 	{
-		CVClothProxyMesh[] m_clothProxyMeshList = 
+		_class = "CVClothProxyMeshList"
+		m_flClothEnableThreshold = 0.050000
+		m_bCreateStaticBone = false
+		m_nMaxBonesPerVertex = 4
+		m_bRemoveUnusedBonesEnabled = false
+		m_bDriveMeshesWithBacksolvedJointsOnly = true
+		m_flMatchProxiesToMeshes = 1.000000
+		m_flReservedFloat = 0.000000
+		m_nReservedInt = 0
+		m_bReservedBool1 = false
+		m_bReservedBool2 = false
+		m_bReservedBool3 = false
+		m_bReservedBool4 = false
+		m_clothProxyMeshList =
 		[
-			
-		]
-		float m_flClothEnableThreshold = 0.050000
-		bool m_bCreateStaticBone = false
-		int m_nMaxBonesPerVertex = 4
-		bool m_bRemoveUnusedBonesEnabled = false
-		bool m_bDriveMeshesWithBacksolvedJointsOnly = true
-		float m_flMatchProxiesToMeshes = 1.000000
-		float m_flReservedFloat = 0.000000
-		int m_nReservedInt = 0
-		bool m_bReservedBool1 = false
-		bool m_bReservedBool2 = false
-		bool m_bReservedBool3 = false
-		bool m_bReservedBool4 = false
-	}
-	CVphysicsMeshList m_physicsMeshList = CVphysicsMeshList
-	{
-		CVphysicsMesh[] m_meshList = 
-		[
-			
 		]
 	}
-	CVmodelInfo* m_pModelInfo = NULL
-	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
+	m_physicsMeshList =
 	{
-		CVBoneFlagList* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVphysicsMeshList"
+		m_meshList =
+		[
+		]
 	}
-	CVhitBoxSetListReference[] m_pHitBoxSetLists = 
+	m_pModelInfo = null
+	m_pBoneFlagList =
+	{
+		_class = "CVBoneFlagListReference"
+		m_pObject = null
+	}
+	m_pHitBoxSetLists =
 	[
-		CVhitBoxSetListReference
 		{
-			CVhitBoxSetList* m_pObject = &CVhitBoxSetList_0
-			string m_sFileName = ""
+			_class = "CVhitBoxSetListReference"
+			m_pObject =
+			{
+				_class = "CVhitBoxSetList"
+				m_HitBoxSets =
+				[
+					{
+						_class = "CVhitBoxSet"
+						m_name = "default"
+						m_HitBoxes =
+						[
+							{
+								_class = "CVhitBox"
+								m_name = "m3bone_root"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "m3bone_root"
+								m_vMinBounds =
+								[
+									-2.000000,
+									-2.000000,
+									-2.000000,
+								]
+								m_vMaxBounds =
+								[
+									2.000000,
+									2.000000,
+									2.000000,
+								]
+								m_bTranslationOnly = true
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "m3bone_root"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "m3bone_root"
+								m_vMinBounds =
+								[
+									-2.000000,
+									-2.000000,
+									-2.000000,
+								]
+								m_vMaxBounds =
+								[
+									2.000000,
+									2.000000,
+									2.000000,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box02"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box02"
+								m_vMinBounds =
+								[
+									-100.000000,
+									-100.990997,
+									-439.007996,
+								]
+								m_vMaxBounds =
+								[
+									100.000000,
+									100.364998,
+									175.692993,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box14"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box14"
+								m_vMinBounds =
+								[
+									-75.206161,
+									-32.905804,
+									-56.686455,
+								]
+								m_vMaxBounds =
+								[
+									18.363274,
+									80.937363,
+									11.399446,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box19"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box19"
+								m_vMinBounds =
+								[
+									-2.960081,
+									-8.499426,
+									-20.740906,
+								]
+								m_vMaxBounds =
+								[
+									16.432400,
+									18.998806,
+									4.170776,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box11"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box11"
+								m_vMinBounds =
+								[
+									-16.905327,
+									-22.587761,
+									-18.226517,
+								]
+								m_vMaxBounds =
+								[
+									17.407593,
+									21.818123,
+									0.334229,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box08"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box08"
+								m_vMinBounds =
+								[
+									-17.449394,
+									-22.587761,
+									-18.193039,
+								]
+								m_vMaxBounds =
+								[
+									17.554394,
+									21.818123,
+									0.367706,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box01"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box01"
+								m_vMinBounds =
+								[
+									-24.070301,
+									-21.385876,
+									-1.914032,
+								]
+								m_vMaxBounds =
+								[
+									19.698734,
+									28.115566,
+									62.132202,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box15"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box15"
+								m_vMinBounds =
+								[
+									-106.400223,
+									-5.001448,
+									-20.588371,
+								]
+								m_vMaxBounds =
+								[
+									-58.452652,
+									17.637983,
+									19.984375,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box06"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box06"
+								m_vMinBounds =
+								[
+									-2.800652,
+									8.912823,
+									-8.302917,
+								]
+								m_vMaxBounds =
+								[
+									4.583427,
+									30.405075,
+									11.208038,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box17"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box17"
+								m_vMinBounds =
+								[
+									47.681198,
+									-5.001442,
+									-49.972511,
+								]
+								m_vMaxBounds =
+								[
+									85.877747,
+									17.637989,
+									49.632721,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box21"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box21"
+								m_vMinBounds =
+								[
+									-0.722092,
+									8.912835,
+									-11.273621,
+								]
+								m_vMaxBounds =
+								[
+									6.662033,
+									30.405090,
+									8.237335,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box12"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box12"
+								m_vMinBounds =
+								[
+									-28.071842,
+									-63.611210,
+									-60.617134,
+								]
+								m_vMaxBounds =
+								[
+									29.007793,
+									39.173084,
+									0.144870,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box05"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box05"
+								m_vMinBounds =
+								[
+									-13.407528,
+									-50.533081,
+									-3.362793,
+								]
+								m_vMaxBounds =
+								[
+									22.411411,
+									-6.127178,
+									2.396851,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box09"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box09"
+								m_vMinBounds =
+								[
+									-54.455475,
+									-35.429535,
+									-110.375397,
+								]
+								m_vMaxBounds =
+								[
+									75.649223,
+									21.818249,
+									0.272507,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+							{
+								_class = "CVhitBox"
+								m_name = "Box20"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "Box20"
+								m_vMinBounds =
+								[
+									-23.228287,
+									-50.533081,
+									-4.503967,
+								]
+								m_vMaxBounds =
+								[
+									12.590660,
+									-6.127178,
+									1.255676,
+								]
+								m_bTranslationOnly = false
+								m_cRenderColor =
+								[
+									0,
+									0,
+									0,
+									0,
+								]
+							},
+						]
+					},
+				]
+				m_AutoCreateSetName = ""
+			}
+		},
+	]
+	m_pAttachmentLists =
+	[
+		{
+			_class = "CVattachmentListReference"
+			m_pObject =
+			{
+				_class = "CVattachmentList"
+				m_name = ""
+				m_attachments =
+				[
+					{
+						_class = "CVattachment"
+						m_name = "attach_origin"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "m3bone_root"
+								m_vTranslationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									0.000000,
+									0.000000,
+									0.000000,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_hitloc"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "Box02"
+								m_vTranslationOffset =
+								[
+									-0.000000,
+									0.000000,
+									-167.539429,
+								]
+								m_vRotationOffset =
+								[
+									-0.000000,
+									0.000000,
+									-0.000001,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_attack1"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "Box17"
+								m_vTranslationOffset =
+								[
+									71.350616,
+									-0.000015,
+									-12.501801,
+								]
+								m_vRotationOffset =
+								[
+									0.000010,
+									-0.000009,
+									-0.000002,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_attack2"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "Box17"
+								m_vTranslationOffset =
+								[
+									71.350601,
+									-0.000015,
+									-12.501800,
+								]
+								m_vRotationOffset =
+								[
+									0.000010,
+									-0.000009,
+									-0.000002,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_left_hand"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "Box17"
+								m_vTranslationOffset =
+								[
+									74.256523,
+									-0.000001,
+									0.000000,
+								]
+								m_vRotationOffset =
+								[
+									-0.000000,
+									0.000000,
+									-0.000001,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+					{
+						_class = "CVattachment"
+						m_name = "attach_right_hand"
+						m_influences =
+						[
+							{
+								_class = "CVattachmentInfluence"
+								m_influenceName = "Box08"
+								m_vTranslationOffset =
+								[
+									-181.956711,
+									0.000003,
+									105.574432,
+								]
+								m_vRotationOffset =
+								[
+									-0.000000,
+									0.000000,
+									-0.000001,
+								]
+								m_flWeight = 1.000000
+								m_bRoot = false
+							},
+						]
+					},
+				]
+			}
+		},
+	]
+	m_pAnimGroup =
+	{
+		_class = "CVanimGroupReference"
+		m_pObject =
+		{
+			_class = "CVanimGroup"
+			m_Name = ""
+			m_pReferenceSkeleton =
+			{
+				_class = "CVReferenceSkeletonReference"
+				m_pObject = null
+			}
+			m_pBoneFlagList =
+			{
+				_class = "CVBoneFlagListReference"
+				m_pObject = null
+			}
+			m_pSeqGroup =
+			{
+				_class = "CVseqGroupReference"
+				m_pObject = null
+			}
+			m_pAnimGroups =
+			[
+				{
+					_class = "CVanimGroupReference"
+					m_pObject =
+					{
+						_class = "CVanimGroup"
+						m_Name = ""
+						m_pReferenceSkeleton =
+						{
+							_class = "CVReferenceSkeletonReference"
+							m_pObject = null
+						}
+						m_pBoneFlagList =
+						{
+							_class = "CVBoneFlagListReference"
+							m_pObject = null
+						}
+						m_pSeqGroup =
+						{
+							_class = "CVseqGroupReference"
+							m_pObject = null
+						}
+						m_pAnimGroups =
+						[
+						]
+						m_Vanim =
+						[
+							{
+								_class = "CVanim"
+								m_Animationname = "gaara_animations"
+								m_Filepath = "models/gaara/gaara_animations.FBX"
+								m_nStartframe = 0
+								m_nEndframe = 1790
+								m_flFps = 30.000000
+								m_Loop =
+								{
+									_class = "CAnimationLoop"
+									m_bLoop = false
+									m_bSmoothLoop = false
+									m_nSmoothLoopStart = 0
+									m_nSmoothLoopEnd = 0
+									m_StartLoop =
+									{
+										_class = "CVAnimCmdStartLoop"
+										m_bEnabled = false
+										m_nLoopRestart = 0
+									}
+								}
+								m_bHidden = false
+								m_bDisable = false
+								m_Activities =
+								[
+								]
+								m_AnimationEvents =
+								[
+								]
+								m_MotionFrames =
+								[
+								]
+								m_pIkRules =
+								[
+								]
+								m_pAlignAnimation = null
+								m_adjustAnimation =
+								{
+									_class = "CAdjustAnimation"
+									m_translation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+									m_rotation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+								}
+								m_Keywords =
+								[
+								]
+								m_sequenceParams =
+								{
+									_class = "CVAnimResourceSequenceParams"
+									m_flFadeInTime = 0.200000
+									m_flFadeOutTime = 0.200000
+								}
+								m_folderName = ""
+								m_MotionFramesRootBone = ""
+							},
+							{
+								_class = "CVanim"
+								m_Animationname = "gaara_stand"
+								m_Filepath = "models/gaara/gaara_animations.fbx"
+								m_nStartframe = 500
+								m_nEndframe = 520
+								m_flFps = 30.000000
+								m_Loop =
+								{
+									_class = "CAnimationLoop"
+									m_bLoop = true
+									m_bSmoothLoop = false
+									m_nSmoothLoopStart = 0
+									m_nSmoothLoopEnd = 0
+									m_StartLoop =
+									{
+										_class = "CVAnimCmdStartLoop"
+										m_bEnabled = false
+										m_nLoopRestart = 0
+									}
+								}
+								m_bHidden = false
+								m_bDisable = false
+								m_Activities =
+								[
+									{
+										_class = "CActivity"
+										m_Name = "ACT_DOTA_IDLE"
+										m_nWeight = 1
+									},
+								]
+								m_AnimationEvents =
+								[
+								]
+								m_MotionFrames =
+								[
+								]
+								m_pIkRules =
+								[
+								]
+								m_pAlignAnimation = null
+								m_adjustAnimation =
+								{
+									_class = "CAdjustAnimation"
+									m_translation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+									m_rotation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+								}
+								m_Keywords =
+								[
+								]
+								m_sequenceParams =
+								{
+									_class = "CVAnimResourceSequenceParams"
+									m_flFadeInTime = 0.200000
+									m_flFadeOutTime = 0.200000
+								}
+								m_folderName = ""
+								m_MotionFramesRootBone = ""
+							},
+							{
+								_class = "CVanim"
+								m_Animationname = "gaara_walk"
+								m_Filepath = "models/gaara/gaara_animations.fbx"
+								m_nStartframe = 10
+								m_nEndframe = 32
+								m_flFps = 30.000000
+								m_Loop =
+								{
+									_class = "CAnimationLoop"
+									m_bLoop = true
+									m_bSmoothLoop = false
+									m_nSmoothLoopStart = 0
+									m_nSmoothLoopEnd = 0
+									m_StartLoop =
+									{
+										_class = "CVAnimCmdStartLoop"
+										m_bEnabled = false
+										m_nLoopRestart = 0
+									}
+								}
+								m_bHidden = false
+								m_bDisable = false
+								m_Activities =
+								[
+									{
+										_class = "CActivity"
+										m_Name = "ACT_DOTA_RUN"
+										m_nWeight = 1
+									},
+								]
+								m_AnimationEvents =
+								[
+								]
+								m_MotionFrames =
+								[
+								]
+								m_pIkRules =
+								[
+								]
+								m_pAlignAnimation = null
+								m_adjustAnimation =
+								{
+									_class = "CAdjustAnimation"
+									m_translation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+									m_rotation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+								}
+								m_Keywords =
+								[
+								]
+								m_sequenceParams =
+								{
+									_class = "CVAnimResourceSequenceParams"
+									m_flFadeInTime = 0.200000
+									m_flFadeOutTime = 0.200000
+								}
+								m_folderName = ""
+								m_MotionFramesRootBone = ""
+							},
+							{
+								_class = "CVanim"
+								m_Animationname = "gaara_die"
+								m_Filepath = "models/gaara/gaara_animations.fbx"
+								m_nStartframe = 428
+								m_nEndframe = 447
+								m_flFps = 30.000000
+								m_Loop =
+								{
+									_class = "CAnimationLoop"
+									m_bLoop = false
+									m_bSmoothLoop = false
+									m_nSmoothLoopStart = 0
+									m_nSmoothLoopEnd = 0
+									m_StartLoop =
+									{
+										_class = "CVAnimCmdStartLoop"
+										m_bEnabled = false
+										m_nLoopRestart = 0
+									}
+								}
+								m_bHidden = false
+								m_bDisable = false
+								m_Activities =
+								[
+									{
+										_class = "CActivity"
+										m_Name = "ACT_DOTA_DIE"
+										m_nWeight = 1
+									},
+								]
+								m_AnimationEvents =
+								[
+								]
+								m_MotionFrames =
+								[
+								]
+								m_pIkRules =
+								[
+								]
+								m_pAlignAnimation = null
+								m_adjustAnimation =
+								{
+									_class = "CAdjustAnimation"
+									m_translation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+									m_rotation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+								}
+								m_Keywords =
+								[
+								]
+								m_sequenceParams =
+								{
+									_class = "CVAnimResourceSequenceParams"
+									m_flFadeInTime = 0.200000
+									m_flFadeOutTime = 0.200000
+								}
+								m_folderName = ""
+								m_MotionFramesRootBone = ""
+							},
+							{
+								_class = "CVanim"
+								m_Animationname = "gaara_attack"
+								m_Filepath = "models/gaara/gaara_animations.fbx"
+								m_nStartframe = 136
+								m_nEndframe = 168
+								m_flFps = 30.000000
+								m_Loop =
+								{
+									_class = "CAnimationLoop"
+									m_bLoop = false
+									m_bSmoothLoop = false
+									m_nSmoothLoopStart = 0
+									m_nSmoothLoopEnd = 0
+									m_StartLoop =
+									{
+										_class = "CVAnimCmdStartLoop"
+										m_bEnabled = false
+										m_nLoopRestart = 0
+									}
+								}
+								m_bHidden = false
+								m_bDisable = false
+								m_Activities =
+								[
+									{
+										_class = "CActivity"
+										m_Name = "ACT_DOTA_ATTACK"
+										m_nWeight = 1
+									},
+								]
+								m_AnimationEvents =
+								[
+								]
+								m_MotionFrames =
+								[
+								]
+								m_pIkRules =
+								[
+								]
+								m_pAlignAnimation = null
+								m_adjustAnimation =
+								{
+									_class = "CAdjustAnimation"
+									m_translation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+									m_rotation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+								}
+								m_Keywords =
+								[
+								]
+								m_sequenceParams =
+								{
+									_class = "CVAnimResourceSequenceParams"
+									m_flFadeInTime = 0.200000
+									m_flFadeOutTime = 0.200000
+								}
+								m_folderName = ""
+								m_MotionFramesRootBone = ""
+							},
+							{
+								_class = "CVanim"
+								m_Animationname = "gaara_spell1"
+								m_Filepath = "models/gaara/gaara_animations.fbx"
+								m_nStartframe = 260
+								m_nEndframe = 350
+								m_flFps = 30.000000
+								m_Loop =
+								{
+									_class = "CAnimationLoop"
+									m_bLoop = false
+									m_bSmoothLoop = false
+									m_nSmoothLoopStart = 0
+									m_nSmoothLoopEnd = 0
+									m_StartLoop =
+									{
+										_class = "CVAnimCmdStartLoop"
+										m_bEnabled = false
+										m_nLoopRestart = 0
+									}
+								}
+								m_bHidden = false
+								m_bDisable = false
+								m_Activities =
+								[
+									{
+										_class = "CActivity"
+										m_Name = "ACT_DOTA_CAST_ABILITY_1"
+										m_nWeight = 1
+									},
+								]
+								m_AnimationEvents =
+								[
+								]
+								m_MotionFrames =
+								[
+								]
+								m_pIkRules =
+								[
+								]
+								m_pAlignAnimation = null
+								m_adjustAnimation =
+								{
+									_class = "CAdjustAnimation"
+									m_translation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+									m_rotation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+								}
+								m_Keywords =
+								[
+								]
+								m_sequenceParams =
+								{
+									_class = "CVAnimResourceSequenceParams"
+									m_flFadeInTime = 0.200000
+									m_flFadeOutTime = 0.200000
+								}
+								m_folderName = ""
+								m_MotionFramesRootBone = ""
+							},
+							{
+								_class = "CVanim"
+								m_Animationname = "gaara_spell2"
+								m_Filepath = "models/gaara/gaara_animations.fbx"
+								m_nStartframe = 211
+								m_nEndframe = 259
+								m_flFps = 30.000000
+								m_Loop =
+								{
+									_class = "CAnimationLoop"
+									m_bLoop = false
+									m_bSmoothLoop = false
+									m_nSmoothLoopStart = 0
+									m_nSmoothLoopEnd = 0
+									m_StartLoop =
+									{
+										_class = "CVAnimCmdStartLoop"
+										m_bEnabled = false
+										m_nLoopRestart = 0
+									}
+								}
+								m_bHidden = false
+								m_bDisable = false
+								m_Activities =
+								[
+									{
+										_class = "CActivity"
+										m_Name = "ACT_DOTA_CAST_ABILITY_2"
+										m_nWeight = 1
+									},
+								]
+								m_AnimationEvents =
+								[
+								]
+								m_MotionFrames =
+								[
+								]
+								m_pIkRules =
+								[
+								]
+								m_pAlignAnimation = null
+								m_adjustAnimation =
+								{
+									_class = "CAdjustAnimation"
+									m_translation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+									m_rotation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+								}
+								m_Keywords =
+								[
+								]
+								m_sequenceParams =
+								{
+									_class = "CVAnimResourceSequenceParams"
+									m_flFadeInTime = 0.200000
+									m_flFadeOutTime = 0.200000
+								}
+								m_folderName = ""
+								m_MotionFramesRootBone = ""
+							},
+							{
+								_class = "CVanim"
+								m_Animationname = "gaara_ulti"
+								m_Filepath = "models/gaara/gaara_animations.fbx"
+								m_nStartframe = 353
+								m_nEndframe = 417
+								m_flFps = 30.000000
+								m_Loop =
+								{
+									_class = "CAnimationLoop"
+									m_bLoop = false
+									m_bSmoothLoop = false
+									m_nSmoothLoopStart = 0
+									m_nSmoothLoopEnd = 0
+									m_StartLoop =
+									{
+										_class = "CVAnimCmdStartLoop"
+										m_bEnabled = false
+										m_nLoopRestart = 0
+									}
+								}
+								m_bHidden = false
+								m_bDisable = false
+								m_Activities =
+								[
+									{
+										_class = "CActivity"
+										m_Name = "ACT_DOTA_CAST_ABILITY_4"
+										m_nWeight = 1
+									},
+								]
+								m_AnimationEvents =
+								[
+								]
+								m_MotionFrames =
+								[
+								]
+								m_pIkRules =
+								[
+								]
+								m_pAlignAnimation = null
+								m_adjustAnimation =
+								{
+									_class = "CAdjustAnimation"
+									m_translation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+									m_rotation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+								}
+								m_Keywords =
+								[
+								]
+								m_sequenceParams =
+								{
+									_class = "CVAnimResourceSequenceParams"
+									m_flFadeInTime = 0.200000
+									m_flFadeOutTime = 0.200000
+								}
+								m_folderName = ""
+								m_MotionFramesRootBone = ""
+							},
+							{
+								_class = "CVanim"
+								m_Animationname = "gaara_attack2"
+								m_Filepath = "models/gaara/gaara_animations.fbx"
+								m_nStartframe = 180
+								m_nEndframe = 209
+								m_flFps = 30.000000
+								m_Loop =
+								{
+									_class = "CAnimationLoop"
+									m_bLoop = false
+									m_bSmoothLoop = false
+									m_nSmoothLoopStart = 0
+									m_nSmoothLoopEnd = 0
+									m_StartLoop =
+									{
+										_class = "CVAnimCmdStartLoop"
+										m_bEnabled = false
+										m_nLoopRestart = 0
+									}
+								}
+								m_bHidden = false
+								m_bDisable = false
+								m_Activities =
+								[
+									{
+										_class = "CActivity"
+										m_Name = "ACT_DOTA_ATTACK2"
+										m_nWeight = 1
+									},
+								]
+								m_AnimationEvents =
+								[
+								]
+								m_MotionFrames =
+								[
+								]
+								m_pIkRules =
+								[
+								]
+								m_pAlignAnimation = null
+								m_adjustAnimation =
+								{
+									_class = "CAdjustAnimation"
+									m_translation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+									m_rotation =
+									[
+										0.000000,
+										0.000000,
+										0.000000,
+									]
+								}
+								m_Keywords =
+								[
+								]
+								m_sequenceParams =
+								{
+									_class = "CVAnimResourceSequenceParams"
+									m_flFadeInTime = 0.200000
+									m_flFadeOutTime = 0.200000
+								}
+								m_folderName = ""
+								m_MotionFramesRootBone = ""
+							},
+						]
+						m_sScripts =
+						[
+						]
+						m_folderNames =
+						[
+						]
+					}
+				},
+			]
+			m_Vanim =
+			[
+			]
+			m_sScripts =
+			[
+			]
+			m_folderNames =
+			[
+			]
 		}
-	]
-	CVattachmentListReference[] m_pAttachmentLists = 
-	[
-		CVattachmentListReference
-		{
-			CVattachmentList* m_pObject = &CVattachmentList_0
-			string m_sFileName = ""
-		}
-	]
-	CVanimGroupReference m_pAnimGroup = CVanimGroupReference
-	{
-		CVanimGroup* m_pObject = &CVanimGroup_0
-		string m_sFileName = ""
 	}
-	CVNodeMaterialGroupListReference m_pMaterialGroupList = CVNodeMaterialGroupListReference
+	m_pMaterialGroupList =
 	{
-		NodeMaterialGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVNodeMaterialGroupListReference"
+		m_pObject = null
 	}
-	CVMeshGroupListReference m_pMeshGroupList = CVMeshGroupListReference
+	m_pMeshGroupList =
 	{
-		MeshGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVMeshGroupListReference"
+		m_pObject = null
 	}
-	CVLODGroupListReference m_pLodGroupList = CVLODGroupListReference
+	m_pLodGroupList =
 	{
-		LODGroupList_t* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVLODGroupListReference"
+		m_pObject = null
 	}
-	CVpropBreakableListReference m_pPropBreakableList = CVpropBreakableListReference
+	m_pPropBreakableList =
 	{
-		CVpropBreakableList* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVpropBreakableListReference"
+		m_pObject = null
 	}
-	CVpropDataListReference m_pPropDataList = CVpropDataListReference
+	m_pPropDataList =
 	{
-		CVpropDataList* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVpropDataListReference"
+		m_pObject = null
 	}
-	CVConstraintListReference[] m_pConstraintLists = 
+	m_pConstraintLists =
 	[
-		
 	]
-	string m_collision = ""
-	string m_softbody = ""
-	string m_sMDLFilename = ""
-	string[] m_sOffsetHitboxSets = 
+	m_collision = ""
+	m_softbody = ""
+	m_sMDLFilename = ""
+	m_sOffsetHitboxSets =
 	[
-		
 	]
-	float(3) m_vHitboxSetOffset = ( 0.000000, 0.000000, 0.000000 )
-	string[] m_scriptFiles = 
+	m_vHitboxSetOffset =
 	[
-		
+		0.000000,
+		0.000000,
+		0.000000,
 	]
-	CVMaterialRemapList* m_pMaterialRemapList = &CVMaterialRemapList_0
-	float m_flFbxScale = 1.000000
-	float m_flQCScale = 1.000000
-	float(3) m_vOrigin = ( 0.000000, 0.000000, 0.000000 )
-	CVPsfList* m_pPsfList = NULL
-	string m_keyValueText = ""
-	bool m_bStaticProp = false
-	bool m_bEnableClothProcessing = true
-	float m_flClothEnableThreshold = 0.050000
-	int m_nMaxClothVertsPerMesh = 2048
-	bool m_bBuildClothBoneHierarchy = false
-	symbol m_nNavType = AUTH_NAV_MESH
-	bool m_bMakeUniqueVMeshes = false
-	bool m_bMakeImplicitBindPoseSequence = false
-	bool m_bAdjustSkeletonFromBoneFlags = false
-	CVanimGroupReference[] m_pAnimGroups = 
+	m_scriptFiles =
 	[
-		
 	]
-}
-
-CVhitBoxSetList CVhitBoxSetList_0
-{
-	CVhitBoxSet[] m_HitBoxSets = 
-	[
-		CVhitBoxSet
-		{
-			string m_name = "default"
-			CVhitBox[] m_HitBoxes = 
-			[
-				CVhitBox
-				{
-					string m_name = "m3bone_root"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "m3bone_root"
-					float(3) m_vMinBounds = ( -2.000000, -2.000000, -2.000000 )
-					float(3) m_vMaxBounds = ( 2.000000, 2.000000, 2.000000 )
-					bool m_bTranslationOnly = true
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "m3bone_root"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "m3bone_root"
-					float(3) m_vMinBounds = ( -2.000000, -2.000000, -2.000000 )
-					float(3) m_vMaxBounds = ( 2.000000, 2.000000, 2.000000 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box02"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box02"
-					float(3) m_vMinBounds = ( -100.000000, -100.990997, -439.007996 )
-					float(3) m_vMaxBounds = ( 100.000000, 100.364998, 175.692993 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box14"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box14"
-					float(3) m_vMinBounds = ( -75.206161, -32.905804, -56.686455 )
-					float(3) m_vMaxBounds = ( 18.363274, 80.937363, 11.399446 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box19"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box19"
-					float(3) m_vMinBounds = ( -2.960081, -8.499426, -20.740906 )
-					float(3) m_vMaxBounds = ( 16.432400, 18.998806, 4.170776 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box11"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box11"
-					float(3) m_vMinBounds = ( -16.905327, -22.587761, -18.226517 )
-					float(3) m_vMaxBounds = ( 17.407593, 21.818123, 0.334229 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box08"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box08"
-					float(3) m_vMinBounds = ( -17.449394, -22.587761, -18.193039 )
-					float(3) m_vMaxBounds = ( 17.554394, 21.818123, 0.367706 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box01"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box01"
-					float(3) m_vMinBounds = ( -24.070301, -21.385876, -1.914032 )
-					float(3) m_vMaxBounds = ( 19.698734, 28.115566, 62.132202 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box15"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box15"
-					float(3) m_vMinBounds = ( -106.400223, -5.001448, -20.588371 )
-					float(3) m_vMaxBounds = ( -58.452652, 17.637983, 19.984375 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box06"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box06"
-					float(3) m_vMinBounds = ( -2.800652, 8.912823, -8.302917 )
-					float(3) m_vMaxBounds = ( 4.583427, 30.405075, 11.208038 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box17"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box17"
-					float(3) m_vMinBounds = ( 47.681198, -5.001442, -49.972511 )
-					float(3) m_vMaxBounds = ( 85.877747, 17.637989, 49.632721 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box21"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box21"
-					float(3) m_vMinBounds = ( -0.722092, 8.912835, -11.273621 )
-					float(3) m_vMaxBounds = ( 6.662033, 30.405090, 8.237335 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box12"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box12"
-					float(3) m_vMinBounds = ( -28.071842, -63.611210, -60.617134 )
-					float(3) m_vMaxBounds = ( 29.007793, 39.173084, 0.144870 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box05"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box05"
-					float(3) m_vMinBounds = ( -13.407528, -50.533081, -3.362793 )
-					float(3) m_vMaxBounds = ( 22.411411, -6.127178, 2.396851 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box09"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box09"
-					float(3) m_vMinBounds = ( -54.455475, -35.429535, -110.375397 )
-					float(3) m_vMaxBounds = ( 75.649223, 21.818249, 0.272507 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				},
-				CVhitBox
-				{
-					string m_name = "Box20"
-					string m_sSurfaceProperty = ""
-					int m_nGroupId = 0
-					string m_sBoneName = "Box20"
-					float(3) m_vMinBounds = ( -23.228287, -50.533081, -4.503967 )
-					float(3) m_vMaxBounds = ( 12.590660, -6.127178, 1.255676 )
-					bool m_bTranslationOnly = false
-					uint(4) m_cRenderColor = ( 0, 0, 0, 0 )
-				}
-			]
-		}
-	]
-	string m_AutoCreateSetName = ""
-}
-
-CVattachmentList CVattachmentList_0
-{
-	string m_name = ""
-	CVattachment[] m_attachments = 
-	[
-		CVattachment
-		{
-			string m_name = "attach_origin"
-			CVattachmentInfluence[] m_influences = 
-			[
-				CVattachmentInfluence
-				{
-					string m_influenceName = "m3bone_root"
-					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
-					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
-					float m_flWeight = 1.000000
-					bool m_bRoot = false
-				}
-			]
-		},
-		CVattachment
-		{
-			string m_name = "attach_hitloc"
-			CVattachmentInfluence[] m_influences = 
-			[
-				CVattachmentInfluence
-				{
-					string m_influenceName = "Box02"
-					float(3) m_vTranslationOffset = ( 0.000000, 0.000000, 0.000000 )
-					float(3) m_vRotationOffset = ( 0.000000, 0.000000, 0.000000 )
-					float m_flWeight = 1.000000
-					bool m_bRoot = false
-				}
-			]
-		},
-		CVattachment
-		{
-			string m_name = "attach_attack1"
-			CVattachmentInfluence[] m_influences = 
-			[
-				CVattachmentInfluence
-				{
-					string m_influenceName = "Box17"
-					float(3) m_vTranslationOffset = ( 71.350616, -0.000015, -12.501801 )
-					float(3) m_vRotationOffset = ( 0.000010, -0.000009, -0.000002 )
-					float m_flWeight = 1.000000
-					bool m_bRoot = false
-				}
-			]
-		},
-		CVattachment
-		{
-			string m_name = "attach_attack2"
-			CVattachmentInfluence[] m_influences = 
-			[
-				CVattachmentInfluence
-				{
-					string m_influenceName = "Box17"
-					float(3) m_vTranslationOffset = ( 71.350601, -0.000015, -12.501800 )
-					float(3) m_vRotationOffset = ( 0.000010, -0.000009, -0.000002 )
-					float m_flWeight = 1.000000
-					bool m_bRoot = false
-				}
-			]
-		},
-		CVattachment
-		{
-			string m_name = "attach_left_hand"
-			CVattachmentInfluence[] m_influences = 
-			[
-				CVattachmentInfluence
-				{
-					string m_influenceName = "Box17"
-					float(3) m_vTranslationOffset = ( 74.256523, -0.000001, 0.000000 )
-					float(3) m_vRotationOffset = ( -0.000000, 0.000000, -0.000001 )
-					float m_flWeight = 1.000000
-					bool m_bRoot = false
-				}
-			]
-		},
-		CVattachment
-		{
-			string m_name = "attach_right_hand"
-			CVattachmentInfluence[] m_influences = 
-			[
-				CVattachmentInfluence
-				{
-					string m_influenceName = "Box08"
-					float(3) m_vTranslationOffset = ( -181.956711, 0.000003, 105.574432 )
-					float(3) m_vRotationOffset = ( -0.000000, 0.000000, -0.000001 )
-					float m_flWeight = 1.000000
-					bool m_bRoot = false
-				}
-			]
-		}
-	]
-}
-
-CVanimGroup CVanimGroup_0
-{
-	string m_Name = ""
-	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
+	m_pMaterialRemapList =
 	{
-		CVReferenceSkeleton* m_pObject = NULL
-		string m_sFileName = ""
+		_class = "CVMaterialRemapList"
+		m_vMaterialRemapList =
+		[
+			{
+				_class = "CVMaterialRemap"
+				m_sSearchMaterial = "woailuowanchen01_dongzou03_recover12.vmat"
+				m_sReplaceMaterial = "materials/gaara/gaara.vmat"
+			},
+		]
 	}
-	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
-	{
-		CVBoneFlagList* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVseqGroupReference m_pSeqGroup = CVseqGroupReference
-	{
-		CVseqGroup* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVanimGroupReference[] m_pAnimGroups = 
+	m_flFbxScale = 1.000000
+	m_flQCScale = 1.000000
+	m_vOrigin =
 	[
-		CVanimGroupReference
-		{
-			CVanimGroup* m_pObject = &CVanimGroup_1
-			string m_sFileName = ""
-		}
+		0.000000,
+		0.000000,
+		0.000000,
 	]
-	CVanim[] m_Vanim = 
+	m_pPsfList = null
+	m_keyValueText = ""
+	m_bStaticProp = false
+	m_bEnableClothProcessing = true
+	m_flClothEnableThreshold = 0.050000
+	m_nMaxClothVertsPerMesh = 2048
+	m_bBuildClothBoneHierarchy = false
+	m_nNavType = "AUTH_NAV_MESH"
+	m_bMakeUniqueVMeshes = false
+	m_bMakeImplicitBindPoseSequence = false
+	m_bAdjustSkeletonFromBoneFlags = false
+	m_pAnimGroups =
 	[
-		
-	]
-	string[] m_sScripts = 
-	[
-		
-	]
-	string[] m_folderNames = 
-	[
-		
-	]
-}
-
-CVanimGroup CVanimGroup_1
-{
-	string m_Name = ""
-	CVReferenceSkeletonReference m_pReferenceSkeleton = CVReferenceSkeletonReference
-	{
-		CVReferenceSkeleton* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVBoneFlagListReference m_pBoneFlagList = CVBoneFlagListReference
-	{
-		CVBoneFlagList* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVseqGroupReference m_pSeqGroup = CVseqGroupReference
-	{
-		CVseqGroup* m_pObject = NULL
-		string m_sFileName = ""
-	}
-	CVanimGroupReference[] m_pAnimGroups = 
-	[
-		
-	]
-	CVanim[] m_Vanim = 
-	[
-		CVanim
-		{
-			string m_Animationname = "gaara_animations"
-			string m_Filepath = "models/gaara/gaara_animations.FBX"
-			int m_nStartframe = 0
-			int m_nEndframe = 1790
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
-		},
-		CVanim
-		{
-			string m_Animationname = "gaara_stand"
-			string m_Filepath = "models/gaara/gaara_animations.fbx"
-			int m_nStartframe = 500
-			int m_nEndframe = 520
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = true
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_IDLE"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
-		},
-		CVanim
-		{
-			string m_Animationname = "gaara_walk"
-			string m_Filepath = "models/gaara/gaara_animations.fbx"
-			int m_nStartframe = 10
-			int m_nEndframe = 32
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = true
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_RUN"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
-		},
-		CVanim
-		{
-			string m_Animationname = "gaara_die"
-			string m_Filepath = "models/gaara/gaara_animations.fbx"
-			int m_nStartframe = 428
-			int m_nEndframe = 447
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_DIE"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
-		},
-		CVanim
-		{
-			string m_Animationname = "gaara_attack"
-			string m_Filepath = "models/gaara/gaara_animations.fbx"
-			int m_nStartframe = 136
-			int m_nEndframe = 168
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_ATTACK"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
-		},
-		CVanim
-		{
-			string m_Animationname = "gaara_spell1"
-			string m_Filepath = "models/gaara/gaara_animations.fbx"
-			int m_nStartframe = 260
-			int m_nEndframe = 350
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_CAST_ABILITY_1"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
-		},
-		CVanim
-		{
-			string m_Animationname = "gaara_spell2"
-			string m_Filepath = "models/gaara/gaara_animations.fbx"
-			int m_nStartframe = 211
-			int m_nEndframe = 259
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_CAST_ABILITY_2"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
-		},
-		CVanim
-		{
-			string m_Animationname = "gaara_ulti"
-			string m_Filepath = "models/gaara/gaara_animations.fbx"
-			int m_nStartframe = 353
-			int m_nEndframe = 417
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_CAST_ABILITY_4"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
-		},
-		CVanim
-		{
-			string m_Animationname = "gaara_attack2"
-			string m_Filepath = "models/gaara/gaara_animations.fbx"
-			int m_nStartframe = 180
-			int m_nEndframe = 209
-			float m_flFps = 30.000000
-			CAnimationLoop m_Loop = CAnimationLoop
-			{
-				bool m_bLoop = false
-				bool m_bSmoothLoop = false
-				int m_nSmoothLoopStart = 0
-				int m_nSmoothLoopEnd = 0
-				CVAnimCmdStartLoop m_StartLoop = CVAnimCmdStartLoop
-				{
-					bool m_bEnabled = false
-					int m_nLoopRestart = 0
-				}
-			}
-			bool m_bHidden = false
-			bool m_bDisable = false
-			CActivity[] m_Activities = 
-			[
-				CActivity
-				{
-					string m_Name = "ACT_DOTA_ATTACK2"
-					int m_nWeight = 1
-				}
-			]
-			CAnimationEvent[] m_AnimationEvents = 
-			[
-				
-			]
-			CMotionFrame[] m_MotionFrames = 
-			[
-				
-			]
-			CIKrule*[] m_pIkRules = 
-			[
-				
-			]
-			CAlignAnimation* m_pAlignAnimation = NULL
-			CAdjustAnimation m_adjustAnimation = CAdjustAnimation
-			{
-				float(3) m_translation = ( 0.000000, 0.000000, 0.000000 )
-				float(3) m_rotation = ( 0.000000, 0.000000, 0.000000 )
-			}
-			string[] m_Keywords = 
-			[
-				
-			]
-			CVAnimResourceSequenceParams m_sequenceParams = CVAnimResourceSequenceParams
-			{
-				float m_flFadeInTime = 0.200000
-				float m_flFadeOutTime = 0.200000
-			}
-			string m_folderName = ""
-			string m_MotionFramesRootBone = ""
-		}
-	]
-	string[] m_sScripts = 
-	[
-		
-	]
-	string[] m_folderNames = 
-	[
-		
-	]
-}
-
-CVMaterialRemapList CVMaterialRemapList_0
-{
-	CVMaterialRemap[] m_vMaterialRemapList = 
-	[
-		CVMaterialRemap
-		{
-			string m_sSearchMaterial = "woailuowanchen01_dongzou03_recover12.vmat"
-			string m_sReplaceMaterial = "materials/gaara/gaara.vmat"
-		}
 	]
 }

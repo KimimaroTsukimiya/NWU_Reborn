@@ -44,8 +44,6 @@
 		},
 		{
 			_class = "C_OP_InterpolateRadius"
-			m_flStartScale = 2.000000
-			m_flEndScale = 0.000000
 			m_flBias = 0.700000
 		},
 		{
@@ -59,7 +57,7 @@
 	[
 		{
 			_class = "C_INIT_RingWave"
-			m_flInitialRadius = 150.000000
+			m_flInitialRadius = 100.000000
 			m_flParticlesPerOrbit = 60.000000
 		},
 		{
@@ -98,8 +96,8 @@
 		},
 		{
 			_class = "C_INIT_RandomRadius"
-			m_flRadiusMax = 8.000000
-			m_flRadiusMin = 3.000000
+			m_flRadiusMax = 5.000000
+			m_flRadiusMin = 2.000000
 		},
 		{
 			_class = "C_INIT_RandomSequence"
