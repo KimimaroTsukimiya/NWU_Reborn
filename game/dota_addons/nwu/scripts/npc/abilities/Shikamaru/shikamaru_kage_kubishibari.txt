@@ -59,6 +59,7 @@
 		"particle"  "particles/status_fx/status_effect_shaman_shackle.vpcf" 	
 		"particle"	"particles/units/heroes/hero_shadowshaman/shadowshaman_shackle.vpcf"
 		"particle"	"particles/units/heroes/shikamaru/shikamaru_shackle_aladeen.vpcf"
+		"particle"	"particles/units/heroes/shikamaru/shikamaru_aladeen_rope_glow.vpcf"
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts"
 	}
 

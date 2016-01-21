@@ -198,7 +198,6 @@
 		},
 		{
 			m_ChildRef = resource:"particles/units/heroes/hero_shadowshaman/shadowshaman_shackle_sub_rope_c.vpcf"
-			m_bDisableChild = true
 		},
 	]
-	}
+}

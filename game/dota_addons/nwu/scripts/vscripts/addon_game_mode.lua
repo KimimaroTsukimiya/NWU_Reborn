@@ -38,6 +38,7 @@ function Precache( context )
   PrecacheResource("soundfile", "soundevents/sasuke_kills_naruto.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/sasuke_kills_gaara.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/sasuke_kills_itachi.vsndevts", context)
+  PrecacheResource("soundfile", "soundevents/madara_trees.vsndevts", context)        
   -- Entire items can be precached by name
   -- Abilities can also be precached in this way despite the name
 

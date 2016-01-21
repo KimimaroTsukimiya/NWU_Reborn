@@ -5,8 +5,10 @@
 	"Neutrals"        								"Neutral Team"
 	"NoTeam"          								"No Team"
 
+	"DOTA_CUSTOM_1"									"BOT"
 	"DOTA_GoodGuys"   								"Shinobi Alliance"
 	"DOTA_BadGuys"    								"Akatsuki Force"
 	
 	"addonname"										"Naruto Wars Reborn"
+
 }

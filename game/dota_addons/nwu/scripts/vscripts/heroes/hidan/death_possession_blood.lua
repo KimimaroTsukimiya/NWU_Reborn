@@ -57,11 +57,14 @@ end
 function setTarget( keys )
 	if keys.target:IsRealHero() then
 		keys.ability.bloodTarget = keys.target
+		keys.ability:ApplyDataDrivenModifier(keys.caster,keys.target,"modifier_hidan_ulti_debuff",{duration = 20})
+		
 		keys.ability.targetTime = Time()
 		local targetTime = Time()
 
 		Timers:CreateTimer(20, function() 
 			if keys.ability.targetTime == targetTime then 
+
 				keys.ability.bloodTarget = nil 
 				end 
 		end)
