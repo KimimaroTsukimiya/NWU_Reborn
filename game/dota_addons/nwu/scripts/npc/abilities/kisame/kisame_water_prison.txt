@@ -84,6 +84,7 @@
 	{
 		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
 		"soundfile"	"soundevents/kisame_ulti.vsndevts"
+		"soundfile"	"soundevents/kisame_ulti_2.vsndevts"
 		"particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
 		"particle"  "particles/units/heroes/kisame/water_dome2.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
@@ -96,11 +97,10 @@
 
 	"OnSpellStart"
 	{
-		
-		"FireSound"
+		"RunScript"
 		{
-			"EffectName"		"kisame_ulti"
-			"Target"			"CASTER"
+			"ScriptFile"	"heroes/kisame/water_prison.lua"
+			"Function"		"playSound"
 		}
 		"FireEffect"
 		{
@@ -123,10 +123,10 @@
 
 	"OnToggleOn"
 	{
-			"FireSound"
+		"RunScript"
 		{
-			"EffectName"		"kisame_ulti"
-			"Target"			"CASTER"
+			"ScriptFile"	"heroes/kisame/water_prison.lua"
+			"Function"		"playSound"
 		}
 		"ApplyModifier"
 		{

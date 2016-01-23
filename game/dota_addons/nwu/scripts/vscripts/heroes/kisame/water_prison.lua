@@ -90,3 +90,12 @@ function domeFollowHero( keys )
 		end
 	end
 end
+
+function playSound( keys )
+	local random = math.random(1, 2)
+	if random == 1 then
+		EmitSoundOn("kisame_ulti",keys.caster)
+	elseif random == 2 then
+		EmitSoundOn("kisame_ulti_2",keys.caster)
+	end
+end

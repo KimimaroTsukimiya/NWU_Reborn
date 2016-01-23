@@ -19,6 +19,7 @@ function FinishChidori(keys)
 	RemovePhysics(keys.caster)
 	keys.caster:RemoveModifierByName(keys.modifier_caster)
 	keys.caster:RemoveModifierByName("modifier_raikiri_stunned")
+
 end
 
 function Launch(keys)	
@@ -31,8 +32,6 @@ function Launch(keys)
 	local particle_impact = keys.particle_impact
 
 	
-
-
 	caster:EmitSound(keys.sound_cast)
 	AddPhysics(caster)
 	ability:ApplyDataDrivenModifier(caster, caster, "modifier_raikiri_stunned", {})
@@ -62,8 +61,14 @@ end
 function ChannelChidori( keys )
 	keys.ability:ApplyDataDrivenModifier(keys.caster, keys.caster, keys.modifier_caster, {})
 	keys.caster:EmitSound(keys.sound_cast)
+	
+
 end
 
 function RemoveChannelChidori(keys)
 	keys.caster:RemoveModifierByName(keys.modifier_caster)
+end
+
+function removeEffect( keys )
+	ParticleManager:DestroyParticle(keys.caster.raikiriEffect, true)
 end

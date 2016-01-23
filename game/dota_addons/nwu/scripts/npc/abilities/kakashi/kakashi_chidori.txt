@@ -25,6 +25,7 @@
 		"particle"			"particles/units/heroes/hero_sven/chidori.vpcf"
 		"particle"			"particles/units/heroes/hero_sven/sven_spell_storm_bolt_projectile_lightning_b.vpcf"
 		"particle"			"particles/units/heroes/kakashi/chidori.vpcf"
+		"soundfile"			"soundevents/kakashi_ulti.vsndevts"
 	}
 	
 	// Casting
@@ -72,6 +73,12 @@
 
 	"OnAbilityPhaseStart"
 	{
+		"FireSound"
+		{
+			"EffectName"	"kakashi_ulti"
+			"Target" 		"CASTER"
+		}
+
 		"RunScript"
 		{
 			"ScriptFile"		"heroes/kakashi/chidori.lua"

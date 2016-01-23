@@ -78,3 +78,20 @@ function initiateTaunt( keys )
 	keys.ability.bonusStr = 0
 	keys.ability.removeIt = false
 end
+
+function playSound( keys )
+	local random = math.random(1, 5)
+		print(random)
+	if random == 1 then
+
+		EmitSoundOn("hidan_taunt",keys.caster)
+	elseif random == 2 then
+		EmitSoundOn("hidan_taunt_2",keys.caster)
+	elseif random == 3 then
+		EmitSoundOn("hidan_taunt_3",keys.caster)
+	elseif random == 4 then
+		EmitSoundOn("hidan_taunt_4",keys.caster)
+	elseif random == 5 then
+		EmitSoundOn("hidan_taunt_5",keys.caster)
+	end
+end

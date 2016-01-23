@@ -9,3 +9,12 @@ function removeParticle( keys )
 	keys.caster:Stop()
 	ParticleManager:DestroyParticle( keys.ability.ultiParticle, true )
 end
+
+function playSound( keys )
+	local random = math.random(1, 2)
+	if random == 1 then
+		EmitSoundOn("neji_kaiten",keys.caster)
+	elseif random == 2 then
+		EmitSoundOn("neji_kaiten_2",keys.caster)
+	end
+end

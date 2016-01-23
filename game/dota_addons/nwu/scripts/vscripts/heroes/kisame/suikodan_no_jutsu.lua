@@ -54,3 +54,14 @@ function suikodan_no_jutsu( keys )
 		end
 	end)
 end
+
+function playSound( keys )
+	local random = math.random(1, 2)
+		print(random)
+	if random == 1 then
+		EmitSoundOn("kisame_shark_cast",keys.caster)
+	elseif random == 2 then
+		EmitSoundOn("kisame_shark_cast_2",keys.caster)
+	end
+	EmitSoundOn("kisame_shark",keys.caster)
+end

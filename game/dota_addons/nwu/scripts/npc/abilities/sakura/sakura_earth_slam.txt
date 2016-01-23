@@ -40,17 +40,20 @@
 	{
 		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
 		"soundfile"	"soundevents/sakura_slam.vsndevts"
+		"soundfile"	"soundevents/sakura_slam_2.vsndevts"
 		"particle"	"particles/units/heroes/hero_centaur/centaur_warstomp.vpcf"
 		"particle"	"particles/generic_gameplay/generic_stunned.vpcf"
 	}
 
 	"OnAbilityPhaseStart"
 	{
-			"FireSound"
+
+		"RunScript"
 		{
-			"EffectName"		"sakura_slam"
-			"Target" 			"CASTER"
+			"ScriptFile"	"heroes/sakura/earth_slam.lua"
+			"Function"		"playSound"
 		}
+
 	}
 
 	"OnSpellStart"

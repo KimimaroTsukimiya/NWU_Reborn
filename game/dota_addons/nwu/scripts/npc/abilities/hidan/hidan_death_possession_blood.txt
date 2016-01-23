@@ -70,6 +70,8 @@
 	"precache"
 	{
 		"soundfile"	"soundevents/hidan_ulti.vsndevts"
+		"soundfile"	"soundevents/hidan_ulti_2.vsndevts"
+		"soundfile"	"soundevents/hidan_ulti_3.vsndevts"
 		"particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
 		"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
@@ -91,10 +93,11 @@
 
 	"OnSpellStart"
 	{
-		"FireSound"
+
+		"RunScript"
 		{
-			"EffectName"	"hidan_ulti"
-			"Target" 		"CASTER"
+			"ScriptFile"	"heroes/hidan/death_possession_blood.lua"
+			"Function"		"playSound"
 		}
 
 		"ApplyModifier"

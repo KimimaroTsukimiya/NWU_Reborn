@@ -14,6 +14,7 @@
 	{
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
 		"soundfile"			"soundevents/sakura_ulti.vsndevts"
+		"soundfile"			"soundevents/sakura_ulti_2.vsndevts"
 		"particle"			"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
 		"particle"			"particles/status_fx/status_effect_gods_strength.vpcf"
 		"particle"			"particles/units/heroes/sakura/lamp_flame_tintable.vpcf"
@@ -55,10 +56,10 @@
 
 	"OnAbilityPhaseStart"
 	{
-			"FireSound"
+		"RunScript"
 		{
-			"EffectName"		"sakura_ulti"
-			"Target" 			"CASTER"
+			"ScriptFile"	"heroes/sakura/inner_sakura.lua"
+			"Function"		"playSound"
 		}
 	}
 

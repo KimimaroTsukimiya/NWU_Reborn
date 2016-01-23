@@ -20,7 +20,7 @@
 		"02"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"ms_buff"	"5 7 9 11"
+			"ms_buff"	"3 5 7 9"
 		}
 		"03"
 		{

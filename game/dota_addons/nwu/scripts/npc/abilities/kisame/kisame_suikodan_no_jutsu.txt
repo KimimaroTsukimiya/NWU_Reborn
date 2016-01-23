@@ -14,6 +14,7 @@
 	{
 		"soundfile" 		"soundevents/kisame_shark.vsndevts"
 		"soundfile" 		"soundevents/kisame_shark_cast.vsndevts"
+		"soundfile" 		"soundevents/kisame_shark_cast_2.vsndevts"
 		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
 		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
 	}
@@ -82,18 +83,11 @@
 
 	"OnAbilityPhaseStart"
 	{
-		"FireSound"
-        {
-          "EffectName"  "kisame_shark"
-          "Target"    "CASTER"
-        }
-
-        "FireSound"
-        {
-          "EffectName"  "kisame_shark_cast"
-          "Target"    "CASTER"
-        }
-
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/kisame/suikodan_no_jutsu.lua"
+			"Function"		"playSound"
+		}
 	}
 
 	"OnSpellStart"

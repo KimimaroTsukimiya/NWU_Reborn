@@ -140,3 +140,14 @@ function removeDebuff( keys )
 	ParticleManager:DestroyParticle(keys.target.debuffHidan, true)
 
 end
+
+function playSound( keys )
+	local random = math.random(1, 3)
+	if random == 1 then
+		EmitSoundOn("hidan_ulti",keys.caster)
+	elseif random == 2 then
+		EmitSoundOn("hidan_ulti_2",keys.caster)
+	elseif random == 3 then
+		EmitSoundOn("hidan_ulti_3",keys.caster)	
+	end
+end

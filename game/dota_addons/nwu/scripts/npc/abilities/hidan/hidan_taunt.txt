@@ -14,6 +14,10 @@
 	{
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
 		"soundfile"			"soundevents/hidan_taunt.vsndevts"
+		"soundfile"			"soundevents/hidan_taunt_2.vsndevts"
+		"soundfile"			"soundevents/hidan_taunt_3.vsndevts"
+		"soundfile"			"soundevents/hidan_taunt_4.vsndevts"
+		"soundfile"			"soundevents/hidan_taunt_5.vsndevts"
 		"particle"			"particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
 		"particle"			"particles/status_fx/status_effect_beserkers_call.vpcf"
 	}
@@ -70,14 +74,18 @@
 		}
 	}
 
+	"OnAbilityPhaseStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/hidan/taunt.lua"
+			"Function"		"playSound"
+		}
+	}
+
 	"OnSpellStart"
 	{
-		"FireSound"
-		{
-			"EffectName"	"hidan_taunt"
-			"Target" 		"CASTER"
-		}
-
+		
 		"RemoveModifier"
 		{
 			"ModifierName"	"modifier_berserkers_call_caster_datadriven"

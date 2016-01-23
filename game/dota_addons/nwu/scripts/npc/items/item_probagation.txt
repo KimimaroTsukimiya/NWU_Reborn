@@ -25,6 +25,7 @@
     "precache"
   {
     "soundfile" "soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+    "soundfile" "soundevents/bunshin_seal.vsndevts"
     "particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis.vpcf"
     "particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
     "particle"  "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
@@ -40,6 +41,11 @@
 
     "OnSpellStart"
   {
+    "FireSound"
+    {
+      "EffectName"  "bunshin_seal"
+      "Target"     "CASTER"
+    }
     "ApplyModifier"
     {
       "ModifierName"    "illusion"

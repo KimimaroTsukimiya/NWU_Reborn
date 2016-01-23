@@ -33,6 +33,8 @@
       "particle"  "particles/units/heroes/neji/neji_forgot_a.vpcf"
       "particle"  "particles/generic_gameplay/generic_purge.vpcf"
       "particle"   "particles/econ/items/razor/razor_punctured_crest/razor_helmet_blade_ambient_a.vpcf"
+      "soundfile"  "soundevents/neji_kaiten.vsndevts"
+      "soundfile"  "soundevents/neji_kaiten_2.vsndevts"
     }
 
     "AbilitySpecial"
@@ -60,9 +62,19 @@
 
     }
 
+    "OnAbilityPhaseStart"
+    {
+         "RunScript"
+        {
+            "ScriptFile"    "heroes/neji/kaiten.lua"
+            "Function"        "playSound"
+        }
+    }
+
     "OnSpellStart"
     {
     
+      
 
         "Knockback"
                 {
