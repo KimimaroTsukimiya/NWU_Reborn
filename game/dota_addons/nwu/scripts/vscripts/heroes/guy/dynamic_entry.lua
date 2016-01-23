@@ -96,3 +96,7 @@ function dynamic_entry_start(keys)
 	--Movement
 	Timers:CreateTimer(timer_tbl)
 end
+
+function playSound( keys )
+	EmitSoundOn("guy_entry",keys.caster)
+end

@@ -19,6 +19,8 @@
 		        "particle"  "particles/units/heroes/hero_brewmaster/brewmaster_thunder_clap_debuff.vpcf"
 		        "particle"  "particles/status_fx/status_effect_brewmaster_thunder_clap.vpcf"
 		        "soundfile" "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+		        "soundfile" "soundevents/guy_entry.vsndevts"
+
 		        "particle"  "particles/econ/items/brewmaster/brewmaster_offhand_elixir/brewmaster_thunder_clap_elixir.vpcf"
 		        
 	}	
@@ -53,6 +55,15 @@
 			"duration"						"10"
 		}
 
+	}
+
+	"OnAbilityPhaseStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/guy/dynamic_entry.lua"
+			"Function"		"playSound"
+		}
 	}
 
 	"OnSpellStart"
