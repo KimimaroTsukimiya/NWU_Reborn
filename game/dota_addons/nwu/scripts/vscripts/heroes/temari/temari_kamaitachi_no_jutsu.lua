@@ -92,6 +92,9 @@ function temari_kamaitachi_no_jutsu_on_spell_start(keys)
 		endTime = .03,
 		callback = function()
 			tornado_dummy_unit:SetAbsOrigin(tornado_dummy_unit:GetAbsOrigin() + tornado_velocity_per_frame)
+			if GridNav:IsNearbyTree(tornado_dummy_unit:GetAbsOrigin(), keys.AreaOfEffect, true ) then
+					GridNav:DestroyTreesAroundPoint(tornado_dummy_unit:GetAbsOrigin(), keys.AreaOfEffect, false)
+			end
 			if GameRules:GetGameTime() > endTime then
 				tornado_dummy_unit:StopSound("Hero_Invoker.Tornado")
 				
