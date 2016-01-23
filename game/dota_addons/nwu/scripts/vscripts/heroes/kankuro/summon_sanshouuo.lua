@@ -20,9 +20,10 @@ function summon_sanshouuo( keys )
 	sanshouuo:SetHealth(health)
 	sanshouuo:SetMaxHealth(sanshouuo:GetMaxHealth() + bonus_hp)
 	sanshouuo:SetHealth(sanshouuo:GetMaxHealth() + bonus_hp)
-
+	sanshouuo.sandHP = sanshouuo:GetHealth()
+	sanshouuo.sandMaxHP = sanshouuo:GetMaxHealth()
 	keys.ability:ApplyDataDrivenModifier( sanshouuo, sanshouuo, keys.Modifier, {} )
-	
+	keys.caster.sansPuppet = sanshouuo
 
 	Timers:CreateTimer( duration+1, function()
 		if sanshouuo:IsAlive() then
@@ -43,13 +44,17 @@ function takeDamage( keys )
 	local target = keys.unit
 	local attacker = keys.attacker
 	local damage = keys.Damage
-	
-	local max_absorb = sanshouuo:GetHealth()
-	if( max_absorb < damage )then
-		damage = max_absorb
+	sanshouuo:SetMaxHealth(keys.caster.sandMaxHP)
+	sanshouuo:SetHealth(keys.caster.sandHP)
+	print(keys.caster.sandHP)
+	print(keys.caster:GetName())
+	local newHp = keys.caster.sandHP - damage
+
+	if( keys.caster.sandHP < damage )then
 		sanshouuo:RemoveModifierByName("modifier_sanshouuo")
+		keys.caster.sansPuppet:Destroy()
 	else
-		sanshouuo:SetHealth(max_absorb-damage)
+		keys.caster.sandHP = newHp
 	end
 	
 	target:SetHealth( target:GetHealth() + damage )

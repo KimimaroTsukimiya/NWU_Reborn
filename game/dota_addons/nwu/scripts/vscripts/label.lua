@@ -2,11 +2,11 @@ function GameMode:setPlayerHealthLabel( player )
     if PlayerResource:IsValidPlayerID(player:GetPlayerID()) then
         if not PlayerResource:IsBroadcaster(player:GetPlayerID()) then
           --dave
-          if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 133943769 then
-            if PlayerResource:GetPlayer(player:GetPlayerID()):GetAssignedHero() ~= nil then
-              PlayerResource:GetPlayer(player:GetPlayerID()):GetAssignedHero():SetCustomHealthLabel("Mod Creator", 30, 144, 255)
-            end
-          end
+        --  if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 133943769 then
+        --    if PlayerResource:GetPlayer(player:GetPlayerID()):GetAssignedHero() ~= nil then
+         --     PlayerResource:GetPlayer(player:GetPlayerID()):GetAssignedHero():SetCustomHealthLabel("Mod Creator", 30, 144, 255)
+         --   end
+        --  end
           --neil
           if PlayerResource:GetSteamAccountID(player:GetPlayerID()) == 148677144 then
             if PlayerResource:GetPlayer(player:GetPlayerID()):GetAssignedHero() ~= nil then
