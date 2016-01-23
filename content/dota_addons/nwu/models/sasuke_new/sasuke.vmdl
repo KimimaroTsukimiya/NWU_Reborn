@@ -1305,7 +1305,7 @@
 					m_Filepath = "models/sasuke_new/sasuke ani.smd"
 					m_nStartframe = 1108
 					m_nEndframe = 1135
-					m_flFps = 30.000000
+					m_flFps = 45.000000
 					m_Loop =
 					{
 						_class = "CAnimationLoop"
