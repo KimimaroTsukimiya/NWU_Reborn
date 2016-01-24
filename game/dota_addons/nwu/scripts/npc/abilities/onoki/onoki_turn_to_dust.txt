@@ -10,6 +10,12 @@
 
 	"AbilityCastRange"				"350"
 
+	"precache"
+	{
+		"particle"			"particles/units/heroes/onoki/aura_speed_buff.vpcf"
+		"particle"			"particles/units/heroes/onoki/aura_slow_debuf_core.vpcf"
+	}
+
 	"AbilitySpecial"
 	{
 		"01"
@@ -41,8 +47,7 @@
 			"Aura_Radius"			"350"
 			"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 			"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
-			//"EffectName"		"particles/items_fx/aura_vlads.vpcf"
-			//"EffectAttachType"  "follow_origin" 
+			
 		}
 
 		"modifier_turn_to_dust_debuff"
@@ -52,6 +57,8 @@
 			{
 				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_debuff"
 			}
+			"EffectName"		"particles/units/heroes/onoki/aura_slow_debuf_core.vpcf"
+			"EffectAttachType"  "follow_origin" 
 		}
 
 		"modifier_onoki_turn_to_dust_aura_buff"
@@ -63,8 +70,7 @@
 			"Aura_Radius"			"350"
 			"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 			"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
-			//"EffectName"		"particles/items_fx/aura_vlads.vpcf"
-			//"EffectAttachType"  "follow_origin" 
+			 
 		}
 
 		"modifier_turn_to_dust_buff"
@@ -74,6 +80,8 @@
 			{
 				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_buff"
 			}
+			"EffectName"		"particles/units/heroes/onoki/aura_speed_buff.vpcf"
+			"EffectAttachType"  "follow_origin"
 		}
 
 	}

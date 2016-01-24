@@ -1,0 +1,87 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 16
+	m_flConstantRadius = 1.100000
+	m_bShouldSort = false
+	m_flMaxRecreationTime = -1.000000
+	m_Renderers =
+	[
+		{
+			_class = "C_OP_RenderModels"
+			m_bSuppressTint = true
+			m_ModelList =
+			[
+				{
+					m_model = resource:"models/kisame/shark.vmdl"
+				},
+			]
+			m_bAnimated = true
+			m_nLOD = 1
+		},
+	]
+	m_Operators =
+	[
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		{
+			_class = "C_OP_FadeInSimple"
+			m_flFadeInTime = 1.000000
+		},
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartScale = 0.120000
+			m_flEndScale = 0.120000
+		},
+		{
+			_class = "C_OP_RemapCPOrientationToYaw"
+			m_nFieldOutput = 20
+			m_flRotOffset = -90.000000
+		},
+	]
+	m_Emitters =
+	[
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 1
+		},
+	]
+	m_Children =
+	[
+		{
+			m_ChildRef = resource:"particles/bubbles1.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/suikidan_spl.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/suikodan_kaka.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/suikodan_wind.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/suikodan_sphere.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/shark_p1s.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/suikodan_dno_voda.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/suikodan_water_up.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_torrent_splash_a_2_top_fxset.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_torrent_splash_a_2_fxset.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/suikodan_dim.vpcf"
+		},
+	]
+}
