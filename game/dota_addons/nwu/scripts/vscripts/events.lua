@@ -14,7 +14,7 @@ require('leaverGold')
 
 TEAM_1_VIEW = false
 TEAM_2_VIEW = false
-
+STOPMESSAGE = false
 --cheats.lua, includes functions which listen to chat inputs of the players
   require('cheats')
 
@@ -53,7 +53,25 @@ function GameMode:OnGameRulesStateChange(keys)
      local shopkeeper_dire = Entities:FindByModel(nil, "models/heroes/shopkeeper_dire/shopkeeper_dire.vmdl")
      shopkeeper_dire:SetModelScale(2.4)
   end
+
  
+ if newState == 6 then
+    Timers:CreateTimer(60, function()
+              STOPMESSAGE = true
+               return nil
+       end
+      )
+     Timers:CreateTimer(function()
+            GameRules:SendCustomMessage("Visit our forum at: rebornforum.narutowarsunlimited.com", 0, 0)
+            if STOPMESSAGE then
+               return nil
+            else
+               return 7.0 
+            end
+           
+       end
+      )
+  end
  --TODO LEAVRE SYSTEM
   -- if newState == 6 then
      -- A timer running every second that starts immediately on the next frame, respects pauses
