@@ -52,27 +52,30 @@
 	[
 		{
 			m_ChildRef = resource:"particles/bubbles1.vpcf"
+			m_bDisableChild = true
 		},
 		{
-			m_ChildRef = resource:"particles/suikidan_spl.vpcf"
+			m_ChildRef = resource:"particles/units/heroes/kisame/suikidan_spl.vpcf"
 		},
 		{
-			m_ChildRef = resource:"particles/suikodan_kaka.vpcf"
+			m_ChildRef = resource:"particles/units/heroes/kisame/suikodan_kaka.vpcf"
 		},
 		{
 			m_ChildRef = resource:"particles/suikodan_wind.vpcf"
+			m_bDisableChild = true
 		},
 		{
-			m_ChildRef = resource:"particles/suikodan_sphere.vpcf"
+			m_ChildRef = resource:"particles/units/heroes/kisame/suikodan_sphere.vpcf"
 		},
 		{
-			m_ChildRef = resource:"particles/shark_p1s.vpcf"
+			m_ChildRef = resource:"particles/units/heroes/kisame/shark_p1s.vpcf"
 		},
 		{
-			m_ChildRef = resource:"particles/suikodan_dno_voda.vpcf"
+			m_ChildRef = resource:"particles/units/heroes/kisame/suikodan_dno_voda.vpcf"
 		},
 		{
 			m_ChildRef = resource:"particles/suikodan_water_up.vpcf"
+			m_bDisableChild = true
 		},
 		{
 			m_ChildRef = resource:"particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_torrent_splash_a_2_top_fxset.vpcf"
@@ -81,7 +84,7 @@
 			m_ChildRef = resource:"particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_torrent_splash_a_2_fxset.vpcf"
 		},
 		{
-			m_ChildRef = resource:"particles/suikodan_dim.vpcf"
+			m_ChildRef = resource:"particles/units/heroes/kisame/suikodan_dim.vpcf"
 		},
 	]
 }

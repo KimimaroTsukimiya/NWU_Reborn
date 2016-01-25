@@ -16,7 +16,7 @@
 		"soundfile" 		"soundevents/kisame_shark_cast.vsndevts"
 		"soundfile" 		"soundevents/kisame_shark_cast_2.vsndevts"
 		"particle"			"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror_recipient.vpcf"
-		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"		
+		"particle"  		"particles/units/heroes/kisame/suikodan_no_jutsu_aladeen_v1.vpcf"		
 	}
 	
 	// Casting
@@ -97,7 +97,7 @@
 			"ScriptFile"	"heroes/kisame/suikodan_no_jutsu.lua"
 			"Function"		"suikodan_no_jutsu"
 			"Target"		"POINT"
-			"wave_particle"	"particles/units/heroes/hero_vengeful/vengeful_wave_of_terror.vpcf"
+			"wave_particle"	"particles/units/heroes/kisame/suikodan_no_jutsu_aladeen_v1.vpcf"
 		}
 	}
 
