@@ -31,6 +31,7 @@ function ManaCost( keys )
 	local caster = keys.caster
 	local ability = keys.ability
 	local manacost_per_second = keys.ability:GetLevelSpecialValueFor("mana_cost_per_second", keys.ability:GetLevel() - 1 )
+	manacost_per_second = manacost_per_second / 10
 	local current_mana = caster:GetMana()
 	local new_mana = current_mana - manacost_per_second
 	print(new_mana)

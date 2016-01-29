@@ -1,0 +1,123 @@
+"guy_leaf_strong_whirlwind_ult"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"leaf_strong_whirlwind"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+	"AbilityCooldown"				"3 3 3 3"
+	"AbilityManaCost"				"40"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"radius"						"200"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"stun_duration"					"0.5"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"stomp_damage"					"50 80 110 140"
+		}
+	}
+
+	"precache"
+	{
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
+		"soundfile"	"soundevents/sakura_slam.vsndevts"
+		"soundfile"	"soundevents/sakura_slam_2.vsndevts"
+		"particle"	"particles/units/heroes/hero_centaur/centaur_warstomp.vpcf"
+		"particle"	"particles/generic_gameplay/generic_stunned.vpcf"
+	}
+
+	"OnAbilityPhaseStart"
+	{
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/guy/leaf_strong_whirlwind.lua"
+			"Function"		"playSound"
+		}
+
+	}
+
+	"OnSpellStart"
+	{
+		"FireEffect"
+		{
+			"EffectName"		"particles/units/heroes/hero_centaur/centaur_warstomp.vpcf"
+			"EffectAttachType" 	"follow_origin"
+			"EffectRadius"		"%radius"
+			"Target" 			"CASTER"
+			"ControlPoints"
+			{
+				"01"	"%radius 0 %radius"
+			}
+		}
+
+	
+
+		"FireSound"
+		{
+			"EffectName"		"Hero_Centaur.HoofStomp"
+			"Target" 			"CASTER"
+		}
+		"ActOnTargets"
+		{
+			"Target"
+			{
+				"Center"  				"CASTER"
+				"Radius" 				"%radius"
+				"Teams" 				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Types" 				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
+
+			"Action"
+			{
+				"Damage"
+				{
+					"Target"	"TARGET"
+					"Type"		"DAMAGE_TYPE_MAGICAL"
+					"Damage"	"%stomp_damage"
+				}
+
+				"ApplyModifier"
+				{
+					"Target" 		"TARGET"
+					"ModifierName"	"modifier_sakura_earth_slam"
+				}
+			}
+		}		
+	}
+
+	"Modifiers"
+	{
+		"modifier_sakura_earth_slam"
+		{
+			"IsDebuff"	"1"
+			"Duration"	"%stun_duration"
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED" "MODIFIER_STATE_VALUE_ENABLED"			
+			}
+			"OverrideAnimation"	"ACT_DOTA_DISABLED"
+			"EffectName"		"particles/generic_gameplay/generic_stunned.vpcf"
+			"EffectAttachType"	"follow_overhead"
+		}
+	}
+}

@@ -19,8 +19,8 @@
 
 	"precache"
 	{
-		"particle"		"particles/units/heroes/hero_mirana/mirana_moonlight_recipient.vpcf"
-		"soundfile"  	"soundevents/game_sounds_heroes/game_sounds_luna.vsndevts"
+		"particle"		"particles/units/heroes/itachi/itachi_tsukuyomi1.vpcf"
+		"soundfile"  	"soundevents/itachi_tsukuyomi.vsndevts"
 	}
 	
 	// Special
@@ -48,11 +48,11 @@
 	{
 		"FireSound"
 		{
-			"EffectName"	"Hero_Luna.Eclipse.Cast"
+			"EffectName"	"itachi_tsukuyomi"
 			"Target" 		"CASTER"
 		}
 
-	"RunScript"
+		"RunScript"
         {
         	"ScriptFile"    "items.lua"
             "Function"      "CheckForSpellBlock"
@@ -80,7 +80,21 @@
 				"AttachEffect"
 				{
 					"Target"			"TARGET"
-					"EffectName"		"particles/units/heroes/hero_mirana/mirana_moonlight_recipient.vpcf"
+					"EffectName"		"particles/units/heroes/itachi/itachi_tsukuyomi1.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"ControlPointEntities"
+					{
+						"TARGET"	"follow_origin"
+					}
+				}
+			}
+			
+			"OnDeath"
+			{			
+				"FireEffect"
+				{
+					"Target"			"TARGET"
+					"EffectName"		"particles/units/heroes/itachi/itachi_tsukuyomi1.vpcf"
 					"EffectAttachType"	"follow_origin"
 					"ControlPointEntities"
 					{

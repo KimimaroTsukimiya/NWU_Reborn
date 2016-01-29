@@ -1,0 +1,206 @@
+"guy_seventh_gate_open"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE "
+	"AbilityTextureName"			"guy_seventh_gate_open"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.5"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"70"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"25"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_damage"				"20 30 40"
+		}
+
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bat"	"1.5 1.3 1.1"
+		}
+
+		"03"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"ms_bonus"						"8 12 16"
+		}
+
+		"04"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"hp_drain"							"4"
+		}
+	}
+
+	"precache"
+	{
+	"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"soundfile"			"soundevents/guy_ultimate.vsndevts"
+		"particle"			"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
+		"particle"			"particles/status_fx/status_effect_gods_strength.vpcf"
+		 "particle"	"particles/addons_gameplay/lamp_flame_tintable.vpcf"
+		 "particle"			"particles/units/heroes/guy/wyvern_winters_curse_buff.vpcf"
+	}
+
+	"OnAbilityPhaseStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/guy/open_gates.lua"
+			"Function"		"playSound"
+		}
+	}
+
+	"OnSpellStart"
+	{
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_Sven.GodsStrength"
+			"Target"		"CASTER"
+		}
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifier_guy_seventh_gate"
+			"Target"			"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/guy/seventh_gate_open.lua"
+			"Function"		"changeAbilities"
+		}
+
+	}
+
+
+	"OnToggleOn"
+	{
+			"FireSound"
+		{
+			"EffectName"	"Hero_Sven.GodsStrength"
+			"Target"		"CASTER"
+		}
+		"ApplyModifier"
+		{
+			"ModifierName"		"modifier_guy_seventh_gate"
+			"Target"			"CASTER"
+		}
+
+	
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/guy/seventh_gate_open.lua"
+			"Function"		"changeAbilities"
+		}
+	}
+
+	"OnToggleOff"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/guy/seventh_gate_open.lua"
+			"Function"		"changeAbilitiesBack"
+		}
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_guy_seventh_gate"
+			"Target" 		"CASTER"
+		}
+	}
+
+
+	"Modifiers"
+	{
+
+		"modifier_guy_seventh_gate"
+		{
+			"Passive"	"0"
+			"IsBuff"	"1"
+
+			"Properties"
+			{
+			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%ms_bonus" 
+			    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%bonus_damage"
+			    "MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT"	"%bat"
+			}
+
+
+			"OnCreated"
+			{
+				   "AttachEffect"
+                {
+                    "EffectName" "particles/addons_gameplay/lamp_flame_tintable.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_left_hand"
+                    }
+                }
+						   "AttachEffect"
+                {
+                    "EffectName" "particles/addons_gameplay/lamp_flame_tintable.vpcf"
+                    "EffectAttachType" "follow_origin"
+
+                    "Target" "CASTER"
+                    "ControlPointEntities"
+                   {
+                      "CASTER"    "attach_right_hand"
+                    }
+                }
+
+                 "AttachEffect"
+	                {
+                    	"EffectName" "particles/units/heroes/guy/wyvern_winters_curse_buff.vpcf"
+                    	"EffectAttachType" "follow_origin"
+                    	"Target" "CASTER"
+                    	"ControlPointEntities"
+                   		{
+                      		"CASTER"    "attach_origin"
+                    	}
+                	}
+
+                	"AttachEffect"
+	                {
+                    	"EffectName" "particles/units/heroes/guy/wyvern_winters_curse_buff.vpcf"
+                    	"EffectAttachType" "follow_origin"
+                    	"Target" "CASTER"
+                    	"ControlPointEntities"
+                   		{
+                      		"CASTER"    "attach_hitloc"
+                    	}
+                	}
+			}
+
+
+			"ThinkInterval" "0.1"
+		"OnIntervalThink"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/guy/seventh_gate_open.lua"
+				"Function"		"hpDrain"
+			}
+		}
+
+
+		}
+	}
+}

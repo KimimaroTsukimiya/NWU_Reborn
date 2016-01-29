@@ -1,0 +1,87 @@
+"zabuza_executioners_blade"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	"zabuza_executioners_blade"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	 {
+	  "soundfile"   "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+	  "particle"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_jinda_slow.vpcf"
+	  "particle"	"particles/units/heroes/hero_bounty_hunter/status_effect_bounty_hunter_jinda_slow.vpcf"
+	 }
+
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"crit_multiplier"		"175 200 225 250"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"health_threshold"		"35"
+		}
+	}
+
+	"Modifiers"
+	{
+
+		"modifier_executioners_blade"
+		{
+			"Passive"	"1"
+			"IsHidden"	"0"
+
+			"OnAttackStart"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/zabuza/executioners_blade.lua"
+					"Function"		"execute"
+				}
+			}
+		}
+
+		"modifier_executioners_blade_crit"
+		{
+
+			"Passive" "0"
+			"IsHidden"	"1"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_multiplier"
+			}
+
+			"OnAttackLanded"
+			{
+				"FireEffect"
+				{
+					"EffectName"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_jinda_slow.vpcf"
+					"EffectAttachType"	"attach_hitloc"
+					"Target"		"TARGET"
+				}
+
+				"FireSound"
+				{
+					"EffectName"	"Hero_BountyHunter.Jinada"
+					"Target"		"TARGET"
+				}
+
+				"RemoveModifier"
+				{
+					"ModifierName"	"modifier_executioners_blade_crit"
+					"Target" 		"TARGET"
+				}
+			}
+		}
+	}
+}

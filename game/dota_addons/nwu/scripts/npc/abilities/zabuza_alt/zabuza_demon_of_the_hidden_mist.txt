@@ -1,0 +1,132 @@
+"zabuza_demon_of_the_hidden_mist"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+	"AbilityTextureName"			"zabuza_demon_of_the_hidden_mist"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+		"particle"		"particles/units/heroes/hero_bounty_hunter/bounty_hunter_track.vpcf"
+		"particle"		"particles/units/heroes/hero_bounty_hunter/bounty_hunter_track_trail.vpcf"
+		"particle"		"particles/units/heroes/hero_bounty_hunter/bounty_hunter_track_haste.vpcf"
+		"particle"		"particles/units/heroes/hero_bounty_hunter/bounty_hunter_track_shield.vpcf"
+	}
+	
+	// Unit Targeting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.3 0.3 0.3"
+	"AbilityCooldown"				"120 90 60"
+	"AbilityManaCost"				"150"
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"			"4 5 6"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"marked_break_distance"	"1500"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"min_health"	"1"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"range"	"900"
+		}
+	}
+
+	"OnSpellStart"
+	{	
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/zabuza/demon_of_the_hidden_mist.lua"
+			"Function"		"markEnemy"
+		}
+
+		"FireEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_track_cast.vpcf"
+   			"EffectAttachType"	"start_at_customorigin"
+
+			"ControlPointEntities"
+			{
+			    "CASTER" "attach_attack1"
+			    "TARGET" "attach_hitloc"
+			}
+
+		}
+		
+		"FireSound"
+		{
+			"EffectName"	"Hero_BountyHunter.Target"
+			"Target"		"TARGET"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_demon_unkillable"
+			"Target" 		"CASTER"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_demon_unkillable"
+		{
+
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"0"
+			"IsPurgable"		"0"
+			"IsBuff"			"1"
+			"Duration"			"%duration"
+	
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MIN_HEALTH" "%min_health" 
+			}
+
+			"ThinkInterval"		"0.03"
+
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/zabuza/demon_of_the_hidden_mist.lua"
+					"Function"		"checkDistance"
+				}
+			}
+		
+		}
+
+		"modifier_demon_mark"
+		{
+			"Duration"	"%duration"
+			"IsHidden"	"0"
+			"IsDebuff"	"1"
+
+		}
+	}
+}

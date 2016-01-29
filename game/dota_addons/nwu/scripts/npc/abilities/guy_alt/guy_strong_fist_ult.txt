@@ -1,0 +1,95 @@
+"guy_strong_fist_ult"
+{
+    // General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_PHYSICAL" 
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityTextureName"        "guy_strong_fist"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "0"
+
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "12 10 8 6"
+    "AbilityCastPoint"              "0.0 0.0 0.0 0.0"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "35"
+
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+     "precache"
+    {
+
+    }
+
+    "AbilitySpecial"
+    {
+        "01"
+        { 
+            "var_type" "FIELD_FLOAT"
+            "crit" "200"
+        }
+        "02"
+        {
+            "var_type" "FIELD_FLOAT"
+            "stun" "0.75 1.00 1.25 1.50"
+        }
+    }
+
+    "OnSpellStart"
+    {           
+         "ApplyModifier"
+        {
+            "ModifierName"          "modifier_guy_strong_fist"
+            "Target"                "CASTER"
+        }
+    }
+
+
+    "Modifiers"
+    {
+        "modifier_guy_strong_fist"
+        {
+
+            "Passive" "0"
+            "IsHidden"  "0"
+            "IsBuff"    "1"
+
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"    "%crit"
+            }
+
+            "OnAttackLanded"
+            {
+                "FireSound"
+                {
+                    "EffectName"    "Hero_BountyHunter.Jinada"
+                    "Target"        "TARGET"
+                }
+
+                "Stun"
+                {
+                    "Duration"   "%stun"
+                    "Target"      "TARGET"
+                }
+
+                "RemoveModifier"
+                {
+                    "ModifierName"  "modifier_guy_strong_fist"
+                    "Target"        "CASTER"
+                }
+            }
+        }
+
+    }
+
+}

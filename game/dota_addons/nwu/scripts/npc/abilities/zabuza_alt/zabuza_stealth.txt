@@ -1,0 +1,66 @@
+"zabuza_stealth"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"zabuza_stealth"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+				"particle"	"particles/generic_gameplay/generic_silence.vpcf"
+	}	
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"500 600 700 800"
+	"AbilityCastPoint"				"0.1 0.1 0.1"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20 15 10 5"
+
+	//Damage
+	"AbilityDamage"					"0"
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"60"		
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"cast_range"				"250 275 300 325"
+		}
+	}
+
+	"OnSpellStart"
+	{
+
+		"Blink"
+		{
+			"Target"	"TARGET"
+		}
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/zabuza/stealth.lua"
+					"Function"		"attackAfterBlink"
+				}
+		"FireSound"
+		{
+				
+		}
+		
+	}
+}

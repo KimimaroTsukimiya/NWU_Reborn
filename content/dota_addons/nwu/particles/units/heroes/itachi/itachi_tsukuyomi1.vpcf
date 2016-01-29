@@ -1,0 +1,70 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_Renderers =
+	[
+		{
+			_class = "C_OP_RenderModels"
+			m_ModelList =
+			[
+				{
+					m_model = resource:"models/itachi_tsukuyomi/itachi_tsukuyomi.vmdl"
+				},
+			]
+			m_bOrientZ = true
+			m_bScaleAnimationRate = true
+			m_nAnimationScaleField = 1
+			m_bAnimated = true
+			m_nManualFrameField = 1
+			m_flAnimationRate = 45.000000
+		},
+	]
+	m_flConstantRadius = 2.500000
+	m_flNoDrawTimeToGoToSleep = 0.000000
+	m_nMaxParticles = 1
+	m_Emitters =
+	[
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 1
+			m_nMinParticlesToEmit = 1
+			m_flStartTimeMax = 0.000000
+		},
+	]
+	m_Operators =
+	[
+		{
+			_class = "C_OP_Decay"
+		},
+		{
+			_class = "C_OP_SetToCP"
+			m_vecOffset =
+			[
+				0.000000,
+				-85.000000,
+				0.000000,
+			]
+			m_bOffsetLocal = true
+		},
+		{
+			_class = "C_OP_RemapCPOrientationToYaw"
+			m_nCP = 0
+			m_flRotOffset = 180.000000
+		},
+		{
+			_class = "C_OP_FadeInSimple"
+		},
+		{
+			_class = "C_OP_FadeOutSimple"
+		},
+	]
+	m_Children =
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/itachi/itachi_tsukuyomi2.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/itachi/itachi_tsukuyomi3.vpcf"
+		},
+	]
+}

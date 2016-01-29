@@ -46,7 +46,7 @@
   "item_magic_stick"      "REMOVE"
   "item_recipe_magic_wand"      "REMOVE"
   "item_magic_wand"     "REMOVE"
-  "item_ghost"      "REMOVE"
+  //"item_ghost"      "REMOVE"
   //"item_clarity"      "REMOVE"
   //"item_flask"      "REMOVE"
   //"item_dust"     "REMOVE"

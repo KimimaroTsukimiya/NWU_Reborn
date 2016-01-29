@@ -2,33 +2,33 @@
 		{
 		  "override_hero"   "npc_dota_hero_centaur"
 		  "Model" 			"models/guy/gai.vmdl"
-		  "Ability1"        "guy_dynamic_entry"
+		  "Ability1"        "guy_dynamic_entry_new"
 
-		  "Ability2"        "guy_power_of_youth" 
-		  "Ability3"        "guy_gouken_mastery" 
-		  "Ability4"        "guy_open_gates"
+		  "Ability2"        "guy_leaf_strong_whirlwind" 
+		  "Ability3"        "guy_strong_fist" 
+		  "Ability4"        "guy_seventh_gate_open"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 			"ModelScale"		"0.93"
 		"LoadoutScale"		"0.93" 
 		  "AttackAnimationPoint"   "0.4"
-			
-		  "Role"			"Carry,Jungler"
+
+		  "Role"			"Carry,Initiator"
 		  "Rolelevels"	"2,1"
 
-		  "AttackDamageMin"   "27"
-		  "AttackDamageMax"   "31"
-		  "AttackRate"    "1.700000"
-		  "ArmorPhysical"		"3.000000"
-		  "AttackRange"				"100"
+		  "AttackDamageMin"   "18"
+		  "AttackDamageMax"   "22"
+		  "AttackRate"    "1.600000"
+		  "ArmorPhysical"		"0"
+		  "AttackRange"				"128"
 		  "StatusHealth"    "145"
  		  "StatusHealthRegen"   "0.300000"
-		  "MovementSpeed"			"300"
+		  "MovementSpeed"			"290"
 		  "AttributeBaseStrength" "19" // Base strength
-		  "AttributeStrengthGain" "2.2" // Strength bonus per level.
-		  "AttributeBaseIntelligence" "13" // Base intelligence
-		  "AttributeIntelligenceGain" "1.15" // Intelligence bonus per level.
-		  "AttributeBaseAgility" "21" // Base agility
-		  "AttributeAgilityGain" "2.9" // Agility bonus per level.
+		  "AttributeStrengthGain" "1.9" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "14" // Base intelligence
+		  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "24" // Base agility
+		  "AttributeAgilityGain" "2" // Agility bonus per level.
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha"

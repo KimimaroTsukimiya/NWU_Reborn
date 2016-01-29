@@ -77,11 +77,11 @@
 		{
 		  "override_hero"   "npc_dota_hero_centaur"
 		  "Model" 			"models/guy/gai.vmdl"
-		  "Ability1"        "guy_dynamic_entry"
+		  "Ability1"        "guy_dynamic_entry_new"
 
-		  "Ability2"        "guy_power_of_youth" 
-		  "Ability3"        "guy_gouken_mastery" 
-		  "Ability4"        "guy_open_gates"
+		  "Ability2"        "guy_leaf_strong_whirlwind" 
+		  "Ability3"        "guy_strong_fist" 
+		  "Ability4"        "guy_seventh_gate_open"
 		  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
 			"ModelScale"		"0.93"
 		"LoadoutScale"		"0.93" 
@@ -90,20 +90,20 @@
 		  "Role"			"Carry,Jungler"
 		  "Rolelevels"	"2,1"
 
-		  "AttackDamageMin"   "27"
-		  "AttackDamageMax"   "31"
-		  "AttackRate"    "1.700000"
-		  "ArmorPhysical"		"3.000000"
-		  "AttackRange"				"100"
+		  "AttackDamageMin"   "18"
+		  "AttackDamageMax"   "22"
+		  "AttackRate"    "1.600000"
+		  "ArmorPhysical"		"0"
+		  "AttackRange"				"128"
 		  "StatusHealth"    "145"
  		  "StatusHealthRegen"   "0.300000"
-		  "MovementSpeed"			"300"
+		  "MovementSpeed"			"290"
 		  "AttributeBaseStrength" "19" // Base strength
-		  "AttributeStrengthGain" "2.2" // Strength bonus per level.
-		  "AttributeBaseIntelligence" "13" // Base intelligence
-		  "AttributeIntelligenceGain" "1.15" // Intelligence bonus per level.
-		  "AttributeBaseAgility" "21" // Base agility
-		  "AttributeAgilityGain" "2.9" // Agility bonus per level.
+		  "AttributeStrengthGain" "1.9" // Strength bonus per level.
+		  "AttributeBaseIntelligence" "14" // Base intelligence
+		  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
+		  "AttributeBaseAgility" "24" // Base agility
+		  "AttributeAgilityGain" "2" // Agility bonus per level.
 	 	  "ItemSlots"
 	  	  { }
 	  	  "Village"			"konoha"
@@ -721,10 +721,10 @@
 	"npc_dota_hero_bloodseeker" //zabuza
 			{
 			  "override_hero"   "npc_dota_hero_bloodseeker"
-			  "Ability1"        "zabuza_stealth"
-			  "Ability2"        "zabuza_kirigakure_no_jutsu"
-			  "Ability3"        "zabuza_weak_spot"
-			  "Ability4"        "zabuza_track" 
+			  "Ability1"        "zabuza_water_dragon_bullet"
+			  "Ability2"        "zabuza_kirigakure_no_jutsu_new"
+			  "Ability3"        "zabuza_executioners_blade"
+			  "Ability4"        "zabuza_demon_of_the_hidden_mist" 
 			  "ModelScale"		"0.90"
 			  "LoadoutScale"		"0.90" 
 			  "Model" 			"models/zabuza/zabuza.vmdl"
@@ -732,23 +732,23 @@
 		  	  { }
 		  	    "StatusHealth"    "145"
 	  "StatusHealthRegen"   "0.300000"
-			"AttackDamageMin"		"21"
-			"AttackDamageMax"		"23"
+			"AttackDamageMin"		"26"
+			"AttackDamageMax"		"30"
 			"Role"			"Carry"
 			"Rolelevels"	"1"
-			"ArmorPhysical"		"2.000000"
+			"ArmorPhysical"		"2.100000"
 			"AttackRate"		"1.700000"
-		  	  "AttributePrimary" 		"DOTA_ATTRIBUTE_AGILITY"
+		  	  "AttributePrimary" 		"DOTA_ATTRIBUTE_STRENGTH"
 			  "AttackAnimationPoint"		"0.4"
 			 // "AttackRate"				"1.0"
 			  "AttackRange"				"100"
-			  "MovementSpeed"			"300"
-			  "AttributeBaseStrength" "17" // Base strength
-			  "AttributeStrengthGain" "2" // Strength bonus per level.
-			  "AttributeBaseIntelligence" "15" // Base intelligence
-			  "AttributeIntelligenceGain" "1.4" // Intelligence bonus per level.
-			  "AttributeBaseAgility" "23" // Base agility
-			  "AttributeAgilityGain" "3.1" // Agility bonus per level.
+			  "MovementSpeed"			"295"
+			  "AttributeBaseStrength" "26" // Base strength
+			  "AttributeStrengthGain" "2.6" // Strength bonus per level.
+			  "AttributeBaseIntelligence" "17" // Base intelligence
+			  "AttributeIntelligenceGain" "1.7" // Intelligence bonus per level.
+			  "AttributeBaseAgility" "16" // Base agility
+			  "AttributeAgilityGain" "1.9" // Agility bonus per level.
 	
 		  	  "Village"			"kirigakure"
 		  	  "Gender"			"male"

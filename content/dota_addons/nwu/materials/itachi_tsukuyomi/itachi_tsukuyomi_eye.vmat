@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "projected_dota.vfx"
+
+	//---- Color ----
+	TextureColor "materials/itachi_tsukuyomi/itachi_tsukuyomi.tga"
+
+	//---- Translucency ----
+	TextureTranslucency "materials/itachi_tsukuyomi/itachi_tsukuyomi_trans.tga"
+}
