@@ -34,6 +34,16 @@
 			"var_type"						"FIELD_INTEGER"
 			"stomp_damage"					"50 80 110 140"
 		}
+		"04"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"cast_time"					"0.4"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"cast_time_ult"					"0.1"
+		}
 	}
 
 	"precache"

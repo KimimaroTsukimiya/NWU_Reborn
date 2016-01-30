@@ -50,6 +50,10 @@
 			_class = "C_OP_InterpolateRadius"
 			m_flStartScale = 0.500000
 		},
+		{
+			_class = "C_OP_PositionLock"
+			m_nControlPointNumber = 3
+		},
 	]
 	m_Initializers =
 	[
@@ -159,7 +163,7 @@
 	m_Children =
 	[
 		{
-			m_ChildRef = resource:"particles/suikidan_spl.vpcf"
+			m_ChildRef = resource:"particles/units/heroes/kisame/suikidan_spl.vpcf"
 		},
 	]
 }

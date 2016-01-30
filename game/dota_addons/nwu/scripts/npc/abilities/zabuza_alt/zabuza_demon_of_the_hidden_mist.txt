@@ -29,7 +29,7 @@
 	"AbilityCastRange"				"900"
 	"AbilityCastPoint"				"0.3 0.3 0.3"
 	"AbilityCooldown"				"120 90 60"
-	"AbilityManaCost"				"150"
+	"AbilityManaCost"				"100 125 150"
 		
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"duration"			"4 5 6"
+			"duration"			"4 6 8"
 		}
 		"02"
 		{

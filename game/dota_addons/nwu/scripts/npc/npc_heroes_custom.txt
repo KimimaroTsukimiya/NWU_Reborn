@@ -86,12 +86,12 @@
 			"ModelScale"		"0.93"
 		"LoadoutScale"		"0.93" 
 		  "AttackAnimationPoint"   "0.4"
-			
-		  "Role"			"Carry,Jungler"
+
+		  "Role"			"Carry,Initiator"
 		  "Rolelevels"	"2,1"
 
-		  "AttackDamageMin"   "18"
-		  "AttackDamageMax"   "22"
+		  "AttackDamageMin"   "26"
+		  "AttackDamageMax"   "29"
 		  "AttackRate"    "1.600000"
 		  "ArmorPhysical"		"0"
 		  "AttackRange"				"128"

@@ -47,7 +47,7 @@
 		"01"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"ms_slow"						"-25"
+			"ms_slow"						"-10"
 		}
 		"02"
 		{
@@ -57,7 +57,7 @@
 		"03"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"ms_slow_ulti"						"-10"
+			"ms_slow_ulti"						"-35"
 		}
 		"04"
 		{

@@ -45,7 +45,6 @@
 		{
 			_class = "C_OP_InterpolateRadius"
 			m_flStartTime = 0.800000
-			m_flEndScale = 0.000000
 		},
 		{
 			_class = "C_OP_FadeOutSimple"
@@ -65,7 +64,7 @@
 		{
 			_class = "C_INIT_RandomRadius"
 			m_flRadiusMin = 0.500000
-			m_flRadiusMax = 1.500000
+			m_flRadiusMax = 0.800000
 		},
 		{
 			_class = "C_INIT_RandomSequence"

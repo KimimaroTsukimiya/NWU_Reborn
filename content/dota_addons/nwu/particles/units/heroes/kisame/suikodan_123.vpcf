@@ -67,6 +67,10 @@
 			]
 			m_flFadeStartTime = 0.500000
 		},
+		{
+			_class = "C_OP_PositionLock"
+			m_nControlPointNumber = 3
+		},
 	]
 	m_Initializers =
 	[
@@ -165,7 +169,7 @@
 	m_Children =
 	[
 		{
-			m_ChildRef = resource:"particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_torrent_splash_a_center_core2_fxset.vpcf"
+			m_ChildRef = resource:"particles/units/heroes/kisame/890.vpcf"
 		},
 	]
 }

@@ -87,6 +87,11 @@
                     "ModifierName"  "modifier_guy_strong_fist"
                     "Target"        "CASTER"
                 }
+                "RunScript"
+                {
+                    "ScriptFile"    "heroes/guy/strong_fist.lua"
+                    "Function"      "resetCooldown"
+                }
             }
         }
 

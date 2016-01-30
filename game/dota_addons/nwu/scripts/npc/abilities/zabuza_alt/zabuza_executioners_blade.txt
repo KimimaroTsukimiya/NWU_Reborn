@@ -38,7 +38,7 @@
 		"modifier_executioners_blade"
 		{
 			"Passive"	"1"
-			"IsHidden"	"0"
+			"IsHidden"	"1"
 
 			"OnAttackStart"
 			{

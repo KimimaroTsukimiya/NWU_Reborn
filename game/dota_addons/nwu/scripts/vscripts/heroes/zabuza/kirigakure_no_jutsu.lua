@@ -94,21 +94,21 @@ function spin_web_aura( keys )
 	local invis_fade_modifier = keys.invis_fade_modifier
 
 
-	
+	if keys.target:IsRealHero() then
 
 
-	ability:ApplyDataDrivenModifier(caster, target, aura_modifier, {})
+		ability:ApplyDataDrivenModifier(caster, target, aura_modifier, {})
 
-			-- If it doesnt have the fade pathing modifier or the pathing modifier then apply it
-	if not target:HasModifier(pathing_fade_modifier) and not target:HasModifier(pathing_modifier) then
-		ability:ApplyDataDrivenModifier(caster, target, pathing_modifier, {}) 
+				-- If it doesnt have the fade pathing modifier or the pathing modifier then apply it
+		if not target:HasModifier(pathing_fade_modifier) and not target:HasModifier(pathing_modifier) then
+			ability:ApplyDataDrivenModifier(caster, target, pathing_modifier, {}) 
+		end
+
+				-- If it doesnt have the fade invis modifier or the invis modifier then apply it
+		if not target:HasModifier(invis_modifier) and not target:HasModifier(invis_fade_modifier) then
+			ability:ApplyDataDrivenModifier(caster, target, invis_fade_modifier, {})
+		end
 	end
-
-			-- If it doesnt have the fade invis modifier or the invis modifier then apply it
-	if not target:HasModifier(invis_modifier) and not target:HasModifier(invis_fade_modifier) then
-		ability:ApplyDataDrivenModifier(caster, target, invis_fade_modifier, {})
-	end
-
 end
 
 function appylMsBoost( keys )

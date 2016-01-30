@@ -23,12 +23,12 @@
 			"item"			"item_flying_courier"
 			"item"			"item_jiraiyas_sandals"
 			"item"          "item_ward_observer"
-			"item"   		"item_ward_sentry"
 		}
 		"#DOTA_Item_Build_Core_Items"
 		{
 			"item"   		"item_tpscroll"
-			"item"			"item_sage_scroll"
+			"item"			"item_first_hokages_necklace"
+			"item"			"item_bingo_book"
 			"item"          "item_ward_observer"
 			"item"   		"item_ward_sentry"
 		}
@@ -37,9 +37,11 @@
 		{
 			"item"			"item_giant_iron_fan"
 			"item"			"item_the_totsuka"
-			"item"			"item_assassins_cloak"
-			"item"			"item_first_hokages_necklace"
-			"item"			"item_bingo_book"
+			"item"			"item_sage_scroll"		
+			"item"			"item_lunar_sword"
+			"item"			"item_hakus_overcoat"
+			"item"			"item_gelel_stone"
+			"item"			"item_yondaime_sealed_kunai"
 		}		
 	}
 }

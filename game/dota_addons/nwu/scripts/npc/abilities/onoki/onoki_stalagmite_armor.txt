@@ -50,6 +50,11 @@
 		}
 	}
 
+	"precache"
+	{
+		"particle"  "particles/units/heroes/onoki/armor_core.vpcf"
+	}
+
 	"OnSpellStart"
 	{
 		"ApplyModifier"
@@ -69,8 +74,14 @@
 			"IsBuff"			"1"
 			"Duration"			"%duration"
 	
-			//"EffectName"		"particle_name"
-			//"EffectAttachType"	"follow_origin"
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/onoki/onoki_stalagmite_armor.lua"
+					"Function"		"applyEffect"
+				}
+			}
 	
 			"Properties"
 			{

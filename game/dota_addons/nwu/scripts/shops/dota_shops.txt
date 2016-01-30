@@ -86,6 +86,7 @@
                 "item"          "item_akatsuki_ring"
                 "item"          "item_retractable_shield"
                 "item"          "item_magatama_amulet"
+                "item"          "item_ancient_janggo_datadriven"
                 "item"          "item_jiraiyas_sandals"
                 "item"          "item_tobis_mask"
                 "item"          "item_first_hokages_necklace"
